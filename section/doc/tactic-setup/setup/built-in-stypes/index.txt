@@ -1,0 +1,23 @@
+Built-in STypes
+---------------
+
+When using the expression or adding widget config entries for built-in
+STypes, you would want to get familiar with how to represent notes
+(sthpw/note) or tasks (sthpw/task) for example. Below is the full list:
+
+.Main SType List
+[width="100%",cols="51%,49%",options="header",]
+|==============================
+|Name |SType
+|File |sthpw/file
+|Login |sthpw/login
+|Login Group |sthpw/login_group
+|Milestone |sthpw/milestone
+|Note |sthpw/note
+|Project |sthpw/project
+|Pipeline |sthpw/pipeline
+|Schema |sthpw/schema
+|Status Log |sthpw/status_log
+|Snapshot |sthpw/snapshot
+|Task |sthpw/task
+|==============================

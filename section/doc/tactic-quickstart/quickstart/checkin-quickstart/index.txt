@@ -1,0 +1,41 @@
+Check-in Quick Start
+--------------------
+
+The simplest form of a check-in within TACTIC is to check-in a preview
+image for an item.
+
+1.  Locate an item you wish to check-in a preview for.
++
+______________________________________________________________________________________________
+*Note*
+
+If the preview column is not included in your view, you can add it
+through the Column Manager.
+______________________________________________________________________________________________
+2.  Right-Click on the item and in the context menu choose "Change
+Preview Image"
++
+image:media/checkin-quickstart_change-preview-image.png[image]
+3.  This will load a file browser where you can choose a preview image
+to check-in. Once the file has been uploaded, the preview thumbnail will
+automatically update.
++
+image:media/checkin-quickstart_thumbnail.png[image]
+4.  To view where the files were placed, expand the *History* column.
++
+_________________________________________________________________________________________________________________________________________________
+*Note*
+
+If the History column is not in the view, it can be added with the
+Column Manager, or the view can be changed to "Check-in" from the layout
+menu.
+
+image:media/checkin-quickstart_check-in-layout.png[image]
+_________________________________________________________________________________________________________________________________________________
+5.  Look for your *"icon"* check-in. This is the snapshot entry where
+you will see the check-in information (version, login, process,
+timestamp etc)
+6.  You can expand the "Files" column to see the location of the files
+in the central repository.
++
+image:media/checkin-quickstart_history-files.png[image]

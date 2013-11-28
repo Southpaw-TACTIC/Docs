@@ -1,0 +1,18 @@
+execute_python_script
+---------------------
+
+*execute_python_script(script_path, kwargs)*
+
+Execute a python script defined in Script Editor
+
+*param:*
+
+*script_path* - script path in Script Editor, e.g. test/eval_sobj
+
+*keyparam:*
+
+*kwargs* - keyword arguments for this script
+
+*return:*
+
+*dictionary* - returned data structure

@@ -1,0 +1,54 @@
+What is Searching?
+------------------
+
+With the basis of TACTIC being data (information) storage, a large
+aspect of working with TACTIC is searching. When looking for items in
+the project, specific properties are used when conducting a search.
+Below are some example of typical searches in TACTIC:
+
+* Tasks with status in review
+* Find items by category
+* Search by Keywords
+* Tasks Due this week
+* Tasks Past Due
+* Work entered in the current week
+* ....and more
+
+Often times, these searches are used daily so having to fill out the
+search criteria could be redundant. In TACTIC, views can be saved as
+links in the sidebar which include the search criteria. This in turn
+causes the view to become a live report which is always up to date.
+
+Searches in TACTIC are carried through 2 primary interfaces:
+
+The simple search allows for a simple set of search options for a view.
+
+image:media/1_what_is_searching_simple_search.png[image]
+
+For the Keywords Search, after inputting the search criteria, either hit
+the enter key on the keyboard or the Search button to run the search.
+
+*Partial Word Match Check Box*
+
+The check box next to the Keywords Search provides an option to find
+matches on words that contain the input criteria.
+
+For example, if the search criteria is "truck" with the partial word
+match checked on, example results would include "truck", "dumptruck" and
+"loadertruck".
+
+Otherwise, if partial word march is not checked on, the results would
+only include words that match the whole word: "truck".
+
+*Operators: Is / Is Not / Contains*
+
+In the above example, for the Asset Category, the first drop down
+provides an operator so that searches can be performed using: *is, is
+not, contains*
+
+The last drop down menu provides a selection of possible values for the
+Asset Category to search against.
+
+The Search Box can be used to execute simple to very complex searches.
+
+image:media/what-is-searching_search-box.png[image]

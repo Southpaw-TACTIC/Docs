@@ -1,0 +1,47 @@
+Project Startup - Configuration
+-------------------------------
+
+image:media/1_startup_configuration_overview.png[image]
+
+\1) First, open the *Configuration View* under:
+
+Project Startup -> Configuration
+
+image:media/2_startup_configuration_config_button.png[image]
+
+\2) In the *Project Configuration* view, the following tools are
+provided (once the first Searchable Type has been created):
+
+[width="100%",cols="26%,74%",]
+|=======================================================================
+|*View* |Load the list of the items for that Search Type in the panel
+below. The drop down selection next to the View button switched the
+layout view between: Tile, List, Content, Task Schedule, Check-in,
+Overview, Tools.
+
+|*Add* |Add new item to Search Type.
+
+|*Import* |Import items from a CSV file into that Search Type.
+
+|*Custom Columns* |Add custom columns of a datatype to the Search Type.s
+
+|*Workflow* |Add processes to the workflow and specify the different
+Task Statuses
+
+|*Notifications* |Add an email notification: on an event, perform an
+action.
+
+|*Triggers* |Add a trigger: on an event, perform and action.
+
+|*Edit* |Edit the Search Type.
+|=======================================================================
+
+_________________________________________________________________________________________________________________________
+*Note*
+
+_(Advanced)_To go to the *Advanced Project Setup Tools* click on the
+button on the top right with the black graduate cap.
+_________________________________________________________________________________________________________________________
+
+\3) (Advanced) In the *Project Configuration* view, the following tools
+are provided (once the first Searchable Type has been created):

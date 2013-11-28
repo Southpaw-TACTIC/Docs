@@ -1,0 +1,26 @@
+Ingestion Widget
+----------------
+
+The Ingestion Widget is a tool to ingest a large number raw files into
+TACTIC. The tool is often used immediately after the initial creation of
+a new sType.
+
+The Ingestion Widget is used to checkin files using the drag and drop
+option. To find the tool, first go to *Project Configuration*. Next,
+find the sType that you wish to add entries to.
+
+In the Configuration view, click on the *View*column icon to view the
+sType object to ingest. Next, in the bottom panel, right click on the
+gear widget for that sType, hover over the File option from the dropdown
+and select under *File -> Ingest Files*.
+
+This pops up the following Ingest Files window.
+
+Click on the *Add* tab and drag the files from a folder on your computer
+into this TACTIC Ingest window. Next, hit the *Ingest* button to start
+uploading the files. After TACTIC has completed uploading the files, it
+will show a small pop-window
+
+The difference between the Ingest Tool and the Checkin Widget is that
+the context cannot be specified for the Ingest Tool. The Ingest Tool
+simples uses the default context.

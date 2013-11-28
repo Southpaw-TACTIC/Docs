@@ -1,0 +1,114 @@
+Loading Assets
+--------------
+
+You can load 3D assets from the TACTIC repository directly into the 3D
+application using the Checkout view. Assets retrieved from the Checkout
+view are loaded in their neutral position. (At present, this is the
+position they were last checked in at.)
+
+The Asset Loader view is located within the Task views Work Area as a
+tab.
+
+image:media/WorkArea.png[image]
+
+All loadable 3D assets are shown in the Checkout view. This view has
+multiple uses, and can be used to change the definition of the assets
+themselves. The ability to load assets from this view may or may not be
+available, depending on definitions provided by your project manager.
+
+image:media/assetLoader.png[image]
+
+To modify an asset,
+
+1.  Search for the asset in the 3D Asset tab and load it into the
+session.
++
+In Houdini, this asset will be loaded as a reference.
+2.  Before you can make any modifications, you must make the asset
+editable.
++
+In Houdini, right-click on the digital asset and select "allow editing".
++
+In Maya, choose the "Import" loading option to change the mesh, or the
+"reference" loading option to apply an edit data set on a referenced
+model.
+
+image:media/Loader_Options.png[image]
+
+[width="100%",cols="21%,9%,70%",]
+|=======================================================================
+|*Connection* |Http |Http option uses the web server to retrieve the
+files. The files are marshaled through an "http" connection locally to
+the client machine and all references in the Maya session are from files
+that exist locally.
+
+|[multiblock cell omitted] |File System |The files are loaded directly
+from the central TACTIC repository. This option requires access to the
+central file servers, and takes advantage of the large bandwidth
+typically found internally at production facilities.
+
+|*Instantiation* |Reference |Reference option allows Tactic to insert
+the asset into the 3D session as a reference.
+
+|[multiblock cell omitted] |Import |This option imports the asset into
+the 3D session.
+
+|[multiblock cell omitted] |Open |This option opens the asset in the 3D
+application. This option will clear the session without saving.
+
+|*Texture Dependencies* |As checked in |This option loads the same
+preferences of the Latest and Current Assets. (This option is possible
+because TACTIC tracks asset versions from session to session.)
+
+|[multiblock cell omitted] |Latest |Latest option will Load the asset
+with all of the latest versions of the textures.
+
+|[multiblock cell omitted] |Current |Current option will loads the asset
+with all of the current versions of the textures.
+
+|*Connection Type* |[multiblock cell omitted] |Connection type lists the
+option of connecting to 3rd party softwares such as Maya, Houdini, XSI.
+
+|*Connection Port* |[multiblock cell omitted] |[multiblock cell omitted]
+|=======================================================================
+
+The Asset loader lists assets that can be loaded into the session, based
+on the result of the search filters at the top. Each asset listed shows
+an icon with some useful information identifying the asset. The checkin
+column will open a hidden row which will display the version history of
+the assets.
+
+image:media/assetList.png[image]
+
+The latest version of the asset is shown on the right side, along with
+the version number and the context of this version. The context of an
+asset is the current view of the asset and can represent the various
+stages in the asset's evolution.
+
+image:media/versionList.png[image]
+
+To load an asset directly into the 3D application session, click on the
+check box beside the asset in the leftmost column, then click the Load
+button at the top of the list (below the loading options). TACTIC will
+load this asset as a reference into the session. When an asset is loaded
+into the session, the gray dot will turn green if it is the latest.
+
+image:media/greenLight.png[image]
+
+If it is an older version, then the gray dot will turn red, indicating
+that a newer version is available. Looking at the top level, a green dot
+indicates that the latest version with the correct context is loaded
+into the session. If there are multiple versions of the asset located in
+the session, all of the corresponding versions in the history will have
+green check marks beside them.
+
+image:media/redLight.png[image]
+
+To find out which version you have loaded, go to the history by clicking
+on the arrow:
+
+image:media/currentVersion.png[image]
+
+In this case, version 1 of the model context is loaded (as shown by the
+green check mark next to the exact version of snapshot that is in the
+session).

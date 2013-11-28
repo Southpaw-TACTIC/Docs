@@ -1,0 +1,137 @@
+How to Install TACTIC on Ubuntu 12
+----------------------------------
+
+======================================================================
+
+How To Install TACTIC 3.8 (Open Source Release) On Ubuntu Server 12.04
+
+Revision 2 - August 12th, 2012
+
+Author(s): Mike Aquino
+
+======================================================================
+
+Install Ubuntu Server 12.04 as a VM ... go ahead with the default
+creation of initial non-root user (for example when using Easy-install
+for a VMWare VM OS installation), just to expedite the install process
+for Ubuntu Login as the non-root user that was created, and then
+activate root user account using (provide non-root user's password for
+sudo, then provide a password, and confirm it, for the root user):
+`$ sudo passwd root` Logout of non-root user account and then login with
+the newly activated root user account, using the password you just
+provided for the root user. Install necessary tools ... A. install gcc,
+make, unzip ... `$ apt-get install gcc make unzip` B. install Image
+Magick ... `$ apt-get install imagemagick` C. if needed, install OpenSSH
+server ... `$ apt-get install openssh-server` D. install other necessary
+modules ... `$ apt-get install samba libxslt1-dev libxml2-dev` E.
+install postgres ...
+`$ apt-get install postgresql-9.1 postgresql-server-dev-9.1` F. install
+Apache ... `$ apt-get install apache2p` Install Python 2.7 dependencies
+(NOTE: Ubuntu Server 12.04 comes with Python 2.7.3 pre-installed as its
+default Python) ... A. install PIL module ... (a) install library
+dependencies ...
+`$ apt-get install libjpeg-dev libpng-dev zlib1g-dev liblcms1-dev
+                        python-dev` (b) download and build the jpeg
+decoder ... (i) download the http://www.ijg.org/files/jpegsrc.v8d.tar.gz
+file into /root/temp (this file is provided in the "for_PIL" folder of
+this install guide package) (ii) unarchive the package file ...
+`$ cd /root/temp ` `$ tar xvzf jpegsrc.v8d.tar.gz ` (iii) build the jpeg
+decoder and install into the system ... `$ cd /root/temp/jpeg-8c `
+`$ ./configure --enable-shared ` `$ make $ sudo make install ` (c)
+download PIL 1.1.7 source kit from
+http://effbot.org/downloads/Imaging-1.1.7.tar.gz (see more info at
+http://www.pythonware.com/products/pil/) and place in /root/temp (NOTE:
+this file is provided in the "for_PIL" folder of this install guide
+package) (d) set-up PIL ... `$ cd /root/temp `
+`$ tar xvzf Imaging-1.1.7.tar.gz ` `$ cd Imaging-1.1.7 $ vi setup.py`
+... look for declarations of JPEG_ROOT and ZLIB_ROOT and replace them as
+follows ... JPEG_ROOT = "/usr/local/include" ZLIB_ROOT =
+"/usr/local/include" ... the write the file and exit vi (e) install PIL
+... `$ python setup.py build_ext -i ` `$ python selftest.py `
+`$ sudo python setup.py install` B. install other needed Python modules
+... `$ apt-get python-pythonmagick python-psycopg2 python-crypto
+                        python-pycryptopp python-simplejson python-lxml `
+Create "apache" user and group ... A. Add the "apache" group (as root
+user) ... `$ groupadd --gid 48 apache ` B. Add entry for "apache" user
+in the /etc/passwd file ... $ vi /etc/passwd ... then add the following
+line to the file and write the file and exit ...
+apache:x:48:48:Apache:/home/apache:/bin/bash C. Set the "apache" user
+password ... `$ passwd apache ` D. Give apache user sudo privileges ...
+$ visudo ... and add this line in the appropriate place:
+`apache ALL=(ALL) ALL` ... then ctrl+O to write file (overwrite
+/etc/sudoers directly) and then ctrl+X to exit E. Create apache home
+directory ...
+`$ mkdir /home/apache $ chown apache:apache /home/apache $ chmod a+rx
+                        /home/apache` Set-up web-site index page for
+redirection ... `$ vi /var/www/index.html` ... replace its contents
+with: `<META http-equiv="refresh" content="0;URL=/tactic">` ... write
+the file to save and exit vi, then put it into an "html" sub-folder in
+/var/www ... `$ mkdir /var/www/html `
+`$ cp /var/www/index.html /var/www/html/` Logout the root user then
+login as the "apache" user Create a "install_packages" folder in
+/home/apache Download the latest open source "Enterprise" release of
+TACTIC ... go to the downloads page of the Southpaw community site at:
+`"http://community.southpawtech.com/downloads"` ... and click "Download"
+for the "Enterprise" release. Copy this release package (e.g.
+tactic-3.8.0.rc02) to the /home/apache/install_packages folder Unarchive
+the release package ... `$ cd /home/apache/install_packages `
+`$ unzip tactic-3.8.0.rc02.zip` ... you should now have the folder
+/home/apache/install_packages/tactic-3.8.0.rc02/ Set-up TACTIC to run as
+a service ... A. Modify service script to run on Ubuntu Server ...
+`$ cd /home/apache/install_packages/tactic-3.8.0.rc02/src/install
+                    ` `$ vi service/tactic ` ... modify the first line
+of that file to use the "bash" shell explicitly: `#!/bin/bash` ... then
+write out the file and exit vi B. Copy the service script to the proper
+location ... `$ sudo cp service/tactic /etc/init.d `
+`$ sudo chmod 775 /etc/init.d/tactic ` Configure Postgres for use with
+TACTIC ... `$ sudo cp /etc/postgresql/9.1/main/pg_hba.conf
+                        /etc/postgresql/9.1/main/pg_hba.conf--ORIG `
+`$ sudo cp
+                        /home/apache/install_packages/tactic-3.8/src/install/postgresql/pg_hba.conf
+                        /etc/postgresql/9.1/main/ `
+`$ sudo chown postgres:postgres /etc/postgresql/9.1/main/pg_hba.conf
+                    ` `$ sudo chown postgres:postgres
+                        /etc/postgresql/9.1/main/pg_hba.conf--ORIG `
+`$ sudo /etc/init.d/postgresql restart ` Configure Apache for use with
+TACTIC ... `$ sudo cp
+                        /home/apache/install_packages/tactic-3.8.0.rc02/src/install/apache/tactic.conf
+                        /etc/apache2/conf.d/ `
+`$ sudo a2enmod proxy_http ` `$ sudo a2enmod proxy_balancer `
+`$ sudo a2enmod rewrite ` `$ sudo service apache2 restart ` Setup
+bootstrap TACTIC module in Python install area (THIS STEP MUST BE DONE
+FOR TACTIC INSTALL TO WORK) ... A. Manually create "tacticenv" folder in
+"/usr/lib/python2.7/dist-packages/" ...
+`$ sudo mkdir /usr/lib/python2.7/dist-packages/tacticenv `
+`$ sudo chmod 755 /usr/lib/python2.7/dist-packages/tacticenv
+                    ` B. Revise the "tactic_paths.py" file to contain
+the proper paths ... `$ vi
+                        /home/apache/install_packages/tactic-3.8.0.rc02/src/install/data/tactic_paths.py`
+... add the following lines (no indentation!) to the bottom of the file
+(if not already present): `TACTIC_INSTALL_DIR='/home/apache/tactic'
+                    ` `TACTIC_SITE_DIR='' `
+`TACTIC_DATA_DIR='/home/apache/tactic_data'` ... then write those
+changes to the file and exit vi C. Manually copy the "__init__.py" and
+"tactic_paths.py" files into this new "tacticenv" module folder ...
+`$ sudo cp
+                        /home/apache/install_packages/tactic-3.8.0.rc02/src/install/data/*.py
+                        /usr/lib/python2.7/dist-packages/tacticenv/ `
+`$ sudo chmod a+r /usr/lib/python2.7/dist-packages/tacticenv/*.py` Run
+TACTIC install script ...
+`$ cd /home/apache/install_packages/tactic-3.8.0.rc02/src/install $ sudo
+                        python install.py` ... NOTE: specify
+"/home/apache" for the TACTIC installation base path and specify
+"apache" for the user for the Apache Web Server.
+`$ sudo chown -R apache:apache /home/apache/tactic /home/apache/tactic_*
+                    ` `$ sudo chown -R apache:apache /home/apache/assets
+                        /home/apache/tactic_data ` Copy the provided
+TACTIC license file to the correct location ...
+`$ cp /home/apache/tactic/src/install/start/config/tactic-license.xml
+                        /home/apache/tactic_data/config/ ` Ensure
+databases are upgraded to the given version of TACTIC ...
+`$ python /home/apache/tactic/src/bin/upgrade_db.py` Test to make sure
+TACTIC server is able to run ...
+`$ python /home/apache/tactic/src/bin/startup_dev.py` ... and then, from
+a browser, go to the TACTIC web UI and confirm everything is functioning
+properly Finally set up TACTIC to automatically start up as a service
+when the server is rebooted ... `$ sudo update-rc.d tactic defaults`
+[end]

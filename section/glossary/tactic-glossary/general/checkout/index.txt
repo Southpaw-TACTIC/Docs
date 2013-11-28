@@ -1,0 +1,21 @@
+Checkout
+--------
+
+Checkouts in Tactic is when a user requests a particular snapshot. This
+request from the users standpoint can simply be a request for the
+current material which prompts TACTIC to deliver all of the files as
+well as any other dependant files to the user.
+
+There are 2 ways for a user to actually retrieve the files for a
+snapshot.
+
+1.  The files can be loaded directly from the filesystem/fileserver.
+This way, the files are not copied to the users machine, they are left
+where they are and simply loaded up. For this to work, you would have to
+have direct access to the Tactic assets directory but can be more
+efficient as the files are not moved.
+2.  The files can be downloaded to the local sandbox where a user can
+work on them and save files however they like then when ready to commit
+a checkin, do so through Tactic. The sandbox is good in situations where
+the user is either off-site or there may be bandwidth issues opening the
+files directly.

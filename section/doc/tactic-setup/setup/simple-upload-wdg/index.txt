@@ -1,0 +1,38 @@
+SimpleUploadWdg
+---------------
+
+image:media/simple-checkin_menu.png[image]
+
+The Simple Upload Widget is used for uploading files in-line in tables
+and also in edit windows. It is the simplest form of Tactic checkin as
+is allows for uploading of a single file and uses only a single hard
+coded (configured) checkin context.
+
+[width="100%",cols="29%,71%",]
+|====================================================
+|*Name* |Simple Upload Widget
+|*Class* |tactic.ui.widget.SimpleUploadWdg
+|*Category* |Edit Widgets
+|*Supported Interfaces* |TableWdg, EditWdg
+|*TACTIC Version Support* |2.5.0 +
+|*Required database columns* |none
+|====================================================
+
+This widget is available as part of the "preview" common column. It is
+also used when right-clicking on an item and choosing "Change preview"
+or "Checkin File"
+
+[width="100%",cols="29%,71%",]
+|====================================================
+|*Common Name(s)/Title* |Preview, Snapshot, Files
+|*Context* |TableWdg, EditWdg
+|*Show Preview?* |2.5.0 +
+|====================================================
+
+----------------------------------------------------
+<element name='preview'>
+  <display class='tactic.ui.widget.SimpleUploadWdg'>
+    <context>icon</context>
+  </display>
+</element>
+----------------------------------------------------

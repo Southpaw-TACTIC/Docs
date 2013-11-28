@@ -1,0 +1,5 @@
+Sandbox
+-------
+
+The location on your workstation storing the files you are currently
+working on.

@@ -1,0 +1,6 @@
+Task
+----
+
+A task is any job that occurs within a process, and is the fundamental
+atomic work element in project management. For details on tasks, go to
+*Working with Tasks*.

@@ -1,0 +1,20 @@
+Searchable Object (sObject)
+---------------------------
+
+SObjects in TACTIC are not actual physical files, but instead they are
+descriptive containers that store all the information necessary to
+define an object and track it. If the definition of the Search Type
+permits, an SObject can contain relationships to child SObjects.
+Separate SObject children can be used to store extra data. For example,
+they could be "task" SObjects set up based on the pipeline to track
+approvals and notes, or they could be "snapshot" SObjects that store
+file checkin and location information.
+
+In a project, an SObject can be used to store the production data for
+any digital asset requiring multiple associated files. When you create a
+new SObject, you must create it based on a Search Type (for example, the
+"model" Search Type). When you insert this new SObject, you are simply
+inserting a new entry into the "model" Search Type's library. Based on
+the associated template Search Type, the new SObject will require
+specific data to be inserted. For example, a name, description, pipeline
+code and so on.

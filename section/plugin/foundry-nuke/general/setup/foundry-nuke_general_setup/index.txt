@@ -1,0 +1,66 @@
+Nuke Plugin Setup
+-----------------
+
+*The Nuke Plug-in zip file consists of these specific files:*
+
+1.  init.py - This script will run the tactic_nuke_server script.
+2.  tactic_nuke_server.py - This script is to open a port beween tactic
+and nuke.
+3.  nuke_wdg_buton.txt - Contents of this file will create a nuke button
+within tactic.
+4.  nuke_wdg_panel.txt - Contents of this file generate the
+functionality of the integration.
+5.  nuke_logo.jpg - Nuke logo
+6.  systemPath_ScreenShot.jpg - System path screen shot for reference
+during installation.
+7.  README.txt - How to Install Nuke Integration
+
+*How To Install Nuke Integration*
+
+*Step 1)* init.py - This file must be placed in:
+
+XP - c:/documents and settings/<user>/.nuke
+
+Win7 - c:/users/<user>/.nuke
+
+*Step 2)* nuke_wdg_panel.txt - The content of this file must be placed
+in the widget config
+
+* Search Type: CustomLayoutWdg
+* View: nuke_wdg
+* config: <contents of nuke_wdg_panel.txt>(copy and paste)
+
+*Note - Only the files content is used and not the file itself.
+
+*Step 3)* nuke_wdg_button.txt - The content of this file must be placed
+in the definition for the search type used in step 2.
+
+* Go to Manage Search Type View
+* Choose the Search Type eg. prod/shot
+* Select New Widget Column from the Action drop down list
+* Mode = XML
+* Copy and Paste the contents from the nuke_wdg_button.wdg file into the
+config XML definition.
+* Uncheck the Create required column
+* Click Add/exit
+
+*Note - Only the files content is used and not the file itself.
+
+*Step 4)* The tactic_nuke_server.py is placed in the nukescripts folder:
+
+<nuke_install_directory>/plugins/nukescripts
+
+*Step 5)* The nuke logo gets placed in the TACTIC server's assets
+directory under:
+
+/home/apache/custom_html/
+
+_*Note - Create the directory if it doesn't exist._
+
+*Step 6)* Insert the directory path of Nuke6*.exe into the Environment
+Variables within the Windows System Properties.
+
+eg. c:\Program Files\Nuke6.0v2\;
+
+_*Note - In the zip file there is a systemPath_ScreenShot.jpg file that
+will show an image of this example._

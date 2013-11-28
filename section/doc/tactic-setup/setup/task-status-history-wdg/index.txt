@@ -1,0 +1,34 @@
+Task Status History
+-------------------
+
+image:media/1_task_status_history_overview.png[image]
+
+The Task Status History is a toggle that opens a hidden row that
+displays all the status changes for an item. If there are multiple
+processes for an item, the status updates for those processes will be
+displayed.
+
+[width="100%",cols="29%,71%",]
+|====================================================
+|*Name* |Task Status History
+|*Class* |tactic.ui.panel.TableLayoutWdg
+|*Category* |Common Columns
+|*TACTIC Version Support* |3.0+
+|*Required database columns* |none
+|====================================================
+
+The Task Edit Widget is a common column that can be added using the
+Column Manager.
+
+There are no options provided for the Task Edit Widget.
+------------------------------------------------------------------
+<element name="task_status_history">
+  <display class="HiddenRowToggleWdg">
+    <dynamic_class>tactic.ui.panel.TableLayoutWdg</dynamic_class>
+    <search_type>sthpw/status_log</search_type>
+    <view>table</view>
+    <expression>@SOBJECT(sthpw/task.sthpw/status_log)</expression>
+    <mode>simple</mode>
+  </display>
+</element>
+------------------------------------------------------------------

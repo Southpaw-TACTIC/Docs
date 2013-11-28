@@ -1,0 +1,49 @@
+Project Templates
+-----------------
+
+image:media/1_project_templates_overview.png[image]
+
+When a new project is created based on a *template* project, the
+following internal structure will be copied over:
+
+[width="100%",cols="26%,74%",]
+|=======================================================================
+|*search types* and *custom columns* |[multiblock cell omitted]
+
+|*pipeline* and *task statuses* |[multiblock cell omitted]
+
+|*notifications* and *triggers* |The *notificaions*and *triggers*are
+copied over from the template.
+
+|*sidebar* |The links of the views in the sidebar are copied over from
+the template.
+|=======================================================================
+
+___________________________________________________________________________________________________________________________________________________________
+*Note*
+
+The only difference between a project that is a template and a regular
+project is simply a checkmark in a column named *is_template* in the
+projects table.
+___________________________________________________________________________________________________________________________________________________________
+
+To toggle the *is_template* attribute of a regular project, as the
+administrator go to:
+
+*Admin views -> Site Admin -> Projects*
+
+Add the column *is_template* and remove the Search Filters.
+
+Notice that there exists the following view for convenience:
+
+*Admin views -> Site Admin -> Template Projects*
+
+_____________________________________________________________________________________________________________________
+*Note*
+
+After a new project is created based on a template, any changes made to
+the template will not affect the new project.
+
+ie. only the structure that existed in the template at the time the
+project was created will be used
+_____________________________________________________________________________________________________________________

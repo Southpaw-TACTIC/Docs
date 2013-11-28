@@ -1,0 +1,22 @@
+download
+--------
+
+*download(my, url, to_dir=".", filename='', md5_checksum="")*
+
+Download a file from a given url
+
+*param:*
+
+*url* - the url source location of the file
+
+*keyparam:*
+
+*to_dir* - the directory to download to
+
+*filename* - the filename to download to, defaults to original filename
+
+*md5_checksum* - an md5 checksum to match the file against
+
+*return:*
+
+*string* - path of the file donwloaded

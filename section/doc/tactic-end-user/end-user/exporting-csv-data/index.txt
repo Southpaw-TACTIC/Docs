@@ -1,0 +1,57 @@
+Exporting CSV Data
+------------------
+
+image:media/1_exporting_csv_overview.png[image]
+
+*Description*
+
+TACTIC uses a database and thus naturally exports to table-based
+outputs. TACTIC includes a simple user interface to export any
+table-based view out to a CSV file (Comma Separated Values file). Data
+can also be edited and imported to update or create new items in TACTIC.
+
+*Exporting Data*
+
+To export data from a TACTIC view to a CSV file, first check mark the
+rows to export. Then, go to the gear menu and under File select one of
+the following options:
+
+image:media/2_exporting_csv_context_menu.png[image]
+
+Other export options include
+
+* *Export All* - All items in the database
+* *Export Selected* - Only the selected items in the view.
+* *Export Matched* - All items found by the search
+* *Export Displayed* - All items in the current view.
+
+Next, select the columns to export from the selection list and click the
+*Export Selected* button.
+
+__________________________________________________________________________________________________________________________________________________________________
+*Note*
+
+Only columns saved to the current view will be available foe export. It
+may be ideal to save a view particularly for exporting which includes
+all desired columns.
+__________________________________________________________________________________________________________________________________________________________________
+
+Depending on your web browser settings, the web browser will prompt to
+open or save the file.
+
+image:media/3b_exporting_csv_web_browser_save.png[image]
+
+Below is an example of the contents of the resulting CSV file:
+
+----------------------------------------------------------------------------------------------------------------------
+"id","preview","title","keywords","description","asset_category_code"
+"1","","Nuclear Explosion","explosion, fire, nuclear, bomb","Stock footage of a nuclear explosion","video"
+"2","","Car Chase","car, chase, fast, race, map","Stock footage of a overhead car chase.","video"
+"3","","Car Warehouse","car, warehouse, dark, headlights, exterior, engine","3D Car asset in a warehouse setting","3d"
+"4","","Sport Car Warehouse","car, warehouse, interior, dark, headlights, engine","3D Car sport car","3d"
+----------------------------------------------------------------------------------------------------------------------
+
+When the CSV file is open in a CSV-compatible spreadsheet application,
+you will be able to easily manipulate and add data:
+
+image:media/4_exporting_csv_spreadsheet.png[image]

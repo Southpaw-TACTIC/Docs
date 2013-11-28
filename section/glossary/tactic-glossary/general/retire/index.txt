@@ -1,0 +1,6 @@
+Retire
+------
+
+At times you may wish to offline an Search Object but, not remove it
+from the system. Every search type has a s_status preperty that when set
+to 'retired' hides the SObject but, makes is easy to reactivate it.

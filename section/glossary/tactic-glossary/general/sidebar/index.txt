@@ -1,0 +1,11 @@
+Sidebar
+-------
+
+Views provide users with what they need to see and how they need to see
+it. The are collections of different Search Type properties which are
+relevant to a team members role in Tactic. Views are mainly accessed
+through links in the sidebar either as *Project Views* which are
+configured for the whole production (but ca be controlled with access
+rules) and *My Views* which are views a uses saves as their own personal
+views or "bookmarks". Views can also contain a saved search which,
+provides a view as a live report.

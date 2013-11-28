@@ -1,0 +1,135 @@
+Introduction to TACTIC
+----------------------
+
+*What is TACTIC?*
+
+TACTIC is an extensible, web-based data and file management system.
+TACTIC centralizes the following aspects of digital project workflow:
+
+* Production data management
+* Scheduling
+* File (Asset) Management
+* Communication
+* Reporting
+* and more
+
+*How does TACTIC work?*
+
+TACTIC manages two aspects of Digital Content Management: Project data
+and Files. TACTIC maintains both of these components in one unified
+source.
+
+[width="100%",cols="23%,77%",]
+|=======================================================================
+|*Project Data* |Project data is stored in the Database |Project Data is
+the information and lists that are traditionally tracked in
+spreadsheets. TACTIC has the ability to list all files you manage along
+with task assignments, status', and scheduling data, which can be viewed
+in simple table formats or complex custom reports. TACTIC eliminates
+lost email threads, missing documents, and the need to update complex
+spreadsheets. The "database" is the base location for all data. i.e.
+notes, reports, schedules etc. What a database provides is a central
+location for this information.
+
+|*Content/Files* |Files stored in the File System |Content refers to the
+actual files. When managing assets/files the directory and file naming,
+along with proper version control is what makes TACTIC unique. Files in
+TACTIC are managed externally in a file system. i.e. hard drive. The
+file server typically has a root 'assets' directory. From this location,
+TACTIC handles the filenames and directories for that file system.
+|=======================================================================
+
+*What can I do with TACTIC?*
+
+End-Users have various roles within a project or organization. The
+TACTIC interface can be moulded to provide each group (department) with
+the ideal interface.
+
+The TACTIC security architecture is a rules-based system where each
+End-User is provided with a login. The End-User is assigned to groups
+determined by the project leader or administrator. These rules determine
+what the End-User has access to within TACTIC.
+
+Communication between groups and departments can be tracked in real-time
+by using the TACTIC Notes functionality. This method eliminates lost
+email threads and misplaced documents.
+
+TACTIC can manage limitless amount of tasks, the status of those tasks
+and the location of all files being managed. TACTIC gives the End-User
+an accurate real-time understanding of how a project is progressing.
+
+The table below illustrates how various End-Users may interact with
+TACTIC in a single organization.
+
+[width="100%",cols="23%,77%",]
+|=======================================================================
+|*Content Creator* |The Content Creator often requires a view of all
+tasks assigned. The user can update a status, check in and check out
+files, log work hours and communicate with Supervisors using the Notes
+widget.
+
+|*Supervisor/Manager* |The Manager/Supervisor is often required to
+schedule tasks, manage content and resources. The project schedule can
+be adjusted in the User Schedule or Project Tasks view. The TACTIC
+interface provides high level planning, communication and reporting
+tools. The Supervisor often has access to all views which provides the
+ability to plan and adjust the overall needs of a project quickly and
+easily.
+
+|*Client* |Clients often need to review project material (documents,
+videos, images etc) and managing this continuous feed of content is
+often a hurdle. TACTIC's built in web technology allows Clients to
+deliver files and provide real-time feedback without FTP or Email.
+TACTIC can provide Clients with only the specific views and permissions
+needed for each project.
+
+|*Executive* |Executives require a high level view of the project. This
+often involves building views or "reports" that correlate data from all
+aspects of the project. TACTIC is able to provide cost reporting,
+completion, efficiency and location of bottlenecks.
+|=======================================================================
+
+*What can I do in TACTIC?*
+
+TACTIC is a transaction system allowing users to search, interact,
+update and report on project data and files. These interactions are
+carried out using a few main operations:
+
+* *Search* - Search query results are often displayed in a list where
+you can interact with your project data.
+* *Insert* - Additions or "Insert" new data is often done at the start
+of a new project. This is done through various interface tools like
+forms, multi inserts, CSV import and more.
+* *Update* - Updating existing data is sometimes required. For example;
+updating a status, adding keywords, or changing an assigned user.
+Specific views and tools also allow for selecting multiple items to edit
+at one time.
+* *Check-in* - Part of TACTIC's power is the ability to check in and
+manage your files/assets. When you do a check-in, TACTIC versions and
+names the directories and files in your file server. Files remain
+organized and will never become lost.
+* *Check-out* - When you need to work on some files that are already
+checked into TACTIC, you can check them out. This process either points
+you to the where the files are located, or downloads them to your
+computer.
+* *Undo/Redo* - Every action carried out within TACTIC can be undone. If
+a mistake has been made, simply undo the transaction.
+
+*How do I access the TACTIC interface?*
+
+TACTIC is delivered as a web site. This web based solution is extremely
+powerful because it allows for full interaction with TACTIC and also
+direct integration with supported software packages.
+
+Accessing TACTIC is as simple as visiting your server's address (URL) in
+your web browser. For example:
+
+link:#[http://yourcompany.southpawtech.com]
+
+*Lets Get Started!*
+
+The following End-User documentation provides general usage of the
+TACTIC feature set. Additional information, tutorials, forums and
+documentation is available on our TACTIC Community site:
+
+link:#[http://community.southpawtech.com]

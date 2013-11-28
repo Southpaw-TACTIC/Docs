@@ -1,0 +1,17 @@
+Searchable Type (sType)
+-----------------------
+
+Within a project, there are many types of objects to manage, and each
+object type requires different properties and types of files to be
+stored. TACTIC uses *Search Types* to categorize the many types of
+objects that can exist in a project. Search Types are templates that
+determine how these objects are defined and handled. Views, pipelines,
+naming conventions, access rules (and more) are all defined based on
+assignment to a Search Type.
+
+The basic architecture of the TACTIC system is built around interaction
+with objects through their Search Types. These objects or "instances of
+a Search Type" are called Search Objects or *SObjects*. The TACTIC
+interface is simply a layer of widgets (tools) delivered through a web
+browser that are provided for the user to search for SObjects, display
+them, and interact with them based on their Search Types.

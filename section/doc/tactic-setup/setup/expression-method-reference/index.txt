@@ -1,0 +1,444 @@
+Expression Method Reference
+---------------------------
+
+*GET*
+
+@GET( [search]:nav )
+
+v2.5.0+
+
+The GET method will retrieve attributes or columns from a list of
+SObjects. This method returns a list of the values. The first argument
+supports the search type navigational syntax to travel through related
+search types.
+
+Get the bid start date of all of the tasks:
+
+-------------------------------
+@GET(sthpw/task.bid_start_date)
+-------------------------------
+
+Get the assigned user of all of the modelling tasks
+
+--------------------------------------------
+@GET(sthpw/task['process','model'].assigned)
+--------------------------------------------
+
+Get the assigned user of all of the modelling , anim, OR lighting tasks
+
+----------------------------------------------------------------------------------------------
+@GET(sthpw/task['begin']['process','model']['process','anim']['process','lgt']['or'].assigned)
+----------------------------------------------------------------------------------------------
+
+The GET function also supports short hand to get all attributes from the
+current SObjects. This will get the assigned column for all current
+SObjects
+
+---------------
+@GET(.assigned)
+---------------
+
+*GETALL*
+
+@GETALL( [search]:nav )
+
+v4.1.0+
+
+The GETALL method works in a similar way to GET; this method also
+returns a list of the values. Both work identically if the expression
+given is as simple as (sthpw/login.id). The difference lies in more
+complex queries:
+
+------------------------------------------
+@GETALL(sthpw/task.sthpw/login.first_name)
+------------------------------------------
+
+The above query returns the name of the user associated with each task.
+Unlike GET, GETALL will show each user's name for as many tasks as they
+are associated with. GET does not display any duplicates.
+
+Example use of GETALL:
+
+-------------------------------------------------------------------
+@SUM(@GETALL(sthpw/task.sthpw/work_hour.sthpw/login.hourly_wage) * 
+     @GETALL(sthpw/task.sthpw/work_hour.straight_time))
+-------------------------------------------------------------------
+
+This example retursns the total cost of a task based on the hours logged
+and the hourly wage of each employee.
+
+*SOBJECT*
+
+v2.5.0+
+
+The SOBJECT method is similar to the GET SObject except that the entire
+search object is retrieved.
+
+The following expression gets all of the completed modelling tasks.
+
+------------------------------------------------------------
+@SOBJECT(sthpw/task['status','complete']['process','model'])
+------------------------------------------------------------
+
+The following expression gets all of the completed tasks OR model tasks.
+
+---------------------------------------------------------------------------
+@SOBJECT(sthpw/task['begin']['status','complete']['process','model']['or'])
+---------------------------------------------------------------------------
+
+The following expression deals with time related attribute. Get the
+tasks where the bid_end_date is before 2012-02-10 and after 2013-01-08
+
+--------------------------------------------------------------------------------------------------------------------
+@SOBJECT(sthpw/task['begin']['bid_end_date','is before','2012-02-10']['bid_end_date','is after','2013-01-08']['or'])
+--------------------------------------------------------------------------------------------------------------------
+
+The following expression deals with numbers. You can use >, < , >=,or
+<=.
+
+-----------------------------------------
+@SOBJECT(sthpw/task['priority','>=','3'])
+-----------------------------------------
+
+The following expression deals with containing a word. You can use EQ,
+EQI, like. EQ and EQI (case-insensitive) makes use of regular expression
+engine of the database if available. With "like", you have to make use
+of the % wildcard
+
+---------------------------------------------------
+@SOBJECT(sthpw/task['description','like','%rock%'])
+---------------------------------------------------
+
+-----------------------------------------------
+@SOBJECT(sthpw/task['description','EQ','rock'])
+-----------------------------------------------
+
+The following expression deals with NOT containing a word. You can use
+NEQ, NEQI, not like. NEQ makes use of regular expression engine of the
+database if available. With "not like", you have to make use of the %
+wildcard
+
+-------------------------------------------------------
+@SOBJECT(sthpw/task['description','not like','%rock%'])
+-------------------------------------------------------
+
+------------------------------------------------
+@SOBJECT(sthpw/task['description','NEQ','rock'])
+------------------------------------------------
+
+The SOBJECT method can also traverse thru related sTypes if their
+relation has been set up in the Project Schema.
+
+The following expression gets all the shots for sequence 'SE02' and
+'SE03':
+
+----------------------------------------------------------
+@SOBJECT(prod/sequence['code','in','SE02|SE03').prod/shot)
+----------------------------------------------------------
+
+Certain relationships like those between anything to notes or tasks are
+already pre-established.
+
+The following expression gets all the shots that have a note starting
+with the word 'Hello':
+
+----------------------------------------------------
+@SOBJECT(sthpw/note['note','EQ','^Hello').prod/shot)
+----------------------------------------------------
+
+*COUNT*
+
+v2.5.0+
+
+The COUNT method will return the count of the SObject returned by the
+search specifications.
+
+To get a count of all the tasks:
+
+------------------
+@COUNT(sthpw/task)
+------------------
+
+To get a count of all the tasks of all of the shots:
+
+----------------------------
+@COUNT(prod/shot.sthpw/task)
+----------------------------
+
+To get a count of all the modelling tasks of all of the completed shots
+
+--------------------------------------------------------------------
+@COUNT(prod/shot['status','complete'].sthpw/task['context','model'])
+--------------------------------------------------------------------
+
+*SUM*
+
+v2.5.0+
+
+This method will calculate a sum of all of the values in the first
+argument. The first argument must conform to the navigational syntax.
+
+*AVG*
+
+v2.5.0+
+
+Calculates the average of all of the values of the first argument, which
+must conform to the navigational syntax.
+
+*MIN*
+
+v2.5.0+
+
+Returns the minimum value in a list
+
+*MAX*
+
+v2.5.0+
+
+Returns the maximum value in a list
+
+*FLOOR*
+
+v2.5.0+
+
+Returns the lowest integer value of a passed in value
+
+*UNIQUE*
+
+@UNIQUE( [expr1]:expr )
+
+v2.5.0+
+
+The UNIQUE method goes through a list returned from an expression and
+ensures that only unique elements are present. Duplicates are discarded
+
+*UNION*
+
+@UNION( [expr1]:expr, [expr2]:expr, ... )
+
+v2.5.0+
+
+The UNION method combines the union of all of the results from a number
+of expressions together into a single list.
+
+Combine all the users from accounting and marketing together into one
+list:
+
+--------------------------------------------
+@UNION(
+  @SOBJECT(sthpw/login['dept','accounting'],
+  @SOBJECT(sthpw/login['dept','marketing']
+)
+--------------------------------------------
+
+*INTERSECT*
+
+@INTERSECT( [expr1]:expr, [expr2]:expr )
+
+v2.5.0+
+
+The INTERSECT method takes the intersection of all the results of
+expressions in the arguments.
+
+-----------------------------------------
+@INTERSECT(
+  @GET(sthpw/login['dept','supervisor']),
+  @GET(sthpw/login['dept','director'])
+)
+-----------------------------------------
+
+*IF*
+
+@IF( [condition]:expr, [if_true]:expr, [if_false]:expr )
+
+v2.6.0+
+
+The following example will return 'red' if the number of tasks is
+greater than 5 and 'green' if less than or equal to 5. These types of
+expressions are very useful to determine colors of various backgrounds
+or widgets within TACTIC.
+
+----------------------------------------------
+@IF( @COUNT(sthpw/task) > 5, 'red', 'green') )
+----------------------------------------------
+
+Not all of the arguments can be expressions, so the values for both
+is_true and is_false can be expressions that are evaluated:
+
+--------------------------------------------------------
+@IF(
+  @COUNT(sthpw/task) > 5, @GET(.color1), @GET(.color2) )
+)
+--------------------------------------------------------
+
+*CASE*
+
+@CASE( [condition1]:expr, [if_true]:expr, [condition2:expr],
+[if_true]:expr, ... )
+
+v2.6.0+
+
+The case statement is an extension of the IF method, but it allows any
+number of arguments. The odd arguments are conditional tests which must
+evaluate to True or False. The case method will go through each of the
+odd arguments until one of the evaluates to True at which point it will
+evaluate the corresponding even argument and return that value.
+
+----------------------------
+@CASE(
+  @GET(.age) < 10, 'blue',
+  @GET(.age) < 20, 'green',
+  @GET(.age) < 30, 'yellow',
+  @GET(.age) >= 30, 'red'
+)
+----------------------------
+
+*FOREACH*
+
+v2.6.0+
+
+The following expression gets all the first name from the login table as
+a list. and then loop through and add <li> </li> around each item. This
+is more suited in situation where you don't much control over the data
+returned like in a CustomLayoutWdg:
+
+--------------------------------------------------------
+ @FOREACH( @GET(sthpw/login.first_name), '<li>%s</li>' )
+--------------------------------------------------------
+
+*JOIN*
+
+@JOIN( [expr]:expression, [delimiter]:literal
+
+v2.6.0+
+
+The join method take the result of an expression and joins all the
+elements together using a delimiter
+
+*UPDATE*
+
+@UPDATE( [expr1]:expression, [column]:string, [value]:expression )
+
+v2.6.0+
+
+The UPDATE method provides the ability for an expression to update a
+value in the database
+
+The following example updates all of the modelling task to approved
+
+------------------------------------------------------------------------
+@UPDATE( @SOBJECT(sthpw/task['context','model']), 'status', 'Approved' )
+------------------------------------------------------------------------
+
+You can display a model task status column in the Asset page and any
+other asset related pages and have them all pointing back to the task
+search type during an update. It would eliminate any redundant data. The
+following xml definition can be used to set this up in the asset page
+for instance:
+
+------------------------------------------------------------------------------------------------
+<element edit='true' name='asset_task_status' title='Task Status'>
+  <display widget='expression'>
+    <expression>@GET(sthpw/task['context','model'].status)</expression>
+  </display>
+  <action class='DatabaseAction'>
+    <expression>@UPDATE(@SOBJECT(sthpw/task['context','model']), 'status', $VALUE) </expression>
+  </action>
+</element>
+------------------------------------------------------------------------------------------------
+
+The edit view for the Widget Config of prod/asset needs to contain this
+snippet to display the selection list of different statuses
+
+-------------------------------------------------------------
+  <element name='asset_task_status'>
+      <display class='tactic.ui.widget.TaskStatusSelectWdg'/>
+  </element>
+-------------------------------------------------------------
+
+*EVAL*
+
+@EVAL( [expr1]:expression )
+
+@( [expr1]:expression )
+
+v2.6.0+
+
+*PYTHON*
+
+v3.9.0+
+
+It takes one argument, the script path of a script you have defined in
+the TACTIC Script Editor. For instance, to draw the bid_start_date and
+bid_end_date of some specific related tasks when the user changes an
+attribute of a shot, you can define a script called notification/dates
+and use this expression in the message field of notification.
+
+----------------------------
+ @PYTHON(notification/dates)
+----------------------------
+
+--------------------------------------------------------------------
+# notification message displaying shoot schedule
+from pyasm.search import Search
+
+expr = "@SOBJECT(sthpw/task['context','minor'])"
+tasks = Search.eval(expr, sobjects=[sobject])
+
+dates = []
+for task in tasks:
+    # assuming they are on the same day
+    day_expr = "@FORMAT(@GET(.bid_start_date),'1999-12-31')"
+    time_expr1 = "@FORMAT(@GET(.bid_start_date),'01:37 PM')"
+    time_expr2 = "@FORMAT(@GET(.bid_end_date),'01:37 PM')"
+    
+    day_val= Search.eval(day_expr, sobjects=[task], single=True)
+    time_val1= Search.eval(time_expr1, sobjects=[task], single=True)
+    time_val2= Search.eval(time_expr2, sobjects=[task], single=True)
+    schedule = '%s %s - %s' %(day_val, time_val1, time_val2)
+    
+    dates.append(schedule)
+
+return '''
+'''.join(dates)
+--------------------------------------------------------------------
+
+*COLOR*
+
+@COLOR(attribute[,offset])
+
+v4.1.0+
+
+Returns the current palette's color for the chosen attribute plus an
+offset. Offset is a number that can be used to make the color lighter or
+darker. The attribute can also be a hex value.
+
+Ex: @COLOR('color2', 2) will return the second color for this palette.
+
+*GRADIENT*
+
+@GRADIENT(attribute[,offset,gradient_range])
+
+v4.1.0+
+
+Returns a CSS gradient value that starts at the attribute + offset and
+transitions to attribute + offset + gradient_range.
+
+Ex: "@GRADIENT('#777777','3','-4')" will return
+['-webkit-gradient(linear, 0% 0%, 0% 100%, from(#7e7e7e), to(#747474))']
+
+*PALETTE*
+
+@PALETTE([palette_name])
+
+v4.1.0+
+
+Returns a dictionary representing the current palette or a specific
+palette if the optional argument palette_name is included.
+
+Example return value:
+
+\{'color': '#000', 'background2': '#777777', 'color3': '#333', 'color2':
+'#333', 'background': '#DDDDDD', 'shadow': 'rgba(0,0,0,0.6)', 'border':
+'#888888', 'table_border': '#DDD', 'background3': '#999999',
+'side_bar_title': '#3C76C2', 'theme': 'default'}

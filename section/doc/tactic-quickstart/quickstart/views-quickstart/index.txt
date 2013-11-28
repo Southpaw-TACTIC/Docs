@@ -1,0 +1,50 @@
+Views Quickstart
+----------------
+
+*Loading Views*
+
+To get started with view, first load a view from the sidebar in your
+project. Ideally you will have a view with some items available.
+
+image:media/views-quickstart_load-view.png[image]
+
+If the view is a Table based view (which is the most common), you will
+notice that there is an arrangement of columns with tools and data.
+
+*Inserting and Editing Items*
+
+To insert a new item, click the
+image:media/views-quickstart_insert-button.png[image] button in the View
+Shelf
+
+image:media/views-quickstart_insert-item-form.png[image]
+
+To edit items, click the cells in the table, or right click on an item
+and choose "Edit".
+
+image:media/views-quickstart_edit-item.png[image]
+
+*Gear Menu Options*
+
+Selecting items allows for certain actions to become available in the
+View Gear Menu. For example "Tasks -> Add Tasks to Selected"
+
+image:media/views-quickstart_add_tasks_selected.png[image]
+
+*View Layouts*
+
+To change the layout of the view, click the *Layout Switch* button. Each
+view provides different information and tools.
+
+image:media/views-quickstart_layout-switch.png[image]
+
+*Add/Remove Columns*
+
+To Add Columns to the view, click the *Column Manager* button in the
+shelf or, right click in the table header and choose "Column Manager"
+
+image:media/views-quickstart_column-manager.png[image]
+
+or
+
+image:media/views-quickstart_column-manager-menu.png[image]

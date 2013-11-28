@@ -1,0 +1,13 @@
+View
+----
+
+Views in the TACTIC interface are built using a "Table" widget that is
+defined based on a Search Type. Views can be configured to display
+specific properties (columns) and also the widgets (tools) that are used
+to display them.
+
+Views can also be filtered to control which SObjects are displayed with
+search tools. For example, search tools can create reports, or views
+summarizing which SObjects are at which stages in the pipeline. Views
+and reports can be saved as either project views, visible to multiple
+team members, or as personal views, visible to individuals ("My Views").

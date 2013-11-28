@@ -1,0 +1,174 @@
+Select Filter Element Widget
+----------------------------
+
+This widget provides a drop down selection menu of values for a column
+for the Simple Search to do filtering on.
+
+[width="100%",cols="29%,71%",]
+|====================================================
+|*Name* |Select Filter Element Widget
+|*Class* |tactic.ui.filter.SelectFilterElementWdg
+|*TACTIC Version Support* |3.7+
+|*Required database columns* |none
+|====================================================
+
+[width="100%",cols="29%,71%",]
+|====================================================
+|*title* |[multiblock cell omitted]
+|*values* _(required)_ |[multiblock cell omitted]
+|*column* _(required)_ |[multiblock cell omitted]
+|====================================================
+
+Find or define the filter view in the Widget Config and use the
+following XML code as an example of what to add to the config:
+
+------------------------------------------------------------------------
+<config>
+  <custom_filter> 
+    <element name='dynamic'>
+      <display class='tactic.ui.filter.SelectFilterElementWdg'>
+          <values_expr>@GET(project/asset_category.code))</values_expr> 
+          <column>asset_category_code</column> 
+      </display>
+    </element>
+  </custom_filter>
+</config>
+------------------------------------------------------------------------
+
+For the above example, this filter will provide a list of asset category
+codes to select from.
+
+Notice that an icon of a green light appears next to the filter if it is
+being used:
+
+The following example demonstrates the Select Filter Element Widget
+providing filtering options for scrum tickets.
+
+Below is what the Select Filter Elements look like in the user
+interface:
+
+Below is what the config for the above example looks like in the Widget
+Config:
+
+--------------------------------------------------------------------------------------------
+<config>
+  <custom_filter> 
+  
+    <element name='assigned'> 
+        <display class='tactic.ui.filter.SelectFilterElementWdg'> 
+          <values_expr>@GET(sthpw/login.login)</values_expr> 
+          <column>assigned</column> 
+        </display> 
+    </element>
+  
+    <element name='status'> 
+        <display class='tactic.ui.filter.SelectFilterElementWdg'> 
+          <values>new|open|in_dev|need_info|on_hold|need_validation|closed|invalid</values> 
+          <column>status</column> 
+        </display> 
+    </element>
+
+    <element name='type'> 
+        <display class='tactic.ui.filter.SelectFilterElementWdg'> 
+          <values_expr>@UNIQUE(@GET(scrum/ticket.type))</values_expr> 
+          <column>type</column> 
+        </display> 
+    </element>
+
+    <element name='sprint'> 
+        <display class='tactic.ui.filter.SelectFilterElementWdg'> 
+          <values_expr>@GET(scrum/sprint.title)</values_expr> 
+          <column>scrum/sprint.title</column> 
+        </display> 
+    </element>
+
+    <element name='feature'> 
+        <display class='tactic.ui.filter.SelectFilterElementWdg'> 
+          <values_expr>@GET(scrum/feature.title)</values_expr> 
+          <column>scrum/feature.title</column> 
+        </display> 
+    </element>
+
+    <element name='product'> 
+        <display class='tactic.ui.filter.SelectFilterElementWdg'> 
+          <values_expr>@GET(scrum/product.title)</values_expr> 
+          <column>scrum/feature.scrum/product.title</column> 
+        </display> 
+    </element>
+
+    <element name='customer'> 
+        <display class='tactic.ui.filter.SelectFilterElementWdg'> 
+          <values_expr>@UNIQUE(@GET(scrum/ticket.customer_code))</values_expr> 
+          <column>customer_code</column> 
+        </display> 
+    </element>
+
+  </custom_filter>
+</config>
+--------------------------------------------------------------------------------------------
+
+The following example is from the VFX project. It demonstrates how the
+Select Filter Element Widget can provide filtering options on assets
+based on columns not belonging to the current table itself.
+
+Below is the schema for the VFX project. From the *asset* search type, a
+Select Filter Element is built based for attributes in the
+*asset_category*, *sequence*, *shot* and search types.
+
+image:media/5_select_filter_element_widget_example_vfx_schema.png[image]
+
+Below is what the Select Filter Elements look like in the user
+interface:
+
+Below is what the config for the above example looks like in the Widget
+Config:
+
+--------------------------------------------------------------------
+<config>
+  <custom_filter> 
+    <element name='keywords'/>
+  
+    <element name='asset_category'> 
+        <display class='tactic.ui.filter.SelectFilterElementWdg'> 
+          <values_expr>@GET(vfx/asset_category.code))</values_expr> 
+          <column>asset_category</column> 
+        </display> 
+    </element>
+
+    <element name='sequence'> 
+        <display class='tactic.ui.filter.SelectFilterElementWdg'> 
+          <values_expr>@GET(vfx/sequence.code))</values_expr> 
+          <column>vfx/asset_in_sequence.sequence_code</column> 
+        </display> 
+    </element>
+
+    <element name='shot'> 
+        <display class='tactic.ui.filter.SelectFilterElementWdg'> 
+          <values_expr>@GET(vfx/shot.code))</values_expr> 
+          <column>vfx/asset_in_shot.shot_code</column> 
+        </display> 
+    </element>
+
+  </custom_filter>
+</config>
+--------------------------------------------------------------------
+
+*Note*: the column attribute can only point to sTypes of the local
+database. For example if you are in vfx project's sequence page, you
+can't filter for task status of a shot with
+<column>vfx/shot.sthpw/task.status</column>. An alternative is to use
+the Advanced Search Criteria's children section or the cross_db
+attribute of the KeywordFilterElementWdg.
+
+-------------------------------------------------------------
+<!-- in a task view, search for the shot's title attribute-->
+
+<element name="keywords">
+  <display class="tactic.ui.filter.KeywordFilterElementWdg">
+    <mode>keyword</mode>
+    <column>vfx/shot.title</column>
+    <cross_db>true</cross_db>
+  </display>
+</element>        
+    
+-------------------------------------------------------------

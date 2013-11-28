@@ -1,0 +1,14 @@
+get_column_info
+---------------
+
+*get_column_info(search_type)*
+
+Get column information of the table given a search type
+
+*param:*
+
+*search_type* - the key identifying a type of sobject as registered in
+
+the search_type table.
+
+*return - a dictionary of info for each column*

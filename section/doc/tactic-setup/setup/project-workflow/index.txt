@@ -1,0 +1,215 @@
+Workflow Editor
+---------------
+
+image:media/1_workflow_editor_overview.png[image]
+
+The Workflow Editor is a graphical tool in TACTIC used to interactively
+create pipelines (workflows). It is a node-based tool which creates
+processes in a pipeline and connects them. The Workflow Editor makes it
+easier to create large complex pipelines to filter and process
+information and file system flow.
+
+The Workflow Editor is simple to use and similar to node base utilities
+commonly found in other applications. Nodes can be created in the canvas
+and connected together. Each node represents a process (with attributes
+associated to it) and each connection represents information being
+delivered from one process to the other. Together, the Workflow Editor
+helps you create a definition of the pipeline document and drive much of
+the information flow in TACTIC.
+
+*Access the Workflow Editor*
+
+Access the Workflow Editor by going to:
+
+*Admin Views -> Project Admin -> Project Workflow*
+
+When the option for "Has Pipeline" is selected during the registration
+of the sType, this defines a default pipeline for that sType. This
+pipeline can be found defined in the Workflow Editor in the sidebar
+under *Project Pipelines*. To add a new pipeline manually, the select
+the [+] icon in bottom panel of the Workflow Editor.
+
+image:media/2_workflow_editor_pipelines_panel.png[image]
+
+The buttons at the top of the Workflow Editor allow various operations
+on the canvas:
+
+image:media/pipeline_tools.png[image]
+
+* *Create:* Creates a new node on the canvas.
+* *Delete:* Deletes the selected node.
+* *Save:* Saves the current state of the pipeline to the database.
+* *Clear:* Clears the canvas.
+* *Properties:* Opens the Node Properties panel.
+
+To edit the properties of a pipeline, first select a node in the
+pipeline and then click on the *Edit Properties* button on the tool
+shelf.
+
+_____________________________________________________________________________________________________________________
+*Note*
+
+For more information regarding the Process Options, refer to the section
+Project Workflow -> Pipeline Process Options
+_____________________________________________________________________________________________________________________
+
+image:media/7_workflow_editor_properties.png[image]
+
+When you click the green plus button,
+*Create*image:media/add_button.png[image], a new node will appear on the
+canvas.
+
+image:media/pipeline_node_insert.png[image]
+
+Rename the node: Select the new node and press CTRL-LMB to rename the
+node. Alternatively, right click and select *Rename Node* from the
+context menu.
+
+image:media/pipeline_node_naming.png[image]
+
+Type in the new name for the node ("Model," in this example), and press
+*Enter*.
+
+image:media/pipeline_node.png[image]
+
+Create another new node (called "Texture" in this example).
+
+image:media/pipeline_nodes.png[image]
+
+To create a connection between the two nodes, click on the handle on the
+right side of the "Model" node. This will create a connector which will
+follow the cursor.
+
+image:media/pipeline_node_connector.png[image]
+
+Click on the left handle of the "Texture" node to complete the
+connection. Now, the 2 nodes are connected together. Once 2 nodes are
+connected, they will stay connected unless the connector is selected and
+deleted.
+
+image:media/pipeline_node_connection.png[image]
+
+It is also possible to have one node connect to more than one node. In
+the following example, the "Model" process delivers to both the
+"Texture" process and a "Rig" process:
+
+image:media/Pipeline_node_tree.png[image]
+
+Repetition and daily components that make up a user's workflow can be
+made easier through automation of notifications, file/directory naming
+and triggering custom logic. Automations such as these can vary from
+simply sending an email or automatically setting upstream and downstream
+task statuses to running custom Python scripts and tools to encode
+files, submit renders, generate previews, deliver files to clients, etc.
+
+On the Workflow Editor's canvas, right-clicking on a node will bring up
+the context menu where the automation interfaces can be loaded into the
+lower half of the interface. These options include:
+
+[width="100%",cols="50%,50%",]
+|=======================================================================
+|*Show Properties* |Loads the Node Properties window.
+
+|*Show Triggers/Notifications* |Loads the Triggers and Notifications
+setup Interface
+
+|*Show File Naming* |Loads the Directory and File naming convention
+setup Interface
+|=======================================================================
+
+________________________________________________________________________________________________
+*Note*
+
+Each of the menu options are explained in the "Project Automation"
+section of the documentation.
+________________________________________________________________________________________________
+
+When the cursor is over the canvas in the pipeline editor, the following
+mouse and keyboard shortcuts are available:
+
+[width="100%",cols="51%,49%",]
+|=======================================================================
+|*LMB* on a node |Select the node
+
+|*LMB* on the empty canvas space |Clears selection
+
+|*LMB + Ctrl* click on a node |Edits the name of the node
+
+|*LMB + Shift* click on a node |Add node to selection
+
+|*LMB + drag* on a node |Drags the node around the canvas
+
+|*LMB + drag* on the empty canvas space |Pans around the canvas
+
+|*LMB + Shift + drag* to form a selection box |Forms a selection box
+
+|*LMB + Ctrl + drag* to the left or the right |Zooms in or out on the
+canvas
+
+|*DELETE* |Deletes the selected node(s)
+|=======================================================================
+
+To change the node color, go to the *Workflow Editor -> sidebar*
+
+right click on the pipeline and select *Edit Pipeline Data*
+
+image:media/3_workflow_editor_edit_pipeline_data.png[image]
+
+Next, click on the color input field. A color swatch will pop-up. Select
+the new color for this pipeline from the color swatch.
+
+image:media/4_workflow_editor_change_node_color.png[image]
+
+Another way to change the color is in the *Workflow Editor -> Pipelines
+tab (panel at the bottom)* click on the *color* column and pick the
+color from the color swatch.
+
+image:media/5_workflow_editor_change_node_color_method_two.png[image]
+
+Right click on the pipeline node will display the following menu
+options:
+
+image:media/6_workflow_editor_node_context_menu.png[image]
+
+[width="100%",cols="51%,49%",]
+|=======================================================================
+|*Add To Current Group* |Add the selected node to the current group
+
+|*Rename Node* |Rename the current selected node
+
+|*Delete Node* |Delete the current selected node
+
+|*Delete Group* |Delete the group for the current selected node
+
+|*Edit Properties* |Edit the properties for the current selected node
+
+|*Show Triggers/Notifications* |Display the triggers and notifications
+view in the bottom panel
+
+|*Show Processes* |Display the processes in the bottom panel
+
+|*Customize Task Status* |Create a custom task status pipeline for the
+process (refresh the Workflow Editor to see it added to the sidebar)
+|=======================================================================
+
+Behind the scenes, the pipeline is an XML text document. This document
+is how TACTIC stores its representation of the pipeline structure of
+nodes and connections.
+
+Although it is rare to need to manually edit the pipeline XML structure,
+it is available at the bottom of the Workflow Editor in the pipelines
+table in the *Data* column.
+
+Below is an example of the pipeline XML for the *Model -> Rig / Texture*
+pipeline:
+
+-----------------------------------------------------------------------------------------------
+<?xml version='1.0' encoding='UTF-8'?>
+<pipeline scale='100'>
+  <process name='model' ypos='-95' xpos='-138'/>
+  <process name='rig' color='blue' xpos='38' completion='80' task_pipeline='task' ypos='-165'/>
+  <process name='texture' ypos='-51' xpos='42'/>
+  <connect to='rig' from='model'/>
+  <connect to='texture' from='model'/>
+</pipeline>
+-----------------------------------------------------------------------------------------------

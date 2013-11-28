@@ -1,0 +1,35 @@
+Setting Up Your Web Browser
+---------------------------
+
+*Web Browser*
+
+To access the TACTIC interface, a supported version a web browser is
+required.
+
+To connect to the TACTIC server, type a URL in your web browser similar
+to the example below (the IP address will vary depending on the network
+setup of your organization). An example is shown below:
+
+`http://192.168.14.198/`
+
+When you are connected to the server, you are presented with the TACTIC
+login screen:
+
+image:media/NEW_login-screen.png[image]
+
+______________________________________________________________________________
+*Note*
+
+If you cannot see this TACTIC login, please contact your TACTIC
+Administrator.
+______________________________________________________________________________
+
+*Java Support*
+
+For certain transactions to occur between TACTIC and the client
+computer, Java will need to be installed. Currently TACTIC supports:
+Java JRE 1.6.0+
+
+To download the Java Runtime application, please visit:
+
+*http://www.java.com*

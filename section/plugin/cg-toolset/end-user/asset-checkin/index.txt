@@ -1,0 +1,185 @@
+Asset Checkin
+-------------
+
+The Maya Checkin View is where 3D artists such as modelers, texture
+artists and riggers check in their 3D assets.
+
+This view is located within the Tasks views Work Area as a tab.
+
+image:media/Maya_checkin.png[image]
+
+Before it finishes loading the Maya Checkin View, TACTIC automatically
+introspects the user's 3D application to determine which assets are
+present in their session, and then lists these assets.
+
+For assets previously checked into TACTIC, they contain hidden node data
+which is used to figure out their context and version in the session.
+However, for new assets there is no hidden node data to work with, so
+some initial setup is required.
+
+To set up the initial relationships for new assets you want to check in,
+you must rename their top node to match the 'code' or 'name' property of
+the asset (SObject) you want to check them in to. This naming convention
+allows the TACTIC software to identify which assets you want to check in
+from your 3D session. What is considered the top node differs slightly
+for XSI, Maya and Houdini checkins. These differences are outlined in
+the following sections.
+
+(For assets that were loaded from TACTIC, there is no need to rename the
+top node. TACTIC knows implicitly which asset they came from.)
+
+There is a project setting which sets the option for 'code' or 'name' to
+be used for 3D checkins.
+
+</note?>
+With Maya checkins, TACTIC requires the top node of your model to be
+named as the 'code' or 'name' of the SObject to which you want to check
+the model in. You can also place the model in a group node or set for
+easier identification.
+
+image:media/Maya_creature.png[image]
+
+With XSI checkins, TACTIC requires that you name the top 'model' node
+according to the SObject's 'code' or 'name'.
+
+image:[image]
+
+With Houdini checkins, TACTIC requires that a subnet of the model be
+created. Once a subnet has been created, rename the subnet node to the
+'name' or 'code' of the SObject. Also, if you are editing an existing
+asset with any dependencies (for example, textures), you will need to
+click on the subnet and choose *Allow Editing of Contents*
+
+image:media/houdiniAssetNew.png[image]
+
+The introspection architecture used by TACTIC analyzes user sessions and
+keeps track of the assets being used in each session. TACTIC is able to
+find assets within a user session by a number of methods, depending on
+the application in use.
+
+To update the information shown in the checkin view, click the
+*Introspect* button available from this view. TACTIC determines which
+assets are in your current 3D application session and updates the view
+if it finds any assets. A number of items will appear in the interface
+that correspond to the assets in your session. TACTIC allows you to work
+on multiple assets simultaneously, so you can export based on a top node
+and check in separate files for all of the different assets (SObjects)
+in your session.
+
+To verify that TACTIC is introspecting correctly, check that your 3D
+application outputs a message similar to the following after you click
+the Introspect button:
+
+---------------------------------
+args:  ('introspect.introspect',)
+cmd:  introspect.introspect()
+---------------------------------
+
+*Example:*
+
+In the Maya session below:
+
+image:media/Maya_br_cr.png[image]
+
+The Maya Checkin view will show the following:
+
+image:media/introspect_assets.png[image]
+
+There are various options available when checking in an asset.
+
+image:media/checkin_options.png[image]
+
+[width="100%",cols="21%,6%,73%",]
+|=======================================================================
+|*Process* |[multiblock cell omitted] |The current stage in the pipeline
+for the asset you are working on. The pipeline definition for the asset
+determines which processes exist. The pipeline also defines the contexts
+for when and how it can be checked in.
+
+|*Context* |[multiblock cell omitted] |Context allows you to specify a
+context or subcontext for the checkin. For more information on contexts,
+go to *?* in the Glossary.
+
+|*File Type* |[multiblock cell omitted] |File Type determines the type
+of file that will be exported. The choices vary depending on the 3D
+application.
+
+|*Export Method* |Export |Exports the node with the same name as the
+asset code (for example, chr004). In the case of Maya, if this node is
+the top-level transform, TACTIC will export everything that is below and
+attached to this node as specified by the Maya function export selected.
+
+|[multiblock cell omitted] |Save |The save option saves the entire
+session to a file and checks in that file as the asset.
+
+|[multiblock cell omitted] |Pipeline |Pipeline options allows you to
+define additional hierarchical processes to be executed during the
+checkin process. For example, this option may be used to run animation
+exporter scripts or turntable render scripts during the checkout
+process.
+
+|*Checkin as* |Version |Version option increments the version number for
+the chosen context. For example, "v002"
+
+|[multiblock cell omitted] |Revision |Revision increments the revision
+number under the current version. For example, "v001_r001"
+
+|*Set as Current* |True |True option marks the checkin as the current
+(latest) one.
+
+|[multiblock cell omitted] |False |False option use this option if the
+checkin is not to be treated as the latest or current.
+
+|*Unknown References* |Ignore |Ignore instructs TACTIC to ignore any
+references it is unable to identify in the session
+
+|*Version* |[multiblock cell omitted] |This option will instruct Tactic
+to automate versioning of all checkins.
+
+|*Texture* |[multiblock cell omitted] |This option can be defined true
+or false within the project settings view. If set as true, Tactic will
+be instructed to checkin textures as well as geo cache.
+
+|*Use handoff dir* |[multiblock cell omitted] |This option can be
+defined true or false within the porject settings view.
+|=======================================================================
+
+Once you have an asset in your session that corresponds to an SObject in
+TACTIC, the SObject will show up in the checkin view and be available
+for publishing.
+
+image:media/checking_in.png[image]
+
+1.  Click the check box on the left of the asset to select it.
+2.  Write a description of the checkin. If left blank, the phrase
+"initial insert" will be used.
+3.  Click the *Publish* button.
+4.  If successful, TACTIC will automatically open the Checkin Log tab:
++
+image:media/checkin_log.png[image]
+5.  To verify the checkin, click on the dependency button to determine
+whether the files and dependencies are correct.
++
+image:media/dependency.png[image]
+
+A _sandbox_ is a testing environment that isolates untested changes from
+the production repository. TACTIC provides sandboxes on user machines so
+users can experiment and make changes freely. When they are confident of
+their changes, they can then save them and check them into the
+repository. The location of user sandboxes is determined by the
+directory naming conventions.
+
+To work in your sandbox, click the action buttons on the right side of
+any instance:
+
+image:media/sandbox.png[image]
+
+* "Set Project" (first button): TACTIC will set the Maya project to that
+of asset as specified by the naming conventions.
+* "Explore" (second button): Opens up Windows Explorer to the defined
+sandbox area for this asset.
+* "Save" (third button): You can save a new version of the file every
+time you click this button. For example, if the current file name of the
+session is chair_v003.ma, then this clicking this button will save a
+file named chair_v004.ma in the sandbox directory. (Press the second
+Explore button to go to this directory.)

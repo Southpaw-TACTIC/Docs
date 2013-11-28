@@ -1,0 +1,75 @@
+Internationalization
+--------------------
+
+TACTIC supports international unicode characters for almost all elements
+in the interface. Mose elements in the interface accept unicode
+character streams navtively. This makes it possible to customize a
+project in any native language.
+
+The following show an image of using TACTIC in Japanese:
+
+image:media/tasks_japanese.png[tasks_japanese.png]
+
+The following sections of TACTIC are capable of using unicode
+characters:
+
+*Notes:*
+
+All notes, including the discussion widget and the notes sheet can
+accept unicode characters.
+
+<show example here>
+
+*Data*
+
+image:media/Description.png[image]
+
+*Column Headers*
+
+<show example here>
+
+*Side Bar*
+
+image:media/project_views.png[image]
+
+*Pipeline*
+
+<show example here>
+
+*Limitations*
+
+There are certain areas where it is recommended to use Latin-1
+characters. These sections may be able to use unicode characters for
+certain uses, but areas have been found where these sections can cause
+issues.
+
+* *Project codes*: project codes are used to generate the URL of the
+project and the database of the project. PostgreSQL accepts database
+unicode database names quite well but URL with unicode characters are
+not typically accepted or used. It is recommended that project codes
+stay with alpha_numeric character set with underscores as a delimiter
+* *Search Types*: search types are used to identify a type of sobject.
+These search types are often identified in code. It is not typical to
+see unicode characters in code, although this may be changing as
+computers and languages support becomes more ubiquitous. However, there
+are still many areas in computing where unicode characters are not
+supported and it is possible that limitations will occur. The TACTIC
+interface and database generally accept unicode strings with issue.
+* *View Names*: View names are stored in the database as XML. An example
+of this is as follows:
++
+-------------------------
+<config>
+  <xxx>
+    <element name="foo"/>
+  </xxx>
+</config>
+-------------------------
++
+where "xxx" is the view name. Most XML libraries will accept tags with
+unicode characters, however, some do not support them completely. This
+can cause issues when doing searches and xpath through xml documents.
+For this reason, it is recommended to use alpha_numeric characters with
+underscore delimiters for view names. The view name does not typically
+appear in the user interface for users, so this does not usually cause
+an issue.

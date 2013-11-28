@@ -1,0 +1,7 @@
+Access Rule
+-----------
+
+When configuring TACTIC, it is important for both security and
+simplicity to set up appropriate access rules. Access Rules are
+typically applied to user groups, making it easier to control what
+different groups of users or departments can access in TACTIC.

@@ -1,0 +1,34 @@
+Framecycler Plugin Setup
+------------------------
+
+*The Framecycler Plug-in zip file consists of these files:*
+
+1.  launch_framecycler.txt - This is a script that launches framecycler
+with a assets.
+2.  checkout.txt - Contents of this file defines the snapshot of the
+general checkin.
+3.  README.txt - How to Install Framecycler Integration
+
+*How To Install Framecycler Integration*
+
+*Step 1)* Within Tactic's UI press the number 9 to open the TACTIC
+Script Editor. Add a script by clicking the insert button.
+
+* Code: launch_framecycler
+* Folder: script
+* Title: Framecycler
+* Script:: <contents from the launch_framecycler.txt file>
+
+*Note - Only the files content is used and not the file itself.
+
+*Step 2)*Save the script by clicking the save button on the top right
+conrner.
+
+*Step 3)* checkout.txt - The contents of this file must be placed in the
+widget config.
+
+* Search type: sthpw/snapshot
+* View: checkout
+* Config: <contents of the checkout.txt file>
+
+*Note - Only the files content is used and not the file itself.

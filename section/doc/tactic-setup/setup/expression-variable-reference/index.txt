@@ -1,0 +1,126 @@
+Expression Variable Reference
+-----------------------------
+
+There are a number of predefined variables in the expression language.
+The following list all of the available variables:
+
+* LOGIN - the login of the current user
+* LOGIN_ID - the login id of the current user
+* LOGINS_IN_GROUP - the group of logins belonging to the group the
+current user is in
+* PROJECT - code of the current project
+* PROJECT_URL - the URL to the project's home page (ex:
+http://10.0.0.65/tactic/media)
+* BASE_URL - The base URL of the TACTIC installaiton (ex:
+http://10.0.0.65/)
+
+[width="100%",cols="22%,44%,34%",options="header",]
+|=======================================================================
+|Variable |Description |Usage
+|NOW |Current day and time |[multiblock cell omitted]
+
+|TODAY |Current day at midnight (12:00 am) |[multiblock cell omitted]
+
+|THIS_MINUTE |[multiblock cell omitted] |[multiblock cell omitted]
+
+|NEXT_MINUTE |Now + 1 minute |[multiblock cell omitted]
+
+|PREV_MINUTE |Now + 1 minute |[multiblock cell omitted]
+
+|THIS_HOUR |This hour at 0 minutes |[multiblock cell omitted]
+
+|NEXT_HOUR |THIS_HOUR + 1 hour |[multiblock cell omitted]
+
+|PREV_HOUR |THIS_HOUR - 1 hour |[multiblock cell omitted]
+
+|NEXT_DAY |Today + 1 day |[multiblock cell omitted]
+
+|THIS_YEAR |The first day of this year at midnight (12:00am)
+|[multiblock cell omitted]
+
+|NEXT_YEAR |THIS_YEAR + 1 year |[multiblock cell omitted]
+
+|PREV_YEAR |THIS_YEAR - year |[multiblock cell omitted]
+
+|THIS_MONTH |the first day of this month at midnight (12:00am)
+|[multiblock cell omitted]
+
+|NEXT_MONTH |THIS_MONTH + 1 month |[multiblock cell omitted]
+
+|PREV_MONTH |THIS_MONTH - 1 month |[multiblock cell omitted]
+
+|NEXT_***DAY |Replace *** with a particular day of the week
+|NEXT_MONDAY: the next day that is a Monday at midnight
+
+|PREV_***DAY |Replace *** with a particular day of the week
+|PREV_SATURDAY: the last day that was a Saturday at midnight
+
+|**_DAY_AGO |Replace ** with any number between 1 and 12 |10_DAY_AGO:
+today - 10 days
+
+|**_DAY_AHEAD |Replace ** with any number between 1 and 12 |5_DAY_AHEAD:
+today + 5 days
+
+|**_WEEK_AGO |Replace ** with any number between 1 and 12 |same usage as
+**_DAY_AGO
+
+|**_WEEK_AHEAD |Replace ** with any number between 1 and 12 |same usage
+as **_DAY_AHEAD
+
+|**_MONTH_AGO |Replace ** with any number between 1 and 12 |same usage
+as **_DAY_AGO
+
+|**_MONTH_AHEAD |Replace ** with any number between 1 and 12 |same usage
+as **_DAY_AHEAD
+
+|**_YEAR_AGO |Replace ** with any number between 1 and 12 |same usage as
+**_DAY_AGO
+
+|**_YEAR_AHEAD |Replace ** with any number between 1 and 12 |same usage
+as **_DAY_AHEAD
+|=======================================================================
+
+These variables can be used for to refer to state information in
+searches. This expression will retrieve all the login information for
+the current user.
+
+---------------------------------
+@GET(sthpw/login['login',$LOGIN])
+---------------------------------
+
+They can also be used to find items between certain dates. This
+expression will retrieve all snapshots for this week starting at Sunday.
+
+--------------------------------------------------------------------------------
+@GET(sthpw/snapshot['timestamp','>',$LAST_SUNDAY]['timestamp','<',$NEXT_SUNDAY])
+--------------------------------------------------------------------------------
+
+The following are shorthands that do not require a starting point or
+environment sobject. They can be used in an absolute expression:
+
+* login - the currently logged in user login attribute
+* project - the current project
+* date - a date object with today's date
+* palette - a palette object used for accessing different attributes of
+the palette for the current project. e.g. @GET(palette.background) can
+be used in the css for a Custom Layout Widget
+
+The following are shorthands that require a starting point or
+environment sobject:
+
+* parent - the parent of the current related sobject @GET(parent.code)
+* search_type - the sType sobject. e.g. @GET(.search_type.title)
+* connect - the connected sobject registered in the connection sType.
+Refer to the API methods like connect_sobjects() and
+get_connected_sobjects()
++
+To filter down to a particular connected sobject based on the context
+attribute, which defaults to 'task', use @CONTEXT.
++
+e.g. @GET(prod/asset.connect['@CONTEXT','some_task'].description)
+
+The following variables are only used in Naming. Refer to the file
+naming section for details.
+
+* EXT - file extension
+* BASEFILE - the filename portion of the file without the extension

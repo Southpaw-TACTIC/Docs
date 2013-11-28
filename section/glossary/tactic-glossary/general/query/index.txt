@@ -1,0 +1,6 @@
+Query
+-----
+
+A query into TACTIC is a request to retrieve Search Objects from the
+database. In the Tactic interface when a user searches for something,
+they are doing a query.

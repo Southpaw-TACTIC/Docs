@@ -1,0 +1,72 @@
+Note Sheet Widget
+-----------------
+
+The Note Sheet Widget allows entering of many notes in different
+contexts and different parents at the same time. It can be used for
+entering notes for any search types. By default, it uses the parent's
+pipeline processes as the contexts for note entry. Notes can be saved
+either individually or altogether. There is an option to make a note
+private as well.
+
+*Info*
+
+[width="100%",cols="29%,71%",]
+|====================================================
+|*Name* |Note Sheet Widget
+|*Common Title* |Note Sheet
+|*Class* |tactic.ui.app.NoteSheetWdg
+|*Category* |Table Element Widget
+|*Supported Interfaces* |TableLayoutWdg
+|*TACTIC Version Support* |2.5.0 +
+|*Required database columns* |none
+|====================================================
+
+When used with regular sTypes with its pipeline_code set, the Note Sheet
+Widget automatically displays the pipeline processes as note context
+options. Each enabled context is marked with a check in the check box,
+which goes along with a text box for note entry. Indicate which contexts
+display for input by selecting the appropriate check boxes. When used
+with a child search_type like a task, the Note Sheet Widget assumes its
+context attribute as the note context.
+
+Clicking on "*save*" icon will save all of the notes together for this
+parent. To save one note at a time, click on the individual *save*
+button under the corresponding note.
+
+The private check box turns a note access as private if checked. The
+history button is used to display all the note entries for a context.
+
+image:media/notesheetwdg_addnotes.png[image]
+
+The Note Sheet Widget is a common column that can be added using the
+Column Manager.
+
+[width="100%",cols="29%,71%",]
+|=======================================================================
+|*dynamic_class* |Set the class name of the widget to be displayed
+
+|*pipeline_code* |Specifies a particular pipeline_code to use or if the
+parent of this note sheet widget does not have the 'pipeline_code'
+attribute e.g. 'model'. If unspecified, it will be based on the
+pipeline_code value of its parent.
+
+|*element_class* |To override the default element class
+NoteTableElementWdg, modify the look or add extra buttons to the UI to
+enter notes. One method is just to override the method get_action_wdg()
+
+|*use_parent* |When a note sheet is added to a sType like task or
+snapshot but it is set up so that the note is targeted at its parent,
+which could be an asset or shot. If so, set this display option to true.
+
+|*append_context* |Used to add contexts that are not defined in the
+pipeline. Separate the contexts with a pipe character if there are more
+than one, e.g. producer|director.
+|=======================================================================
+
+-----------------------------------------------------------------
+<element name="notes_sheet" edit="false">
+    <display class="HiddenRowToggleWdg">
+        <dynamic_class>tactic.ui.app.NoteSheetWdg</dynamic_class>
+    </display>
+</element>
+-----------------------------------------------------------------

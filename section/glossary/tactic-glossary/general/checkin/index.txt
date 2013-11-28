@@ -1,0 +1,18 @@
+Checkin
+-------
+
+Checkins in Tactic is generally the process of placing and registering
+all of the files that represent a "snapshot" of that object. This
+snapshot is a package in itself that understands all of the versioning
+and location for all files and/or folders that are a part of that
+checkin.
+
+With the notion of each Search Object being a container, creating
+snapshots can be compared to creating and storing packages in this
+container.
+
+From the back-end of Tactic the great aspect of this process is that
+this package is simply meta data that points to where the actual files
+and folders live in the file system. The main benefits of this that if
+Tactic we to be shut off, the files system will still be available and
+very well organized.

@@ -1,0 +1,21 @@
+Manage Users
+------------
+
+\1) First, open the *Manage Users* view under:
+
+*Project Startup -> Manage Users*
+
+\2) In the *Project Configuration* view, the following tools are
+provided:
+
+[width="100%",cols="26%,74%",]
+|=======================================================================
+|*Activity* |Displays the calendar for a count of the user's: tasks due,
+check-in's, notes and work hours.
+
+|*Groups* |Displays the groups that the user has been assigned to.
+
+|*Security* |[multiblock cell omitted]
+
+|*Edit* |[multiblock cell omitted]
+|=======================================================================

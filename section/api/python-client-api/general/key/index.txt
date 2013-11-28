@@ -1,0 +1,16 @@
+split_search_key
+----------------
+
+*split_search_key(search_key)*
+
+Convenience method to split a search_key in into its search_type and
+search_code/id components. Note: only accepts the new form
+prod/asset?project=sample3d&code=chr001
+
+*param:*
+
+*search_key* - the unique identifier of a sobject
+
+*return:*
+
+*tuple* - search type, search code/id

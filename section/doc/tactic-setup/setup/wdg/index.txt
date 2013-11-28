@@ -1,0 +1,80 @@
+Checkbox Filter Element Widget
+------------------------------
+
+The Checkbox Filter Element Widget appears as a check box which
+activates filteringm when checked. This widget provides a convenient way
+to perform more complex search operations.
+
+[width="100%",cols="29%,71%",]
+|====================================================
+|*Name* |Checkbox Filter Element Widget
+|*Class* |tactic.ui.filter.CheckboxFilterElementWdg
+|*TACTIC Version Support* |3.7+
+|*Required database columns* |none
+|====================================================
+
+[width="100%",cols="29%,71%",]
+|====================================================
+|*titles* |[multiblock cell omitted]
+|*options* |[multiblock cell omitted]
+|====================================================
+
+Specify (or look up) the name of the _Simple Search View_ under *Admin
+Views -> Project -> Manage Side Bar -> Simple Search View*.
+
+In the example below, the _Simple Search View_ is named:
+*simple_search_view*
+
+Look up and edit that simple search view in the Widget Config. Use the
+following XML code as an example of what to add to the config:
+
+--------------------------------------------------------------------------------------------------
+<config>
+  <simple_search_view> 
+    <element name='dynamic'>
+      <display class='tactic.ui.filter.CheckboxFilterElementWdg'>
+        <options>asset_category_3d</options>
+        <asset_category_3d>@SOBJECT(project/asset['asset_category_code','3d'])</asset_category_3d>
+      </display>
+    </element>
+  </simple_search_view>
+</config>
+--------------------------------------------------------------------------------------------------
+
+For the above example, this filter returns results where the
+_asset_category_code_ is: *3d*
+
+Below is an example of adding 3 check box filters: a filter to search
+for tickets that belong to the currently logged in user, the user *beth*
+and the user *ted*. Notice that the options are pipe '|' separated.
+
+---------------------------------------------------------------------------------
+<config>
+  <simple_search_view> 
+     <element name='mine'> 
+        <display class='tactic.ui.filter.CheckboxFilterElementWdg'> 
+          <options>my_tickets|beth_tickets|ted_tickets</options> 
+          <my_tickets>@SOBJECT(scrum/ticket['assigned',$LOGIN])</my_tickets> 
+          <beth_tickets>@SOBJECT(scrum/ticket['assigned','beth'])</beth_tickets> 
+          <ted_tickets>@SOBJECT(scrum/ticket['assigned','ted'])</ted_tickets>
+        </display> 
+     </element>
+  </simple_search_view>
+</config>
+---------------------------------------------------------------------------------
+
+Below is an example of filtering for the condition of having one or more
+icons snapshots related to shots:
+
+------------------------------------------------------------------------------------------------------------------------
+<config>
+  <simple_search_view> 
+    <element name='dynamic'>
+      <display class='tactic.ui.filter.CheckboxFilterElementWdg'>
+        <options>some_icon</options>
+        <some_icon>@SOBJECT(prod/shot.sthpw/snapshot['context','icon']['project_code','sample3d'].prod/shot)</some_icon>
+      </display>
+    </element>
+  </simple_search_view>
+</config>
+------------------------------------------------------------------------------------------------------------------------

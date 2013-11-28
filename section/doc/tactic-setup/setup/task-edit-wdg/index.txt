@@ -1,0 +1,45 @@
+Task Edit
+---------
+
+image:media/1_setup_task_edit_overview.png[image]
+
+The Task Edit Widget is a toggle that opens a hidden row that displays
+all the tasks for an item. If there are multiple processes for an item,
+the tasks for those processes will be displayed.
+
+*Info*
+
+[width="100%",cols="29%,71%",]
+|====================================================
+|*Name* |Task Edit
+|*Common Title* |Tasks
+|*Class* |tactic.ui.panel.TableLayoutWdg
+|*Category* |Table Layout Widget
+|*Supported Interfaces* |TableLayoutWdg
+|*TACTIC Version Support* |3.0.0 +
+|*Required database columns* |none
+|====================================================
+
+The following details are displayed by the Task Edit Widget for a task:
+
+* a link to the task's Work Area (where the Checkin and Checkout tools
+can be found)
+* the task's description
+* status for that process
+* the user assigned to the process
+* the supervisor of that process
+* the priority
+* start and end date for the process in the form of a Gantt chart
+
+The Task Edit Widget is a common column that can be added using the
+Column Manager.
+
+There are no options provided for the Task Edit Widget.
+
+---------------------------------------------------------------------
+<element name="task_edit" title="Tasks" edit="false">
+    <display class="HiddenRowToggleWdg">
+        <dynamic_class>tactic.ui.panel.TableLayoutWdg</dynamic_class>
+    </display>
+</element>
+---------------------------------------------------------------------

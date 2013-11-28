@@ -1,0 +1,38 @@
+create_snapshot
+---------------
+
+*create_snapshot(search_key, context, snapshot_type="file",
+description="No description", is_current=True, level_key=None,
+is_revision=False, triggers=True )*
+
+Create an empty snapshot
+
+*param:*
+
+*search_key* - a unique identifier key representing an sobject
+
+*context* - the context of the checkin
+
+*keyparam:*
+
+*snapshot_type* - [optional] descibes what kind of a snapshot this is.
+
+More information about a snapshot type can be found in the
+
+prod/snapshot_type sobject
+
+*description* - [optional] optional description for this checkin
+
+*is_current* - flag to determine if this checkin is to be set as current
+
+*is_revision* - flag to set this as a revision instead of a version
+
+*level_key* - the unique identifier of the level that this
+
+is to be checked into
+
+*triggers* - boolean to fire triggers on insert
+
+*return:*
+
+*dictionary* - representation of the snapshot created for this checkin

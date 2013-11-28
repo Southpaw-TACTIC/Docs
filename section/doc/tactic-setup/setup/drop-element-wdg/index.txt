@@ -1,0 +1,95 @@
+Drop Item
+---------
+
+image:media/2_drop_element_usage.png[image]
+
+Facilitates drag-and-drop of an item between 2 views. For example, drag
+a user from one view and drop it into a user group.
+
+[width="100%",cols="29%,71%",]
+|====================================================
+|*Name* |Drop Element Widget
+|*Common Title* |Drop Element Widget
+|*Class* |tactic.ui.table.DropElementWdg
+|*TACTIC Version Support* |3.0.0 +
+|*Required database columns* |none
+|====================================================
+
+For example, in the Shot Planner view, individual assets can be added to
+a shot by simply dragging the asset from one view and dropping it onto
+the shot in another view. Once the asset is dropped onto the shot, the
+asset will appear in the column with a "NEW" flag. Hit the save button
+in the shot view to preserve the changes.
+
+*Options*
+
+[width="100%",cols="29%,71%",]
+|=======================================================================
+|*Accepted Drop Type* |The acceptable sType that can be clicked on to be
+dragged and dropped onto another type. For example, sType is vfx/asset.
+
+|*Instance Type* |For the item that is being dragged, it is the sType
+that the item can be dropped onto. For example, sType is
+vfx/asset_in_shot"
+
+|*Cbjs Drop Action* |The call back JavaScript to run each time an item
+is dropped into the column.
+
+|*Display Expr* |The expression to run to display in view mode. For
+example "@"
+|=======================================================================
+
+A many-to-many relationship between the 2 types needs to be created in
+the Schema Editor. By convention, the "join" node that need to be
+created to connect the 2 types should be named: "<sType1>_in_<sType2> ".
+For example, for the join node named: "asset_in_shot". The
+"asset_in_shot" node stores the data representing the relationship
+between the asset and which shot it appears in.
+
+The view where the item to be dropped onto the Drop Element column of,
+can exist in a custom layout table or a view opened in a new window
+within the TACTIC session.
+
+--------------------------------------------------------
+<element name="asset_drop" width="333px" edit="false">
+  <display class="tactic.ui.table.DropElementWdg">
+    <instance_type>vfx/asset_in_shot</instance_type>
+    <accepted_drop_type>vfx/asset</accepted_drop_type>
+    <css_background-color>#425952</css_background-color>
+  </display>
+  <action class="tactic.ui.table.DropElementAction">
+    <instance_type>vfx/asset_in_shot</instance_type>
+  </action>
+</element>
+--------------------------------------------------------
+
+Example 1: implementation of "asset_in_shot', where an asset can be drag
+and dropped onto a shot:
+
+--------------------------------------------------------
+<element name="asset_drop" width="333px" edit="false">
+  <display class="tactic.ui.table.DropElementWdg">
+    <instance_type>vfx/asset_in_shot</instance_type>
+    <accepted_drop_type>vfx/asset</accepted_drop_type>
+    <css_background-color>#425952</css_background-color>
+  </display>
+  <action class="tactic.ui.table.DropElementAction">
+    <instance_type>vfx/asset_in_shot</instance_type>
+  </action>
+</element>
+--------------------------------------------------------
+
+Example 2: implementation of "user_in_group', where a user can be drag
+and dropped onto a group:
+
+image:media/1_drop_element_overview.png[image]
+
+--------------------------------------------------------
+<element name="users">
+  <display class="tactic.ui.table.DropElementWdg">
+    <css_background-color>#425952</css_background-color>
+    <instance_type>sthpw/login_in_group</instance_type>
+    <accepted_drop_type>sthpw/login</accepted_drop_type>
+  </display>
+</element>
+--------------------------------------------------------

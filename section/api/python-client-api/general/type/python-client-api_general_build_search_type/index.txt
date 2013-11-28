@@ -1,0 +1,33 @@
+build_search_type
+-----------------
+
+*build_search_type(search_type, project_code=None)*
+
+Convenience method to build a search type from its components. It is
+
+a simple method that build the proper format for project scoped search
+
+types. A full search type has the form:
+
+prod/asset?project=bar.
+
+It uniquely defines a type of sobject in a project.
+
+*param:*
+
+*search_type* - the unique identifier of a search type: ie prod/asset
+
+*project_code (optional)* - an optional project code. If this is not
+
+included, the project from get_ticket() is added.
+
+*return:*
+
+search type string
+
+*example*
+
+--------------------------------------------------------
+search_type = "prod/asset"
+full_search_type = server.build_search_type(search_type)
+--------------------------------------------------------

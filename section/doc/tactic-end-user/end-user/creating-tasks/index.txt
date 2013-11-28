@@ -1,0 +1,94 @@
+Creating Tasks
+--------------
+
+image:media/1_creating_tasks_overview.png[image]
+
+*Insert/Edit Tasks*
+
+There is more than one way to create new tasks. The following describes
+explains each way.
+
+*Task Menu*
+
+Select the item to add tasks to. Then, go to the Gear menu for the view
+and select *Tasks -> Add Tasks To Selected*.
+
+image:media/2a_creating_tasks_gear_menu.png[image]
+
+Check mark the processes to add the task to and then hit *Add Tasks*.
+
+image:media/2b_creating_tasks_context_menu.png[image]
+
+The *skip duplicated* option skips adding a task that has already been
+created for that process e.g. if only a task for design has already been
+created.
+
+Notice the new tasks added to the Task Pipeline column:
+
+image:media/2b_creating_tasks_gear_menu_after.png[image]
+
+Another way to create a task is to create a task by *context*. This is
+provided in the drop down selection menu.
+
+image:media/2c_creating_tasks_context_menu.png[image]
+
+[width="100%",cols="23%,77%",]
+|=======================================================================
+|*Create task by: Process* |Displays all the processes to select from,
+to create a task for.
+
+|*Create task by: Context* |Displays all the contexts to select from, to
+create a task for.
+
+|*Create task by: All Contexts in Process* |Creates all the contexts
+defined in the pipeline, but only displays the processes to select from,
+to create a task for.
+|=======================================================================
+
+*Task Edit Column*
+
+The Task edit column can be used to insert tasks one at a time for a
+particular item.
+
+image:media/3_creating_tasks_add_item_form.png[image]
+
+*Task Status Column*
+
+Once an item is created which has a pipeline, the widget will show a
+green insert button (+). This will load the task creation GUI to create
+tasks for the item.
+
+image:media/5_creating_tasks_plus_button.png[image]
+
+*Task Properties*
+
+image:media/6_creating_tasks_properties.png[image]
+
+Each Task can have the following attributes.
+
+[width="100%",cols="15%,85%",]
+|=======================================================================
+|*Process* |The currently selected process. Use the menu to select a
+different process to perform on the current parent asset.
+
+|*Description* |A description to identify the task.
+
+|*Milestone* |Assignment to a milestone item that represents a specific
+milestone in the project.
+
+|*Status* |The status of the currently selected task pipeline.
+
+|*Assigned* |The user assigned to complete the task.
+
+|*Supervisor* |The user assigned to supervise the task.
+
+|*Priority* |The priority level of the task.
+
+|*Bid start date* |Proposed date to start the assigned task. Drag the
+date in the calendar to set.
+
+|*Bid end date* |Proposed date to complete the assigned task. Drag the
+date in the calendar to set
+
+|*Bid Duration* |Proposed amount of hours to complete the assigned task.
+|=======================================================================

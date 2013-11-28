@@ -1,0 +1,14 @@
+Pipeline
+--------
+
+Searchable Type metadata may also include a "pipeline_code" property to
+link the SObject to a pipeline SObject. In this event, task SObjects are
+also created from the pipeline's processes to define the processes the
+SObject will pass through as it progresses through its production. When
+tasks (processes) are defined, they ensure that an asset can only move
+along the pipeline with all checkpoints complete. For example, they can
+determine that the assigned user checks in files, generates notes, sets
+task status and receives management approvals. After all of the
+associated tasks for the SObject are approved and it is packaged up and
+marked complete, its production history information, files, and data are
+all still available as a package.

@@ -1,0 +1,18 @@
+get_by_code
+-----------
+
+*get_by_code(search_type, search_code)*
+
+Get the info on an sobject based on search code
+
+*param:*
+
+*search_type* - the search_type of the sobject to search for
+
+*code* - the code of the sobject to search for
+
+*return:*
+
+*sobject* - a dictionary that represents values of the sobject in the
+
+form name/value pairs

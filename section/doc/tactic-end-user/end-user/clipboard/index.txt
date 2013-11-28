@@ -1,0 +1,51 @@
+Using the Clipboard
+-------------------
+
+image:media/1_clipboard_overview.png[image]
+
+The Clipboard menu feature provides an easy method for transferring
+items (row data) from one view to another. Items can also be copied
+between different projects. This feature can be used similarly to the
+copy and paste function that we are familiar with in most applications.
+
+The features for the Clipboard can be found on the tool shelf under the
+*Gear menu -> Clipboard*.
+
+The individual options of the Clipboard menu are described in detail
+below.
+
+This menu option copies the items to the Clipboard that you have checked
+marked in the view. Either one row or multiple items can be copied. Once
+the items have been copied to the Clipboard in memory, the destination
+view has been navigated to, to allow pasting the items.
+
+__________________________________________________________________________________________________
+*Note*
+
+The Clipboard has been built with the ability to copy and paste items
+from one project to another.
+__________________________________________________________________________________________________
+
+This menu option copies the items that have been check marked and adds
+them to the items that are already have on the Clipboard without wiping
+out what is on the Clipboard. This menu option is useful especially when
+navigating through different views to gather row data.
+
+This menu option pastes the items that have been stored in the Clipboard
+into the view.
+
+_________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+*Note*
+
+Regarding copying and pasting to another project and the History column:
+After pasting the contents of the Clipboard to the view, the latest
+History of the item's check-ins will refer to the item under the
+original path where the files live. The paths will point to the item in
+the new project as soon as the first check-in transaction is completed
+for this item under the new project.
+_________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+This menu option opens up a pop up and displays the items that are
+currently stored in your Clipboard.
+
+image:media/2_clipboard_contents.png[image]

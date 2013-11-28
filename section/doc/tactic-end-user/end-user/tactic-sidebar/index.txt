@@ -1,0 +1,55 @@
+Sidebar
+-------
+
+image:media/1_tactic_sidebar_overview.png[image]
+
+The TACTIC sidebar is the main menu system for navigating through the
+views in the TACTIC Project. The access rules applied to a specific
+account determine the contents of the sidebar as well as which views are
+displayed when a user is logged in.
+
+The items in the sidebar provide links to existing views within a
+project. These views are built by your organization's production manager
+based on a selection of columns (properties), layouts (order and column
+width) and a search. If a search view is available, it provides a
+dynamic report based on the definition of the search.
+
+The sidebar is divided into three different categories, "Project Views",
+"My Views" and "Admin Views".
+
+[width="100%",cols="20%,80%",]
+|=======================================================================
+|image:media/3_tactic_sidebar_project_view.png[image]
+|[multiblock cell omitted]
+|=======================================================================
+
+*Admin Views* displays the project schema and the TACTIC system and
+administration schemas. Access to the Admin Views section of the sidebar
+is generally reserved for admin level users.
+
+*My Admin* - My Admin holds views that will allow the users to manage My
+Views and My Preferences.
+
+image:media/5_tactic_sidebar_my_admin.png[image]
+
+[width="100%",cols="29%,71%",]
+|=======================================================================
+|*Manage My Views* |Edits the views saved in the "My Views" section.
+
+|*My Preference* |Preferences include: Debug, Web Client Logging Level,
+Color Palette, Language, Quick Text for Note Sheet Thumbnail Size
+|=======================================================================
+
+You can add any view to the sidebar very easily. If you have a view open
+in a tab, you can simply right click on the tab and select “Add to Side
+Bar”. This will add the link to the sidebar under the Project Views.
+This will allow you to customize the sidebar and let you quickly open
+your important views which you use regularly.
+
+image:media/11_tactic_sidebar_adding.png[image]
+
+Now, “My Dashboard” will be a link in the sidebar which takes you to
+this view. You can just as easily remove this link from the sidebar by
+right clicking on the link and selecting “Remove Link”.
+
+image:media/12_tactic_sidebar_removing.png[image]

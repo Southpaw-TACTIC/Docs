@@ -1,0 +1,72 @@
+get_snapshot
+------------
+
+*get_snapshot(search_key, context="publish", version='-1',
+level_key=None, include_paths=False, include_full_xml=False,
+include_paths_dict=False, include_files=False,
+include_web_paths_dict=False, versionless=False)*
+
+Method to retrieve an sobject's snapshot
+
+Retrieve the latest snapshot
+
+*param:*
+
+*search_key* - unique identifier of sobject whose snapshot we are
+
+looking for
+
+*keyparam:*
+
+*process* - the process of the snapshot
+
+*context* - the context of the snapshot
+
+*version* - snapshot version
+
+*revision* - snapshot revision
+
+*level_key* - the unique identifier of the level in the form of a search
+key
+
+*include_paths* - flag to include a list of paths to the files in this
+
+snapshot.
+
+*include_full_xml* - whether to include full xml in the return
+
+*include_paths_dict* - flag to specify whether to include a
+
+__paths_dict__ property containing a dict of all paths in the
+
+dependent snapshots
+
+*include_web_paths_dict* - flag to specify whether to include a
+
+__web_paths_dict__ property containing a dict of all web paths in
+
+the returned snapshots
+
+*include_files* - includes all of the file objects referenced in the
+
+snapshots
+
+*versionless* - boolean to return the versionless snapshot, which takes
+a version of
+
+*return:*
+
+*dictionary* - the resulting snapshot
+
+*example:*
+
+----------------------------------------------------------------------------------
+    search_key = 'prod/asset?project=sample3d&code=chr001'
+    snapshot = server.get_snapshot(search_key, context='icon', include_files=True)
+----------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------------------------------
+    # get the versionless snapshot
+    search_key = 'prod/asset?project=sample3d&code=chr001'
+    snapshot = server.get_snapshot(search_key, context='anim', include_paths_dict=True, versionless=True)
+---------------------------------------------------------------------------------------------------------

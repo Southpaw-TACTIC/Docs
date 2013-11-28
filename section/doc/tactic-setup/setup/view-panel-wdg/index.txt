@@ -1,0 +1,96 @@
+View Panel
+----------
+
+image:media/1_view_panel_overview.png[image]
+
+The View Panel is a composite widget which binds together a Table Layout
+Widget and a Search Widget. The Search Widget is a searching mechanism
+that retrieves items and transfers them to a Table Layout Widget to
+draw. The View Panel Widget is used in most of TACTIC's predefined
+views.
+
+[width="100%",cols="29%,71%",]
+|====================================================
+|*Name* |View Panel
+|*Class* |ViewPanelWdg
+|*TACTIC Version Support* |2.5.0 +
+|*Required database columns* |none
+|====================================================
+
+The View Panel widget makes use of the TableLayoutWdg capabilities. The
+views available to the View Panel are identical to that of the Table
+Layout Widget.
+
+[width="100%",cols="31%,69%",]
+|=======================================================================
+|*show_gear* |Flag to show the gear menu.
+
+|*show_search* |Flag to show the search box.
+
+|*show_search_limit* |Flag to show the search limit.
+
+|*show_insert* |Flag to show the insert button.
+
+|*insert_view* |Specify the path to a custom insert view.
+
+|*edit_view* |Specify the path to a custom edit view.
+
+|*show_commit_all* |Flag to show the commit all button.
+
+|*show_refresh* |Display the refresh button on the shelf.
+
+|*show_row_select* |Flag to show row_selection.
+
+|*popup* |Pop the view up in a pop-up window.
+
+|*layout* |*default*, *tile*, *static*, *raw*, *fast_table*, *old_table*
+
+|*search_type* |The type that this widget works with
+
+|*view* |The TACTIC name for the view. e.g. admin.test_asset_tracking
+
+|*do_initial_search* |Run the search on loading of the view.
+
+|*simple_search_view* |Specify the simple search view.
+
+|*custom_filter_view* |View for custom filters. Defaults to
+"custom_filter".
+
+|*process* |The process which is applicable in the UI when load view is
+used.
+
+|*mode* |*simple*, *insert*
+
+|*parent_key* |Provides a parent item to filter in the search.
+
+|*search_key* |Provides the starting search key.
+
+|*element_names* |Provides a list of column names (ie.
+"preview,name,description") for the view.
+
+|*schema_default_view* |(INTERNAL) flag to show whether this is
+generated straight from the schema.
+
+|*order_by* |The column name to order ascending by.
+
+|*search_view* |(INTERNAL) View for custom searches.
+
+|*width* |Set the default width of the table
+
+|*expression* |Use an expression for the search. The expression must
+return items.
+
+|*filter* |JSON data structure representing the settings for SearchWdg
+|=======================================================================
+
+Often, the ViewPanelWdg is defined from a side bar link. It can be
+defined by XML as follows
+
+------------------------------------------------
+<element name='summary'>
+  <display class='tactic.ui.panel.ViewPanelWdg'>
+    <search_type>sthpw/task</search_type>
+    <view>task_summary</view>
+  </display>
+</element>
+------------------------------------------------

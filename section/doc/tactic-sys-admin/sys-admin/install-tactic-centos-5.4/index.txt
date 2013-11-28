@@ -1,0 +1,220 @@
+How to Install TACTIC on CentOS 5.4
+-----------------------------------
+
+Below are the step-by-step instructions of how to install TACTIC on
+CentOS 5.4.
+
+*CentOS 5.4*
+
+Unfortunately, CentOS 5.4 comes pre-packaged with an outdated version of
+Python: Python 2.4. TACTIC requires Python 2.7.
+
+To get around this, when we install Python 2.7, we do not overwrite the
+original Python 2.4. See steps #8 and #9.
+
+Overwritting the original Python would break some software packages,
+such as Yum.
+
+We must remember to call Python2.7 explicitly whenever we run any TACTIC
+python scripts, including startup.py
+
+1.  Log in as the root user.
+2.  Open the passwd file.
++
+--------------
+vi /etc/passwd
+--------------
++
+Modify the apache home directory and login shell to look like the
+following:
++
+---------------------------------------------
+apache:x:48:48:Apache:/home/apache:/bin/bash 
+---------------------------------------------
+3.  Set password for apache to: south123paw
++
+-------------
+passwd apache
+-------------
+4.  Open to the sudoers file.
++
+------
+visudo
+------
++
+Add the apache user by including the following line in the appropriate
+location in the file:
++
+--------------------
+apache ALL=(ALL) ALL
+--------------------
+5.  Create the home directory for apache.
++
+--------------------------------
+mkdir /home/apache
+chown apache:apache /home/apache
+chmod a+rx /home/apache
+--------------------------------
+6.  Disable SElinux.
++
+----------------------
+vi /etc/selinux/config
+----------------------
+7.  Install modules.
++
+---------------------------------------------------------------------------------------------------
+yum install -y gcc zlib-devel samba libxslt-devel libxml2-devel postgresql-server postgresql-devel 
+---------------------------------------------------------------------------------------------------
+8.  Install Python 2.7.
++
+----------------------------------------------------------------
+cd; wget http://www.python.org/ftp/python/2.7.1/Python-2.7.1.tgz
+tar zxvf Python-2.7.1.tgz
+cd Python-2.7.1
+./configure -with-zlib=/usr/include
+make install
+----------------------------------------------------------------
+9.  Installing Python 2.7 will install python2.7 command "ahead" of the
+original python so that "python" from the command line is now 2.7. This
+will break yum. To fix this, remove the python executable for 2.7.
++
+------------------------
+rm /usr/local/bin/python
+------------------------
+10. Restart the shell so that the environment is clean.
+11. Install lxml.
++
+-------------------------------------------------
+cd; wget http://codespeak.net/lxml/lxml-2.2.8.tgz
+tar zxvf lxml-2.2.8.tgz
+cd lxml-2.2.8
+python2.7 setup.py install
+-------------------------------------------------
+12. Install PIL.
++
+---------------------------------------------------------
+cd; wget http://effbot.org/downloads/Imaging-1.1.7.tar.gz
+tar zxvf Imaging-1.1.7.tar.gz
+cd Imaging-1.1.7
+python2.7 setup.py install
+---------------------------------------------------------
+13. Install psycopg2.
++
+--------------------------------------------------------------------------------
+cd; wget http://pypi.python.org/packages/source/p/psycopg2/psycopg2-2.3.2.tar.gz
+tar zxvf psycopg2-2.3.2.tar.gz
+cd psycopg2-2.3.2
+python2.7 setup.py install
+--------------------------------------------------------------------------------
+14. Install PyCrypto.
++
+------------------------------------------------------------------------------
+cd; wget http://pypi.python.org/packages/source/p/pycrypto/pycrypto-2.3.tar.gz
+tar zxvf pycrypto-2.3.tar.gz
+cd pycrypto-2.3
+python2.7 setup.py install
+------------------------------------------------------------------------------
+15. Disable firewall.
++
+-------------------------
+/etc/init.d/iptables save
+/etc/init.d/iptables stop
+-------------------------
+16. Create and open the index.html for redirection.
++
+---------------------------
+vi /var/www/html/index.html
+---------------------------
++
+Insert the following contents:
++
+---------------------------------------------------
+<META http-equiv="refresh" content="0;URL=/tactic">
+---------------------------------------------------
+17. Re-login as the apache user.
+18. Download the TACTIC source code and setup the service.
++
+Open the following link in a web browser
++
+----------------------------------------
+http://support.southpawtech.com/download
+----------------------------------------
++
+Setup the TACTIC service.
++
+------------------------------------------------------------------
+cd /tmp
+unzip tactic_#.#.#.#.zip
+sudo cp /tmp/tactic_#.#.#.#/src/install/service/tactic /etc/init.d
+sudo chmod 775 /etc/init.d/tactic
+sudo /sbin/chkconfig tactic on
+------------------------------------------------------------------
+19. Setup Postgres.
++
+----------------------------------------------------------------------------------
+sudo /etc/init.d/postgresql start
+sudo cp /tmp/tactic_#.#.#.#/src/install/postgresql/pg_hba.conf /var/lib/pgsql/data
+sudo chown postgres:postgres /var/lib/pgsql/data/pg_hba.conf
+sudo /sbin/chkconfig postgresql on
+sudo /etc/init.d/postgresql restart 
+----------------------------------------------------------------------------------
+20. Setup Apache.
++
+----------------------------------------------------------------------
+sudo cp /home/apache/tactic_data/config/tactic.conf /etc/httpd/conf.d/
+sudo /sbin/chkconfig httpd on
+sudo /etc/init.d/httpd start 
+----------------------------------------------------------------------
+21. Install TACTIC.
++
+--------------------------------------------------------------------------------------------------------------------
+cd /tmp/tactic_#.#.#.#/src/install
+sudo python2.7 install.py
+sudo /sbin/chkconfig tactic on
+sudo chown -R apache:apache /home/apache/tactic /home/apache/assets /home/apache/tactic_data /home/apache/tacticTemp
+--------------------------------------------------------------------------------------------------------------------
+22. Upgrade the database.
++
+---------------------------------------------------
+python2.7 /home/apache/tactic/src/bin/upgrade_db.py
+---------------------------------------------------
+23. Startup TACTIC in dev mode.
++
+----------------------------------------------------
+python2.7 /home/apache/tactic/src/bin/startup_dev.py
+----------------------------------------------------
+24. Try accessing TACTIC through a web browser on a client machine.
+25. Once startup_dev works, Ctrl^C out of the process.
++
+------
+Ctrl^C
+------
+26. Open the TACTIC service file for edit.
++
+--------------------------
+sudo vi /etc/init.d/tactic
+--------------------------
++
+Modify the variable for PYTHON as follows:
++
+-------------------------------
+PYTHON=/usr/local/bin/python2.7
+-------------------------------
+27. Open the TACTIC configuration file for edit.
++
+--------------------------------------------------------
+vi /home/apache/tactic_data/config/tactic_linux-conf.xml
+--------------------------------------------------------
++
+Modify the option variable for python as follows:
++
+-----------------------------------------
+<python>/usr/local/bin/python2.7</python>
+-----------------------------------------
+28. Start TACTIC as a service.
++
+-----------------------------
+sudo /etc/init.d/tactic start
+-----------------------------
+
+End of installation instructions.

@@ -1,0 +1,25 @@
+Framecycler Plugin Usage
+------------------------
+
+The idea of this integration is to be able to view sequence file checkin
+inside of Framecycler with a single button.
+
+The Framecycler integration is a simple script call. When the button is
+pressed Tactic will retrieve the correct data and launch Framecycler.
+The script will automatically import the data into a Framecycler
+session.
+
+Below is the image of the element within the snapshot config that
+creates the Framecycler button.
+
+image:media/framecyclerElement.png[image]image:media/FramecyclerButton.png[image]
+
+This element can be dropped into any search type. We advise that this
+element to be setup for a snapshot view.
+
+image:media/SnapshotFramecycler.png[image]
+
+In this case we have placed Framecycler button inside the general
+checkin snapshot view.
+
+image:media/checkinFramecycler.png[image]

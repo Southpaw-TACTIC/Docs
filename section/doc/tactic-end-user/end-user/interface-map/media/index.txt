@@ -1,0 +1,44 @@
+The TACTIC Window
+-----------------
+
+When you log in to TACTIC from your browser, you will see a window
+similar to the following image. This section describes some of the
+important parts of this window.
+
+image:media/NEW_tactic-window_map.png[image]
+
+*Header [Left]*
+
+image:media/header-left.png[image]
+
+The project bar shows the TACTIC logo and a thumbnail representing the
+current project.
+
+*Header [Right]*
+
+image:media/header-right.png[image]
+
+Lets you link to the documentation, sign out, or switch between
+projects.
+
+*Project Views Sidebar*
+
+image:media/project-views.png[image]
+
+Lets you access all Project Views and "My Views".
+
+*Schema Sidebar*
+
+image:media/schema-sidebar.png[image]
+
+Displays the project schema and the TACTIC system and administration
+schemas. Access to this sidebar is generally reserved for admin level
+users.
+
+*Main Panel*
+
+image:media/main-body.png[image]
+
+The main panel shows views of selected search types and toolsets. (To
+load search types or toolsets into a separate popup window, hold down
+the Shift key when you click on them.)

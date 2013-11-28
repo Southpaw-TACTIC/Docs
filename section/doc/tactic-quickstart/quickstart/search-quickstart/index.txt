@@ -1,0 +1,75 @@
+Search Quick start
+------------------
+
+TACTIC provides two main search tools; the Simple Search and the Search
+Box.
+
+*Simple Search*
+
+The Simple Search provides a view specific filters. To use the simple
+search:
+
+1.  Load a view of items in your project. In this example a Keywords
+field is provided and an Asset Category drop-down narrows down the
+search even further.
+2.  Fill in the desired search and click the search button.
++
+image:media/search-quickstart_simple-search.png[image]
+3.  The results view will automatically refresh once the search is
+complete.
+
+*Search Box*
+
+The Search Box can be used to conduct more complex searching in TACTIC.
+To test a few examples, load a view of items in a project which have
+Tasks. In this example the view is an Asset view.
+
+1.  To Search for all assets with an asset category of 'video' , in the
+following criteria;
++
+Filter -> "Asset Category" "is" "video"
++
+image:media/search-quickstart_asset-category-is-video.png[image]
+2.  To Search for all assets with an asset category of; 'video', '3d',
+and 'document', enter the following;
++
+Filter -> "Asset Category", "in", "video|3d|document"
++
+image:media/search-quickstart_asset-category-in.png[image]
+3.  To search all assets described in example 2 and also include tasks
+that are approved, enter the following;
++
+Filter -> "Asset Category", "in", "video|3d|document"
++
+Children -> "Task", "Status", "is", "Approved"
++
+image:media/search-quickstart_asset-category-and-task-status.png[image]
+4.  To find all tasks assigned to the user currently logged in, a simple
+expression can be used;
++
+Children -> "Task", "Assigned", "is", "\{$LOGIN}"
++
+image:media/search-quickstart_task-assigned-login.png[image]
+5.  To find all assets with a category of 'video' and keyword of 'car'
+or a code that contains 'car';
++
+Set the top option in the drop-down box to "Compound Search";
++
+Filter -> "Asset Category", "is", "video"
++
+*and* (click between the filters to activate the and/or)
++
+Filter -> "Keywords", "contains", "car"
++
+*or* (shift-click between the filters to group the filters)
++
+Filter - > "Code", "contains", "car"
++
+image:media/search-quickstart_compound-search.png[image]
+6.  To execute complex searches using an expression to find all assets
+which have check-ins with versions higher than 1;
++
+Filter -> "**Expression", "have", "@SOBJECT(sthpw/snapshot['version',
+'>', 1])"
++
+image:media/search-quickstart_expression-snapshots.png[image]

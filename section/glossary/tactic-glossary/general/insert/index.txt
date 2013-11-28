@@ -1,0 +1,7 @@
+Insert
+------
+
+When creating new Search Objects in your project, you are effectiavely
+'inserting' a new row into the database. If you insert a new Art
+sObject, you are creating a new entry in the "art" table in your
+project's database.

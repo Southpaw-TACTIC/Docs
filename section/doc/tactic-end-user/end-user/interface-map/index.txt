@@ -1,0 +1,65 @@
+Interface Map
+-------------
+
+When you log in to TACTIC from your browser, you will see a window
+similar to the following image. This section describes some of the
+important parts of this window.
+
+image:media/interface-map_layout.png[image]
+
+*1 - Header*
+
+[width="100%",cols="4%,16%,80%",]
+|=======================================================================
+|1a |*Project Homepage Link* |The project bar shows the TACTIC logo and
+release. This link will also direct you back to the project selection
+page.
+
+|1b |*Project Thumbnail* |This area shows the name of the project and
+thumbnail.
+
+|1c |*Project Selection Menu* |A drop down list to switch between
+projects.
+
+|1d |*Main Action Menu* |Main TACTIC Actions menu.
+
+|1e |*User Menu* |Allows for editing of basic user settings
+
+|1f |*Main Help Link* |Loads the Built in TACTIC Help (documentation,
+links etc)
+|=======================================================================
+
+*2 - Sidebar*
+
+[width="100%",cols="5%,12%,83%",]
+|=======================================================================
+|2a |*Project Views* |Project Views contains links to different views
+with information about the project as well as workflow.
+
+|2b |*My Views* |My views is a collection of views that are custom
+created by the login user for personal use.
+
+|2c |*My Admin* |My Admin displays the Tactic system, as well as the
+project and adminstration schema. Access to this part of the sidebar is
+generally reserved for admin level users.
+|=======================================================================
+
+*3 - Main View Panel*
+
+[width="100%",cols="4%,16%,80%",]
+|=======================================================================
+|3a |*Tabs* |Tactic supports loading multiple tabs, similar to how web
+browsers handle tabs. Views can be loaded into tabs either automatically
+or through right-clicking on a link.
+
+|3b |*Simple Search* |In some views, a simple search will be included.
+The Simple Search option provides a quick and easy way to search
+specifically within the current view in use.
+
+|3c |*View Toolbar* |In some views, there will be tools which are
+specific to the view. For example, the "Table" view provides an array of
+tools for interaction with that table.
+
+|3d |*Main Panel* |The Main Panel is where the actual results of the
+view are displayed. This can be a table, tile layout, dashboard etc.
+|=======================================================================

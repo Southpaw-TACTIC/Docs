@@ -1,0 +1,18 @@
+What are Notes?
+---------------
+
+image:media/1_what_are_notes_overview.png[image]
+
+Notes are the ideal communication tool to use to store the message
+thread that occurs between content creators, supervisors, clients, etc.
+
+TACTIC Notes are used to add and track comments on an item. A history of
+the previous notes are tracked with the item and can be viewed in the
+notes history. Each note contains the process for the item, the
+timestamp, who added the note and any file attachments. Optionally, each
+note can also be sent as an email and can be automated with rules to
+send to the correct user groups. Notes can be associated to a pipleine
+process with Tasks and Check-ins (Snapshots). Using this association,
+the communication of the progress of each individual can be accurately
+tracked and retrieved by a supervisor at any time for a production to
+the smallest detail.

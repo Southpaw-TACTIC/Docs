@@ -1,0 +1,23 @@
+Edit sType
+----------
+
+image:media/1_configuration_edit_sType_overview.png[image]
+
+\1) First, open the *Configuration View* under:
+
+Project Startup -> Configuration
+
+image:media/2_configuration_edit_sType_config_button.png[image]
+
+\2) Next (assuming a Searchable Type has already been created), click on
+the *Edit* button corresponding to the search type to edit.
+
+\3) Finally, the edit pop-up will appear to allow modifiications to the
+sType.
+
+__________________________________________________________________________________________________________________
+*Note*
+
+The field *Search Type*, indicating the name of the Search Type cannot
+be modified once the type has been created.
+__________________________________________________________________________________________________________________

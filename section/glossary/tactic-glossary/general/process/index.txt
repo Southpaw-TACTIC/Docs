@@ -1,0 +1,8 @@
+Process
+-------
+
+A process is a definable phase in the pipeline of an asset. Processes
+require some type of delivery upon completion, and often require that an
+asset be checked in as part of the delivery mechanism. A process is
+typically assigned to one person or one department. For large projects,
+a single department could be assigned many processes.

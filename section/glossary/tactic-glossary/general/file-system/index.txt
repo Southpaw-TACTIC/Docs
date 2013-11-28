@@ -1,0 +1,9 @@
+File System
+-----------
+
+When files are checked in to TACTIC, they are passed through the
+directory and file naming conventions. This relieves the user of the
+responsibility of figuring out where to place files on the server and
+what to name them. Naming conventions are defined using the "naming"
+Search Type, which stores an expression used by TACTIC to generate the
+location and name for a file upon checkin.

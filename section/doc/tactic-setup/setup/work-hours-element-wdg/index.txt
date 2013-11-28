@@ -1,0 +1,39 @@
+Work Hours List
+---------------
+
+image:media/1_work_hours_overview.png[image]
+
+The Work Hours widget provides an interface to record the number of work
+hours spent for each task. The break down of the work hours by task
+allows the analysis to be broken down at the lowest level of detail.
+
+[width="100%",cols="29%,71%",]
+|====================================================
+|*Name* |Work Hours List
+|*Class* |tactic.ui.table.WorkHoursElementWdg
+|*TACTIC Version Support* |2.5.0 +
+|*Required database columns* |none
+|====================================================
+
+The Work Hours List Element is a common column that can be added to any
+task view using the Column Manager.
+
+*Options*
+
+There are no options available for this widget.
+
+[width="100%",cols="29%,71%",]
+|=======================================================================
+|*view* |The view to retrieve from the Widget Config. This is not
+required if the HTML option is supplied.
+
+|*html* |This option is where the HTML code is embedded.
+
+|*search_type* |The Search Type the CustomLayoutWdg applies to (if
+applicable)
+|=======================================================================
+
+We can record 4 hours of work on Wednesday and 3 hours on Thursday for a
+task. The total for that week will also be displayed as a convenience.
+
+image:media/2_work_hours_eg.png[image]

@@ -1,0 +1,14 @@
+set_current_snapshot
+--------------------
+
+*set_current_snapshot(snapshot_code)*
+
+Set this snapshot as a "current" snapshot
+
+*param:*
+
+*snapshot_code* - unique code of snapshot
+
+*return:*
+
+*string* - the resulting snapshot xml

@@ -1,0 +1,171 @@
+Project Schema
+--------------
+
+The project schema is used to create structure or a "data model" of a
+project. The Schema view defines the type of items managed by using a
+visual graphical node editor. The Schema Editor displays the layout of
+the created sTypes and the connections between them.
+
+image:media/project-schema-full-view.png[image]
+
+The Project Schema Editor is available through the Getting Started link
+in the side bar which is available after creating a project, or under
+the Admin Views under Project Admin -> Project Schema in the side bar.
+
+The Project Schema editor is an essential tool used for the creation of
+new project templates. This editor is used to layout the various types
+of objects (files, assets) that will be managed and produced on a
+project. These types (sTypes) are searchable within TACTIC. Node based
+layout and work-flow, allows for simple manipulation and creation of
+these various sTypes and their relationships to each other.
+
+*Editor Button Shelf*
+
+image:media/project-schema-buttons.png[image]
+
+*Main Editor Buttons*
+
+[width="100%",cols="50%,50%",]
+|=======================================================================
+|*Add* |Add a new node to the canvas. This represents an unregistered
+sType
+
+|*Delete* |Delete the selected nodes or connections from the canvas
+
+|*Save* |Save all changes to the schema
+|=======================================================================
+
+*Editor Zoom Controls*
+
+[width="100%",cols="50%,50%",]
+|====================================================
+|*Zoom In* |Zoom the canvas in
+|*Zoom Out* |Zoom the canvas out
+|*Zoom Options* |Allow for choosing the zoom level.
+|====================================================
+
+*Node Options (Applies to the selected nodes or connections)*
+
+[width="100%",cols="50%,50%",]
+|=======================================================================
+|*Register sType* |Registers the selected nodes as new Searchable Types
+using the registration wizard. If more than one node is selected, the
+sTypes will be registered in batch.
+
+|*Edit Connection* |Load the connection editor pop-up.
+
+|*Edit Pipelines* |Load the Project Work-flow (pipeline) editor.
+|=======================================================================
+
+*Laying out the sTypes*
+
+image:media/project-schema-layout.png[image]
+
+To create a new Searchable Type (sType) in the schema, add a new node to
+the canvas using the [+] button in the editor. It's also possible to
+create a new node from an existing node by simply dragging a connection
+line from the output handle of the existing node.
+
+image:media/new-node.png[image]
+
+Once the type has been created on the canvas, it can be renamed by right
+clicking on the node or using a "CTRL-click" on the node.
+
+image:media/new-node-rename.png[image]
+
+_____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+*Note*
+
+It is important to note that during this initial process, you are
+creating a "blueprint" for your project. The next steps are to
+*register* the sTypes. Each sType in TACTIC is represented as a table in
+the project database, this table is required to go through a
+registration process. This process will generate the table as well as
+provide the opportunity to add columns (properties), a pipeline, default
+views for the sidebar and more.
+_____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+*Workflow (Pipelines)*
+
+Where applicable, you can add the pipeline attribute to a search type to
+allow for association of the sObjects to a particular pipeline. Having a
+pipeline assigned allows an sObject to travel through a set number of
+processes. For each of these processes, a task can be created and
+assigned to a user, files can be checked in, notes can be submitted and
+work hours can be logged.
+
+By choosing "Has Pipeline" on creation, an extra "pipeline_code"
+property will be added to store pipeline associations and a Pipeline
+will be created and registered for the new sType.
+
+________________________________________________________________________________________________________________________________________________
+*Note*
+
+To edit the pipeline, you can click the pipeline link in the top of the
+editor or, in the sidebar navigate to Project Admin -> Project Workflow.
+________________________________________________________________________________________________________________________________________________
+
+*Node Options*
+
+Once registered, each node provides options for further configuration of
+sType related project setup and configuration, which can be executed
+through the main shelf buttons or by right-clicking on a node:
+
+image:media/node-menu-register-stype.png[image]
+
+*Editor Actions*
+
+[width="100%",cols="50%,50%",]
+|=======================================================================
+|*Add to Current Group* |Adds the selected node(s) to the current group
+(pipeline)
+
+|*Rename Node* |Rename the node (sType)
+
+|*Remove Node* |Remove the node (sType)
+
+|*Remove Group* |Removes the group (pipeline)
+|=======================================================================
+
+*Node Actions*
+
+[width="100%",cols="50%,50%",]
+|=====================================================
+|*Register sType* |Loads the sType registration wizard
+|=====================================================
+
+*Node Options*
+
+[width="100%",cols="50%,50%",]
+|=======================================================================
+|*Table Manager* |Load the Database table manager for the selected type
+_(see "Table Manager" below)_
+
+|*View Manager* |Loads the view manager for the selected sType _(see
+"View Manager" below)_
+
+|*Show Raw Data* |Loads the Raw database data in a table for the
+selected sType _(see "Raw Data" below)_
+
+|*Edit Pipeline* |Loads the Workflow Editor allowing access to edit the
+pipelines related to the selected sType.
+
+|*Show File Naming* |Loads the file naming table for the selected sType
+_(see "File Naming" below)_
+|=======================================================================
+
+*Table Manager*
+
+image:media/node-options-table-data.png[image]
+
+*View Manager*
+
+image:media/node-options-view-manager-crop.png[image]
+
+*Raw Data*
+
+image:media/node-options-raw-data.png[image]
+
+*File Naming*
+
+image:media/node-options-show-naming.png[image]

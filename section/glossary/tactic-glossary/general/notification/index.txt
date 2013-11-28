@@ -1,0 +1,9 @@
+Notification
+------------
+
+Notifications are triggers built to execute on specific configured
+events, and can be internal to TACTIC (notification SObjects), or even
+emails sent externally. Notifications can be configured to run based on
+rules that define the conditions that must be met in order to send out a
+message. Conditions help to streamline who receives a notification for a
+particular event, as well as the conditions specific to the event.

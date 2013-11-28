@@ -1,0 +1,6 @@
+Delete
+------
+
+Deleting a Search Object revoves it from the database completely.
+Although undoable, this is only right after doign so. If you are unsure,
+retiring is ofter a good choice.

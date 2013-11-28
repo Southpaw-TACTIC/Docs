@@ -1,0 +1,6 @@
+Update
+------
+
+When you update an existing Serch Object in Tactic, this is called an
+update. For example if you change the description property (column
+entry), saving the cnages commits an update to the database.

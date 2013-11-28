@@ -1,0 +1,16 @@
+get_column_names
+----------------
+
+*get_column_names(search_type)*
+
+This method will get all of the column names associated with a search
+
+type
+
+*param:*
+
+*search_type* - the search type used to query the columns for
+
+*return*
+
+list of columns names

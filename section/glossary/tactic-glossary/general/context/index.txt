@@ -1,0 +1,21 @@
+Context
+-------
+
+To allow for separate versioning of files within the same SObject
+(container) during checkin, TACTIC uses "versions" and "contexts."
+Snapshot data always includes this information.
+
+*Contexts* define a separate "channel" for checking in files. For
+example, one SObject may require separate files to be checked in for
+different tasks. For example, in the following list one drawing file is
+checked into a single SObject with both "rough" and "final" contexts
+(and with multiple versions). In this case, the contexts represent files
+checked in for both the 'rough' and 'final' processes (tasks).
+
+------------------------------------------------------------------
+/assets/myProject/drawings/drawing_001/drawing_001_rough_v001.png
+/assets/myProject/drawings/drawing_001/drawing_001_rough_v002.png
+/assets/myProject/drawings/drawing_001/drawing_001_rough_v003.png
+/assets/myProject/drawings/drawing_001/drawing_001_final_v001.png
+/assets/myProject/drawings/drawing_001/drawing_001_final_v002.png 
+------------------------------------------------------------------

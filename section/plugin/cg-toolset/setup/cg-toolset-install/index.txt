@@ -1,0 +1,182 @@
+CG Toolset Install
+------------------
+
+In TACTIC 3.5, the CG tools have been reworked to give the users a more
+efficent workflow. CG toolset are now placed in the work area of the
+users task view.
+
+image:media/tabs.png[image]
+
+However these tabs have to be manually installed per process in your
+pipeline. A single config entry with the cg toolset will replace the
+default general check-in and check-out tabs from the specified process.
+For example, if you want to set the tabs for the model process you will
+need to create a widget config entry (example below)
+
+There are a few places *(in bold)* where you will need need to set the
+process
+
+[width="100%",cols="11%,10%,16%,63%",options="header",]
+|===============================================================
+|Category |Search Type |View |Config
+|TabWdg |cg/asset |tab_config_*model* |[multiblock cell omitted]
+|===============================================================
+
+image:media/configFile.png[image]
+
+It is also required to create 2 STypes texture and session_contents. A
+texture SType is necessary where textures can be a part of the maya
+checkin dependency.
+
+image:media/STypes.png[image]
+
+It is also possible to create a custom Texture SType. This can be done
+as long as the SType contains the following columns: preview, code,
+asset_code, asset_context, category, description, amd snapshot. Also the
+class_name in the SObject table should be set to
+"pyasm.prod.biz.Texture".
+
+Here are the steps:
+
+1.  Once the Texture SType is added. Go to the texture list view from
+the Sidebar.
+2.  Go to the gear menu -> view -> edit current view
+3.  From the gear menu choose add new element.
+4.  Add preview with Display Class Name as ThumbWdg, and Edit Class Name
+as tactic.ui.widget.SimpleUploadWdg.
+5.  Add asset_context with Display Widget as Formatted and type as text.
+6.  Add category with Display Widget as Raw Data and type as string.
+7.  Add Description with Display Widget as Raw Data, Type as text and
+Edit Class Name as TextAreaWdg
+8.  Add Snapshot with Display Widget as Raw Data, type as text and Edit
+Class Name as tactic.ui.widget.SimpleUploadWdg
+
+session_contents is part of the prod-type project. If this is created
+from scratch, it has to contain 3 specific columns:
+
+\1. pid (integer)
+
+\2. data (text)
+
+\3. session (text)
+
+*Maya*
+
+As of Maya 8.5, Maya ships with the Python interpreter so it is not
+necessary to install Python or the PyMaya plugin. TACTIC will
+auto-detect this version and use the embedded Python interpreter in
+Maya. It is also necessary to install JRE (Java) installed for both Maya
+and Houdini.
+
+*Opening a Command Port in Maya*
+
+In order for Maya to accept commands from TACTIC, a command port must be
+opened in Maya. To do so, type the following command in the script
+editor:
+
+* Windows XP - commandPort -n "127.0.0.1:4444"
+* Windows 7/Vista and Maya 2010+ - commandPort -n ":4444";commandPort -n
+"127.0.0.1:4444"
+
+image:media/openPort.png[image]
+
+This command can also be set up as a part of your Maya startup commands
+so that users do not need to run it each time
+
+*Testing Connection*
+
+_*NOTE - The Maya Integration can also be used as it has been used in
+the previous versions of Tactic. The old views can be found in the
+*Project Admin->Manage Side Bar view*. Within this view, select the gear
+menu and choose *Show Predefined* and drag and drop the Application
+folder onto your sidebar._
+
+image:media/sidebar.png[image]
+
+To connect to Maya from TACTIC"
+
+1.  Load TACTIC from your web browser.
+2.  Go to your Maya Asset Checkin view.
+3.  Below the Checkin Options, select Maya from the "Select Connection
+Type" dropdown.
+4.  Click the "Introspect" button.
+
+image:media/Introspect.png[image]
+
+If TACTIC is able to connect to Maya you will see the following message
+in the Script Editor:
+
+args: ('introspect.introspect',)
+
+cmd: introspect.introspect()
+
+If TACTIC is not able to connect a popup window will appear with
+information on how to introspect.
+
+image:media/IntrospectError.png[image]
+
+Connecting through a port also enables the ability to open 2 Maya
+instances. This can be easily set by setting a different port number in
+the maya loader within the 2 TACTIC browsers.
+
+image:media/option_port.png[image]
+
+*XSI*
+
+To integrate with XSI, you need to set a few things up:
+
+1.  Python 2.4 or newer needs to be installed because XSI needs to have
+its scripting setting set to Python in order for TACTIC to communicate
+with XSI.
++
+*NOTE - To download Python, go to [http://www.python.org/]
+2.  If you are working in Windows, you must install the pywin32 module
+as well.
++
+*NOTE - To download the pywin32 module go to
+[http://sourceforge.net/projects/pywin32/] It's recommended to download
+the exe file instead of the zip file which needs to be set up with
+Visual Studio. For example, with Python 2.6 and 64-bit Windows 7,
+download the file pywin32-212.winamd64- py2.6.exe
+3.  The scripting settings in XSI need to be set to Python ActiveX
+Scripting (in the XSI preferences).
+4.  To connect to XSI from TACTIC, load Tactic from the netview in XSI
+5.  In the TACTIC sidebar under Project Views, load the 'Application' >
+'Asset Checkin' view.
+6.  Below the Checkin Options, select XSI from the "Select Connection
+Type" dropdown
+7.  If TACTIC is able to connect to XSI you will see the message in the
+script output:
++
+# INFO : Connection to XSI established
+
+*Houdini*
+
+To integrate with Houdini, you need to set a few things up:
+
+1.  Python 2.4 or newer needs to be installed because Houdini needs to
+have the scripting setting set to Python for TACTIC to communicate with
+Houdini.
++
+*NOTE - To download Python, go to the [http://www.python.org/]
+2.  If you are working in Windows, you must install the pywin32 module
+as well.
++
+*NOTE - To download the pywin32 module go to
+[http://sourceforge.net/projects/pywin32/] It's recommended to download
+the exe file instead of the zip file which needs to be set up with
+Visual Studio. For example, with Python 2.6 and 64-bit Windows 7,
+download the file pywin32-212.winamd64- py2.6.exe
+3.  The scripting settings in Houdini need to be set to Python (in the
+Main Houdini preferences under 'Scripting').
+4.  To connect to Houdini from TACTIC, load TACTIC from the Help Browser
+in Houdini
+5.  In the TACTIC sidebar under Project Views, load the 'Application' >
+'Asset Checkin' view.
+6.  Below the Checkin Options, select Houdini from the "Select
+Connection Type" dropdown
+7.  If TACTIC is able to connect to Houdini you will see the message:
++
+args: ('introspect.introspect',)
++
+cmd: introspect.introspect()

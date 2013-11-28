@@ -1,0 +1,32 @@
+File Browser Layout
+-------------------
+
+File Browser is a layout view option. It can be used to quickly browse
+through items in the repository and to view their details. It displays
+detailed information of the item such as the properties, options for the
+checked-in files, track checkin history, view/edit tasks, pipelines and
+to view/add notes to the items.
+
+The File Browser can be selected as the default layout for your sType
+when you create a new sType. You can also view sTypes with different
+default layout by selecting the File Browser layout from the layout
+dropdown in the sType view tab.
+
+Users can browse through the items under the sType. When a specific
+folder is selected, the contents of that folder can be viewed in the
+mini-side bar panel on the left hand side. A view tab showing all the
+items in that folder appears in the panel on the right hand side. This
+view tab is similar in functionality to the view tab that opens using
+view column for sTypes under Project Configuration.
+
+If a file is selected, the three tabs on the right hand side will be
+updated with details that correspond to the file.
+
+The first tab, *File Info*, contains the properties of the selected file
+in tabular form.
+
+The second tab, *Notes*, displays the notes on the file made by other
+users and allow you to add your own notes.
+
+The third tab, *Full Item Detail*, has 4 other tabs under it: Check-in
+history, Tasks, Checkin, Edit and Pipeline.

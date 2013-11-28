@@ -1,0 +1,18 @@
+clear_upload_dir
+----------------
+
+*clear_upload_dir()*
+
+Clear the upload directory to ensure clean checkins
+
+*param:*
+
+None
+
+*keyparam:*
+
+None
+
+*return:*
+
+None

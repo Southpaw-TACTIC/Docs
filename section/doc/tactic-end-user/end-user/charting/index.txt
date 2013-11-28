@@ -1,0 +1,83 @@
+Charting
+--------
+
+Tactic includes supprt for charting views in your project in different
+charting formats. These charts supply visual representations of your
+data for use in reporting, statistics and data comparisions.
+
+*The various types of charts available are:*
+
+*Line*
+
+image:media/NEW_chart_example_line.png[image]
+
+*Bar*
+
+image:media/NEW_chart_example_bar.png[image]
+
+*Bar3D*
+
+image:media/NEW_chart_example_bar3d.png[image]
+
+Some notes about charting
+
+When creating a view to be charted, it is important that the view
+includes columsn which provide numerical based data. This data is
+required to allow the chart to draw correctly.
+
+You are able to have multiple data values on the data axis of the chart.
+For example if you have a view of assets and want to iclude statistics
+on the total snapshots, total notes and total tasks the chart will be
+able to include all three.
+
+*Generating Charts*
+
+1.  First create a view you wish to chart, in this case we will be using
+a 'file usage' view. This view shows the Mb usage and snapshot count for
+all of the assets in the project.
++
+image:media/NEW_view_file-usage-assets.png[image]
+2.  In the table gear menu, there are 2 options:
+* *Chart items* - charts all items in the system for the particular
+Search Type (in this example assets)
+* *Chart selected* - charts all selected items in the view.
++
+image:media/NEW_gear-menu_chart-menu.png[image]
+3.  In the gui, a chart will be generated with the assumed y-axis column
+being 'code' and the x-axis being all other columns in the view. The
+setting for the cart can be further tweaked in the Chart specifications.
++
+image:media/NEW_chart_chart-specifications_original.png[image]
++
+image:media/NEW_chart_chart-specifications_edit.png[image]
+
+*Chart Specifications*
+
+[cols=",",]
+|=======================================================================
+|*search_type* |The Search Type the chart is being generated for.
+|*chart_type* |The type of chart to generate. See the chart types below.
+|*Y Axis* |The column to use for the y-axis
+|*X Axis* |The column(s) to use for the x-axis
+|=======================================================================
+
+*Saving Charts*
+
+Currently Charts cannot be saved. This will be included in a future
+release of Tactic.
+
+*Advanced*
+
+*Axis Expressions*
+
+image:media/chart_expression-in-yaxis.png[image]
+
+The charting Gui supports using expression directly for the x-axis. To
+do so:
+
+1.  In the chart specifications, hit the (+) to add a new x-axis value.
+2.  In the text field provide an expression. For example
+\{@COUNT(sthpw/note)}
++
+image:media/chart_expression-in-yaxis_zoom.png[image]
+3.  Refresh the chart and the expression will be evaluated as a column.

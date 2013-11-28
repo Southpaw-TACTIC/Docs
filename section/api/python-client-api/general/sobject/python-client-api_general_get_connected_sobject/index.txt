@@ -1,0 +1,18 @@
+get_connected_sobject
+---------------------
+
+*get_connected_sobject(src_sobject, context='default')*
+
+Get the connected sobject
+
+*params*
+
+*src_sobject* - the original sobject from which the connection starts
+
+*keyparam:*
+
+*context* - an arbirarty parameter which defines type of connection
+
+*return:*
+
+*dict* - a single connected sobject

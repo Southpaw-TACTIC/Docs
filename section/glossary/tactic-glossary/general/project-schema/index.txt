@@ -1,0 +1,15 @@
+Project Schema
+--------------
+
+The project schema defines the hierarchy between Search Types in TACTIC.
+The schema definitions are stored in a "schema" SObject which stores the
+parent and child relationships between the various Search Types in the
+project. The schema is automatically updated when search_types are
+created in TACTIC, and can be modified in a schema view.
+
+Searchable Types define how you want to manage your objects and also
+define a separation in pipelines, views, checkin methods and more. They
+are some of the most important configuration aspects of TACTIC. The
+majority of the TACTIC architecture is built around the use of search
+types for the needs of the project as well as many of the system level
+aspects.

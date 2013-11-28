@@ -1,0 +1,7 @@
+CG Toolset Introduction
+-----------------------
+
+The 3D application tool set is a set of views and widgets dedicated to
+3D application integration. This tool set enables TACTIC to connect to
+your 3D application [XSI, Maya and Houdini] to check in and check out
+your 3D assets.

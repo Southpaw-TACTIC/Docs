@@ -1,0 +1,35 @@
+add_dependency_by_code
+----------------------
+
+*add_dependency_by_code(to_snapshot_code, from_snapshot_code,
+type='ref')*
+
+Append a dependency reference to an existing checkin. This dependency
+
+is used to connect various checkins together creating a separate
+
+dependency tree for each checkin.
+
+*param:*
+
+to_snapshot_code: the snapshot code which the dependency will be
+
+connected to
+
+from_snapshot_code: the snapshot code which the dependency will be
+
+connected from
+
+*type* - type of dependency. Values include 'ref' and 'input_ref'
+
+ref = hierarchical reference: ie A contains B
+
+*input_ref* - input reference: ie: A was used to create B
+
+*tag* - a tagged keyword can be added to a dependency to categorize
+
+the different dependencies that exist in a snapshot
+
+*return:*
+
+*dictionary* - the resulting snapshot

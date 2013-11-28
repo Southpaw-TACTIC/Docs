@@ -1,0 +1,97 @@
+Expression Searching
+--------------------
+
+*Expression values*
+
+The search criteria input for search filters can be TACTIC expressions.
+To signify to TACTIC that a search criteria is an expression, wrap the
+expression in curly braces \{}. This signifies to the search engine to
+evaluate the value as an expression before sending it to the search.
+
+Having the search criteria be a TACTIC expression allows for many uses
+of predefined variables in the expression language.
+
+For example, the following will search for all tasks for this week based
+on a Sunday to Sunday work week.
+
+--------------------------------------
+timestamp "is after" "{$PREV_SUNDAY}"
+timestamp "is before" "{$NEXT_SUNDAY}"
+--------------------------------------
+
+Here is the TACTIC expression to find all of the checkins that have
+occurred this month:
+
+------------------------------------
+timestamp "is after" "{$THIS_MONTH}"
+------------------------------------
+
+Here is the TACTIC expression to find all the tasks for the current
+project:
+
+------------------------------
+project_code "is" "{$PROJECT}"
+------------------------------
+
+Note: the curly braces \{} around these predefined variables are not
+needed in the expression mode described below.
+
+*Full Expression searches*
+
+Full expressions searches are an advanced way of searching for results.
+For each column, there is an "**expression" option. This option provides
+the ability to use the full power of the expression language within a
+search that are beyond the capabilities of the search user interface.
+
+The full expression executes an evaluation on this expression then
+relates the results to the main search. Careful consideration must be
+take to refine an expressions so that is as efficient as possible.
+
+For example, search for all of the assets that have model tasks:
+
+---------------------------------------
+@SOBJECT(sthpw/task['context','model'])
+---------------------------------------
+
+This search will first execute a search of all of the tasks that have
+model. Note that this does a search on all of the modelling tasks. With
+a large number of tasks, this operation can be heavy. Care must be taken
+to minimize the results of the expression. One way to make the search
+more efficient is limit the search to just that of the current project:
+
+----------------------------------------------------------------
+@SOBJECT(sthpw/task['project_code',$PROJECT]['context','model'])
+----------------------------------------------------------------
+
+The expressions can be combined with other filters in any combination so
+that very complex searches can be achieved.
+
+For example, another more complex search is to find all items with a
+modelling task assigned to someone in the "toronto" location (assuming
+there is a custom property on the login table), we can use:
+
+--------------------------------------------------------------------------------------------------
+@SOBJECT(sthpw/login['location','toronto'].sthpw/task['project_code',$PROJECT]['context','model'])
+--------------------------------------------------------------------------------------------------
+
+This works because tasks (sthpw/task) and logins (sthpw/login) are
+connected through each other through the "assigned" column in the task
+table and "login" column in the login table.
+
+There are 4 modes available to the expression search: "have", "do not
+have", "match", "do not match". These four searches can be applied to
+the Shot List page.
+
+1.  Results "have" "@SOBJECT(sthpw/task)" will show all items that have
+tasks in them. This mode must return items in the expression.
+2.  Results "do not have" "@SOBJECT(sthpw/task['context','model'])" will
+show all items that do not have modelling tasks. This mode must return
+items in the expression.
+3.  Results "match" "@COUNT(sthpw/snapshot['context','model']) > 3" will
+show all items that have more than 3 snapshots. This mode must return
+True or False in the expression.
+4.  Results "do not match" "@COUNT(sthpw/snapshot['context','model']) ==
+0" will show all items that do not match the condition where model
+snapshot count is 0. In other words, it means there is at least 1 or
+more model check-in for the shot. This mode must return True or False in
+the expression.

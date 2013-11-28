@@ -1,0 +1,53 @@
+Text Area
+---------
+
+image:media/1_textarea_overview.png[image]
+
+The TextAreaWdg is a simple text widget which is used for editing
+full-text. The widget supports using the ENTER key for adding new lines
+(the ENTER key is often not supported on text entry widgets where
+CTRL+ENTER is used.) This widget can also be configured to display a
+larger canvas to work on.
+
+[width="100%",cols="30%,70%",]
+|=======================================================================
+|*Name* |TextAreaWdg
+
+|*Class* |pyasm.widget.TextAreaWdg
+
+|*TACTIC Version Support* |2.5.0 +
+
+|*Required database columns* |requires a database column for storing the
+text data.
+|=======================================================================
+
+The TextAreaWdg is used in Edit scenarios where full text input is
+required. There is control for the columns (characters across) and rows
+(characters down).
+
+[width="100%",cols="29%,71%",]
+|=======================================================
+|*cols* |The number of character columns in the TextArea
+|*rows* |The number of character rows in the TextArea
+|=======================================================
+
+The following example is a default implementation. The default number of
+cols is *50* and the default number of rows is *3*.
+
+--------------------------------
+<element name="subject">
+  <display class="TextAreaWdg"/>
+</element>
+--------------------------------
+
+The following example creates a large text area which could be used for
+writing large amounts of full-text.
+
+-------------------------------
+<element name="summary">
+  <display class="TextAreaWdg">
+    <cols>100</cols>
+    <rows>30</rows>
+  </display>
+</element>
+-------------------------------

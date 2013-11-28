@@ -1,0 +1,18 @@
+undo
+----
+
+*undo(transaction_ticket=None, transaction_id=None, ignore_files=False)*
+
+undo an operation. If no transaction id is given, then the last
+
+operation of this user on this project is undone
+
+*keyparam:*
+
+*transaction_ticket* - explicitly undo a specific transaction
+
+*transaction_id* - explicitly undo a specific transaction by id
+
+*ignore_files* - flag which determines whether the files should
+
+also be undone. Useful for large preallcoated checkins.

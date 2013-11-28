@@ -1,0 +1,14 @@
+get_parent_type
+---------------
+
+*get_parent_type(search_key)*
+
+Get of the parent search type
+
+*param:*
+
+*search_key* - a unique identifier key representing an sobject
+
+*return:*
+
+*list* - a list of child search_types

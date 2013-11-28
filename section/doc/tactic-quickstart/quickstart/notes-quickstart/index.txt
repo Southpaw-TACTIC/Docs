@@ -1,0 +1,32 @@
+Notes Quick Start
+-----------------
+
+image:media/notes-quickstart_notes-view.png[image]
+
+1.  First, load a view of items you wish to track notes for.
++
+If the Notes column is not already in the view, it can be added through
+the column manager.
++
+________________________________________________________________________________________________________________
+*Note*
+
+In TACTIC 3.7+, the notes column can also be added to your view in the
+gear menu under Notes -> Add Notes Column
+________________________________________________________________________________________________________________
+2.  Click the [+] on in the notes column on the item you wish to add a
+note to.
++
+image:media/notes-quickstart_add-note.png[image]
+3.  In the add dialog, first select the process. If no tasks are
+assigned the process will be "default" otherwise, the task processes
+will be available in the list
+4.  Add the note then click submit.
+
+___________________________________________________________________________________________________________________________________________________________________________________________
+*Note*
+
+If notifications are setup, an email will also be sent for the note. If
+you would like to setup automated emails Please review the Notifications
+section in the TACTIC Setup documentation.
+___________________________________________________________________________________________________________________________________________________________________________________________

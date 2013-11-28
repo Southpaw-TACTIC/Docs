@@ -1,0 +1,50 @@
+Edit
+----
+
+The following describes how to edit the data in various views of TACTIC.
+
+To edit a row of data, right click anywhere on the row and select "Edit"
+from the context menu.
+
+image:media/edit_context_menu.png[image]
+
+A form pop-up to edit the data will appear. The description on the left
+side indicates what data to enter into the input fields.
+
+image:media/edit_form.png[image]
+
+Clicking on a field within the row allows editability only if edit mode
+for that column is enabled.
+
+Below is a few examples of edit modes for the various widgets:
+
+The edit mode for the Text Widget is most common. This widget allows
+keyboard entries into editable fields.
+
+image:media/edit_inline_text.png[image]
+
+The edit mode for the Selection Widget is displayed below. The widget
+restricts your input choices to the options in the drop down selection
+menu.
+
+image:media/edit_inline_selection_list.png[image]
+
+The edit mode for the Calendar Widget is displayed below. The Calendar
+widget pops-up a monthly calendar for convenient date selection.
+
+image:media/edit_inline_calendar.png[image]
+
+To modify the more than row so that they all have the same data, first
+check mark the rows to be edited.
+
+image:media/edit_inline_multiple_before.png[image]
+
+Left click on a cell in the column to be edited. The row will go into
+edit mode.
+
+image:media/edit_inline_multiple_during.png[image]
+
+Once the text is entered, click off the cell. All cells selected will
+have the same data.
+
+image:media/edit_inline_multiple_after.png[image]

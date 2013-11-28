@@ -1,0 +1,28 @@
+Multi-insert
+------------
+
+The Multi-insert option is located within the table views gear menu, in
+the edit option.
+
+image:media/NEW_Multi_insert_button.png[image]
+
+The idea of a multi-insert is to be able to duplicate SObjects. Here is
+an example of a multi-insert view.
+
+image:media/NEW_Multi_InsertUI.png[image]
+
+The most important values that must be entered are the Multiplier, and
+the Code.
+
+The number entered into the Multiplier box determines how many SObjects
+that will be created.
+
+Sequence code will determine which sequence the SObjects will be placed
+under.
+
+The Code value will be incremented by the value that is entered into the
+Multiplier.
+
+_*Note - The value of the Code must start with a letter._
+
+All the other values are optional.

@@ -1,0 +1,104 @@
+Task Schedule
+-------------
+
+image:media/1_task_schedule_overview.png[image]
+
+The Task Schedule displays a horizontal bar graph representing the
+schedule of start/end date and duration for all tasks assigned to an
+item. This widget is a simple pre-configuration of the Gantt Chart
+widget.
+
+[width="100%",cols="29%,71%",]
+|====================================================
+|*Name* |Task Schedule
+|*Class* |tactic.ui.table.GanttElementWdg
+|*Category* |Common Columns
+|*TACTIC Version Support* |3.0+
+|*Required database columns* |none
+|====================================================
+
+The Task Schedule Widget is a common column that can be added using the
+Column Manager.
+
+The following is the configuration option which the makes this widget
+distinct from its derivative, the Gantt Chart widget.
+
+-----------------------------------------------------------------------------------
+[
+        {
+          "start_date_expr":  "@MIN(sthpw/task.bid_start_date)",
+          "end_date_expr":    "@MAX(sthpw/task.bid_end_date)",
+          "color":            "#33F",
+          "edit":             "true",
+          "default":          "false"
+        },
+        {
+          "start_date_expr":  "@MIN(sthpw/task['context','model'].bid_start_date)",
+          "end_date_expr":    "@MAX(sthpw/task['context','model'].bid_end_date)",
+          "color":            "#F0C956",
+          "edit":             "true",
+          "default":          "false"
+        }
+        ]
+-----------------------------------------------------------------------------------
+
+[width="100%",cols="29%,71%",]
+|=======================================================================
+|*Show Title* |*True* or *False* Display the title in the column header.
+
+|*Date Mode* |*visible*, *hover* Always display the start/end date next
+to the horizontal bar or display the dates only on cursor hover.
+
+|*Range Start Date* |Select the start date range for the tasks to
+display.
+
+|*Range End Date* |Select the end date range for the tasks to display.
+
+|*Show Milestones* |*task*, *project* Display a red vertical bar
+representing the milestone for the task or the project
+
+|*Year Display* |*none*, *default* Display the year in the column
+header.
+
+|*Week Display* |*none*, *default* Display the week in the column
+header.
+|=======================================================================
+
+-----------------------------------------------------------------------------------
+<element name="task_schedule">
+  <display class="tactic.ui.table.GanttElementWdg">
+    <options>[
+        {
+          "start_date_expr":  "@MIN(sthpw/task.bid_start_date)",
+          "end_date_expr":    "@MAX(sthpw/task.bid_end_date)",
+          "color":            "#33F",
+          "edit":             "true",
+          "default":          "false"
+        },
+        {
+          "start_date_expr":  "@MIN(sthpw/task['context','model'].bid_start_date)",
+          "end_date_expr":    "@MAX(sthpw/task['context','model'].bid_end_date)",
+          "color":            "#F0C956",
+          "edit":             "true",
+          "default":          "false"
+        }
+        ]</options>
+  </display>
+  <action class="tactic.ui.table.GanttCbk">
+    <sObjects>@SOBJECT(sthpw/task)</sObjects>
+    <options>[
+        {
+          "prefix":           "bid",
+          "sObjects":         "@SOBJECT(sthpw/task)",
+          "mode":             "cascade"
+        },
+        {
+          "prefix":           "bid",
+          "sObjects":         "@SOBJECT(sthpw/task['context','model'])",
+          "mode":             "cascade"
+        }
+
+        ]</options>
+  </action>
+</element>
+-----------------------------------------------------------------------------------

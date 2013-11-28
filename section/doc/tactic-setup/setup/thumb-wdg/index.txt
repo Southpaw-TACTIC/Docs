@@ -1,0 +1,64 @@
+Preview
+-------
+
+image:media/1_thumb_overview.png[image]
+
+The Thumbnail Widget is available for most types by default as the
+preview tool for images which have been uploaded for preview and
+thumbnail purposes. An icon for the corresponding file type is displayed
+for non-image files.
+
+[width="100%",cols="29%,71%",]
+|====================================================
+|*Name* |Thumbnail Widget
+|*Common Title* |Preview, Snapshot, Files
+|*TACTIC Version Support* |2.5.0 +
+|*Required database columns* |none
+|====================================================
+
+The Thumbnail widget is available in the common columns.
+
+[width="100%",cols="29%,71%",]
+|=======================================================================
+|*script_path* |Specify a script to control what UI it draws or what
+happens when the user click on the preview icon. Refer to it by this
+script path.
+
+|*detail_class_name* |Specify the default behavior to open up a pop-up
+window but just with a different widget written in Python.
+
+|*icon_context* |The context that the widget displays
+
+|*icon_size* |Control the icon size by percentage (up to 100%) e.g. 30%
+
+|*min_icon_size* |Minimum icon size (in pixels).
+
+|*latest_icon* |If set to 'true', the icon displayed corresponds to the
+latest checkin in the checkin history. It will disregard the icon
+context designated for this search type.
+
+|*filename* |If set to 'true', the file name of the linked file is
+displayed under the icon.
+
+|*original* |If set to 'true', the link will point to the original file
+with the 'main' file type checked in. Otherwise the scaled down 'web'
+version of the file will be linked. This is only applicable to
+image-type files where an icon has been generated during a check-in.
+
+|*file_type* |Whether to display the file type for download or not.
+
+|*detail* |If set to 'false', clicking of the thumbnail will link the
+underlying picture instead of displaying the single asset view in a
+pop-up
+
+|*protocol* |'http'(default) or 'file'. The protocol under which the
+thumbnail link will open when being clicked on. When 'file' is set, the
+default application is usually Windows explorer or at times Internet
+Explorer. 'file' mode can alleviate the bandwidth usage on the web
+server when viewing large media files like Quick Time.
+
+|*redirect_expr* |Works similarly as the redirect but in the form of
+expression. e.g. @SOBJECT(prod/sequence). If this display option is set
+for the ThumbWdg for prod/shot, it will display the icon of its sequence
+instead.
+|=======================================================================

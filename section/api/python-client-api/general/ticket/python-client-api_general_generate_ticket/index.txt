@@ -1,0 +1,8 @@
+generate_ticket
+---------------
+
+*generate_ticket()*
+
+Ask the server to generate a ticket explicity used for your own commands
+
+*return - a string representing the transaction ticket*

@@ -1,0 +1,54 @@
+Nuke Plugin Usage
+-----------------
+
+*Tactic and Nuke Integration UI*
+
+Once Nuke is fully installed. The UI can be access by first inserting it
+to the view using the Column Manager. By clicking on the Nuke Button
+Tactic will popup a the Nuke Widget window.
+
+image:media/jpg.png[image]
+
+*Nuke Widget Workflow*
+
+The idea in this widget is to be able to load Nuke straight from tactic
+as well as the ability to have Nuke scene files checked in and out of
+Tactic.
+
+The Launch Nuke button will only load a brand new single Nuke session.
+
+image:media/launchNuke.png[image]
+
+Once a Nuke session is populated with work, this session is ready to be
+checked into Tactic.
+
+A description of the checkin can be entered into the description text
+box.
+
+image:media/Description.png[image]
+
+There is also a context drop down menu to choose what process the Nuke
+file is going to be checked into.
+
+image:media/Context.png[image]
+
+_*Note - At the moment context can only be changed at the config._
+
+_- In the side bar go to the Widget Config and search through the config
+of nuke_wdg view. In this config the context can be changed._
+
+image:media/config.png[image]
+
+The Checkin button will submit the Nuke scene that is currently open
+with the context and description information that is applied to it.
+
+image:media/Checkin.png[image]
+
+_*Note - At the moment only a single Nuke session must be open during a
+Checkin process._
+
+Tactic also has the ability to load checkin files. Under the history is
+a list of all Nuke checkins. Here we can select the specific snapshot
+and with the Load Selection button , the selected Nuke scene will load.
+
+image:media/Snapshot.png[image]

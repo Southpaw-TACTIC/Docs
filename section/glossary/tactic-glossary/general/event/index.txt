@@ -1,0 +1,15 @@
+Event
+-----
+
+The TACTIC system is based on events, and every interaction with any
+SObject is tracked. Events may include changing a status, adding a note
+or checking in a file (to list but a few examples). Every event is
+logged into a transaction log, and can be undone. The transaction log is
+very valuable because it enables easy tracking of when something
+happened and who did it.
+
+An event can also execute another event in the system (or a "trigger").
+Triggers are set up as custom scripts which can be configured to do
+almost anything in TACTIC through the TACTIC Client API. Example uses of
+triggers include changing the status of another task SObject, checking
+in additional files, or executing an external rendering application.

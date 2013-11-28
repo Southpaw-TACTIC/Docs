@@ -1,0 +1,74 @@
+Delete and Retire
+-----------------
+
+TACTIC provides many ways to delete and retire items directly from the
+view. Retiring is TACTIC's way of marking an item so that it does not
+appear in any searches, but allows the user to bring it back if
+necessary. The methods to delete and retire an item are described below.
+
+To delete an item from the view, first put a check mark in the box next
+to the item you want deleted. Then, right click anywhere on the row to
+bring up the context menu. Selecting the "Delete" option will delete the
+object from the view and from the database.
+
+image:media/delete_context_menu.png[image]
+
+Alternatively, the gear menu can be used to delete an item from a view.
+
+1.  Put a check mark in the box next to the item.
+2.  In the tool shelf and click on the gear to bring up the gear menu.
+3.  Selecting the "Delete" option will delete the object from the view
+and from the database.
+
+image:media/delete_gear_menu.png[image]
+
+____________________________________________________________________________________________________________________________
+*Note*
+
+If an item is deleted by mistake, to undo this action, go to the top
+gear menu, select Edit -> Undo Last Server Transaction.
+____________________________________________________________________________________________________________________________
+
+image:media/undo_last_transaction.png[image]
+
+To mark an item as "Retired", first put a check mark in the box next to
+the item. Then, right click anywhere on the row to bring up the context
+menu. Selecting the "Retire" option will mark the object as retired and
+filter it out from the view.
+
+note: Items will still exist and can be brought back. The next section
+will shows how to view items that have been marked as "Retired".
+
+image:media/retire_context_menu.png[image]
+
+To retire an item from the view using the gear menu:
+
+1.  Put a check mark in the box next to the item.
+2.  In the tool shelf and click on the gear to bring up the gear menu.
+3.  Selecting the "Retire" option will mark the object as retired and
+filter it out from the view
+
+____________________________________________________________________________________________________________________________________
+*Note*
+
+The item will still exist and can be brought back. The next section will
+shows how to view items that have been marked as "Retired".
+____________________________________________________________________________________________________________________________________
+
+image:media/delete_gear_menu.png[image]
+
+When an item is "retired", it has simply been marked as "retired" in the
+database. The item still exists in the database and can be brought back.
+To show items that have been retired in a view, go the any column header
+and right click. This will bring up a context menu. Select "Show
+Retired".
+
+image:media/retire_show.png[image]
+
+________________________________________________________
+*Note*
+
+The items marked as "retired" appear highlighted in red.
+________________________________________________________
+
+image:media/retire_show_after.png[image]

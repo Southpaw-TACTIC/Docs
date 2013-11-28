@@ -1,0 +1,17 @@
+Snapshot
+--------
+
+A snapshot describes an asset at a particular point in time. This
+description is sufficient to reproduce the asset completely at that
+point in time. TACTIC has its own XML description language to completely
+define assets and their dependencies to other assets.
+
+A snapshot can contain any number of files. For example, in a Flash
+production, a typical checkin will result in 4 files: a .fla (the flash
+file to work on), .swf (a viewable file), and 2 pngs which represent a
+small icon and a large viewable image.
+
+Every time something is checked in, a new snapshot is created of the
+asset. Snapshots can reference other snapshots, which allows TACTIC to
+define dependencies to other assets or other snapshots of the same
+asset.

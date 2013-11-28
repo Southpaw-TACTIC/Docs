@@ -1,0 +1,14 @@
+Project
+-------
+
+A TACTIC project defines a real-world project or separates one of its
+timelines. Each TACTIC project has its own separate database and
+structure. Projects are the highest level separation in TACTIC. They
+represent a separation in workflow, Searchable Types, Views, Access
+Rules, Naming Conventions Pipelines and more
+
+Custom TACTIC projects can be built from the ground up to manage
+specific types of objects, processes and files. Alternatively,
+predefined, ready-to-use TACTIC project modules are available to
+expedite the setup process and provide custom integration tools
+appropriate for the project type.

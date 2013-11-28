@@ -1,0 +1,55 @@
+Calendar Input Widget
+---------------------
+
+image:media/1_calendar_overview.png[image]
+
+The CalendarInputWdg displays a navigable calendar where dates can be
+selected. It is an input widget that conforms to the BaseInputWdg
+interface and is used for inline editing or as one of the items in the
+EditWdg layout.
+
+image:media/2_calendar_closeup.png[image]
+
+[width="100%",cols="29%,71%",]
+|=======================================================================
+|*Name* |Calendar Input
+|*Class* |tactic.ui.widget.CalendarInputWdg
+|*Category* |Input widget
+|*Supported Interfaces* |EditWdg, TableLayoutWdg (edit view)
+|*TACTIC Version Support* |2.5.0 +
+|*Required database columns* |none unless editing a specific date column
+|=======================================================================
+
+The simple implementation does not require any options. It displays a
+non-editable text box with a value that represents a date. Clicking on
+the cell opens up the calendar widget.
+
+[width="100%",cols="29%,71%",]
+|=======================================================================
+|*first_day_of_week* |Integer representing first day of the week
+(0=Sunday, 6=Saturday)
+
+|*read_only* |Sets the widget to be read only. In read-only mode,
+clicking on the cell does not bring up the calendar for input. Only a
+text box with the date value is displayed.
+|=======================================================================
+
+The simplest and most common usage is the default implementation.
+
+------------------------------------------------------
+<element name='start_date'>
+  <display class='tactic.ui.widget.CalendarInputWdg'/>
+</element>
+------------------------------------------------------
+
+To set the work week to start on a different day than Sunday, change the
+first_day_of_week . This option is an integer which represents the days
+of the week where 0=Sunday and 6=Saturday.
+
+-----------------------------------------------------
+<element name='start_date'>
+  <display class='tactic.ui.widget.CalendarInputWdg'>
+    <first_day_of_week>6</first_day_of_week>
+  </display>
+</element>
+-----------------------------------------------------

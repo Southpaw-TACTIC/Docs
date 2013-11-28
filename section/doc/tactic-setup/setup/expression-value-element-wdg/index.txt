@@ -1,0 +1,78 @@
+Expression Value Element
+------------------------
+
+image:media/1_expression_value_element_overview.png[image]
+
+image:media/2_expression_value_element_overview_after.png[image]
+
+The Expression Value Element widget accepts a TACTIC Expression as the
+input and displays the evaluated expression as the output.
+
+*Info*
+
+[width="100%",cols="31%,69%",]
+|=====================================================================
+|*Name* |Expression Value Element Widget
+|*Class* |expression_value
+|*TACTIC Version Support* |2.5.0 +
+|*Required database columns* |Yes, a database column by the same name.
+|=====================================================================
+
+For example, we can dynamically display the number of login names in the
+login table. This would be an example of an absolute expression because
+the expression does not take into input any data from the row the field
+is on. A relative expression has access to the row and table information
+that the row the expression is on.
+
+__________________________________________________________________________________________________________
+*Note*
+
+The difference between an *absolute expression* and a *relative
+expression*:
+
+-an *absolute expression* does not take into input any data from the row
+or table that the field exists on
+
+-a *relative expression* has access to the row and table information
+that the field exists on
+__________________________________________________________________________________________________________
+
+Go into edit mode for the Expression Value Element widget. Input an
+absolute TACTIC expression as the value.
+
+In display mode, this widget will display the result of the evaluation
+of the expression.
+
+*Options*
+
+There are no options available for this widget.
+
+For example, enter the following absolute TACTIC Expression as the value
+for the Expression Value Element widget:
+
+---------------------------------
+@COUNT(sthpw/snapshot.sthpw/file)
+---------------------------------
+
+In display mode, this widget will evaluate the expression and display
+the count of the number snapshot files in the database.
+
+For example, enter the following absolute TACTIC Expression as the value
+for the Expression Value Element widget:
+
+-------------------------------
+@COUNT(sthpw/login.sthpw/login)
+-------------------------------
+
+In display mode, this widget will evaluate the expression and display
+the count of the number of logins in the login table.
+
+For example, enter the following absolute TACTIC Expression as the value
+for the Expression Value Element widget:
+
+-------------------------------------------
+@GET(sthpw/task["context = 'model'"].code) 
+-------------------------------------------
+
+In display mode, this widget will evaluate the expression and display
+the code for all the tasks where the context is 'model'.

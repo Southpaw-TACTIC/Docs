@@ -1,0 +1,24 @@
+delete_sobject
+--------------
+
+*delete_sobject(search_key)*
+
+Invoke the delete method. Note: this function may fail due
+
+to dependencies. Tactic will not cascade delete. This function
+
+should be used with extreme caution because, if successful, it will
+
+permanently remove the existence of an sobject
+
+*param:*
+
+*search_key* - a unique identifier key representing an sobject.
+
+Note: this can also be an array.
+
+*return:*
+
+*dictionary* - a sobject that represents values of the sobject in the
+
+form name:value pairs

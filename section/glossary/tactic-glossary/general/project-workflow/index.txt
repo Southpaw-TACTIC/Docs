@@ -1,0 +1,10 @@
+Project Workflow
+----------------
+
+Pipelines define a hierarchical set of processes that lay out all of the
+production and approval steps an SObject must go through before being
+completed. It is important to note that each process contains its own
+set of approvals (task pipeline). Typically a process must be completed
+before it can be handed off to the downstream process or processes.
+TACTIC uses pipelines in this manner: when a process is approved, the
+next downstream processes receive the green light to start.

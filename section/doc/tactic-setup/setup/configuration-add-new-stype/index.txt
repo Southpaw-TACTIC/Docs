@@ -1,0 +1,95 @@
+Add new sType
+-------------
+
+Registering a new sType or "Searchable Type" in TACTIC provides
+opportunity to track separate list of items. From a technical
+standpoint, a new sType is a separate table in the project's database.
+This allows for the following configuration aspects:
+
+* Views
+* Custom Columns (properties)
+* Workflows processes and status
+* Notifications
+* Triggers
+* Tools
+* Security
+* ...and more
+
+To register a new sType, click the [+] button in the top-left of the
+configuration page. The *Register a new sType* wizard will appear:
+
+image:media/register_stype_definition.png[image]
+
+*Information*
+
+[width="100%",cols="50%,50%",]
+|=======================================================================
+|*Project Specific* |_(available when creating a new sType for a project
+that is based on a template)_
+
+|*Title* |The title for the sType is used in the UI for display
+purposes.
+
+|*Searchable Type* |Refers to the database name for the sType. in a
+"<project>/<name>" format. If no project is defined (i.e.. "art/") than
+the current project namespace will be used.
+
+|*Description* _(optional)_ |An optional description of the sType.
+|=======================================================================
+
+Once the fields are completed, press "Next" or press "Register" to
+complete the registration process. Note: It is recommended to go through
+the series of steps outlined in the "Register a new sType" wizard, as
+this allows for quick and easy configuration of the new sType that is
+outside of the TACTIC defaults.
+
+*Workflow*
+
+image:media/register_stype_pipeline.png[image]
+
+[width="100%",cols="50%,50%",]
+|=======================================================================
+|*Items have a Pipeline?* |When selected, sets up an association for a
+pipeline workflow for the sObjects in that sType. _The section below
+describes this relationship in more detail_
+
+|*Process* _(optional)_ |Stages in the process. _eg. processes for an
+asset sType: design, model, texture, rigging eg. processes for a shot
+sType: layout, animation/fx, lighting, render, comp_
+|=======================================================================
+
+*Preview Image*
+
+image:media/register_stype_preview_image.png[image]
+
+[width="100%",cols="51%,49%",]
+|=======================================================================
+|*Preview Image* _(optional)_ |Browse to select a preview image for the
+new sType.
+|=======================================================================
+
+*Columns*
+
+image:media/register_stype_columns.png[image]
+
+[width="100%",cols="50%,50%",]
+|=======================================================================
+|*Include Preview Image?* |Preview image for each item (sObject) of that
+sType.
+
+|*Add Columns to sType* _(optional)_ |During the registration process,
+default columns are added to the new sType table. You can also add
+additional columns during this process. Note - columns can be added
+after this process using the Table Manager
+|=======================================================================
+
+*Finish*
+
+image:media/register_stype_finish.png[image]
+
+[width="100%",cols="50%,50%",]
+|=======================================================================
+|*Finish* |To complete the registration process, press "Register". A
+this point, the option is provided to go back and change any information
+by clicking on the "Back" button.
+|=======================================================================

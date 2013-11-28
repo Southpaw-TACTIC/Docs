@@ -1,0 +1,14 @@
+Trigger
+-------
+
+Triggers are specific tools and scripts that are executed based on
+events which occur in Tactic. Within the project setup, there are tools
+which help setup triggers and notifications with simple tools. Although
+if required, these Triggers can be quite complex. Using the TACTIC
+Client API, you can achieve almost anything. For example, a trigger can
+be called when a task's status is changed. This type of trigger would
+first check what the status was changed to, and then only proceed to
+carry out a set of tasks if the status was, for example, "approved".
+This may be as simple as changing the status of another task or as
+complex as loading the final checkin for that task, render it to a video
+file and then check it back into TACTIC.

@@ -1,0 +1,142 @@
+How to Install TACTIC on Fedora 12
+----------------------------------
+
+Below are the step-by-step instructions of how to install TACTIC on
+Fedora 12.
+
+*Fedora 12*
+
+There are no known issues with running a TACTIC server on Fedora 12.
+
+Southpaw Technology has chosen to distribute their virtual machine for
+evaluation on Fedora 12.
+
+1.  Log in as the root user.
+2.  Open the passwd file.
++
+--------------
+vi /etc/passwd
+--------------
++
+Modify the apache home directory and login shell to look like the
+following:
++
+---------------------------------------------
+apache:x:48:48:Apache:/home/apache:/bin/bash 
+---------------------------------------------
+3.  Set password for apache to: south123paw
++
+-------------
+passwd apache
+-------------
+4.  Open to the sudoers file.
++
+------
+visudo
+------
++
+Add the apache user by including the following line in the appropriate
+location in the file:
++
+--------------------
+apache ALL=(ALL) ALL
+--------------------
+5.  Create the home directory for apache.
++
+--------------------------------
+mkdir /home/apache
+chown apache:apache /home/apache
+chmod a+rx /home/apache
+--------------------------------
+6.  Disable SElinux.
++
+----------------------
+vi /etc/selinux/config
+----------------------
+7.  Install modules.
++
+---------------------------------------------------------------------------------------------------
+yum install -y gcc zlib-devel samba libxslt-devel libxml2-devel postgresql-server postgresql-devel 
+---------------------------------------------------------------------------------------------------
+8.  Disable firewall.
++
+-------------------------
+/etc/init.d/iptables save
+/etc/init.d/iptables stop
+-------------------------
+9.  Create and open the index.html for redirection.
++
+---------------------------
+vi /var/www/html/index.html
+---------------------------
++
+Insert the following contents:
++
+---------------------------------------------------
+<META http-equiv="refresh" content="0;URL=/tactic">
+---------------------------------------------------
+10. Re-login as the apache user.
+11. Download the TACTIC source code and setup the service.
++
+Open the following link in a web browser
++
+-----------------------------------------
+http://support.southpawtech.com/downloads
+-----------------------------------------
++
+Setup the TACTIC service.
++
+------------------------------------------------------------------
+cd /tmp
+unzip tactic_#.#.#.#.zip
+sudo cp /tmp/tactic_#.#.#.#/src/install/service/tactic /etc/init.d
+sudo chmod 775 /etc/init.d/tactic
+sudo /sbin/chkconfig tactic on
+------------------------------------------------------------------
+12. Setup Postgres.
++
+----------------------------------------------------------------------------------
+sudo /etc/init.d/postgresql start
+sudo cp /tmp/tactic_#.#.#.#/src/install/postgresql/pg_hba.conf /var/lib/pgsql/data
+sudo chown postgres:postgres /var/lib/pgsql/data/pg_hba.conf
+sudo /sbin/chkconfig postgresql on
+sudo /etc/init.d/postgresql restart 
+----------------------------------------------------------------------------------
+13. Setup Apache.
++
+----------------------------------------------------------------------
+sudo cp /home/apache/tactic_data/config/tactic.conf /etc/httpd/conf.d/
+sudo /sbin/chkconfig httpd on
+sudo /etc/init.d/httpd start 
+----------------------------------------------------------------------
+14. Install TACTIC.
++
+--------------------------------------------------------------------------------------------------------------------
+cd /tmp/tactic_#.#.#.#/src/install
+sudo python install.py
+sudo /sbin/chkconfig tactic on
+sudo chown -R apache:apache /home/apache/tactic /home/apache/assets /home/apache/tactic_data /home/apache/tacticTemp
+--------------------------------------------------------------------------------------------------------------------
+15. Upgrade the database.
++
+------------------------------------------------
+python /home/apache/tactic/src/bin/upgrade_db.py
+------------------------------------------------
+16. Startup TACTIC in dev mode.
++
+-------------------------------------------------
+python /home/apache/tactic/src/bin/startup_dev.py
+-------------------------------------------------
+17. Try accessing TACTIC through a web browser on a client machine.
+18. Once startup_dev works, Ctrl^C out of the process.
++
+------
+Ctrl^C
+------
+19. Start TACTIC as a service.
++
+-----------------------------
+sudo /etc/init.d/tactic start
+-----------------------------
+
+End of installation instructions.
