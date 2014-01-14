@@ -61,12 +61,236 @@ include::../section/doc/tactic-setup/setup/group-assignment/index.txt[]
 
 :leveloffset: 0
 
-Users and Group Security
-~~~~~~~~~~~~~~~~~~~~~~~~
+User and Group Security
+~~~~~~~~~~~~~~~~~~~~~~~
 
 :leveloffset: 2
 
 include::../section/doc/tactic-setup/setup/manage-security/index.txt[]
+
+
+
+:leveloffset: 0
+
+Dashboards
+~~~~~~~~~~
+
+:leveloffset: 2
+
+include::../section/doc/tactic-setup/setup/project-startup-dashboards/index.txt[]
+
+
+
+
+:leveloffset: 0
+
+Reports
+~~~~~~~
+
+:leveloffset: 2
+
+include::../section/doc/tactic-setup/setup/project-startup-reports/index.txt[]
+
+
+
+
+:leveloffset: 0
+
+Plugins
+~~~~~~~
+
+:leveloffset: 2
+
+include::../section/doc/tactic-setup/setup/download-plugins/index.txt[]
+
+include::../section/doc/tactic-setup/setup/install-and-activate/index.txt[]
+
+include::../section/doc/tactic-setup/setup/remove-and-delete/index.txt[]
+
+
+:leveloffset: 0
+
+Advanced Project Setup
+~~~~~~~~~~~~~~~~~~~~~~
+
+:leveloffset: 2
+
+include::../section/doc/tactic-setup/setup/tactic-anatomy-lesson/index.txt[]
+
+include::../section/doc/tactic-setup/setup/built-in-stypes/index.txt[]
+
+include::../section/doc/tactic-setup/setup/project-schema/index.txt[]
+
+include::../section/doc/tactic-setup/setup/stype-register/index.txt[]
+
+include::../section/doc/tactic-setup/setup/stype-connect/index.txt[]
+
+
+
+:leveloffset: 0
+
+Advanced Workflow
+~~~~~~~~~~~~~~~~~
+
+:leveloffset: 2
+
+include::../section/doc/tactic-setup/setup/project-workflow/index.txt[]
+
+-include::../section/doc/tactic-setup/setup/pipeline-process-options/index.txt[]
+
+
+
+:leveloffset: 0
+
+Sidebar
+~~~~~~~
+
+:leveloffset: 2
+
+include::../section/doc/tactic-setup/setup/tactic-sidebar/index.txt[]
+
+include::../section/doc/tactic-setup/setup/managing-sidebar/index.txt[]
+
+include::../section/doc/tactic-setup/setup/element-definition/index.txt[]
+
+
+
+:leveloffset: 0
+
+Views Configuration
+~~~~~~~~~~~~~~~~~~~
+
+:leveloffset: 2
+
+include::../section/doc/tactic-setup/setup/view-manager/index.txt[]
+
+
+:leveloffset: 0
+
+Naming Conventions
+~~~~~~~~~~~~~~~~~~
+
+:leveloffset: 2
+
+include::../section/doc/tactic-setup/setup/project-automation-file-naming/index.txt[]
+
+
+
+:leveloffset: 0
+
+include::../section/doc/tactic-setup/setup/project-workflow-introduction/index.txt[]
+
+
+
+
+:leveloffset: 0
+
+Settings
+~~~~~~~~
+
+:leveloffset: 2
+
+include::../section/doc/tactic-setup/setup/modify-project-settings/index.txt[]
+
+
+
+
+:leveloffset: 0
+
+Advanced Configuration
+~~~~~~~~~~~~~~~~~~~~~~
+
+:leveloffset: 2
+
+include::../section/doc/tactic-setup/setup/advanced-schema-configuration/index.txt[]
+
+include::../section/doc/tactic-setup/setup/advanced-access-rule-configuration/index.txt[]
+
+include::../section/doc/tactic-setup/setup/remove-projects/index.txt[]
+
+
+
+:leveloffset: 0
+
+Advanced Automation
+~~~~~~~~~~~~~~~~~~~
+
+:leveloffset: 2
+
+include::../section/doc/tactic-setup/setup/tactic-event-system/index.txt[]
+
+include::../section/doc/tactic-setup/setup/project-automation-triggers/index.txt[]
+
+include::../section/doc/tactic-setup/setup/project-automation-notifications/index.txt[]
+
+include::../section/doc/tactic-setup/setup/advanced-notification-setup/index.txt[]
+
+
+-include::../section/doc/tactic-setup/setup/advanced-event-usage/index.txt[]
+
+-include::../section/doc/tactic-setup/setup/advanced-trigger-setup/index.txt[]
+
+-include::../section/doc/tactic-setup/setup/advanced-file-naming-setup/index.txt[]
+
+-include::../section/doc/tactic-setup/setup/versionless-checkin/index.txt[]
+
+
+
+
+
+:leveloffset: 0
+
+Expression Language
+~~~~~~~~~~~~~~~~~~~
+
+:leveloffset: 2
+
+include::../section/doc/tactic-setup/setup/expression-language-introduction/index.txt[]
+
+include::../section/doc/tactic-setup/setup/expression-method-reference/index.txt[]
+
+include::../section/doc/tactic-setup/setup/expression-variable-reference/index.txt[]
+
+
+
+:leveloffset: 0
+
+Debugging TACTIC
+~~~~~~~~~~~~~~~~
+
+:leveloffset: 2
+
+
+include::../section/doc/tactic-setup/setup/exception-log/index.txt[]
+
+
+
+:leveloffset: 0
+
+Widgets
+~~~~~~~
+
+:leveloffset: 2
+
+include::../section/doc/tactic-setup/setup/tactic-widgets/index.txt[]
+
+
+View Widgets
+~~~~~~~~~~~~~
+
+:leveloffset: 3
+
+include::../section/doc/tactic-setup/setup/simple-table-element-wdg/index.txt[]
+
+include::../section/doc/tactic-setup/setup/format-element-wdg/index.txt[]
+
+include::../section/doc/tactic-setup/setup/expression-element-wdg/index.txt[]
+
+
+
+
+
+
 
 
 
@@ -79,7 +303,6 @@ Error
 
 
 
--include::../section/doc/tactic-setup/setup/advanced-file-naming-setup/index.txt[]
 
 
 
@@ -93,15 +316,11 @@ Not yet handled
 
 include::../section/doc/tactic-setup/setup/custom-layout-wdg/index.txt[]
 
-include::../section/doc/tactic-setup/setup/project-automation-file-naming/index.txt[]
 
-include::../section/doc/tactic-setup/setup/tactic-anatomy-lesson/index.txt[]
 
-include::../section/doc/tactic-setup/setup/simple-table-element-wdg/index.txt[]
 
 include::../section/doc/tactic-setup/setup/project-startup-manage-security/index.txt[]
 
-include::../section/doc/tactic-setup/setup/project-workflow/index.txt[]
 
 include::../section/doc/tactic-setup/setup/task-element-wdg/index.txt[]
 
@@ -109,73 +328,52 @@ include::../section/doc/tactic-setup/setup/link-element-wdg/index.txt[]
 
 include::../section/doc/tactic-setup/setup/general-checkin-wdg/index.txt[]
 
-include::../section/doc/tactic-setup/setup/managing-sidebar/index.txt[]
 
-include::../section/doc/tactic-setup/setup/install-and-activate/index.txt[]
 
 include::../section/doc/tactic-setup/setup/submit-support-ticket/index.txt[]
 
-include::../section/doc/tactic-setup/setup/remove-projects/index.txt[]
 
 include::../section/doc/tactic-setup/setup/task-completion-wdg/index.txt[]
 
-include::../section/doc/tactic-setup/setup/advanced-trigger-setup/index.txt[]
 
-include::../section/doc/tactic-setup/setup/tactic-event-system/index.txt[]
 
 include::../section/doc/tactic-setup/setup/note-sheet-wdg/index.txt[]
 
-include::../section/doc/tactic-setup/setup/advanced-event-usage/index.txt[]
 
-include::../section/doc/tactic-setup/setup/project-startup-dashboards/index.txt[]
 
 include::../section/doc/tactic-setup/setup/work-element-wdg/index.txt[]
 
 include::../section/doc/tactic-setup/setup/sobject-checkin-history-wdg/index.txt[]
 
-include::../section/doc/tactic-setup/setup/expression-element-wdg/index.txt[]
 
-include::../section/doc/tactic-setup/setup/stype-register/index.txt[]
 
-include::../section/doc/tactic-setup/setup/remove-and-delete/index.txt[]
 
 include::../section/doc/tactic-setup/setup/select-wdg/index.txt[]
 
 include::../section/doc/tactic-setup/setup/task-edit-wdg/index.txt[]
 
-include::../section/doc/tactic-setup/setup/advanced-notification-setup/index.txt[]
 
 include::../section/doc/tactic-setup/setup/setup/index.txt[]
 
-include::../section/doc/tactic-setup/setup/project-automation-notifications/index.txt[]
 
-include::../section/doc/tactic-setup/setup/exception-log/index.txt[]
 
-include::../section/doc/tactic-setup/setup/view-manager/index.txt[]
 
 include::../section/doc/tactic-setup/setup/text-wdg/index.txt[]
 
-include::../section/doc/tactic-setup/setup/stype-connect/index.txt[]
 
-include::../section/doc/tactic-setup/setup/advanced-schema-configuration/index.txt[]
 
-include::../section/doc/tactic-setup/setup/expression-language-introduction/index.txt[]
 
 include::../section/doc/tactic-setup/setup/search/index.txt[]
 
-include::../section/doc/tactic-setup/setup/expression-method-reference/index.txt[]
 
 include::../section/doc/tactic-setup/setup/discussion-wdg/index.txt[]
 
-include::../section/doc/tactic-setup/setup/download-plugins/index.txt[]
 
 include::../section/doc/tactic-setup/setup/thumb-wdg/index.txt[]
 
-include::../section/doc/tactic-setup/setup/project-automation-triggers/index.txt[]
 
 include::../section/doc/tactic-setup/setup/hidden-row-toggle-wdg/index.txt[]
 
-include::../section/doc/tactic-setup/setup/expression-variable-reference/index.txt[]
 
 
 include::../section/doc/tactic-setup/setup/view-panel-wdg/index.txt[]
@@ -185,9 +383,7 @@ include::../section/doc/tactic-setup/setup/calendar-wdg/index.txt[]
 
 include::../section/doc/tactic-setup/setup/task-schedule-wdg/index.txt[]
 
-include::../section/doc/tactic-setup/setup/modify-project-settings/index.txt[]
 
-include::../section/doc/tactic-setup/setup/format-element-wdg/index.txt[]
 
 
 include::../section/doc/tactic-setup/setup/custom-url-configuration/index.txt[]
@@ -198,7 +394,6 @@ include::../section/doc/tactic-setup/setup/table-layout-wdg/index.txt[]
 
 include::../section/doc/tactic-setup/setup/edit-layout-wdg/index.txt[]
 
-include::../section/doc/tactic-setup/setup/element-definition/index.txt[]
 
 include::../section/doc/tactic-setup/setup/sobject-detail-wdg/index.txt[]
 
@@ -213,32 +408,24 @@ include::../section/doc/tactic-setup/setup/select-filter-element-widget/index.tx
 
 include::../section/doc/tactic-setup/setup/text-area-wdg/index.txt[]
 
-include::../section/doc/tactic-setup/setup/tactic-sidebar/index.txt[]
 
-include::../section/doc/tactic-setup/setup/project-startup-reports/index.txt[]
 
 include::../section/doc/tactic-setup/setup/explorer-table-element-wdg/index.txt[]
 
 include::../section/doc/tactic-setup/setup/drop-element-wdg/index.txt[]
 
-include::../section/doc/tactic-setup/setup/project-workflow-introduction/index.txt[]
 
-include::../section/doc/tactic-setup/setup/built-in-stypes/index.txt[]
 
-include::../section/doc/tactic-setup/setup/versionless-checkin/index.txt[]
 
-include::../section/doc/tactic-setup/setup/pipeline-process-options/index.txt[]
 
 include::../section/doc/tactic-setup/setup/introduction/index.txt[]
 
-include::../section/doc/tactic-setup/setup/advanced-access-rule-configuration/index.txt[]
 
 include::../section/doc/tactic-setup/setup/task-status-history-wdg/index.txt[]
 
 
 
 
-include::../section/doc/tactic-setup/setup/project-schema/index.txt[]
 
 include::../section/doc/tactic-setup/setup/wdg/index.txt[]
 
@@ -246,5 +433,4 @@ include::../section/doc/tactic-setup/setup/managing-access-rules/index.txt[]
 
 include::../section/doc/tactic-setup/setup/expression-value-element-wdg/index.txt[]
 
-include::../section/doc/tactic-setup/setup/tactic-widgets/index.txt[]
 
