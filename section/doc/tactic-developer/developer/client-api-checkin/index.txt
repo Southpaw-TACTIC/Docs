@@ -305,7 +305,8 @@ of a preallocated check-in using a piecewise approach:
 
     # get the preallocated path
     snapshot_code = snapshot.get('code')
-    file_pattern =  my.server.get_preallocated_path(snapshot_code, file_type="main")
+    file_name = "XG002_beauty_v012.%0.4d.tif"
+    file_pattern =  my.server.get_preallocated_path(snapshot_code, file_type="main", file_name = file_name)
     print "file_pattern: ", file_path
 
     # generate the files
@@ -314,7 +315,7 @@ of a preallocated check-in using a piecewise approach:
         render_file(file_path)
 
     # add the files to the snapshot
-    snapshot = server.add_group(snapshot_code, file_type="main", file_range="1-20", mode="preallocate")
+    snapshot = server.add_group(snapshot_code, file_pattern, file_type="main", file_range="1-20", mode="preallocate")
     print snapshot.get("snapshot")
 -------------------------------------------------------------------------------------------------------
 
