@@ -425,7 +425,7 @@ Returns a CSS gradient value that starts at the attribute + offset and
 transitions to attribute + offset + gradient_range.
 
 Ex: "@GRADIENT('#777777','3','-4')" will return
-['-webkit-gradient(linear, 0% 0%, 0% 100%, from(#7e7e7e), to(#747474))']
+\['-webkit-gradient(linear, 0% 0%, 0% 100%, from(#7e7e7e), to(#747474))']
 
 *PALETTE*
 

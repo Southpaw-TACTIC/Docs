@@ -11,7 +11,7 @@ belong to the plugin and also some metadata about the plugin
 * media files (images)
 * html, javascript, css files
 
-image:media/1_community_plugins_site.PNG[image]
+image:media/1_community_plugins_site.png[image]
 
 The Community Site is a central resource to search for plugins. You can
 find existing plugins to download and use from the plugins section. You

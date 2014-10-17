@@ -359,7 +359,7 @@ which comes with the input field.
 
 *Inject Subscription* injects a Subscription Bar Widget into your HTML.
 
-image:media/custom_layout_editor_sidebar.PNG[image]
+image:media/custom_layout_editor_sidebar.png[image]
 
 You can add the view you have created directly to the sidebar. To do
 this, click on the gear in the top menu and select “Add to Side Bar”.

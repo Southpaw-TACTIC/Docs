@@ -1,7 +1,7 @@
 Remove and Delete
 -----------------
 
-image:media/1_removing%20a%20plugin.png[image]
+image:media/1_removing_a_plugin.png[image]
 
 There is a difference between removing a plugin and deleting a plugin.
 Once you have a plugin in your TACTIC directory, that means you have
