@@ -4,7 +4,6 @@ TACTIC End-User Documentation
 
 :leveloffset: 0
 
-
 Introduction to TACTIC
 ~~~~~~~~~~~~~~~~~~~~~~
 
@@ -21,7 +20,6 @@ include::../section/doc/tactic-setup/setup/managing-sidebar/index.txt[]
 
 :leveloffset: 0
 
-
 Preferences
 ~~~~~~~~~~~
 
@@ -31,7 +29,6 @@ include::../section/doc/tactic-end-user/end-user/change-your-password/index.txt[
 
 
 :leveloffset: 0
-
 
 Interface Usage
 ~~~~~~~~~~~~~~~
@@ -47,6 +44,95 @@ include::../section/doc/tactic-end-user/end-user/delete-and-retire/index.txt[]
 include::../section/doc/tactic-end-user/end-user/create-and-edit-views/index.txt[]
 
 
+:leveloffset: 0
+
+Searching
+~~~~~~~~~
+
+:leveloffset: 2
+
+include::../section/doc/tactic-end-user/end-user/search-interface/index.txt[]
+
+include::../section/doc/tactic-end-user/end-user/search-compound/index.txt[]
+
+include::../section/doc/tactic-end-user/end-user/search-expressions/index.txt[]
+
+
+:leveloffset: 0
+
+Tasks and Schedules
+~~~~~~~~~~~~~~~~~~~
+
+:leveloffset: 2
+
+include::../section/doc/tactic-end-user/end-user/creating-tasks/index.txt[]
+
+include::../section/doc/tactic-setup/setup/gantt-wdg/index.txt[]
+
+
+:leveloffset: 0
+
+Notes and Communication
+~~~~~~~~~~~~~~~~~~~~~~~
+
+:leveloffset: 2
+
+include::../section/doc/tactic-end-user/end-user/notes-widget/index.txt[]
+
+include::../section/doc/tactic-setup/setup/note-sheet-wdg/index.txt[]
+
+
+:leveloffset: 0
+
+File Management
+~~~~~~~~~~~~~~~
+
+:leveloffset: 2
+
+include::../section/glossary/tactic-glossary/general/checkin/index.txt[]
+
+
+:leveloffset: 0
+
+Time tracking
+~~~~~~~~~~~~~
+
+:leveloffset: 2
+
+include::../section/doc/tactic-end-user/end-user/tracking-work-hours/index.txt[]
+
+
+:leveloffset: 0
+
+Importing and Exporting
+~~~~~~~~~~~~~~~~~~~~~~~
+
+:leveloffset: 2
+
+include::../section/doc/tactic-end-user/end-user/exporting-csv-data/index.txt[]
+
+include::../section/doc/tactic-end-user/end-user/importing-csv-data/index.txt[]
+
+
+:leveloffset: 0
+
+Clipboard
+~~~~~~~~~
+
+:leveloffset: 2
+
+include::../section/doc/tactic-end-user/end-user/clipboard/index.txt[]
+
+
+:leveloffset: 0
+
+Transactions
+~~~~~~~~~~~~
+
+:leveloffset: 2
+
+include::../section/doc/tactic-end-user/end-user/tactic-undo/index.txt[]
+
 
 :leveloffset: 2
 
@@ -55,8 +141,6 @@ include::../section/glossary/tactic-glossary/general/context/index.txt[]
 include::../section/glossary/tactic-glossary/general/searchable-object/index.txt[]
 
 include::../section/glossary/tactic-glossary/general/retire/index.txt[]
-
-include::../section/glossary/tactic-glossary/general/checkin/index.txt[]
 
 include::../section/glossary/tactic-glossary/general/sidebar/index.txt[]
 
@@ -194,8 +278,6 @@ include::../section/doc/tactic-setup/setup/configuration-notifications/index.txt
 
 include::../section/doc/tactic-setup/setup/tactic-event-system/index.txt[]
 
-include::../section/doc/tactic-setup/setup/note-sheet-wdg/index.txt[]
-
 include::../section/doc/tactic-setup/setup/advanced-event-usage/index.txt[]
 
 include::../section/doc/tactic-setup/setup/project-startup-dashboards/index.txt[]
@@ -284,8 +366,6 @@ include::../section/doc/tactic-setup/setup/project-startup-configuration/index.t
 
 include::../section/doc/tactic-setup/setup/sobject-detail-wdg/index.txt[]
 
-include::../section/doc/tactic-setup/setup/gantt-wdg/index.txt[]
-
 include::../section/doc/tactic-setup/setup/built-in-plugins/index.txt[]
 
 include::../section/doc/tactic-setup/setup/project-startup-manage-users/index.txt[]
@@ -340,43 +420,23 @@ include::../section/doc/tactic-setup/setup/tactic-widgets/index.txt[]
 
 include::../section/doc/tactic-end-user/end-user/internationalization/index.txt[]
 
-include::../section/doc/tactic-end-user/end-user/creating-tasks/index.txt[]
-
-include::../section/doc/tactic-end-user/end-user/tracking-work-hours/index.txt[]
-
 include::../section/doc/tactic-end-user/end-user/general-checkin/index.txt[]
 
 include::../section/doc/tactic-end-user/end-user/charting/index.txt[]
 
 include::../section/doc/tactic-end-user/end-user/tasks-quickstart/index.txt[]
 
-include::../section/doc/tactic-end-user/end-user/exporting-csv-data/index.txt[]
-
 include::../section/doc/tactic-end-user/end-user/interface-map/media/index.txt[]
 
 include::../section/doc/tactic-end-user/end-user/introduction-to-tactic/index.txt[]
 
-include::../section/doc/tactic-end-user/end-user/search-expressions/index.txt[]
-
-include::../section/doc/tactic-end-user/end-user/notes-widget/index.txt[]
-
 include::../section/doc/tactic-end-user/end-user/multi-insert/index.txt[]
-
-include::../section/doc/tactic-end-user/end-user/search-interface/index.txt[]
-
-include::../section/doc/tactic-end-user/end-user/importing-csv-data/index.txt[]
-
-include::../section/doc/tactic-end-user/end-user/clipboard/index.txt[]
 
 include::../section/doc/tactic-end-user/end-user/insert/index.txt[]
 
 include::../section/doc/tactic-end-user/end-user/note-sheet-widget/index.txt[]
 
-include::../section/doc/tactic-end-user/end-user/tactic-undo/index.txt[]
-
 include::../section/doc/tactic-end-user/end-user/tactic-sidebar/index.txt[]
-
-include::../section/doc/tactic-end-user/end-user/search-compound/index.txt[]
 
 include::../section/doc/tactic-end-user/end-user/gantt-widget/index.txt[]
 
