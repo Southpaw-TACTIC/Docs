@@ -1,6 +1,53 @@
 TACTIC End-User Documentation
 =============================
 
+
+:leveloffset: 0
+
+
+Introduction to TACTIC
+~~~~~~~~~~~~~~~~~~~~~~
+
+:leveloffset: 2
+
+include::../section/doc/tactic-end-user/end-user/setting-up-web-browser/index.txt[]
+
+include::../section/doc/tactic-end-user/end-user/interface-map/index.txt[]
+
+include::../section/doc/tactic-end-user/end-user/tactic-gear-menus/index.txt[]
+
+include::../section/doc/tactic-setup/setup/managing-sidebar/index.txt[]
+
+
+:leveloffset: 0
+
+
+Preferences
+~~~~~~~~~~~
+
+:leveloffset: 2
+
+include::../section/doc/tactic-end-user/end-user/change-your-password/index.txt[]
+
+
+:leveloffset: 0
+
+
+Interface Usage
+~~~~~~~~~~~~~~~
+
+:leveloffset: 2
+
+include::../section/glossary/tactic-glossary/general/insert/index.txt[]
+
+include::../section/doc/tactic-end-user/end-user/edit/index.txt[]
+
+include::../section/doc/tactic-end-user/end-user/delete-and-retire/index.txt[]
+
+include::../section/doc/tactic-end-user/end-user/create-and-edit-views/index.txt[]
+
+
+
 :leveloffset: 2
 
 include::../section/glossary/tactic-glossary/general/context/index.txt[]
@@ -42,8 +89,6 @@ include::../section/glossary/tactic-glossary/general/task/index.txt[]
 include::../section/glossary/tactic-glossary/general/notification/index.txt[]
 
 include::../section/glossary/tactic-glossary/general/trigger/index.txt[]
-
-include::../section/glossary/tactic-glossary/general/insert/index.txt[]
 
 include::../section/glossary/tactic-glossary/general/checkout/index.txt[]
 
@@ -130,8 +175,6 @@ include::../section/doc/tactic-setup/setup/configuration-workflow/index.txt[]
 include::../section/doc/tactic-setup/setup/link-element-wdg/index.txt[]
 
 include::../section/doc/tactic-setup/setup/general-checkin-wdg/index.txt[]
-
-include::../section/doc/tactic-setup/setup/managing-sidebar/index.txt[]
 
 include::../section/doc/tactic-setup/setup/install-and-activate/index.txt[]
 
@@ -299,23 +342,15 @@ include::../section/doc/tactic-end-user/end-user/internationalization/index.txt[
 
 include::../section/doc/tactic-end-user/end-user/creating-tasks/index.txt[]
 
-include::../section/doc/tactic-end-user/end-user/setting-up-web-browser/index.txt[]
-
 include::../section/doc/tactic-end-user/end-user/tracking-work-hours/index.txt[]
 
 include::../section/doc/tactic-end-user/end-user/general-checkin/index.txt[]
 
 include::../section/doc/tactic-end-user/end-user/charting/index.txt[]
 
-include::../section/doc/tactic-end-user/end-user/edit/index.txt[]
-
 include::../section/doc/tactic-end-user/end-user/tasks-quickstart/index.txt[]
 
-include::../section/doc/tactic-end-user/end-user/change-your-password/index.txt[]
-
 include::../section/doc/tactic-end-user/end-user/exporting-csv-data/index.txt[]
-
-include::../section/doc/tactic-end-user/end-user/interface-map/index.txt[]
 
 include::../section/doc/tactic-end-user/end-user/interface-map/media/index.txt[]
 
@@ -343,13 +378,7 @@ include::../section/doc/tactic-end-user/end-user/tactic-sidebar/index.txt[]
 
 include::../section/doc/tactic-end-user/end-user/search-compound/index.txt[]
 
-include::../section/doc/tactic-end-user/end-user/delete-and-retire/index.txt[]
-
 include::../section/doc/tactic-end-user/end-user/gantt-widget/index.txt[]
-
-include::../section/doc/tactic-end-user/end-user/create-and-edit-views/index.txt[]
-
-include::../section/doc/tactic-end-user/end-user/tactic-gear-menus/index.txt[]
 
 include::../section/doc/tactic-sys-admin/sys-admin/index.txt[]
 
