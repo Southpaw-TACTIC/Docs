@@ -15,6 +15,9 @@ include::../section/doc/tactic-developer/developer/architecture-overview/index.t
 
 include::../section/doc/tactic-developer/developer/tactic-script-editor/index.txt[]
 
+include::../section/doc/tactic-developer/developer/setting-up-dev-environment/index.txt[]
+
+
 :leveloffset: 0
 
 Client API
@@ -32,6 +35,11 @@ include::../section/doc/tactic-developer/developer/client-api-checkin/index.txt[
 
 include::../section/doc/tactic-developer/developer/client-api-dependency/index.txt[]
 
+include::../section/doc/tactic-developer/developer/custom-interfaces-in-tactic/index.txt[]
+
+include::../section/doc/tactic-developer/developer/client-api-performance/index.txt[]
+
+include::../section/doc/tactic-developer/developer/client-api-hierarchy/index.txt[]
 
 
 :leveloffset: 0
@@ -51,59 +59,78 @@ Custom Widgets
 
 :leveloffset: 2
 
-
-
-:leveloffset: 0
-
-Not Organizaed Yet
-~~~~~~~~~~~~~~~~~~
-
-:leveloffset: 2
-
-
-include::../section/doc/tactic-developer/developer/using-expressions-in-scripting/index.txt[]
-
-include::../section/doc/tactic-developer/developer/plugin-versions/index.txt[]
-
-include::../section/doc/tactic-developer/developer/tactic-checkin-process/index.txt[]
-
-
-
-
-include::../section/doc/tactic-developer/developer/custom-interfaces-in-tactic/index.txt[]
-
-
-include::../section/doc/tactic-developer/developer/setting-up-dev-environment/index.txt[]
-
-include::../section/doc/tactic-developer/developer/packaging-a-plugin/index.txt[]
-
-
-include::../section/doc/tactic-developer/developer/python-trigger-in-tactic-editor-guideline/index.txt[]
-
-include::../section/doc/tactic-developer/developer/naming-convention-classes/index.txt[]
-
-
-include::../section/doc/tactic-developer/developer/create-a-plugin/index.txt[]
-
-include::../section/doc/tactic-developer/developer/widget-development/index.txt[]
-
 include::../section/doc/tactic-developer/developer/custom-layout-editor/index.txt[]
 
-include::../section/doc/tactic-developer/developer/trigger/index.txt[]
-
-include::../section/doc/tactic-developer/developer/plugin-manager-interface/index.txt[]
-
-include::../section/doc/tactic-developer/developer/custom-checkin-pipeline/index.txt[]
-
-include::../section/doc/tactic-developer/developer/client-api-performance/index.txt[]
-
-
-include::../section/doc/tactic-developer/developer/setup-validation/index.txt[]
-
-include::../section/doc/tactic-developer/developer/client-api-hierarchy/index.txt[]
-
-
+include::../section/doc/tactic-developer/developer/widget-development/index.txt[]
 
 include::../section/doc/tactic-developer/developer/tactic-widgets/index.txt[]
 
 
+:leveloffset: 0
+
+Plugins
+~~~~~~~~~~~~~~
+
+:leveloffset: 2
+
+include::../section/doc/tactic-developer/developer/plugin-manager-interface/index.txt[]
+
+include::../section/doc/tactic-developer/developer/create-a-plugin/index.txt[]
+
+include::../section/doc/tactic-developer/developer/packaging-a-plugin/index.txt[]
+
+include::../section/doc/tactic-developer/developer/plugin-versions/index.txt[]
+
+
+:leveloffset: 0
+
+Expression Development
+~~~~~~~~~~~~~~~~~~
+
+:leveloffset: 2
+
+include::../section/doc/tactic-developer/developer/using-expressions-in-scripting/index.txt[]
+
+
+:leveloffset: 0
+
+Validation
+~~~~~~~~~~~~~~~~~~
+
+:leveloffset: 2
+
+include::../section/doc/tactic-developer/developer/setup-validation/index.txt[]
+
+
+:leveloffset: 0
+
+Triggers
+~~~~~~~~~~~~~~~~~~
+
+:leveloffset: 2
+
+include::../section/doc/tactic-developer/developer/python-trigger-in-tactic-editor-guideline/index.txt[]
+
+include::../section/doc/tactic-developer/developer/trigger/index.txt[]
+
+
+:leveloffset: 0
+
+Checkins
+~~~~~~~~~~~~~~~~~~
+
+:leveloffset: 2
+
+include::../section/doc/tactic-developer/developer/tactic-checkin-process/index.txt[]
+
+include::../section/doc/tactic-developer/developer/custom-checkin-pipeline/index.txt[]
+
+
+:leveloffset: 0
+
+Conventions
+~~~~~~~~~~~~~~~~~~
+
+:leveloffset: 2
+
+include::../section/doc/tactic-developer/developer/naming-convention-classes/index.txt[]
