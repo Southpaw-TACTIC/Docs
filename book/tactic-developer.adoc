@@ -69,7 +69,7 @@ include::../section/doc/tactic-developer/developer/tactic-widgets/index.txt[]
 :leveloffset: 0
 
 Plugins
-~~~~~~~~~~~~~~
+~~~~~~~
 
 :leveloffset: 2
 
@@ -85,7 +85,7 @@ include::../section/doc/tactic-developer/developer/plugin-versions/index.txt[]
 :leveloffset: 0
 
 Expression Development
-~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~
 
 :leveloffset: 2
 
@@ -95,7 +95,7 @@ include::../section/doc/tactic-developer/developer/using-expressions-in-scriptin
 :leveloffset: 0
 
 Validation
-~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~
 
 :leveloffset: 2
 
@@ -105,7 +105,7 @@ include::../section/doc/tactic-developer/developer/setup-validation/index.txt[]
 :leveloffset: 0
 
 Triggers
-~~~~~~~~~~~~~~~~~~
+~~~~~~~~
 
 :leveloffset: 2
 
@@ -117,7 +117,7 @@ include::../section/doc/tactic-developer/developer/trigger/index.txt[]
 :leveloffset: 0
 
 Checkins
-~~~~~~~~~~~~~~~~~~
+~~~~~~~~
 
 :leveloffset: 2
 
@@ -129,7 +129,7 @@ include::../section/doc/tactic-developer/developer/custom-checkin-pipeline/index
 :leveloffset: 0
 
 Conventions
-~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~
 
 :leveloffset: 2
 
