@@ -1,0 +1,39 @@
+TACTIC User Contribution Plugin
+===============================
+
+:leveloffset: 0
+
+TACTIC Plugin Startup
+~~~~~~~~~~~~~~~~~~~~~
+
+:leveloffset: 2
+
+include::../section/plugin/adobe-photoshop/general/setup/index.txt[]
+
+include::../section/plugin/adobe-photoshop/general/usage/adobe-photoshop_general_usage/index.txt[]
+
+include::../section/plugin/adobe-photoshop/general/usage/usage/index.txt[]
+
+include::../section/plugin/iridas-framecycler/general/setup/setup/index.txt[]
+
+include::../section/plugin/iridas-framecycler/general/setup/iridas-framecycler_general_setup/index.txt[]
+
+include::../section/plugin/iridas-framecycler/general/usage/iridas-framecycler_general_usage/index.txt[]
+
+include::../section/plugin/iridas-framecycler/general/usage/usage/index.txt[]
+
+include::../section/plugin/foundry-nuke/general/setup/foundry-nuke_general_setup/index.txt[]
+
+include::../section/plugin/foundry-nuke/general/setup/setup/index.txt[]
+
+include::../section/plugin/foundry-nuke/general/usage/foundry-nuke_general_usage/index.txt[]
+
+include::../section/plugin/foundry-nuke/general/usage/usage/index.txt[]
+
+include::../section/plugin/cg-toolset/setup/cg-toolset-install/index.txt[]
+
+include::../section/plugin/cg-toolset/general/cg-toolset-introduction/index.txt[]
+
+include::../section/plugin/cg-toolset/end-user/asset-checkin/index.txt[]
+
+include::../section/plugin/cg-toolset/end-user/asset-loader/index.txt[]

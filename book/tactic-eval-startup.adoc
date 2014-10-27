@@ -1,0 +1,25 @@
+TACTIC Evaluation Startup
+=========================
+
+:leveloffset: 0
+
+TACTIC Evaluation Startup
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+:leveloffset: 2
+
+include::../section/guide/tactic-eval-startup/general/tactic-demo-logins/index.txt[]
+
+include::../section/guide/tactic-eval-startup/general/demo-projects/index.txt[]
+
+include::../section/guide/tactic-eval-startup/general/tactic-community/index.txt[]
+
+include::../section/guide/tactic-eval-startup/general/tactic-demo-server/index.txt[]
+
+include::../section/guide/tactic-eval-startup/general/evaluation-paperwork/index.txt[]
+
+include::../section/guide/tactic-eval-startup/general/tactic-license/index.txt[]
+
+include::../section/guide/tactic-eval-startup/general/introduction/index.txt[]
+
+include::../section/guide/ticketing-startup/general/ticketing-startup/index.txt[]

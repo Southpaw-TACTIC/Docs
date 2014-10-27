@@ -1,0 +1,76 @@
+TACTIC Quickstart Documentation
+===============================
+
+:leveloffset: 0
+
+TACTIC Startup
+~~~~~~~~~~~~~~
+
+:leveloffset: 2
+
+include::../section/doc/tactic-end-user/end-user/interface-map/media/index.txt[]
+
+
+
+:leveloffset: 0
+
+Views
+~~~~~
+
+:leveloffset: 2
+
+include::../section/doc/tactic-quickstart/quickstart/what-are-views/index.txt[]
+
+include::../section/doc/tactic-quickstart/quickstart/views-quickstart/index.txt[]
+
+
+
+:leveloffset: 0
+
+Search
+~~~~~~
+
+:leveloffset: 2
+
+include::../section/doc/tactic-quickstart/quickstart/what-is-searching/index.txt[]
+
+include::../section/doc/tactic-quickstart/quickstart/search-quickstart/index.txt[]
+
+
+
+:leveloffset: 0
+
+Tasks
+~~~~~
+
+:leveloffset: 2
+
+include::../section/doc/tactic-quickstart/quickstart/what-are-tasks/index.txt[]
+
+include::../section/doc/tactic-quickstart/quickstart/tasks-quickstart/index.txt[]
+
+
+
+:leveloffset: 0
+
+Notes
+~~~~~
+
+:leveloffset: 2
+
+include::../section/doc/tactic-quickstart/quickstart/what-are-notes/index.txt[]
+
+include::../section/doc/tactic-quickstart/quickstart/notes-quickstart/index.txt[]
+
+
+
+:leveloffset: 0
+
+Check-in and Check-out
+~~~~~~~~~~~~~~~~~~~~~~
+
+:leveloffset: 2
+
+include::../section/doc/tactic-quickstart/quickstart/checkin-quickstart/index.txt[]
+
+include::../section/doc/tactic-quickstart/quickstart/what-are-checkins/index.txt[]

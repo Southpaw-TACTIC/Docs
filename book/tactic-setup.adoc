@@ -58,7 +58,6 @@ include::../section/doc/tactic-setup/setup/group-assignment/index.txt[]
 
 
 
-
 :leveloffset: 0
 
 User and Group Security
@@ -68,6 +67,7 @@ User and Group Security
 
 include::../section/doc/tactic-setup/setup/manage-security/index.txt[]
 
+include::../section/doc/tactic-setup/setup/project-startup-manage-security/index.txt[]
 
 
 :leveloffset: 0
@@ -81,7 +81,6 @@ include::../section/doc/tactic-setup/setup/project-startup-dashboards/index.txt[
 
 
 
-
 :leveloffset: 0
 
 Reports
@@ -90,8 +89,6 @@ Reports
 :leveloffset: 2
 
 include::../section/doc/tactic-setup/setup/project-startup-reports/index.txt[]
-
-
 
 
 :leveloffset: 0
@@ -182,7 +179,6 @@ include::../section/doc/tactic-setup/setup/project-workflow-introduction/index.t
 
 
 
-
 :leveloffset: 0
 
 Settings
@@ -191,7 +187,6 @@ Settings
 :leveloffset: 2
 
 include::../section/doc/tactic-setup/setup/modify-project-settings/index.txt[]
-
 
 
 
@@ -225,7 +220,6 @@ include::../section/doc/tactic-setup/setup/project-automation-notifications/inde
 
 include::../section/doc/tactic-setup/setup/advanced-notification-setup/index.txt[]
 
-
 -include::../section/doc/tactic-setup/setup/advanced-event-usage/index.txt[]
 
 -include::../section/doc/tactic-setup/setup/advanced-trigger-setup/index.txt[]
@@ -233,8 +227,6 @@ include::../section/doc/tactic-setup/setup/advanced-notification-setup/index.txt
 -include::../section/doc/tactic-setup/setup/advanced-file-naming-setup/index.txt[]
 
 -include::../section/doc/tactic-setup/setup/versionless-checkin/index.txt[]
-
-
 
 
 
@@ -259,7 +251,6 @@ Debugging TACTIC
 ~~~~~~~~~~~~~~~~
 
 :leveloffset: 2
-
 
 include::../section/doc/tactic-setup/setup/exception-log/index.txt[]
 
@@ -287,145 +278,115 @@ include::../section/doc/tactic-setup/setup/format-element-wdg/index.txt[]
 include::../section/doc/tactic-setup/setup/expression-element-wdg/index.txt[]
 
 
+:leveloffset: 2
+
+Edit Widgets
+~~~~~~~~~~~~
+
+:leveloffset: 3
+
+include::../section/doc/tactic-setup/setup/select-wdg/index.txt[]
+
+include::../section/doc/tactic-setup/setup/text-area-wdg/index.txt[]
+
+include::../section/doc/tactic-setup/setup/calendar-wdg/index.txt[]
 
 
-
-
-
-
-
-:leveloffset: 0
-
-Error
-~~~~~
 
 :leveloffset: 2
 
+Common Widgets
+~~~~~~~~~~~~~~
 
+:leveloffset: 3
 
+include::../section/doc/tactic-setup/setup/task-completion-wdg/index.txt[]
 
+include::../section/doc/tactic-setup/setup/explorer-table-element-wdg/index.txt[]
 
+include::../section/doc/tactic-setup/setup/general-checkin-wdg/index.txt[]
 
-:leveloffset: 0
+include::../section/doc/tactic-setup/setup/sobject-checkin-history-wdg/index.txt[]
 
-Not yet handled
-~~~~~~~~~~~~~~~
+include::../section/doc/tactic-setup/setup/note-sheet-wdg/index.txt[]
+
+include::../section/doc/tactic-setup/setup/task-edit-wdg/index.txt[]
+
+include::../section/doc/tactic-setup/setup/task-schedule-wdg/index.txt[]
+
+include::../section/doc/tactic-setup/setup/task-status-history-wdg/index.txt[]
+
+include::../section/doc/tactic-setup/setup/work-hours-element-wdg/index.txt[]
+
+include::../section/doc/tactic-setup/setup/simple-upload-wdg/index.txt[]
+
 
 :leveloffset: 2
 
+Layout Widgets
+~~~~~~~~~~~~~~
+
+:leveloffset: 3
+
+include::../section/doc/tactic-setup/setup/view-panel-wdg/index.txt[]
 
 include::../section/doc/tactic-setup/setup/custom-layout-wdg/index.txt[]
 
+include::../section/doc/tactic-setup/setup/table-layout-wdg/index.txt[]
 
+:leveloffset: 2
 
+Simple Search Widgets
+~~~~~~~~~~~~~~~~~~~~~
 
-include::../section/doc/tactic-setup/setup/project-startup-manage-security/index.txt[]
+:leveloffset: 3
 
+include::../section/doc/tactic-setup/setup/select-filter-element-widget/index.txt[]
 
 include::../section/doc/tactic-setup/setup/task-element-wdg/index.txt[]
 
 include::../section/doc/tactic-setup/setup/link-element-wdg/index.txt[]
 
-include::../section/doc/tactic-setup/setup/general-checkin-wdg/index.txt[]
-
-
-
 include::../section/doc/tactic-setup/setup/submit-support-ticket/index.txt[]
-
-
-include::../section/doc/tactic-setup/setup/task-completion-wdg/index.txt[]
-
-
-
-include::../section/doc/tactic-setup/setup/note-sheet-wdg/index.txt[]
-
-
 
 include::../section/doc/tactic-setup/setup/work-element-wdg/index.txt[]
 
-include::../section/doc/tactic-setup/setup/sobject-checkin-history-wdg/index.txt[]
 
 
+:leveloffset: 0
 
+Misc
+~~~~
 
-include::../section/doc/tactic-setup/setup/select-wdg/index.txt[]
-
-include::../section/doc/tactic-setup/setup/task-edit-wdg/index.txt[]
-
+:leveloffset: 2
 
 include::../section/doc/tactic-setup/setup/setup/index.txt[]
 
-
-
-
 include::../section/doc/tactic-setup/setup/text-wdg/index.txt[]
 
-
-
+include::../section/doc/tactic-setup/setup/stype-connect/index.txt[]
 
 include::../section/doc/tactic-setup/setup/search/index.txt[]
 
-
 include::../section/doc/tactic-setup/setup/discussion-wdg/index.txt[]
-
 
 include::../section/doc/tactic-setup/setup/thumb-wdg/index.txt[]
 
-
 include::../section/doc/tactic-setup/setup/hidden-row-toggle-wdg/index.txt[]
-
-
-
-include::../section/doc/tactic-setup/setup/view-panel-wdg/index.txt[]
-
-include::../section/doc/tactic-setup/setup/calendar-wdg/index.txt[]
-
-
-include::../section/doc/tactic-setup/setup/task-schedule-wdg/index.txt[]
-
-
-
 
 include::../section/doc/tactic-setup/setup/custom-url-configuration/index.txt[]
 
-include::../section/doc/tactic-setup/setup/simple-upload-wdg/index.txt[]
+include::../section/doc/tactic-setup/setup/edit-layout-wdg/index.txt[]
 
 include::../section/doc/tactic-setup/setup/table-layout-wdg/index.txt[]
 
-include::../section/doc/tactic-setup/setup/edit-layout-wdg/index.txt[]
-
-
 include::../section/doc/tactic-setup/setup/sobject-detail-wdg/index.txt[]
-
-include::../section/doc/tactic-setup/setup/gantt-wdg/index.txt[]
 
 include::../section/doc/tactic-setup/setup/built-in-plugins/index.txt[]
 
-
-include::../section/doc/tactic-setup/setup/work-hours-element-wdg/index.txt[]
-
-include::../section/doc/tactic-setup/setup/select-filter-element-widget/index.txt[]
-
-include::../section/doc/tactic-setup/setup/text-area-wdg/index.txt[]
-
-
-
-include::../section/doc/tactic-setup/setup/explorer-table-element-wdg/index.txt[]
-
 include::../section/doc/tactic-setup/setup/drop-element-wdg/index.txt[]
 
-
-
-
-
 include::../section/doc/tactic-setup/setup/introduction/index.txt[]
-
-
-include::../section/doc/tactic-setup/setup/task-status-history-wdg/index.txt[]
-
-
-
-
 
 include::../section/doc/tactic-setup/setup/wdg/index.txt[]
 
@@ -433,4 +394,4 @@ include::../section/doc/tactic-setup/setup/managing-access-rules/index.txt[]
 
 include::../section/doc/tactic-setup/setup/expression-value-element-wdg/index.txt[]
 
-
+include::../section/doc/tactic-setup/setup/gantt-wdg/index.txt[]
