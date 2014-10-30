@@ -134,7 +134,7 @@ drop down selection box at the top, add a new search filter, click on
 the word "and" that appears between the search filters to toggle it to
 "or".
 
-The "Is Distinct" Operator
+*The "Is Distinct" Operator*
 
 This operator filters out items with the same column value. ie. The
 results will only contain items that have a distinct entry in that

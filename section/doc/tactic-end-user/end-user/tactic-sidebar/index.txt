@@ -17,11 +17,19 @@ dynamic report based on the definition of the search.
 The sidebar is divided into three different categories, "Project Views",
 "My Views" and "Admin Views".
 
-[width="100%",cols="20%,80%",]
+[width="100%",cols="20%,80%",valign="middle"]
 |=======================================================================
 |image:media/3_tactic_sidebar_project_view.png[image]
-|[multiblock cell omitted]
+|The *Project Views* provides a way to save project wide views that 
+everyone across the entire project would want to see. It also has a 
+manageable list of custom user views. The *Project Views* can be defined
+by the person in the role of the project manager. Views can also be 
+hidden from specific user groups. *My View* contains a list of links 
+to views that were created by the login user themselves. These usually
+are created by the user to cater to their own personal work flow.
 |=======================================================================
+
+*Admin Views*
 
 *Admin Views* displays the project schema and the TACTIC system and
 administration schemas. Access to the Admin Views section of the sidebar
@@ -41,15 +49,15 @@ Color Palette, Language, Quick Text for Note Sheet Thumbnail Size
 |=======================================================================
 
 You can add any view to the sidebar very easily. If you have a view open
-in a tab, you can simply right click on the tab and select “Add to Side
-Bar”. This will add the link to the sidebar under the Project Views.
+in a tab, you can simply right click on the tab and select ``Add to Side
+Bar''. This will add the link to the sidebar under the Project Views.
 This will allow you to customize the sidebar and let you quickly open
 your important views which you use regularly.
 
 image:media/11_tactic_sidebar_adding.png[image]
 
-Now, “My Dashboard” will be a link in the sidebar which takes you to
+Now, ``My Dashboard'' will be a link in the sidebar which takes you to
 this view. You can just as easily remove this link from the sidebar by
-right clicking on the link and selecting “Remove Link”.
+right clicking on the link and selecting ``Remove Link''.
 
 image:media/12_tactic_sidebar_removing.png[image]

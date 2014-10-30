@@ -1,10 +1,14 @@
 Delete and Retire
 -----------------
 
+*Introduction*
+
 TACTIC provides many ways to delete and retire items directly from the
 view. Retiring is TACTIC's way of marking an item so that it does not
 appear in any searches, but allows the user to bring it back if
 necessary. The methods to delete and retire an item are described below.
+
+*Deleting from the Context Menu*
 
 To delete an item from the view, first put a check mark in the box next
 to the item you want deleted. Then, right click anywhere on the row to
@@ -12,6 +16,8 @@ bring up the context menu. Selecting the "Delete" option will delete the
 object from the view and from the database.
 
 image:media/delete_context_menu.png[image]
+
+*Deleting from the Gear Menu*
 
 Alternatively, the gear menu can be used to delete an item from a view.
 
@@ -31,15 +37,23 @@ ________________________________________________________________________________
 
 image:media/undo_last_transaction.png[image]
 
+*Retiring from the Context Menu*
+
 To mark an item as "Retired", first put a check mark in the box next to
 the item. Then, right click anywhere on the row to bring up the context
 menu. Selecting the "Retire" option will mark the object as retired and
 filter it out from the view.
 
-note: Items will still exist and can be brought back. The next section
+________________________________________________________________
+*Note*
+
+Items will still exist and can be brought back. The next section
 will shows how to view items that have been marked as "Retired".
+________________________________________________________________
 
 image:media/retire_context_menu.png[image]
+
+*Retiring from the Gear Menu*
 
 To retire an item from the view using the gear menu:
 
@@ -56,6 +70,8 @@ shows how to view items that have been marked as "Retired".
 ____________________________________________________________________________________________________________________________________
 
 image:media/delete_gear_menu.png[image]
+
+*Showing Retired Items*
 
 When an item is "retired", it has simply been marked as "retired" in the
 database. The item still exists in the database and can be brought back.

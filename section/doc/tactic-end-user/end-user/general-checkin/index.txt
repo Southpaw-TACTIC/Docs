@@ -1,6 +1,8 @@
 General Check-in
 ----------------
 
+*Introduction*
+
 The General Check-in widget provides interface to do many of the most
 common kinds of check-ins used in TACTIC. It is a highly configurable
 widget that allows a project to have customized check-ins for any part
@@ -20,10 +22,14 @@ The general check-in widget can handle:
 * *Complex packages* - Handling of a project source including project
 and source medial files.
 
+*Interface*
+
 The interface below shows a standard example of the General Check-in
 widget.
 
 image:media/checkin_widget_full.png[image]
+
+*Tool bar*
 
 The tool bar contains a number of use functions.
 
@@ -55,8 +61,9 @@ the section "Check-out" below_
 This allows for the quick copying and pasting files into your sandbox
 workspace.
 
-|[multiblock cell omitted] |[multiblock cell omitted]
 |=======================================================================
+
+*Process Select*
 
 Check-ins for an item are always classified by a processes. TACTIC
 organizes all of the check-ins with various processes that are defined
@@ -74,6 +81,8 @@ Often this selection will be locked because it is associated with an
 assigned task. A user will often work from a task also associated within
 a particular process and then choose to check in files based on content
 created from this task.
+
+*Sandbox Area*
 
 image:media/checkin_sandbox.png[image]
 
@@ -146,6 +155,8 @@ including all past check in information. An example is shown below:
 
 image:media/checkin_file_properties.png[image]
 
+*Check-In*
+
 When any files are ready to be checked in, they can be selected. The row
 will highlight for all selected files, and either a selection list, or a
 text box will appear on the right side. Since many files can be checked
@@ -166,6 +177,8 @@ transferred to TACTIC's repository. There are a number of ways that the
 files can be configured to transfer files. When TACTIC checks in a file,
 it will move them to the correct folder, version and rename them to the
 correct file name as specified for the naming conventions.
+
+*Check-in Subcontext types*
 
 When checking in, a drop-down is available beside each file or
 directory. This functionality allows control over how each check-in will
@@ -246,12 +259,14 @@ and file version control can also be configured through naming
 conventions.
 ____________________________________________________________________________________________________________________________________________________________________________________________________________________________
 
+*Check-out*
+
 When working on a particular task that is part of a pipeline, files may
 need to be checked out or "downloaded" to be worked on or revised.
 TACTIC assists with this process and allows easy access to retrieving
 the right files/directories from the TACTIC server.
 
-*Check-out options menu*
+*Check-out Options*
 
 image:media/checkout_options.png[image]
 
@@ -272,6 +287,8 @@ contexts using the repository names as seen in the TACTIC repo.
 the latest versionless of different contexts using the the versionless
 convention as seen in the TACTIC repo.
 |=======================================================================
+
+*History*
 
 This area shows the check-in history. By default, this information is
 collapsed but can be accessed by clicking on Check-in history.

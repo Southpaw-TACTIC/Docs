@@ -28,6 +28,8 @@ Other export options include
 Next, select the columns to export from the selection list and click the
 *Export Selected* button.
 
+image:media/3_exporting_csv_select_columns.png[image]
+
 __________________________________________________________________________________________________________________________________________________________________
 *Note*
 
