@@ -3,6 +3,8 @@ Custom Layout Editor
 
 image:media/custom_layout_editor_overview.png[image]
 
+*What the Custom Layout Editor Provides*
+
 The Custom Layout Editor allows you to have complete control over the
 look and feel of TACTIC using many of the standard web technologies
 (HTML, CSS and Javascript). With this tool, you can build your own
@@ -10,8 +12,12 @@ TACTIC components (called widgets) that have the ability to interact
 with one another intelligently, making it easier for you to design your
 very own TACTIC interface.
 
+*HTML*
+
 Custom Layouts enable the laying out of custom widgets using standard
 HTML.
+
+*Element Tag*
 
 TACTIC Custom Layout introduces a new html tag <element> which lets
 TACTIC widgets to be embedded into HTML.
@@ -40,6 +46,8 @@ a top level view that draws from other views.
 
 For display class names of other widgets, see section on Common Widgets.
 
+*Styles*
+
 You can create styles for each view in the Styles tab. However, most of
 the time it will be useful to reference a central stylesheet for a
 number of views.
@@ -54,6 +62,8 @@ line to the HTML of a view where you want the styles to appear.
 -------------------------------
 <element view='common/styles'/>
 -------------------------------
+
+*Behaviors*
 
 TACTIC's behavior system makes use of standard JavaScript behaviors with
 the added functionality of some built-in classes.
@@ -146,6 +156,8 @@ Close a popup:
 spt.popup.close(popup_element) 
 -------------------------------
 
+*Options*
+
 The Custom Layout Editor's Options tab incorporates the administrative
 ability of modifying column, theme, view and table definitions with the
 ability of creating these widgets. Various views, themes, columns and
@@ -211,11 +223,15 @@ _Option Tab Custom Option Examples_
     }
 ---------------------------------------------------------------------------------------------------------------------------------------------------------
 
+*Images*
+
 Images can be checked into TACTIC and used in interface design. In the
 Files tab, you can check in images using the Check-in wizard.
 
 Once the file is checked in, you use the web path as the URL of the
 image.
+
+*Python*
 
 TACTIC integrates the efficiency of Python in a Custom Layout Editor
 tab, functioning together seamlessly with HTML, CSS and JavaScript. As
@@ -263,6 +279,8 @@ the following section. The dedicated Python tab is an implicit
 integration of Mako. Both Mako and the Python tab essentially use Mako
 templating, while both providing equivalent Python utility and
 efficiency.
+
+*Mako*
 
 The custom layout engine embeds the Mako, a powerful templating engine
 which allows you to embed Python scripts and logic within HTML. In order
@@ -316,6 +334,8 @@ Most of the time, it will be beneficial to use Mako to pass search keys
 from one view to another. That's covered in a bit more detail in the
 Creating Forms section of this document.
 
+*Injecting Widgets*
+
 You can inject your custom widgets or TACTIC built-in widgets into your
 view through the user interface. You can do it through the gear menu:
 
@@ -359,6 +379,8 @@ which comes with the input field.
 
 *Inject Subscription* injects a Subscription Bar Widget into your HTML.
 
+*Adding View to sidebar*
+
 image:media/custom_layout_editor_sidebar.png[image]
 
 You can add the view you have created directly to the sidebar. To do
@@ -369,6 +391,8 @@ treated as a space. For example, “app/chart” will be named “App Chart”.
 You can always rename these views in the sidebar by right clicking on
 them and selecting “Edit Side Bar”. Now select the view you want to edit
 and change the Title field.
+
+*Creating URLs*
 
 When you startup tactic and go to the main project URL
 (…/tactic/<project_name>), you are presented with the tactic homepage of
@@ -390,6 +414,8 @@ the view that was open in the custom layout editor. You can check all
 your custom URLs by going to the gear menu and selecting “Show Custom
 URLs”. This will show all the existing custom URLs. This is where you
 can delete existing custom URLs.
+
+*Creating Forms*
 
 Forms provide an interface for updating TACTIC data. The Custom Layout
 Editor makes the creation of forms easy with built-in widgets and
@@ -479,6 +505,8 @@ JavaScript:
   server.update(search_key, data) ''' 
 }
 -----------------------------------------------------------------------------------
+
+*Testing Interface*
 
 You can customize your views to behave during a testing phase. To do
 this, you can add a condition in your code to check whether the code is
@@ -585,7 +613,9 @@ down menu on the dashboard icon and selecting "Show Definition", the
 definition can be copied and pasted in the Custom Layout Editor and
 modified to the desired appearance.
 
-*Handling None:*
+*Tips and Techniques:*
+
+*Handling None*
 
 The default value for the empty string in Python is the word "None".
 This does not help very much when you want to obtain something like the
@@ -600,7 +630,7 @@ kwargs.get function.
 ie: kwargs.get("search_key") or "" 
 -----------------------------------
 
-*Embed Elements:*
+*Embed Elements*
 
 A shortcut for embedding elements into the HTML is by clicking on the
 gear menu.
@@ -608,7 +638,7 @@ gear menu.
 Similarly, if you would like to inject another view into your current
 view, you can do so by right clicking on the view you want to inject.
 
-*Element Name as Column of sObject:*
+*Element Name as Column of sObject*
 
 If you pass a search key into an element, it automatically takes the
 element name as the column if you do not specify one. In the example

@@ -31,6 +31,8 @@ In summary, widgets make use of the Search, get SObjects, and use
 commands to change persistent data. The sObject communication unit binds
 the view layer with the data model.
 
+*Main Data Objects*
+
 SObjects (searchable objects) are atomic, self-contained units that
 contain attributes. A particular sObject can be uniquely identified by
 two parameters: a search type and a search ID. Often these two
@@ -44,6 +46,8 @@ enough to allow arbitrary bits of SQL code to be used for a search,
 although that approach is discouraged. (To maximize code reuse, it is
 better to put SQL code inside the low-level business objects that
 provide static functions to higher level parts of the framework.)
+
+*Widgets*
 
 Widgets are the atomic drawing units. Typically, widgets are
 SObject-aware and can perform and affect searches and draw SObjects.
@@ -116,6 +120,8 @@ Specialized widgets must be created to serve specific functions: for
 example, checkin/checkout widgets, download widgets, upload widgets, and
 navigation widgets.
 
+*Persistent Store*
+
 All metadata is stored in an industry-standard SQL database. The
 database tables and rows are clearly marked and readable, so it is easy
 to access the data directly. In today's fast-changing environment, it is
@@ -129,6 +135,8 @@ is represented by a row in the table of a database. The table defines
 the type of SObjects stored in it, and there is usually a one-to-one
 relationship between the attributes of each sObject and the columns in
 the database.
+
+*Directory and File Naming Conventions*
 
 It is just as critical to be able to navigate the filesystem and
 understand what is located there. Therefore, advanced naming conventions

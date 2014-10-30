@@ -1,6 +1,8 @@
 Create a Plugin
 ---------------
 
+*What is a technical description of a TACTIC plugin?*
+
 A plugin is a self-contained package of files that TACTIC can make use
 of to extend the base functionality. Virtually any functionality in
 TACTIC can be made into a plugin.
@@ -13,6 +15,8 @@ A plugin can contain:
 * css files
 * documentation
 * python files
+
+*manifest.xml file*
 
 The manifest file is a description of the entries in the database that
 are owned by the plugin. This allows the plugin manager to extract the
@@ -40,7 +44,9 @@ exporter to ignore
 config/widget_config search type has the attribute:
 ** view
 
-.spt files are database files that contain database schema structure and
+*.spt files*
+
+".spt" files are database files that contain database schema structure and
 database data. These files enable TACTIC to read and write database data
 that is both platform and database independent. This abstractions allows
 TACTIC plugins to be used on any supported TACTIC platform. An important
@@ -50,6 +56,8 @@ can be easily diff’ed using standard software tools so that the code
 produced can show proper diffs using any source code management system
 (such as Perforce, SVN or Git). This is essential for collaborative work
 building plugins to delivery to a 3rd party.
+
+*Creating the Plugin*
 
 Once you are in the plugin manager, you can the New button which creates
 a new plugin outline. Afterwards, you can start filling in the details
@@ -72,6 +80,8 @@ After customizing the plugin to your needs, you can now package the
 plugin to perhaps upload to the community site so others can use it.
 Documentation on packaging can be found in this section under Packaging
 a Plugin.
+
+*Best Practices*
 
 Widget config tables should not include code or id columns or they must
 be explicitly set to values that are guaranteed to be unique on any

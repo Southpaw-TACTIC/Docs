@@ -1,6 +1,8 @@
 Snapshot Dependency
 -------------------
 
+*Types of dependencies*
+
 Snapshots control versioning in TACTIC. When processing a checkin,
 TACTIC creates a snapshot that contains an XML description of what was
 checked in. Snapshots can also be dependent on any number of other
@@ -13,6 +15,8 @@ There are two types of dependencies:
 * hierarchical: The given snapshot contains the referenced snapshot
 * input: The given snapshot used or was created from a referenced
 snapshot (but does not contain the contents of that snapshot)
+
+*Connecting snapshots*
 
 Dependencies are connected using the add_dependency_by_code() method,
 which takes an existing snapshot and adds the appropriate reference tag
@@ -66,6 +70,8 @@ snapshot = server.add_dependency(snapshot_code, file_path)
 
 This method will attempt to link the filename with the appropriate
 snapshot.
+
+*Input references*
 
 As opposed to the previous example of hierarchical references, there is
 a second type of dependency called an input reference. Input references
