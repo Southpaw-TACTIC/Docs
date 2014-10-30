@@ -21,6 +21,7 @@ categorize benchmark dates for a project.
 a user, it appears in their My Tasks View.
 +
 image:media/mytasks.png[image]
+
 * Tasks can be associated to a specific time-line. The "Bid start date"
 and the "Bid end date" column displays when the user is scheduled to
 work on a task, and when it is scheduled to be complete.

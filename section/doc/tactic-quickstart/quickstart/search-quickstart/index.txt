@@ -30,12 +30,14 @@ following criteria;
 Filter -> "Asset Category" "is" "video"
 +
 image:media/search-quickstart_asset-category-is-video.png[image]
+
 2.  To Search for all assets with an asset category of; 'video', '3d',
 and 'document', enter the following;
 +
 Filter -> "Asset Category", "in", "video|3d|document"
 +
 image:media/search-quickstart_asset-category-in.png[image]
+
 3.  To search all assets described in example 2 and also include tasks
 that are approved, enter the following;
 +
@@ -44,12 +46,14 @@ Filter -> "Asset Category", "in", "video|3d|document"
 Children -> "Task", "Status", "is", "Approved"
 +
 image:media/search-quickstart_asset-category-and-task-status.png[image]
+
 4.  To find all tasks assigned to the user currently logged in, a simple
 expression can be used;
 +
 Children -> "Task", "Assigned", "is", "\{$LOGIN}"
 +
 image:media/search-quickstart_task-assigned-login.png[image]
+
 5.  To find all assets with a category of 'video' and keyword of 'car'
 or a code that contains 'car';
 +
@@ -66,6 +70,7 @@ Filter -> "Keywords", "contains", "car"
 Filter - > "Code", "contains", "car"
 +
 image:media/search-quickstart_compound-search.png[image]
+
 6.  To execute complex searches using an expression to find all assets
 which have check-ins with versions higher than 1;
 +

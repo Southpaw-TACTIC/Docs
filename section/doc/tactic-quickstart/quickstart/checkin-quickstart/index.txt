@@ -16,11 +16,13 @@ ________________________________________________________________________________
 Preview Image"
 +
 image:media/checkin-quickstart_change-preview-image.png[image]
+
 3.  This will load a file browser where you can choose a preview image
 to check-in. Once the file has been uploaded, the preview thumbnail will
 automatically update.
 +
 image:media/checkin-quickstart_thumbnail.png[image]
+
 4.  To view where the files were placed, expand the *History* column.
 +
 _________________________________________________________________________________________________________________________________________________
@@ -32,6 +34,7 @@ menu.
 
 image:media/checkin-quickstart_check-in-layout.png[image]
 _________________________________________________________________________________________________________________________________________________
+
 5.  Look for your *"icon"* check-in. This is the snapshot entry where
 you will see the check-in information (version, login, process,
 timestamp etc)

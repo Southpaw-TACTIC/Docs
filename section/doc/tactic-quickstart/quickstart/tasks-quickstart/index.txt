@@ -8,10 +8,12 @@ it.
 1.  Load any view of items you wish to track tasks for.
 +
 image:media/tasks-quickstart_asset-list.png[image]
+
 2.  If the task status edit column is not in your view, you can add it
 with the column manager or switch the Layout to "Task Schedule"
 +
 image:media/tasks-quickstart_layout-change.png[image]
+
 3.  If no tasks exist, click the (+) icon in the task status edit
 column. Another option is to select the items and choose Tasks -> Add
 Tasks to Selected from the Gear Menu. Both approaches will load the task
