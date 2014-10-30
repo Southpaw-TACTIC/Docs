@@ -20,7 +20,7 @@ As of TACTIC 4.1, the Custom Layout Editor supports asynchronous loading
 of views. Element tags now support a 'load' attribute, with three
 options.
 
-[width="100%",cols="16%,84%",options="header",]
+[width="100%",cols="16%,84%",options="header"]
 |=======================================================================
 |Option |Description
 |inline (default) |Load the element with its parent custom layout.

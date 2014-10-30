@@ -1,6 +1,8 @@
 Navigating Search Type Hierarchy
 --------------------------------
 
+*Hierarchies*
+
 Each project in TACTIC contains a collection of search types. The schema
 defines how these search types are related to each other. There is a
 wide variety of possible ways that two search types can be related to
@@ -31,6 +33,8 @@ to keep things organized a project schema is used to define which
 search_types can be related to other search_types and in which ways. In
 other words, TACTIC uses the schema definition for the project to
 abstract relationships and make them easier to understand.
+
+*Methods*
 
 *get_parent()*
 

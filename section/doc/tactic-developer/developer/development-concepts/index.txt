@@ -1,11 +1,15 @@
 Development Concepts
 --------------------
 
+*Introduction*
+
 The term "asset" is used often, and has many different meanings in
 different industries and even in different areas of the same production
 facility. In TACTIC, an asset is an _atomic entity_ with metadata and
 files associated with it. To avoid confusion, the TACTIC assets are
 called "searchable objects," shortened to _sObjects_.
+
+*sObjects*
 
 sObjects are the atomic entities (or assets) that TACTIC uses to
 manipulate data and check in files. An sObject can be any entity

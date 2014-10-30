@@ -1,9 +1,13 @@
 Client API Setup
 ----------------
 
+*Important Note*
+
 Visit the Southpaw support site for more examples and tutorials on the
 API and its usage. The Support site is the place to go for wikis,
 forums, examples, and more.
+
+*Setup*
 
 The easiest way to interact with the server from the client using the
 Client API is to use the provided server stub code. This code includes a
@@ -26,6 +30,8 @@ PYTHONPATH environment variable on client machines so that it can be
 found by the scripts. For instance, if PYTHONPATH = L:/custom_python.
 you would put the client folder in L:/custom_python. Please refer to the
 Python documentation for more information.
+
+*Settings*
 
 There are three important parameters for setting up the TacticServerStub
 to connect correctly :

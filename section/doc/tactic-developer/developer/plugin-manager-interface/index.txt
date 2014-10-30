@@ -3,6 +3,8 @@ Plugin Manager interface
 
 image:media/0_plugins_overview.png[image]
 
+*Plugin Manager*
+
 The plugin Manager View is where you will be managing all your plugins.
 From this view, you can create a plugin, fully install a plugin, and
 modify existing plugins. You can find all your installed plugins in the

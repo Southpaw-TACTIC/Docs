@@ -105,6 +105,8 @@ For information on the Client API, refer to the link:#clientAPI[*Client
 API Documentation*]
 ___________________________________________________________________________________________
 
+*Process Handlers*
+
 A process handler is a function or subroutine that contains commands
 that are executed in response to an event. In TACTIC, all handlers are
 derived from the Handler class. This class defines a simple interface
@@ -146,6 +148,8 @@ which become the input values for the next node. You can set output
 information using the method:
 +
 `set_output_value(my, key)`
+
+*Example*
 
 The following sample is simple validation handler code that checks a
 Maya session for the existence of a particular node through its search
