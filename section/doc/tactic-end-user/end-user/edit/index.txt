@@ -1,7 +1,11 @@
 Edit
 ----
 
+*Introduction*
+
 The following describes how to edit the data in various views of TACTIC.
+
+*Editing Using a Form*
 
 To edit a row of data, right click anywhere on the row and select "Edit"
 from the context menu.
@@ -12,6 +16,8 @@ A form pop-up to edit the data will appear. The description on the left
 side indicates what data to enter into the input fields.
 
 image:media/edit_form.png[image]
+
+*Editing Inline*
 
 Clicking on a field within the row allows editability only if edit mode
 for that column is enabled.
@@ -33,6 +39,8 @@ The edit mode for the Calendar Widget is displayed below. The Calendar
 widget pops-up a monthly calendar for convenient date selection.
 
 image:media/edit_inline_calendar.png[image]
+
+*Multi-Edit*
 
 To modify the more than row so that they all have the same data, first
 check mark the rows to be edited.

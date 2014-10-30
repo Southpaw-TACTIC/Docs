@@ -1,11 +1,15 @@
 Notes Widget
 ------------
 
+*Introduction*
+
 The Notes Widget provides the ability to add a note directly to an item
 in the view. The notes are tracked in chronological order and and are
 also grouped by process if entered against tasks. Other conveniences
 provided in this widget is the ability attach files and to CC/BCC extra
 email addresses when you submit the note.
+
+*Adding a Note*
 
 If the Notes widget is not in the view, it can be added through the
 Column Manager.
@@ -21,6 +25,8 @@ process will be used for the note.
 
 The Submit button will save the note to the item.
 
+*Additional Note Options*
+
 To attach a file, click on the Attach File(s) button. The file browser
 will open to prompt to select a file.
 
@@ -35,6 +41,8 @@ automatially be sent to the appropriate users when notes are added.
 Adding a CC email address to a note simply sends the note to the email
 addresses regardless of Noification Triggers.
 ______________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+*Multiple Notes*
 
 When multiple notes are saved to an item, the interface will look like
 the following (notice that the notes for the item are conveniently

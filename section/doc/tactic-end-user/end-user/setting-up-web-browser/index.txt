@@ -10,7 +10,7 @@ To connect to the TACTIC server, type a URL in your web browser similar
 to the example below (the IP address will vary depending on the network
 setup of your organization). An example is shown below:
 
-`http://192.168.14.198/`
++*http://192.168.14.198/*+
 
 When you are connected to the server, you are presented with the TACTIC
 login screen:
@@ -32,4 +32,4 @@ Java JRE 1.6.0+
 
 To download the Java Runtime application, please visit:
 
-*http://www.java.com*
+link:#[http://www.java.com]
