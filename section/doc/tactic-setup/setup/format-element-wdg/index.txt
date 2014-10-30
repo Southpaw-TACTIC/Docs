@@ -1,7 +1,11 @@
 Formatted Widget
 ----------------
 
+*Formatted Widget*
+
 image:media/2_format_values.png[image]
+
+*Description*
 
 The Formatted Widget displays a raw data value as a formatted string so
 the user can recognize and interpret the value more easily.
@@ -9,6 +13,8 @@ the user can recognize and interpret the value more easily.
 For example, the Format Widget will display a number in the format
 $1,234.00 which the user quickly recognizes as a currency value in
 dollars and cents.
+
+*Info*
 
 [width="100%",cols="30%,70%",]
 |====================================================
@@ -19,6 +25,8 @@ dollars and cents.
 |*TACTIC Version Support* |3.6.0+
 |*Required database columns* |none
 |====================================================
+
+*Options*
 
 image:media/1_format_widget_overview.png[image]
 

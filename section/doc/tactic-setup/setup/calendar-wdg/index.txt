@@ -1,7 +1,11 @@
 Calendar Input Widget
 ---------------------
 
+*Calendar Input Widget*
+
 image:media/1_calendar_overview.png[image]
+
+*Description*
 
 The CalendarInputWdg displays a navigable calendar where dates can be
 selected. It is an input widget that conforms to the BaseInputWdg
@@ -9,6 +13,8 @@ interface and is used for inline editing or as one of the items in the
 EditWdg layout.
 
 image:media/2_calendar_closeup.png[image]
+
+*Info*
 
 [width="100%",cols="29%,71%",]
 |=======================================================================
@@ -20,9 +26,13 @@ image:media/2_calendar_closeup.png[image]
 |*Required database columns* |none unless editing a specific date column
 |=======================================================================
 
+*Implementation*
+
 The simple implementation does not require any options. It displays a
 non-editable text box with a value that represents a date. Clicking on
 the cell opens up the calendar widget.
+
+*Options*
 
 [width="100%",cols="29%,71%",]
 |=======================================================================
@@ -33,6 +43,8 @@ the cell opens up the calendar widget.
 clicking on the cell does not bring up the calendar for input. Only a
 text box with the date value is displayed.
 |=======================================================================
+
+*Advanced*
 
 The simplest and most common usage is the default implementation.
 

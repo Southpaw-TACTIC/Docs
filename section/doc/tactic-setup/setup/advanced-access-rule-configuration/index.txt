@@ -1,6 +1,8 @@
 Advanced Access Rule Configuration
 ----------------------------------
 
+*Advanced Access Rule Configuration*
+
 *XML Access Rules*
 
 Security access rules are XML documents attached to user groups. Each
@@ -36,6 +38,7 @@ If upgrading from TACTIC 3.7 to 3.8, the security version will remain
 set at version 1 (which is the default for 3.7, since the security
 version is not specified).
 __________________________________________________________________________________________________________________________________________________________________________________
+*Security Version 1*
 
 The following section applies to Security Version 1.
 
@@ -277,6 +280,7 @@ supported.
   <rule access='deny' key='Complete' category='process_select'/>
   <rule access='deny' key='Approved' category='process_select'/>          
 --------------------------------------------------------------------------
+*Security Version 2*
 
 The following are examples of how to fine tune control access to TACTIC
 in security version 2. (Some of these example may be repeated in

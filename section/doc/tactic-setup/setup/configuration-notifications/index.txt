@@ -1,13 +1,19 @@
 Notifications
 -------------
 
+*Notifications*
+
 image:media/1_configuration_notication_overview.png[image]
 
-\1) In the *Project Startup -> Configuration View* (assuming a
+*How to Add a Notification for a Search Type*
+
+1) In the *Project Startup -> Configuration View* (assuming a
 Searchable Type has already been created), click on the *Notification*
 button corresponding to row of the search type to edit.
 
-\2) In the *Notifcation* pop-up (the title for the pop-up might be
+image:media/2_configuration_notication_button.png[image]
+
+2) In the *Notifcation* pop-up (the title for the pop-up might be
 labelled *Trigger*):
 
 Click on the plus *[+]* button to create a new notification. This will
@@ -24,6 +30,8 @@ image:media/Action.png[image]
 
 *Send a Notification* - This action will send a notification. The action
 box will open additional options to insert a subject and message.
+
+*Example 1*
 
 Below is an example of a notification being sent on the event when a
 task status is changed to review:
@@ -45,6 +53,8 @@ TACTIC. All expressions are identified by curly brackets "\{}". e.g.
 
 *Send a Notification* - This action will send a notification. The action
 box will open additional options to insert a subject and message.
+
+*Example 2*
 
 Below is an example which uses more expressions for a notification being
 sent whenever a task is assigned.

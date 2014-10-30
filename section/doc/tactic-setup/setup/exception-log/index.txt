@@ -1,6 +1,8 @@
 Exception Log
 -------------
 
+*Exception Log*
+
 The exception log SObjects provides a very convenient way for TACTIC to
 store, view and diagnose problems or errors in TACTIC as they come up.
 This is a necessary requirement in order to properly diagnose a bug or

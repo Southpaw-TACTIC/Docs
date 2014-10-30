@@ -1,6 +1,8 @@
 Setup Introduction
 ------------------
 
+*Setup Introduction*
+
 *The role of Setting up TACTIC is to configure and maintain the
 structure of the TACTIC projects.*
 

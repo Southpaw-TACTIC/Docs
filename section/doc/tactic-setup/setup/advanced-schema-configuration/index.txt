@@ -1,6 +1,8 @@
 Advanced Schema Configuration
 -----------------------------
 
+*Advanced Schema Configuration*
+
 When creating a search type, the "Search Type" property defines the
 project schema (project_namespace) and name for the search type. For
 example, if your current project is called *media* then adding a new

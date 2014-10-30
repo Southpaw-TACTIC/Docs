@@ -1,6 +1,8 @@
 Expression Variable Reference
 -----------------------------
 
+*Expression Variable Reference*
+
 There are a number of predefined variables in the expression language.
 The following list all of the available variables:
 
@@ -13,6 +15,8 @@ current user is in
 http://10.0.0.65/tactic/media)
 * BASE_URL - The base URL of the TACTIC installaiton (ex:
 http://10.0.0.65/)
+
+*Table 1.*
 
 [width="100%",cols="22%,44%,34%",options="header",]
 |=======================================================================

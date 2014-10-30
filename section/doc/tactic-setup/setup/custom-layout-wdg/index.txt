@@ -1,7 +1,11 @@
 Custom Layout
 -------------
 
+*Custom Layout*
+
 image:media/1_custom-layout_tickets-welcome.png[image]
+
+*Description*
 
 The Custom Layout Widget is a simple tool which opens up an incredible
 amount of customizable interface flexibility and integration from within
@@ -19,6 +23,8 @@ with regular HTML elements.
 * Embeddable web code such as Google maps, timezone clocks, web mail
 clients etc. can be embedded in the TACTIC interface.
 
+*Info*
+
 [width="100%",cols="29%,71%",]
 |====================================================
 |*Name* |CustomLayoutWdg
@@ -26,6 +32,8 @@ clients etc. can be embedded in the TACTIC interface.
 |*TACTIC Version Support* |2.5.0 +
 |*Required database columns* |none
 |====================================================
+
+*Implementation*
 
 The Custom Layout Widget in its simplest form is a delivery mechanism
 for HTML code. The following "Hello World" example below demonstrates
@@ -166,6 +174,8 @@ required if the HTML option is supplied.
 |*search_type* |The Search Type the CustomLayoutWdg applies to (if
 applicable)
 |=======================================================================
+
+*Examples*
 
 *Example 1a*
 

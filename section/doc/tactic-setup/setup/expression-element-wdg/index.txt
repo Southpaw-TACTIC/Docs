@@ -1,7 +1,11 @@
 Expression
 ----------
 
+*Expression*
+
 image:media/expression-element-wdg_dynamic.png[image]
+
+*Description*
 
 The ExpressionElementWdg allows you to use the TACTIC expression
 language to determine the value displayed in the table cell. The
@@ -23,6 +27,8 @@ language reference for more information on the expression language.
 |*TACTIC Version Support* |2.5.0 +
 |*Required database columns* |depends on expression
 |====================================================
+
+*Implementation*
 
 Display the total cost of an item by multiplying the total_number column
 with the unit_cost column When an expression is evaluated by the
@@ -87,6 +93,8 @@ menu if set to true
 |*justify* |default|left|right|center - set the justification for the
 cell in display
 |=======================================================================
+
+*Examples*
 
 Display the number of tasks for a given sobject and then display the
 total number at the bottom.

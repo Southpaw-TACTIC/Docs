@@ -1,6 +1,10 @@
 Note (discussion)
 -----------------
 
+*Note (discussion)*
+
+*Description*
+
 The Notes Widget allows users to write notes for a particular item
 (sObject). This widget allows team members to exchange comments for a
 process by writing them in the Notes Widget. The notes are displayed
@@ -9,6 +13,8 @@ history is displayed by default. It's one of the common columns which
 can be added in any view for an sType. A similar note entry widget
 called the Note Sheet Widget, focuses more on the speed of entry rather
 than the display of the conversation.
+
+*Info*
 
 [width="100%",cols="29%,71%",]
 |=======================================================================
@@ -25,6 +31,8 @@ than the display of the conversation.
 |*Required database columns* |This widget interacts with the built in
 sthpw/note table
 |=======================================================================
+
+*Usage*
 
 To create a new note, select the New Note button.
 
@@ -53,9 +61,13 @@ To unset a value, you can usually select the empty value with the label
 '-- Select --'.
 _______________________________________________________________________________________________________________________________________________________________________________________________________________
 
+*Implementation*
+
 The Notes widget is a common column which can be added using the Column
 Manager. The item name is "notes". A "default" context is used in this
 simple implementation.
+
+*Options*
 
 [width="100%",cols="29%,71%",]
 |=======================================================================
@@ -73,6 +85,8 @@ append the contexts at the end
 |*include_submission* |If set to true, it would include the notes for
 the submission (a child) of the current sObject.
 |=======================================================================
+
+*Advanced*
 
 ----------------------------------------------------
 <element name="discussion" edit="false">

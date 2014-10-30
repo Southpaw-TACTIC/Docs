@@ -1,6 +1,8 @@
 Built-in STypes
 ---------------
 
+*Built-in STypes*
+
 When using the expression or adding widget config entries for built-in
 STypes, you would want to get familiar with how to represent notes
 (sthpw/note) or tasks (sthpw/task) for example. Below is the full list:

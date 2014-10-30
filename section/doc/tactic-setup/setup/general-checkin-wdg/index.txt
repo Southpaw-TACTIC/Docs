@@ -1,7 +1,11 @@
 General Check-in Widget
 -----------------------
 
+*General Check-in Widget*
+
 image:media/checkin_widget_full.png[image]
+
+*Description*
 
 This is the new preferred Check-in Widget for 3.7+. It makes use of the
 Java Applet to accomplish various kinds of check-in functions like
@@ -10,6 +14,8 @@ checking in a single file, sequences of files, or directories. The
 large file transfer. *Upload* transfer mode only supports checking in
 single files and sequences of files. *Upload* is set to be the default
 in case new users do not have the handoff directory readily set up.
+
+*Info*
 
 [width="100%",cols="29%,71%",]
 |====================================================
@@ -20,6 +26,8 @@ in case new users do not have the handoff directory readily set up.
 |*TACTIC Version Support* |3.7.0 +
 |*Required database columns* |none
 |====================================================
+
+*Options*
 
 [width="100%",cols="29%,71%",]
 |=======================================================================
@@ -62,6 +70,8 @@ different process during a checkin, in the General Check-in Widget
 the user. _(default is false)_
 |=======================================================================
 
+*Gear Menu Options*
+
 The Gear Menu in the Check-in Widget provides the following
 administration options:
 
@@ -84,6 +94,8 @@ undoing a checkin, the files will also be removed in the file system._
 |*Redo Last Server Transaction* |Redo the last transaction. _When
 redoing a checkin, the files will be restored in the file system._
 |=======================================================================
+
+*Implementation*
 
 The default settings will allow a user to check in files to an assets in
 the "publish" process. It provides a very general and loosely enforced
@@ -122,6 +134,8 @@ CheckinWdg|checkin_script_path|<search_type>. If this event-based set-up
 seems a bit too involving, override the checkin_script_path for just
 this instance of the widget by using the standard display option
 <checkin_script_path>.
+
+*Process Options*
 
 By default, the subcontext selection is set to *(auto)*. It is the
 simplest to use and allows TACTIC to auto generate the subcontext.
@@ -176,6 +190,8 @@ Naming conventions are often strictly enforced, meaning that the folder
 and the file name are automatically supplied on check in of a file to
 the central repository.
 
+*Default Check-in Widget Options*
+
 In the panel on the right, when something from the list is selected for
 check in, the corresponding Check-in type (e.g.. *file*, *directory*,
 *sequence*, *multiple individual files*) is automatically selected by
@@ -192,6 +208,8 @@ the Check-in type will automatically switch to *A Directory* under the
 Check-in Options on the bottom left:
 
 image:media/checkin-widget_folder_selection.png[image]
+
+*More Context and Subcontext Examples*
 
 *Example 1)*
 
@@ -275,6 +293,8 @@ context = model_proxy    (or model_staging)
 Again, notice that the forward slash '/' was not used, which avoids
 using subcontexts.
 
+*Subcontext Keywords: (auto), (main) and (text)*
+
 The following subcontext option keywords are supported:
 
 [width="100%",cols="30%,70%",]
@@ -337,6 +357,8 @@ context = design/blue
 
 image:media/checkin-widget_text.png[image]
 
+*Providing a Custom Layout View For the Check-in Options*
+
 A custom layout view can be provided in the check-in panel as options.
 
 For example, to provide check boxes during the check in to submit the
@@ -384,6 +406,8 @@ options will appear on the panel on the left.
 |image:media/checkin-widget_custom_layout_before.png[image]
 |image:media/checkin-widget_custom_layout.png[image]
 |=======================================================================
+
+*Script Samples*
 
 This script can be saved in the Script Editor accessible through the
 Gear Menu.
@@ -453,6 +477,8 @@ snapshot = server.simple_checkin(search_key, context, path,
  snapshot_type:'mov'});
         
 -----------------------------------------------------------------------
+
+*Advanced*
 
 The General Check-in Widget is usually invoked with a
 CheckinButtonElementWdg with a transfer mode specified. In this

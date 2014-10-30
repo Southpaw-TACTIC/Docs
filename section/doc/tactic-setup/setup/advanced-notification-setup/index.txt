@@ -1,5 +1,6 @@
 Advanced Notification Setup
 ---------------------------
+*Advanced Notification Setup*
 
 The notification view is located in the TACTIC Sidebar under:
 
@@ -187,6 +188,8 @@ the _email_handler_class_ field.
 
 *Email Test*
 
+image:media/2_advanced_notification_email_test.png[image]
+
 Once the fields _event_, _mail_to_, and _message_ are properly filled
 in, to test the email, click on the *Email Test* button. It catches
 syntax errors or typos in expression in these fields as well as
@@ -252,6 +255,7 @@ preserve its html format.
 |*mail_to* |[multiblock cell omitted]
 |====================================================
 
+*Figure 2. Sample HTML Message*
 image:media/3_advanced_notification_setup_overview.png[Sample HTML
 Message]
 

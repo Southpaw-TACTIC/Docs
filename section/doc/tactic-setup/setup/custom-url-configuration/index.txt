@@ -1,6 +1,10 @@
 Custom URL Configuration
 ------------------------
 
+*Custom URL Configuration*
+
+*Overview*
+
 TACTIC's Custom Layout Editor provides users with the ability to
 completely customize the end user inteface. The HTML, Python, Styles,
 and Behaviours tabs offer the flexibility to dictate the appearance,
@@ -19,7 +23,9 @@ URL. Entries can be added into the table with a specified URL path,
 pointing to a Custom Layout view to be modified, for example, and the
 associated HTML code under the Widget column to define the view.
 
-image:media/Custom URL.png[image]
+image:media/Custom_URL.png[image]
+
+*Statically Setting Options*
 
 A list of options are available to the user to set within the HTML that
 defines a view from the Widget column. These options and associated
@@ -94,6 +100,8 @@ _Widget Column_
 
 <element name='index'> <display class='tactic.ui.panel.CustomLayoutWdg'>
 <view>custom_layout_folder/my_custom_view</view> </display> </element>
+
+*Dynamically Setting Options*
 
 The following examples will demonstrate how to dynamically set options.
 The first example will demonstrate how to configure multiple views using

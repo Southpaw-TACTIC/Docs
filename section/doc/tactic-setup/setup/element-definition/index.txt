@@ -1,6 +1,8 @@
 Element Definition Widget
 -------------------------
 
+*Element Definition Widget*
+
 Editing the configuration of widgets is an important part of configuring
 TACTIC. Widgets are drawing elements that display information on the
 TACTIC interface. Widgets can be configured for a wide variety of

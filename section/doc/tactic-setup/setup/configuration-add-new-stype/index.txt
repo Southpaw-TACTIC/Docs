@@ -1,6 +1,8 @@
 Add new sType
 -------------
 
+*Add new sType*
+
 Registering a new sType or "Searchable Type" in TACTIC provides
 opportunity to track separate list of items. From a technical
 standpoint, a new sType is a separate table in the project's database.

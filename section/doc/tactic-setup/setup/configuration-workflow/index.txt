@@ -1,13 +1,19 @@
 Workflow
 --------
 
+*Workflow*
+
 image:media/1_configuration_workflow_overview.png[image]
 
-\1) In the *Project Startup -> Configuration View* (assuming a
+*How to Edit the Workflow for a Search Type*
+
+1) In the *Project Startup -> Configuration View* (assuming a
 Searchable Type has already been created), click on the *Workflow*
 button corresponding to row of the search type to edit.
 
-\2) In the Workfllow pop-up:
+image:media/3_configuration_workflow_workflow_button.png[image]
+
+2) In the Workfllow pop-up:
 
 First, add or subtract rows which represent processes in the workflow.
 
@@ -28,7 +34,9 @@ Example of an entry for the *Task Status* field:
 Waiting, Pending, Ready, Review, Revise, Approve, In-Progress
 -------------------------------------------------------------
 
-\3) (Optional) To add triggers for the process, click on the trigger
+image:media/4_configuration_workflow_pop-up.png[image]
+
+3) (Optional) To add triggers for the process, click on the trigger
 button just on the left of the plus/minus buttons to create a new
 trigger for this process.
 

@@ -1,7 +1,11 @@
 Triggers
 --------
 
+*Triggers*
+
 image:media/1_configuration_triggers_overview.png[image]
+
+*How to Add a Trigger for a Search Type*
 
 ________________________________________________________________________________________________________________
 *Note*
@@ -10,11 +14,13 @@ These workflow triggers are the same as the regular triggers but are
 scoped/filtered for the particular process.
 ________________________________________________________________________________________________________________
 
-\1) In the *Project Startup -> Configuration View* (assuming a
+1) In the *Project Startup -> Configuration View* (assuming a
 Searchable Type has already been created), click on the *Triggers*
 button corresponding to row of the search type to edit.
 
-\2) In the *Triggers* pop-up:
+image:media/2_configuration_triggers_button.png[image]
+
+2) In the *Triggers* pop-up:
 
 Click on the plus *[+]* button to create a new trigger. This will open
 the trigger/notification UI.

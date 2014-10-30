@@ -1,6 +1,10 @@
 Create a New Project
 --------------------
 
+*Create a New Project*
+
+*Stepping Through the Create a New Project Wizard*
+
 To create a new project in TACTIC, go to the top header and from the
 *Project Menu*, select *Create Project*. The Create New Project wizard
 will open.
@@ -76,6 +80,8 @@ For example, for a project with the code "test" on a server called
 
 `http://tactic/projects/test/`
 
+*Project Startup and Configuration*
+
 Once the new project has been created, the *Startup* view will
 automatically appear. This view provides guidance on how to set up a
 project.
@@ -83,18 +89,18 @@ project.
 image:media/6_create_new_project_startup.png[image]
 
 To continue through the Project Startup view, please see the doc titled
-*Project Startup and Configuration*.
+*Can a New Project Be Undone?*.
 
 Unlike most operations in TACTIC, when a new project is created, it is
 not easily undo-able. It not easily undo-able because of the following
 complex actions that took place:
 
-\1. It creates the database for the project and copies the schema
+1. It creates the database for the project and copies the schema
 designated for this type of project.
 
-\2. It creates project sites in the sites directory.
+2. It creates project sites in the sites directory.
 
-\3. It registers the site in TACTIC.
+3. It registers the site in TACTIC.
 
 If a project is accidentally created, then it is best to *delete* the
 project immediately.

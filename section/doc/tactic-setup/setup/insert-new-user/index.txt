@@ -1,6 +1,8 @@
 Insert a New User
 -----------------
 
+*Insert a New User*
+
 image:media/1_insert_new_user_overview.png[image]
 
 *Users and Groups*

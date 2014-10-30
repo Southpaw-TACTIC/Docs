@@ -1,6 +1,10 @@
 Download Plugins
 ----------------
 
+*Download Plugins*
+
+*What is a TACTIC Plugin?*
+
 A TACTIC plugin is a bundle of files that can be installed to enhance
 TACTIC’s core functionality. Virtually any TACTIC functionality can be
 encapsulated in a plugin. A TACTIC plugin is composed of a number of
@@ -10,6 +14,8 @@ possible elements:
 belong to the plugin and also some metadata about the plugin
 * media files (images)
 * html, javascript, css files
+
+*Plugins Community Site*
 
 image:media/1_community_plugins_site.png[image]
 
