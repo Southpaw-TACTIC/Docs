@@ -3,10 +3,14 @@ Select
 
 image:media/1_select_overview.png[image]
 
+*Description*
+
 The Select Widget is a simple widget version of an HTML drop down
 selection box. The widget is used for making a selection from a
 predefined list of items. Many built-in dropdown widgets in TACTIC
 extend from the Select Widget.
+
+*Info*
 
 [width="100%",cols="29%,71%",]
 |=======================================================================
@@ -14,11 +18,13 @@ extend from the Select Widget.
 
 |*Class* |SelectWdg
 
-|*TACTIC Version Support* |2.5.0 +
+|*TACTIC Version Support* |2.5.0 \+
 
 |*Required database columns* |None, but typically this is attached to a
 data column
 |=======================================================================
+
+*Usage*
 
 Usage of the Select Widget is straightforward. Simply click on the
 Select Widget button to open the drop down selection box. Then, select
@@ -27,17 +33,19 @@ group label represented as << _label_>>. In that case, selecting the
 group label will trigger a warning pop-up. To unset a value, you can
 usually select the empty value with the label '-- Select --'.
 
+*Implementation*
+
 The select is often setup in the Edit Column definition -> Edit Tab. It
 is edited for the state for column data where the user should only be
 able to choose from a list of predefined values.
 
+*Options*
+
 [width="100%",cols="29%,71%",]
 |=======================================================================
-|*values* |A list of data values separated by the pipe character '|',
-e.g. model|anim|lighting
+|*values* |A list of data values separated by the pipe character '\|', e.g. model\|anim\|lighting
 
-|*labels* |A list of display labels separated by the pipe character '|',
-e.g. Model|Anim|LGT
+|*labels* |A list of display labels separated by the pipe character '\|', e.g. Model\|Anim\|LGT
 
 |*empty* |When set to true, the Select Widget will contain an empty
 option.
@@ -56,12 +64,14 @@ menu of an item in insert mode, you should set mode_expr to 'absolute'
 the expression defined in values_expr and labels_expr. If set to
 'absolute', the input item for the expression will be an empty list.
 
-|*query* |In the form of <search_type>|<value>|<label>, you can instruct
+|*query* |In the form of <search_type>\|<value>\|<label>, you can instruct
 the widget to retrieve the values and labels from the a particular
 sType. For example, to get all the asset codes from the sType
-'vfx/asset', you can use 'vfx/asset|code|code'. To change the label to
-display asset's name instead, you can use 'vfx/asset|code|name'.
+'vfx/asset', you can use 'vfx/asset\|code\|code'. To change the label to
+display asset's name instead, you can use 'vfx/asset\|code\|name'.
 |=======================================================================
+
+*Advanced*
 
 The following example uses the query option to get the *code* of a
 parent shot item but, display the *name* value in the list. This query

@@ -18,9 +18,11 @@ ________________________________________________________________________________
 note to.
 +
 image:media/notes-quickstart_add-note.png[image]
+
 3.  In the add dialog, first select the process. If no tasks are
 assigned the process will be "default" otherwise, the task processes
 will be available in the list
+
 4.  Add the note then click submit.
 
 ___________________________________________________________________________________________________________________________________________________________________________________________

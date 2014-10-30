@@ -3,6 +3,8 @@ Packaging a Plugin
 
 image:media/1_manifest_tab.png[image]
 
+*Plugin Directory*
+
 A TACTIC plugin package is simply a .zip file containing all the files
 of a plugin. Plugins are installed in the following directory:
 
@@ -11,6 +13,8 @@ of a plugin. Plugins are installed in the following directory:
 The .zip files are usually stored in:
 
 <TACTIC_DATA_DIR>/dist
+
+*Categories of Plugins*
 
 Plugins are defined into categories. Due to the flexibility of the
 plugin architecture, a single plugin can package tools, columns, and
@@ -36,6 +40,8 @@ added to a tabular layout.
 * tool - A tool is a widget that provides additional functionality to
 the users. Generally a tool needs to be launched by a button or a menu
 item from the sidebar.
+
+*Publishing the Plugin*
 
 To package your created plugin to the tactic data directory, select the
 plugin and go to the manifest tab. Here, you can make sure that the

@@ -3,11 +3,15 @@ View Panel
 
 image:media/1_view_panel_overview.png[image]
 
+*Description*
+
 The View Panel is a composite widget which binds together a Table Layout
 Widget and a Search Widget. The Search Widget is a searching mechanism
 that retrieves items and transfers them to a Table Layout Widget to
 draw. The View Panel Widget is used in most of TACTIC's predefined
 views.
+
+*Info*
 
 [width="100%",cols="29%,71%",]
 |====================================================
@@ -17,9 +21,13 @@ views.
 |*Required database columns* |none
 |====================================================
 
+*Implementation*
+
 The View Panel widget makes use of the TableLayoutWdg capabilities. The
 views available to the View Panel are identical to that of the Table
 Layout Widget.
+
+*Options*
 
 [width="100%",cols="31%,69%",]
 |=======================================================================
@@ -82,6 +90,8 @@ return items.
 
 |*filter* |JSON data structure representing the settings for SearchWdg
 |=======================================================================
+
+*Advanced*
 
 Often, the ViewPanelWdg is defined from a side bar link. It can be
 defined by XML as follows

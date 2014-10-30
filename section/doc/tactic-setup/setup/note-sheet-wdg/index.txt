@@ -1,6 +1,8 @@
 Note Sheet Widget
 -----------------
 
+*Description*
+
 The Note Sheet Widget allows entering of many notes in different
 contexts and different parents at the same time. It can be used for
 entering notes for any search types. By default, it uses the parent's
@@ -21,6 +23,8 @@ private as well.
 |*Required database columns* |none
 |====================================================
 
+*Usage*
+
 When used with regular sTypes with its pipeline_code set, the Note Sheet
 Widget automatically displays the pipeline processes as note context
 options. Each enabled context is marked with a check in the check box,
@@ -38,8 +42,12 @@ history button is used to display all the note entries for a context.
 
 image:media/notesheetwdg_addnotes.png[image]
 
+*Implementation*
+
 The Note Sheet Widget is a common column that can be added using the
 Column Manager.
+
+*Options*
 
 [width="100%",cols="29%,71%",]
 |=======================================================================
@@ -62,6 +70,8 @@ which could be an asset or shot. If so, set this display option to true.
 pipeline. Separate the contexts with a pipe character if there are more
 than one, e.g. producer|director.
 |=======================================================================
+
+*Advanced*
 
 -----------------------------------------------------------------
 <element name="notes_sheet" edit="false">

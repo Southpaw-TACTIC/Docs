@@ -3,6 +3,8 @@ sType Creation: Option for default layout
 
 *sType Creation: Option for default layout*
 
+image:media/layout_option_main.png[image]
+
 *Description*
 
 Default layout is an option in the Register a New sType Wizard. It

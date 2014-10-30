@@ -3,8 +3,12 @@ Link Element
 
 image:media/1_link_element_overview.png[image]
 
+*Description*
+
 The Link Element Widget facilitates creation of a hyperlink. Clicking on
 the link button opens the hyperlink in a new tab in the web browser.
+
+*Info*
 
 [width="100%",cols="29%,71%",]
 |====================================================
@@ -15,6 +19,8 @@ the link button opens the hyperlink in a new tab in the web browser.
 |*Required database columns* |none
 |====================================================
 
+*Usage*
+
 Go into edit mode for the Link column. Specify the full URL to a
 hyperlink, such as: http://support.southpawtech.com.
 
@@ -23,10 +29,16 @@ Save the data and refresh the view.
 Click on the link icon and the link to the web page will be opened in a
 new tab.
 
+*Implementation*
+
 The Link Element Widget can be created using the Create New Column and
 specifying: Display -> Widget -> *Link*.
 
+*Options*
+
 The ability to specify a customize icon to appears in the row.
+
+*Advanced*
 
 ------------------------------------------------------------
 <element name="link" title="link" edit="true" color="false">

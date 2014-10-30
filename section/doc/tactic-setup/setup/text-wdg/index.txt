@@ -3,10 +3,14 @@ Text Input
 
 image:media/1_text_overview.png[image]
 
+*Description*
+
 The TextWdg is a basic form element in which a single line of text can
 be entered. (To enter multiple lines, use the TextAreaWdg instead.) It
 maps directly to the HTML text input. It can be used independently or as
 an edit element in the TableLayoutWdg or EditWdg.
+
+*Info*
 
 [width="100%",cols="29%,71%",]
 |====================================================
@@ -16,7 +20,11 @@ an edit element in the TableLayoutWdg or EditWdg.
 |*Required database columns* |none
 |====================================================
 
+*Implementation*
+
 Basic example of a typical usage of a TextWdg
+
+*Options*
 
 [width="100%",cols="29%,71%",]
 |=======================================================================
@@ -25,6 +33,8 @@ Basic example of a typical usage of a TextWdg
 |*read_only* |true|false - determines whether the widget can have its
 text contents altered.
 |=======================================================================
+
+*Advanced*
 
 Simple example which displays text widget that is fully editable:
 

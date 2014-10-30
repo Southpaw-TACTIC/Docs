@@ -18,16 +18,16 @@ sequence.
 [width="100%",cols="50%,50%",options="header",]
 |=============================================
 |code |description
-|[multiblock cell omitted] |The first sequence
-|[multiblock cell omitted] |The first sequence
+|SEQ001 |The first sequence
+|SEQ002 |The first sequence
 |=============================================
 
 [width="100%",cols="34%,33%,33%",options="header",]
 |============================================================
 |sequence_code |code |description
-|[multiblock cell omitted] |SEQ001_001 |Sequence one shot one
-|[multiblock cell omitted] |SEQ001_002 |Sequence one shot two
-|[multiblock cell omitted] |SEQ002_001 |Sequence two shot one
+|SEQ001 |SEQ001_001 |Sequence one shot one
+|SEQ001 |SEQ001_002 |Sequence one shot two
+|SEQ002 |SEQ002_001 |Sequence two shot one
 |============================================================
 
 In the Schema Editor, relationships are represented by lines connecting

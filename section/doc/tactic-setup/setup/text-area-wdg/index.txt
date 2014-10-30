@@ -3,11 +3,15 @@ Text Area
 
 image:media/1_textarea_overview.png[image]
 
+*Description*
+
 The TextAreaWdg is a simple text widget which is used for editing
 full-text. The widget supports using the ENTER key for adding new lines
 (the ENTER key is often not supported on text entry widgets where
 CTRL+ENTER is used.) This widget can also be configured to display a
 larger canvas to work on.
+
+*Info*
 
 [width="100%",cols="30%,70%",]
 |=======================================================================
@@ -21,9 +25,14 @@ larger canvas to work on.
 text data.
 |=======================================================================
 
+
+*Implementation*
+
 The TextAreaWdg is used in Edit scenarios where full text input is
 required. There is control for the columns (characters across) and rows
 (characters down).
+
+*Options*
 
 [width="100%",cols="29%,71%",]
 |=======================================================
@@ -31,8 +40,12 @@ required. There is control for the columns (characters across) and rows
 |*rows* |The number of character rows in the TextArea
 |=======================================================
 
+*Advanced*
+
 The following example is a default implementation. The default number of
 cols is *50* and the default number of rows is *3*.
+
+
 
 --------------------------------
 <element name="subject">

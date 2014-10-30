@@ -1,11 +1,15 @@
 Project Automation - Notifications
 ----------------------------------
 
+*Description*
+
 Notifications are sent to inform the user that a particular transaction
 or event has occurred.
 
 They are stored in a notification_log which can be found under *Admin
 Views -> Site Admin -> Notifications*.
+
+*Notifications.*
 
 Notifications present information reported by transactions. They usually
 include what items are created or updated in addition to a description
@@ -17,6 +21,8 @@ With the mail server setting set up properly (set in the TACTIC Config
 file), TACTIC can send out email notifications to users.
 
 image:media/notificationEmail.png[image]
+
+*Implementation*
 
 There are 2 perspectives to work from when configuring notifications in
 TACTIC.
@@ -78,6 +84,8 @@ Below is an example which uses more expressions for a notification being
 sent whenever a task is assigned.
 
 image:media/9b_project_automation_notifications_task_is_assigned.png[image]
+
+*Project Schema*
 
 All notification configurations can be accessed through *Admin Views ->
 Site Admin-> Notifications*

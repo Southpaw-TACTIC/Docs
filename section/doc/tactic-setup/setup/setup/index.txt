@@ -1,6 +1,11 @@
 How To Set Up A Simple Search Filter
 ------------------------------------
 
+image:media/1_simple_search_filter_setup_overview.png[image]
+
+
+*Description*
+
 Adding a Simple Search Filter at the top of a view helps filter the
 table for particular values on certain columns. A filter can be created
 using a Select Filter Element Widget or by running an expression using a
@@ -8,19 +13,24 @@ Checkbox Filter Element Widget. (To set up the Select and Checkbox
 Filter Element Widgets, please refer to the setup docs by the same
 name.)
 
+*Implementation*
+
 Below are the steps to modify or add a Simple Search Filter to a view.
 The Simple Search View for the ticket list in the Scrum Project is used
 below as an example.
 
-\1) Go to the sidebar and open the view:
+1) Go to the sidebar and open the view:
 
 *Admin Views -> Project -> Manage Side Bar*
 
-\2) Look for the value in the following field:
+image:media/2_simple_search_filter_manage_sidebar.png[image]
+
+
+2) Look for the value in the following field:
 
 *Display Definition -> Search -> Simple Search View*
 
-\3) Open the Widget Config under:
+3) Open the Widget Config under:
 
 *Admin Views -> Project -> Widget Config*.
 
@@ -39,7 +49,7 @@ If the _Simple Search View_ field is empty, TACTIC will look for the
 default Simple Search View filter named: *custom_filter*.
 ______________________________________________________________________________________________________________________________
 
-\4) In the Widget Config entry, edit the _config_ field:
+4) In the Widget Config entry, edit the _config_ field:
 
 In the example below, the following Checkbox Filter Element Widgets were
 added: my_tickets, beth_tickets and ted_tickets

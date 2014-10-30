@@ -19,7 +19,7 @@ TACTIC manages two aspects of Digital Content Management: Project data
 and Files. TACTIC maintains both of these components in one unified
 source.
 
-[width="100%",cols="23%,77%",]
+[width="100%",cols="23%,27%,50%",]
 |=======================================================================
 |*Project Data* |Project data is stored in the Database |Project Data is
 the information and lists that are traditionally tracked in

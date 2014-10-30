@@ -51,7 +51,7 @@ help further filter the settings.
 Any widgets that make use of a new project setting not yet defined in
 TACTIC will prompt the user to insert data for a new project setting.
 
-*Commonly Project Setting Examples*
+*Commonly Used Project Setting Examples*
 
 This table lists the some commonly used project settings in TACTIC.
 

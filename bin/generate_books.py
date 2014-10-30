@@ -6,6 +6,7 @@ import os, shutil
 books = [
     'tactic-developer',
     'tactic-end-user',
+    'tactic-quickstart',
     'tactic-setup'
 ]
 

@@ -1,16 +1,18 @@
 How to Change Your Password
 ---------------------------
 
-Log in and go to the top right hand corner of the screen. The name of
+--
+. Log in and go to the top right hand corner of the screen. The name of
 the current user logged into TACTIC session is displayed here. Click on
 the button labelled "My Account". From the context menu, select "Edit My
 Account".
-
++
 image:media/change_password_edit_my_account_context_menu.png[image]
-
-Type in the new password and re-confirm it in the following field.
-
++
+. Type in the new password and re-confirm it in the following field.
++
 image:media/change_password_my_account_pop_up.png[image]
-
++
 Modify any other account information that needs to updated and hit
 *Save*.
+--

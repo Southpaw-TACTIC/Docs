@@ -21,6 +21,8 @@ causes the view to become a live report which is always up to date.
 
 Searches in TACTIC are carried through 2 primary interfaces:
 
+*Simple Search*
+
 The simple search allows for a simple set of search options for a view.
 
 image:media/1_what_is_searching_simple_search.png[image]
@@ -48,6 +50,8 @@ not, contains*
 
 The last drop down menu provides a selection of possible values for the
 Asset Category to search against.
+
+*Search Box(Advanced Search)*
 
 The Search Box can be used to execute simple to very complex searches.
 

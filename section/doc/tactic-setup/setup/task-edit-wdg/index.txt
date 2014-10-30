@@ -3,6 +3,8 @@ Task Edit
 
 image:media/1_setup_task_edit_overview.png[image]
 
+*Description*
+
 The Task Edit Widget is a toggle that opens a hidden row that displays
 all the tasks for an item. If there are multiple processes for an item,
 the tasks for those processes will be displayed.
@@ -20,6 +22,8 @@ the tasks for those processes will be displayed.
 |*Required database columns* |none
 |====================================================
 
+*Usage*
+
 The following details are displayed by the Task Edit Widget for a task:
 
 * a link to the task's Work Area (where the Checkin and Checkout tools
@@ -31,10 +35,16 @@ can be found)
 * the priority
 * start and end date for the process in the form of a Gantt chart
 
+*Implementation*
+
 The Task Edit Widget is a common column that can be added using the
 Column Manager.
 
+*Options*
+
 There are no options provided for the Task Edit Widget.
+
+*Advanced*
 
 ---------------------------------------------------------------------
 <element name="task_edit" title="Tasks" edit="false">
