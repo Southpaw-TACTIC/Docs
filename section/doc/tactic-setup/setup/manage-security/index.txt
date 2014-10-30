@@ -29,22 +29,45 @@ ________________________________________________________________________________
 
 In the *Manage Security* view, the following tools are provided:
 
+image:media/3_project_startup_manage_security_views_provided.png[image]
+
 [width="100%",cols="26%,74%",]
 |=======================================================================
 |*Project Security* |Determines which project each group can see. Each
 project is listed with checkboxes for each group. Adding a checkmark
 allows the users associate with that group to see the project.
 
-|*Link Security* |[multiblock cell omitted]
+image:media/4_project_startup_manage_security_project_security.png[image]
 
-|*sType Security* |[multiblock cell omitted]
+|*Link Security* |Determines which side bar links will be visible to the group. This type of security applies only to the interface.
+
+image:media/5_project_startup_manage_security_link_security.png[image]
+
+*Note*
+
+If no columns of groups (eg. client, content_creator, etc.) appear in this view, go to Project Security and allow some groups to view the current project.
+
+|*sType Security* |Provides low level security for all items. At this level, even the API will respect these security levels.
+
+image:media/6_project_startup_manage_security_search_type_security.png[image]
+
+*Note*
+
+If no columns of groups (eg. client, content_creator, etc.) appear in this view, go to Project Security and allow some groups to view the current project.
 
 |*Process Security* |Provides low level security for all items. At this
 level, even the API will respect these security levels..
 
+image:media/7_project_startup_manage_security_process_security.png[image]
+
 |*Groups List* |Lists all the groups. The following fields can be
 modified: *group, description, users, global access ruls, start link*
+
+image:media/8_project_startup_manage_security_group_security.png[image]
+
 |=======================================================================
+
+*Understanding Predefined Security Access Levels*
 
 TACTIC provides a set of predefined security access levels (i.e. none,
 low, medium, high) to make it easier to start setting up what a group
@@ -59,20 +82,79 @@ _Description of Access Privileges_
 
 [width="99%",cols="37%,50%,13%",]
 |=======================================================================
-|access level: *none* |[multiblock cell omitted]
-|[multiblock cell omitted]
+|access level: *none* |Can see some projects?
 
-|access level: *min* |[multiblock cell omitted]
-|[multiblock cell omitted]
+Can see all the links in the sidebar?
 
-|access level: *low* |[multiblock cell omitted]
-|[multiblock cell omitted]
+Can see all the processes?
 
-|access level: *medium* |[multiblock cell omitted]
-|[multiblock cell omitted]
+Can see all search types?
+|No
 
-|access level: *high* |[multiblock cell omitted]
-|[multiblock cell omitted]
+No
+
+No
+
+No
+
+|access level: *min* |Can see some projects?
+
+Can see all the links in the sidebar?
+
+Can see all the processes?
+
+Can see all search types?
+|Yes
+
+No
+
+No
+
+Yes
+
+|access level: *low* |Can see some projects?
+
+Can see all the links in the sidebar?
+
+Can see all the processes?
+
+Can see all search types?
+|Yes
+
+No
+
+Yes
+
+Yes
+
+|access level: *medium* |Can see all projects?
+
+Can see all the links in the sidebar?
+
+Can see all the processes?
+
+Can see all search types?
+|Yes
+No
+
+Yes
+
+Yes
+
+|access level: *high* |Can see all projects?
+
+Can see all the links in the sidebar?
+
+Can see all the processes?
+
+Can see all search types?
+|Yes
+
+Yes
+
+Yes
+
+Yes
 |=======================================================================
 
 __________________________________________________________________________________________________________________
@@ -84,6 +166,8 @@ empty, then the group can see all the projects.
 If the field named *Project Code* is filled in, then the access rules
 are specific to that project.
 __________________________________________________________________________________________________________________
+
+*How the Access Levels are Built Up*
 
 To better understand the differences between the Access Levels, the
 following is an explanation of how the levels were built up:
@@ -102,9 +186,13 @@ Access Level *Medium*: Can see what *low* sees and all the _projects_.
 
 Access Level *High*: Can see what *medium* sees and all the _links_.
 
+*Where To Find the Access Levels*
+
 To set the access level for a group go to the sidebar under:
 
 *Project Startup -> Manage Security -> Groups List -> Access Level*
+
+*The Different Check Mark Indicators*
 
 The solid green check mark indicates that a privilege is due to the
 Access Level associated to the group that the user is in. In order to
@@ -117,6 +205,8 @@ green background.
 In the screen shot below, the group (named 'high') is the only group
 with Access Level *High*. The TACTIC Administrator added the other
 privileges for the other groups.
+
+image:media/10_project_startup_manage_security_check_markst.png[image]
 
 For more advanced access control (such as controlling access to edit
 individual columns), please see the setup doc title: *Advanced Access

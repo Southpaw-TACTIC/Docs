@@ -3,6 +3,8 @@ View Manager
 
 image:media/1_view_manager_overview.png[image]
 
+*Description*
+
 The View Manager provides the ability to create, edit and modify views.
 
 This tool can be opened to edit the current view under Gear Menu under:
@@ -13,6 +15,8 @@ image:media/2_view_manager_gear_menu.png[image]
 The tool can also be opened and will prompt to select a Search Type and
 View to open in the sidebar under: *Admin Views -> Project Admin ->
 Mange Config Views*.
+
+*Implementation*
 
 In the View Manager, select the sType and View if not already selected
 for the current view. The drop down selection list provides access to
