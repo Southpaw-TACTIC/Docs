@@ -3,8 +3,12 @@ Completion
 
 image:media/1_task_completion_overview.png[image]
 
+*Description*
+
 The Task Completion Widget provides a graphical bar chart to represent
 the progress of an item by the completion rate of its child tasks.
+
+*Info*
 
 [width="100%",cols="29%,71%",]
 |====================================================
@@ -15,6 +19,8 @@ the progress of an item by the completion rate of its child tasks.
 |*Required database columns* |none
 |====================================================
 
+*Usage*
+
 This is a display-only widget. If all the tasks are completed for a
 shot, the bar reading would be 100%. Otherwise, a partial completion
 would be calculated based on tallying all the child tasks. If there are
@@ -22,8 +28,12 @@ no tasks for the item, "No tasks" is displayed.
 
 image:media/2_task_completion_usage.png[image]
 
+*Implementation*
+
 It is a common column that can be added using the Column Manager. The
 item name is "completion".
+
+*Options*
 
 [width="100%",cols="29%,71%",]
 |=======================================================================
@@ -31,11 +41,15 @@ item name is "completion".
 sObject. e.g. @SOBJECT(prod/shot.sthpw/task)
 |=======================================================================
 
+*Advanced*
+
 ------------------------------------------------------------
     <element name="completion" edit="false">
         <display class="tactic.ui.table.TaskCompletionWdg"/>
     </element>
 ------------------------------------------------------------
+
+*How The "Completion" is Calculated*
 
 *Example 1:*
 

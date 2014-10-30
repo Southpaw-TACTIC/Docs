@@ -3,10 +3,14 @@ Task Status History
 
 image:media/1_task_status_history_overview.png[image]
 
+*Description*
+
 The Task Status History is a toggle that opens a hidden row that
 displays all the status changes for an item. If there are multiple
 processes for an item, the status updates for those processes will be
 displayed.
+
+*Info*
 
 [width="100%",cols="29%,71%",]
 |====================================================
@@ -17,10 +21,17 @@ displayed.
 |*Required database columns* |none
 |====================================================
 
+*Implementation*
+
 The Task Edit Widget is a common column that can be added using the
 Column Manager.
 
+*Options*
+
 There are no options provided for the Task Edit Widget.
+
+*Advanced*
+
 ------------------------------------------------------------------
 <element name="task_status_history">
   <display class="HiddenRowToggleWdg">

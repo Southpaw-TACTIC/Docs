@@ -3,6 +3,8 @@ Checkin History
 
 image:media/1_sobject_checkin_history_overview.png[image]
 
+*Description*
+
 The Checkin History Widget is a toggle that opens a hidden row that
 displays all the snapshots (snapshots are checkins at a particular
 moment in time for a context) for an item.
@@ -15,9 +17,11 @@ moment in time for a context) for an item.
 |*Common Title* |History
 |*Class* |tactic.ui.widget.SObjectCheckinHistoryWdg
 |*Category* |Common
-|*TACTIC Version Support* |3.0.0 +
+|*TACTIC Version Support* |3.0.0 \+
 |*Required database columns* |none
 |====================================================
+
+*Usage*
 
 The following details are displayed by the Checkin History Widget for a
 task:
@@ -36,10 +40,16 @@ task:
 context
 * toggle to open the notes using the *Note Sheet* Widget
 
+*Implementation*
+
 The Checkin History Widget can be found as a common column that can be
 added using the Column Manager.
 
+*Options*
+
 There are no options provided for the Checkin History Widget.
+
+*Advanced*
 
 --------------------------------------------------------------------------------
 <element name="history" edit="false">

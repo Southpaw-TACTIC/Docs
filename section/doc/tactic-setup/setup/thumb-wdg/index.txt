@@ -3,10 +3,14 @@ Preview
 
 image:media/1_thumb_overview.png[image]
 
+*Description*
+
 The Thumbnail Widget is available for most types by default as the
 preview tool for images which have been uploaded for preview and
 thumbnail purposes. An icon for the corresponding file type is displayed
 for non-image files.
+
+*Info*
 
 [width="100%",cols="29%,71%",]
 |====================================================
@@ -16,7 +20,11 @@ for non-image files.
 |*Required database columns* |none
 |====================================================
 
+*Implementation*
+
 The Thumbnail widget is available in the common columns.
+
+*Options*
 
 [width="100%",cols="29%,71%",]
 |=======================================================================

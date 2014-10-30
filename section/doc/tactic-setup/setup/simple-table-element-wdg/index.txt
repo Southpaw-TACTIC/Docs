@@ -3,6 +3,8 @@ Simple Table Element
 
 image:media/1_simple_table_element_overview.png[image]
 
+*Description*
+
 This widget displays the value in the database "as is", in its raw
 unformatted form. This is the default display widget.
 
@@ -12,24 +14,34 @@ ___________________________________________________________________
 The Simple Table Element widget is the same as the Raw Data widget.
 ___________________________________________________________________
 
+*Info*
+
 [width="100%",cols="29%,71%",]
 |====================================================
 |*Name* |Simple Table Element
 |*Class* |raw_data
-|*TACTIC Version Support* |3.0.0 +
+|*TACTIC Version Support* |3.0.0 \+
 |*Required database columns* |none
 |====================================================
 
+*Implementation*
+
 Use this widget to display the value in the database "as is", without
 any pre-formatting. This widget is the default display widget.
+
+*Options*
 
 [width="100%",cols="30%,70%",]
 |=======================================================================
 |*type* |The database type: string, text, int, float, boolean, timestamp
 |=======================================================================
 
+*Example*
+
 For example, to display the keywords field, as is, from the Edit Column
 Definition->View Mode: Select *Widget -> Raw Data -> text*.
+
+*Advanced*
 
 Below is the XML for the above example.
 
