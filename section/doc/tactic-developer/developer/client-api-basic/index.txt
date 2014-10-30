@@ -1,9 +1,16 @@
 Basic Operations in Python and Javascript
 -----------------------------------------
 
-If you havenn't done so, please review the Client API Setup doc.
+
+*Note*
+
+If you haven't done so, please review the Client API Setup doc.
+
+*Simple Ping*
 
 The following is a skeleton script interacting with the Client API:
+
+*Basic Operations*
 
 ----------------------------------------------
 from tactic_client_lib import TacticServerStub
@@ -58,6 +65,8 @@ error occur in the body of the code.
 --------
         
 --------
+
+*Querying data*
 
 The most fundamental operation in the Client API is the query function,
 which enables access to direct information on an SObject
@@ -153,6 +162,8 @@ sample of the supported modes is shown below:
         filters.append( ("code", "!~", "ma") )
 ----------------------------------------------------------------------------
 
+*Insert and Update*
+
 It is essential to insert SObjects and update their values.
 
 The following code creates a new asset in the database.
@@ -193,6 +204,8 @@ Note that the search key is used to identify the precise sObject being
 updated. This search key uniquely identifies an sObject in TACTIC. With
 this search key, TACTIC is able to precisely update the specified
 sObject.
+
+*Javascript Client API*
 
 The TACTIC Client API can be accessed in Javascript as well as Python.
 One can deduce its usage from the Python Client API doc. One main point

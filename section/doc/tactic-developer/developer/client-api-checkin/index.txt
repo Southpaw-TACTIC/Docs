@@ -1,6 +1,8 @@
 Checkin / Checkout Operations
 -----------------------------
 
+*Checking files in*
+
 The Client API has access to the full range of TACTIC's asset management
 system.
 
@@ -8,6 +10,8 @@ Any sObject can become a "container" for check-ins. This has the
 advantage that you can use this one SObject (container) to check in
 files using the deep set of check-in tools provided by TACTIC. The rest
 of this section describes the different types of check-ins available.
+
+*Simple Checkin*
 
 The simple_checkin() function allows you to check in a single file.
 
@@ -38,6 +42,8 @@ snapshot is returned.
 
 The exact file name that is checked in will vary depending on the
 specific implemented naming conventions
+
+*Group (or Sequence) Checkin*
 
 The group_checkin() function allows you to check in a sequence of files,
 defined by a frame range:
@@ -81,6 +87,8 @@ default expect that the files have been uploaded to the server. For this
 reason, it is often recommended to use preallocated check-ins for both
 sequence and directory check-ins.
 
+*Directory Checkin*
+
 As the name suggests, a directory check-in enables an entire directory
 and all of its subdirectories to be checked in. TACTIC does not keep
 track of the contents of the checked-in directory. This allows you to
@@ -117,6 +125,8 @@ As with group_checkin(), this method already expects the files to have
 been uploaded to the server in the appropriate place. There are various
 modes that can be used to alter the manner in which the files get to the
 server repository. For details, see the "modes" section below.
+
+*Piecewise check-ins*
 
 TACTIC allows you to build up a check-in piecewise or stages. This is a
 powerful feature because you can build a check-in over the course of
@@ -200,6 +210,8 @@ Executing the last code snippet will give the following results:
 </snapshot>
 --------------------------------------------------------------------------
 
+*Checkin Modes*
+
 There are various modes that you can use to check in files. These modes
 determine how a file will be transferred to the repository.
 
@@ -257,6 +269,8 @@ to take advantage of the handoff directory:
 
 Note that the only difference in this example from earlier check-in
 examples is that the mode parameter is set to "move".
+
+*Preallocated check-in (mode="preallocate")*
 
 Preallocated check-ins are the most efficient check-ins. Bandwidth and
 storage space are expensive commodities in a typical media or production
@@ -359,6 +373,8 @@ copying of files around the servers. When groups of files reach the
 muti-gigabyte or even terabyte range, it becomes prohibitively expensive
 to check in files in the traditional manner. Preallocated check-ins
 maximize the use of your internal system architecture.
+
+*In-Place Checkins*
 
 In general, the in-place check-in should be considered as the last
 resort. In-place check-ins do not make use of the TACTIC naming

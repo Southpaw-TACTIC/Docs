@@ -1,6 +1,8 @@
 The TACTIC Script Editor
 ------------------------
 
+*Outputting to the Debug_Log Table With The TacticServerStub.log() Function*
+
 The TACTIC Script Editor allows for Javascript and Python based scripts
 to be written and stored in a "custom script" sObject. These scripts
 harness the power of Javascript in the web browser along with the power
@@ -49,6 +51,8 @@ The only purpose the levels serve are to group the messages when they
 are sorted in the table.
 ______________________________________________________________________________________________
 
+*Outputting to the TACTIC Web Client Output Log With The log Methods*
+
 While writing scripts in the TACTIC Script Editor, messages can be
 output to the *Web Client Output Log*.
 
@@ -93,6 +97,8 @@ same level or above that level will be displayed in the Web Client
 Output Log.
 
 image:media/warning_level_example.png[image]
+
+*Client API JavaScript Samples*
 
 *Example 1: Insert A New sObject*
 

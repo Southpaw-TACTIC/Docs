@@ -1,6 +1,8 @@
 Client API Structure
 --------------------
 
+*Directory Structure*
+
 The client API files are located in the directory
 <tactic_install_dir>/src/client. This directory contains all the files
 need for the client API. Typically you would copy all of the files in
@@ -51,6 +53,8 @@ import Tactic_Server_Stub
 
 (For more details, visit the Southpaw Support site.)
 
+*tactic_server_stub.py*
+
 This module contains the TacticServerStub class, which encapsulates all
 interactions with the TACTIC server. This class lets you make full use
 of the TACTIC architecture in your custom applications. Although the
@@ -68,6 +72,8 @@ using three essential parameters: server, ticket, project. These
 parameters are described in more detail in the client API setup
 documentation.
 
+*Interpreter*
+
 This directory contains all the code needed to execute pipelines on the
 client. Pipelines in TACTIC are arbitrary process flow graphs. These
 pipelines have a number of advantages over other methods:
@@ -84,7 +90,11 @@ those team members most suited for the task.
 of well-written handlers, it becomes possible for non-developers to
 create pipelines by graphically piecing processes together.
 
+*Application*
+
 This directory handles all of TACTIC's interaction with third-party
 applications.
 
-NOTE: this section is still in active development.
+*Note* 
+
+This section is still in active development.

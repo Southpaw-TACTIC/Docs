@@ -1,6 +1,8 @@
 Naming Convention Classes
 -------------------------
 
+*TACTIC Directory and File Naming*
+
 TACTIC has a default file naming convention that has proven to work for
 a wide variety of productions. A production facility may simply choose
 to use this default naming convention, or could also override it to
@@ -113,6 +115,8 @@ Custom in this case is a custom attribute added to a shot. So with these
 two classes, we would have a full path for this file of:
 
 `/assets/sample3d/shot/XG/XG002/scenes/XG002_bedroom_anim_v004.jpg `
+
+*Default Naming Conventions*
 
 TACTIC comes with a default file and directory naming convention. You
 may choose to adopt this default naming convention as specified above,
