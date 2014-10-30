@@ -3,6 +3,8 @@ Workflow Editor
 
 image:media/1_workflow_editor_overview.png[image]
 
+*Introduction*
+
 The Workflow Editor is a graphical tool in TACTIC used to interactively
 create pipelines (workflows). It is a node-based tool which creates
 processes in a pipeline and connects them. The Workflow Editor makes it
@@ -31,6 +33,8 @@ the [+] icon in bottom panel of the Workflow Editor.
 
 image:media/2_workflow_editor_pipelines_panel.png[image]
 
+*Interface Walk Through*
+
 The buttons at the top of the Workflow Editor allow various operations
 on the canvas:
 
@@ -41,6 +45,8 @@ image:media/pipeline_tools.png[image]
 * *Save:* Saves the current state of the pipeline to the database.
 * *Clear:* Clears the canvas.
 * *Properties:* Opens the Node Properties panel.
+
+*Edit Properties of a Pipeline*
 
 To edit the properties of a pipeline, first select a node in the
 pipeline and then click on the *Edit Properties* button on the tool
@@ -54,6 +60,8 @@ Project Workflow -> Pipeline Process Options
 _____________________________________________________________________________________________________________________
 
 image:media/7_workflow_editor_properties.png[image]
+
+*Lay Out a Pipeline*
 
 When you click the green plus button,
 *Create*image:media/add_button.png[image], a new node will appear on the
@@ -95,6 +103,8 @@ the following example, the "Model" process delivers to both the
 
 image:media/Pipeline_node_tree.png[image]
 
+*Pipeline Workflow Automation*
+
 Repetition and daily components that make up a user's workflow can be
 made easier through automation of notifications, file/directory naming
 and triggering custom logic. Automations such as these can vary from
@@ -124,6 +134,8 @@ Each of the menu options are explained in the "Project Automation"
 section of the documentation.
 ________________________________________________________________________________________________
 
+*Mouse and Keyboard Shortcuts*
+
 When the cursor is over the canvas in the pipeline editor, the following
 mouse and keyboard shortcuts are available:
 
@@ -149,6 +161,8 @@ canvas
 |*DELETE* |Deletes the selected node(s)
 |=======================================================================
 
+*To Change Node Color*
+
 To change the node color, go to the *Workflow Editor -> sidebar*
 
 right click on the pipeline and select *Edit Pipeline Data*
@@ -165,6 +179,8 @@ tab (panel at the bottom)* click on the *color* column and pick the
 color from the color swatch.
 
 image:media/5_workflow_editor_change_node_color_method_two.png[image]
+
+*Pipeline Node Context Menu Options*
 
 Right click on the pipeline node will display the following menu
 options:
@@ -191,6 +207,8 @@ view in the bottom panel
 |*Customize Task Status* |Create a custom task status pipeline for the
 process (refresh the Workflow Editor to see it added to the sidebar)
 |=======================================================================
+
+*Advanced*
 
 Behind the scenes, the pipeline is an XML text document. This document
 is how TACTIC stores its representation of the pipeline structure of
