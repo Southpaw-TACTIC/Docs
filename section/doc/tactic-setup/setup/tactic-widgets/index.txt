@@ -1,6 +1,8 @@
 TACTIC Widgets
 --------------
 
+*What is a Widget*
+
 A TACTIC Widget is a mini web program which serves a specific purpose
 and can be reused. This is what the TACTIC interface is composed of.
 Each interface view is presented to a user or a group of users in a
@@ -24,6 +26,8 @@ This widget architecture allows TACTIC to provide a toolbox of useful
 widgets which can be combined to build an interface which can adapt
 TACTIC to an work flow. Furthermore, due to the openness of TACTIC, it
 is easy for developers to create new widgets and share them.
+
+*Widget Documentation*
 
 Within this documentation, the same philosophy will be followed. There
 is a section which explains the usage of each widget but the main core

@@ -12,6 +12,8 @@ and the management of these items are often a hurdle. The primary goal
 of TACTIC is to assist in generating placeholders, controlling workflow
 and managing these items.
 
+*The TACTIC Server*
+
 The Tactic server is a system which runs the TACTIC application.  This
 server is often housed in your facility as a website which runs on your
 private network, or can be opened up to the world wide web like any
@@ -23,11 +25,13 @@ image:media/tactic-anatomy_tactic-server.png[image]
 
 [width="100%",cols="27%,73%",]
 |====================================================
-|*Database Server* |[multiblock cell omitted]
-|*File server* |[multiblock cell omitted]
-|*TACTIC Application* |[multiblock cell omitted]
-|*Web Server* |[multiblock cell omitted]
+|*Database Server* | *This is where Tactic stores all of the meta data* The "database is the base location for all of your data. This data is all information often tracked in spreadsheets, emails, sticky notes, whiteboards etc. A database provides a powerful central location for this information which helps keep everything in one place.
+|*File server* | *This is were TACTIC stores the files* Files in TACTIC are managed externally on a file system. For example, most businesses have a file server that users save to. The file server typically has a root 'assets' directory where TACTIC handles the directory and filenames for the entire file system.
+|*TACTIC Application* | *This is the central hub for all processing* All processes and interactions are managed through TACTIC transaction system. The TACTIC Application sends/retrieves information from the database, and files from the File Server. TACTIC's web interface can be delivered in multiple configurations based on the needs of the end user.
+|*Web Server* | *The Web Server delivers the interface to the end user* The Web Server delivers the TACTIC Interface to the end user's web browser. The Web Server is a web portal to the TACTIC Application.
 |====================================================
+
+*What is a TACTIC Project?*
 
 A TACTIC project stores all inserted information and configuration. In
 the back-end, each project is a complete "database".
@@ -48,6 +52,8 @@ Tactic can house multiple projects at the same time with each being a
 separate project configuration.  Within a project, there can be a
 hierarchy of different types of objects in your project design.
 
+*Project Structure*
+
 There are 2 major components to setting up the base structure of a
 TACTIC Project:
 
@@ -60,7 +66,11 @@ objects travel through during their life-cycle*
 
 [width="100%",cols="25%,75%",]
 |==============================================================
-|image:media/schema_thumb.png[image] |[multiblock cell omitted]
+|image:media/schema_thumb.png[image] | The project Schema is the central hub for traversing a project, and is the most important aspect of the project setup. The Schema node (sType), is a type of object you manage. i.e.. episodes, shots, sound.
+
+For example, a television series may have multiple episodes, and each episode may have multiple shots. By relating Episodes to Shots, this will display all shots in a particular episode in one TACTIC view.
+
+The layout of a Project Schema will depend on how the project is managed and how the sTypes relate to each other.
 |==============================================================
 
 image:media/tactic-anatomy_project-schema.png[image]
@@ -81,6 +91,8 @@ The Project Schema and the Project Workflow Editor are connected. The
 Schema is used to layout the sTypes individually, and the Work-flow
 Editor is used to create the pipelines the sTypes will flow through.
 
+*Searchable Types(sType)*
+
 *What are "sTypes"?*
 
 Within the schema for a project there are various "types" of manageable
@@ -95,6 +107,8 @@ assignment to a sType.
 
 image:media/tactic-anatomy_stypes.png[image]
 
+*Searchable Objects(sObjects)*
+
 What are *Searchable Objects (sObjects)* and how are they related to
 *sTypes*?
 
@@ -106,6 +120,8 @@ table (sType) on the right.
 
 image:media/tactic-anatomy_sobject.png[image]
 
+*Common TACTIC sTypes*
+
 TACTIC provides a set of default sTypes:
 
 * *Tasks*
@@ -115,6 +131,7 @@ sObject. Tasks provide tracking for various processes such as; Status
 changes, Start and End date, Assigned User, Assigned Supervisor, etc.
  Users can be provided with a view that displays all assigned tasks,
 when each task is due, and what tasks to expect in the future etc.
+
 * *Snapshots*
 +
 When you check in a file, it may involve one file or it might be 1000
@@ -124,6 +141,7 @@ as well as the location of the file(s) in the file system. Snapshots can
 also store "dependencies" to other Snapshots. Dependencies provide a
 trail to indicate that one check-in is dependant on one or more other
 Snapshots.
+
 * *Notes*
 +
 Notes can be added to any task or snapshot and provide instant feedback
@@ -140,6 +158,8 @@ these would be stored within the shot EP001_S001. Through this concept,
 all of the life-cycle information regarding an object is easily
 accessible and organized and more importantly are used to drive the
 object through it's pipeline.
+
+*TACTIC Interface*
 
 *Searching for Types of Objects*
 

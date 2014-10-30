@@ -3,10 +3,14 @@ Task Schedule
 
 image:media/1_task_schedule_overview.png[image]
 
+*Description*
+
 The Task Schedule displays a horizontal bar graph representing the
 schedule of start/end date and duration for all tasks assigned to an
 item. This widget is a simple pre-configuration of the Gantt Chart
 widget.
+
+*Info*
 
 [width="100%",cols="29%,71%",]
 |====================================================
@@ -17,8 +21,12 @@ widget.
 |*Required database columns* |none
 |====================================================
 
+*Implementation*
+
 The Task Schedule Widget is a common column that can be added using the
 Column Manager.
+
+*Options*
 
 The following is the configuration option which the makes this widget
 distinct from its derivative, the Gantt Chart widget.
@@ -63,6 +71,8 @@ header.
 |*Week Display* |*none*, *default* Display the week in the column
 header.
 |=======================================================================
+
+*Advanced*
 
 -----------------------------------------------------------------------------------
 <element name="task_schedule">

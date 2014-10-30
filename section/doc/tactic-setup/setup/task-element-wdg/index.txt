@@ -1,11 +1,14 @@
 Task Status Edit
 ----------------
+*Description*
 
 The Task Status Edit column is used to display the status of all tasks
 for the item. It also provides conveniences such as changing the status
 of the task and the assigned user.
 
 image:media/task_status_edit.png[image]
+
+*Info*
 
 [width="100%",cols="29%,71%",]
 |====================================================
@@ -17,9 +20,13 @@ image:media/task_status_edit.png[image]
 |*Required database columns* |none
 |====================================================
 
+*Usage*
+
 Once this column is added into the view, the drop down list can be used
 to change the status. In addition, this column also displays the
 process, schedule and the assigned user.
+
+*Implementation*
 
 This widget can be added using the Column Manager and can be found under
 the common columns as *Task Status Edit*.
@@ -98,6 +105,8 @@ drop down selection box for the status to change it.
 |*Edit Assigned* |*True* or *false*. Allows the user to open the status
 drop down selection box for the assigned user to change it.
 |=======================================================================
+
+*Advanced*
 
 --------------------------------------------------
 <element name='task_status_edit'>

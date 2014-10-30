@@ -3,6 +3,8 @@ Sidebar Configuration
 
 image:media/1_tactic_sidebar_overview.png[image]
 
+*Description*
+
 The TACTIC sidebar is the main menu system for navigating through the
 views of all TACTIC search types. The access rules applied to a specific
 account determine the contents of the sidebar as well as which views and
@@ -26,6 +28,8 @@ tasks have a status of "review" are in the view.
 The sidebar is divided into three different categories, "Project Views",
 "My Views" and "Admin Views".
 
+*Project Views and My Views*
+
 image:media/3_tactic_sidebar_project_view.png[image]
 
 The Project Views provides a way to save project wide views that
@@ -38,6 +42,8 @@ project manager. Views can also be hidden from specific user groups.
 *My View* contains a list of links to views that were created by the
 login user themselves. These usually are created by the user to cater to
 their own personal work flow.
+
+*Admin Views*
 
 *Admin Views* displays the project schema and the TACTIC system and
 administration schemas. Access to the Admin Views section of the sidebar

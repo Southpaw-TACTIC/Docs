@@ -3,19 +3,25 @@ Table Layout
 
 image:media/1_table_layout_overview.png[image]
 
+*Description*
+
 The TableLayoutWdg is the primary widget used to layout tabular data. It
 is primarily driven by the widget configuration. The TableLayoutWdg has
 the ability to display complex widgets inside each cell, to inline edit
 the data and to color code cells. It is the widget that is most often
 used to display information within the TACTIC.
 
+*Info*
+
 [width="100%",cols="29%,71%",]
 |====================================================
 |*Name* |Table Layout
 |*Class* |tactic.ui.panel.TableLayoutWdg
-|*TACTIC Version Support* |2.5.0 +
+|*TACTIC Version Support* |2.5.0 \+
 |*Required database columns* |none
 |====================================================
+
+*Implementation*
 
 The TableLayoutWdg makes use of "views" which are defined in the widget
 config for each project. When the Table is loaded as part of an
@@ -78,6 +84,8 @@ predefined views.
 The third and fourth locations only apply to predefined types that are
 shipped with TACTIC. All custom types will only use the first two.
 
+*Options*
+
 [width="100%",cols="31%,69%",]
 |=======================================================================
 |*search_type* |Defines the type that this table will be displaying. It
@@ -118,6 +126,8 @@ affecting the search
 
 |*element_names* |Explicitly set the element names to be drawn
 |=======================================================================
+
+*Advanced*
 
 Very often, the TableLayoutWdg is not used directly, but is used through
 the ViewPanelWdg, which combines the TableLayoutWdg with the SearchWdg.

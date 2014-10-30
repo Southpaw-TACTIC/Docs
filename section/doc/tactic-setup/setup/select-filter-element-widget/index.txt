@@ -1,8 +1,14 @@
 Select Filter Element Widget
 ----------------------------
 
+image:media/1_select_filter_element_widget_overview.png[image]
+
+*Description*
+
 This widget provides a drop down selection menu of values for a column
 for the Simple Search to do filtering on.
+
+*Info*
 
 [width="100%",cols="29%,71%",]
 |====================================================
@@ -12,12 +18,29 @@ for the Simple Search to do filtering on.
 |*Required database columns* |none
 |====================================================
 
+*Options*
+
 [width="100%",cols="29%,71%",]
 |====================================================
-|*title* |[multiblock cell omitted]
-|*values* _(required)_ |[multiblock cell omitted]
-|*column* _(required)_ |[multiblock cell omitted]
+|*title* | The title for the Select Filter Element. For example: 
+
+<element name='artist_name' title='Artist Name'> 
+
+|*values* _(required)_ | The values to populate the drop down selection with. For example, it can be a TACTIC expression: 
+
+<values_expr>@GET(sthpw/login.login)</values_expr> 
+
+or, it can be a pipe separated list of values. For example: 
+
+<values>new\|open\|in_dev\|need_info\|on_hold\|need_validation\|closed\|invalid</values> 
+
+|*column* _(required)_ | The table column to do the select from. For example: 
+
+<column>asset_category_code</column> 
+
 |====================================================
+
+*Implementation*
 
 Find or define the filter view in the Widget Config and use the
 following XML code as an example of what to add to the config:
@@ -38,14 +61,22 @@ following XML code as an example of what to add to the config:
 For the above example, this filter will provide a list of asset category
 codes to select from.
 
+image:media/2_select_filter_element_widget_example_asset_category.png[image]
+
 Notice that an icon of a green light appears next to the filter if it is
 being used:
+
+image:media/2b_select_filter_element_widget_example_asset_category_after.png[image]
+
+*Example 1*
 
 The following example demonstrates the Select Filter Element Widget
 providing filtering options for scrum tickets.
 
 Below is what the Select Filter Elements look like in the user
 interface:
+
+image:media/3_select_filter_element_widget_example_scrum.png[image]
 
 Below is what the config for the above example looks like in the Widget
 Config:
@@ -107,6 +138,8 @@ Config:
 </config>
 --------------------------------------------------------------------------------------------
 
+*Example 2*
+
 The following example is from the VFX project. It demonstrates how the
 Select Filter Element Widget can provide filtering options on assets
 based on columns not belonging to the current table itself.
@@ -119,6 +152,8 @@ image:media/5_select_filter_element_widget_example_vfx_schema.png[image]
 
 Below is what the Select Filter Elements look like in the user
 interface:
+
+image:media/4_select_filter_element_widget_example_vfx.png[image]
 
 Below is what the config for the above example looks like in the Widget
 Config:
