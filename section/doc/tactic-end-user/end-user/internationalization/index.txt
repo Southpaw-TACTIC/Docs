@@ -13,7 +13,7 @@ image:media/tasks_japanese.png[tasks_japanese.png]
 The following sections of TACTIC are capable of using unicode
 characters:
 
-*Notes:*
+*Notes*
 
 All notes, including the discussion widget and the notes sheet can
 accept unicode characters.

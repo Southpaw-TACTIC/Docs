@@ -16,17 +16,19 @@ ________________________________________________________________________________
 
 *To import a CSV file:*
 
-1.  Go to *Gear Menu -> File -> Import CSV ...*
+. Go to *Gear Menu -> File -> Import CSV ...*
 +
 image:media/2_importing_csv_data_gear_menu.png[image]
-2.  Select an sType or copy and paste the data from a spreadsheet. Once
++
+.  Select an sType or copy and paste the data from a spreadsheet. Once
 an sType is selected, the required columns will be displayed to the
 right of the drop down. Although these aren't the only columns that can
 be imported for this sType, they represent the minimum requirements for
 a successful import.
 +
 image:media/3_importing_csv_data_select_sType.png[image]
-3.  Browse and upload the CSV file. The CSV file is the raw format
++
+. Browse and upload the CSV file. The CSV file is the raw format
 required by TACTIC. Below is an example of the contents of a CSV file:
 +
 ------------------------------------------------------------
@@ -42,11 +44,13 @@ Below is an example of a CSV file being manipulated in a spreadsheet
 application.
 +
 image:media/5_importing_csv_data_CVS.png[image]
-4.  Click the Upload button. The TACTIC system will introspect the CSV
++
+. Click the Upload button. The TACTIC system will introspect the CSV
 file and fill in the rest of the import interface.
 +
 image:media/4_importing_csv_data_associate_value.png[image]
-5.  *Parsing Options*
++
+. *Parsing Options*
 +
 image:media/6_importing_csv_data_parsing_options.png[image]
 +
@@ -64,7 +68,8 @@ UTF-8, Excel ISO 8859-1
 |*Identifying Column* |Select the column which unique identifies the
 corresponding row in the table to update the data with.
 |=======================================================================
-6.  *Import*
++
+. *Import*
 +
 The bottom of the page shows a preview of the import results. Hitting
 the *Import* button will start the CSV import.

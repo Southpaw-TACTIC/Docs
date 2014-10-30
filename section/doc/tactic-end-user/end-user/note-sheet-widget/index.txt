@@ -1,6 +1,8 @@
 Note Sheet
 ----------
 
+*Introduction*
+
 The Note Sheet widget provides a convenient layout for typing in notes
 for different processes in one concise user interface. The Note Sheet is
 also built to provide rapid interface for entering notes. For example,
@@ -8,6 +10,8 @@ the Note Sheet helps in daily review sessions where the ability to enter
 notes in rapid succession is necessary.
 
 image:media/overview.png[image]
+
+*Description*
 
 Notes can be entered for any item. When the Note Sheet widget is added
 as a column, by default, the pipeline processes are used as the
@@ -17,6 +21,8 @@ Notes Sheet widget allows entering of many notes in different processes
 and different parents at the same time. They can be saved either
 individually or altogether. The private check box option make a note
 private.
+
+*Usage*
 
 When the Note Sheet is expanded, it may require that the processes be
 selected to display. At the top of the widget is a button which allows
