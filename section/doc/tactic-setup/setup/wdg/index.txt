@@ -1,9 +1,13 @@
 Checkbox Filter Element Widget
 ------------------------------
 
+*Description*
+
 The Checkbox Filter Element Widget appears as a check box which
 activates filteringm when checked. This widget provides a convenient way
 to perform more complex search operations.
+
+*Info*
 
 [width="100%",cols="29%,71%",]
 |====================================================
@@ -13,11 +17,15 @@ to perform more complex search operations.
 |*Required database columns* |none
 |====================================================
 
+*Options*
+
 [width="100%",cols="29%,71%",]
 |====================================================
-|*titles* |[multiblock cell omitted]
-|*options* |[multiblock cell omitted]
+|*titles* |[image needs to be added]
+|*options* |[image needs to be added]
 |====================================================
+
+*Implementation*
 
 Specify (or look up) the name of the _Simple Search View_ under *Admin
 Views -> Project -> Manage Side Bar -> Simple Search View*.
@@ -43,6 +51,8 @@ following XML code as an example of what to add to the config:
 
 For the above example, this filter returns results where the
 _asset_category_code_ is: *3d*
+
+*Examples*
 
 Below is an example of adding 3 check box filters: a filter to search
 for tickets that belong to the currently logged in user, the user *beth*

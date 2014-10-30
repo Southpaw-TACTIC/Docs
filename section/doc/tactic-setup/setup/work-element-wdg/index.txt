@@ -1,6 +1,8 @@
 Work Button
 -----------
 
+*Description*
+
 The Work Element Widget is used for accessing the checkin and checkout
 tool needed to handle a task assigned. After a task is assigned, an
 artist can go to the "My Tasks" or any other task page where there is a
@@ -19,6 +21,8 @@ work button is clicked on.
 |*Required database columns* |none
 |====================================================
 
+*Usage*
+
 When clicked on, it opens up a new Work area tab with 3 sub tabs
 underneath which comprise all the functions an artitst would need when
 assigned a task. He can enter notes, change task status, review check-in
@@ -32,6 +36,8 @@ process tied to the task. It makes it easy for an artist to jump to a
 different process and checks out their snapshots into the current
 sandbox associated with the task. Otherwise, if you check out a file
 from the model process, it will be copied to the model sandbox folder.
+
+*Options*
 
 [width="100%",cols="29%,71%",]
 |=======================================================================
@@ -88,6 +94,9 @@ choose at the check-in time.
 |*show_versionless_folder* |If set to true, it displays the latest and
 current versionless folders.
 |=======================================================================
+
+
+*Implementation*
 
 The following defines the default "Work" element. It looks a bit
 complicated but in most cases, you would just need to simply change the
