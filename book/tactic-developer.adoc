@@ -104,6 +104,25 @@ include::../section/doc/tactic-developer/developer/setup-validation/index.txt[]
 
 :leveloffset: 0
 
+Async Loading
+~~~~~~~~~~~~~
+
+:leveloffset: 2
+
+include::../section/doc/tactic-developer/developer/loading/index.txt[]
+
+:leveloffset: 0
+
+Messaging
+~~~~~~~~~
+
+:leveloffset: 2
+
+include::../section/doc/tactic-developer/developer/messaging/index.txt[]
+
+
+:leveloffset: 0
+
 Triggers
 ~~~~~~~~
 
