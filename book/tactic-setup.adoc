@@ -16,6 +16,8 @@ include::../section/doc/tactic-setup/setup/create-new-project/index.txt[]
 
 include::../section/doc/tactic-setup/setup/project-templates/index.txt[]
 
+include::../section/doc/tactic-setup/setup/layout/index.txt[]
+
 
 :leveloffset: 0
 
