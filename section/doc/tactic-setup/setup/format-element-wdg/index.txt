@@ -1,11 +1,7 @@
 Formatted Widget
 ----------------
 
-*Formatted Widget*
-
 image:media/2_format_values.png[image]
-
-*Description*
 
 The Formatted Widget displays a raw data value as a formatted string so
 the user can recognize and interpret the value more easily.
@@ -14,31 +10,27 @@ For example, the Format Widget will display a number in the format
 $1,234.00 which the user quickly recognizes as a currency value in
 dollars and cents.
 
-*Info*
-
 [width="100%",cols="30%,70%",]
 |====================================================
 |*Name* |Formatted Widget
 |*Class* |FormatElementWdg
 |*Category* |Simple Table Element Widget
-|*Supported Interfaces*
+|*Supported Interfaces*|[]
 |*TACTIC Version Support* |3.6.0+
 |*Required database columns* |none
 |====================================================
-
-*Options*
 
 image:media/1_format_widget_overview.png[image]
 
 [width="100%",cols="50%,50%",]
 |====================================================
-|*integer* |[multiblock cell omitted]
-|*float* |[multiblock cell omitted]
-|*percent* |[multiblock cell omitted]
-|*currency* |[multiblock cell omitted]
-|*date* |[multiblock cell omitted]
-|*time* |[multiblock cell omitted]
-|*scientific* |[multiblock cell omitted]
-|*boolean* |[multiblock cell omitted]
-|*timecode* |[multiblock cell omitted]
+|*integer* |image:media/int.png[image]
+|*float* |image:media/float.png[image]
+|*percent* |image:media/percent.png[image]
+|*currency* |image:media/currency.png[image]
+|*date* |image:media/date.png[image]
+|*time* |image:media/time.png[image]
+|*scientific* |image:media/science.png[image]
+|*boolean* |image:media/bool.png[image]
+|*timecode* |image:media/t_code.png[image]
 |====================================================

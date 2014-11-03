@@ -1,5 +1,6 @@
 Checkbox Filter Element Widget
 ------------------------------
+image:media/1_button_filter_element_wdg_overview.png[image]
 
 *Description*
 
@@ -19,10 +20,17 @@ to perform more complex search operations.
 
 *Options*
 
+Titles for Checkbox Filter Element. For example:
+
 [width="100%",cols="29%,71%",]
 |====================================================
-|*titles* |[image needs to be added]
-|*options* |[image needs to be added]
+|*titles* |<display class='tactic.ui.filter.CheckboxFilterElementWdg'> 
+    <titles>Active\|Pending\|Closed</titles>
+</display> 
+|*options* |<options>my_tickets\|beth_tickets\|ted_tickets</options>
+    <my_tickets>@SOBJECT(scrum/ticket['assigned',$LOGIN])</my_tickets> 
+    <beth_tickets>@SOBJECT(scrum/ticket['assigned','beth'])</beth_tickets>
+    <ted_tickets>@SOBJECT(scrum/ticket['assigned','ted'])</ted_tickets>
 |====================================================
 
 *Implementation*
@@ -32,6 +40,8 @@ Views -> Project -> Manage Side Bar -> Simple Search View*.
 
 In the example below, the _Simple Search View_ is named:
 *simple_search_view*
+
+image:media/4_button_filter_element_wdg_setup_widget_config.png[image]
 
 Look up and edit that simple search view in the Widget Config. Use the
 following XML code as an example of what to add to the config:
@@ -51,6 +61,8 @@ following XML code as an example of what to add to the config:
 
 For the above example, this filter returns results where the
 _asset_category_code_ is: *3d*
+
+image:media/3_button_filter_element_wdg_example_asset_category_3d.png[image]
 
 *Examples*
 
@@ -72,6 +84,10 @@ and the user *ted*. Notice that the options are pipe '|' separated.
   </simple_search_view>
 </config>
 ---------------------------------------------------------------------------------
+
+image:media/2_button_filter_element_wdg_example_mine.png[image]
+
+*Advanced*
 
 Below is an example of filtering for the condition of having one or more
 icons snapshots related to shots:

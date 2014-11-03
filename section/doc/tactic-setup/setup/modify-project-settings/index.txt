@@ -51,7 +51,7 @@ help further filter the settings.
 Any widgets that make use of a new project setting not yet defined in
 TACTIC will prompt the user to insert data for a new project setting.
 
-*Commonly Used Project Setting Examples*
+*Commonly Project Setting Examples*
 
 This table lists the some commonly used project settings in TACTIC.
 
@@ -68,7 +68,7 @@ performing a checkin in a 3D application. Accepted values are 'true',
 'false', 'optional'. |true |string
 
 |*notes_dailies_context* |Notes context used in the Dailies tab
-|anim|effects|model |sequence
+|anim\|effects\|model |sequence
 
 |*shot_hierarchy* |Shot hierarchy structure. Accepted values are
 'episode_sequence' or 'sequence'. |sequence |string

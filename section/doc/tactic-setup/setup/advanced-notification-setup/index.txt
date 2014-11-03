@@ -1,7 +1,5 @@
 Advanced Notification Setup
 ---------------------------
-*Advanced Notification Setup*
-
 The notification view is located in the TACTIC Sidebar under:
 
 *Site Admin -> Notifications*
@@ -28,23 +26,6 @@ The following table explains the basic usage of each property.
 |=======================================================================
 |*Event* |The TACTIC event to execute the notification for
 
-|*Process* |Events relating to note, task, snapshot can make use of
-process to differentiate
-
-|*Description* |The description of the purpose of the notification
-
-|*Subject* |The subject of the notification. This uses the TACTIC
-Expression Language
-
-|*Message* |The message body for the notification. This uses the TACTIC
-Expression Language
-
-|*Rules* |The XML access rules used to filter the notification further
-
-|*Email Handler Class* |The email handler class override for the
-notification. This allows for overriding of the notification with a
-python email handler class. This only needs to be used in specific
-situations.
 
 |*Project Code* |The project code for the notification. This allows for
 filtering of notifications for a specific project
@@ -205,11 +186,11 @@ groups.
 
 [width="100%",cols="17%,83%",]
 |====================================================
-|*Event* |update|support/ticket
+|*Event* |update\|support/ticket
 |*Description* |Sent when tickets are updated
-|*Subject* |[multiblock cell omitted]
+|*Subject* |image:media/multiline_message.png[image]
 |*Message* |[multiblock cell omitted]
-|*mail_to* |[multiblock cell omitted]
+|*mail_to* |admin , user@gmail
 |*Rules* |[multiblock cell omitted]
 |*Email Handler Class* |[multiblock cell omitted]
 |*Project Code* |support
@@ -225,15 +206,15 @@ this works across all the projects in the system.
 
 [width="100%",cols="17%,83%",]
 |====================================================
-|*Event* |insert|sthpw/note
+|*Event* |insert\|sthpw/note
 |*Description* |Sent when shot-based notes are added
-|*Subject* |[multiblock cell omitted]
-|*Message* |[multiblock cell omitted]
-|*Rules* |[multiblock cell omitted]
+|*Subject* |{$PROJECT} {@GET(parent.sequence_code)} - {@GET(parent.code)} {@GET(.process)}
+|*Message* |image:media/message_2.png[image]
+|*Rules* |image:media/rules.png[image]
 |*Email Handler Class* |[multiblock cell omitted]
 |*Project Code* |[multiblock cell omitted]
 |*Type* |email
-|*mail_to* |[multiblock cell omitted]
+|*mail_to* |image:media/mail_to.png[image]
 |====================================================
 
 *Example 3:*
@@ -244,18 +225,17 @@ preserve its html format.
 
 [width="100%",cols="17%,83%",]
 |====================================================
-|*Event* |insert|sthpw/note
+|*Event* |insert\|sthpw/note
 |*Description* |Sent when new note is added
-|*Subject* |[multiblock cell omitted]
-|*Message* |[multiblock cell omitted]
+|*Subject* |TACTIC: a new note has been added.
+|*Message* |image:media/message_3.png[image]
 |*Rules* |[multiblock cell omitted]
 |*Email Handler Class* |[multiblock cell omitted]
 |*Project Code* |[multiblock cell omitted]
 |*Type* |email
-|*mail_to* |[multiblock cell omitted]
+|*mail_to* |admin, user@gmail.com
 |====================================================
 
-*Figure 2. Sample HTML Message*
 image:media/3_advanced_notification_setup_overview.png[Sample HTML
 Message]
 

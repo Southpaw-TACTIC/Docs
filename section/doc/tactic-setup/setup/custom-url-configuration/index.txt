@@ -1,10 +1,6 @@
 Custom URL Configuration
 ------------------------
 
-*Custom URL Configuration*
-
-*Overview*
-
 TACTIC's Custom Layout Editor provides users with the ability to
 completely customize the end user inteface. The HTML, Python, Styles,
 and Behaviours tabs offer the flexibility to dictate the appearance,
@@ -23,9 +19,7 @@ URL. Entries can be added into the table with a specified URL path,
 pointing to a Custom Layout view to be modified, for example, and the
 associated HTML code under the Widget column to define the view.
 
-image:media/Custom_URL.png[image]
-
-*Statically Setting Options*
+image:media/Custom URL.png[image]
 
 A list of options are available to the user to set within the HTML that
 defines a view from the Widget column. These options and associated
@@ -70,14 +64,18 @@ of the URL is required.
 
 _URL Column_
 
+-----------
 /job/JOB002
+-----------
 
 _Widget Column_
 
+-------------------------------------------------------------------
 <?xml version="1.0"?> <element admin='true' sidebar='false'
 palette='bright'> <display class='tactic.ui.panel.CustomLayoutWdg'>
 <search_type>my_project/my_sType</search_type> <view>my_view</view>
 </display> </element>
+-------------------------------------------------------------------
 
 _Example 2: Setting Home Page through URL_
 
@@ -94,12 +92,17 @@ have this view set as the home page.
 
 _URL Column_
 
+------
 /index
+------
 
 _Widget Column_
 
+-------------------------------------------------------------------------
+
 <element name='index'> <display class='tactic.ui.panel.CustomLayoutWdg'>
 <view>custom_layout_folder/my_custom_view</view> </display> </element>
+-------------------------------------------------------------------------
 
 *Dynamically Setting Options*
 
@@ -130,14 +133,18 @@ display classes available to the user as well.
 
 _URL Column_
 
+------------
 /job/\{code}
+------------
 
 _Widget Column_
 
+--------------------------------------------------------------------
 <?xml version="1.0"?> <element admin='true' sidebar='false'
 palette='bright'> <display class='tactic.ui.panel.TableLayoutWdg'>
 <search_type>my_project/my_sType</search_type> <view>my_view</view>
 </display> </element>
+--------------------------------------------------------------------
 
 _Example 2: Custom Layout Editor - Setting Element Display Class in HTML
 with Changing Mako Variable Value_
@@ -161,24 +168,47 @@ lookahead text input widget.
 
 _URL Column_
 
+-------
 /index
+-------
 
 _Widget Column_
 
+------------------------------------------------------------------------
 <element name='index'> <display class='tactic.ui.panel.CustomLayoutWdg'>
 <view>custom_layout_folder/my_custom_view</view> </display> </element>
+------------------------------------------------------------------------
 
 _HTML Tab in Custom Layout Editor for
 custom_layout_folder/my_custom_view View_
 
-<div> <div> <% sType2_key = kwargs.get("search_key") or "" if
-sType2_key: display_widget = "tactic.ui.input.TextInputWdg" else:
-display_widget = "tactic.ui.input.LookAheadTextInputWdg" %> </div>
-<table> <tr> <td>Last Name</td> <td class="spt_element"> <element
-name="last_name"> <display class="$\{display_widget}">
-<search_type>my_project/my_sType</search_type> <column>my_view2</column>
-<search_key>$\{sType2_key}</search_key>
-<filter_search_type>my_project/my_sType</filter_search_type>
-<value_column>id</value_column>
-<current_value_column>id</current_value_column> </display> </element>
-</td> </tr> </div>
+--------------------------------------------------------------
+<div> 
+    <div> 
+    <% 
+        sType2_key = kwargs.get("search_key") or "" 
+        if sType2_key:
+            display_widget = "tactic.ui.input.TextInputWdg" 
+        else:
+            display_widget = "tactic.ui.input.LookAheadTextInputWdg" 
+    %> 
+    </div>
+<table> 
+  <tr> 
+     <td>Last Name</td> 
+     <td class="spt_element"> 
+       <element name="last_name"> 
+         <display class="$\{display_widget}">
+         <search_type>my_project/my_sType</search_type> 
+         <column>my_view2</column>
+         <search_key>$\{sType2_key}</search_key>
+         <filter_search_type>my_project/my_sType</filter_search_type>
+         <value_column>id</value_column>
+         <current_value_column>id</current_value_column> 
+         </display> 
+       </element>
+     </td> 
+    </tr> 
+</div>
+
+--------------------------------------------------------------
