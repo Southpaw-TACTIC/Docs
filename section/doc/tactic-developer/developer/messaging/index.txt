@@ -1,10 +1,14 @@
 Messaging
 ---------
 
+*Description*
+
 The Subscription Bar Widget allows user to subscribe to an sObject. This
 widget provides a convenient way to track any actions or behaviors on an
 sObject, including actions from different users. All the messages will
 be recorded into Subscription Bar Widget and Message History.
+
+*Info*
 
 [width="100%",cols="29%,71%",]
 |====================================================
@@ -13,6 +17,8 @@ be recorded into Subscription Bar Widget and Message History.
 |*TACTIC Version Support* |4.1+
 |*Required database columns* |none
 |====================================================
+
+*Implementation*
 
 Specify (or look up) the name of the _Inject Subscription Action_ under
 *Admin Views -> Project -> Custom Layout Editor->Gear Menu*.
@@ -44,6 +50,8 @@ option *Subscribe to Item*:
 Now a simple subscription bar has been set up and targeted to selected
 sObject. Any actions, such as checking in files, editing description and
 changing status, from other users will be recorded.
+
+*Advanced*
 
 A detailed subscription history could be viewed in *Message History*.
 This tab can be found by clicking the *Subscription History* icon in
