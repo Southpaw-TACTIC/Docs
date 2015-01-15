@@ -32,7 +32,7 @@ Task Status Widget can be setup to display the color of the process.
 To open the *Edit Properties* pop-up, select a node and then click on
 the *Properties* button on the tools shelf:
 
-image:media/pipeline-process-options_popup.png[image]
+//image:media/pipeline-process-options_popup.png[image]
 
 Further process options can be found by right clicking on the node in
 the:

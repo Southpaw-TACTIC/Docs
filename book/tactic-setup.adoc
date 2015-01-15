@@ -1,6 +1,10 @@
 TACTIC Setup
 ============
 
+:leveloffset: 1
+
+include::../section/doc/tactic-setup/setup/introduction/index.txt[]
+
 :leveloffset: 0
 
 Create Projects
@@ -8,9 +12,9 @@ Create Projects
 
 :leveloffset: 2
 
--include::../section/doc/tactic-setup/setup/what-are-projects/index.txt[]
+include::../section/doc/tactic-setup/setup/what-are-projects/index.txt[]
 
--include::../section/doc/tactic-setup/setup/project-quickstart/index.txt[]
+include::../section/doc/tactic-setup/setup/project-quickstart/index.txt[]
 
 include::../section/doc/tactic-setup/setup/create-new-project/index.txt[]
 
@@ -69,8 +73,9 @@ User and Group Security
 
 include::../section/doc/tactic-setup/setup/manage-security/index.txt[]
 
-include::../section/doc/tactic-setup/setup/project-startup-manage-security/index.txt[]
+//include::../section/doc/tactic-setup/setup/project-startup-manage-security/index.txt[]
 
+include::../section/doc/tactic-setup/setup/managing-access-rules/index.txt[]
 
 :leveloffset: 0
 
@@ -135,7 +140,7 @@ Advanced Workflow
 
 include::../section/doc/tactic-setup/setup/project-workflow/index.txt[]
 
--include::../section/doc/tactic-setup/setup/pipeline-process-options/index.txt[]
+include::../section/doc/tactic-setup/setup/pipeline-process-options/index.txt[]
 
 
 
@@ -176,6 +181,11 @@ include::../section/doc/tactic-setup/setup/project-automation-file-naming/index.
 
 
 :leveloffset: 0
+
+Project Workflow Introduction
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+:leveloffset: 2
 
 include::../section/doc/tactic-setup/setup/project-workflow-introduction/index.txt[]
 
@@ -222,13 +232,13 @@ include::../section/doc/tactic-setup/setup/project-automation-notifications/inde
 
 include::../section/doc/tactic-setup/setup/advanced-notification-setup/index.txt[]
 
--include::../section/doc/tactic-setup/setup/advanced-event-usage/index.txt[]
+include::../section/doc/tactic-setup/setup/advanced-event-usage/index.txt[]
 
--include::../section/doc/tactic-setup/setup/advanced-trigger-setup/index.txt[]
+include::../section/doc/tactic-setup/setup/advanced-trigger-setup/index.txt[]
 
--include::../section/doc/tactic-setup/setup/advanced-file-naming-setup/index.txt[]
+//include::../section/doc/tactic-setup/setup/advanced-file-naming-setup/index.txt[]
 
--include::../section/doc/tactic-setup/setup/versionless-checkin/index.txt[]
+include::../section/doc/tactic-setup/setup/versionless-checkin/index.txt[]
 
 
 
@@ -267,11 +277,12 @@ Widgets
 
 include::../section/doc/tactic-setup/setup/tactic-widgets/index.txt[]
 
+:leveloffset: 1
 
 View Widgets
 ~~~~~~~~~~~~~
-
 :leveloffset: 3
+
 
 include::../section/doc/tactic-setup/setup/simple-table-element-wdg/index.txt[]
 
@@ -280,7 +291,7 @@ include::../section/doc/tactic-setup/setup/format-element-wdg/index.txt[]
 include::../section/doc/tactic-setup/setup/expression-element-wdg/index.txt[]
 
 
-:leveloffset: 2
+:leveloffset: 1
 
 Edit Widgets
 ~~~~~~~~~~~~
@@ -289,13 +300,15 @@ Edit Widgets
 
 include::../section/doc/tactic-setup/setup/select-wdg/index.txt[]
 
+include::../section/doc/tactic-setup/setup/text-wdg/index.txt[]
+
 include::../section/doc/tactic-setup/setup/text-area-wdg/index.txt[]
 
 include::../section/doc/tactic-setup/setup/calendar-wdg/index.txt[]
 
 
 
-:leveloffset: 2
+:leveloffset: 1
 
 Common Widgets
 ~~~~~~~~~~~~~~
@@ -320,10 +333,15 @@ include::../section/doc/tactic-setup/setup/task-status-history-wdg/index.txt[]
 
 include::../section/doc/tactic-setup/setup/work-hours-element-wdg/index.txt[]
 
+include::../section/doc/tactic-setup/setup/gantt-wdg/index.txt[]
+
+include::../section/doc/tactic-setup/setup/work-element-wdg/index.txt[]
+
 include::../section/doc/tactic-setup/setup/simple-upload-wdg/index.txt[]
 
+include::../section/doc/tactic-setup/setup/thumb-wdg/index.txt[]
 
-:leveloffset: 2
+:leveloffset: 1
 
 Layout Widgets
 ~~~~~~~~~~~~~~
@@ -336,7 +354,9 @@ include::../section/doc/tactic-setup/setup/custom-layout-wdg/index.txt[]
 
 include::../section/doc/tactic-setup/setup/table-layout-wdg/index.txt[]
 
-:leveloffset: 2
+//include::../section/doc/tactic-setup/setup/edit-layout-wdg/index.txt[]
+
+:leveloffset: 1
 
 Simple Search Widgets
 ~~~~~~~~~~~~~~~~~~~~~
@@ -345,13 +365,12 @@ Simple Search Widgets
 
 include::../section/doc/tactic-setup/setup/select-filter-element-widget/index.txt[]
 
+include::../section/doc/tactic-setup/setup/checkbox-filter-element-wdg/index.txt[]
+
 include::../section/doc/tactic-setup/setup/task-element-wdg/index.txt[]
 
 include::../section/doc/tactic-setup/setup/link-element-wdg/index.txt[]
 
-include::../section/doc/tactic-setup/setup/submit-support-ticket/index.txt[]
-
-include::../section/doc/tactic-setup/setup/work-element-wdg/index.txt[]
 
 
 
@@ -364,23 +383,15 @@ Misc
 
 include::../section/doc/tactic-setup/setup/setup/index.txt[]
 
-include::../section/doc/tactic-setup/setup/text-wdg/index.txt[]
-
 include::../section/doc/tactic-setup/setup/stype-connect/index.txt[]
 
 include::../section/doc/tactic-setup/setup/search/index.txt[]
 
 include::../section/doc/tactic-setup/setup/discussion-wdg/index.txt[]
 
-include::../section/doc/tactic-setup/setup/thumb-wdg/index.txt[]
-
 include::../section/doc/tactic-setup/setup/hidden-row-toggle-wdg/index.txt[]
 
 include::../section/doc/tactic-setup/setup/custom-url-configuration/index.txt[]
-
-include::../section/doc/tactic-setup/setup/edit-layout-wdg/index.txt[]
-
-include::../section/doc/tactic-setup/setup/table-layout-wdg/index.txt[]
 
 include::../section/doc/tactic-setup/setup/sobject-detail-wdg/index.txt[]
 
@@ -388,12 +399,7 @@ include::../section/doc/tactic-setup/setup/built-in-plugins/index.txt[]
 
 include::../section/doc/tactic-setup/setup/drop-element-wdg/index.txt[]
 
-include::../section/doc/tactic-setup/setup/introduction/index.txt[]
-
-include::../section/doc/tactic-setup/setup/wdg/index.txt[]
-
-include::../section/doc/tactic-setup/setup/managing-access-rules/index.txt[]
 
 include::../section/doc/tactic-setup/setup/expression-value-element-wdg/index.txt[]
 
-include::../section/doc/tactic-setup/setup/gantt-wdg/index.txt[]
+include::../section/doc/tactic-setup/setup/submit-support-ticket/index.txt[]
