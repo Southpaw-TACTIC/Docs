@@ -7,8 +7,6 @@ How To Install TACTIC 3.8 (Open Source Release) On Ubuntu Server 12.04
 
 Revision 2 - August 12th, 2012
 
-Author(s): Mike Aquino
-
 ======================================================================
 
 Install Ubuntu Server 12.04 as a VM ... go ahead with the default
@@ -134,4 +132,3 @@ TACTIC server is able to run ...
 a browser, go to the TACTIC web UI and confirm everything is functioning
 properly Finally set up TACTIC to automatically start up as a service
 when the server is rebooted ... `$ sudo update-rc.d tactic defaults`
-[end]

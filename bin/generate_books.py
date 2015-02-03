@@ -7,7 +7,8 @@ books = [
     'tactic-developer',
     'tactic-end-user',
     'tactic-quickstart',
-    'tactic-setup'
+    'tactic-setup',
+    'tactic-sys-admin'
 ]
 
 media_books = [

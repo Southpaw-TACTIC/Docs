@@ -33,10 +33,10 @@ T:.
 
 *Browser Plugins*
 
-TACTIC uses the Java plugin in many cases to communicate with the client
-computer's operating system. This plugin is mostly used in application
-integration to pass files through the client web browser to and from the
-TACTIC server.
+With the security concerns over Java plugin, TACTIC has lowered the use of Java plugin 
+in many cases to communicate with the client
+computer's operating system. HTML5 features, where applicable, is adopted instead.
+A good example is uploading of files.
 
 To download the latest version of the Java plugin, go to
 http://www.java.com[*http://www.java.com*]

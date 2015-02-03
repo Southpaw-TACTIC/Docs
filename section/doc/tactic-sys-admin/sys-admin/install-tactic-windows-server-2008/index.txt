@@ -418,9 +418,10 @@ At this point you will need to install a TACTIC license file and then
 begin to set up a project.
 
 * For more information on installing the license file, please refer to
-the *link:#[License Installation Documentation]*.
+the Install License File chapter.*
+
 * For more information on getting started with projects, please refer to
-the *link:#[Sys Admin Project Guides]*.
+Setup documentation.*
 
 *Note on supplementary directories used in TACTIC:*
 

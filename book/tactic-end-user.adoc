@@ -6,12 +6,16 @@ TACTIC End-User Documentation
 Introduction to TACTIC
 ~~~~~~~~~~~~~~~~~~~~~~
 
+:leveloffset: 2
+
+include::../section/doc/tactic-end-user/end-user/introduction-to-tactic/index.txt[]
+
+:leveloffset: 0
+
 TACTIC Start up
 ~~~~~~~~~~~~~~~
 
 :leveloffset: 2
-
-include::../section/doc/tactic-end-user/end-user/introduction-to-tactic/index.txt[]
 
 include::../section/doc/tactic-end-user/end-user/setting-up-web-browser/index.txt[]
 
@@ -22,8 +26,6 @@ include::../section/doc/tactic-end-user/end-user/tactic-gear-menus/index.txt[]
 include::../section/doc/tactic-end-user/end-user/internationalization/index.txt[]
 
 include::../section/doc/tactic-end-user/end-user/tactic-sidebar/index.txt[]
-
-
 
 :leveloffset: 0
 

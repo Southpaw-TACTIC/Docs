@@ -22,7 +22,7 @@ license file.
 
 To view information on the total users for the license and how many are
 active and to update the existing license file, in the sidebar, load
-*Site Admin -> Renew License* From here you view the License statistics
+*Global -> License* From here you view the License statistics
 and update a new license file.
 
 image:media/renewLicense.png[image]
@@ -33,7 +33,7 @@ When the user interface tool is used to upload the license, TACTIC
 renames the file to tactic-license.xml and places it on the server under
 
 ------------------------------------------------------
-<TACTIC_INSTALL_DIR>/project/config/tactic-license.xml
+<TACTIC_DATA_DIR>/config/tactic-license.xml
 ------------------------------------------------------
 
 The XML file provided from the TACTIC representative can be renamed.

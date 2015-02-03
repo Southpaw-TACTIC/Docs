@@ -11,6 +11,10 @@ Planning
 
 include::../section/doc/tactic-sys-admin/sys-admin/deploy-tactic-scalability-solution/index.txt[]
 
+include::../section/doc/tactic-sys-admin/sys-admin/deploy-tactic-scalability-planning/index.txt[]
+
+
+
 
 :leveloffset: 0
 
@@ -35,12 +39,14 @@ include::../section/doc/tactic-sys-admin/sys-admin/install-tactic-fedora-8/index
 
 include::../section/doc/tactic-sys-admin/sys-admin/install-tactic-fedora-12/index.txt[]
 
-include::../section/doc/tactic-sys-admin/sys-admin/install-tactic-license/index.txt[]
+include::../section/doc/tactic-sys-admin/sys-admin/install-tactic-ubuntu-12/index.txt[]
+
 
 include::../section/doc/tactic-sys-admin/sys-admin/upgrade-tactic/index.txt[]
 
 include::../section/doc/tactic-sys-admin/sys-admin/multiple-tactic-services/index.txt[]
 
+include::../section/doc/tactic-sys-admin/sys-admin/install-tactic-license/index.txt[]
 
 :leveloffset: 0
 
@@ -87,6 +93,16 @@ include::../section/doc/tactic-sys-admin/sys-admin/configure-ssl/index.txt[]
 
 include::../section/doc/tactic-sys-admin/sys-admin/active-directory/index.txt[]
 
+include::../section/doc/tactic-sys-admin/sys-admin/deploy-tactic-configuration/index.txt[]
+
+include::../section/doc/tactic-sys-admin/sys-admin/setup-email/index.txt[]
+
+include::../section/doc/tactic-sys-admin/sys-admin/configure-http/index.txt[]
+
+include::../section/doc/tactic-sys-admin/sys-admin/resource/index.txt[]
+
+include::../section/doc/tactic-sys-admin/sys-admin/remote-access-tactic/index.txt[]
+
 
 
 :leveloffset: 0
@@ -122,6 +138,7 @@ Troubleshooting
 
 include::../section/doc/tactic-sys-admin/sys-admin/troubleshooting-tactic/index.txt[]
 
+include::../section/doc/tactic-sys-admin/sys-admin/monitor-server-performance/index.txt[]
 
 :leveloffset: 0
 
@@ -161,28 +178,9 @@ Client Setup
 
 include::../section/doc/tactic-sys-admin/sys-admin/setup-client-computer/index.txt[]
 
-include::../section/doc/tactic-sys-admin/sys-admin/index.txt[]
+//include::../section/doc/tactic-sys-admin/sys-admin/authentication/index.txt[]
 
-include::../section/doc/tactic-sys-admin/sys-admin/authentication/index.txt[]
+//include::../section/doc/tactic-sys-admin/sys-admin/config-tactic/index.txt[]
 
-include::../section/doc/tactic-sys-admin/sys-admin/deploy-tactic-configuration/index.txt[]
+//include::../section/doc/tactic-sys-admin/sys-admin/mysql/index.txt[]
 
-include::../section/doc/tactic-sys-admin/sys-admin/deploy-tactic-scalability-planning/index.txt[]
-
-include::../section/doc/tactic-sys-admin/sys-admin/install-tactic-general/index.txt[]
-
-include::../section/doc/tactic-sys-admin/sys-admin/deploy-tactic-scalability-solution/index.txt[]
-
-include::../section/doc/tactic-sys-admin/sys-admin/config-tactic/index.txt[]
-
-include::../section/doc/tactic-sys-admin/sys-admin/setup-email/index.txt[]
-
-include::../section/doc/tactic-sys-admin/sys-admin/configure-http/index.txt[]
-
-include::../section/doc/tactic-sys-admin/sys-admin/remote-access-tactic/index.txt[]
-
-include::../section/doc/tactic-sys-admin/sys-admin/install-tactic-ubuntu-12/index.txt[]
-
-include::../section/doc/tactic-sys-admin/sys-admin/mysql/index.txt[]
-
-include::../section/doc/tactic-sys-admin/sys-admin/monitor-server-performance/index.txt[]

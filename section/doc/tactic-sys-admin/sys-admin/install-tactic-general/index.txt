@@ -67,7 +67,7 @@ These modules are generally not installed by default with the standard
 Python distributions. For Windows, they are already packaged in a file
 python_modules.zip available for download in the release section of the
 downloads page at
-link:support.southpawtech.com/downloads[http://support.southpawtech.com/downloads]
+link:support.southpawtech.com/downloads[*http://support.southpawtech.com/downloads*]
 
 * PIL 1.1.7
 +
@@ -371,73 +371,9 @@ At this point you will need to install a TACTIC license file and then
 begin to set up a project.
 
 * For more information on installing the license file, please refer to
-the *link:#[License Installation Documentation]*.
+the Install License File chapter.*
+
 * For more information on getting started with projects, please refer to
-the *link:#[Sys Admin Project Guides]*.
+Setup documentation.*
 
-*Note on supplementary directories used in TACTIC:*
 
-In the config file <TACTIC_DATA_DIR>/config/tactic-conf.xml, you will
-find different references to directory under the path /home/apache like
-/home/apache/tactic_temp , assets, and handoff. They are there because
-/home/apache is the base directory chosen for installation. It could be
-different in your case. In the future, you can change their locations by
-editing the config file. If the assets directory is changed, ensure it's
-also updated in the Apache Web server config extension tactic.conf.
-
-To view different information about the system and set-up, you can go to
-the Site Admin --> System Info page. For example, you can verify if
-load-balancing is set up and certain key directories are writable by
-TACTIC.
-
-* If you see missing images on logging in or errors in the output log
-saying certain js files are not found, it means the Apache extension
-file tactic.conf is not being referenced or you have not updated the
-paths in it to reflect current <TACTIC_INSTALL_DIR>. For example, if
-your <TACTIC_INSTALL_DIR> is /home/apache/tactic, you should see the
-line in the Apache config extension file tactic.conf:
-+
-----------------------------------------------
-Alias /context /home/apache/tactic/src/context
-----------------------------------------------
-+
-____________________________________________________________________________
-*Note*
-
-Be aware of the slight differences in the naming of the configuration
-files:
-
-*tactic-conf.xml*: TACTIC configuration file
-
-*tactic.conf*: Apache configuration file extension
-____________________________________________________________________________
-* If you try to check in a Preview Image and can't see the icon
-generated, your assets alias in the Apache extension file may not be in
-sync with the asset_base_dir in the TACTIC config file tactic-conf.xml
-+
--------------------------------------------
-Alias /assets           /home/apache/assets
--------------------------------------------
-+
-should point to the asset_base_dir as found in tactic-conf.xml
-+
-----------------------------------------------------
-<asset_base_dir>/home/apache/assets</asset_base_dir>
-----------------------------------------------------
-* If you want to re-run install.py, the installation will ask if you to
-confirm backing up the sthpw database before dropping it. If you choose
-to do it yourself, here is the command:
-+
------------------------------------------------
-pg_dump -c -U postgres sthpw > sthpw_backup.sql
-dropdb -U postgres sthpw
------------------------------------------------
-* If you try to connect to the http://<server IP>/tactic and it just
-times out, your server firewall could be blocking access. Ensure SELinux
-is not enabled as well.
-+
--------------------------
-# to turn off firewall
-/etc/init.d/iptables save
-/etc/init.d/iptables stop
--------------------------
