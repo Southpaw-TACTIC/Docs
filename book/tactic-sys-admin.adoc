@@ -23,6 +23,8 @@ Install TACTIC Application
 
 :leveloffset: 2
 
+include::../section/doc/tactic-sys-admin/sys-admin/system-requirements/index.txt[]
+
 include::../section/doc/tactic-sys-admin/sys-admin/install-tactic-general/index.txt[]
 
 include::../section/doc/tactic-sys-admin/sys-admin/install-tactic-centos-5.4/index.txt[]
@@ -183,4 +185,3 @@ include::../section/doc/tactic-sys-admin/sys-admin/setup-client-computer/index.t
 //include::../section/doc/tactic-sys-admin/sys-admin/config-tactic/index.txt[]
 
 //include::../section/doc/tactic-sys-admin/sys-admin/mysql/index.txt[]
-
