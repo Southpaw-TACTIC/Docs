@@ -1,5 +1,4 @@
 Context
--------
 
 To allow for separate versioning of files within the same SObject
 (container) during checkin, TACTIC uses "versions" and "contexts."

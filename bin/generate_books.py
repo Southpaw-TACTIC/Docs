@@ -4,12 +4,14 @@ import os, shutil
 
 
 books = [
-    'tactic-developer',
-    'tactic-end-user',
-    'tactic-quickstart',
-    'tactic-setup',
-    'tactic-sys-admin'
+    'tactic-end-user'
 ]
+
+    # 'tactic-developer',
+    # 'tactic-end-user',
+    # 'tactic-quickstart',
+    # 'tactic-setup',
+    # 'tactic-sys-admin'
 
 media_books = [
     'tactic-developer',
