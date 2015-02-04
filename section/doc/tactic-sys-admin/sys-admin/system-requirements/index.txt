@@ -15,16 +15,16 @@ Note - The main criteria in the majority of cases for TACTIC access is the web b
 
 *Supported Browsers*
 
-*Mozilla Firefox 4.0+ (Officially Supported)
+*Chrome (Officially Supported)
 *Safari (Compatible)
-*Chrome (Compatible)
-*Internet Explorer 8.0+ (compatible for everyday usage - HTML5 support is limited on IE)
+*Mozilla Firefox 33.0+ (Compatible)
+*Internet Explorer 11.0+ (compatible for everyday usage - HTML5 support is limited on IE)
 
 Note - Other web browsers may work but are not certified for TACTIC.
 
 *Required Browser Plugins*
 
-TACTIC uses the Java plugin in many cases to communicate with the client computer's operating system. This plugin is used primarily in application integration to pass files through the client web browser to and from the TACTIC server. To download the latest version of the Java plugin, go to http://www.java.com
+We have moved away from needing the Java plugin in our latest release, and instead, have moved on to using HTML5 in its place. This was done to remove external dependencies and create a better user experience. However, depending on the version of TACTIC that you use, the Java plugin may be used in many cases to communicate with the client computer's operating system. This plugin is used primarily in application integration to pass files through the client web browser to and from the TACTIC server. To download the latest version of the Java plugin, go to http://www.java.com
 
 *Server Requirements*
 
