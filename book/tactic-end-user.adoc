@@ -146,6 +146,7 @@ Clipboard
 include::../section/doc/tactic-end-user/end-user/clipboard/index.txt[]
 
 
+
 :leveloffset: 0
 
 Transactions
@@ -156,10 +157,11 @@ Transactions
 include::../section/doc/tactic-end-user/end-user/tactic-undo/index.txt[]
 
 
+
 :leveloffset: 0
 
-Glossary
-~~~~~~~~
+Transactions
+~~~~~~~~~~~~
 
 :leveloffset: 2
 

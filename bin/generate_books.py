@@ -3,7 +3,7 @@
 import os, shutil
 
 
-books = [
+books = [    
     'tactic-developer',
     'tactic-end-user',
     'tactic-quickstart',
