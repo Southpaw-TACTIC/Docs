@@ -162,7 +162,7 @@ What sort of access do you need to complete a full TACTIC installation and imple
 * Root Access to the server
 * Knowledge of the current network infrastructure
 * Ability to install Modules etc
-* Knowledge of Python is a +
+* Knowledge of Python is a plus
 
 *More information about TACTIC installation can be found in TACTIC installation manuals. Please contact sales for further information or sign up today for our community site - Sign up today!
 

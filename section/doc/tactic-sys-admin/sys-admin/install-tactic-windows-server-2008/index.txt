@@ -209,10 +209,20 @@ at '<TACTIC_BASE_DIR>/assets'.
 
 The file tactic_paths.py will be created in the following directories:
 
-[cols=",",]
-|====================================================
-|Windows |[multiblock cell omitted]
-|====================================================
+*Windows*
+--------------------------------------------------------
+C:/Python##/Lib/site-packages/tacticenv
+
+--------------------------------------------------------
+Default contents:
+
+--------------------------------------------------------
+TACTIC_INSTALL_DIR='C:/Program Files/Southpaw/tactic' 
+TACTIC_SITE_DIR='' 
+TACTIC_DATA_DIR='C:/Program Files/Southpaw/tactic_data'
+--------------------------------------------------------
+
+
 
 *Network machine access*
 

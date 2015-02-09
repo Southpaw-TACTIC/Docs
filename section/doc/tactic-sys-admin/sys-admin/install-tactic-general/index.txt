@@ -162,10 +162,19 @@ at '<TACTIC_DATA_DIR>/assets'.
 
 The file tactic_paths.py will be created in the following directories:
 
-[cols=",",]
-|====================================================
-|Linux |[multiblock cell omitted]
-|====================================================
+*Linux*
+--------------------------------------------------------
+/usr/lib/python#.#/site-packages/tacticenv
+
+--------------------------------------------------------
+Default contents:
+
+--------------------------------------------------------
+TACTIC_INSTALL_DIR='/home/apache/tactic'
+TACTIC_SITE_DIR=''
+TACTIC_DATA_DIR='/home/apache/tactic_data'
+
+--------------------------------------------------------
 
 *Network machine access*
 
