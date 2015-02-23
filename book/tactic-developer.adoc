@@ -17,6 +17,9 @@ include::../section/doc/tactic-developer/developer/tactic-script-editor/index.tx
 
 include::../section/doc/tactic-developer/developer/setting-up-dev-environment/index.txt[]
 
+include::../section/doc/tactic-developer/developer/watch-folder-service/index.txt[]
+
+
 
 :leveloffset: 0
 
@@ -81,6 +84,7 @@ include::../section/doc/tactic-developer/developer/packaging-a-plugin/index.txt[
 
 include::../section/doc/tactic-developer/developer/plugin-versions/index.txt[]
 
+include::../section/doc/tactic-developer/developer/packaging-python-scripts-into-a-plugin/index.txt[]
 
 :leveloffset: 0
 
@@ -131,6 +135,8 @@ Triggers
 include::../section/doc/tactic-developer/developer/python-trigger-in-tactic-editor-guideline/index.txt[]
 
 include::../section/doc/tactic-developer/developer/trigger/index.txt[]
+
+include::../section/doc/tactic-developer/developer/setting-up-the-schedule-event-trigger/index.txt[]
 
 
 :leveloffset: 0
