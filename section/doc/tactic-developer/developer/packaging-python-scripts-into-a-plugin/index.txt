@@ -3,10 +3,7 @@ TACTIC - Packaging Python Scripts into a Plugin
 
 *Creating Plugin for Scripts*
 
-1.  Prepare a folder or folder structure containing all of the python scripts you would like to include in the plugin. 
-
-
-The scripts can be contained within any folder level in the hierarchy. The plugin will allow you to have access to every one of those scripts.
+1.  Prepare a folder or folder structure containing all of the python scripts you would like to include in the plugin. The scripts can be contained within any folder level in the hierarchy. The plugin will allow you to have access to every one of those scripts.
 
 2.  Copy your folder of scripts.
 
@@ -31,19 +28,19 @@ from example_scripts.python_scripts import python_class
 -------------------------------------------------------
 
 
-Updating Plugins with New and Modified Scripts
+*Updating Plugins with New and Modified Scripts*
 
 To update the plugins with more scripts or apply changes to the scripts in the plugins, perform the following:
 
-1) Go to the "Plugin Manager" and select the plugin (package of scripts) to be modified.
+1.  Go to the "Plugin Manager" and select the plugin (package of scripts) to be modified.
 
-2) In the "Info" tab in the view, click the "Remove" button. This will deactivate the plugin. Wait for a message to appear that indicates that the plugin was removed successfully.
+2.  In the "Info" tab in the view, click the "Remove" button. This will deactivate the plugin. Wait for a message to appear that indicates that the plugin was removed successfully.
 
-3) Replace or modify any scripts in the folder or plugin that was deactivated in the /home/tactic/tactic_data/plugins location.
+3.  Replace or modify any scripts in the folder or plugin that was deactivated in the /home/tactic/tactic_data/plugins location.
 
-4) Once any new or modified scripts are added, go back to the "Plugin Manager", select the plugin that was modified, and in the "Info" tab in the view, click on the "Activate" button. Wait for a message to indicate the plugin activated successfully.
+4.  Once any new or modified scripts are added, go back to the "Plugin Manager", select the plugin that was modified, and in the "Info" tab in the view, click on the "Activate" button. Wait for a message to indicate the plugin activated successfully.
 
-5) Refresh the browser to ensure proper activation.
+5.  Refresh the browser to ensure proper activation.
 
-6) You will now have access to the modified scripts from the Script Editor in TACTIC.
+6.  You will now have access to the modified scripts from the Script Editor in TACTIC.
 
