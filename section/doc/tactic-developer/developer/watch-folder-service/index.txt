@@ -72,8 +72,7 @@ Configuring the Web Server and TACTIC
 3.  Type: vi tactic.conf 
 This will open the Vim Editor in the shell to edit the tactic.conf file. This is the web server configuration file. 
 4.  Near the top of the file you will see that there is XML that looks similar to this:
-
-    ----------------------------------------------------
+[source, html]
     <Directory "/home/tactic/assets" >
         Options FollowSymLinks
         AllowOverride None
@@ -82,10 +81,11 @@ This will open the Vim Editor in the shell to edit the tactic.conf file. This is
         #If using Apache 2.4, include the following line
         #Require all granted
     </Directory>
-    ----------------------------------------------------
-    This configuration is to give the web server permission to view this directory. You will need to write entries for every other device you would like the web server to see. Continue to write these entries underneath the existing ones following the same structure and formatting like the following:
+    
+  This configuration is to give the web server permission to view this directory. You will need to write entries for every other device you would like the web server to see. Continue to write these entries underneath the existing ones following the same structure and formatting like the following:
 
-    ----------------------------------------------------
+[source, html]
+
     <Directory "/example/directory/path/assets" >
         Options FollowSymLinks
         AllowOverride None
@@ -94,9 +94,8 @@ This will open the Vim Editor in the shell to edit the tactic.conf file. This is
         #If using Apache 2.4, include the following line
         #Require all granted
     </Directory>
-    ----------------------------------------------------
 
-
+[start=5]
 5.  Near the bottom of the file, there is a section that looks like the following:
 
     # This redirects to a common URL for centralized actions that will
@@ -109,16 +108,15 @@ This will open the Vim Editor in the shell to edit the tactic.conf file. This is
 
     # This redirects to a common URL for centralized actions that will
     # occur within tactic.
-    
-    -------------------------------------------------------
+
+[source, html]
     Alias /context           /spt/tactic/tactic/src/context
     Alias /assets            /spt/tactic/assets
     Alias /doc/               /spt/tactic/tactic/doc/
     Alias /example      /example/directory/path/assets
-    -------------------------------------------------------
 
 
-    *NOTE*: The alias does not need to be the last folder in the directory. It can be a generic alias that would clearly define this directory as a unique path.
+  NOTE: The alias does not need to be the last folder in the directory. It can be a generic alias that would clearly define this directory as a unique path.
 
 7.  Save and exit the changes to the file.
 8.  Go to the /home/tactic/tactic_data/config directory (or TACTIC install directory where tactic_data/config is located).
@@ -126,20 +124,22 @@ This will open the Vim Editor in the shell to edit the tactic.conf file. This is
 This will use the Vim Editor to open the tactic-conf.xml file.
 10.  Under the <checkin> tag, there is a tag called <asset_base_dir> that needs to be set. To set the <asset_base_dir>, define an alias for the same full directory path you defined in the tactic.conf file:
 
-    ----------------------------------------------
+[source, html]
+
     <asset_base_dir>{
         "sample": "/example/directory/path/assets"
     }</asset_base_dir>
-    ----------------------------------------------
+
 
 
 11.  You will then need to set the <web_base_dir> under the <checkin> tag. The directory that you define for the <web_base_dir> is the directory as seen by the browser and is meant as TACTIC configuration to view the assets. The alias defined needs to be same alias defined in the <asset_base_dir>. The directory for the <web_base_dir> needs to be the same as the alias defined in the configuration for the web server (in the tactic.conf file):
 
-    ------------------------
+[source, html]
+
     <web_base_dir>{
         "sample": "/example"
     }</web_base_dir>
-    ------------------------
+
 
 12.  Save the changes and close the file.
 13.  Restart the web server and TACTIC to have the changes take effect. To do this, if using a shell, login as the “root” user, then type the following to restart the web server:
@@ -168,17 +168,20 @@ Once the TACTIC and web server configuration is in place, the watch folder can b
 	Example:
 	In the tactic-conf.xml file,
 
-    ----------------------------------------------
+[source, html]
+
     <asset_base_dir>{
         "sample": "/example/directory/path/assets"
     }</asset_base_dir>
-    
+
+[source, html]
+
     <web_base_dir>{
         "sample": "/example"
     }</web_base_dir>
-    ----------------------------------------------
 
-    Therefore, in the Watch Folder sType table under the “Process” column, the alias “sample” would be entered. 
+
+  Therefore, in the Watch Folder sType table under the “Process” column, the alias “sample” would be entered. 
 
 3.  Save the entry by selecting the floppy disk icon in the shelf.
 4.  Open the sidebar.
