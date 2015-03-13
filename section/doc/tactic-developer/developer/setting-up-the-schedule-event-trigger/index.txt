@@ -1,4 +1,5 @@
-TACTIC - Setting Up the Schedule Event Trigger
+Setting Up The Schedule Event Trigger
+-------------------------------------
 
 The schedule event trigger is a server trigger that fires based on a defined time event, rather than changes made to sTypes within TACTIC. It can be set to run daily or on particular time intervals.
 
@@ -12,12 +13,10 @@ NOTE: Ensure that the <process_count> is set to 3: <process_count>3</process_cou
 
 3) Go to the Server Trigger table in the TACTIC Administrative layer and enter the following information:
 
-Event
-Script Path
-Data (Drop Down)
-schedule
-scripts/script_path
-To Run Trigger Daily (24 Hour Clock):
+[cols="30%, 30%, 40%”]
+|========================================
+|Event| Script Path | Data (Drop Down) 
+|schedule | scripts/script_path | To Run Trigger Daily (24 Hour Clock):
 
 {
   "script_path": "trigger/schedule_script",
@@ -35,6 +34,11 @@ To Run Trigger on Set Interval (Interval and Delay Attributes in Seconds):
   "interval": "20",
   "delay": "10"
 }
+
+|========================================
+
+
+
 
 NOTE: In the table that drops down from the “Data” column in the “Server Triggers” view, there is a table column in that drop down that is also called “Data”. In this column, type one of the preceding setups set the trigger to run daily or at a set interval. Adjust the settings accordingly for the desired time. 
 

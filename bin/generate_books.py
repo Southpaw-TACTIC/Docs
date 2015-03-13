@@ -48,7 +48,7 @@ for book in plugin_books:
     
 
 for book in books:
-    cmd = 'asciidoc -b docbook ../book/%s.adoc' % book
+    cmd = 'asciidoc -v -b docbook ../book/%s.adoc' % book
     print
     print cmd
     print
