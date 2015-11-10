@@ -1,0 +1,9 @@
+get_client_api_version
+----------------------
+
+*get_client_api_version()*
+
+
+*return:*
+
+*string* - client api version

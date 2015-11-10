@@ -1,6 +1,0 @@
-set_server
-----------
-
-*set_server(server_name)*
-
-*Set the server name for this XML* - RPC server

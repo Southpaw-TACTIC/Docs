@@ -1,0 +1,53 @@
+get_all_paths_from_snapshot
+---------------------------
+
+*get_all_paths_from_snapshot(snapshot_code, mode='client_repo', expand_paths=False, filename_mode='')*
+
+
+Get all paths from snapshot
+
+*param:*
+
+*snapshot_code* - the unique code of the snapshot
+
+
+
+*keyparam:*
+
+*mode* - forces the type of folder path returned to use the value from the
+
+appropriate tactic_<SERVER_OS>-conf.xml configuration file.
+
+Values include 'lib', 'web', 'local_repo', 'sandbox', 'client_repo', 'relative'
+
+lib = the NFS asset directory from the server point of view
+
+web = the http asset directory from the client point of view
+
+local_repo = the local sync of the TACTIC repository
+
+sandbox = the local sandbox (work area) designated by TACTIC
+
+client_repo (default) = the asset directory from the client point of view
+
+If there is no value for win32_client_repo_dir or linux_client_repo_dir
+
+in the config, then the value for asset_base_dir will be used instead.
+
+relative = the relative direcory without any base
+
+
+
+*expand_paths* - expand the paths of a sequence check-in or for a directory check-in, it will list the contents of the directory as well
+
+
+
+*filename_mode* - source or '', where source reveals the source_path of the check-in
+
+*file_types* - list: only return files in snapshot with these types
+
+
+
+*return:*
+
+*list* - paths

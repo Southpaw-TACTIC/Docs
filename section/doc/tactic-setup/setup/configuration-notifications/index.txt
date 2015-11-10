@@ -48,8 +48,10 @@ addresses e.g. joe@my_email.com
 Supervisor
 
 *Expression* - Capabilty to insert expressions that specifies a user in
-TACTIC. All expressions are identified by curly brackets "\{}". e.g.
-\{@SOBJECT(sthpw/login)}
+TACTIC. It could be pointing to an sobject - @SOBJECT with an email attribute or pointing to just the login name of the user - @GET. e.g.
+@SOBJECT(sthpw/login)
+@GET(sobject.assigned)
+@GET(sobject.supervisor)
 
 *Send a Notification* - This action will send a notification. The action
 box will open additional options to insert a subject and message.

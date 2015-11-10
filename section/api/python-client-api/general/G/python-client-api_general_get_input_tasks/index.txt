@@ -1,0 +1,20 @@
+get_input_tasks
+---------------
+
+*get_input_tasks(search_key)*
+
+
+Get the input tasks of a task based on the pipeline
+associated with the sobject parent of the task
+
+*param:*
+
+*search_key* - the key identifying an sobject as registered in
+
+the search_type table.
+
+
+
+*return:*
+
+list of input tasks

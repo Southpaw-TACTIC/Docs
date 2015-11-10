@@ -1,0 +1,30 @@
+add_group
+---------
+
+*add_group(snapshot_code, file_path, file_type, file_range, use_handoff_dir=False, mode=None)*
+
+Add a file range to an already existing snapshot
+
+*param:*
+
+*snapshot_code* - the unique code identifier of a snapshot
+
+*file_path* - path of the file to add to the snapshot
+
+*file_type* - type of the file to be added.
+
+*file_range* - range with format s-e/b
+
+
+
+*keyparam:*
+
+*use_handoff_dir* - use handoff dir to checkin file
+
+*mode* - one of 'copy','move','preallocate'
+
+
+
+*return:*
+
+*dictionary* - the resulting snapshot

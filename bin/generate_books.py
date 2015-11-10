@@ -45,9 +45,25 @@ for book in plugin_books:
     dir = '../section/plugin/%s'%book
     copy_media(dir)
     
-    
+def gen_single_html(book):
+    ''' make an index.html in the same folder'''
+    adoc_path = '../book/%s.adoc' % book
+    f = open(adoc_path, 'r')
+    lines = f.readlines()
+    for line in lines:
+        if line.startswith('include::'):
+            line = line.replace('include::', '')
+            line = line.replace('[]', '')
+            line = line.strip()
+            index_cmd = 'asciidoc -v "%s"'%line
+            print index_cmd
+            os.system(index_cmd)
+
 
 for book in books:
+    if book == 'tactic-developer':
+        gen_single_html(book)
+
     cmd = 'asciidoc -v -b docbook ../book/%s.adoc' % book
     print
     print cmd

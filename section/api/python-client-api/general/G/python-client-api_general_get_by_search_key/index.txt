@@ -1,0 +1,19 @@
+get_by_search_key
+-----------------
+
+*get_by_search_key(search_key)*
+
+Get the info on an sobject based on search key
+*param:*
+
+*search_key* - the key identifying a type of sobject as registered in
+
+the search_type table.
+
+
+
+*return:*
+
+*list of dictionary* - sobjects that represent values of the sobject in the
+
+form of name:value pairs

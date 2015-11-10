@@ -1,0 +1,24 @@
+connect_sobjects
+----------------
+
+*connect_sobjects(src_sobject, dst_sobject, context='default')*
+
+Connect two sobjects together
+
+*param:*
+
+*src_sobject* - the original sobject from which the connection starts
+
+*dst_sobject* - the sobject to which the connection connects to
+
+
+
+*keyparam:*
+
+*context* - an arbirarty parameter which defines type of connection
+
+
+
+*return:*
+
+*dictionary* - the last connection sobject created

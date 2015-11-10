@@ -1,0 +1,19 @@
+retire_sobject
+--------------
+
+*retire_sobject(search_key)*
+
+Invoke the retire method. This is preferred over delete_sobject if
+you are not sure whether other sobjects has dependency on this.
+
+*param:*
+
+*search_key* - the unige key identifying the sobject.
+
+
+
+*return:*
+
+*dictionary* - sobject that represents values of the sobject in the
+
+form name:value pairs

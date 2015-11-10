@@ -1,0 +1,19 @@
+get_pipeline_xml
+----------------
+
+*get_pipeline_xml(search_key)*
+
+DEPRECATED: use get_pipeline_xml_info()
+
+Retrieve the pipeline of a specific sobject.  The pipeline
+return is an xml document and an optional dictionary of information.
+
+*param:*
+
+*search_key* - a unique identifier key representing an sobject
+
+
+
+*return:*
+
+*dictionary* - xml and the optional hierarachy info

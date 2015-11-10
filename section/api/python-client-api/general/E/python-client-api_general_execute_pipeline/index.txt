@@ -1,0 +1,19 @@
+execute_pipeline
+----------------
+
+*execute_pipeline(pipeline_xml, package)*
+
+
+Spawn an execution of a pipeline as delivered from
+'get_pipeline_xml()'.  The pipeline is a xml document that describes
+a set of processes and their handlers
+
+*param:*
+
+*pipeline_xml* - an xml document describing a standard Tactic pipeline.
+
+*package* - a dictionary of data delivered to the handlers
+
+*return:*
+
+*instance* - a reference to the interpreter

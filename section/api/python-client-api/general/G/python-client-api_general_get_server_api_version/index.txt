@@ -1,0 +1,9 @@
+get_server_api_version
+----------------------
+
+*get_server_api_version()*
+
+
+*return:*
+
+*string* - server API version

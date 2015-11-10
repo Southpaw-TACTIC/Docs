@@ -1,0 +1,49 @@
+get_dependencies
+----------------
+
+*get_dependencies(snapshot_code, mode='explicit', tag='main', include_paths=False, include_paths_dict=False, include_files=False, repo_mode='client_repo', show_retired=False):*
+
+
+Return the dependent snapshots of a certain tag
+
+*params:*
+
+*snapshot_code* - unique code of a snapshot
+
+
+
+*keyparams:*
+
+*mode* - explict (get version as defined in snapshot)
+
+- latest
+
+- current
+
+*tag* - retrieve only dependencies that have this named tag
+
+*include_paths* - flag to specify whether to include a __paths__ property
+
+containing all of the paths in the dependent snapshots
+
+*include_paths_dict* - flag to specify whether to include a
+
+__paths_dict__ property containing a dict of all paths in the
+
+dependent snapshots
+
+*include_files* - includes all of the file objects referenced in the
+
+snapshots
+
+*repo_mode* - client_repo, web, lib, relative
+
+*show_retired* - defaults to False so that it doesn't show retired dependencies
+
+
+
+
+
+*return:*
+
+a list of snapshots

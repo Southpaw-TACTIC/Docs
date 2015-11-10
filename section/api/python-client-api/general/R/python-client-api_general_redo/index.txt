@@ -1,0 +1,13 @@
+redo
+----
+
+*redo(transaction_ticket=None, transaction_id=None)*
+
+Redo an operation.  If no transaction id is given, then the last
+undone operation of this user on this project is redone
+
+*keyparam:*
+
+*transaction_ticket* - explicitly redo a specific transaction
+
+*transaction_id* - explicitly redo a specific transaction by id

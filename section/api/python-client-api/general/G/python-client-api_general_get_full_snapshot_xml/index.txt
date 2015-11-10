@@ -1,0 +1,18 @@
+get_full_snapshot_xml
+---------------------
+
+*get_full_snapshot_xml(snapshot_code)*
+
+
+Retrieve a full snapshot xml.  This snapshot definition
+contains all the information about a snapshot in xml
+
+*param:*
+
+*snapshot_code* - unique code of snapshot
+
+
+
+*return:*
+
+*string* - the resulting snapshot xml

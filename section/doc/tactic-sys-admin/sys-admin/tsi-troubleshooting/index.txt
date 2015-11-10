@@ -44,7 +44,7 @@ the following commands:
 +
 `ifup ethX`
 
-1.  *I get a proxy error in my browser that looks like the following:*
+3.  *I get a proxy error in my browser that looks like the following:*
 +
 ---------------------------------------------------------------------------------------------------------
 Proxy Error 
