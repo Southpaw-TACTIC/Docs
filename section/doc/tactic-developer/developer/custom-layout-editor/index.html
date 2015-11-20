@@ -788,10 +788,10 @@ line to the HTML of a view where you want the styles to appear.</p></div>
 <div class="paragraph"><p>TACTIC&#8217;s behavior system makes use of standard JavaScript behaviors with
 the added functionality of some built-in classes.</p></div>
 <div class="paragraph"><p>Here are two ways to add an alert behavior to a button class called
-<em>my_button</em>.</p></div>
+<em>my_button</em>. The event attribute format is more concise.</p></div>
 <div class="listingblock">
 <div class="content">
-<pre><code>&lt;behavior class=”my_button” event='click_up'&gt;
+<pre><code>&lt;behavior class='my_button' event='click_up'&gt;
 alert('Hello World');
 &lt;/behavior&gt;
 
@@ -803,6 +803,17 @@ alert('Hello World');
 
 "'
 }&lt;/behavior&gt;</code></pre>
+</div></div>
+<div class="paragraph"><p>To relay the same behavior to many elements having the same class attribute,
+one can use the "relay_class" attribute. One would presumably apply this behavior to
+a parent element that contains the elements targeted.</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>&lt;behavior relay_class='my_button_item' event='click_up'&gt;
+
+alert('Hello World');
+
+&lt;/behavior&gt;</code></pre>
 </div></div>
 <div class="paragraph"><p>Here are the types of events that the TACTIC behavior system has
 built-in support for:</p></div>
@@ -838,7 +849,7 @@ originated from using the <em>bvr.src_el</em> (Behavior Source Element) tag.</p>
 var cells = table.getElements('.my_cells');
 cells.setStyle('background', 'red');</code></pre>
 </div></div>
-<div class="paragraph"><p>TACTIC’s powerful framework comes with many API functions that make
+<div class="paragraph"><p>TACTIC&#8217;s powerful framework comes with many API functions that make
 developing for TACTIC easier. Here are some common ones.</p></div>
 <div class="paragraph"><p>Show loading popup:</p></div>
 <div class="listingblock">
@@ -1056,30 +1067,30 @@ which comes with the input field.</p></div>
 <div class="paragraph"><p>You can add the view you have created directly to the sidebar. To do
 this, click on the gear in the top menu and select “Add to Side Bar”.
 This will add this view to the sidebar under the Project Views. By
-default, It will get named according to the view name and “/” will be
-treated as a space. For example, “app/chart” will be named “App Chart”.
+default, It will get named according to the view name and <em>/</em> will be
+treated as a space. For example, <em>app/chart</em> will be named <em>App Chart</em>.
 You can always rename these views in the sidebar by right clicking on
 them and selecting “Edit Side Bar”. Now select the view you want to edit
 and change the Title field.</p></div>
 <div class="paragraph"><p><strong>Creating URLs</strong></p></div>
 <div class="paragraph"><p>When you startup tactic and go to the main project URL
-(…/tactic/&lt;project_name&gt;), you are presented with the tactic homepage of
+(/tactic/&lt;project_code&gt;), you are presented with the tactic homepage of
 the project. That tactic homepage URL can be changed to show one of your
 created views. To do this, open up your view in the custom layout
-editor, then from the gear menu select “Set as Project Url”. The current
+editor, then from the gear menu select <em>Set as Project Url</em>. The current
 view you have open will be shown when you go the main project URL. You
-can come back to admin side of tactic by adding “/admin” to the URL
-(…/tactic/&lt;project_name&gt;/admin).</p></div>
+can come back to admin side of tactic by adding <em>/admin</em> to the URL
+(/tactic/&lt;project_code&gt;/admin).</p></div>
 <div class="paragraph"><p>You can also turn your view into a custom URL. This means that your view
 will open when you go to a specific URL. To do this, open your view in
-the custom layout editor, then from the gear menu select “Add as Custom
-Url”. This will open up a dialog box where you can specify what URL
+the custom layout editor, then from the gear menu select <em>Add as Custom
+Url</em>. This will open up a dialog box where you can specify what URL
 should open up the view. The URL specified there is showing the URL
-which is appended to (…/tactic). You can specify which widget to run in
+which is appended to (/tactic). You can specify which widget to run in
 the URL in the widget field. By default, it shows the widget code for
 the view that was open in the custom layout editor. You can check all
-your custom URLs by going to the gear menu and selecting “Show Custom
-URLs”. This will show all the existing custom URLs. This is where you
+your custom URLs by going to the gear menu and selecting <em>Show Custom
+URLs</em>. This will show all the existing custom URLs. This is where you
 can delete existing custom URLs.</p></div>
 <div class="paragraph"><p><strong>Creating Forms</strong></p></div>
 <div class="paragraph"><p>Forms provide an interface for updating TACTIC data. The Custom Layout
@@ -1138,9 +1149,7 @@ behavior for saving the form.</p></div>
 
 JavaScript:
 
-&lt;behavior class="spt_save_button&gt; {
-"type": "click",
-"cbjs_action": '''
+&lt;behavior class="spt_save_button" event="click"&gt; {
   //gets the parent of the behavior source element
   var top = bvr.src_el.getParent('.spt_form');
 
@@ -1154,7 +1163,7 @@ JavaScript:
   }
 
   search_key = values.spt_search_key;
-  server.update(search_key, data) '''
+  server.update(search_key, data)
 }</code></pre>
 </div></div>
 <div class="paragraph"><p><strong>Testing Interface</strong></p></div>
@@ -1289,7 +1298,7 @@ search key.</p></div>
 <div id="footnotes"><hr /></div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2015-10-22 21:52:39 EDT
+Last updated 2015-11-20 11:22:16 EST
 </div>
 </div>
 </body>

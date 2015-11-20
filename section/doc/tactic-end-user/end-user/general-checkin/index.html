@@ -1,0 +1,1142 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
+<meta name="generator" content="AsciiDoc 8.6.8" />
+<title></title>
+<style type="text/css">
+/* Shared CSS for AsciiDoc xhtml11 and html5 backends */
+
+/* Default font. */
+body {
+  font-family: Georgia,serif;
+}
+
+/* Title font. */
+h1, h2, h3, h4, h5, h6,
+div.title, caption.title,
+thead, p.table.header,
+#toctitle,
+#author, #revnumber, #revdate, #revremark,
+#footer {
+  font-family: Arial,Helvetica,sans-serif;
+}
+
+body {
+  margin: 1em 5% 1em 5%;
+}
+
+a {
+  color: blue;
+  text-decoration: underline;
+}
+a:visited {
+  color: fuchsia;
+}
+
+em {
+  font-style: italic;
+  color: navy;
+}
+
+strong {
+  font-weight: bold;
+  color: #083194;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #527bbd;
+  margin-top: 1.2em;
+  margin-bottom: 0.5em;
+  line-height: 1.3;
+}
+
+h1, h2, h3 {
+  border-bottom: 2px solid silver;
+}
+h2 {
+  padding-top: 0.5em;
+}
+h3 {
+  float: left;
+}
+h3 + * {
+  clear: left;
+}
+h5 {
+  font-size: 1.0em;
+}
+
+div.sectionbody {
+  margin-left: 0;
+}
+
+hr {
+  border: 1px solid silver;
+}
+
+p {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+ul, ol, li > p {
+  margin-top: 0;
+}
+ul > li     { color: #aaa; }
+ul > li > * { color: black; }
+
+.monospaced, code, pre {
+  font-family: "Courier New", Courier, monospace;
+  font-size: inherit;
+  color: navy;
+  padding: 0;
+  margin: 0;
+}
+
+
+#author {
+  color: #527bbd;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+#email {
+}
+#revnumber, #revdate, #revremark {
+}
+
+#footer {
+  font-size: small;
+  border-top: 2px solid silver;
+  padding-top: 0.5em;
+  margin-top: 4.0em;
+}
+#footer-text {
+  float: left;
+  padding-bottom: 0.5em;
+}
+#footer-badges {
+  float: right;
+  padding-bottom: 0.5em;
+}
+
+#preamble {
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+div.imageblock, div.exampleblock, div.verseblock,
+div.quoteblock, div.literalblock, div.listingblock, div.sidebarblock,
+div.admonitionblock {
+  margin-top: 1.0em;
+  margin-bottom: 1.5em;
+}
+div.admonitionblock {
+  margin-top: 2.0em;
+  margin-bottom: 2.0em;
+  margin-right: 10%;
+  color: #606060;
+}
+
+div.content { /* Block element content. */
+  padding: 0;
+}
+
+/* Block element titles. */
+div.title, caption.title {
+  color: #527bbd;
+  font-weight: bold;
+  text-align: left;
+  margin-top: 1.0em;
+  margin-bottom: 0.5em;
+}
+div.title + * {
+  margin-top: 0;
+}
+
+td div.title:first-child {
+  margin-top: 0.0em;
+}
+div.content div.title:first-child {
+  margin-top: 0.0em;
+}
+div.content + div.title {
+  margin-top: 0.0em;
+}
+
+div.sidebarblock > div.content {
+  background: #ffffee;
+  border: 1px solid #dddddd;
+  border-left: 4px solid #f0f0f0;
+  padding: 0.5em;
+}
+
+div.listingblock > div.content {
+  border: 1px solid #dddddd;
+  border-left: 5px solid #f0f0f0;
+  background: #f8f8f8;
+  padding: 0.5em;
+}
+
+div.quoteblock, div.verseblock {
+  padding-left: 1.0em;
+  margin-left: 1.0em;
+  margin-right: 10%;
+  border-left: 5px solid #f0f0f0;
+  color: #888;
+}
+
+div.quoteblock > div.attribution {
+  padding-top: 0.5em;
+  text-align: right;
+}
+
+div.verseblock > pre.content {
+  font-family: inherit;
+  font-size: inherit;
+}
+div.verseblock > div.attribution {
+  padding-top: 0.75em;
+  text-align: left;
+}
+/* DEPRECATED: Pre version 8.2.7 verse style literal block. */
+div.verseblock + div.attribution {
+  text-align: left;
+}
+
+div.admonitionblock .icon {
+  vertical-align: top;
+  font-size: 1.1em;
+  font-weight: bold;
+  text-decoration: underline;
+  color: #527bbd;
+  padding-right: 0.5em;
+}
+div.admonitionblock td.content {
+  padding-left: 0.5em;
+  border-left: 3px solid #dddddd;
+}
+
+div.exampleblock > div.content {
+  border-left: 3px solid #dddddd;
+  padding-left: 0.5em;
+}
+
+div.imageblock div.content { padding-left: 0; }
+span.image img { border-style: none; }
+a.image:visited { color: white; }
+
+dl {
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
+}
+dt {
+  margin-top: 0.5em;
+  margin-bottom: 0;
+  font-style: normal;
+  color: navy;
+}
+dd > *:first-child {
+  margin-top: 0.1em;
+}
+
+ul, ol {
+    list-style-position: outside;
+}
+ol.arabic {
+  list-style-type: decimal;
+}
+ol.loweralpha {
+  list-style-type: lower-alpha;
+}
+ol.upperalpha {
+  list-style-type: upper-alpha;
+}
+ol.lowerroman {
+  list-style-type: lower-roman;
+}
+ol.upperroman {
+  list-style-type: upper-roman;
+}
+
+div.compact ul, div.compact ol,
+div.compact p, div.compact p,
+div.compact div, div.compact div {
+  margin-top: 0.1em;
+  margin-bottom: 0.1em;
+}
+
+tfoot {
+  font-weight: bold;
+}
+td > div.verse {
+  white-space: pre;
+}
+
+div.hdlist {
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
+}
+div.hdlist tr {
+  padding-bottom: 15px;
+}
+dt.hdlist1.strong, td.hdlist1.strong {
+  font-weight: bold;
+}
+td.hdlist1 {
+  vertical-align: top;
+  font-style: normal;
+  padding-right: 0.8em;
+  color: navy;
+}
+td.hdlist2 {
+  vertical-align: top;
+}
+div.hdlist.compact tr {
+  margin: 0;
+  padding-bottom: 0;
+}
+
+.comment {
+  background: yellow;
+}
+
+.footnote, .footnoteref {
+  font-size: 0.8em;
+}
+
+span.footnote, span.footnoteref {
+  vertical-align: super;
+}
+
+#footnotes {
+  margin: 20px 0 20px 0;
+  padding: 7px 0 0 0;
+}
+
+#footnotes div.footnote {
+  margin: 0 0 5px 0;
+}
+
+#footnotes hr {
+  border: none;
+  border-top: 1px solid silver;
+  height: 1px;
+  text-align: left;
+  margin-left: 0;
+  width: 20%;
+  min-width: 100px;
+}
+
+div.colist td {
+  padding-right: 0.5em;
+  padding-bottom: 0.3em;
+  vertical-align: top;
+}
+div.colist td img {
+  margin-top: 0.3em;
+}
+
+@media print {
+  #footer-badges { display: none; }
+}
+
+#toc {
+  margin-bottom: 2.5em;
+}
+
+#toctitle {
+  color: #527bbd;
+  font-size: 1.1em;
+  font-weight: bold;
+  margin-top: 1.0em;
+  margin-bottom: 0.1em;
+}
+
+div.toclevel0, div.toclevel1, div.toclevel2, div.toclevel3, div.toclevel4 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+div.toclevel2 {
+  margin-left: 2em;
+  font-size: 0.9em;
+}
+div.toclevel3 {
+  margin-left: 4em;
+  font-size: 0.9em;
+}
+div.toclevel4 {
+  margin-left: 6em;
+  font-size: 0.9em;
+}
+
+span.aqua { color: aqua; }
+span.black { color: black; }
+span.blue { color: blue; }
+span.fuchsia { color: fuchsia; }
+span.gray { color: gray; }
+span.green { color: green; }
+span.lime { color: lime; }
+span.maroon { color: maroon; }
+span.navy { color: navy; }
+span.olive { color: olive; }
+span.purple { color: purple; }
+span.red { color: red; }
+span.silver { color: silver; }
+span.teal { color: teal; }
+span.white { color: white; }
+span.yellow { color: yellow; }
+
+span.aqua-background { background: aqua; }
+span.black-background { background: black; }
+span.blue-background { background: blue; }
+span.fuchsia-background { background: fuchsia; }
+span.gray-background { background: gray; }
+span.green-background { background: green; }
+span.lime-background { background: lime; }
+span.maroon-background { background: maroon; }
+span.navy-background { background: navy; }
+span.olive-background { background: olive; }
+span.purple-background { background: purple; }
+span.red-background { background: red; }
+span.silver-background { background: silver; }
+span.teal-background { background: teal; }
+span.white-background { background: white; }
+span.yellow-background { background: yellow; }
+
+span.big { font-size: 2em; }
+span.small { font-size: 0.6em; }
+
+span.underline { text-decoration: underline; }
+span.overline { text-decoration: overline; }
+span.line-through { text-decoration: line-through; }
+
+div.unbreakable { page-break-inside: avoid; }
+
+
+/*
+ * xhtml11 specific
+ *
+ * */
+
+div.tableblock {
+  margin-top: 1.0em;
+  margin-bottom: 1.5em;
+}
+div.tableblock > table {
+  border: 3px solid #527bbd;
+}
+thead, p.table.header {
+  font-weight: bold;
+  color: #527bbd;
+}
+p.table {
+  margin-top: 0;
+}
+/* Because the table frame attribute is overriden by CSS in most browsers. */
+div.tableblock > table[frame="void"] {
+  border-style: none;
+}
+div.tableblock > table[frame="hsides"] {
+  border-left-style: none;
+  border-right-style: none;
+}
+div.tableblock > table[frame="vsides"] {
+  border-top-style: none;
+  border-bottom-style: none;
+}
+
+
+/*
+ * html5 specific
+ *
+ * */
+
+table.tableblock {
+  margin-top: 1.0em;
+  margin-bottom: 1.5em;
+}
+thead, p.tableblock.header {
+  font-weight: bold;
+  color: #527bbd;
+}
+p.tableblock {
+  margin-top: 0;
+}
+table.tableblock {
+  border-width: 3px;
+  border-spacing: 0px;
+  border-style: solid;
+  border-color: #527bbd;
+  border-collapse: collapse;
+}
+th.tableblock, td.tableblock {
+  border-width: 1px;
+  padding: 4px;
+  border-style: solid;
+  border-color: #527bbd;
+}
+
+table.tableblock.frame-topbot {
+  border-left-style: hidden;
+  border-right-style: hidden;
+}
+table.tableblock.frame-sides {
+  border-top-style: hidden;
+  border-bottom-style: hidden;
+}
+table.tableblock.frame-none {
+  border-style: hidden;
+}
+
+th.tableblock.halign-left, td.tableblock.halign-left {
+  text-align: left;
+}
+th.tableblock.halign-center, td.tableblock.halign-center {
+  text-align: center;
+}
+th.tableblock.halign-right, td.tableblock.halign-right {
+  text-align: right;
+}
+
+th.tableblock.valign-top, td.tableblock.valign-top {
+  vertical-align: top;
+}
+th.tableblock.valign-middle, td.tableblock.valign-middle {
+  vertical-align: middle;
+}
+th.tableblock.valign-bottom, td.tableblock.valign-bottom {
+  vertical-align: bottom;
+}
+
+
+/*
+ * manpage specific
+ *
+ * */
+
+body.manpage h1 {
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  border-top: 2px solid silver;
+  border-bottom: 2px solid silver;
+}
+body.manpage h2 {
+  border-style: none;
+}
+body.manpage div.sectionbody {
+  margin-left: 3em;
+}
+
+@media print {
+  body.manpage div#toc { display: none; }
+}
+
+
+</style>
+<script type="text/javascript">
+/*<![CDATA[*/
+var asciidoc = {  // Namespace.
+
+/////////////////////////////////////////////////////////////////////
+// Table Of Contents generator
+/////////////////////////////////////////////////////////////////////
+
+/* Author: Mihai Bazon, September 2002
+ * http://students.infoiasi.ro/~mishoo
+ *
+ * Table Of Content generator
+ * Version: 0.4
+ *
+ * Feel free to use this script under the terms of the GNU General Public
+ * License, as long as you do not remove or alter this notice.
+ */
+
+ /* modified by Troy D. Hanson, September 2006. License: GPL */
+ /* modified by Stuart Rackham, 2006, 2009. License: GPL */
+
+// toclevels = 1..4.
+toc: function (toclevels) {
+
+  function getText(el) {
+    var text = "";
+    for (var i = el.firstChild; i != null; i = i.nextSibling) {
+      if (i.nodeType == 3 /* Node.TEXT_NODE */) // IE doesn't speak constants.
+        text += i.data;
+      else if (i.firstChild != null)
+        text += getText(i);
+    }
+    return text;
+  }
+
+  function TocEntry(el, text, toclevel) {
+    this.element = el;
+    this.text = text;
+    this.toclevel = toclevel;
+  }
+
+  function tocEntries(el, toclevels) {
+    var result = new Array;
+    var re = new RegExp('[hH]([1-'+(toclevels+1)+'])');
+    // Function that scans the DOM tree for header elements (the DOM2
+    // nodeIterator API would be a better technique but not supported by all
+    // browsers).
+    var iterate = function (el) {
+      for (var i = el.firstChild; i != null; i = i.nextSibling) {
+        if (i.nodeType == 1 /* Node.ELEMENT_NODE */) {
+          var mo = re.exec(i.tagName);
+          if (mo && (i.getAttribute("class") || i.getAttribute("className")) != "float") {
+            result[result.length] = new TocEntry(i, getText(i), mo[1]-1);
+          }
+          iterate(i);
+        }
+      }
+    }
+    iterate(el);
+    return result;
+  }
+
+  var toc = document.getElementById("toc");
+  if (!toc) {
+    return;
+  }
+
+  // Delete existing TOC entries in case we're reloading the TOC.
+  var tocEntriesToRemove = [];
+  var i;
+  for (i = 0; i < toc.childNodes.length; i++) {
+    var entry = toc.childNodes[i];
+    if (entry.nodeName.toLowerCase() == 'div'
+     && entry.getAttribute("class")
+     && entry.getAttribute("class").match(/^toclevel/))
+      tocEntriesToRemove.push(entry);
+  }
+  for (i = 0; i < tocEntriesToRemove.length; i++) {
+    toc.removeChild(tocEntriesToRemove[i]);
+  }
+
+  // Rebuild TOC entries.
+  var entries = tocEntries(document.getElementById("content"), toclevels);
+  for (var i = 0; i < entries.length; ++i) {
+    var entry = entries[i];
+    if (entry.element.id == "")
+      entry.element.id = "_toc_" + i;
+    var a = document.createElement("a");
+    a.href = "#" + entry.element.id;
+    a.appendChild(document.createTextNode(entry.text));
+    var div = document.createElement("div");
+    div.appendChild(a);
+    div.className = "toclevel" + entry.toclevel;
+    toc.appendChild(div);
+  }
+  if (entries.length == 0)
+    toc.parentNode.removeChild(toc);
+},
+
+
+/////////////////////////////////////////////////////////////////////
+// Footnotes generator
+/////////////////////////////////////////////////////////////////////
+
+/* Based on footnote generation code from:
+ * http://www.brandspankingnew.net/archive/2005/07/format_footnote.html
+ */
+
+footnotes: function () {
+  // Delete existing footnote entries in case we're reloading the footnodes.
+  var i;
+  var noteholder = document.getElementById("footnotes");
+  if (!noteholder) {
+    return;
+  }
+  var entriesToRemove = [];
+  for (i = 0; i < noteholder.childNodes.length; i++) {
+    var entry = noteholder.childNodes[i];
+    if (entry.nodeName.toLowerCase() == 'div' && entry.getAttribute("class") == "footnote")
+      entriesToRemove.push(entry);
+  }
+  for (i = 0; i < entriesToRemove.length; i++) {
+    noteholder.removeChild(entriesToRemove[i]);
+  }
+
+  // Rebuild footnote entries.
+  var cont = document.getElementById("content");
+  var spans = cont.getElementsByTagName("span");
+  var refs = {};
+  var n = 0;
+  for (i=0; i<spans.length; i++) {
+    if (spans[i].className == "footnote") {
+      n++;
+      var note = spans[i].getAttribute("data-note");
+      if (!note) {
+        // Use [\s\S] in place of . so multi-line matches work.
+        // Because JavaScript has no s (dotall) regex flag.
+        note = spans[i].innerHTML.match(/\s*\[([\s\S]*)]\s*/)[1];
+        spans[i].innerHTML =
+          "[<a id='_footnoteref_" + n + "' href='#_footnote_" + n +
+          "' title='View footnote' class='footnote'>" + n + "</a>]";
+        spans[i].setAttribute("data-note", note);
+      }
+      noteholder.innerHTML +=
+        "<div class='footnote' id='_footnote_" + n + "'>" +
+        "<a href='#_footnoteref_" + n + "' title='Return to text'>" +
+        n + "</a>. " + note + "</div>";
+      var id =spans[i].getAttribute("id");
+      if (id != null) refs["#"+id] = n;
+    }
+  }
+  if (n == 0)
+    noteholder.parentNode.removeChild(noteholder);
+  else {
+    // Process footnoterefs.
+    for (i=0; i<spans.length; i++) {
+      if (spans[i].className == "footnoteref") {
+        var href = spans[i].getElementsByTagName("a")[0].getAttribute("href");
+        href = href.match(/#.*/)[0];  // Because IE return full URL.
+        n = refs[href];
+        spans[i].innerHTML =
+          "[<a href='#_footnote_" + n +
+          "' title='View footnote' class='footnote'>" + n + "</a>]";
+      }
+    }
+  }
+},
+
+install: function(toclevels) {
+  var timerId;
+
+  function reinstall() {
+    asciidoc.footnotes();
+    if (toclevels) {
+      asciidoc.toc(toclevels);
+    }
+  }
+
+  function reinstallAndRemoveTimer() {
+    clearInterval(timerId);
+    reinstall();
+  }
+
+  timerId = setInterval(reinstall, 500);
+  if (document.addEventListener)
+    document.addEventListener("DOMContentLoaded", reinstallAndRemoveTimer, false);
+  else
+    window.onload = reinstallAndRemoveTimer;
+}
+
+}
+asciidoc.install();
+/*]]>*/
+</script>
+</head>
+<body class="article">
+<div id="header">
+</div>
+<div id="content">
+<div class="sect1">
+<h2 id="_general_check_in">General Check-in</h2>
+<div class="sectionbody">
+<div class="paragraph"><p><strong>Introduction</strong></p></div>
+<div class="paragraph"><p>The General Check-in widget provides interface to do many of the most
+common kinds of check-ins used in TACTIC. It is a highly configurable
+widget that allows a project to have customized check-ins for any part
+of the content creation process.</p></div>
+<div class="paragraph"><p>Check-ins are the ability to in TACTIC to take files that have been
+created and submitting them to TACTIC&#8217;s central repository to be
+organized, stored and versioned. TACTIC has a comprehensive ability to
+track files and their histories with the added benefit of enforcing
+naming conventions.</p></div>
+<div class="paragraph"><p>The general check-in widget can handle:</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+<strong>Single Files</strong> - An image, video, document, etc
+</p>
+</li>
+<li>
+<p>
+<strong>Sequences</strong> - Commonly image sequences
+</p>
+</li>
+<li>
+<p>
+<strong>Directories</strong> - Full directories including files and sub folders
+</p>
+</li>
+<li>
+<p>
+<strong>Complex packages</strong> - Handling of a project source including project
+and source medial files.
+</p>
+</li>
+</ul></div>
+<div class="paragraph"><p><strong>Interface</strong></p></div>
+<div class="paragraph"><p>The interface below shows a standard example of the General Check-in
+widget.</p></div>
+<div class="paragraph"><p><span class="image">
+<img src="media/checkin_widget_full.png" alt="image" />
+</span></p></div>
+<div class="paragraph"><p><strong>Tool bar</strong></p></div>
+<div class="paragraph"><p>The tool bar contains a number of use functions.</p></div>
+<div class="paragraph"><p><span class="image">
+<img src="media/checkin_toolbar.png" alt="image" />
+</span></p></div>
+<div class="tableblock">
+<table rules="all"
+width="100%"
+frame="border"
+cellspacing="0" cellpadding="4">
+<col width="25%" />
+<col width="75%" />
+<tbody>
+<tr>
+<td align="left" valign="top"><p class="table"><strong>Refresh</strong></p></td>
+<td align="left" valign="top"><p class="table">Refreshes the whole widget and will also rescan the sandbox
+for any changes.</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table"><strong>Browse to working folder</strong></p></td>
+<td align="left" valign="top"><p class="table">Allows the user to browse to a new location
+for the working area.</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table"><strong>Set to My Documents</strong></p></td>
+<td align="left" valign="top"><p class="table">Sets the working area to the My Documents
+directory</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table"><strong>Set to Desktop</strong></p></td>
+<td align="left" valign="top"><p class="table">Sets the working area to the Desktop directory.</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table"><strong>Browse</strong></p></td>
+<td align="left" valign="top"><p class="table">Allows the user to select file(s) or directories to check in
+directly.</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table"><strong>Set Sandbox</strong></p></td>
+<td align="left" valign="top"><p class="table">Set the sandbox automatically based on the naming
+conventions. This makes setting up a workspace very easy and organized.</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table"><strong>Check-out tools</strong></p></td>
+<td align="left" valign="top"><p class="table">Tools to assist in Checking out files. <em>Described in
+the section "Check-out" below</em></p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table"><strong>Explore Sandbox</strong></p></td>
+<td align="left" valign="top"><p class="table">Opens up the folder directly on the users computer.
+This allows for the quick copying and pasting files into your sandbox
+workspace.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="paragraph"><p><strong>Process Select</strong></p></div>
+<div class="paragraph"><p>Check-ins for an item are always classified by a processes. TACTIC
+organizes all of the check-ins with various processes that are defined
+for that item. The current process can be selected by the process
+selection drop-down. This often times corresponds to a task assigned to
+that user for that process.</p></div>
+<div class="paragraph"><p><span class="image">
+<img src="media/checkin_process_select.png" alt="image" />
+</span></p></div>
+<div class="paragraph"><p>This will only show up if a pipeline has been defined for the item. If
+no pipeline has been defined, then a default process called "publish" is
+used.</p></div>
+<div class="paragraph"><p>Often this selection will be locked because it is associated with an
+assigned task. A user will often work from a task also associated within
+a particular process and then choose to check in files based on content
+created from this task.</p></div>
+<div class="paragraph"><p><strong>Sandbox Area</strong></p></div>
+<div class="paragraph"><p><span class="image">
+<img src="media/checkin_sandbox.png" alt="image" />
+</span></p></div>
+<div class="paragraph"><p>On first load of a new task (process) the check-in widget will assist
+the user in setting up a work area.</p></div>
+<div class="paragraph"><p>The user experience protocol will determine how the user leverages the
+features in the sandbox. The recommended approach is to allow TACTIC to
+create a sandbox location for the current process. This method is
+beneficial because it helps the user organize work-up files before they
+are even checked into the server. This approach is recommended because
+it creates an easy accessible and well organized file system on the
+users computer. It is however, possible to check in files from another
+location on the file server using the browse buttons in the tool bar.</p></div>
+<div class="paragraph"><p><span class="image">
+<img src="media/checkin_first_load.png" alt="image" />
+</span></p></div>
+<div class="paragraph"><p>During the content creation process, users will create files and save
+them under this sandbox folder. All files associated with this item
+should be stored here. It should be noted that this sandbox work area is
+not strictly enforced and it is easily possible to navigate to other
+folders to check in files to a given asset. However, it is considered
+good practice to have user&#8217;s create files in a well defined location in
+order to more easily manage overall disk space usage.</p></div>
+<div class="paragraph"><p>Any files created in the sandbox area will be display in this section.
+If any new files have been created and are not reflected in the
+interface, then a simple refresh should make these new files appear.</p></div>
+<div class="paragraph"><p>Files that have been checked-in will show a small indicator in the icon
+to the right and will be colored in blue. The small indicator will
+either be a green check mark, which indicates that the file in the
+sandbox is identical to the checked in file. If the indicator is a red
+exclamation mark, this means that the file has been changed and is
+different from the checked in file.</p></div>
+<div class="paragraph"><p>To select all files in the sandbox area check off the "Select/Deselect
+All" check-box on the top right hand side.</p></div>
+<div class="paragraph"><p><span class="image">
+<img src="media/checkin_select_all.png" alt="image" />
+</span></p></div>
+<div class="paragraph"><p>To quickly select all changed files, click on the arrow to open up extra
+menus and select "Select Changed Files".</p></div>
+<div class="paragraph"><p><span class="image">
+<img src="media/checkin_changed_files.png" alt="image" />
+</span></p></div>
+<div class="paragraph"><p>All files that have been changed since the last check-in will be
+selected. TACTIC will remember the last subcontext checked in for this
+file so. This allows changed files to be easily rechecked in when
+changes have been made.</p></div>
+<div class="paragraph"><p>Clicking on the right mouse button of any file will open up a context
+menu.</p></div>
+<div class="paragraph"><p><span class="image">
+<img src="media/checkin_file_ctx_menu.png" alt="image" />
+</span></p></div>
+<div class="paragraph"><p>The following actions are available:</p></div>
+<div class="tableblock">
+<table rules="all"
+width="100%"
+frame="border"
+cellspacing="0" cellpadding="4">
+<col width="22%" />
+<col width="78%" />
+<tbody>
+<tr>
+<td align="left" valign="top"><p class="table"><strong>Open File</strong></p></td>
+<td align="left" valign="top"><p class="table">Open the file using the application as set up by the
+client operating system.</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table"><strong>Delete File</strong></p></td>
+<td align="left" valign="top"><p class="table">Permanently delete the file from the sandbox area (and
+on the computer).</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table"><strong>Properties</strong></p></td>
+<td align="left" valign="top"><p class="table">Open up a pop-up showing the properties of this file,
+including all past check in information. An example is shown below:</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="paragraph"><p><span class="image">
+<img src="media/checkin_file_properties.png" alt="image" />
+</span></p></div>
+<div class="paragraph"><p><strong>Check-In</strong></p></div>
+<div class="paragraph"><p>When any files are ready to be checked in, they can be selected. The row
+will highlight for all selected files, and either a selection list, or a
+text box will appear on the right side. Since many files can be checked
+into the same process in an asset, this provides a sub-category to
+organize checked in assets (this is known as the subcontext of the
+context of a check-in). By default, this should read (auto) which means
+that it will be automatically filled in.</p></div>
+<div class="paragraph"><p>When all of the files that need to be checked in have been selected, the
+check in widget will be enabled.</p></div>
+<div class="paragraph"><p>It&#8217;s good practice to add a note in the Description field while
+performing a check-in. This is important so all project users understand
+why a particular check-in was made, and where it&#8217;s located.</p></div>
+<div class="paragraph"><p>When the "Check-in" button is pressed, all of the selected files will be
+transferred to TACTIC&#8217;s repository. There are a number of ways that the
+files can be configured to transfer files. When TACTIC checks in a file,
+it will move them to the correct folder, version and rename them to the
+correct file name as specified for the naming conventions.</p></div>
+<div class="paragraph"><p><strong>Check-in Subcontext types</strong></p></div>
+<div class="paragraph"><p>When checking in, a drop-down is available beside each file or
+directory. This functionality allows control over how each check-in will
+be handled. This type of control is called <strong>subcontext</strong>. This can be
+looked at as a sub process for the sub-directories included in a
+check-in.</p></div>
+<div class="paragraph"><p><strong>Auto</strong></p></div>
+<div class="paragraph"><p>The "Auto" mode is used if it&#8217;s desired to keep file names the same as
+they are before the check in . This work-flow is beneficial if one
+wishes to keep file names, or work in a situation such at subversion
+where files are constantly overwritten and versions are handled
+automatically in the background.</p></div>
+<div class="tableblock">
+<table rules="all"
+width="100%"
+frame="border"
+cellspacing="0" cellpadding="4">
+<col width="18%" />
+<col width="82%" />
+<tbody>
+<tr>
+<td align="left" valign="top"><p class="table"><strong>Sandbox</strong></p></td>
+<td align="left" valign="top"><p class="table">SANDBOX/project/assets/asset001/design/original_file.jpg</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table"><strong>Check-in</strong></p></td>
+<td align="left" valign="top"><p class="table">[multiblock cell omitted]</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table"><strong>Check-out</strong></p></td>
+<td align="left" valign="top"><p class="table">SANDBOX/projcet/assets/asset001/design/original_file.jpg</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="paragraph"><p><strong>Main</strong></p></div>
+<div class="paragraph"><p>If only one file/directory/sequence is going to be checked-in, it will
+also be re-named correctly by the naming conventions. This is often the
+case when files are delivered to another department or the client.</p></div>
+<div class="tableblock">
+<table rules="all"
+width="100%"
+frame="border"
+cellspacing="0" cellpadding="4">
+<col width="18%" />
+<col width="82%" />
+<tbody>
+<tr>
+<td align="left" valign="top"><p class="table"><strong>Sandbox</strong></p></td>
+<td align="left" valign="top"><p class="table">SANDBOX/projcet/assets/asset001/design/original_file.jpg</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table"><strong>Check-in</strong></p></td>
+<td align="left" valign="top"><p class="table">SERVER/project/assets/asset001/design/asset001_design_v001.jpg</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table"><strong>Check-out</strong></p></td>
+<td align="left" valign="top"><p class="table">SANDBOX/projcet/assets/asset001/design/asset001_design_v001.jpg</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="paragraph"><p><strong>Text</strong></p></div>
+<div class="paragraph"><p>If more than one file/directory will be checked in and strict control is
+required for each item, the subcontext will be different each time a
+check-in happens. This often applies when different variations of a
+check-in are required. For example a blue and a red version of a file
+might be needed for a particular check-in, so the user would type this
+in for each file:</p></div>
+<div class="tableblock">
+<table rules="all"
+width="100%"
+frame="border"
+cellspacing="0" cellpadding="4">
+<col width="18%" />
+<col width="82%" />
+<tbody>
+<tr>
+<td align="left" valign="top"><p class="table"><strong>Sandbox</strong></p></td>
+<td align="left" valign="top"><p class="table">[multiblock cell omitted]</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table"><strong>Check-in</strong></p></td>
+<td align="left" valign="top"><p class="table">[multiblock cell omitted]</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table"><strong>Check-out</strong></p></td>
+<td align="left" valign="top"><p class="table">[multiblock cell omitted]</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="paragraph"><p><strong>List</strong></p></div>
+<div class="paragraph"><p>If more than one file/directory will be checked in and strict control is
+required for each item, the subcontexts are the same every time a
+check-in occurs. This often applies when there are multiple
+sub-directories that need to be worked on for a task. For example, a
+preview, project file and a directory of media files would be organized
+by selecting preview, project or media in the drop-down.</p></div>
+<div class="tableblock">
+<table rules="all"
+width="100%"
+frame="border"
+cellspacing="0" cellpadding="4">
+<col width="18%" />
+<col width="82%" />
+<tbody>
+<tr>
+<td align="left" valign="top"><p class="table"><strong>Sandbox</strong></p></td>
+<td align="left" valign="top"><p class="table">[multiblock cell omitted]</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table"><strong>Check-in</strong></p></td>
+<td align="left" valign="top"><p class="table">[multiblock cell omitted]</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table"><strong>Check-out</strong></p></td>
+<td align="left" valign="top"><p class="table">[multiblock cell omitted]</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="quoteblock">
+<div class="content">
+<div class="paragraph"><p><strong>Note</strong></p></div>
+<div class="paragraph"><p>Often these options are predetermined by the pipeline configuration set
+up by the TACTIC administrator. Other combinations file/directory naming
+and file version control can also be configured through naming
+conventions.</p></div>
+</div>
+<div class="attribution">
+</div></div>
+<div class="paragraph"><p><strong>Check-out</strong></p></div>
+<div class="paragraph"><p>When working on a particular task that is part of a pipeline, files may
+need to be checked out or "downloaded" to be worked on or revised.
+TACTIC assists with this process and allows easy access to retrieving
+the right files/directories from the TACTIC server.</p></div>
+<div class="paragraph"><p><strong>Check-out Options</strong></p></div>
+<div class="paragraph"><p><span class="image">
+<img src="media/checkout_options.png" alt="image" />
+</span></p></div>
+<div class="paragraph"><p>A specific version can be checked out through the Check-out button in
+the History area. There are also more advanced options available in the
+Check-out options menu.</p></div>
+<div class="tableblock">
+<table rules="all"
+width="100%"
+frame="border"
+cellspacing="0" cellpadding="4">
+<col width="22%" />
+<col width="78%" />
+<tbody>
+<tr>
+<td align="left" valign="top"><p class="table">Check-out w/ Source Name</p></td>
+<td align="left" valign="top"><p class="table">Check out the latest version of different
+contexts based on the original file name that was checked in regardless
+of naming conventions.</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">Check-out w/ Repository Name</p></td>
+<td align="left" valign="top"><p class="table">Check out the latest version of different
+contexts using the repository names as seen in the TACTIC repo.</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">Check-out w/ Versionless Name</p></td>
+<td align="left" valign="top"><p class="table">Verisonless check-ins only - Check out
+the latest versionless of different contexts using the the versionless
+convention as seen in the TACTIC repo.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="paragraph"><p><strong>History</strong></p></div>
+<div class="paragraph"><p>This area shows the check-in history. By default, this information is
+collapsed but can be accessed by clicking on Check-in history.</p></div>
+<div class="paragraph"><p><span class="image">
+<img src="media/checkin_history.png" alt="image" />
+</span></p></div>
+<div class="paragraph"><p><span class="image">
+<img src="media/checkout_version.png" alt="image" />
+</span></p></div>
+</div>
+</div>
+</div>
+<div id="footnotes"><hr /></div>
+<div id="footer">
+<div id="footer-text">
+Last updated 2015-10-22 21:52:39 EDT
+</div>
+</div>
+</body>
+</html>

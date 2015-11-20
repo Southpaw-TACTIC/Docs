@@ -134,7 +134,7 @@ include::../section/doc/tactic-end-user/end-user/exporting-csv-data/index.txt[]
 
 include::../section/doc/tactic-end-user/end-user/importing-csv-data/index.txt[]
 
-
+include::../section/doc/tactic-end-user/end-user/ingest-widget/index.txt[]
 
 :leveloffset: 0
 

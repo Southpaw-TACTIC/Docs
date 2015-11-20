@@ -1,0 +1,441 @@
+TACTIC Configuration File
+-------------------------
+
+The TACTIC config file stores settings such as directory locations and
+email server information.
+
+The name of the TACTIC config file and the location can be found here:
+
+[width="100%",cols="30%,30%,40%",options="header",]
+|=====================================================================
+|Filename |Operating System |Location
+|tactic-conf.xml |Windows or Linux |/config
+|=====================================================================
+
+note: Prior to TACTIC 3.8, the TACTIC config file is named differently
+for each operating system. See the table below:
+
+[width="100%",cols="30%,30%,40%",options="header",]
+|===============================================
+|Filename |Operating System |Location
+|tactic_win32-conf.xml |Windows |/project/config
+|tactic_linux-conf.xml |Linux |/project/config
+|===============================================
+
+For Windows, it is C:\ProgramData\Southpaw\Tactic\data by default for Enterprise Edition.
+
+Otherwise, it is usually /home/tactic/tactic_data by default on a Linux machine.
+Southpaw supplies the TACTIC config file as a template on installation.
+Once installed, this file can be modified to reflect any of the options
+described in the sections below. Most of the parameters can be modified in 
+the UI through Global > System Config as well. If an option tag does not exist in a
+particular section in your config file, TACTIC will assume a default or
+it can simply be added in.
+
+Install
+
+This section defines the hostname for the server (if different from
+"localhost") as well as the temp directory to be used for TACTIC. The
+tmp_dir is where temporary files are stored as well as the TACTIC log
+files.
+
+-----------------------------------------------------------
+<install>
+    <hostname>localhost</hostname>
+    <tmp_dir>/home/tactic/tactic_temp</tmp_dir>
+    <default_project>default_project_code</default_project>
+    <include_js>/context/some_external_lib.js</include_js>
+</install>
+-----------------------------------------------------------
+
+[cols="<,<",]
+|=======================================================================
+|HOSTNAME |This section defines the hostname for the server (if
+different from "localhost"). The hostname is what TACTIC listens to.
+
+|TMP_DIR |The temp directory to be used by TACTIC.
+
+|DEFAULT_PROJECT |Default project when the user browse the TACTIC base url.
+
+|INCLUDE_JS |You can include one or more external js files you want to 
+make use of separated by ,. 
+|=======================================================================
+
+Services
+
+This section defines information regarding the services external to
+TACTIC.
+
+----------------------------------------------------------------------------------------------
+<services>
+    <mailserver>smtp8.sympatico.ca</mailserver>
+    <mail_user>some_username</mail_user>
+    <mail_password>some_password</mail_password>
+    <mail_port>a port number other than 25</mail_port>
+    <mail_sender_disabled>true</mail_sender_disabled>
+    <mail_tls_enabled>true</mail_tls_enabled>
+    <python>python</python>
+    <python_path>/home/apache/custom</python_path>
+    <render_submit_class>sites.racoon.modules.command.CustomRenderSubmit</render_submit_class>
+    <process_count>3</process_count>
+    <thread_count>50</thread_count>
+    <process_time_alive>30</process_time_alive>
+    <system_class></system_class>
+</services>
+----------------------------------------------------------------------------------------------
+
+[cols="<,<",]
+|=======================================================================
+|MAILSERVER |The URL of the SMTP mail server
+
+|MAIL_PASSWORD |The password for accessing the SMTP mail server that
+requires authentication
+
+|MAIL_USER |The user name for accessing the SMTP mail server that
+requires authentication
+
+|MAIL_PORT |The port for the SMTP mail server (if different that 25)
+
+|MAIL_SENDER_DISABLED |disable using the sender name in sending of email
+in case the email server does not allow sender's email not owned by the
+sender
+
+|MAIL_TLS_ENABLED |enable TLS (Transport Layer Security) for the
+connection to email server
+
+|PYTHON |The root path of the Python installation. "python" is usually
+sufficient.
+
+|PYTHON_PATH |The server-side location for client files. This location
+can also be mounted from a shared volume if you wish to maintain
+stricter server access for clients. For multiple paths, separate with \|
+.e.g. /home/apache/custom\|/home/apache/custom_two
+
+|RENDER_SUBMIT_CLASS |The class used for render submissions.
+
+|PROCESS_COUNT |The number of processes the TACTIC service would spawn.
+It needs to match the number of ports used in the load balancing scheme
+in the Apache configuration.
+
+|THREAD_COUNT |The number of worker threads generated for each instance
+of the TACTIC process. If not set, it defaults to 10 which is too low to
+handle rapid requests.. TACTIC's default is 50 on new installation. A
+good balance of process_count and thread_count can improve response time
+of the server.
+
+|PROCESS_TIME_ALIVE |The number of minutes a TACTIC process gets
+respawned. It helps with the memory consumption inherent with a
+long-running Python process.
+
+|SYSTEM_CLASS |Allows for an override some of the low level system
+functionality. For example 'mkdirs' and 'exists'
+|=======================================================================
+
+Security
+
+This section defines information regarding the services external to
+TACTIC.
+
+------------------------------------------------------------
+<security>
+    <version>2</version>
+    <ticket_expiry>10 hour</ticket_expiry>
+    <authenticate_mode>default</authenticate_mode>
+    <authenticate_class></authenticate_class>
+    <authenticate_version>2</authenticate_version>
+    <case_insensitive_login>>false</case_insensitive_login>
+    <max_login_attempt>3</max_login_attempt>
+    <account_lockout_duration>30</account_lockout_duration>
+    <auto_create_user>false</auto_create_user>
+    <api_require_password>true</api_require_password>
+    <api_password></api_password>
+    <allow_guest>false</allow_guest>
+    <guest_mode>restricted</guest_mode>
+    <guest_url_allow>/guest_view</guest_url_allow>
+</security>
+------------------------------------------------------------
+
+[width="99%",cols="<11%,<89%",]
+|=======================================================================
+|TICKET_EXPIRY |The number of hours a login ticket expires after
+
+|AUTHENTICATE_MODE |default: This basically just looks at the tactic
+database for information.
+
+autocreate: This autocreates the first time and then leaves the
+information alone.
+
+cache: This caches the information to the tactic database on every
+login
+
+|AUTHENTICATE_CLASS |A full class path to override the default class
+"pyasm.security.TacticAuthenticate". Note: Your custom class needs to
+override the method verify() which takes two arguments: login and
+password.
+
+|AUTHENTICATE_VERSION |1 is the old way of authentication. 2 is the new
+way.
+
+|CASE_INSENSITIVE_LOGIN |If set to 'true', it allows case insensitive
+login name. When autocreate mode is used, all login entries created will
+have a lowercase login name. It can be used in combination with Active
+Directory setup.
+
+|MAX_LOGIN_ATTEMPT |Number of times login attempt can fail before account is locked out.
+
+|ACCOUNT_LOCKOUT_DURATION |Number of minutes a user account is locked out for failed login attempt if specified.
+
+|AUTO_CREATE_USER |Auto create user in TACTIC during authentication
+phase if it does not exist. (Deprecated: use "authenticate_mode" in new
+way of authentication)
+
+|API_REQUIRE_PASSOWRD |Client API script requires password to login or
+not
+
+|API_PASSWORD |A generic Client API password can be set here
+
+|ALLOW_GUEST |true or false can be set to allow guest to access without login
+
+|GUEST_MODE |full or restricted can be set. In restricted mode, a /guest relative URL is expected 
+              to be defined in Custom URL to restrict the guest to only see a particular view
+
+|GUEST_URL_ALLOW |In full mode, one can have multiple relative URLs predefined for guest, separated by \|.
+|=======================================================================
+
+Database
+
+--------------------------------------------------
+<database>
+    <vendor>PostgreSQL</vendor>
+    <server>localhost</server>
+    <port></port>
+    <user>postgres</user>
+    <password>none</password>
+    <sobject_database>sthpw</sobject_database>
+    <pool_max_connections>0</pool_max_connections>
+</database>
+--------------------------------------------------
+
+[cols="<,<",]
+|=======================================================================
+|VENDOR |The database vendor (software) the database will be installed
+on.
+
+|SERVER |The hostname of the server. This is localhost if TACTIC and the
+database are on the same server
+
+|PORT |The database connection port
+
+|USER |The user name for the database connection
+
+|PASSWORD |The password for the database connection.
+
+|SOBJECT_DATABASE |The database where SObject definitions will be stores
+
+|POOL_MAX_CONNECTIONS |The pool of connections available for connecting
+to the database. 0 is recommended for PostgreSQL implementation
+|=======================================================================
+
+Perforce
+
+-------------------------------
+<perforce>
+    <web_dir>perforce</web_dir>
+    <p4>p4</p4>
+    <port>1666</port>
+</perforce>
+-------------------------------
+
+[cols="<,<",]
+|=====================================================
+|WEB_DIR |The webdir for the perforce connection.
+|P4 |
+|PORT |The port to be used for connection to perforce.
+|=====================================================
+
+Look
+
+This setting provides a method of setting the TACTIC skin in the server
+for all users. In this example, the 'BON_NOCHE' palette specified:
+
+--------------------------------
+<look>
+    <palette>BON_NOCHE</palette>
+</look>
+--------------------------------
+
+Other available palettes are 'AQUA', 'DARK', 'BRIGHT', 'DEFAULT', 'SILVER',
+'AVIATOR', and 'ORIGAMI'. Alternatively, the whole palette can be
+customized as follows:
+
+----------------------------------------------------------------------------
+<look>
+     <palette>{
+             'color':        '#000000',         # main font color
+             'color2':       '#FFFFFF',         # secondary font color
+             'color3':       '#FFFFFF',         # tertiary font color
+             'background':   '#FDEEA7',         # main background color
+             'background2':  '#1A9481',         # secondary background color
+             'background3':  '#003D5c',         # tertiary background color
+             'border':       '#666666'          # main border color
+    }</palette>
+</palette>
+</look>
+----------------------------------------------------------------------------
+
+The side bar color may not change right away until the next TACTIC
+service restart.
+
+[cols="<,<",]
+|==========================================================
+|PALETTE |The default palette setting for all TACTIC users.
+|==========================================================
+
+Checkin
+
+TACTIC uses the following directory and path settings for internal and
+client interaction. They are included in the tag (for checkins).
+
+[width="99%",cols="<7%,<93%",]
+|=======================================================================
+|VERSIONLESS_MODE |COPY or SYMLINK: Turn on versionless mode for
+checkins for all projects. To set the versionless mode per project, go
+to PROJECT ADMIN -> PROJECT SETTINGS and add a the key VERSIONLESS_MODE
+and the value: COPY or SYMLINK.
+
+|ASSET_BASE_DIR |The directory where the assets are stored in the TACTIC
+server.
+
+|WEB_BASE_DIR |The root URL that maps the 'asset_base_dir' directory
+
+|WIN32_LOCAL_BASE_DIR |The base directory in Windows client machines
+
+|LINUX_LOCAL_BASE_DIR |The base directory in Linux client machines
+
+|WIN32_SANDBOX_DIR |The default sandbox directory in the Windows client
+machines (it can be overridden by Remote Repo)
+
+|LINUX_SANDBOX_DIR |The default sandbox directory in the Linux client
+machines (it can be overridden by Remote Repo)
+
+|WIN32_CLIENT_REPO_DIR |Maps the asset_base_dir directory as seen by the
+Windows client. For example, if asset_base_dir is on a Linux server with
+a path like "/home/apache/assets" but from the Windows client, it is
+mapped as "Z:/assets", then "Z:/assets" should be the value for this
+setting.
+
+By default, this path is empty because the system assumes the client
+and server are on the same Windows machine.
+
+|LINUX_CLIENT_REPO_DIR |Same as 'win32_client_repo_dir' except it is from
+the perspective of a Linux client machine
+
+|WIN32_CLIENT_HANDOFF_DIR |Windows client-side handoff directory for
+Client API transactions. (Find out more about the handoff directory
+below.)
+
+|WIN32_SERVER_HANDOFF_DIR |Windows server-side handoff directory for
+Client API transactions
+
+|LINUX_CLIENT_HANDOFF_DIR |Linux client-side handoff directory for
+Client API transactions
+
+|LINUX_SERVER_HANDOFF_DIR |Linux server-side handoff directory for
+Client API transactions
+
+|SUDO_NO_PASSWORD |It controls whether sudo can be run to change the
+user id and group id of the files checked in. It is particularly
+important if you want to ensure files checked in to the TACTIC
+repository are owned by TACTIC and not overwritable by just any users.
+If set to true, "no password" should be enabled for the user TACTIC is
+run as in the OS. e.g. For Fedora, assuming you have sudo installed:
+
+In the file /etc/sudoers, the following line should be uncommented:
+%wheel ALL=(ALL) NOPASSWD: ALL
+
+In the file /etc/group, apache should be added to the group wheel
+wheel:x:10:root,apache
+
+|VERSION_PADDING |padding of 3 or more can be set for checked-in files
+|=======================================================================
+
+THE HANDOFF DIRECTORIES
+
+Handoff directories can be seen by both the server and the client
+machines. They are used for 3D checkins and client API interactions, and
+are important for specifying how the client and server sides see the
+same location.
+
+For example, if you have the location //192.168.0.105/handoff available
+on your network and it is mounted as /home/apache/handoff on a server,
+then it would be important to include the following entries:
+
+----------------------------------------------------------------------------
+<win32_client_handoff_dir>//192.168.0.105/handoff</win32_client_handoff_dir>
+<win32_server_handoff_dir></win32_server_handoff_dir>
+<linux_client_handoff_dir></linux_client_handoff_dir>
+<linux_server_handoff_dir>/home/apache/handoff</linux_server_handoff_dir>
+----------------------------------------------------------------------------
+
+DIRECTORY CONFIGURATION EXAMPLES
+
+Example 1
+
+The assets directory is located on the TACTIC server and allows for
+read-only access from client machines in the local subnet.
+
+* The assets directory is located on the TACTIC server and allows for
+read-only access from client machines in the local subnet.
+* The handoff directory is located on the TACTIC server and allows for
+read/write access from client machines in the local subnet
+* The Windows and Linux 'client_repo_dir' looks directly to the server for
+the available "assets" share
+* The Windows and Linux 'client_handoff_dir' looks directly to the server
+for the available "handoff" share
++
+
+-------------------------------------------------------------------------------------
+<checkin>
+    <asset_base_dir>/home/apache/assets</asset_base_dir>
+    <web_base_dir>/assets</web_base_dir>
+    <win32_local_base_dir>C:/sthpw</win32_local_base_dir>
+    <linux_local_base_dir>/tmp/sthpw</linux_local_base_dir>
+    <win32_sandbox_dir>C:/sthpw/sandbox</win32_sandbox_dir>
+    <linux_sandbox_dir>/tmp/sthpw/sandbox</linux_sandbox_dir>
+    <win32_client_repo_dir>//192.168.0.105/apache/assets</win32_client_repo_dir>
+    <linux_client_repo_dir>/usr/assets</linux_client_repo_dir>
+    <win32_client_handoff_dir>//192.168.0.105/apache/handoff<win32_client_handoff_dir>
+    <win32_server_handoff_dir></win32_server_handoff_dir>
+    <linux_client_handoff_dir>/home/apache/handoff</linux_client_handoff_dir>
+    <linux_server_handoff_dir>/home/apache/handoff</linux_server_handoff_dir>
+    <version_padding>3</version_padding>
+</checkin>
+-------------------------------------------------------------------------------------
+
+Example 2
+
+* The assets directory is located on another server and mounted locally
+on the TACTIC server to /mnt1/assets.
+* The Windows and Linux 'client_repo_dir' is mapped/mounted to the TACTIC
+'asset_base_dir'
+* The Windows and Linux 'client_handoff_dir' is mapped/mounted to the
+TACTIC 'server_handoff_dir'
++
+
+-------------------------------------------------------------------------------------
+<checkin>
+    <asset_base_dir>/mnt1/assets</asset_base_dir>
+    <web_base_dir>/assets</web_base_dir>
+    <win32_local_base_dir>C:/sthpw</win32_local_base_dir>
+    <linux_local_base_dir>/tmp/sthpw</linux_local_base_dir>
+    <win32_sandbox_dir>C:/sthpw/sandbox</win32_sandbox_dir>
+    <linux_sandbox_dir>/tmp/sthpw/sandbox</linux_sandbox_dir>
+    <win32_client_repo_dir>z:/assets</win32_client_repo_dir>
+    <linux_client_repo_dir>/assets</linux_client_repo_dir>
+    <win32_client_handoff_dir>z:/tactic_handoff<win32_client_handoff_dir>
+    <win32_server_handoff_dir></win32_server_handoff_dir>
+    <linux_client_handoff_dir>/tactic_handoff</linux_client_handoff_dir>
+    <linux_server_handoff_dir>/home/apache/tactic_handoff</linux_server_handoff_dir>
+    <version_padding>3</version_padding>
+</checkin>
+-------------------------------------------------------------------------------------
