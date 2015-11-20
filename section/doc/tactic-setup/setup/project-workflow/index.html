@@ -1,0 +1,1288 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
+<meta name="generator" content="AsciiDoc 8.6.8" />
+<title></title>
+<style type="text/css">
+/* Shared CSS for AsciiDoc xhtml11 and html5 backends */
+
+/* Default font. */
+body {
+  font-family: Georgia,serif;
+}
+
+/* Title font. */
+h1, h2, h3, h4, h5, h6,
+div.title, caption.title,
+thead, p.table.header,
+#toctitle,
+#author, #revnumber, #revdate, #revremark,
+#footer {
+  font-family: Arial,Helvetica,sans-serif;
+}
+
+body {
+  margin: 1em 5% 1em 5%;
+}
+
+a {
+  color: blue;
+  text-decoration: underline;
+}
+a:visited {
+  color: fuchsia;
+}
+
+em {
+  font-style: italic;
+  color: navy;
+}
+
+strong {
+  font-weight: bold;
+  color: #083194;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #527bbd;
+  margin-top: 1.2em;
+  margin-bottom: 0.5em;
+  line-height: 1.3;
+}
+
+h1, h2, h3 {
+  border-bottom: 2px solid silver;
+}
+h2 {
+  padding-top: 0.5em;
+}
+h3 {
+  float: left;
+}
+h3 + * {
+  clear: left;
+}
+h5 {
+  font-size: 1.0em;
+}
+
+div.sectionbody {
+  margin-left: 0;
+}
+
+hr {
+  border: 1px solid silver;
+}
+
+p {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+ul, ol, li > p {
+  margin-top: 0;
+}
+ul > li     { color: #aaa; }
+ul > li > * { color: black; }
+
+.monospaced, code, pre {
+  font-family: "Courier New", Courier, monospace;
+  font-size: inherit;
+  color: navy;
+  padding: 0;
+  margin: 0;
+}
+
+
+#author {
+  color: #527bbd;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+#email {
+}
+#revnumber, #revdate, #revremark {
+}
+
+#footer {
+  font-size: small;
+  border-top: 2px solid silver;
+  padding-top: 0.5em;
+  margin-top: 4.0em;
+}
+#footer-text {
+  float: left;
+  padding-bottom: 0.5em;
+}
+#footer-badges {
+  float: right;
+  padding-bottom: 0.5em;
+}
+
+#preamble {
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+div.imageblock, div.exampleblock, div.verseblock,
+div.quoteblock, div.literalblock, div.listingblock, div.sidebarblock,
+div.admonitionblock {
+  margin-top: 1.0em;
+  margin-bottom: 1.5em;
+}
+div.admonitionblock {
+  margin-top: 2.0em;
+  margin-bottom: 2.0em;
+  margin-right: 10%;
+  color: #606060;
+}
+
+div.content { /* Block element content. */
+  padding: 0;
+}
+
+/* Block element titles. */
+div.title, caption.title {
+  color: #527bbd;
+  font-weight: bold;
+  text-align: left;
+  margin-top: 1.0em;
+  margin-bottom: 0.5em;
+}
+div.title + * {
+  margin-top: 0;
+}
+
+td div.title:first-child {
+  margin-top: 0.0em;
+}
+div.content div.title:first-child {
+  margin-top: 0.0em;
+}
+div.content + div.title {
+  margin-top: 0.0em;
+}
+
+div.sidebarblock > div.content {
+  background: #ffffee;
+  border: 1px solid #dddddd;
+  border-left: 4px solid #f0f0f0;
+  padding: 0.5em;
+}
+
+div.listingblock > div.content {
+  border: 1px solid #dddddd;
+  border-left: 5px solid #f0f0f0;
+  background: #f8f8f8;
+  padding: 0.5em;
+}
+
+div.quoteblock, div.verseblock {
+  padding-left: 1.0em;
+  margin-left: 1.0em;
+  margin-right: 10%;
+  border-left: 5px solid #f0f0f0;
+  color: #888;
+}
+
+div.quoteblock > div.attribution {
+  padding-top: 0.5em;
+  text-align: right;
+}
+
+div.verseblock > pre.content {
+  font-family: inherit;
+  font-size: inherit;
+}
+div.verseblock > div.attribution {
+  padding-top: 0.75em;
+  text-align: left;
+}
+/* DEPRECATED: Pre version 8.2.7 verse style literal block. */
+div.verseblock + div.attribution {
+  text-align: left;
+}
+
+div.admonitionblock .icon {
+  vertical-align: top;
+  font-size: 1.1em;
+  font-weight: bold;
+  text-decoration: underline;
+  color: #527bbd;
+  padding-right: 0.5em;
+}
+div.admonitionblock td.content {
+  padding-left: 0.5em;
+  border-left: 3px solid #dddddd;
+}
+
+div.exampleblock > div.content {
+  border-left: 3px solid #dddddd;
+  padding-left: 0.5em;
+}
+
+div.imageblock div.content { padding-left: 0; }
+span.image img { border-style: none; }
+a.image:visited { color: white; }
+
+dl {
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
+}
+dt {
+  margin-top: 0.5em;
+  margin-bottom: 0;
+  font-style: normal;
+  color: navy;
+}
+dd > *:first-child {
+  margin-top: 0.1em;
+}
+
+ul, ol {
+    list-style-position: outside;
+}
+ol.arabic {
+  list-style-type: decimal;
+}
+ol.loweralpha {
+  list-style-type: lower-alpha;
+}
+ol.upperalpha {
+  list-style-type: upper-alpha;
+}
+ol.lowerroman {
+  list-style-type: lower-roman;
+}
+ol.upperroman {
+  list-style-type: upper-roman;
+}
+
+div.compact ul, div.compact ol,
+div.compact p, div.compact p,
+div.compact div, div.compact div {
+  margin-top: 0.1em;
+  margin-bottom: 0.1em;
+}
+
+tfoot {
+  font-weight: bold;
+}
+td > div.verse {
+  white-space: pre;
+}
+
+div.hdlist {
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
+}
+div.hdlist tr {
+  padding-bottom: 15px;
+}
+dt.hdlist1.strong, td.hdlist1.strong {
+  font-weight: bold;
+}
+td.hdlist1 {
+  vertical-align: top;
+  font-style: normal;
+  padding-right: 0.8em;
+  color: navy;
+}
+td.hdlist2 {
+  vertical-align: top;
+}
+div.hdlist.compact tr {
+  margin: 0;
+  padding-bottom: 0;
+}
+
+.comment {
+  background: yellow;
+}
+
+.footnote, .footnoteref {
+  font-size: 0.8em;
+}
+
+span.footnote, span.footnoteref {
+  vertical-align: super;
+}
+
+#footnotes {
+  margin: 20px 0 20px 0;
+  padding: 7px 0 0 0;
+}
+
+#footnotes div.footnote {
+  margin: 0 0 5px 0;
+}
+
+#footnotes hr {
+  border: none;
+  border-top: 1px solid silver;
+  height: 1px;
+  text-align: left;
+  margin-left: 0;
+  width: 20%;
+  min-width: 100px;
+}
+
+div.colist td {
+  padding-right: 0.5em;
+  padding-bottom: 0.3em;
+  vertical-align: top;
+}
+div.colist td img {
+  margin-top: 0.3em;
+}
+
+@media print {
+  #footer-badges { display: none; }
+}
+
+#toc {
+  margin-bottom: 2.5em;
+}
+
+#toctitle {
+  color: #527bbd;
+  font-size: 1.1em;
+  font-weight: bold;
+  margin-top: 1.0em;
+  margin-bottom: 0.1em;
+}
+
+div.toclevel0, div.toclevel1, div.toclevel2, div.toclevel3, div.toclevel4 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+div.toclevel2 {
+  margin-left: 2em;
+  font-size: 0.9em;
+}
+div.toclevel3 {
+  margin-left: 4em;
+  font-size: 0.9em;
+}
+div.toclevel4 {
+  margin-left: 6em;
+  font-size: 0.9em;
+}
+
+span.aqua { color: aqua; }
+span.black { color: black; }
+span.blue { color: blue; }
+span.fuchsia { color: fuchsia; }
+span.gray { color: gray; }
+span.green { color: green; }
+span.lime { color: lime; }
+span.maroon { color: maroon; }
+span.navy { color: navy; }
+span.olive { color: olive; }
+span.purple { color: purple; }
+span.red { color: red; }
+span.silver { color: silver; }
+span.teal { color: teal; }
+span.white { color: white; }
+span.yellow { color: yellow; }
+
+span.aqua-background { background: aqua; }
+span.black-background { background: black; }
+span.blue-background { background: blue; }
+span.fuchsia-background { background: fuchsia; }
+span.gray-background { background: gray; }
+span.green-background { background: green; }
+span.lime-background { background: lime; }
+span.maroon-background { background: maroon; }
+span.navy-background { background: navy; }
+span.olive-background { background: olive; }
+span.purple-background { background: purple; }
+span.red-background { background: red; }
+span.silver-background { background: silver; }
+span.teal-background { background: teal; }
+span.white-background { background: white; }
+span.yellow-background { background: yellow; }
+
+span.big { font-size: 2em; }
+span.small { font-size: 0.6em; }
+
+span.underline { text-decoration: underline; }
+span.overline { text-decoration: overline; }
+span.line-through { text-decoration: line-through; }
+
+div.unbreakable { page-break-inside: avoid; }
+
+
+/*
+ * xhtml11 specific
+ *
+ * */
+
+div.tableblock {
+  margin-top: 1.0em;
+  margin-bottom: 1.5em;
+}
+div.tableblock > table {
+  border: 3px solid #527bbd;
+}
+thead, p.table.header {
+  font-weight: bold;
+  color: #527bbd;
+}
+p.table {
+  margin-top: 0;
+}
+/* Because the table frame attribute is overriden by CSS in most browsers. */
+div.tableblock > table[frame="void"] {
+  border-style: none;
+}
+div.tableblock > table[frame="hsides"] {
+  border-left-style: none;
+  border-right-style: none;
+}
+div.tableblock > table[frame="vsides"] {
+  border-top-style: none;
+  border-bottom-style: none;
+}
+
+
+/*
+ * html5 specific
+ *
+ * */
+
+table.tableblock {
+  margin-top: 1.0em;
+  margin-bottom: 1.5em;
+}
+thead, p.tableblock.header {
+  font-weight: bold;
+  color: #527bbd;
+}
+p.tableblock {
+  margin-top: 0;
+}
+table.tableblock {
+  border-width: 3px;
+  border-spacing: 0px;
+  border-style: solid;
+  border-color: #527bbd;
+  border-collapse: collapse;
+}
+th.tableblock, td.tableblock {
+  border-width: 1px;
+  padding: 4px;
+  border-style: solid;
+  border-color: #527bbd;
+}
+
+table.tableblock.frame-topbot {
+  border-left-style: hidden;
+  border-right-style: hidden;
+}
+table.tableblock.frame-sides {
+  border-top-style: hidden;
+  border-bottom-style: hidden;
+}
+table.tableblock.frame-none {
+  border-style: hidden;
+}
+
+th.tableblock.halign-left, td.tableblock.halign-left {
+  text-align: left;
+}
+th.tableblock.halign-center, td.tableblock.halign-center {
+  text-align: center;
+}
+th.tableblock.halign-right, td.tableblock.halign-right {
+  text-align: right;
+}
+
+th.tableblock.valign-top, td.tableblock.valign-top {
+  vertical-align: top;
+}
+th.tableblock.valign-middle, td.tableblock.valign-middle {
+  vertical-align: middle;
+}
+th.tableblock.valign-bottom, td.tableblock.valign-bottom {
+  vertical-align: bottom;
+}
+
+
+/*
+ * manpage specific
+ *
+ * */
+
+body.manpage h1 {
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  border-top: 2px solid silver;
+  border-bottom: 2px solid silver;
+}
+body.manpage h2 {
+  border-style: none;
+}
+body.manpage div.sectionbody {
+  margin-left: 3em;
+}
+
+@media print {
+  body.manpage div#toc { display: none; }
+}
+
+
+</style>
+<script type="text/javascript">
+/*<![CDATA[*/
+var asciidoc = {  // Namespace.
+
+/////////////////////////////////////////////////////////////////////
+// Table Of Contents generator
+/////////////////////////////////////////////////////////////////////
+
+/* Author: Mihai Bazon, September 2002
+ * http://students.infoiasi.ro/~mishoo
+ *
+ * Table Of Content generator
+ * Version: 0.4
+ *
+ * Feel free to use this script under the terms of the GNU General Public
+ * License, as long as you do not remove or alter this notice.
+ */
+
+ /* modified by Troy D. Hanson, September 2006. License: GPL */
+ /* modified by Stuart Rackham, 2006, 2009. License: GPL */
+
+// toclevels = 1..4.
+toc: function (toclevels) {
+
+  function getText(el) {
+    var text = "";
+    for (var i = el.firstChild; i != null; i = i.nextSibling) {
+      if (i.nodeType == 3 /* Node.TEXT_NODE */) // IE doesn't speak constants.
+        text += i.data;
+      else if (i.firstChild != null)
+        text += getText(i);
+    }
+    return text;
+  }
+
+  function TocEntry(el, text, toclevel) {
+    this.element = el;
+    this.text = text;
+    this.toclevel = toclevel;
+  }
+
+  function tocEntries(el, toclevels) {
+    var result = new Array;
+    var re = new RegExp('[hH]([1-'+(toclevels+1)+'])');
+    // Function that scans the DOM tree for header elements (the DOM2
+    // nodeIterator API would be a better technique but not supported by all
+    // browsers).
+    var iterate = function (el) {
+      for (var i = el.firstChild; i != null; i = i.nextSibling) {
+        if (i.nodeType == 1 /* Node.ELEMENT_NODE */) {
+          var mo = re.exec(i.tagName);
+          if (mo && (i.getAttribute("class") || i.getAttribute("className")) != "float") {
+            result[result.length] = new TocEntry(i, getText(i), mo[1]-1);
+          }
+          iterate(i);
+        }
+      }
+    }
+    iterate(el);
+    return result;
+  }
+
+  var toc = document.getElementById("toc");
+  if (!toc) {
+    return;
+  }
+
+  // Delete existing TOC entries in case we're reloading the TOC.
+  var tocEntriesToRemove = [];
+  var i;
+  for (i = 0; i < toc.childNodes.length; i++) {
+    var entry = toc.childNodes[i];
+    if (entry.nodeName.toLowerCase() == 'div'
+     && entry.getAttribute("class")
+     && entry.getAttribute("class").match(/^toclevel/))
+      tocEntriesToRemove.push(entry);
+  }
+  for (i = 0; i < tocEntriesToRemove.length; i++) {
+    toc.removeChild(tocEntriesToRemove[i]);
+  }
+
+  // Rebuild TOC entries.
+  var entries = tocEntries(document.getElementById("content"), toclevels);
+  for (var i = 0; i < entries.length; ++i) {
+    var entry = entries[i];
+    if (entry.element.id == "")
+      entry.element.id = "_toc_" + i;
+    var a = document.createElement("a");
+    a.href = "#" + entry.element.id;
+    a.appendChild(document.createTextNode(entry.text));
+    var div = document.createElement("div");
+    div.appendChild(a);
+    div.className = "toclevel" + entry.toclevel;
+    toc.appendChild(div);
+  }
+  if (entries.length == 0)
+    toc.parentNode.removeChild(toc);
+},
+
+
+/////////////////////////////////////////////////////////////////////
+// Footnotes generator
+/////////////////////////////////////////////////////////////////////
+
+/* Based on footnote generation code from:
+ * http://www.brandspankingnew.net/archive/2005/07/format_footnote.html
+ */
+
+footnotes: function () {
+  // Delete existing footnote entries in case we're reloading the footnodes.
+  var i;
+  var noteholder = document.getElementById("footnotes");
+  if (!noteholder) {
+    return;
+  }
+  var entriesToRemove = [];
+  for (i = 0; i < noteholder.childNodes.length; i++) {
+    var entry = noteholder.childNodes[i];
+    if (entry.nodeName.toLowerCase() == 'div' && entry.getAttribute("class") == "footnote")
+      entriesToRemove.push(entry);
+  }
+  for (i = 0; i < entriesToRemove.length; i++) {
+    noteholder.removeChild(entriesToRemove[i]);
+  }
+
+  // Rebuild footnote entries.
+  var cont = document.getElementById("content");
+  var spans = cont.getElementsByTagName("span");
+  var refs = {};
+  var n = 0;
+  for (i=0; i<spans.length; i++) {
+    if (spans[i].className == "footnote") {
+      n++;
+      var note = spans[i].getAttribute("data-note");
+      if (!note) {
+        // Use [\s\S] in place of . so multi-line matches work.
+        // Because JavaScript has no s (dotall) regex flag.
+        note = spans[i].innerHTML.match(/\s*\[([\s\S]*)]\s*/)[1];
+        spans[i].innerHTML =
+          "[<a id='_footnoteref_" + n + "' href='#_footnote_" + n +
+          "' title='View footnote' class='footnote'>" + n + "</a>]";
+        spans[i].setAttribute("data-note", note);
+      }
+      noteholder.innerHTML +=
+        "<div class='footnote' id='_footnote_" + n + "'>" +
+        "<a href='#_footnoteref_" + n + "' title='Return to text'>" +
+        n + "</a>. " + note + "</div>";
+      var id =spans[i].getAttribute("id");
+      if (id != null) refs["#"+id] = n;
+    }
+  }
+  if (n == 0)
+    noteholder.parentNode.removeChild(noteholder);
+  else {
+    // Process footnoterefs.
+    for (i=0; i<spans.length; i++) {
+      if (spans[i].className == "footnoteref") {
+        var href = spans[i].getElementsByTagName("a")[0].getAttribute("href");
+        href = href.match(/#.*/)[0];  // Because IE return full URL.
+        n = refs[href];
+        spans[i].innerHTML =
+          "[<a href='#_footnote_" + n +
+          "' title='View footnote' class='footnote'>" + n + "</a>]";
+      }
+    }
+  }
+},
+
+install: function(toclevels) {
+  var timerId;
+
+  function reinstall() {
+    asciidoc.footnotes();
+    if (toclevels) {
+      asciidoc.toc(toclevels);
+    }
+  }
+
+  function reinstallAndRemoveTimer() {
+    clearInterval(timerId);
+    reinstall();
+  }
+
+  timerId = setInterval(reinstall, 500);
+  if (document.addEventListener)
+    document.addEventListener("DOMContentLoaded", reinstallAndRemoveTimer, false);
+  else
+    window.onload = reinstallAndRemoveTimer;
+}
+
+}
+asciidoc.install();
+/*]]>*/
+</script>
+</head>
+<body class="article">
+<div id="header">
+</div>
+<div id="content">
+<div class="sect1">
+<h2 id="_workflow_editor">Workflow Editor</h2>
+<div class="sectionbody">
+<div class="paragraph"><p><span class="image">
+<img src="media/1_workflow_editor_overview.png" alt="image" />
+</span></p></div>
+<div class="paragraph"><p><strong>Introduction</strong></p></div>
+<div class="paragraph"><p>The Workflow Editor is a graphical tool in TACTIC used to interactively
+create pipelines (workflows). It is a node-based tool which creates
+processes in a pipeline and connects them. The Workflow Editor makes it
+easier to create large complex pipelines to filter and process
+information and file system flow.</p></div>
+<div class="paragraph"><p>The Workflow Editor is simple to use and similar to node base utilities
+commonly found in other applications. Nodes can be created in the canvas
+and connected together. Each node represents a process (with attributes
+associated to it) and each connection represents information being
+delivered from one process to the other. Together, the Workflow Editor
+helps you create a definition of the pipeline document and drive much of
+the information flow in TACTIC.</p></div>
+<div class="paragraph"><p><strong>Access the Workflow Editor</strong></p></div>
+<div class="paragraph"><p>Access the Workflow Editor by going to:</p></div>
+<div class="paragraph"><p><strong>Admin Views &#8594; Project Admin &#8594; Project Workflow</strong></p></div>
+<div class="paragraph"><p>When the option for "Has Pipeline" is selected during the registration
+of the sType, this defines a default pipeline for that sType. This
+pipeline can be found defined in the Workflow Editor in the sidebar
+under <strong>Project Pipelines</strong>. To add a new pipeline manually, the select
+the [+] icon in bottom panel of the Workflow Editor.</p></div>
+<div class="paragraph"><p><span class="image">
+<img src="media/2_workflow_editor_pipelines_panel.png" alt="image" />
+</span></p></div>
+<div class="paragraph"><p><strong>Interface Walk Through</strong></p></div>
+<div class="paragraph"><p>The buttons at the top of the Workflow Editor allow various operations
+on the canvas:</p></div>
+<div class="paragraph"><p><span class="image">
+<img src="media/pipeline_tools.png" alt="image" />
+</span></p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+<strong>Create:</strong> Creates a new node on the canvas.
+</p>
+</li>
+<li>
+<p>
+<strong>Delete:</strong> Deletes the selected node.
+</p>
+</li>
+<li>
+<p>
+<strong>Save:</strong> Saves the current state of the pipeline to the database.
+</p>
+</li>
+<li>
+<p>
+<strong>Clear:</strong> Clears the canvas.
+</p>
+</li>
+<li>
+<p>
+<strong>Properties:</strong> Opens the Node Properties panel.
+</p>
+</li>
+</ul></div>
+<div class="paragraph"><p><strong>Edit Properties of a Pipeline</strong></p></div>
+<div class="paragraph"><p>To edit the properties of a pipeline, first select a node in the
+pipeline and then click on the <strong>Edit Properties</strong> button on the tool
+shelf.</p></div>
+<div class="quoteblock">
+<div class="content">
+<div class="paragraph"><p><strong>Note</strong></p></div>
+<div class="paragraph"><p>For more information regarding the Process Options, refer to the section
+Project Workflow &#8594; Pipeline Process Options</p></div>
+</div>
+<div class="attribution">
+</div></div>
+<div class="paragraph"><p><span class="image">
+<img src="media/7_workflow_editor_properties.png" alt="image" />
+</span></p></div>
+<div class="paragraph"><p><strong>Lay Out a Pipeline</strong></p></div>
+<div class="paragraph"><p>When you click the green plus button,
+*Create*<span class="image">
+<img src="media/add_button.png" alt="image" />
+</span>, a new node will appear on the
+canvas.</p></div>
+<div class="paragraph"><p><span class="image">
+<img src="media/pipeline_node_insert.png" alt="image" />
+</span></p></div>
+<div class="paragraph"><p>Rename the node: Select the new node and press CTRL-LMB to rename the
+node. Alternatively, right click and select <strong>Rename Node</strong> from the
+context menu.</p></div>
+<div class="paragraph"><p><span class="image">
+<img src="media/pipeline_node_naming.png" alt="image" />
+</span></p></div>
+<div class="paragraph"><p>Type in the new name for the node ("Model," in this example), and press
+<strong>Enter</strong>.</p></div>
+<div class="paragraph"><p><span class="image">
+<img src="media/pipeline_node.png" alt="image" />
+</span></p></div>
+<div class="paragraph"><p>Create another new node (called "Texture" in this example).</p></div>
+<div class="paragraph"><p><span class="image">
+<img src="media/pipeline_nodes.png" alt="image" />
+</span></p></div>
+<div class="paragraph"><p>To create a connection between the two nodes, click on the handle on the
+right side of the "Model" node. This will create a connector which will
+follow the cursor.</p></div>
+<div class="paragraph"><p><span class="image">
+<img src="media/pipeline_node_connector.png" alt="image" />
+</span></p></div>
+<div class="paragraph"><p>Click on the left handle of the "Texture" node to complete the
+connection. Now, the 2 nodes are connected together. Once 2 nodes are
+connected, they will stay connected unless the connector is selected and
+deleted.</p></div>
+<div class="paragraph"><p><span class="image">
+<img src="media/pipeline_node_connection.png" alt="image" />
+</span></p></div>
+<div class="paragraph"><p>It is also possible to have one node connect to more than one node. In
+the following example, the "Model" process delivers to both the
+"Texture" process and a "Rig" process:</p></div>
+<div class="paragraph"><p><span class="image">
+<img src="media/Pipeline_node_tree.png" alt="image" />
+</span></p></div>
+<div class="paragraph"><p><strong>Pipeline Workflow Automation</strong></p></div>
+<div class="paragraph"><p>Repetition and daily components that make up a user&#8217;s workflow can be
+made easier through automation of notifications, file/directory naming
+and triggering custom logic. Automations such as these can vary from
+simply sending an email or automatically setting upstream and downstream
+task statuses to running custom Python scripts and tools to encode
+files, submit renders, generate previews, deliver files to clients, etc.</p></div>
+<div class="paragraph"><p>On the Workflow Editor&#8217;s canvas, right-clicking on a node will bring up
+the context menu where the automation interfaces can be loaded into the
+lower half of the interface. These options include:</p></div>
+<div class="tableblock">
+<table rules="all"
+width="100%"
+frame="border"
+cellspacing="0" cellpadding="4">
+<col width="50%" />
+<col width="50%" />
+<tbody>
+<tr>
+<td align="left" valign="top"><p class="table"><strong>Show Properties</strong></p></td>
+<td align="left" valign="top"><p class="table">Loads the Node Properties window.</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table"><strong>Show Triggers/Notifications</strong></p></td>
+<td align="left" valign="top"><p class="table">Loads the Triggers and Notifications
+setup Interface</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table"><strong>Show File Naming</strong></p></td>
+<td align="left" valign="top"><p class="table">Loads the Directory and File naming convention
+setup Interface</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="quoteblock">
+<div class="content">
+<div class="paragraph"><p><strong>Note</strong></p></div>
+<div class="paragraph"><p>Each of the menu options are explained in the "Project Automation"
+section of the documentation.</p></div>
+</div>
+<div class="attribution">
+</div></div>
+<div class="paragraph"><p><strong>Mouse and Keyboard Shortcuts</strong></p></div>
+<div class="paragraph"><p>When the cursor is over the canvas in the pipeline editor, the following
+mouse and keyboard shortcuts are available:</p></div>
+<div class="tableblock">
+<table rules="all"
+width="100%"
+frame="border"
+cellspacing="0" cellpadding="4">
+<col width="51%" />
+<col width="49%" />
+<tbody>
+<tr>
+<td align="left" valign="top"><p class="table"><strong>LMB</strong> on a node</p></td>
+<td align="left" valign="top"><p class="table">Select the node</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table"><strong>LMB</strong> on the empty canvas space</p></td>
+<td align="left" valign="top"><p class="table">Clears selection</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table"><strong>LMB + Ctrl</strong> click on a node</p></td>
+<td align="left" valign="top"><p class="table">Edits the name of the node</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table"><strong>LMB + Shift</strong> click on a node</p></td>
+<td align="left" valign="top"><p class="table">Add node to selection</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table"><strong>LMB + drag</strong> on a node</p></td>
+<td align="left" valign="top"><p class="table">Drags the node around the canvas</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table"><strong>LMB + drag</strong> on the empty canvas space</p></td>
+<td align="left" valign="top"><p class="table">Pans around the canvas</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table"><strong>LMB + Shift + drag</strong> to form a selection box</p></td>
+<td align="left" valign="top"><p class="table">Forms a selection box</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table"><strong>LMB + Ctrl + drag</strong> to the left or the right</p></td>
+<td align="left" valign="top"><p class="table">Zooms in or out on the
+canvas</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table"><strong>DELETE</strong></p></td>
+<td align="left" valign="top"><p class="table">Deletes the selected node(s)</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="paragraph"><p><strong>To Change Node Color</strong></p></div>
+<div class="paragraph"><p>To change the node color, go to the <strong>Workflow Editor &#8594; sidebar</strong></p></div>
+<div class="paragraph"><p>right click on the pipeline and select <strong>Edit Pipeline Data</strong></p></div>
+<div class="paragraph"><p><span class="image">
+<img src="media/3_workflow_editor_edit_pipeline_data.png" alt="image" />
+</span></p></div>
+<div class="paragraph"><p>Next, click on the color input field. A color swatch will pop-up. Select
+the new color for this pipeline from the color swatch.</p></div>
+<div class="paragraph"><p><span class="image">
+<img src="media/4_workflow_editor_change_node_color.png" alt="image" />
+</span></p></div>
+<div class="paragraph"><p>Another way to change the color is in the <strong>Workflow Editor &#8594; Pipelines
+tab (panel at the bottom)</strong> click on the <strong>color</strong> column and pick the
+color from the color swatch.</p></div>
+<div class="paragraph"><p><span class="image">
+<img src="media/5_workflow_editor_change_node_color_method_two.png" alt="image" />
+</span></p></div>
+<div class="paragraph"><p><strong>Pipeline Node Context Menu Options</strong></p></div>
+<div class="paragraph"><p>Right click on the pipeline node will display the following menu
+options:</p></div>
+<div class="paragraph"><p><span class="image">
+<img src="media/6_workflow_editor_node_context_menu.png" alt="image" />
+</span></p></div>
+<div class="tableblock">
+<table rules="all"
+width="100%"
+frame="border"
+cellspacing="0" cellpadding="4">
+<col width="51%" />
+<col width="49%" />
+<tbody>
+<tr>
+<td align="left" valign="top"><p class="table"><strong>Add To Current Group</strong></p></td>
+<td align="left" valign="top"><p class="table">Add the selected node to the current group</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table"><strong>Rename Node</strong></p></td>
+<td align="left" valign="top"><p class="table">Rename the current selected node</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table"><strong>Delete Node</strong></p></td>
+<td align="left" valign="top"><p class="table">Delete the current selected node</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table"><strong>Delete Group</strong></p></td>
+<td align="left" valign="top"><p class="table">Delete the group for the current selected node</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table"><strong>Edit Properties</strong></p></td>
+<td align="left" valign="top"><p class="table">Edit the properties for the current selected node</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table"><strong>Show Triggers/Notifications</strong></p></td>
+<td align="left" valign="top"><p class="table">Display the triggers and notifications
+view in the bottom panel</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table"><strong>Show Processes</strong></p></td>
+<td align="left" valign="top"><p class="table">Display the processes in the bottom panel</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table"><strong>Customize Task Status</strong></p></td>
+<td align="left" valign="top"><p class="table">Create a custom task status pipeline for the
+process (refresh the Workflow Editor to see it added to the sidebar)</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="paragraph" id="task-status-pipelines"><p><strong>Task Status Pipelines</strong></p></div>
+<div class="paragraph" id="section"><p>Task Status Pipelines are created in almost the same way as regular
+Pipelines. except that in the new pipeline dialog, Task should be selected
+for Search Type. Nodes are created and joined together in the same way.
+Each task has a pipeline_code attribute and by default it uses the built-in "task"
+task status pipeline. When you specify a custom task status pipeline, the task&#8217;s
+statuses will change accordingly.</p></div>
+<div class="paragraph" id="types-of-node"><p><strong>Types of Node</strong></p></div>
+<div class="paragraph"><p>There are five different types of nodes with different shapes:
+manual, action, condition, approval, and hierarchy nodes. Each of the
+different nodes can enhance the effectiveness of the pipelines and be
+used to fit the environment and behaviors of specific workflows.</p></div>
+<div class="paragraph"><p><span class="image">
+<img src="media/type_of_nodes.png" alt="image" />
+</span></p></div>
+<div class="tableblock">
+<table rules="all"
+width="100%"
+frame="border"
+cellspacing="0" cellpadding="4">
+<col width="34%" />
+<col width="33%" />
+<col width="33%" />
+<tbody>
+<tr>
+<td align="left" valign="top"><p class="table">Type of Node</p></td>
+<td align="left" valign="top"><p class="table">Representation</p></td>
+<td align="left" valign="top"><p class="table">Description</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">Manual Node</p></td>
+<td align="left" valign="top"><p class="table"><span class="image">
+<img src="media/manual_node.png" alt="image" />
+</span></p></td>
+<td align="left" valign="top"><p class="table">Manual nodes are the
+default nodes that represent tasks within a pipeline, users assigned to
+a Manual node are expected to complete the task. Manual nodes usually
+involve work that needs to be done, such as asset ingestion, or a
+submission of assets being worked on.</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">Action Node</p></td>
+<td align="left" valign="top"><p class="table"><span class="image">
+<img src="media/action_node.png" alt="image" />
+</span></p></td>
+<td align="left" valign="top"><p class="table">Action nodes can
+automatically execute an action based on a script once the preceding
+task is completed. For example, if its preceding Approval Node is
+<em>Approved</em>, or a Manual Node is set to <em>Complete</em>, the action node will
+be set off right away, and changes its following node will be set to
+<em>Pending</em>.</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">Conditional Node</p></td>
+<td align="left" valign="top"><p class="table"><span class="image">
+<img src="media/conditional_node.png" alt="image" />
+</span></p></td>
+<td align="left" valign="top"><p class="table">Condition nodes are
+used when the path of a process needs to be determined by checking
+specified conditions using a script. It can also automatically change
+statuses of other nodes. The condition check should either return True
+or False, or a list of the output streams. For example, if the
+conditional checks return "False", it will set the status of the
+previous node to <em>Revise</em>.</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">Approval Node</p></td>
+<td align="left" valign="top"><p class="table"><span class="image">
+<img src="media/approval_node.png" alt="image" />
+</span></p></td>
+<td align="left" valign="top"><p class="table">Approval nodes allow
+assignment to user groups that are required to approve the process. If
+the status of an Approval node is changed to <em>Rejected</em>, the preceding
+task status will be changed from <em>Complete</em> to <em>Revise</em> automatically.
+Similar to other nodes, if the status is changed to <em>Approved</em>, the
+following node will be in Pending status.</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">Hierarchy Node</p></td>
+<td align="left" valign="top"><p class="table"><span class="image">
+<img src="media/hierarchy_node.png" alt="image" />
+</span></p></td>
+<td align="left" valign="top"><p class="table">Hierarchy nodes are
+currently on the development roadmap.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="paragraph" id="triggers"><p><strong>Triggers</strong></p></div>
+<div class="paragraph"><p>To open the Trigger and Notification editor, begin by selecting a manual
+node. On the right side of the window there will be a Process
+Configuration view. If this view is empty, simply save the pipeline and
+click the node one more time.</p></div>
+<div class="paragraph"><p>From this view, the Trigger and Notification editor can be displayed by
+clicking the View button beside Triggers or Notifications. This will
+bring up a popup giving information about existing Triggers and
+Notifications. To add a new one, press the plus button in the popup
+window.</p></div>
+<div class="paragraph"><p>From here, add a name and description of the trigger, and choose the
+event and action. The list of events includes common operations
+performed on nodes (or tasks). For example, the checking in of a file,
+the assigning of a task or the changing of a status can all cause an
+event.</p></div>
+<div class="paragraph"><p>Actions are what happens when an event is triggered. Many Actions have
+the ability to affect other tasks, and others have the ability to send
+out notifications.</p></div>
+<div class="paragraph"><p><span class="image">
+<img src="media/trigger_setup.png" alt="image" />
+</span></p></div>
+<div class="paragraph"><p>Here are some examples of common Event - Action relationships:</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+Changing a task status to Complete causes the next task&#8217;s status to change to In Progress
+</p>
+</li>
+<li>
+<p>
+In the case of a Design task followed by a Review task: changing the
+Design task&#8217;s status to Complete changes the Review task&#8217;s status to
+Need Review
+</p>
+</li>
+<li>
+<p>
+Changing a Review task&#8217;s status to Rejected changes the previous
+task&#8217;s status to Revise
+</p>
+</li>
+<li>
+<p>
+Assigning a task to a user sends a notification to that user
+</p>
+</li>
+<li>
+<p>
+Adding a note to a task sends a notification to a user group
+</p>
+</li>
+</ul></div>
+<div class="paragraph"><p>Building on top of user-created pipelines, this trigger system allows
+users to make use of powerful automation to make their projects run
+smoother.</p></div>
+<div class="paragraph" id="notifications"><p><strong>Notifications</strong></p></div>
+<div class="paragraph"><p>Notifications are created in the same way as triggers. It&#8217;s simply a
+matter of selecting Send a notification under the Action section. From
+here a user can choose to send the default message and type in mail
+destinations and cc&#8217;s. These two boxes can contain email addresses,
+login codes and group codes.</p></div>
+<div class="paragraph"><p><span class="image">
+<img src="media/notification_setup.png" alt="image" />
+</span></p></div>
+<div class="paragraph"><p>The message can be customized also. To do so, uncheck Use Default
+Message and fill in the Subject and Message text areas. A text-based
+message can be entered, including variables related to the modified
+item. Below is a table of common variables:</p></div>
+<div class="tableblock">
+<table rules="all"
+width="100%"
+frame="border"
+cellspacing="0" cellpadding="4">
+<col width="50%" />
+<col width="50%" />
+<tbody>
+<tr>
+<td align="left" valign="top"><p class="table">Login of user that made the change</p></td>
+<td align="left" valign="top"><p class="table">{@GET(.login)}</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">If a note is added, the note content</p></td>
+<td align="left" valign="top"><p class="table">{@GET(.note)}</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">Name / Code of modified item</p></td>
+<td align="left" valign="top"><p class="table">{@GET(.name)} / {@GET(.code)}</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">If a note is assigned, the assignee</p></td>
+<td align="left" valign="top"><p class="table">{@GET(.assigned)}</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">Status of the given task</p></td>
+<td align="left" valign="top"><p class="table">{@GET(.status)}</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">If a task is changed, name / code of its parent</p></td>
+<td align="left" valign="top"><p class="table">{@GET(parent.name)}</p>
+<p class="table">{@GET(parent.code)}</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">Process of modified task</p></td>
+<td align="left" valign="top"><p class="table">{@GET(.process)}</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">Any column of modified item</p></td>
+<td align="left" valign="top"><p class="table">{@GET(.&lt;column_code&gt;)}</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="paragraph"><p>For mail_to and mail_cc, you can use an email address or expression that
+optionally makes use of the current sobject. Let&#8217;s say the sobject is a task,
+the <em>sobject</em> below is the environment variable.</p></div>
+<div class="tableblock">
+<table rules="all"
+width="100%"
+frame="border"
+cellspacing="0" cellpadding="4">
+<col width="50%" />
+<col width="50%" />
+<tbody>
+<tr>
+<td align="left" valign="top"><p class="table">assignee of the task</p></td>
+<td align="left" valign="top"><p class="table">@GET(sobject.assigned)</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">supervisor of the task</p></td>
+<td align="left" valign="top"><p class="table">@GET(sobject.supervisor)</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">Email to ben and cindy regardless of the current task</p></td>
+<td align="left" valign="top"><p class="table">@GET(sthpw/login['login','in','ben|cindy'].login)</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">Email to ben and cindy regardless of the current task</p></td>
+<td align="left" valign="top"><p class="table">@SOBJECT(sthpw/login['login','in','ben|cindy'])</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="paragraph"><p>In order for notifications to be operational, two conditions have to be
+met. First, the user that triggers an action that causes a notification
+must have their email entered into their user profile. It is highly
+encouraged that each user have their email entered upon their creation.
+Secondly, the mail server of TACTIC | Workflow must be configured, which
+is discussed in Section 8.3.</p></div>
+<div class="paragraph"><p>Note: If the user does not have an email entered into their user
+profile, the notification will not be sent, but the action still goes
+through.</p></div>
+<div class="paragraph"><p><strong>Advanced</strong></p></div>
+<div class="paragraph"><p>Behind the scenes, the pipeline is an XML text document. This document
+is how TACTIC stores its representation of the pipeline structure of
+nodes and connections.</p></div>
+<div class="paragraph"><p>Although it is rare to need to manually edit the pipeline XML structure,
+it is available at the bottom of the Workflow Editor in the pipelines
+table in the <strong>Data</strong> column.</p></div>
+<div class="paragraph"><p>Below is an example of the pipeline XML for the <strong>Model &#8594; Rig / Texture</strong>
+pipeline:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>&lt;?xml version='1.0' encoding='UTF-8'?&gt;
+&lt;pipeline scale='100'&gt;
+  &lt;process name='model' ypos='-95' xpos='-138'/&gt;
+  &lt;process name='rig' color='blue' xpos='38' completion='80' task_pipeline='task' ypos='-165'/&gt;
+  &lt;process name='texture' ypos='-51' xpos='42'/&gt;
+  &lt;connect to='rig' from='model'/&gt;
+  &lt;connect to='texture' from='model'/&gt;
+&lt;/pipeline&gt;</code></pre>
+</div></div>
+</div>
+</div>
+</div>
+<div id="footnotes"><hr /></div>
+<div id="footer">
+<div id="footer-text">
+Last updated 2015-11-20 14:24:25 EST
+</div>
+</div>
+</body>
+</html>

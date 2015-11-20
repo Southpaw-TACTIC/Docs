@@ -1,0 +1,26 @@
+get_expanded_paths_from_snapshot
+--------------------------------
+
+*get_expanded_paths_from_snapshot(snapshot_code, file_type='main')*
+
+
+Return the expanded path of a snapshot (used for
+ranges of files)
+
+*param:*
+
+*snapshot_code* - the unique code of the snapshot
+
+
+
+*keyparam:*
+
+*file_type* - each file in a snapshot is identified by a file type.
+
+This parameter specifies which type.  Defaults to 'main'
+
+
+
+*return:*
+
+*string* - path

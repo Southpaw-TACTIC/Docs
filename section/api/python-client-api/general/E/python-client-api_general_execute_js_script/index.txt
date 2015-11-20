@@ -1,0 +1,20 @@
+execute_js_script
+-----------------
+
+*execute_js_script(script_path, kwargs)*
+
+Execute a js script defined in Script Editor
+
+*param:*
+
+*script_path* - script path in Script Editor, e.g. test/eval_sobj
+
+*keyparam:*
+
+*kwargs * - keyword arguments for this script
+
+
+
+*return:*
+
+*dictionary* - returned data structure

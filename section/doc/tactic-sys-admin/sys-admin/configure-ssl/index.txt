@@ -74,7 +74,7 @@ many materials online available for configuration of the various flavors
 of these two major HTTP service projects.
 
 Since there are many different versions of these servers, a simple
-search of “Windows 2003 IIS SSL�? as an example will yield many HOWTOs
+search of Windows 2003 IIS SSL as an example will yield many HOWTOs
 and configuration references. Please consult the documentation for these
 services.
 

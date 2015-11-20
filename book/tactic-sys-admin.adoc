@@ -89,6 +89,8 @@ Server Configuration
 
 :leveloffset: 2
 
+include::../section/doc/tactic-sys-admin/sys-admin/configure-tactic/index.txt[]
+
 include::../section/doc/tactic-sys-admin/sys-admin/configure-tactic-service/index.txt[]
 
 include::../section/doc/tactic-sys-admin/sys-admin/configure-ssl/index.txt[]

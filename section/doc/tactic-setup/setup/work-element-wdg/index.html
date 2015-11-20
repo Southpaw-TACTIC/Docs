@@ -1,0 +1,1238 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
+<meta name="generator" content="AsciiDoc 8.6.8" />
+<title></title>
+<style type="text/css">
+/* Shared CSS for AsciiDoc xhtml11 and html5 backends */
+
+/* Default font. */
+body {
+  font-family: Georgia,serif;
+}
+
+/* Title font. */
+h1, h2, h3, h4, h5, h6,
+div.title, caption.title,
+thead, p.table.header,
+#toctitle,
+#author, #revnumber, #revdate, #revremark,
+#footer {
+  font-family: Arial,Helvetica,sans-serif;
+}
+
+body {
+  margin: 1em 5% 1em 5%;
+}
+
+a {
+  color: blue;
+  text-decoration: underline;
+}
+a:visited {
+  color: fuchsia;
+}
+
+em {
+  font-style: italic;
+  color: navy;
+}
+
+strong {
+  font-weight: bold;
+  color: #083194;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #527bbd;
+  margin-top: 1.2em;
+  margin-bottom: 0.5em;
+  line-height: 1.3;
+}
+
+h1, h2, h3 {
+  border-bottom: 2px solid silver;
+}
+h2 {
+  padding-top: 0.5em;
+}
+h3 {
+  float: left;
+}
+h3 + * {
+  clear: left;
+}
+h5 {
+  font-size: 1.0em;
+}
+
+div.sectionbody {
+  margin-left: 0;
+}
+
+hr {
+  border: 1px solid silver;
+}
+
+p {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+ul, ol, li > p {
+  margin-top: 0;
+}
+ul > li     { color: #aaa; }
+ul > li > * { color: black; }
+
+.monospaced, code, pre {
+  font-family: "Courier New", Courier, monospace;
+  font-size: inherit;
+  color: navy;
+  padding: 0;
+  margin: 0;
+}
+
+
+#author {
+  color: #527bbd;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+#email {
+}
+#revnumber, #revdate, #revremark {
+}
+
+#footer {
+  font-size: small;
+  border-top: 2px solid silver;
+  padding-top: 0.5em;
+  margin-top: 4.0em;
+}
+#footer-text {
+  float: left;
+  padding-bottom: 0.5em;
+}
+#footer-badges {
+  float: right;
+  padding-bottom: 0.5em;
+}
+
+#preamble {
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+div.imageblock, div.exampleblock, div.verseblock,
+div.quoteblock, div.literalblock, div.listingblock, div.sidebarblock,
+div.admonitionblock {
+  margin-top: 1.0em;
+  margin-bottom: 1.5em;
+}
+div.admonitionblock {
+  margin-top: 2.0em;
+  margin-bottom: 2.0em;
+  margin-right: 10%;
+  color: #606060;
+}
+
+div.content { /* Block element content. */
+  padding: 0;
+}
+
+/* Block element titles. */
+div.title, caption.title {
+  color: #527bbd;
+  font-weight: bold;
+  text-align: left;
+  margin-top: 1.0em;
+  margin-bottom: 0.5em;
+}
+div.title + * {
+  margin-top: 0;
+}
+
+td div.title:first-child {
+  margin-top: 0.0em;
+}
+div.content div.title:first-child {
+  margin-top: 0.0em;
+}
+div.content + div.title {
+  margin-top: 0.0em;
+}
+
+div.sidebarblock > div.content {
+  background: #ffffee;
+  border: 1px solid #dddddd;
+  border-left: 4px solid #f0f0f0;
+  padding: 0.5em;
+}
+
+div.listingblock > div.content {
+  border: 1px solid #dddddd;
+  border-left: 5px solid #f0f0f0;
+  background: #f8f8f8;
+  padding: 0.5em;
+}
+
+div.quoteblock, div.verseblock {
+  padding-left: 1.0em;
+  margin-left: 1.0em;
+  margin-right: 10%;
+  border-left: 5px solid #f0f0f0;
+  color: #888;
+}
+
+div.quoteblock > div.attribution {
+  padding-top: 0.5em;
+  text-align: right;
+}
+
+div.verseblock > pre.content {
+  font-family: inherit;
+  font-size: inherit;
+}
+div.verseblock > div.attribution {
+  padding-top: 0.75em;
+  text-align: left;
+}
+/* DEPRECATED: Pre version 8.2.7 verse style literal block. */
+div.verseblock + div.attribution {
+  text-align: left;
+}
+
+div.admonitionblock .icon {
+  vertical-align: top;
+  font-size: 1.1em;
+  font-weight: bold;
+  text-decoration: underline;
+  color: #527bbd;
+  padding-right: 0.5em;
+}
+div.admonitionblock td.content {
+  padding-left: 0.5em;
+  border-left: 3px solid #dddddd;
+}
+
+div.exampleblock > div.content {
+  border-left: 3px solid #dddddd;
+  padding-left: 0.5em;
+}
+
+div.imageblock div.content { padding-left: 0; }
+span.image img { border-style: none; }
+a.image:visited { color: white; }
+
+dl {
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
+}
+dt {
+  margin-top: 0.5em;
+  margin-bottom: 0;
+  font-style: normal;
+  color: navy;
+}
+dd > *:first-child {
+  margin-top: 0.1em;
+}
+
+ul, ol {
+    list-style-position: outside;
+}
+ol.arabic {
+  list-style-type: decimal;
+}
+ol.loweralpha {
+  list-style-type: lower-alpha;
+}
+ol.upperalpha {
+  list-style-type: upper-alpha;
+}
+ol.lowerroman {
+  list-style-type: lower-roman;
+}
+ol.upperroman {
+  list-style-type: upper-roman;
+}
+
+div.compact ul, div.compact ol,
+div.compact p, div.compact p,
+div.compact div, div.compact div {
+  margin-top: 0.1em;
+  margin-bottom: 0.1em;
+}
+
+tfoot {
+  font-weight: bold;
+}
+td > div.verse {
+  white-space: pre;
+}
+
+div.hdlist {
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
+}
+div.hdlist tr {
+  padding-bottom: 15px;
+}
+dt.hdlist1.strong, td.hdlist1.strong {
+  font-weight: bold;
+}
+td.hdlist1 {
+  vertical-align: top;
+  font-style: normal;
+  padding-right: 0.8em;
+  color: navy;
+}
+td.hdlist2 {
+  vertical-align: top;
+}
+div.hdlist.compact tr {
+  margin: 0;
+  padding-bottom: 0;
+}
+
+.comment {
+  background: yellow;
+}
+
+.footnote, .footnoteref {
+  font-size: 0.8em;
+}
+
+span.footnote, span.footnoteref {
+  vertical-align: super;
+}
+
+#footnotes {
+  margin: 20px 0 20px 0;
+  padding: 7px 0 0 0;
+}
+
+#footnotes div.footnote {
+  margin: 0 0 5px 0;
+}
+
+#footnotes hr {
+  border: none;
+  border-top: 1px solid silver;
+  height: 1px;
+  text-align: left;
+  margin-left: 0;
+  width: 20%;
+  min-width: 100px;
+}
+
+div.colist td {
+  padding-right: 0.5em;
+  padding-bottom: 0.3em;
+  vertical-align: top;
+}
+div.colist td img {
+  margin-top: 0.3em;
+}
+
+@media print {
+  #footer-badges { display: none; }
+}
+
+#toc {
+  margin-bottom: 2.5em;
+}
+
+#toctitle {
+  color: #527bbd;
+  font-size: 1.1em;
+  font-weight: bold;
+  margin-top: 1.0em;
+  margin-bottom: 0.1em;
+}
+
+div.toclevel0, div.toclevel1, div.toclevel2, div.toclevel3, div.toclevel4 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+div.toclevel2 {
+  margin-left: 2em;
+  font-size: 0.9em;
+}
+div.toclevel3 {
+  margin-left: 4em;
+  font-size: 0.9em;
+}
+div.toclevel4 {
+  margin-left: 6em;
+  font-size: 0.9em;
+}
+
+span.aqua { color: aqua; }
+span.black { color: black; }
+span.blue { color: blue; }
+span.fuchsia { color: fuchsia; }
+span.gray { color: gray; }
+span.green { color: green; }
+span.lime { color: lime; }
+span.maroon { color: maroon; }
+span.navy { color: navy; }
+span.olive { color: olive; }
+span.purple { color: purple; }
+span.red { color: red; }
+span.silver { color: silver; }
+span.teal { color: teal; }
+span.white { color: white; }
+span.yellow { color: yellow; }
+
+span.aqua-background { background: aqua; }
+span.black-background { background: black; }
+span.blue-background { background: blue; }
+span.fuchsia-background { background: fuchsia; }
+span.gray-background { background: gray; }
+span.green-background { background: green; }
+span.lime-background { background: lime; }
+span.maroon-background { background: maroon; }
+span.navy-background { background: navy; }
+span.olive-background { background: olive; }
+span.purple-background { background: purple; }
+span.red-background { background: red; }
+span.silver-background { background: silver; }
+span.teal-background { background: teal; }
+span.white-background { background: white; }
+span.yellow-background { background: yellow; }
+
+span.big { font-size: 2em; }
+span.small { font-size: 0.6em; }
+
+span.underline { text-decoration: underline; }
+span.overline { text-decoration: overline; }
+span.line-through { text-decoration: line-through; }
+
+div.unbreakable { page-break-inside: avoid; }
+
+
+/*
+ * xhtml11 specific
+ *
+ * */
+
+div.tableblock {
+  margin-top: 1.0em;
+  margin-bottom: 1.5em;
+}
+div.tableblock > table {
+  border: 3px solid #527bbd;
+}
+thead, p.table.header {
+  font-weight: bold;
+  color: #527bbd;
+}
+p.table {
+  margin-top: 0;
+}
+/* Because the table frame attribute is overriden by CSS in most browsers. */
+div.tableblock > table[frame="void"] {
+  border-style: none;
+}
+div.tableblock > table[frame="hsides"] {
+  border-left-style: none;
+  border-right-style: none;
+}
+div.tableblock > table[frame="vsides"] {
+  border-top-style: none;
+  border-bottom-style: none;
+}
+
+
+/*
+ * html5 specific
+ *
+ * */
+
+table.tableblock {
+  margin-top: 1.0em;
+  margin-bottom: 1.5em;
+}
+thead, p.tableblock.header {
+  font-weight: bold;
+  color: #527bbd;
+}
+p.tableblock {
+  margin-top: 0;
+}
+table.tableblock {
+  border-width: 3px;
+  border-spacing: 0px;
+  border-style: solid;
+  border-color: #527bbd;
+  border-collapse: collapse;
+}
+th.tableblock, td.tableblock {
+  border-width: 1px;
+  padding: 4px;
+  border-style: solid;
+  border-color: #527bbd;
+}
+
+table.tableblock.frame-topbot {
+  border-left-style: hidden;
+  border-right-style: hidden;
+}
+table.tableblock.frame-sides {
+  border-top-style: hidden;
+  border-bottom-style: hidden;
+}
+table.tableblock.frame-none {
+  border-style: hidden;
+}
+
+th.tableblock.halign-left, td.tableblock.halign-left {
+  text-align: left;
+}
+th.tableblock.halign-center, td.tableblock.halign-center {
+  text-align: center;
+}
+th.tableblock.halign-right, td.tableblock.halign-right {
+  text-align: right;
+}
+
+th.tableblock.valign-top, td.tableblock.valign-top {
+  vertical-align: top;
+}
+th.tableblock.valign-middle, td.tableblock.valign-middle {
+  vertical-align: middle;
+}
+th.tableblock.valign-bottom, td.tableblock.valign-bottom {
+  vertical-align: bottom;
+}
+
+
+/*
+ * manpage specific
+ *
+ * */
+
+body.manpage h1 {
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  border-top: 2px solid silver;
+  border-bottom: 2px solid silver;
+}
+body.manpage h2 {
+  border-style: none;
+}
+body.manpage div.sectionbody {
+  margin-left: 3em;
+}
+
+@media print {
+  body.manpage div#toc { display: none; }
+}
+
+
+</style>
+<script type="text/javascript">
+/*<![CDATA[*/
+var asciidoc = {  // Namespace.
+
+/////////////////////////////////////////////////////////////////////
+// Table Of Contents generator
+/////////////////////////////////////////////////////////////////////
+
+/* Author: Mihai Bazon, September 2002
+ * http://students.infoiasi.ro/~mishoo
+ *
+ * Table Of Content generator
+ * Version: 0.4
+ *
+ * Feel free to use this script under the terms of the GNU General Public
+ * License, as long as you do not remove or alter this notice.
+ */
+
+ /* modified by Troy D. Hanson, September 2006. License: GPL */
+ /* modified by Stuart Rackham, 2006, 2009. License: GPL */
+
+// toclevels = 1..4.
+toc: function (toclevels) {
+
+  function getText(el) {
+    var text = "";
+    for (var i = el.firstChild; i != null; i = i.nextSibling) {
+      if (i.nodeType == 3 /* Node.TEXT_NODE */) // IE doesn't speak constants.
+        text += i.data;
+      else if (i.firstChild != null)
+        text += getText(i);
+    }
+    return text;
+  }
+
+  function TocEntry(el, text, toclevel) {
+    this.element = el;
+    this.text = text;
+    this.toclevel = toclevel;
+  }
+
+  function tocEntries(el, toclevels) {
+    var result = new Array;
+    var re = new RegExp('[hH]([1-'+(toclevels+1)+'])');
+    // Function that scans the DOM tree for header elements (the DOM2
+    // nodeIterator API would be a better technique but not supported by all
+    // browsers).
+    var iterate = function (el) {
+      for (var i = el.firstChild; i != null; i = i.nextSibling) {
+        if (i.nodeType == 1 /* Node.ELEMENT_NODE */) {
+          var mo = re.exec(i.tagName);
+          if (mo && (i.getAttribute("class") || i.getAttribute("className")) != "float") {
+            result[result.length] = new TocEntry(i, getText(i), mo[1]-1);
+          }
+          iterate(i);
+        }
+      }
+    }
+    iterate(el);
+    return result;
+  }
+
+  var toc = document.getElementById("toc");
+  if (!toc) {
+    return;
+  }
+
+  // Delete existing TOC entries in case we're reloading the TOC.
+  var tocEntriesToRemove = [];
+  var i;
+  for (i = 0; i < toc.childNodes.length; i++) {
+    var entry = toc.childNodes[i];
+    if (entry.nodeName.toLowerCase() == 'div'
+     && entry.getAttribute("class")
+     && entry.getAttribute("class").match(/^toclevel/))
+      tocEntriesToRemove.push(entry);
+  }
+  for (i = 0; i < tocEntriesToRemove.length; i++) {
+    toc.removeChild(tocEntriesToRemove[i]);
+  }
+
+  // Rebuild TOC entries.
+  var entries = tocEntries(document.getElementById("content"), toclevels);
+  for (var i = 0; i < entries.length; ++i) {
+    var entry = entries[i];
+    if (entry.element.id == "")
+      entry.element.id = "_toc_" + i;
+    var a = document.createElement("a");
+    a.href = "#" + entry.element.id;
+    a.appendChild(document.createTextNode(entry.text));
+    var div = document.createElement("div");
+    div.appendChild(a);
+    div.className = "toclevel" + entry.toclevel;
+    toc.appendChild(div);
+  }
+  if (entries.length == 0)
+    toc.parentNode.removeChild(toc);
+},
+
+
+/////////////////////////////////////////////////////////////////////
+// Footnotes generator
+/////////////////////////////////////////////////////////////////////
+
+/* Based on footnote generation code from:
+ * http://www.brandspankingnew.net/archive/2005/07/format_footnote.html
+ */
+
+footnotes: function () {
+  // Delete existing footnote entries in case we're reloading the footnodes.
+  var i;
+  var noteholder = document.getElementById("footnotes");
+  if (!noteholder) {
+    return;
+  }
+  var entriesToRemove = [];
+  for (i = 0; i < noteholder.childNodes.length; i++) {
+    var entry = noteholder.childNodes[i];
+    if (entry.nodeName.toLowerCase() == 'div' && entry.getAttribute("class") == "footnote")
+      entriesToRemove.push(entry);
+  }
+  for (i = 0; i < entriesToRemove.length; i++) {
+    noteholder.removeChild(entriesToRemove[i]);
+  }
+
+  // Rebuild footnote entries.
+  var cont = document.getElementById("content");
+  var spans = cont.getElementsByTagName("span");
+  var refs = {};
+  var n = 0;
+  for (i=0; i<spans.length; i++) {
+    if (spans[i].className == "footnote") {
+      n++;
+      var note = spans[i].getAttribute("data-note");
+      if (!note) {
+        // Use [\s\S] in place of . so multi-line matches work.
+        // Because JavaScript has no s (dotall) regex flag.
+        note = spans[i].innerHTML.match(/\s*\[([\s\S]*)]\s*/)[1];
+        spans[i].innerHTML =
+          "[<a id='_footnoteref_" + n + "' href='#_footnote_" + n +
+          "' title='View footnote' class='footnote'>" + n + "</a>]";
+        spans[i].setAttribute("data-note", note);
+      }
+      noteholder.innerHTML +=
+        "<div class='footnote' id='_footnote_" + n + "'>" +
+        "<a href='#_footnoteref_" + n + "' title='Return to text'>" +
+        n + "</a>. " + note + "</div>";
+      var id =spans[i].getAttribute("id");
+      if (id != null) refs["#"+id] = n;
+    }
+  }
+  if (n == 0)
+    noteholder.parentNode.removeChild(noteholder);
+  else {
+    // Process footnoterefs.
+    for (i=0; i<spans.length; i++) {
+      if (spans[i].className == "footnoteref") {
+        var href = spans[i].getElementsByTagName("a")[0].getAttribute("href");
+        href = href.match(/#.*/)[0];  // Because IE return full URL.
+        n = refs[href];
+        spans[i].innerHTML =
+          "[<a href='#_footnote_" + n +
+          "' title='View footnote' class='footnote'>" + n + "</a>]";
+      }
+    }
+  }
+},
+
+install: function(toclevels) {
+  var timerId;
+
+  function reinstall() {
+    asciidoc.footnotes();
+    if (toclevels) {
+      asciidoc.toc(toclevels);
+    }
+  }
+
+  function reinstallAndRemoveTimer() {
+    clearInterval(timerId);
+    reinstall();
+  }
+
+  timerId = setInterval(reinstall, 500);
+  if (document.addEventListener)
+    document.addEventListener("DOMContentLoaded", reinstallAndRemoveTimer, false);
+  else
+    window.onload = reinstallAndRemoveTimer;
+}
+
+}
+asciidoc.install();
+/*]]>*/
+</script>
+</head>
+<body class="article">
+<div id="header">
+</div>
+<div id="content">
+<div class="sect1">
+<h2 id="_work_button">Work Button</h2>
+<div class="sectionbody">
+<div class="paragraph"><p><strong>Description</strong></p></div>
+<div class="paragraph"><p>The Work Element Widget is used for accessing the checkin and checkout
+tool needed to handle a task assigned. After a task is assigned, an
+artist can go to the "My Tasks" or any other task page where there is a
+"Work" column which will expand to this widget. You can carry out
+serveral typical functions related to check-in and check-out in the sub
+tabs that open. You can even customize what tabs are opened when the
+work button is clicked on.</p></div>
+<div class="tableblock">
+<table rules="all"
+width="100%"
+frame="border"
+cellspacing="0" cellpadding="4">
+<col width="29%" />
+<col width="71%" />
+<tbody>
+<tr>
+<td align="left" valign="top"><p class="table"><strong>Name</strong></p></td>
+<td align="left" valign="top"><p class="table">Work</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table"><strong>Class</strong></p></td>
+<td align="left" valign="top"><p class="table">tactic.ui.table.WorkElementWdg</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table"><strong>Category</strong></p></td>
+<td align="left" valign="top"><p class="table">Table Element Widget</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table"><strong>Supported Interfaces</strong></p></td>
+<td align="left" valign="top"><p class="table">TableLayoutWdg</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table"><strong>TACTIC Version Support</strong></p></td>
+<td align="left" valign="top"><p class="table">3.5.0<br /></p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table"><strong>Required database columns</strong></p></td>
+<td align="left" valign="top"><p class="table">none</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="paragraph"><p><strong>Usage</strong></p></div>
+<div class="paragraph"><p>When clicked on, it opens up a new Work area tab with 3 sub tabs
+underneath which comprise all the functions an artitst would need when
+assigned a task. He can enter notes, change task status, review check-in
+history, check in, and check out files.</p></div>
+<div class="paragraph"><p>The General Check-in Widget appears in the Check-in sub tab. You can
+click "Browse" here to select the file to be checked in. The is_current
+checkbox in Options can be used to make a snapshot current on checking
+in. The link checkbox, when checked, links the sandbox directory to the
+process tied to the task. It makes it easy for an artist to jump to a
+different process and checks out their snapshots into the current
+sandbox associated with the task. Otherwise, if you check out a file
+from the model process, it will be copied to the model sandbox folder.</p></div>
+<div class="paragraph"><p><strong>Options</strong></p></div>
+<div class="tableblock">
+<table rules="all"
+width="100%"
+frame="border"
+cellspacing="0" cellpadding="4">
+<col width="29%" />
+<col width="71%" />
+<tbody>
+<tr>
+<td align="left" valign="top"><p class="table"><strong>checkout_panel_script_path</strong></p></td>
+<td align="left" valign="top"><p class="table">Deprecated in 3.5. Use the tab_config_&lt;&gt;
+method to set up custom checkout tab</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table"><strong>checkout_script_path</strong></p></td>
+<td align="left" valign="top"><p class="table">A custom check-out script path you can specify
+to override the default check-out script. The default check-out script
+checks out everything under the selected snapshot. Refer to Example 4.</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table"><strong>validate_script_path</strong></p></td>
+<td align="left" valign="top"><p class="table">A script path pointing to a JS script that is
+run before the actual check-in. If it throws an error using
+"throw(&lt;error message&gt;)", the check-in will not initiate. You can also
+use it to run some client-side preprocessing of the file or directory.</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table"><strong>transfer_mode</strong></p></td>
+<td align="left" valign="top"><p class="table">Upload, copy, move, preallocate are supported.
+<em>preallocate</em> can only be used if the client machine has direct disk
+write access to the TACTIC asset repo. It skips the need to hand off the
+files in the handoff directory. <em>copy</em> is recommended for most situation
+when users are usually granted only read access to the TACTIC asset
+repo.</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table"><strong>mode</strong></p></td>
+<td align="left" valign="top"><p class="table">Sequence, file, dir, and add are supported. <em>sequence</em> is for
+file sequence checkin; <em>file</em> is for single file checkin, <em>dir</em> is for
+directory checkin and <em>add</em> if for appending file or dir to an existing
+snapshot. If not specified, multiple selections will be available for
+the user to choose. Note: upload transfer mode only supports single file
+or file sequence check-in.</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table"><strong>checkin_panel_script_path</strong></p></td>
+<td align="left" valign="top"><p class="table">Deprecated in 3.5. Use the tab_config_&lt;&gt;
+method to set up custom checkin tab</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table"><strong>checkin_script_path</strong></p></td>
+<td align="left" valign="top"><p class="table">A custom checkin script path you can specify to
+override the default check-in script. This can be used in conjunction
+with the validate_script_path.</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table"><strong>process</strong></p></td>
+<td align="left" valign="top"><p class="table">If set, the process specified will be pre-selected when the
+General Checkin Widget is drawn,</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table"><strong>lock_process</strong></p></td>
+<td align="left" valign="top"><p class="table">If set to true, the user will not be able to choose a
+different process during check-in on the General Checkin-in Widget</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table"><strong>checkin_relative_dir</strong></p></td>
+<td align="left" valign="top"><p class="table">If specified, e.g. WIP, it is appended to the
+current sandbox directory and preselcted as the directory to be checked
+in. It&#8217;s applicable to Direcotry-type checkin</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table"><strong>checkin_ui_options</strong></p></td>
+<td align="left" valign="top"><p class="table">It applies to the check-in options of the
+CheckinWdg. Supported attribute at the moment is "is_current" e.g.
+{"is_current":"false"} would make all check-ins non-current.
+{"is_current":"optional"} would make the checkbox unchecked by default.
+Not specifiying it would render the option available to the user to
+choose at the check-in time.</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table"><strong>show_versionless_folder</strong></p></td>
+<td align="left" valign="top"><p class="table">If set to true, it displays the latest and
+current versionless folders.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="paragraph"><p><strong>Implementation</strong></p></div>
+<div class="paragraph"><p>The following defines the default "Work" element. It looks a bit
+complicated but in most cases, you would just need to simply change the
+different options available through "Edit Column Definition":</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code> &lt;element name="work" title="Work on Task"&gt;
+        &lt;display class="tactic.ui.table.WorkElementWdg"&gt;
+        &lt;transfer_mode&gt;upload&lt;/transfer_mode&gt;
+        &lt;cbjs_action&gt;
+      var tbody = bvr.src_el.getParent(".spt_table_tbody");
+      var element_name = tbody.getAttribute("spt_element_name");
+      var search_key = tbody.getAttribute("spt_search_key");
+      var checkin_script_path = bvr.checkin_script_path;
+      var checkin_ui_options = bvr.checkin_ui_options;
+      var validate_script_path = bvr.validate_script_path;
+      var checkout_script_path = bvr.checkout_script_path;
+      var checkin_mode = bvr.mode;
+      var transfer_mode = bvr.transfer_mode;
+      var sandbox_dir = bvr.sandbox_dir;
+      var lock_process = bvr.lock_process;
+
+      var server = TacticServerStub.get();
+      var code = server.eval( "@GET(parent.code)", {search_keys: search_key} );
+
+      spt.tab.set_main_body_tab();
+      spt.tab.add_new();
+      var kwargs = {
+        'search_key': search_key,
+        'checkin_script_path': checkin_script_path ,
+        'checkin_ui_options': checkin_ui_options ,
+        'validate_script_path': validate_script_path ,
+        'checkout_script_path': checkout_script_path,
+        'mode': checkin_mode ,
+        'transfer_mode': transfer_mode,
+        'sandbox_dir': sandbox_dir,
+        'lock_process': lock_process
+
+        }
+      var title = "Task: " + code;
+      var class_name = "tactic.ui.tools.sobject_wdg.TaskDetailWdg";
+      spt.tab.load_selected(search_key, title, class_name, kwargs);
+      &lt;/cbjs_action&gt;
+      &lt;icon&gt;WORK&lt;/icon&gt;
+      &lt;/display&gt;
+ &lt;/element&gt;</code></pre>
+</div></div>
+<div class="paragraph"><p>The following defines a different usage of it using copy trasnfer mode,
+a custom checkout script and a custom validating checkin script. The
+value of the two script paths are the script_path you have saved in the
+Script Editor. lock_process is set to false. To enable these options,
+you can do it in the context menu "Edit Column Definition" and set the
+following:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>   checkout_script_path: checkout/all_processes
+   validate_script_path: checkin/validate_frames
+   transfer_mode: copy
+   lock_process: false</code></pre>
+</div></div>
+<div class="paragraph"><p>The following shows a way to customize what the small check-out button
+does in the checkout_tool view. In widget config, we will set the column
+definition for the element checkout for the "sthpw/snapshot" search
+type. It can be accessed through "Edit Column Definition".</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>   checkout_script_path: checkout/checkout_tool_script</code></pre>
+</div></div>
+<div class="paragraph"><p><strong>Script Samples</strong></p></div>
+<div class="paragraph"><p>Example 1: checkin/validate_frames</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>var values = bvr.values;
+var file_path = values.file_paths[0];
+var sk = values.search_key;
+var applet = spt.Applet.get();
+
+var file_list = applet.list_dir(file_path);
+var server = TacticServerStub.get();
+var st = 'prod/shot';
+var shot = server.get_by_search_key(sk);
+var frame_count = parseInt(shot.frame_count, 10);
+for (var i=0; i &lt;file_list.length; i++){
+
+    var base =spt.path.get_basename(file_list[i]);
+    if ( base == 'FRAMES') {
+        var frames = applet.list_dir(file_list[i]);
+
+        if (frames.length != frame_count) {
+             throw('Frames length in FRAMES [' + frames.length
+                + '] folder does not match shot\'s frame count');
+        }
+
+    }
+}</code></pre>
+</div></div>
+<div class="paragraph"><p>Example 2: checkout/all_processes. It illustrates how to implement a
+custom check-out that only checks out a portion of what has been checked
+in.</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>//back up the Work-in-progress folder
+function backup_WIP(bvr) {
+     var sandbox_dir = bvr.sandbox_dir;
+     var applet = spt.Applet.get();
+     var found_WIP = false;
+     var dirs = applet.list_dir(sandbox_dir, 0);
+
+     for (var k=0; k &lt; dirs.length; k++){
+         if (/WIP$/.test(dirs[k])){
+            found_WIP = true;
+            break;
+         }
+     }
+     if (!found_WIP) {
+           alert('WIP folder not found. Backing up of WIP folder aborted')
+     }
+     else {
+
+     var server = TacticServerStub.get();
+     var folder = spt.path.get_basename(sandbox_dir);
+
+     var date_obj = new Date();
+     var suffix = date_obj.getFullYear().toString()
+             + spt.zero_pad((date_obj.getMonth() + 1).toString(), 2)
+             + spt.zero_pad(date_obj.getDate().toString(), 2) + '_'  +
+               spt.zero_pad(date_obj.getHours().toString(), 2)
+                + spt.zero_pad(date_obj.getMinutes().toString(),2);
+
+     var parts = sandbox_dir.split(/[\/\\]/);
+
+
+     sandbox_dir = sandbox_dir + '/WIP';
+     var backup_dir = parts.join('/')  + '/WIP' + '_' + suffix;
+
+
+     applet.copytree(sandbox_dir, backup_dir);
+
+     //remove the contents of WIP
+     applet.rmtree(sandbox_dir);
+     applet.makedirs(sandbox_dir);
+
+     }
+}
+
+// just checkout a subfolder named REF. if it's not found, just check out the
+// first subfolder
+function checkout_snapshot_table(bvr){
+
+    var top = bvr.src_el.getParent(".spt_checkin_top");
+    var table = top.getElement(".spt_table");
+    var search_keys = spt.dg_table.get_selected_search_keys(table);
+    if (search_keys.length == 0) {
+         alert('Please check the checkbox(es) to check out a version.');
+    }
+    else if (search_keys.length &gt; 1) {
+        alert('Please check only 1 checkbox at a time. Multi-selection is' +
+' only supported for Full Check-out Selected in the Gear menu.');
+        return;
+    }
+
+    spt.app_busy.show("Custom Check-out snapshots", "Copying to Sandbox...");
+    var server = TacticServerStub.get();
+
+    var top = bvr.src_el.getParent('.spt_checkin_top');
+    var sandbox_input = top.getElement('.spt_sandbox_dir');
+    if (sandbox_input)
+        bvr.sandbox_dir = sandbox_input.value;
+    for (var i =0; i &lt; search_keys.length; i++) {
+
+        checkout_snapshot(bvr, search_keys[i]);
+    }
+    spt.app_busy.hide();
+}
+
+function checkout_snapshot(bvr, snapshot_key, downlevel) {
+        var server = TacticServerStub.get();
+
+
+        try {
+        var paths = server.get_all_paths_from_snapshot(snapshot_key);
+
+
+        //var sandbox_dir =
+server.get_client_dir(snapshot_key,{mode:'sandbox'});
+        var sandbox_dir = bvr.sandbox_dir;
+        var applet = spt.Applet.get();
+
+        for (var i = 0; i &lt; paths.length; i++ ) {
+            var path = paths[i];
+            var parts = path.split(/[\/\\]/);
+            var dirs = applet.list_dir(path);
+
+
+            var tar_dir = '';
+            for (var j=0; j &lt; dirs.length; j++) {
+                 if ((/REF/i).test(dirs[j]))
+                     tar_dir = dirs[j];
+            }
+            //just take the first one if REF is not found
+            if (!tar_dir) {
+                 alert('REF not found. First subfolder is checked out');
+                 tar_dir = dirs[0];
+            }
+
+            var folder = spt.path.get_basename(tar_dir);
+            var new_path = path + '/' + folder;
+
+            var sand_paths = applet.list_dir(sandbox_dir, 0);
+            for (var j=0; j&lt; sand_paths.length; j++) {
+                 var dst_folder = spt.path.get_basename(sand_paths[j]);
+                 if (dst_folder == 'REF') {
+                      alert('REF folder already exists in ['
+                       + sandbox_dir + '] Please rename or remove it first.');
+                      return;
+                 }
+            }
+
+            // the applet can decide between copy_file or copytree
+
+            applet.copytree(new_path, sandbox_dir + "/" + folder);
+
+        }
+        }
+        catch(e){
+          alert(spt.exception.handler(e));
+        }
+    }
+
+
+backup_WIP(bvr);
+var down_level = 1;
+checkout_snapshot_table(bvr, down_level);</code></pre>
+</div></div>
+<div class="paragraph"><p>Example 3: Custom Checkout button callback passing a specific script for
+the Check-out Widget popup using display option
+"checkout_panel_script_path"</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>    var class_name = 'tactic.ui.widget.CheckoutWdg';
+
+    var values = bvr.values;
+
+    var search_key = values.search_key;
+    var sandbox_dir = values.sandbox_dir;
+    var process = values.process;
+
+    var options = { 'show_publish': 'false',
+        'process': process,
+        'search_key': search_key,
+        'checkout_script_path': 'checkout/custom_checkout',
+        'sandbox_dir': sandbox_dir
+            };
+   var popup_id ='Check-out Widget';
+   spt.panel.load_popup(popup_id, class_name, options);</code></pre>
+</div></div>
+<div class="paragraph"><p>Example 4: Custom check-out script for the small check-out button in the
+checkout_tool view. This can be used to customize a quick-checkout for
+the latest or current snapshot without opening the Check-out popup
+widget, using display option "checkout_script_path"</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>function checkout_snapshot(bvr) {
+    var values = bvr.values;
+
+    var snapshot_key = values.search_key;
+    var context = values.context;
+
+
+        var server = TacticServerStub.get();
+        // get the files for this snapshot, always get the latest
+        // instead of relying on the last snapshot when the UI was drawn
+
+        try {
+        var paths = server.get_all_paths_from_snapshot(snapshot_key);
+
+        //var sandbox_dir = server.get_client_dir(snapshot_key,{mode:'sandbox'});
+        // This one comes from values as the sandbox_dir is determined by
+        // the snapshot only
+        var sandbox_dir = values.sandbox_dir;
+
+        var applet = spt.Applet.get();
+
+        for (var i = 0; i &lt; paths.length; i++ ) {
+            var path = paths[i];
+            var parts = path.split(/[\/\\]/);
+            var dirs = applet.list_dir(path);
+
+
+            var tar_dir = '';
+            for (var j=0; j &lt; dirs.length; j++) {
+                 if ((/REF/i).test(dirs[j]))
+                     tar_dir = dirs[j];
+            }
+            //just take the first one if REF is not found
+            if (!tar_dir) {
+                 alert('REF not found. First subfolder is checked out');
+                 tar_dir = dirs[0];
+            }
+            var folder = spt.path.get_basename(tar_dir)
+            var new_path = path + '/' + folder;
+
+            var sand_paths = applet.list_dir(sandbox_dir, 0);
+            for (var j=0; j&lt; sand_paths.length; j++) {
+                 var dst_folder = spt.path.get_basename(sand_paths[j]);
+                 if (dst_folder == 'REF') {
+                      alert('REF folder already exists in [' + sandbox_dir + '] Please rename or remove it first to avoid mixing files.');
+                      return;
+                 }
+            }
+
+            // the applet can decide between copy_file or copytree
+            applet.copytree(new_path, sandbox_dir + "/" + folder);
+        }
+        }
+        catch(e){
+          alert(spt.exception.handler(e));
+        }
+    }
+checkout_snapshot(bvr);</code></pre>
+</div></div>
+<div class="paragraph"><p>Example 5: Custom checkin_script using display option
+"checkin_script_path". The default snapshot_type is file, if the file
+extension is .mov, the snapshot_type is set to <em>mov</em>.</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>var file_paths = bvr.values.file_paths;
+var description = bvr.values.description;
+var search_key = bvr.values.search_key;
+var context = bvr.values.context;
+var transfer_mode = bvr.values.transfer_mode
+var is_current = bvr.values.is_current;
+var path = file_paths[0]
+spt.app_busy.show("File Checkin", path);
+
+var snapshot_type = 'file';
+if (path.test(/\\.mov$/)){
+    snapshot_type = 'mov';
+}
+var server = TacticServerStub.get();
+snapshot = server.simple_checkin(search_key, context, path,
+{description: description, mode: transfer_mode, is_current: is_current,
+ snapshot_type:'mov'});</code></pre>
+</div></div>
+</div>
+</div>
+</div>
+<div id="footnotes"><hr /></div>
+<div id="footer">
+<div id="footer-text">
+Last updated 2015-10-22 21:52:41 EDT
+</div>
+</div>
+</body>
+</html>

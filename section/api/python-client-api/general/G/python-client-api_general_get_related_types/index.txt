@@ -1,0 +1,20 @@
+get_related_types
+-----------------
+
+*get_related_types(search_type)*
+
+Get related search types given a search type
+
+*param:*
+
+*search_type* - the key identifying a type of sobject as registered in
+
+the search_type table.
+
+
+
+
+
+*return - list of search_types*
+
+

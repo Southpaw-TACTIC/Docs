@@ -168,202 +168,208 @@ TACTIC Python Client API Reference
 
 :leveloffset: 2
 
-include::../section/api/python-client-api/general/abort/index.txt[]
+include::../section/api/python-client-api/general/_/python-client-api_general___init__/index.txt[]
 
-include::../section/api/python-client-api/general/element/index.txt[]
+include::../section/api/python-client-api/general/G/python-client-api_general_get_protocol/index.txt[]
 
-include::../section/api/python-client-api/general/dependency/index.txt[]
+include::../section/api/python-client-api/general/S/python-client-api_general_set_login_ticket/index.txt[]
 
-include::../section/api/python-client-api/general/code/python-client-api_general_add_dependency_by_code/index.txt[]
+include::../section/api/python-client-api/general/S/python-client-api_general_set_project/index.txt[]
 
-include::../section/api/python-client-api/general/directory/index.txt[]
+include::../section/api/python-client-api/general/S/python-client-api_general_set_protocol/index.txt[]
 
-include::../section/api/python-client-api/general/file/index.txt[]
+include::../section/api/python-client-api/general/S/python-client-api_general_set_server/index.txt[]
 
-include::../section/api/python-client-api/general/file/python-client-api_general_add_file/index.txt[]
+include::../section/api/python-client-api/general/S/python-client-api_general_set_site/index.txt[]
 
-include::../section/api/python-client-api/general/group/index.txt[]
+include::../section/api/python-client-api/general/A/python-client-api_general_abort/index.txt[]
 
-include::../section/api/python-client-api/general/tasks/index.txt[]
+include::../section/api/python-client-api/general/A/python-client-api_general_add_config_element/index.txt[]
 
-include::../section/api/python-client-api/general/key/index.txt[]
+include::../section/api/python-client-api/general/A/python-client-api_general_add_dependency/index.txt[]
 
-include::../section/api/python-client-api/general/key/python-client-api_general_build_search_key/index.txt[]
+include::../section/api/python-client-api/general/A/python-client-api_general_add_dependency_by_code/index.txt[]
 
-include::../section/api/python-client-api/general/key/python-client-api_general_get_by_search_key/index.txt[]
+include::../section/api/python-client-api/general/A/python-client-api_general_add_directory/index.txt[]
 
-include::../section/api/python-client-api/general/type/index.txt[]
+include::../section/api/python-client-api/general/A/python-client-api_general_add_file/index.txt[]
 
-include::../section/api/python-client-api/general/type/python-client-api_general_build_search_type/index.txt[]
+include::../section/api/python-client-api/general/A/python-client-api_general_add_group/index.txt[]
 
-include::../section/api/python-client-api/general/type/python-client-api_general_create_search_type/index.txt[]
+include::../section/api/python-client-api/general/A/python-client-api_general_add_initial_tasks/index.txt[]
 
-include::../section/api/python-client-api/general/checkout/index.txt[]
+include::../section/api/python-client-api/general/B/python-client-api_general_build_search_key/index.txt[]
 
-include::../section/api/python-client-api/general/dir/python-client-api_general_clear_upload_dir/index.txt[]
+include::../section/api/python-client-api/general/B/python-client-api_general_build_search_type/index.txt[]
 
+include::../section/api/python-client-api/general/C/python-client-api_general_checkout/index.txt[]
 
-include::../section/api/python-client-api/general/snapshot/index.txt[]
+include::../section/api/python-client-api/general/C/python-client-api_general_clear_upload_dir/index.txt[]
 
-include::../section/api/python-client-api/general/snapshot/python-client-api_general_get_expanded_paths_from_snapshot/index.txt[]
+include::../section/api/python-client-api/general/C/python-client-api_general_connect_sobjects/index.txt[]
 
-include::../section/api/python-client-api/general/snapshot/python-client-api_general_get_all_paths_from_snapshot/index.txt[]
+include::../section/api/python-client-api/general/C/python-client-api_general_create_search_type/index.txt[]
 
-include::../section/api/python-client-api/general/snapshot/python-client-api_general_get_path_from_snapshot/index.txt[]
+include::../section/api/python-client-api/general/C/python-client-api_general_create_snapshot/index.txt[]
 
-include::../section/api/python-client-api/general/snapshot/python-client-api_general_get_snapshot/index.txt[]
+include::../section/api/python-client-api/general/C/python-client-api_general_create_task/index.txt[]
 
-include::../section/api/python-client-api/general/snapshot/python-client-api_general_create_snapshot/index.txt[]
+include::../section/api/python-client-api/general/D/python-client-api_general_delete_sobject/index.txt[]
 
-include::../section/api/python-client-api/general/task/index.txt[]
+include::../section/api/python-client-api/general/D/python-client-api_general_directory_checkin/index.txt[]
 
+include::../section/api/python-client-api/general/D/python-client-api_general_download/index.txt[]
 
-include::../section/api/python-client-api/general/download/index.txt[]
+include::../section/api/python-client-api/general/E/python-client-api_general_eval/index.txt[]
 
-include::../section/api/python-client-api/general/eval/index.txt[]
+include::../section/api/python-client-api/general/E/python-client-api_general_execute_cmd/index.txt[]
 
-include::../section/api/python-client-api/general/cmd/index.txt[]
+include::../section/api/python-client-api/general/E/python-client-api_general_execute_js_script/index.txt[]
 
-include::../section/api/python-client-api/general/finish/index.txt[]
+include::../section/api/python-client-api/general/E/python-client-api_general_execute_pipeline/index.txt[]
 
+include::../section/api/python-client-api/general/E/python-client-api_general_execute_python_script/index.txt[]
 
-include::../section/api/python-client-api/general/children/index.txt[]
+include::../section/api/python-client-api/general/F/python-client-api_general_finish/index.txt[]
 
+include::../section/api/python-client-api/general/G/python-client-api_general_generate_ticket/index.txt[]
 
-include::../section/api/python-client-api/general/snapshots/index.txt[]
+include::../section/api/python-client-api/general/G/python-client-api_general_get_all_children/index.txt[]
 
-include::../section/api/python-client-api/general/code/index.txt[]
+include::../section/api/python-client-api/general/G/python-client-api_general_get_all_dependencies/index.txt[]
 
-include::../section/api/python-client-api/general/dependencies/index.txt[]
+include::../section/api/python-client-api/general/G/python-client-api_general_get_all_paths_from_snapshot/index.txt[]
 
-include::../section/api/python-client-api/general/dependencies/python-client-api_general_get_all_dependencies/index.txt[]
+include::../section/api/python-client-api/general/G/python-client-api_general_get_by_code/index.txt[]
 
-include::../section/api/python-client-api/general/version/index.txt[]
+include::../section/api/python-client-api/general/G/python-client-api_general_get_by_search_key/index.txt[]
 
-include::../section/api/python-client-api/general/version/python-client-api_general_get_client_version/index.txt[]
+include::../section/api/python-client-api/general/G/python-client-api_general_get_child_types/index.txt[]
 
-include::../section/api/python-client-api/general/version/python-client-api_general_get_client_api_version/index.txt[]
+include::../section/api/python-client-api/general/G/python-client-api_general_get_client_api_version/index.txt[]
 
-include::../section/api/python-client-api/general/version/python-client-api_general_get_server_api_version/index.txt[]
+include::../section/api/python-client-api/general/G/python-client-api_general_get_client_dir/index.txt[]
 
-include::../section/api/python-client-api/general/dir/python-client-api_general_get_home_dir/index.txt[]
+include::../section/api/python-client-api/general/G/python-client-api_general_get_client_version/index.txt[]
 
-include::../section/api/python-client-api/general/dir/python-client-api_general_get_client_dir/index.txt[]
+include::../section/api/python-client-api/general/G/python-client-api_general_get_column_info/index.txt[]
 
-include::../section/api/python-client-api/general/dir/python-client-api_general_get_handoff_dir/index.txt[]
+include::../section/api/python-client-api/general/G/python-client-api_general_get_column_names/index.txt[]
 
-include::../section/api/python-client-api/general/definition/index.txt[]
+include::../section/api/python-client-api/general/G/python-client-api_general_get_config_definition/index.txt[]
 
-include::../section/api/python-client-api/general/definition/python-client-api_general_get_config_definition/index.txt[]
+include::../section/api/python-client-api/general/G/python-client-api_general_get_connected_sobject/index.txt[]
 
-include::../section/api/python-client-api/general/info/index.txt[]
+include::../section/api/python-client-api/general/G/python-client-api_general_get_connected_sobjects/index.txt[]
 
-include::../section/api/python-client-api/general/info/python-client-api_general_get_column_info/index.txt[]
+include::../section/api/python-client-api/general/G/python-client-api_general_get_dependencies/index.txt[]
 
-//include::../section/api/python-client-api/general/xml/python-client-api_general_get_full_snapshot_xml/index.txt[]
+include::../section/api/python-client-api/general/G/python-client-api_general_get_expanded_paths_from_snapshot/index.txt[]
 
-include::../section/api/python-client-api/general/info/python-client-api_general_get_md5_info/index.txt[]
+include::../section/api/python-client-api/general/G/python-client-api_general_get_full_snapshot_xml/index.txt[]
 
-include::../section/api/python-client-api/general/info/python-client-api_general_get_pipeline_processes_info/index.txt[]
+include::../section/api/python-client-api/general/G/python-client-api_general_get_handoff_dir/index.txt[]
 
-//include::../section/api/python-client-api/general/info/python-client-api_general_get_pipeline_xml_info/index.txt[]
+include::../section/api/python-client-api/general/G/python-client-api_general_get_home_dir/index.txt[]
 
-include::../section/api/python-client-api/general/path/python-client-api_general_get_preallocated_path/index.txt[]
+include::../section/api/python-client-api/general/G/python-client-api_general_get_info_from_user/index.txt[]
 
-include::../section/api/python-client-api/general/path/python-client-api_general_get_resource_path/index.txt[]
+include::../section/api/python-client-api/general/G/python-client-api_general_get_input_tasks/index.txt[]
 
-include::../section/api/python-client-api/general/protocol/index.txt[]
+include::../section/api/python-client-api/general/G/python-client-api_general_get_interaction_count/index.txt[]
 
-include::../section/api/python-client-api/general/protocol/python-client-api_general_get_protocol/index.txt[]
+include::../section/api/python-client-api/general/G/python-client-api_general_get_md5_info/index.txt[]
 
-include::../section/api/python-client-api/general/sobject/python-client-api_general_delete_sobject/index.txt[]
+include::../section/api/python-client-api/general/G/python-client-api_general_get_output_tasks/index.txt[]
 
-include::../section/api/python-client-api/general/sobject/python-client-api_general_get_connected_sobject/index.txt[]
+include::../section/api/python-client-api/general/G/python-client-api_general_get_parent/index.txt[]
 
-include::../section/api/python-client-api/general/sobject/python-client-api_general_reactivate_sobject/index.txt[]
+include::../section/api/python-client-api/general/G/python-client-api_general_get_parent_type/index.txt[]
 
-include::../section/api/python-client-api/general/sobject/python-client-api_general_get_unique_sobject/index.txt[]
+include::../section/api/python-client-api/general/G/python-client-api_general_get_path_from_snapshot/index.txt[]
 
-include::../section/api/python-client-api/general/sobjects/index.txt[]
+include::../section/api/python-client-api/general/G/python-client-api_general_get_paths/index.txt[]
 
-include::../section/api/python-client-api/general/sobjects/python-client-api_general_connect_sobjects/index.txt[]
+include::../section/api/python-client-api/general/G/python-client-api_general_get_pipeline_processes/index.txt[]
 
+include::../section/api/python-client-api/general/G/python-client-api_general_get_pipeline_processes_info/index.txt[]
 
-include::../section/api/python-client-api/general/ticket/index.txt[]
+include::../section/api/python-client-api/general/G/python-client-api_general_get_pipeline_xml/index.txt[]
 
-include::../section/api/python-client-api/general/ticket/python-client-api_general_generate_ticket/index.txt[]
+include::../section/api/python-client-api/general/G/python-client-api_general_get_pipeline_xml_info/index.txt[]
 
-include::../section/api/python-client-api/general/ticket/python-client-api_general_get_ticket/index.txt[]
+include::../section/api/python-client-api/general/G/python-client-api_general_get_plugin_dir/index.txt[]
 
-include::../section/api/python-client-api/general/setting/index.txt[]
+include::../section/api/python-client-api/general/G/python-client-api_general_get_preallocated_path/index.txt[]
 
-include::../section/api/python-client-api/general/setting/python-client-api_general_get_widget_setting/index.txt[]
+include::../section/api/python-client-api/general/G/python-client-api_general_get_related_types/index.txt[]
 
-include::../section/api/python-client-api/general/update/index.txt[]
+include::../section/api/python-client-api/general/G/python-client-api_general_get_resource_path/index.txt[]
 
-include::../section/api/python-client-api/general/update/python-client-api_general_insert_update/index.txt[]
+include::../section/api/python-client-api/general/G/python-client-api_general_get_server_api_version/index.txt[]
 
-include::../section/api/python-client-api/general/multiple/index.txt[]
+include::../section/api/python-client-api/general/G/python-client-api_general_get_server_version/index.txt[]
 
-include::../section/api/python-client-api/general/multiple/python-client-api_general_insert_multiple/index.txt[]
+include::../section/api/python-client-api/general/G/python-client-api_general_get_snapshot/index.txt[]
 
-include::../section/api/python-client-api/general/log/index.txt[]
+include::../section/api/python-client-api/general/G/python-client-api_general_get_table_info/index.txt[]
 
-include::../section/api/python-client-api/general/query/index.txt[]
+include::../section/api/python-client-api/general/G/python-client-api_general_get_ticket/index.txt[]
 
-include::../section/api/python-client-api/general/redo/index.txt[]
+include::../section/api/python-client-api/general/G/python-client-api_general_get_types_from_instance/index.txt[]
 
-include::../section/api/python-client-api/general/start/index.txt[]
+include::../section/api/python-client-api/general/G/python-client-api_general_get_unique_sobject/index.txt[]
 
-include::../section/api/python-client-api/general/checkin/index.txt[]
+include::../section/api/python-client-api/general/G/python-client-api_general_get_virtual_snapshot_path/index.txt[]
 
-include::../section/api/python-client-api/general/checkin/python-client-api_general_group_checkin/index.txt[]
+include::../section/api/python-client-api/general/G/python-client-api_general_get_widget/index.txt[]
 
-include::../section/api/python-client-api/general/checkin/python-client-api_general_directory_checkin/index.txt[]
+include::../section/api/python-client-api/general/G/python-client-api_general_group_checkin/index.txt[]
 
-include::../section/api/python-client-api/general/names/index.txt[]
+include::../section/api/python-client-api/general/I/python-client-api_general_insert/index.txt[]
 
+include::../section/api/python-client-api/general/I/python-client-api_general_insert_multiple/index.txt[]
 
+include::../section/api/python-client-api/general/I/python-client-api_general_insert_update/index.txt[]
 
-include::../section/api/python-client-api/general/parent/index.txt[]
+include::../section/api/python-client-api/general/L/python-client-api_general_log/index.txt[]
 
-include::../section/api/python-client-api/general/instance/index.txt[]
+include::../section/api/python-client-api/general/L/python-client-api_general_log_message/index.txt[]
 
-include::../section/api/python-client-api/general/undo/index.txt[]
+include::../section/api/python-client-api/general/Q/python-client-api_general_query/index.txt[]
 
-include::../section/api/python-client-api/general/widget/index.txt[]
+include::../section/api/python-client-api/general/Q/python-client-api_general_query_snapshots/index.txt[]
 
-include::../section/api/python-client-api/general/project/index.txt[]
+include::../section/api/python-client-api/general/R/python-client-api_general_reactivate_sobject/index.txt[]
 
-include::../section/api/python-client-api/general/script/index.txt[]
+include::../section/api/python-client-api/general/R/python-client-api_general_redo/index.txt[]
 
-include::../section/api/python-client-api/general/insert/index.txt[]
+include::../section/api/python-client-api/general/R/python-client-api_general_retire_sobject/index.txt[]
 
-include::../section/api/python-client-api/general/processes/index.txt[]
+include::../section/api/python-client-api/general/S/python-client-api_general_set_config_definition/index.txt[]
 
+include::../section/api/python-client-api/general/S/python-client-api_general_set_current_snapshot/index.txt[]
 
-include::../section/api/python-client-api/general/types/index.txt[]
+include::../section/api/python-client-api/general/S/python-client-api_general_set_widget_settings/index.txt[]
 
-include::../section/api/python-client-api/general/types/python-client-api_general_get_child_types/index.txt[]
+include::../section/api/python-client-api/general/S/python-client-api_general_set_widget_settings/index.txt[]
 
-include::../section/api/python-client-api/general/server/index.txt[]
+include::../section/api/python-client-api/general/S/python-client-api_general_simple_checkin/index.txt[]
 
-include::../section/api/python-client-api/general/user/index.txt[]
+include::../section/api/python-client-api/general/S/python-client-api_general_split_search_key/index.txt[]
 
+include::../section/api/python-client-api/general/S/python-client-api_general_start/index.txt[]
 
-include::../section/api/python-client-api/general/config/index.txt[]
+include::../section/api/python-client-api/general/S/python-client-api_general_subscribe/index.txt[]
 
-include::../section/api/python-client-api/general/pipeline/index.txt[]
+include::../section/api/python-client-api/general/U/python-client-api_general_undo/index.txt[]
 
+include::../section/api/python-client-api/general/U/python-client-api_general_unsubscribe/index.txt[]
 
-//include::../section/api/python-client-api/general/xml/index.txt[]
+include::../section/api/python-client-api/general/U/python-client-api_general_update/index.txt[]
 
+include::../section/api/python-client-api/general/U/python-client-api_general_update_config/index.txt[]
 
-include::../section/api/python-client-api/general/dirs/index.txt[]
+include::../section/api/python-client-api/general/U/python-client-api_general_update_multiple/index.txt[]
 
-include::../section/api/python-client-api/general/paths/index.txt[]
-
-include::../section/api/python-client-api/general/path/index.txt[]
-
-include::../section/api/python-client-api/general/dir/index.txt[]
-
+include::../section/api/python-client-api/general/U/python-client-api_general_upload_file/index.txt[]

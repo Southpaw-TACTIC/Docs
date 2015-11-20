@@ -13,7 +13,7 @@ NOTE: Ensure that the <process_count> is set to 3: <process_count>3</process_cou
 
 3) Go to the Server Trigger table in the TACTIC Administrative layer and enter the following information:
 
-[cols="30%, 30%, 40%”]
+[cols="30%, 30%, 40%"]
 |========================================
 |Event| Script Path | Data (Drop Down) 
 |schedule | scripts/script_path | To Run Trigger Daily (24 Hour Clock):

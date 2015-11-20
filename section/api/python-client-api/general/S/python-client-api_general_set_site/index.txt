@@ -1,0 +1,6 @@
+set_site
+--------
+
+*set_site(site=None)*
+
+Set the site applicable in a portal setup

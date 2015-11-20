@@ -1,0 +1,24 @@
+get_pipeline_xml_info
+---------------------
+
+*get_pipeline_xml_info(search_key, include_hierarchy=False)*
+
+
+Retrieve the pipeline of a specific sobject.  The pipeline
+returned is an xml document and an optional dictionary of information.
+
+*param:*
+
+*search_key* - a unique identifier key representing an sobject
+
+
+
+*keyparam:*
+
+*include_hierarchy* - include a list of dictionary with key info on each process of the pipeline
+
+
+
+*return:*
+
+*dictionary* - xml and the optional hierarachy info

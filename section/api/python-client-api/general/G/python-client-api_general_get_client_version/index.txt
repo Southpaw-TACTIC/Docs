@@ -1,0 +1,9 @@
+get_client_version
+------------------
+
+*get_client_version()*
+
+
+*return:*
+
+*string* - Version of TACTIC that this client came from

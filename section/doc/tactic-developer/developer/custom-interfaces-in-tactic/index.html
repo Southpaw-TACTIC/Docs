@@ -1,0 +1,1094 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
+<meta name="generator" content="AsciiDoc 8.6.8" />
+<title></title>
+<style type="text/css">
+/* Shared CSS for AsciiDoc xhtml11 and html5 backends */
+
+/* Default font. */
+body {
+  font-family: Georgia,serif;
+}
+
+/* Title font. */
+h1, h2, h3, h4, h5, h6,
+div.title, caption.title,
+thead, p.table.header,
+#toctitle,
+#author, #revnumber, #revdate, #revremark,
+#footer {
+  font-family: Arial,Helvetica,sans-serif;
+}
+
+body {
+  margin: 1em 5% 1em 5%;
+}
+
+a {
+  color: blue;
+  text-decoration: underline;
+}
+a:visited {
+  color: fuchsia;
+}
+
+em {
+  font-style: italic;
+  color: navy;
+}
+
+strong {
+  font-weight: bold;
+  color: #083194;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #527bbd;
+  margin-top: 1.2em;
+  margin-bottom: 0.5em;
+  line-height: 1.3;
+}
+
+h1, h2, h3 {
+  border-bottom: 2px solid silver;
+}
+h2 {
+  padding-top: 0.5em;
+}
+h3 {
+  float: left;
+}
+h3 + * {
+  clear: left;
+}
+h5 {
+  font-size: 1.0em;
+}
+
+div.sectionbody {
+  margin-left: 0;
+}
+
+hr {
+  border: 1px solid silver;
+}
+
+p {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+ul, ol, li > p {
+  margin-top: 0;
+}
+ul > li     { color: #aaa; }
+ul > li > * { color: black; }
+
+.monospaced, code, pre {
+  font-family: "Courier New", Courier, monospace;
+  font-size: inherit;
+  color: navy;
+  padding: 0;
+  margin: 0;
+}
+
+
+#author {
+  color: #527bbd;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+#email {
+}
+#revnumber, #revdate, #revremark {
+}
+
+#footer {
+  font-size: small;
+  border-top: 2px solid silver;
+  padding-top: 0.5em;
+  margin-top: 4.0em;
+}
+#footer-text {
+  float: left;
+  padding-bottom: 0.5em;
+}
+#footer-badges {
+  float: right;
+  padding-bottom: 0.5em;
+}
+
+#preamble {
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+div.imageblock, div.exampleblock, div.verseblock,
+div.quoteblock, div.literalblock, div.listingblock, div.sidebarblock,
+div.admonitionblock {
+  margin-top: 1.0em;
+  margin-bottom: 1.5em;
+}
+div.admonitionblock {
+  margin-top: 2.0em;
+  margin-bottom: 2.0em;
+  margin-right: 10%;
+  color: #606060;
+}
+
+div.content { /* Block element content. */
+  padding: 0;
+}
+
+/* Block element titles. */
+div.title, caption.title {
+  color: #527bbd;
+  font-weight: bold;
+  text-align: left;
+  margin-top: 1.0em;
+  margin-bottom: 0.5em;
+}
+div.title + * {
+  margin-top: 0;
+}
+
+td div.title:first-child {
+  margin-top: 0.0em;
+}
+div.content div.title:first-child {
+  margin-top: 0.0em;
+}
+div.content + div.title {
+  margin-top: 0.0em;
+}
+
+div.sidebarblock > div.content {
+  background: #ffffee;
+  border: 1px solid #dddddd;
+  border-left: 4px solid #f0f0f0;
+  padding: 0.5em;
+}
+
+div.listingblock > div.content {
+  border: 1px solid #dddddd;
+  border-left: 5px solid #f0f0f0;
+  background: #f8f8f8;
+  padding: 0.5em;
+}
+
+div.quoteblock, div.verseblock {
+  padding-left: 1.0em;
+  margin-left: 1.0em;
+  margin-right: 10%;
+  border-left: 5px solid #f0f0f0;
+  color: #888;
+}
+
+div.quoteblock > div.attribution {
+  padding-top: 0.5em;
+  text-align: right;
+}
+
+div.verseblock > pre.content {
+  font-family: inherit;
+  font-size: inherit;
+}
+div.verseblock > div.attribution {
+  padding-top: 0.75em;
+  text-align: left;
+}
+/* DEPRECATED: Pre version 8.2.7 verse style literal block. */
+div.verseblock + div.attribution {
+  text-align: left;
+}
+
+div.admonitionblock .icon {
+  vertical-align: top;
+  font-size: 1.1em;
+  font-weight: bold;
+  text-decoration: underline;
+  color: #527bbd;
+  padding-right: 0.5em;
+}
+div.admonitionblock td.content {
+  padding-left: 0.5em;
+  border-left: 3px solid #dddddd;
+}
+
+div.exampleblock > div.content {
+  border-left: 3px solid #dddddd;
+  padding-left: 0.5em;
+}
+
+div.imageblock div.content { padding-left: 0; }
+span.image img { border-style: none; }
+a.image:visited { color: white; }
+
+dl {
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
+}
+dt {
+  margin-top: 0.5em;
+  margin-bottom: 0;
+  font-style: normal;
+  color: navy;
+}
+dd > *:first-child {
+  margin-top: 0.1em;
+}
+
+ul, ol {
+    list-style-position: outside;
+}
+ol.arabic {
+  list-style-type: decimal;
+}
+ol.loweralpha {
+  list-style-type: lower-alpha;
+}
+ol.upperalpha {
+  list-style-type: upper-alpha;
+}
+ol.lowerroman {
+  list-style-type: lower-roman;
+}
+ol.upperroman {
+  list-style-type: upper-roman;
+}
+
+div.compact ul, div.compact ol,
+div.compact p, div.compact p,
+div.compact div, div.compact div {
+  margin-top: 0.1em;
+  margin-bottom: 0.1em;
+}
+
+tfoot {
+  font-weight: bold;
+}
+td > div.verse {
+  white-space: pre;
+}
+
+div.hdlist {
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
+}
+div.hdlist tr {
+  padding-bottom: 15px;
+}
+dt.hdlist1.strong, td.hdlist1.strong {
+  font-weight: bold;
+}
+td.hdlist1 {
+  vertical-align: top;
+  font-style: normal;
+  padding-right: 0.8em;
+  color: navy;
+}
+td.hdlist2 {
+  vertical-align: top;
+}
+div.hdlist.compact tr {
+  margin: 0;
+  padding-bottom: 0;
+}
+
+.comment {
+  background: yellow;
+}
+
+.footnote, .footnoteref {
+  font-size: 0.8em;
+}
+
+span.footnote, span.footnoteref {
+  vertical-align: super;
+}
+
+#footnotes {
+  margin: 20px 0 20px 0;
+  padding: 7px 0 0 0;
+}
+
+#footnotes div.footnote {
+  margin: 0 0 5px 0;
+}
+
+#footnotes hr {
+  border: none;
+  border-top: 1px solid silver;
+  height: 1px;
+  text-align: left;
+  margin-left: 0;
+  width: 20%;
+  min-width: 100px;
+}
+
+div.colist td {
+  padding-right: 0.5em;
+  padding-bottom: 0.3em;
+  vertical-align: top;
+}
+div.colist td img {
+  margin-top: 0.3em;
+}
+
+@media print {
+  #footer-badges { display: none; }
+}
+
+#toc {
+  margin-bottom: 2.5em;
+}
+
+#toctitle {
+  color: #527bbd;
+  font-size: 1.1em;
+  font-weight: bold;
+  margin-top: 1.0em;
+  margin-bottom: 0.1em;
+}
+
+div.toclevel0, div.toclevel1, div.toclevel2, div.toclevel3, div.toclevel4 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+div.toclevel2 {
+  margin-left: 2em;
+  font-size: 0.9em;
+}
+div.toclevel3 {
+  margin-left: 4em;
+  font-size: 0.9em;
+}
+div.toclevel4 {
+  margin-left: 6em;
+  font-size: 0.9em;
+}
+
+span.aqua { color: aqua; }
+span.black { color: black; }
+span.blue { color: blue; }
+span.fuchsia { color: fuchsia; }
+span.gray { color: gray; }
+span.green { color: green; }
+span.lime { color: lime; }
+span.maroon { color: maroon; }
+span.navy { color: navy; }
+span.olive { color: olive; }
+span.purple { color: purple; }
+span.red { color: red; }
+span.silver { color: silver; }
+span.teal { color: teal; }
+span.white { color: white; }
+span.yellow { color: yellow; }
+
+span.aqua-background { background: aqua; }
+span.black-background { background: black; }
+span.blue-background { background: blue; }
+span.fuchsia-background { background: fuchsia; }
+span.gray-background { background: gray; }
+span.green-background { background: green; }
+span.lime-background { background: lime; }
+span.maroon-background { background: maroon; }
+span.navy-background { background: navy; }
+span.olive-background { background: olive; }
+span.purple-background { background: purple; }
+span.red-background { background: red; }
+span.silver-background { background: silver; }
+span.teal-background { background: teal; }
+span.white-background { background: white; }
+span.yellow-background { background: yellow; }
+
+span.big { font-size: 2em; }
+span.small { font-size: 0.6em; }
+
+span.underline { text-decoration: underline; }
+span.overline { text-decoration: overline; }
+span.line-through { text-decoration: line-through; }
+
+div.unbreakable { page-break-inside: avoid; }
+
+
+/*
+ * xhtml11 specific
+ *
+ * */
+
+div.tableblock {
+  margin-top: 1.0em;
+  margin-bottom: 1.5em;
+}
+div.tableblock > table {
+  border: 3px solid #527bbd;
+}
+thead, p.table.header {
+  font-weight: bold;
+  color: #527bbd;
+}
+p.table {
+  margin-top: 0;
+}
+/* Because the table frame attribute is overriden by CSS in most browsers. */
+div.tableblock > table[frame="void"] {
+  border-style: none;
+}
+div.tableblock > table[frame="hsides"] {
+  border-left-style: none;
+  border-right-style: none;
+}
+div.tableblock > table[frame="vsides"] {
+  border-top-style: none;
+  border-bottom-style: none;
+}
+
+
+/*
+ * html5 specific
+ *
+ * */
+
+table.tableblock {
+  margin-top: 1.0em;
+  margin-bottom: 1.5em;
+}
+thead, p.tableblock.header {
+  font-weight: bold;
+  color: #527bbd;
+}
+p.tableblock {
+  margin-top: 0;
+}
+table.tableblock {
+  border-width: 3px;
+  border-spacing: 0px;
+  border-style: solid;
+  border-color: #527bbd;
+  border-collapse: collapse;
+}
+th.tableblock, td.tableblock {
+  border-width: 1px;
+  padding: 4px;
+  border-style: solid;
+  border-color: #527bbd;
+}
+
+table.tableblock.frame-topbot {
+  border-left-style: hidden;
+  border-right-style: hidden;
+}
+table.tableblock.frame-sides {
+  border-top-style: hidden;
+  border-bottom-style: hidden;
+}
+table.tableblock.frame-none {
+  border-style: hidden;
+}
+
+th.tableblock.halign-left, td.tableblock.halign-left {
+  text-align: left;
+}
+th.tableblock.halign-center, td.tableblock.halign-center {
+  text-align: center;
+}
+th.tableblock.halign-right, td.tableblock.halign-right {
+  text-align: right;
+}
+
+th.tableblock.valign-top, td.tableblock.valign-top {
+  vertical-align: top;
+}
+th.tableblock.valign-middle, td.tableblock.valign-middle {
+  vertical-align: middle;
+}
+th.tableblock.valign-bottom, td.tableblock.valign-bottom {
+  vertical-align: bottom;
+}
+
+
+/*
+ * manpage specific
+ *
+ * */
+
+body.manpage h1 {
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  border-top: 2px solid silver;
+  border-bottom: 2px solid silver;
+}
+body.manpage h2 {
+  border-style: none;
+}
+body.manpage div.sectionbody {
+  margin-left: 3em;
+}
+
+@media print {
+  body.manpage div#toc { display: none; }
+}
+
+
+</style>
+<script type="text/javascript">
+/*<![CDATA[*/
+var asciidoc = {  // Namespace.
+
+/////////////////////////////////////////////////////////////////////
+// Table Of Contents generator
+/////////////////////////////////////////////////////////////////////
+
+/* Author: Mihai Bazon, September 2002
+ * http://students.infoiasi.ro/~mishoo
+ *
+ * Table Of Content generator
+ * Version: 0.4
+ *
+ * Feel free to use this script under the terms of the GNU General Public
+ * License, as long as you do not remove or alter this notice.
+ */
+
+ /* modified by Troy D. Hanson, September 2006. License: GPL */
+ /* modified by Stuart Rackham, 2006, 2009. License: GPL */
+
+// toclevels = 1..4.
+toc: function (toclevels) {
+
+  function getText(el) {
+    var text = "";
+    for (var i = el.firstChild; i != null; i = i.nextSibling) {
+      if (i.nodeType == 3 /* Node.TEXT_NODE */) // IE doesn't speak constants.
+        text += i.data;
+      else if (i.firstChild != null)
+        text += getText(i);
+    }
+    return text;
+  }
+
+  function TocEntry(el, text, toclevel) {
+    this.element = el;
+    this.text = text;
+    this.toclevel = toclevel;
+  }
+
+  function tocEntries(el, toclevels) {
+    var result = new Array;
+    var re = new RegExp('[hH]([1-'+(toclevels+1)+'])');
+    // Function that scans the DOM tree for header elements (the DOM2
+    // nodeIterator API would be a better technique but not supported by all
+    // browsers).
+    var iterate = function (el) {
+      for (var i = el.firstChild; i != null; i = i.nextSibling) {
+        if (i.nodeType == 1 /* Node.ELEMENT_NODE */) {
+          var mo = re.exec(i.tagName);
+          if (mo && (i.getAttribute("class") || i.getAttribute("className")) != "float") {
+            result[result.length] = new TocEntry(i, getText(i), mo[1]-1);
+          }
+          iterate(i);
+        }
+      }
+    }
+    iterate(el);
+    return result;
+  }
+
+  var toc = document.getElementById("toc");
+  if (!toc) {
+    return;
+  }
+
+  // Delete existing TOC entries in case we're reloading the TOC.
+  var tocEntriesToRemove = [];
+  var i;
+  for (i = 0; i < toc.childNodes.length; i++) {
+    var entry = toc.childNodes[i];
+    if (entry.nodeName.toLowerCase() == 'div'
+     && entry.getAttribute("class")
+     && entry.getAttribute("class").match(/^toclevel/))
+      tocEntriesToRemove.push(entry);
+  }
+  for (i = 0; i < tocEntriesToRemove.length; i++) {
+    toc.removeChild(tocEntriesToRemove[i]);
+  }
+
+  // Rebuild TOC entries.
+  var entries = tocEntries(document.getElementById("content"), toclevels);
+  for (var i = 0; i < entries.length; ++i) {
+    var entry = entries[i];
+    if (entry.element.id == "")
+      entry.element.id = "_toc_" + i;
+    var a = document.createElement("a");
+    a.href = "#" + entry.element.id;
+    a.appendChild(document.createTextNode(entry.text));
+    var div = document.createElement("div");
+    div.appendChild(a);
+    div.className = "toclevel" + entry.toclevel;
+    toc.appendChild(div);
+  }
+  if (entries.length == 0)
+    toc.parentNode.removeChild(toc);
+},
+
+
+/////////////////////////////////////////////////////////////////////
+// Footnotes generator
+/////////////////////////////////////////////////////////////////////
+
+/* Based on footnote generation code from:
+ * http://www.brandspankingnew.net/archive/2005/07/format_footnote.html
+ */
+
+footnotes: function () {
+  // Delete existing footnote entries in case we're reloading the footnodes.
+  var i;
+  var noteholder = document.getElementById("footnotes");
+  if (!noteholder) {
+    return;
+  }
+  var entriesToRemove = [];
+  for (i = 0; i < noteholder.childNodes.length; i++) {
+    var entry = noteholder.childNodes[i];
+    if (entry.nodeName.toLowerCase() == 'div' && entry.getAttribute("class") == "footnote")
+      entriesToRemove.push(entry);
+  }
+  for (i = 0; i < entriesToRemove.length; i++) {
+    noteholder.removeChild(entriesToRemove[i]);
+  }
+
+  // Rebuild footnote entries.
+  var cont = document.getElementById("content");
+  var spans = cont.getElementsByTagName("span");
+  var refs = {};
+  var n = 0;
+  for (i=0; i<spans.length; i++) {
+    if (spans[i].className == "footnote") {
+      n++;
+      var note = spans[i].getAttribute("data-note");
+      if (!note) {
+        // Use [\s\S] in place of . so multi-line matches work.
+        // Because JavaScript has no s (dotall) regex flag.
+        note = spans[i].innerHTML.match(/\s*\[([\s\S]*)]\s*/)[1];
+        spans[i].innerHTML =
+          "[<a id='_footnoteref_" + n + "' href='#_footnote_" + n +
+          "' title='View footnote' class='footnote'>" + n + "</a>]";
+        spans[i].setAttribute("data-note", note);
+      }
+      noteholder.innerHTML +=
+        "<div class='footnote' id='_footnote_" + n + "'>" +
+        "<a href='#_footnoteref_" + n + "' title='Return to text'>" +
+        n + "</a>. " + note + "</div>";
+      var id =spans[i].getAttribute("id");
+      if (id != null) refs["#"+id] = n;
+    }
+  }
+  if (n == 0)
+    noteholder.parentNode.removeChild(noteholder);
+  else {
+    // Process footnoterefs.
+    for (i=0; i<spans.length; i++) {
+      if (spans[i].className == "footnoteref") {
+        var href = spans[i].getElementsByTagName("a")[0].getAttribute("href");
+        href = href.match(/#.*/)[0];  // Because IE return full URL.
+        n = refs[href];
+        spans[i].innerHTML =
+          "[<a href='#_footnote_" + n +
+          "' title='View footnote' class='footnote'>" + n + "</a>]";
+      }
+    }
+  }
+},
+
+install: function(toclevels) {
+  var timerId;
+
+  function reinstall() {
+    asciidoc.footnotes();
+    if (toclevels) {
+      asciidoc.toc(toclevels);
+    }
+  }
+
+  function reinstallAndRemoveTimer() {
+    clearInterval(timerId);
+    reinstall();
+  }
+
+  timerId = setInterval(reinstall, 500);
+  if (document.addEventListener)
+    document.addEventListener("DOMContentLoaded", reinstallAndRemoveTimer, false);
+  else
+    window.onload = reinstallAndRemoveTimer;
+}
+
+}
+asciidoc.install();
+/*]]>*/
+</script>
+</head>
+<body class="article">
+<div id="header">
+</div>
+<div id="content">
+<div class="sect1">
+<h2 id="_custom_widget_basics">Custom Widget Basics</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>Although any execution environment can interact with TACTIC by
+interfacing through the Client API, most often, users will be
+interacting with TACTIC through the browser. TACTIC&#8217;s main interface is
+the browser. All browsers come with the Javascript language interpreter
+built-in and thus any rich interface that integrates with TACTIC will
+need to interact with the various components using Javascript.</p></div>
+<div class="paragraph"><p>Three core frameworks in TACTIC work together to create a rich web
+interface.</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+CustomLayoutWdg: provides the ability to create the visual interface
+by laying out widgets using HTML templating
+</p>
+</li>
+<li>
+<p>
+Behaviors: provides a framework to create complex behaviors that is
+much easier to use than the browsers default event system.
+</p>
+</li>
+<li>
+<p>
+Applet: provides the interaction to the client machine to do
+operations that the browser would otherwise not be permitted to do
+</p>
+</li>
+</ul></div>
+<div class="paragraph"><p>The TACTIC Client API can access server functionality through the
+TacticServerStub in the same manner as its Python equivalent. Note the
+similarities in code structure in the following example:</p></div>
+<div class="paragraph"><p>Python code:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>server = TacticServerStub.get()
+snapshot = server.checkin(search_key, context, path, mode="upload")
+print snapshot.get("code")</code></pre>
+</div></div>
+<div class="paragraph"><p>Javascript code:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>var server = TacticServerStub.get();
+var snapshot = server.checkin(search_key, context, path, {mode: "upload"} );
+alert(snapshot.code)</code></pre>
+</div></div>
+<div class="paragraph"><p>There are a few differences due to the syntax of the two different
+languages. Keyword arguments are not natively supported by Javascript.
+Since some of the functions in the server stub have numerous arguments,
+it is desirable to only use those that are needed without having to
+"fill in" all of the preceding arguments with nulls.</p></div>
+<div class="paragraph"><p>For example, the previous Javascript code would have to read like the
+above:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>server.checkin(search_key, context, path, null, null, null, null, "upload")</code></pre>
+</div></div>
+<div class="paragraph"><p>In general, a given function will have a few necessary arguments and all
+"optional" arguments are given in a kwargs dictionary. Another
+difference is that the sobjects returned are Javascript "objects" whose
+members are values from the database. Attributes can be accessed in two
+ways:</p></div>
+<div class="olist arabic"><ol class="arabic">
+<li>
+<p>
+code = snapshot[<em>code</em>]
+</p>
+</li>
+<li>
+<p>
+code = snapshot.code
+</p>
+</li>
+</ol></div>
+<div class="paragraph"><p>The most convenient method to test and implement the Javascript examples
+is in the TACTIC Script Editor. This can be convenient accesses by
+pressing the "9" hot key to bring it up. Alternatively, the TACTIC
+Script Editor can be brought up under the gear menu under: <strong>Tools &#8594;
+TACTIC Script Editor</strong>.</p></div>
+<div class="paragraph"><p>This is a simple "Hello World" example.</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>&lt;html&gt;
+  &lt;h1&gt;Hello World&lt;/h1&gt;
+&lt;/html&gt;</code></pre>
+</div></div>
+<div class="paragraph"><p>The XML document embeds an HTML tag that will be used to layout elements
+in the application.</p></div>
+<div class="paragraph"><p>The simplest way to view this is to open up the TACTIC Script Editor and
+input the following code:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>var html = "&lt;html&gt;&lt;h1&gt;Hello World&lt;/h1&gt;&lt;/html.&gt;";
+var kwargs = {
+  'html': html
+};
+spt.panel.load_popup('Hello', 'tactic.ui.panel.CustomLayoutWdg', kwargs);
+
+// NOTE: this should be:
+// spt.api.load_popup('Hello', 'tactic.ui.panel.CustomLayoutWdg', kwargs);</code></pre>
+</div></div>
+<div class="paragraph"><p>This previous code is completely in Javascript, however, layout pages
+using strings in Javascript rapidly becomes unwieldy. It is thus
+preferential to create these layouts using the widget config. This is
+done by going to the side bar and going to <strong>Project Admin &#8594; Widget
+Config</strong>. This will open up the "widget_config" table. This table is used
+to store all custom interface configurations for widgets.</p></div>
+<div class="paragraph"><p>Create a new entry by pressing the [+] button on the right side. Input
+the following into the <strong>config*field and for *view</strong> input
+<em>example01</em>.&lt;config&gt; &lt;example01&gt; &lt;html&gt; &lt;h1&gt;Hello World&lt;/h1&gt; &lt;/html&gt;
+&lt;/example01&gt; &lt;/config&gt;</p></div>
+<div class="paragraph"><p>This is the full XML document describing the widget config. Note that
+the HTML is now embedded within that XML document. This will be
+important to know later when behaviors and elements are added to the
+widget.</p></div>
+<div class="paragraph"><p>Finally, in the TACTIC Script Editor, enter the following:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>kwargs = {
+  view: 'example01'
+};
+spt.panel.load_popup('Example01', 'tactic.ui.panel.CustomLayoutWdg', kwargs);</code></pre>
+</div></div>
+<div class="paragraph"><p>The following will appear when you click on "Run" in the TACTIC Script
+Editor the script above:</p></div>
+<div class="paragraph"><p><span class="image">
+<img src="media/custom_interfaces_in_tactic_hello_world.png" alt="image" />
+</span></p></div>
+<div class="paragraph"><p>Add a new entry to the widget_config table with view = <em>example02</em> and
+with the following config definition.&lt;config&gt; &lt;example02&gt; &lt;html&gt;
+&lt;span&gt;This is a button:&lt;/span&gt; &lt;input type=<em>button</em> class=<em>button1</em>
+value=<em>Press Me</em>/&gt; &lt;/html&gt; &lt;behavior class=<em>button1</em>&gt;{ "type":
+"click_up", "cbjs_action": <em>'</em> alert(<em>Hello World</em>); <em>'</em> }&lt;/behavior&gt;
+&lt;/example02&gt; &lt;/config&gt;</p></div>
+<div class="paragraph"><p>In this example, an HTML button is added to the HTML layout. By default,
+a button doesn&#8217;t do anything when it is clicked. A behavior has to be
+added for something to happen. TACTIC behaviors are added to DOM
+elements by their class attributes.</p></div>
+<div class="paragraph"><p>When the button is clicked (corresponding to the "click_up" event type),
+the Javascript in the "cbjs_action" attribute is executed. This example
+will alert a "Hello World" message on clicking.</p></div>
+<div class="paragraph"><p>The following example will add a text area to the interface as well as
+extract information from that text area once the button has been
+clicked.</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>&lt;?xml version='1.0' encoding='UTF-8'?&gt;
+&lt;!-- This examples displays some html UI and then reacts to it using the TACTIC
+      behavior system --&gt;
+&lt;config&gt;
+&lt;example03&gt;
+&lt;html&gt;
+&lt;div class='spt_top'&gt;
+    &lt;textarea name='description' class='spt_input'&gt;&lt;/textarea&gt;
+    &lt;input type='button' class='spt_button1' value='Press Me'/&gt;
+&lt;/div&gt;
+&lt;/html&gt;
+
+&lt;behavior class='spt_button1'&gt;{
+  "type": "click_up",
+  "cbjs_action": '''
+    var top = bvr.src_el.getParent('.spt_top');
+    var values = spt.api.Utility.get_input_values(top);
+    var description = values.description;
+    alert('You entered: ' + description);
+  '''
+}&lt;/behavior&gt;
+
+&lt;/example03&gt;
+&lt;/config&gt;</code></pre>
+</div></div>
+<div class="paragraph"><p>Note that currently, get_input_values() requires that every input
+element have class=<em>spt_input</em> attribute. Future versions may remove
+this requirement, but currently this is necessary.</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>Please note that when an API for 2.6/2.7, the following lines will be changed:
+
+The following line:
+ var values = spt.api.Utility.get_input_values(top);
+will be replace by:
+ var values = spt.api.get_input_values(top);
+
+The following line:
+var top = bvr.src_el.getParent('.spt_top');
+will be replaced by:
+var top = spt.api.get_parent(bvr.src_el, ".spt_top");</code></pre>
+</div></div>
+<div class="paragraph"><p>The behavior definition warrants a closer examination:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>&lt;behavior class='spt_button1'&gt;{
+  "type": "click_up",
+  "cbjs_action": '''
+    var top = bvr.src_el.getParent('.spt_top');
+    var values = spt.api.Utility.get_input_values(top);
+    var description = values.description;
+    alert('You entered: ' + description);
+  '''
+}&lt;/behavior&gt;</code></pre>
+</div></div>
+<div class="paragraph"><p>First, there is an implied bvr object that exists in the namespace of
+the behavior. This bvr objects contains useful data for the purposes of
+executing behaviors. The most important attribute is "bvr.src_el". This
+element is the source element that called the event. This element can be
+used as a starting point to navigate the DOM to search for elements.var
+top = bvr.src_el.getParent(<em>.spt_top</em>);</p></div>
+<div class="paragraph"><p>It is common practice to find a top level element of a widget from the
+source element. This top element is a starting point from which searches
+under a DOM hierarchy can be made. By starting from a top element, it is
+ensured that the returned values are isolated to that single widget.</p></div>
+<div class="paragraph"><p>The next line gets all of the values of all of the input elements under
+the top element.var values = spt.api.Utility.get_input_values(top);</p></div>
+<div class="paragraph"><p>This returns a dictionary of name/value pairs of all of the input
+elements underneath the top element.</p></div>
+<div class="paragraph"><p>By adding expressions to a report, it becomes very easy to create
+reports that extract important information and combine it into a single
+view.</p></div>
+<div class="paragraph"><p>&lt;?xml version=<em>1.0</em> encoding=<em>UTF-8</em>?&gt; &lt;config&gt; &lt;example04&gt; &lt;html&gt;
+&lt;h1&gt;My login is [expr]$LOGIN[expr]&lt;/h1&gt; &lt;table&gt; &lt;tr&gt;&lt;td&gt;Number of
+tasks&lt;/td&gt;&lt;td&gt;[expr]@COUNT(sthpw/task)[/expr]&lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt;Number
+of checkins&lt;/td&gt;&lt;td&gt;[expr]@COUNT(sthpw/snapshot)[/expr]&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Number of model checkins&lt;/td&gt;
+&lt;td&gt;[expr]@COUNT(sthpw/snapshot[<em>context</em>,<em>model</em>])[/expr]&lt;/td&gt; &lt;/tr&gt;
+&lt;/table&gt; &lt;/html&gt; &lt;/example04&gt; &lt;/config&gt;</p></div>
+<div class="paragraph"><p>Expression can be added into the html code by inserting it between
+[expr][/expr] tags. The expression will be evaluated and the result will
+be replaced into the html. This provides an ability to layout an
+arbitrary layout in javascript and then fill in the missing data with
+expressions. The full power of the TACTIC expression language is
+available. Please refer to the expression language reference for more
+information on the expression language.</p></div>
+<div class="paragraph"><p>The CustomLayoutWdg can make use of the Mako templating engine to create
+dynamic content. Mako is a powerful templating system similar in concept
+to PHP, but instead uses the Python programming language. The expression
+language on its own is quite powerful, but it is still and expression
+lanaguage and sometimes, it is necessary to have full programming logic.
+Mako provides a path to create content that is too complex for the
+expression alnaguage to handle alone.</p></div>
+<div class="paragraph"><p>The following example shows a report generated with the help of
+Mako:&lt;?xml version=<em>1.0</em> encoding=<em>UTF-8</em>?&gt; &lt;!-- Simple test using mako
+templating -&#8594; &lt;config&gt; &lt;example06 include_mako=<em>true</em>&gt; &lt;html&gt; &lt;div&gt;
+&lt;![CDATA[ &lt;% # get some data total = 0 for ctx in [<em>model</em>, <em>texture</em>,
+<em>rig</em>]: num_snapshots =
+server.eval("@COUNT(sthpw/snapshot[<em>context</em>,<em>%s</em>])" % ctx)
+context.write("Number of %s checkins: %s&lt;br/&gt;" % (ctx, num_snapshots) )
+total += num_snapshots %&gt; Total number of tasks: ${total}&lt;br/&gt; ]]&gt;
+&lt;/div&gt; &lt;/html&gt; &lt;/example06&gt; &lt;/config&gt;</p></div>
+<div class="paragraph"><p>Mako is not enabled by default. This must done with with the
+"include_make" attribute:&lt;example06 include_mako=<em>true</em>&gt;</p></div>
+<div class="paragraph"><p>All code between &lt;% and %&gt; tags are parsed as python code and executed
+on the server. In order to write out to the html, Mako uses the
+context.write() method. This is important to note because the "context"
+is a reserved word in Mako. This can cause a confusing error because
+context is a common variable name when programming in TACTIC.</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>context.write("Number of %s checkins: %s&lt;br/&gt;" % (ctx, num_snapshots) )</code></pre>
+</div></div>
+<div class="paragraph"><p>The python code with the python block can still make use of the entire
+TACTIC Client API through the use of a builtin variable "server". This
+also means that expressions can be acccesed here as well:num_snapshots =
+server.eval("@COUNT(sthpw/snapshot[<em>context</em>,<em>%s</em>])" % ctx)</p></div>
+<div class="paragraph"><p>Also note that the entire Mako code is wrapped around an XML CDATA block
+( &lt;![CDATA[ &#8230; ]]&gt; ). This is because python code very easily breaks
+XML integrity rules. The CDATA block allows for any special characters
+to be entered in the XML document. It is good practice to add the CDATA
+tags in order to avoid errors later on.</p></div>
+<div class="paragraph"><p>Any variables that are declared in python blocks can be accessed outside
+of the python blocks using the ${var} syntax. The following will
+replace ${total} with the corresponding variable defined in the python
+block.</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>Total number of tasks: ${total}&lt;br/&gt;</code></pre>
+</div></div>
+<div class="paragraph"><p>Combining the expression language with Mako Templating provides
+unlimited flexibility in creating complex reports.</p></div>
+<div class="paragraph"><p>The CustomLayoutWdg can be used inside of a table element. This makes it
+easy to create arbiraritly complex table elements within a standard
+TACTIC table layout widget. The following displays the number of tasks
+for the row sobject.&lt;config&gt; &lt;my_view&gt; &lt;element name=<em>num_tasks</em>&gt;
+&lt;display class=<em>tactic.ui.panel.CustomLayoutWdg</em>&gt; &lt;html&gt; &lt;div
+class=<em>top</em>&gt; &lt;b&gt;[expr]@COUNT(sthpw/task)[/expr] tasks&lt;/b&gt; &lt;/div&gt; &lt;/html&gt;
+&lt;behavior&gt;{ <em>type</em>: <em>load</em>, <em>cbjs_action</em>: <em>'</em> var search_key =
+bvr.kwargs.search_key; alert(search_key) <em>'</em> }&lt;/behavior&gt; &lt;/display&gt;
+&lt;/element&gt; &lt;/my_view&gt; &lt;/config&gt;</p></div>
+<div class="paragraph"><p>This element behaves just like the previous CustomLayoutWdg, however
+there are a few additions. There is a starting sobject that corresponds
+to the table row that is passed in and is used as the starting sobject
+for all expressions. The following expression finds the number of tasks
+for the sobject in question and not all of the tasks in the
+system.&lt;b&gt;[expr]@COUNT(sthpw/task)[/expr] tasks&lt;/b&gt;</p></div>
+<div class="paragraph"><p>Another addition is that callbacks have the search key of the sobject
+for the row available through the bvr object passed into the behvaior
+callback.var search_key = bvr.kwargs.search_key;</p></div>
+<div class="paragraph"><p>With the search key, it becomes possible to use the client API to change
+data or checkin files for that specific sobject.</p></div>
+<div class="paragraph"><p>It is often necessary to be able to interact with the server using
+Javascript in a behavior callback. This is done using the Javascript
+implementation of the TACTIC Client API</p></div>
+<div class="paragraph"><p>The following example illustrates how to interact with the server using
+the TacticServerStub object. This object is used to issue commands that
+will be run on the server such as updating data in the database or
+checking in files.</p></div>
+<div class="paragraph"><p>First, add any image in "C:/Temp/test.jpg"</p></div>
+<div class="paragraph"><p>&lt;?xml version=<em>1.0</em> encoding=<em>UTF-8</em>?&gt; &lt;config&gt; &lt;example04&gt; &lt;html&gt; &lt;div
+class=<em>spt_top</em>&gt; &lt;textarea name=<em>description</em>
+class=<em>spt_input</em>&gt;&lt;/textarea&gt; &lt;input type=<em>button</em> class=<em>spt_button1</em>
+value=<em>Press Me</em>/&gt; &lt;/div&gt; &lt;/html&gt; &lt;behavior class=<em>spt_button1</em>&gt;{
+"type": "click_up", "cbjs_action": <em>'</em> var top =
+bvr.src_el.getParent(<em>.spt_top</em>); var values =
+spt.api.Utility.get_input_values(top); var description =
+values.description; var applet = spt.Applet.get(); var paths =
+applet.open_file_browser("C:/Temp"); var path = paths[0]; var search_key
+= bvr.kwargs.search_key(); var server = TacticServerStub.get();
+server.checkin(search_key, "icon", path, {description: description});
+<em>'</em> }&lt;/behavior&gt; &lt;/example04&gt; &lt;/config&gt;</p></div>
+<div class="paragraph"><p>The applet is used to interact with the client machine. It defines a
+number of useful methods such as listing directories, moving and copying
+files, uploading and downloading files. For a complete list of the
+functionality present in the applet, please refer to the Applet
+Reference manual. In this case, the example is using the applet to open
+up a file browser so the user can select a file.</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>var applet = spt.Applet.get();
+var paths = applet.open_file_browser("C:/Temp");
+var path = paths[0];</code></pre>
+</div></div>
+<div class="paragraph"><p>The search key can be obtained from the behavior. This will be required
+to check into the correct sobject.var search_key =
+bvr.kwargs.search_key();</p></div>
+<div class="paragraph"><p>Once a file path has been selected, the server stub is used to check in
+the file to the server.var server = TacticServerStub.get();
+server.checkin(search_key, "icon", path, {description: description});</p></div>
+<div class="paragraph"><p>Generally, it is not desirable to show a full interface for the checking
+directly in the table cell. It is much cleaner to have a simple publish
+button that will open up the interface in a pop-up.</p></div>
+<div class="paragraph"><p>Many widgets are defined on the server side. These can be integrated in
+a custom interface by using the TACTIC specific &lt;element&gt; tag in the
+html definition of a CustomLayoutWdg.&lt;config&gt; &lt;example11&gt; &lt;html&gt;
+&lt;h1&gt;This is a list of users&lt;/h1&gt; &lt;element name=<em>users</em>/&gt; &lt;/html&gt;
+&lt;element name=<em>users</em>&gt; &lt;display class=<em>tactic.ui.panel.TableLayoutWdg</em>&gt;
+&lt;search_type&gt;sthpw/login&lt;/search_type&gt; &lt;view&gt;table&lt;/view&gt; &lt;/display&gt;
+&lt;/element&gt; &lt;/example11&gt; &lt;/config&gt;</p></div>
+</div>
+</div>
+</div>
+<div id="footnotes"><hr /></div>
+<div id="footer">
+<div id="footer-text">
+Last updated 2015-10-22 21:52:39 EDT
+</div>
+</div>
+</body>
+</html>

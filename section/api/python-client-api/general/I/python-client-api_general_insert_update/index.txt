@@ -1,0 +1,37 @@
+insert_update
+-------------
+
+*insert_update(search_key, data, metadata={}, parent_key=None, info={}, use_id=False, triggers=True)*
+
+
+Insert if the entry does not exist, update otherwise
+
+*param:*
+
+*search_key* - a unique identifier key representing an sobject.
+
+*data* - a dictionary of name/value pairs which will be used to update
+
+the sobject defined by the search_key
+
+
+
+*keyparam:*
+
+*metadata* - a dictionary of values that will be stored in the metadata attribute if available
+
+*parent_key* - set the parent key for this sobject
+
+*info* - a dictionary of info to pass to the ApiClientCmd
+
+*use_id* - use id in the returned search key
+
+*triggers* - boolean to fire trigger on insert
+
+
+
+
+
+*return:*
+
+*dictionary* - represent the sobject with its current data.

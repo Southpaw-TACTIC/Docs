@@ -1,0 +1,1131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
+<meta name="generator" content="AsciiDoc 8.6.8" />
+<title></title>
+<style type="text/css">
+/* Shared CSS for AsciiDoc xhtml11 and html5 backends */
+
+/* Default font. */
+body {
+  font-family: Georgia,serif;
+}
+
+/* Title font. */
+h1, h2, h3, h4, h5, h6,
+div.title, caption.title,
+thead, p.table.header,
+#toctitle,
+#author, #revnumber, #revdate, #revremark,
+#footer {
+  font-family: Arial,Helvetica,sans-serif;
+}
+
+body {
+  margin: 1em 5% 1em 5%;
+}
+
+a {
+  color: blue;
+  text-decoration: underline;
+}
+a:visited {
+  color: fuchsia;
+}
+
+em {
+  font-style: italic;
+  color: navy;
+}
+
+strong {
+  font-weight: bold;
+  color: #083194;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #527bbd;
+  margin-top: 1.2em;
+  margin-bottom: 0.5em;
+  line-height: 1.3;
+}
+
+h1, h2, h3 {
+  border-bottom: 2px solid silver;
+}
+h2 {
+  padding-top: 0.5em;
+}
+h3 {
+  float: left;
+}
+h3 + * {
+  clear: left;
+}
+h5 {
+  font-size: 1.0em;
+}
+
+div.sectionbody {
+  margin-left: 0;
+}
+
+hr {
+  border: 1px solid silver;
+}
+
+p {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+ul, ol, li > p {
+  margin-top: 0;
+}
+ul > li     { color: #aaa; }
+ul > li > * { color: black; }
+
+.monospaced, code, pre {
+  font-family: "Courier New", Courier, monospace;
+  font-size: inherit;
+  color: navy;
+  padding: 0;
+  margin: 0;
+}
+
+
+#author {
+  color: #527bbd;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+#email {
+}
+#revnumber, #revdate, #revremark {
+}
+
+#footer {
+  font-size: small;
+  border-top: 2px solid silver;
+  padding-top: 0.5em;
+  margin-top: 4.0em;
+}
+#footer-text {
+  float: left;
+  padding-bottom: 0.5em;
+}
+#footer-badges {
+  float: right;
+  padding-bottom: 0.5em;
+}
+
+#preamble {
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+div.imageblock, div.exampleblock, div.verseblock,
+div.quoteblock, div.literalblock, div.listingblock, div.sidebarblock,
+div.admonitionblock {
+  margin-top: 1.0em;
+  margin-bottom: 1.5em;
+}
+div.admonitionblock {
+  margin-top: 2.0em;
+  margin-bottom: 2.0em;
+  margin-right: 10%;
+  color: #606060;
+}
+
+div.content { /* Block element content. */
+  padding: 0;
+}
+
+/* Block element titles. */
+div.title, caption.title {
+  color: #527bbd;
+  font-weight: bold;
+  text-align: left;
+  margin-top: 1.0em;
+  margin-bottom: 0.5em;
+}
+div.title + * {
+  margin-top: 0;
+}
+
+td div.title:first-child {
+  margin-top: 0.0em;
+}
+div.content div.title:first-child {
+  margin-top: 0.0em;
+}
+div.content + div.title {
+  margin-top: 0.0em;
+}
+
+div.sidebarblock > div.content {
+  background: #ffffee;
+  border: 1px solid #dddddd;
+  border-left: 4px solid #f0f0f0;
+  padding: 0.5em;
+}
+
+div.listingblock > div.content {
+  border: 1px solid #dddddd;
+  border-left: 5px solid #f0f0f0;
+  background: #f8f8f8;
+  padding: 0.5em;
+}
+
+div.quoteblock, div.verseblock {
+  padding-left: 1.0em;
+  margin-left: 1.0em;
+  margin-right: 10%;
+  border-left: 5px solid #f0f0f0;
+  color: #888;
+}
+
+div.quoteblock > div.attribution {
+  padding-top: 0.5em;
+  text-align: right;
+}
+
+div.verseblock > pre.content {
+  font-family: inherit;
+  font-size: inherit;
+}
+div.verseblock > div.attribution {
+  padding-top: 0.75em;
+  text-align: left;
+}
+/* DEPRECATED: Pre version 8.2.7 verse style literal block. */
+div.verseblock + div.attribution {
+  text-align: left;
+}
+
+div.admonitionblock .icon {
+  vertical-align: top;
+  font-size: 1.1em;
+  font-weight: bold;
+  text-decoration: underline;
+  color: #527bbd;
+  padding-right: 0.5em;
+}
+div.admonitionblock td.content {
+  padding-left: 0.5em;
+  border-left: 3px solid #dddddd;
+}
+
+div.exampleblock > div.content {
+  border-left: 3px solid #dddddd;
+  padding-left: 0.5em;
+}
+
+div.imageblock div.content { padding-left: 0; }
+span.image img { border-style: none; }
+a.image:visited { color: white; }
+
+dl {
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
+}
+dt {
+  margin-top: 0.5em;
+  margin-bottom: 0;
+  font-style: normal;
+  color: navy;
+}
+dd > *:first-child {
+  margin-top: 0.1em;
+}
+
+ul, ol {
+    list-style-position: outside;
+}
+ol.arabic {
+  list-style-type: decimal;
+}
+ol.loweralpha {
+  list-style-type: lower-alpha;
+}
+ol.upperalpha {
+  list-style-type: upper-alpha;
+}
+ol.lowerroman {
+  list-style-type: lower-roman;
+}
+ol.upperroman {
+  list-style-type: upper-roman;
+}
+
+div.compact ul, div.compact ol,
+div.compact p, div.compact p,
+div.compact div, div.compact div {
+  margin-top: 0.1em;
+  margin-bottom: 0.1em;
+}
+
+tfoot {
+  font-weight: bold;
+}
+td > div.verse {
+  white-space: pre;
+}
+
+div.hdlist {
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
+}
+div.hdlist tr {
+  padding-bottom: 15px;
+}
+dt.hdlist1.strong, td.hdlist1.strong {
+  font-weight: bold;
+}
+td.hdlist1 {
+  vertical-align: top;
+  font-style: normal;
+  padding-right: 0.8em;
+  color: navy;
+}
+td.hdlist2 {
+  vertical-align: top;
+}
+div.hdlist.compact tr {
+  margin: 0;
+  padding-bottom: 0;
+}
+
+.comment {
+  background: yellow;
+}
+
+.footnote, .footnoteref {
+  font-size: 0.8em;
+}
+
+span.footnote, span.footnoteref {
+  vertical-align: super;
+}
+
+#footnotes {
+  margin: 20px 0 20px 0;
+  padding: 7px 0 0 0;
+}
+
+#footnotes div.footnote {
+  margin: 0 0 5px 0;
+}
+
+#footnotes hr {
+  border: none;
+  border-top: 1px solid silver;
+  height: 1px;
+  text-align: left;
+  margin-left: 0;
+  width: 20%;
+  min-width: 100px;
+}
+
+div.colist td {
+  padding-right: 0.5em;
+  padding-bottom: 0.3em;
+  vertical-align: top;
+}
+div.colist td img {
+  margin-top: 0.3em;
+}
+
+@media print {
+  #footer-badges { display: none; }
+}
+
+#toc {
+  margin-bottom: 2.5em;
+}
+
+#toctitle {
+  color: #527bbd;
+  font-size: 1.1em;
+  font-weight: bold;
+  margin-top: 1.0em;
+  margin-bottom: 0.1em;
+}
+
+div.toclevel0, div.toclevel1, div.toclevel2, div.toclevel3, div.toclevel4 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+div.toclevel2 {
+  margin-left: 2em;
+  font-size: 0.9em;
+}
+div.toclevel3 {
+  margin-left: 4em;
+  font-size: 0.9em;
+}
+div.toclevel4 {
+  margin-left: 6em;
+  font-size: 0.9em;
+}
+
+span.aqua { color: aqua; }
+span.black { color: black; }
+span.blue { color: blue; }
+span.fuchsia { color: fuchsia; }
+span.gray { color: gray; }
+span.green { color: green; }
+span.lime { color: lime; }
+span.maroon { color: maroon; }
+span.navy { color: navy; }
+span.olive { color: olive; }
+span.purple { color: purple; }
+span.red { color: red; }
+span.silver { color: silver; }
+span.teal { color: teal; }
+span.white { color: white; }
+span.yellow { color: yellow; }
+
+span.aqua-background { background: aqua; }
+span.black-background { background: black; }
+span.blue-background { background: blue; }
+span.fuchsia-background { background: fuchsia; }
+span.gray-background { background: gray; }
+span.green-background { background: green; }
+span.lime-background { background: lime; }
+span.maroon-background { background: maroon; }
+span.navy-background { background: navy; }
+span.olive-background { background: olive; }
+span.purple-background { background: purple; }
+span.red-background { background: red; }
+span.silver-background { background: silver; }
+span.teal-background { background: teal; }
+span.white-background { background: white; }
+span.yellow-background { background: yellow; }
+
+span.big { font-size: 2em; }
+span.small { font-size: 0.6em; }
+
+span.underline { text-decoration: underline; }
+span.overline { text-decoration: overline; }
+span.line-through { text-decoration: line-through; }
+
+div.unbreakable { page-break-inside: avoid; }
+
+
+/*
+ * xhtml11 specific
+ *
+ * */
+
+div.tableblock {
+  margin-top: 1.0em;
+  margin-bottom: 1.5em;
+}
+div.tableblock > table {
+  border: 3px solid #527bbd;
+}
+thead, p.table.header {
+  font-weight: bold;
+  color: #527bbd;
+}
+p.table {
+  margin-top: 0;
+}
+/* Because the table frame attribute is overriden by CSS in most browsers. */
+div.tableblock > table[frame="void"] {
+  border-style: none;
+}
+div.tableblock > table[frame="hsides"] {
+  border-left-style: none;
+  border-right-style: none;
+}
+div.tableblock > table[frame="vsides"] {
+  border-top-style: none;
+  border-bottom-style: none;
+}
+
+
+/*
+ * html5 specific
+ *
+ * */
+
+table.tableblock {
+  margin-top: 1.0em;
+  margin-bottom: 1.5em;
+}
+thead, p.tableblock.header {
+  font-weight: bold;
+  color: #527bbd;
+}
+p.tableblock {
+  margin-top: 0;
+}
+table.tableblock {
+  border-width: 3px;
+  border-spacing: 0px;
+  border-style: solid;
+  border-color: #527bbd;
+  border-collapse: collapse;
+}
+th.tableblock, td.tableblock {
+  border-width: 1px;
+  padding: 4px;
+  border-style: solid;
+  border-color: #527bbd;
+}
+
+table.tableblock.frame-topbot {
+  border-left-style: hidden;
+  border-right-style: hidden;
+}
+table.tableblock.frame-sides {
+  border-top-style: hidden;
+  border-bottom-style: hidden;
+}
+table.tableblock.frame-none {
+  border-style: hidden;
+}
+
+th.tableblock.halign-left, td.tableblock.halign-left {
+  text-align: left;
+}
+th.tableblock.halign-center, td.tableblock.halign-center {
+  text-align: center;
+}
+th.tableblock.halign-right, td.tableblock.halign-right {
+  text-align: right;
+}
+
+th.tableblock.valign-top, td.tableblock.valign-top {
+  vertical-align: top;
+}
+th.tableblock.valign-middle, td.tableblock.valign-middle {
+  vertical-align: middle;
+}
+th.tableblock.valign-bottom, td.tableblock.valign-bottom {
+  vertical-align: bottom;
+}
+
+
+/*
+ * manpage specific
+ *
+ * */
+
+body.manpage h1 {
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  border-top: 2px solid silver;
+  border-bottom: 2px solid silver;
+}
+body.manpage h2 {
+  border-style: none;
+}
+body.manpage div.sectionbody {
+  margin-left: 3em;
+}
+
+@media print {
+  body.manpage div#toc { display: none; }
+}
+
+
+</style>
+<script type="text/javascript">
+/*<![CDATA[*/
+var asciidoc = {  // Namespace.
+
+/////////////////////////////////////////////////////////////////////
+// Table Of Contents generator
+/////////////////////////////////////////////////////////////////////
+
+/* Author: Mihai Bazon, September 2002
+ * http://students.infoiasi.ro/~mishoo
+ *
+ * Table Of Content generator
+ * Version: 0.4
+ *
+ * Feel free to use this script under the terms of the GNU General Public
+ * License, as long as you do not remove or alter this notice.
+ */
+
+ /* modified by Troy D. Hanson, September 2006. License: GPL */
+ /* modified by Stuart Rackham, 2006, 2009. License: GPL */
+
+// toclevels = 1..4.
+toc: function (toclevels) {
+
+  function getText(el) {
+    var text = "";
+    for (var i = el.firstChild; i != null; i = i.nextSibling) {
+      if (i.nodeType == 3 /* Node.TEXT_NODE */) // IE doesn't speak constants.
+        text += i.data;
+      else if (i.firstChild != null)
+        text += getText(i);
+    }
+    return text;
+  }
+
+  function TocEntry(el, text, toclevel) {
+    this.element = el;
+    this.text = text;
+    this.toclevel = toclevel;
+  }
+
+  function tocEntries(el, toclevels) {
+    var result = new Array;
+    var re = new RegExp('[hH]([1-'+(toclevels+1)+'])');
+    // Function that scans the DOM tree for header elements (the DOM2
+    // nodeIterator API would be a better technique but not supported by all
+    // browsers).
+    var iterate = function (el) {
+      for (var i = el.firstChild; i != null; i = i.nextSibling) {
+        if (i.nodeType == 1 /* Node.ELEMENT_NODE */) {
+          var mo = re.exec(i.tagName);
+          if (mo && (i.getAttribute("class") || i.getAttribute("className")) != "float") {
+            result[result.length] = new TocEntry(i, getText(i), mo[1]-1);
+          }
+          iterate(i);
+        }
+      }
+    }
+    iterate(el);
+    return result;
+  }
+
+  var toc = document.getElementById("toc");
+  if (!toc) {
+    return;
+  }
+
+  // Delete existing TOC entries in case we're reloading the TOC.
+  var tocEntriesToRemove = [];
+  var i;
+  for (i = 0; i < toc.childNodes.length; i++) {
+    var entry = toc.childNodes[i];
+    if (entry.nodeName.toLowerCase() == 'div'
+     && entry.getAttribute("class")
+     && entry.getAttribute("class").match(/^toclevel/))
+      tocEntriesToRemove.push(entry);
+  }
+  for (i = 0; i < tocEntriesToRemove.length; i++) {
+    toc.removeChild(tocEntriesToRemove[i]);
+  }
+
+  // Rebuild TOC entries.
+  var entries = tocEntries(document.getElementById("content"), toclevels);
+  for (var i = 0; i < entries.length; ++i) {
+    var entry = entries[i];
+    if (entry.element.id == "")
+      entry.element.id = "_toc_" + i;
+    var a = document.createElement("a");
+    a.href = "#" + entry.element.id;
+    a.appendChild(document.createTextNode(entry.text));
+    var div = document.createElement("div");
+    div.appendChild(a);
+    div.className = "toclevel" + entry.toclevel;
+    toc.appendChild(div);
+  }
+  if (entries.length == 0)
+    toc.parentNode.removeChild(toc);
+},
+
+
+/////////////////////////////////////////////////////////////////////
+// Footnotes generator
+/////////////////////////////////////////////////////////////////////
+
+/* Based on footnote generation code from:
+ * http://www.brandspankingnew.net/archive/2005/07/format_footnote.html
+ */
+
+footnotes: function () {
+  // Delete existing footnote entries in case we're reloading the footnodes.
+  var i;
+  var noteholder = document.getElementById("footnotes");
+  if (!noteholder) {
+    return;
+  }
+  var entriesToRemove = [];
+  for (i = 0; i < noteholder.childNodes.length; i++) {
+    var entry = noteholder.childNodes[i];
+    if (entry.nodeName.toLowerCase() == 'div' && entry.getAttribute("class") == "footnote")
+      entriesToRemove.push(entry);
+  }
+  for (i = 0; i < entriesToRemove.length; i++) {
+    noteholder.removeChild(entriesToRemove[i]);
+  }
+
+  // Rebuild footnote entries.
+  var cont = document.getElementById("content");
+  var spans = cont.getElementsByTagName("span");
+  var refs = {};
+  var n = 0;
+  for (i=0; i<spans.length; i++) {
+    if (spans[i].className == "footnote") {
+      n++;
+      var note = spans[i].getAttribute("data-note");
+      if (!note) {
+        // Use [\s\S] in place of . so multi-line matches work.
+        // Because JavaScript has no s (dotall) regex flag.
+        note = spans[i].innerHTML.match(/\s*\[([\s\S]*)]\s*/)[1];
+        spans[i].innerHTML =
+          "[<a id='_footnoteref_" + n + "' href='#_footnote_" + n +
+          "' title='View footnote' class='footnote'>" + n + "</a>]";
+        spans[i].setAttribute("data-note", note);
+      }
+      noteholder.innerHTML +=
+        "<div class='footnote' id='_footnote_" + n + "'>" +
+        "<a href='#_footnoteref_" + n + "' title='Return to text'>" +
+        n + "</a>. " + note + "</div>";
+      var id =spans[i].getAttribute("id");
+      if (id != null) refs["#"+id] = n;
+    }
+  }
+  if (n == 0)
+    noteholder.parentNode.removeChild(noteholder);
+  else {
+    // Process footnoterefs.
+    for (i=0; i<spans.length; i++) {
+      if (spans[i].className == "footnoteref") {
+        var href = spans[i].getElementsByTagName("a")[0].getAttribute("href");
+        href = href.match(/#.*/)[0];  // Because IE return full URL.
+        n = refs[href];
+        spans[i].innerHTML =
+          "[<a href='#_footnote_" + n +
+          "' title='View footnote' class='footnote'>" + n + "</a>]";
+      }
+    }
+  }
+},
+
+install: function(toclevels) {
+  var timerId;
+
+  function reinstall() {
+    asciidoc.footnotes();
+    if (toclevels) {
+      asciidoc.toc(toclevels);
+    }
+  }
+
+  function reinstallAndRemoveTimer() {
+    clearInterval(timerId);
+    reinstall();
+  }
+
+  timerId = setInterval(reinstall, 500);
+  if (document.addEventListener)
+    document.addEventListener("DOMContentLoaded", reinstallAndRemoveTimer, false);
+  else
+    window.onload = reinstallAndRemoveTimer;
+}
+
+}
+asciidoc.install();
+/*]]>*/
+</script>
+</head>
+<body class="article">
+<div id="header">
+</div>
+<div id="content">
+<div class="sect1">
+<h2 id="_advanced_access_rule_configuration">Advanced Access Rule Configuration</h2>
+<div class="sectionbody">
+<div class="paragraph"><p><strong>Advanced Access Rule Configuration</strong></p></div>
+<div class="paragraph"><p><strong>XML Access Rules</strong></p></div>
+<div class="paragraph"><p>Security access rules are XML documents attached to user groups. Each
+user&#8217;s security clearance is based in a union of all of the rules coming
+from the groups they are planned to. Admin users have no rules because,
+by default, everything is allowed in TACTIC.</p></div>
+<div class="paragraph"><p>In the Groups table, the Access Rules column shows the XML rules which
+are automatically generated by either the TACTIC Manage Security tool or
+by manual editing for very specific and custom control. The default
+security version for TACTIC 3.7 is security version 1 and for TACTIC 3.8
+is security version 2. In general, for security version 1, the access
+level is ranked like this from bottom up: deny &lt; view &lt; edit &lt; allow.
+For security version 2: the access level is: view &lt; edit &lt; allow (where
+"allow" provides the most permissions).</p></div>
+<div class="paragraph"><p>The security version is specified in the TACTIC config file as follows:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>&lt;security&gt;
+    &lt;version&gt;2&lt;/version&gt;
+&lt;/security&gt;</code></pre>
+</div></div>
+<div class="quoteblock">
+<div class="content">
+<div class="paragraph"><p><strong>Note</strong></p></div>
+<div class="paragraph"><p>If no security version is specified for TACTIC 3.7, the default is
+security version 1. For a fresh install of TACTIC 3.8 (i.e. not an
+upgrade), the default is security version 2.</p></div>
+<div class="paragraph"><p>If upgrading from TACTIC 3.7 to 3.8, the security version will remain
+set at version 1 (which is the default for 3.7, since the security
+version is not specified).</p></div>
+</div>
+<div class="attribution">
+</div></div>
+<div class="paragraph"><p><strong>Security Version 1</strong></p></div>
+<div class="paragraph"><p>The following section applies to Security Version 1.</p></div>
+<div class="paragraph"><p>Access rules for the <em>Client</em> group: In this sample, any users in the
+Client group can see only a project named "game" and cannot access the
+side_bar items (which have been denied).</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>&lt;?xml version='1.0' encoding='UTF-8'?&gt;
+&lt;rules&gt;
+  &lt;rule key='admin' access='deny' group='side_bar'/&gt;
+  &lt;rule key='site_admin' access='deny' group='side_bar'/&gt;
+  &lt;rule key='Level_Manage' access='deny' group='side_bar'/&gt;
+  &lt;rule key='levels_folder' access='deny' group='side_bar'/&gt;
+  &lt;rule key='characters_folder' access='deny' group='side_bar'/&gt;
+  &lt;rule key='myTactic_folder' access='deny' group='side_bar'/&gt;
+  &lt;rule group='project' access='deny'/&gt;
+  &lt;rule group='project" key="game" access='allow'/&gt;
+  &lt;/rules&gt;</code></pre>
+</div></div>
+<div class="paragraph"><p><strong>Global Rules</strong></p></div>
+<div class="paragraph"><p>The global rules can be configured in the Groups page or the Groups List
+tab in the Manage Security page. Here is a list of the existing rules:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>    'view_side_bar', 'title': 'View Side Bar', 'default': 'allow'
+    'view_site_admin', 'title': 'View Site Admin'
+    'view_script_editor', 'title': 'View Script Editor'
+    'side_bar_schema', 'title': 'View Side Bar Schema'
+    'view_save_my_view', 'title': 'View and Save My Views', 'default': 'allow'
+    'view_private_notes', 'title': 'View Private Notes'
+    'view_column_manager', 'title': 'View Column Manager'
+    'view_template_projects', 'title': 'View Template Projects', 'default': 'deny'
+
+
+    'create_projects', 'title': 'Create Projects'
+    'export_all_csv', 'title': 'Export All CSV'
+    'import_csv', 'title': 'Import CSV'
+    'retire_delete', 'title': 'Retire and Delete'</code></pre>
+</div></div>
+<div class="paragraph"><p><strong>Project level Examples</strong></p></div>
+<div class="paragraph"><p><strong>XML Examples</strong></p></div>
+<div class="paragraph"><p>The following are examples of different access rules which can be used
+to customize group access rules. Make sure the &lt;rule/&gt; tag is a child of
+the &lt;rules/&gt; tag.</p></div>
+<div class="paragraph"><p><strong>Project level Examples</strong></p></div>
+<div class="olist arabic"><ol class="arabic">
+<li>
+<p>
+This rule denies access to all projects except for the "sample3d"
+project. In the following example, the "default" project is a home page
+the user needs to use to select projects. Because it is part of the
+group, you must explicitly allow viewing access to this default project
+when you deny access to all projects. It is also needed for XML-RPC
+communication to the client computer.
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>&lt;rules&gt;
+  &lt;rule group='project' default='deny'/&gt;
+  &lt;rule group='project' key='sample3d' access='allow'/&gt;
+  &lt;rule group='project' key='default' access='view'/&gt;
+&lt;/rules&gt;</code></pre>
+</div></div>
+</li>
+<li>
+<p>
+All projects can be viewed by default.
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>&lt;rule group='project' default='view'/&gt;</code></pre>
+</div></div>
+</li>
+</ol></div>
+<div class="paragraph"><p><strong>Search Type level Examples</strong></p></div>
+<div class="olist arabic"><ol class="arabic">
+<li>
+<p>
+The layer search type is not viewable in all projects
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>&lt;rule group='sobject' search_type='prod/layer' project='*' access='deny'/&gt;
+or
+&lt;rule group='sobject' search_type='prod/layer' access='deny'/&gt;</code></pre>
+</div></div>
+</li>
+<li>
+<p>
+The task search type is not viewable in project <em>sample3d</em>. Note
+that this is not the same as tasks assigned in project <em>sample3d</em> is not
+viewable. It merely restricts the user&#8217;s ability to view tasks when he
+is in a particular project.
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>&lt;rule group='sobject' search_type='sthpw/task' project='sample3d' access='deny'/&gt;</code></pre>
+</div></div>
+</li>
+<li>
+<p>
+The note search type is not viewable in project <em>sample3d</em>.
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>&lt;rule group='sobject' search_type='sthpw/note' project='sample3d' access='deny'/&gt;</code></pre>
+</div></div>
+</li>
+<li>
+<p>
+The note search type is not editable in project <em>sample3d</em>. This
+currently only applies to the main TableLayoutWdg used in most places.
+NoteSheetWdg and DiscussionWdg which also handle note entry are not
+bound by this rule.
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>&lt;rule group='sobject' search_type='sthpw/note' project='sample3d' access='view'/&gt;</code></pre>
+</div></div>
+</li>
+<li>
+<p>
+The shot search type is editable in project <em>sample3d</em>
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>&lt;rule group='sobject' search_type='prod/shot' project='sample3d' access='edit'/&gt;</code></pre>
+</div></div>
+</li>
+<li>
+<p>
+The 3d Asset search type from project <em>sample3d</em> is not viewable.
+This is also applicable when you are in a different project looking at a
+task in <em>sample3d</em> and the parent of which happens to be a 3d Asset in
+project <em>sample3d</em>.
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>&lt;rule group='sobject' search_type='prod/asset' project='sample3d' access='deny'/&gt;</code></pre>
+</div></div>
+</li>
+</ol></div>
+<div class="paragraph"><p><strong>User Interface Column level Examples</strong></p></div>
+<div class="paragraph"><p>These examples affect the display of the columns in different views</p></div>
+<div class="olist arabic"><ol class="arabic">
+<li>
+<p>
+The 3d Asset search type&#8217;s code and description are not editable in
+all projects
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>&lt;rule group='element' search_type='prod/asset' key='code' access='view'/&gt;
+&lt;rule group='element' search_type='prod/asset' key='description' access='view'/&gt;</code></pre>
+</div></div>
+</li>
+<li>
+<p>
+The Shot search type&#8217;s status is not editable in the <em>sample3d</em>
+project
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>&lt;rule group='element' search_type='prod/shot' key='status' access='view' project='sample3d/&gt;</code></pre>
+</div></div>
+</li>
+<li>
+<p>
+The Shot search type&#8217;s description is not visible in the <em>sample3d</em>
+project
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>&lt;rule group='element' search_type='prod/shot' key='description' access='deny' project='sample3d/&gt;</code></pre>
+</div></div>
+</li>
+</ol></div>
+<div class="paragraph"><p><strong>Database level Examples</strong></p></div>
+<div class="paragraph"><p>While Search Type and Search Type Column level examples affect the
+display of the main TableLayoutWdg and EditWdg, the following database
+level examples are applied when attempts are made to edit or insert data
+into the database. It can block even server or client API script access
+to the databases.</p></div>
+<div class="olist arabic"><ol class="arabic">
+<li>
+<p>
+This rule prevents the display and writing of the "is_current" field
+for snapshots found in the Checkin History.
+</p>
+<div class="paragraph"><p>DEPRECATED and UNSUPPORTED format:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>    &lt;rule group='sobject|column' key='sthpw/snapshot|is_current' access='deny'/&gt;</code></pre>
+</div></div>
+<div class="paragraph"><p>New format:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>    &lt;rule group='sobject_column' search_type='sthpw/snapshot' column='is_current' access='deny'/&gt;</code></pre>
+</div></div>
+</li>
+<li>
+<p>
+The description column for Shot cannot be edited in any widget or
+any script. It is view only.
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code> &lt;rule group='sobject_column' column='description'  search_type='prod/shot' access='view'/&gt;</code></pre>
+</div></div>
+</li>
+<li>
+<p>
+The status column for Task cannot be edited in any widget or any
+script. It is view only.
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code> &lt;rule group='sobject_column' column='status'  search_type='sthpw/task' access='view'/&gt;</code></pre>
+</div></div>
+</li>
+<li>
+<p>
+The custom sType project/asset is view-only and not editable by a
+particular group.
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code> &lt;rule group='sobject' search_type='project/asset' access='view'/&gt;</code></pre>
+</div></div>
+</li>
+<li>
+<p>
+The custom sType project/asset is not viewable by a particular
+group. The search result will always come up empty.
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code> &lt;rule group='sobject' search_type='project/asset' access='deny'/&gt;</code></pre>
+</div></div>
+</li>
+</ol></div>
+<div class="paragraph"><p><strong>Search Filter Examples</strong></p></div>
+<div class="paragraph"><p>To enforce what can be searched or filtered out in any situation like
+script query or UI view, search_filter rules can be applied. The
+<em>access</em> attribute is not required here.</p></div>
+<div class="olist arabic"><ol class="arabic">
+<li>
+<p>
+This rule filters out tasks belonging to project "pacman" and
+"sample3d". Notice you don&#8217;t need "access" here.
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code> &lt;rule group='search_filter' column='project_code' value='pacman' op='!=' search_type='sthpw/task' /&gt;
+ &lt;rule group='search_filter' column='project_code' value='sample3d' op='!=' search_type='sthpw/task' /&gt;</code></pre>
+</div></div>
+</li>
+<li>
+<p>
+This rule retrieves task that is assigned to the current login user,
+applicable when navigating in project <em>sample3d</em>. Notice the <em>value</em>
+attribute can accept an expression. $LOGIN and $PROJECT are also
+supported.
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code> &lt;rule column='assigned' value='@GET(login.login)' search_type='sthpw/task' op='=' group='search_filter' project='sample3d'/&gt;
+    or
+ &lt;rule column='assigned' value='$LOGIN' search_type='sthpw/task' op='=' group='search_filter' project='sample3d'/&gt;</code></pre>
+</div></div>
+</li>
+</ol></div>
+<div class="paragraph"><p><strong>Miscellaneous Examples</strong></p></div>
+<div class="olist arabic"><ol class="arabic">
+<li>
+<p>
+This rule blocks a user from seeing the options "Approved" and
+"Complete" in the task status drop-down
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>  &lt;rule access='deny' key='Complete' category='process_select'/&gt;
+  &lt;rule access='deny' key='Approved' category='process_select'/&gt;</code></pre>
+</div></div>
+</li>
+</ol></div>
+<div class="paragraph"><p><strong>Security Version 2</strong></p></div>
+<div class="paragraph"><p>The following are examples of how to fine tune control access to TACTIC
+in security version 2. (Some of these example may be repeated in
+security version 1 above.)</p></div>
+<div class="paragraph"><p><strong>Project Access:</strong></p></div>
+<div class="paragraph"><p>This allows the group to see the project with the code "toy_factory".</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>&lt;rules&gt;
+
+&lt;/rules&gt;</code></pre>
+</div></div>
+<div class="paragraph"><p><strong>Link Access:</strong></p></div>
+<div class="paragraph"><p>This allows the group to see the link named "block_set_list" in the
+project named "toy_factory".</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>&lt;rules&gt;
+  &lt;rule group="project" code="toy_factory" access="allow"/&gt;
+
+&lt;/rules&gt;</code></pre>
+</div></div>
+<div class="paragraph"><p><strong>sType (Search Type) Access:</strong></p></div>
+<div class="paragraph"><p>This allows the group</p></div>
+<div class="paragraph"><p>to see the sType "toy_factory/design" in the project named
+"toy_factory".</p></div>
+<div class="paragraph"><p>to hide the sType "sthpw/task" in the project named "toy_factory".</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>&lt;rules&gt;
+  &lt;rule group="project" code="toy_factory" access="allow"/&gt;
+  &lt;rule group="link" element="block_set_list" project="toy_factory" access="allow"/&gt;
+
+&lt;/rules&gt;</code></pre>
+</div></div>
+<div class="paragraph"><p><strong>Process Access:</strong></p></div>
+<div class="paragraph"><p>This allows the group to see the process named "packaging" in the
+project named "toy_factory".</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>&lt;rules&gt;
+  &lt;rule group="project" code="toy_factory" access="allow"/&gt;
+  &lt;rule group="link" element="block_set_list" project="toy_factory" access="allow"/&gt;
+  &lt;rule group="search_type" code="toy_factory/design" project="toy_factory" access="allow"/&gt;
+  &lt;rule group="search_type" code="sthpw/task" project="toy_factory" access="deny"/&gt;
+
+&lt;/rules&gt;</code></pre>
+</div></div>
+<div class="paragraph"><p><strong>User Interface Column level Access:</strong></p></div>
+<div class="paragraph"><p>This allows the group to:</p></div>
+<div class="paragraph"><p>-view the element <em>description</em></p></div>
+<div class="paragraph"><p>-edit the element <em>name</em></p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>&lt;rules&gt;
+  &lt;rule group="project" code="toy_factory" access="allow"/&gt;
+  &lt;rule group="link" element="block_set_list" project="toy_factory" access="allow"/&gt;
+  &lt;rule group="search_type" code="toy_factory/design" project="toy_factory" access="allow"/&gt;
+  &lt;rule group="search_type" code="sthpw/task" project="toy_factory" access="deny"/&gt;
+  &lt;rule group="process" process="packaging" project="toy_factory" access="allow"/&gt;
+
+&lt;/rules&gt;</code></pre>
+</div></div>
+</div>
+</div>
+</div>
+<div id="footnotes"><hr /></div>
+<div id="footer">
+<div id="footer-text">
+Last updated 2015-10-22 21:52:40 EDT
+</div>
+</div>
+</body>
+</html>

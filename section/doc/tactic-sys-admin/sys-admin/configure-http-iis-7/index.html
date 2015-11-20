@@ -1,0 +1,1136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
+<meta name="generator" content="AsciiDoc 8.6.8" />
+<title></title>
+<style type="text/css">
+/* Shared CSS for AsciiDoc xhtml11 and html5 backends */
+
+/* Default font. */
+body {
+  font-family: Georgia,serif;
+}
+
+/* Title font. */
+h1, h2, h3, h4, h5, h6,
+div.title, caption.title,
+thead, p.table.header,
+#toctitle,
+#author, #revnumber, #revdate, #revremark,
+#footer {
+  font-family: Arial,Helvetica,sans-serif;
+}
+
+body {
+  margin: 1em 5% 1em 5%;
+}
+
+a {
+  color: blue;
+  text-decoration: underline;
+}
+a:visited {
+  color: fuchsia;
+}
+
+em {
+  font-style: italic;
+  color: navy;
+}
+
+strong {
+  font-weight: bold;
+  color: #083194;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #527bbd;
+  margin-top: 1.2em;
+  margin-bottom: 0.5em;
+  line-height: 1.3;
+}
+
+h1, h2, h3 {
+  border-bottom: 2px solid silver;
+}
+h2 {
+  padding-top: 0.5em;
+}
+h3 {
+  float: left;
+}
+h3 + * {
+  clear: left;
+}
+h5 {
+  font-size: 1.0em;
+}
+
+div.sectionbody {
+  margin-left: 0;
+}
+
+hr {
+  border: 1px solid silver;
+}
+
+p {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+ul, ol, li > p {
+  margin-top: 0;
+}
+ul > li     { color: #aaa; }
+ul > li > * { color: black; }
+
+.monospaced, code, pre {
+  font-family: "Courier New", Courier, monospace;
+  font-size: inherit;
+  color: navy;
+  padding: 0;
+  margin: 0;
+}
+
+
+#author {
+  color: #527bbd;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+#email {
+}
+#revnumber, #revdate, #revremark {
+}
+
+#footer {
+  font-size: small;
+  border-top: 2px solid silver;
+  padding-top: 0.5em;
+  margin-top: 4.0em;
+}
+#footer-text {
+  float: left;
+  padding-bottom: 0.5em;
+}
+#footer-badges {
+  float: right;
+  padding-bottom: 0.5em;
+}
+
+#preamble {
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+div.imageblock, div.exampleblock, div.verseblock,
+div.quoteblock, div.literalblock, div.listingblock, div.sidebarblock,
+div.admonitionblock {
+  margin-top: 1.0em;
+  margin-bottom: 1.5em;
+}
+div.admonitionblock {
+  margin-top: 2.0em;
+  margin-bottom: 2.0em;
+  margin-right: 10%;
+  color: #606060;
+}
+
+div.content { /* Block element content. */
+  padding: 0;
+}
+
+/* Block element titles. */
+div.title, caption.title {
+  color: #527bbd;
+  font-weight: bold;
+  text-align: left;
+  margin-top: 1.0em;
+  margin-bottom: 0.5em;
+}
+div.title + * {
+  margin-top: 0;
+}
+
+td div.title:first-child {
+  margin-top: 0.0em;
+}
+div.content div.title:first-child {
+  margin-top: 0.0em;
+}
+div.content + div.title {
+  margin-top: 0.0em;
+}
+
+div.sidebarblock > div.content {
+  background: #ffffee;
+  border: 1px solid #dddddd;
+  border-left: 4px solid #f0f0f0;
+  padding: 0.5em;
+}
+
+div.listingblock > div.content {
+  border: 1px solid #dddddd;
+  border-left: 5px solid #f0f0f0;
+  background: #f8f8f8;
+  padding: 0.5em;
+}
+
+div.quoteblock, div.verseblock {
+  padding-left: 1.0em;
+  margin-left: 1.0em;
+  margin-right: 10%;
+  border-left: 5px solid #f0f0f0;
+  color: #888;
+}
+
+div.quoteblock > div.attribution {
+  padding-top: 0.5em;
+  text-align: right;
+}
+
+div.verseblock > pre.content {
+  font-family: inherit;
+  font-size: inherit;
+}
+div.verseblock > div.attribution {
+  padding-top: 0.75em;
+  text-align: left;
+}
+/* DEPRECATED: Pre version 8.2.7 verse style literal block. */
+div.verseblock + div.attribution {
+  text-align: left;
+}
+
+div.admonitionblock .icon {
+  vertical-align: top;
+  font-size: 1.1em;
+  font-weight: bold;
+  text-decoration: underline;
+  color: #527bbd;
+  padding-right: 0.5em;
+}
+div.admonitionblock td.content {
+  padding-left: 0.5em;
+  border-left: 3px solid #dddddd;
+}
+
+div.exampleblock > div.content {
+  border-left: 3px solid #dddddd;
+  padding-left: 0.5em;
+}
+
+div.imageblock div.content { padding-left: 0; }
+span.image img { border-style: none; }
+a.image:visited { color: white; }
+
+dl {
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
+}
+dt {
+  margin-top: 0.5em;
+  margin-bottom: 0;
+  font-style: normal;
+  color: navy;
+}
+dd > *:first-child {
+  margin-top: 0.1em;
+}
+
+ul, ol {
+    list-style-position: outside;
+}
+ol.arabic {
+  list-style-type: decimal;
+}
+ol.loweralpha {
+  list-style-type: lower-alpha;
+}
+ol.upperalpha {
+  list-style-type: upper-alpha;
+}
+ol.lowerroman {
+  list-style-type: lower-roman;
+}
+ol.upperroman {
+  list-style-type: upper-roman;
+}
+
+div.compact ul, div.compact ol,
+div.compact p, div.compact p,
+div.compact div, div.compact div {
+  margin-top: 0.1em;
+  margin-bottom: 0.1em;
+}
+
+tfoot {
+  font-weight: bold;
+}
+td > div.verse {
+  white-space: pre;
+}
+
+div.hdlist {
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
+}
+div.hdlist tr {
+  padding-bottom: 15px;
+}
+dt.hdlist1.strong, td.hdlist1.strong {
+  font-weight: bold;
+}
+td.hdlist1 {
+  vertical-align: top;
+  font-style: normal;
+  padding-right: 0.8em;
+  color: navy;
+}
+td.hdlist2 {
+  vertical-align: top;
+}
+div.hdlist.compact tr {
+  margin: 0;
+  padding-bottom: 0;
+}
+
+.comment {
+  background: yellow;
+}
+
+.footnote, .footnoteref {
+  font-size: 0.8em;
+}
+
+span.footnote, span.footnoteref {
+  vertical-align: super;
+}
+
+#footnotes {
+  margin: 20px 0 20px 0;
+  padding: 7px 0 0 0;
+}
+
+#footnotes div.footnote {
+  margin: 0 0 5px 0;
+}
+
+#footnotes hr {
+  border: none;
+  border-top: 1px solid silver;
+  height: 1px;
+  text-align: left;
+  margin-left: 0;
+  width: 20%;
+  min-width: 100px;
+}
+
+div.colist td {
+  padding-right: 0.5em;
+  padding-bottom: 0.3em;
+  vertical-align: top;
+}
+div.colist td img {
+  margin-top: 0.3em;
+}
+
+@media print {
+  #footer-badges { display: none; }
+}
+
+#toc {
+  margin-bottom: 2.5em;
+}
+
+#toctitle {
+  color: #527bbd;
+  font-size: 1.1em;
+  font-weight: bold;
+  margin-top: 1.0em;
+  margin-bottom: 0.1em;
+}
+
+div.toclevel0, div.toclevel1, div.toclevel2, div.toclevel3, div.toclevel4 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+div.toclevel2 {
+  margin-left: 2em;
+  font-size: 0.9em;
+}
+div.toclevel3 {
+  margin-left: 4em;
+  font-size: 0.9em;
+}
+div.toclevel4 {
+  margin-left: 6em;
+  font-size: 0.9em;
+}
+
+span.aqua { color: aqua; }
+span.black { color: black; }
+span.blue { color: blue; }
+span.fuchsia { color: fuchsia; }
+span.gray { color: gray; }
+span.green { color: green; }
+span.lime { color: lime; }
+span.maroon { color: maroon; }
+span.navy { color: navy; }
+span.olive { color: olive; }
+span.purple { color: purple; }
+span.red { color: red; }
+span.silver { color: silver; }
+span.teal { color: teal; }
+span.white { color: white; }
+span.yellow { color: yellow; }
+
+span.aqua-background { background: aqua; }
+span.black-background { background: black; }
+span.blue-background { background: blue; }
+span.fuchsia-background { background: fuchsia; }
+span.gray-background { background: gray; }
+span.green-background { background: green; }
+span.lime-background { background: lime; }
+span.maroon-background { background: maroon; }
+span.navy-background { background: navy; }
+span.olive-background { background: olive; }
+span.purple-background { background: purple; }
+span.red-background { background: red; }
+span.silver-background { background: silver; }
+span.teal-background { background: teal; }
+span.white-background { background: white; }
+span.yellow-background { background: yellow; }
+
+span.big { font-size: 2em; }
+span.small { font-size: 0.6em; }
+
+span.underline { text-decoration: underline; }
+span.overline { text-decoration: overline; }
+span.line-through { text-decoration: line-through; }
+
+div.unbreakable { page-break-inside: avoid; }
+
+
+/*
+ * xhtml11 specific
+ *
+ * */
+
+div.tableblock {
+  margin-top: 1.0em;
+  margin-bottom: 1.5em;
+}
+div.tableblock > table {
+  border: 3px solid #527bbd;
+}
+thead, p.table.header {
+  font-weight: bold;
+  color: #527bbd;
+}
+p.table {
+  margin-top: 0;
+}
+/* Because the table frame attribute is overriden by CSS in most browsers. */
+div.tableblock > table[frame="void"] {
+  border-style: none;
+}
+div.tableblock > table[frame="hsides"] {
+  border-left-style: none;
+  border-right-style: none;
+}
+div.tableblock > table[frame="vsides"] {
+  border-top-style: none;
+  border-bottom-style: none;
+}
+
+
+/*
+ * html5 specific
+ *
+ * */
+
+table.tableblock {
+  margin-top: 1.0em;
+  margin-bottom: 1.5em;
+}
+thead, p.tableblock.header {
+  font-weight: bold;
+  color: #527bbd;
+}
+p.tableblock {
+  margin-top: 0;
+}
+table.tableblock {
+  border-width: 3px;
+  border-spacing: 0px;
+  border-style: solid;
+  border-color: #527bbd;
+  border-collapse: collapse;
+}
+th.tableblock, td.tableblock {
+  border-width: 1px;
+  padding: 4px;
+  border-style: solid;
+  border-color: #527bbd;
+}
+
+table.tableblock.frame-topbot {
+  border-left-style: hidden;
+  border-right-style: hidden;
+}
+table.tableblock.frame-sides {
+  border-top-style: hidden;
+  border-bottom-style: hidden;
+}
+table.tableblock.frame-none {
+  border-style: hidden;
+}
+
+th.tableblock.halign-left, td.tableblock.halign-left {
+  text-align: left;
+}
+th.tableblock.halign-center, td.tableblock.halign-center {
+  text-align: center;
+}
+th.tableblock.halign-right, td.tableblock.halign-right {
+  text-align: right;
+}
+
+th.tableblock.valign-top, td.tableblock.valign-top {
+  vertical-align: top;
+}
+th.tableblock.valign-middle, td.tableblock.valign-middle {
+  vertical-align: middle;
+}
+th.tableblock.valign-bottom, td.tableblock.valign-bottom {
+  vertical-align: bottom;
+}
+
+
+/*
+ * manpage specific
+ *
+ * */
+
+body.manpage h1 {
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  border-top: 2px solid silver;
+  border-bottom: 2px solid silver;
+}
+body.manpage h2 {
+  border-style: none;
+}
+body.manpage div.sectionbody {
+  margin-left: 3em;
+}
+
+@media print {
+  body.manpage div#toc { display: none; }
+}
+
+
+</style>
+<script type="text/javascript">
+/*<![CDATA[*/
+var asciidoc = {  // Namespace.
+
+/////////////////////////////////////////////////////////////////////
+// Table Of Contents generator
+/////////////////////////////////////////////////////////////////////
+
+/* Author: Mihai Bazon, September 2002
+ * http://students.infoiasi.ro/~mishoo
+ *
+ * Table Of Content generator
+ * Version: 0.4
+ *
+ * Feel free to use this script under the terms of the GNU General Public
+ * License, as long as you do not remove or alter this notice.
+ */
+
+ /* modified by Troy D. Hanson, September 2006. License: GPL */
+ /* modified by Stuart Rackham, 2006, 2009. License: GPL */
+
+// toclevels = 1..4.
+toc: function (toclevels) {
+
+  function getText(el) {
+    var text = "";
+    for (var i = el.firstChild; i != null; i = i.nextSibling) {
+      if (i.nodeType == 3 /* Node.TEXT_NODE */) // IE doesn't speak constants.
+        text += i.data;
+      else if (i.firstChild != null)
+        text += getText(i);
+    }
+    return text;
+  }
+
+  function TocEntry(el, text, toclevel) {
+    this.element = el;
+    this.text = text;
+    this.toclevel = toclevel;
+  }
+
+  function tocEntries(el, toclevels) {
+    var result = new Array;
+    var re = new RegExp('[hH]([1-'+(toclevels+1)+'])');
+    // Function that scans the DOM tree for header elements (the DOM2
+    // nodeIterator API would be a better technique but not supported by all
+    // browsers).
+    var iterate = function (el) {
+      for (var i = el.firstChild; i != null; i = i.nextSibling) {
+        if (i.nodeType == 1 /* Node.ELEMENT_NODE */) {
+          var mo = re.exec(i.tagName);
+          if (mo && (i.getAttribute("class") || i.getAttribute("className")) != "float") {
+            result[result.length] = new TocEntry(i, getText(i), mo[1]-1);
+          }
+          iterate(i);
+        }
+      }
+    }
+    iterate(el);
+    return result;
+  }
+
+  var toc = document.getElementById("toc");
+  if (!toc) {
+    return;
+  }
+
+  // Delete existing TOC entries in case we're reloading the TOC.
+  var tocEntriesToRemove = [];
+  var i;
+  for (i = 0; i < toc.childNodes.length; i++) {
+    var entry = toc.childNodes[i];
+    if (entry.nodeName.toLowerCase() == 'div'
+     && entry.getAttribute("class")
+     && entry.getAttribute("class").match(/^toclevel/))
+      tocEntriesToRemove.push(entry);
+  }
+  for (i = 0; i < tocEntriesToRemove.length; i++) {
+    toc.removeChild(tocEntriesToRemove[i]);
+  }
+
+  // Rebuild TOC entries.
+  var entries = tocEntries(document.getElementById("content"), toclevels);
+  for (var i = 0; i < entries.length; ++i) {
+    var entry = entries[i];
+    if (entry.element.id == "")
+      entry.element.id = "_toc_" + i;
+    var a = document.createElement("a");
+    a.href = "#" + entry.element.id;
+    a.appendChild(document.createTextNode(entry.text));
+    var div = document.createElement("div");
+    div.appendChild(a);
+    div.className = "toclevel" + entry.toclevel;
+    toc.appendChild(div);
+  }
+  if (entries.length == 0)
+    toc.parentNode.removeChild(toc);
+},
+
+
+/////////////////////////////////////////////////////////////////////
+// Footnotes generator
+/////////////////////////////////////////////////////////////////////
+
+/* Based on footnote generation code from:
+ * http://www.brandspankingnew.net/archive/2005/07/format_footnote.html
+ */
+
+footnotes: function () {
+  // Delete existing footnote entries in case we're reloading the footnodes.
+  var i;
+  var noteholder = document.getElementById("footnotes");
+  if (!noteholder) {
+    return;
+  }
+  var entriesToRemove = [];
+  for (i = 0; i < noteholder.childNodes.length; i++) {
+    var entry = noteholder.childNodes[i];
+    if (entry.nodeName.toLowerCase() == 'div' && entry.getAttribute("class") == "footnote")
+      entriesToRemove.push(entry);
+  }
+  for (i = 0; i < entriesToRemove.length; i++) {
+    noteholder.removeChild(entriesToRemove[i]);
+  }
+
+  // Rebuild footnote entries.
+  var cont = document.getElementById("content");
+  var spans = cont.getElementsByTagName("span");
+  var refs = {};
+  var n = 0;
+  for (i=0; i<spans.length; i++) {
+    if (spans[i].className == "footnote") {
+      n++;
+      var note = spans[i].getAttribute("data-note");
+      if (!note) {
+        // Use [\s\S] in place of . so multi-line matches work.
+        // Because JavaScript has no s (dotall) regex flag.
+        note = spans[i].innerHTML.match(/\s*\[([\s\S]*)]\s*/)[1];
+        spans[i].innerHTML =
+          "[<a id='_footnoteref_" + n + "' href='#_footnote_" + n +
+          "' title='View footnote' class='footnote'>" + n + "</a>]";
+        spans[i].setAttribute("data-note", note);
+      }
+      noteholder.innerHTML +=
+        "<div class='footnote' id='_footnote_" + n + "'>" +
+        "<a href='#_footnoteref_" + n + "' title='Return to text'>" +
+        n + "</a>. " + note + "</div>";
+      var id =spans[i].getAttribute("id");
+      if (id != null) refs["#"+id] = n;
+    }
+  }
+  if (n == 0)
+    noteholder.parentNode.removeChild(noteholder);
+  else {
+    // Process footnoterefs.
+    for (i=0; i<spans.length; i++) {
+      if (spans[i].className == "footnoteref") {
+        var href = spans[i].getElementsByTagName("a")[0].getAttribute("href");
+        href = href.match(/#.*/)[0];  // Because IE return full URL.
+        n = refs[href];
+        spans[i].innerHTML =
+          "[<a href='#_footnote_" + n +
+          "' title='View footnote' class='footnote'>" + n + "</a>]";
+      }
+    }
+  }
+},
+
+install: function(toclevels) {
+  var timerId;
+
+  function reinstall() {
+    asciidoc.footnotes();
+    if (toclevels) {
+      asciidoc.toc(toclevels);
+    }
+  }
+
+  function reinstallAndRemoveTimer() {
+    clearInterval(timerId);
+    reinstall();
+  }
+
+  timerId = setInterval(reinstall, 500);
+  if (document.addEventListener)
+    document.addEventListener("DOMContentLoaded", reinstallAndRemoveTimer, false);
+  else
+    window.onload = reinstallAndRemoveTimer;
+}
+
+}
+asciidoc.install();
+/*]]>*/
+</script>
+</head>
+<body class="article">
+<div id="header">
+</div>
+<div id="content">
+<div class="sect1">
+<h2 id="_iis_7_http_co_service_configuration">IIS 7+ HTTP Co-Service Configuration</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>Windows HTTP co-service installations are IIS based.</p></div>
+<div class="paragraph"><p>On IIS installations prior to version 7, appropriate 3rd party proxying
+software (the ISAPI_Rewrite module) is required to be installed with IIS
+to enable the proper functioning of TACTIC.</p></div>
+<div class="paragraph"><p>TACTIC can be configured to work with the native IIS 7.5 services
+available on applicable Windows OS&#8217;s, such as Windows 7 and Windows
+Server 2008. Prior versions of IIS have required 3rd party software (the
+ISAPI_Rewrite module) to be installed alongside the IIS service to
+facilitate proxy and URL rewriting. With IIS 7.5, and the introduction
+of the ARR and URL rewrite module, the requirement of a 3rd party
+software is no longer needed.</p></div>
+<div class="paragraph"><p><span class="image">
+<img src="media/1.png" alt="image" />
+</span></p></div>
+<div class="paragraph"><p>On Windows 7, and Windows Server 2008, IIS is installed through means
+and directions published on Microsoft support websites. Please consult
+installation guides published by Microsoft for the installation
+procedure of IIS.</p></div>
+<div class="paragraph"><p>Typically, IIS 7.5 does not come with the ARR module, and depending on
+the IIS installation, URL rewrite. These modules are requirements for a
+installation alongside TACTIC. Please refer to Microsoft published
+documentation regarding installation of these modules.</p></div>
+<div class="paragraph"><p>Permissions must be set for IIS to be able to serve assets that TACTIC
+manages.</p></div>
+<div class="paragraph"><p>TACTIC requires that the IIS user have access to TACTIC assets and all
+of the virtual directories that contain TACTIC widgets.</p></div>
+<div class="paragraph"><p>Whether the assets directory is stored on the host machine or on a
+network mount, there should be a assigned user that runs TACTIC.</p></div>
+<div class="paragraph"><p>For non-domain Windows machines, a local user created on the TACTIC
+host, such as the IUSR_&lt;computer_name&gt; automatically created by an IIS
+installation will suffice, provided that the network mounted directories
+are writable by the system user.</p></div>
+<div class="paragraph"><p>For ADS domains, a user can be created on the domain, and assigned via
+the Services control panel. Assigning a domain user to the TACTIC
+service will allow domain level security rules to apply.</p></div>
+<div class="paragraph"><p><strong>To assign a user to a service:</strong></p></div>
+<div class="olist arabic"><ol class="arabic">
+<li>
+<p>
+Open the Services control panel
+</p>
+</li>
+<li>
+<p>
+Right click on the "TACTIC application server"
+</p>
+</li>
+<li>
+<p>
+Click on the "Log On" tab
+</p>
+</li>
+<li>
+<p>
+Change the "log on as" option to reflect the user created, whether
+local or domain based.
+</p>
+<div class="paragraph"><p><span class="image">
+<img src="media/Selection_002.png" alt="image" />
+</span></p></div>
+</li>
+</ol></div>
+<div class="paragraph"><p>For a locally hosted asset directory , the anonymous user (typically
+IUSR_&lt;computer name&gt;) account needs to be granted access to the
+directories, and all subdirectories under them.</p></div>
+<div class="paragraph"><p>Find the directories above in Windows Explorer, and right click on the
+directory to bring up “Sharing and Security�? for that directory.</p></div>
+<div class="paragraph"><p><span class="image">
+<img src="media/3.png" alt="image" />
+</span></p></div>
+<div class="paragraph"><p>IIS must be configured to serve static content, such as TACTIC assets,
+and TACTIC UI skins.</p></div>
+<div class="paragraph"><p><span class="image">
+<img src="media/2.png" alt="image" />
+</span></p></div>
+<div class="tableblock">
+<table rules="all"
+width="100%"
+frame="border"
+cellspacing="0" cellpadding="4">
+<caption class="title">Table 1. Virtual directories required by TACTIC</caption>
+<col width="31%" />
+<col width="21%" />
+<col width="48%" />
+<thead>
+<tr>
+<th align="left" valign="top">Directory Description </th>
+<th align="left" valign="top">Directory Alias </th>
+<th align="left" valign="top">Location</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left" valign="top"><p class="table">Assets storage</p></td>
+<td align="left" valign="top"><p class="table">assets</p></td>
+<td align="left" valign="top"><p class="table">User provided during installation</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">TACTIC UI widgets</p></td>
+<td align="left" valign="top"><p class="table">context</p></td>
+<td align="left" valign="top"><p class="table">Inside TACTIC installation directory</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">Documentation</p></td>
+<td align="left" valign="top"><p class="table">doc</p></td>
+<td align="left" valign="top"><p class="table">Inside TACTIC installation directory</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">Project storage</p></td>
+<td align="left" valign="top"><p class="table">projects</p></td>
+<td align="left" valign="top"><p class="table">User provided during installation</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="paragraph"><p>There are four “virtual directories�? that must be created to access the
+static content provided by TACTIC.</p></div>
+<div class="paragraph"><p><strong>To create the directories;</strong></p></div>
+<div class="olist arabic"><ol class="arabic">
+<li>
+<p>
+Right click on “Default web site�? and “Add Virtual Directory�?
+</p>
+</li>
+<li>
+<p>
+Create the virtual directory, using the paths that were created by
+the installation of TACTIC. The default paths may not apply.
+</p>
+<div class="paragraph"><p><span class="image">
+<img src="media/Selection_003.png" alt="image" />
+</span>
+3.</p></div>
+</li>
+</ol></div>
+<div class="quoteblock">
+<div class="content">
+<div class="paragraph"><p><strong>Important</strong></p></div>
+<div class="paragraph"><p>If the directory is located on a network mount, it may have to be
+connected to as the user running the TACTIC service. To connect as a
+different user than the IIS user, click on the "Connect As"</p></div>
+</div>
+<div class="attribution">
+</div></div>
+<div class="paragraph"><p>+
+<span class="image">
+<img src="media/Selection_005.png" alt="image" />
+</span></p></div>
+<div class="paragraph"><p>+
+Then click on the "Set&#8230;" button, and fill in the details of the user
+that will run the TACTIC service.</p></div>
+<div class="paragraph"><p>+
+<span class="image">
+<img src="media/Selection_004.png" alt="image" />
+</span></p></div>
+<div class="paragraph"><p>There should now be 4 virtual entries on the IIS service.</p></div>
+<div class="paragraph"><p><span class="image">
+<img src="media/4.png" alt="image" />
+</span></p></div>
+<div class="paragraph"><p>Application Request Routing (ARR) is the module snap-in that will proxy
+and load balance requests. ARR is required by IIS to split incoming
+TACTIC service requests between the dynamic content that drives the API
+and the TACTIC web UI, and static content. In order to achieve this, IIS
+must be configured to send certain requests to the TACTIC application
+server, while static data requests (usually assets) are sent to IIS.</p></div>
+<div class="paragraph"><p>This guide currently supports two methods of attaching the TACTIC
+service to an IIS co-service.</p></div>
+<div class="paragraph"><p><strong>Proxy/Load balancing</strong></p></div>
+<div class="paragraph"><p>The Load balancing configuration of IIS splits TACTIC service requests
+into multiple streams, with each stream utilizing its own TACTIC service
+process.</p></div>
+<div class="paragraph"><p><strong>Proxy Only</strong></p></div>
+<div class="paragraph"><p>The proxy-only configuration routes all TACTIC service requests to a
+single TACTIC service. This method should only be used in light usage
+TACTIC installations such as development servers.</p></div>
+<div class="paragraph"><p>A TACTIC installation by default runs 3 seperate TACTIC service
+listeners, arranged on default ports 8081, 8082 and 8083. To split
+TACTIC service requests into multiple streams, IIS must be configured to
+consider TACTIC part of a “server farm�?. Since all of the TACTIC
+services are running on one single host, IIS currently must be tricked
+into routing requests to the 3 different TACTIC streams on the
+localhost.</p></div>
+<div class="paragraph"><p>By default, windows looks in the hosts file, then to DNS for named
+hosts. To divide localhost into three “different�? machines, the
+<code>“%SYSTEMROOT%/System32/drivers/etc/host�?</code> file must be edited to be
+able to address localhost as more than one machine.</p></div>
+<div class="quoteblock">
+<div class="content">
+<div class="paragraph"><p><strong>Important</strong></p></div>
+<div class="paragraph"><p>If TACTIC is set to run a number of processes other than the default of
+three, then these instructions must reflect that number. Add or subtract
+from the list of localhost entries and web farm entries accordingly.</p></div>
+</div>
+<div class="attribution">
+</div></div>
+<div class="paragraph"><p><strong>To create a web farm</strong>;</p></div>
+<div class="olist arabic"><ol class="arabic">
+<li>
+<p>
+As an “Administrator�? user, edit the “127.0.0.1�? line in this file
+</p>
+<div class="paragraph"><p><span class="image">
+<img src="media/5.png" alt="image" />
+</span></p></div>
+<div class="paragraph"><p>The addition of localhost-2 and localhost-3 that reference 127.0.0.1
+allow this host machine to access localhost as more than one machine.
+2.  Now the Server Farm reference must be created.</p></div>
+<div class="paragraph"><p>Start the IIS snap in, and select the Web server that will be used as a
+TACTIC co-service in the left side navigation bar. Right click on the
+“Server Farms�? folder and create a new server farm.</p></div>
+<div class="paragraph"><p><span class="image">
+<img src="media/6.png" alt="image" />
+</span></p></div>
+<div class="paragraph"><p>3 seperate servers must be added to the server farm to correspond to the
+3 default TACTIC service processes. Add each server according to the
+below table.</p></div>
+<div class="tableblock">
+<table rules="all"
+width="100%"
+frame="border"
+cellspacing="0" cellpadding="4">
+<col width="50%" />
+<col width="50%" />
+<thead>
+<tr>
+<th align="left" valign="top">Server Address </th>
+<th align="left" valign="top">httpPort</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left" valign="top"><p class="table">localhost-1</p></td>
+<td align="left" valign="top"><p class="table">8081</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">localhost-2</p></td>
+<td align="left" valign="top"><p class="table">8082</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">localhost-3</p></td>
+<td align="left" valign="top"><p class="table">8083</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="paragraph"><p>Click on “Add�? when done each entry in the above list. For additional
+servers, the “server address�? must correspond to the additional
+localhost entries in the “hosts�? file. The ports must correspond to
+8082, 8083, etc. Add the required number of servers according to TACTIC
+deployment requirements.</p></div>
+<div class="paragraph"><p><span class="image">
+<img src="media/7.png" alt="image" />
+</span>
+3.  Click “Finish�? when done.
+4.  Create the rewrite rule when prompted.</p></div>
+</li>
+</ol></div>
+<div class="paragraph"><p><span class="image">
+<img src="media/8.png" alt="image" />
+</span></p></div>
+<div class="paragraph"><p>URL rewrite must now be configured to only send TACTIC API requests to
+the server farm.</p></div>
+<div class="olist arabic"><ol class="arabic">
+<li>
+<p>
+Click on the server farm icon on the left-hand side of IIS manager
+and click the “Routing Rules�? icon.
+</p>
+<div class="paragraph"><p><span class="image">
+<img src="media/Selection_009.png" alt="Selection_009.png" />
+</span>
+2.  In the right pane of the Routing rules section, click the "URL
+rewrite" link</p></div>
+<div class="paragraph"><p><span class="image">
+<img src="media/Selection_010.png" alt="image" />
+</span>
+3.  Select the automatically created URL rewrite rule created when the
+web farm was created, and click on the "Edit" link in the right pane.</p></div>
+<div class="paragraph"><p><span class="image">
+<img src="media/Selection_011.png" alt="image" />
+</span></p></div>
+<div class="paragraph"><p>In the “Edit Inbound rule�? pane, edit the pattern to read
+“tactic*,projects*�? This will instruct IIS to route all TACTIC UI
+requests to the TACTIC service.</p></div>
+<div class="paragraph"><p><span class="image">
+<img src="media/Selection_012.png" alt="image" />
+</span>
+4.  Apply the change.</p></div>
+</li>
+</ol></div>
+<div class="paragraph"><p>ARR comes with several load balancing algorithms. Click on the newly
+created server farm, and click on the “Load Balancing�? icon. Select
+“Weighted round robin�? as the algorithm, and “Even distribution�? as
+the load distribution.</p></div>
+<div class="paragraph"><p><span class="image">
+<img src="media/11.png" alt="image" />
+</span></p></div>
+<div class="paragraph"><p>IIS can be configured to run a single rewrite rule to forward requests
+to a single TACTIC service.</p></div>
+<div class="paragraph"><p>Start the IIS snap in, and select the Web server that will be used as a
+TACTIC co-service in the left side navigation bar. Choose “Application
+request routing�? And click on server proxy settings on the right-hand
+side.</p></div>
+<div class="paragraph"><p><span class="image">
+<img src="media/12.png" alt="image" />
+</span></p></div>
+<div class="paragraph"><p>In the ARR options under the proxy settings check the “use URL rewrite
+to inspect incoming requests�?, And in the “reverse proxy�? text area
+type “localhost:8081�?. This instructs IIS to proxy everything to this
+address and port.</p></div>
+<div class="paragraph"><p><span class="image">
+<img src="media/13.png" alt="image" />
+</span></p></div>
+<div class="paragraph"><p>From here URL Rewrite can then be instructed to filter proxy requests.
+Click on the “URL rewrite�? link on the right-hand side to modify
+rewrite rules. Typically, if the proxy has been created in ARR, then a
+rule will be created in URL rewrite.</p></div>
+<div class="paragraph"><p><span class="image">
+<img src="media/14.png" alt="image" />
+</span></p></div>
+<div class="paragraph"><p>IIS must then be instructed to only proxy TACTIC UI and API requests. To
+do this, an automatically created rule must be altered to allow TACTIC
+asset requests to be handled by IIS.</p></div>
+<div class="paragraph"><p><span class="image">
+<img src="media/15.png" alt="image" />
+</span></p></div>
+<div class="paragraph"><p>To modify the existing rule for TACTIC, the pattern under "Match URL"
+should be "tactic*". The action “Rewrite URL�? should be
+"http://localhost:8081/{R:0}"</p></div>
+<div class="paragraph"><p>TACTIC currently has a requirement to insert custom MIME types into the
+list of allowed types for the IIS service.</p></div>
+<div class="tableblock">
+<table rules="all"
+width="100%"
+frame="border"
+cellspacing="0" cellpadding="4">
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+<thead>
+<tr>
+<th align="left" valign="top">MIME type </th>
+<th align="left" valign="top">Function </th>
+<th align="left" valign="top">Extension</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left" valign="top"><p class="table">text/plain</p></td>
+<td align="left" valign="top"><p class="table">Python Script mask</p></td>
+<td align="left" valign="top"><p class="table">.xx</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="paragraph"><p>To add a MIME type in IIS 7</p></div>
+<div class="olist arabic"><ol class="arabic">
+<li>
+<p>
+Click on the web server entry in the left-hand pane.
+</p>
+</li>
+<li>
+<p>
+Click on the MIME typesimage:media/Selection_013.png[image] icon in
+the centre pane.
+</p>
+</li>
+<li>
+<p>
+Click on the "Add&#8230;" link on the right-hand pane.
+</p>
+</li>
+<li>
+<p>
+Add all entries required by the table above.
+</p>
+<div class="paragraph"><p><span class="image">
+<img src="media/Selection_014.png" alt="image" />
+</span></p></div>
+</li>
+</ol></div>
+<div class="paragraph"><p>At this point IIS should be configured to proxy TACTIC service requests
+to the TACTIC service, while leaving all other requests to IIS.</p></div>
+<div class="paragraph"><p><a href="http://learn.iis.net/page.aspx/485/define-and-configure-an-application-request-routing-server-farm/">http://learn.iis.net/page.aspx/485/define-and-configure-an-application-request-routing-server-farm/</a></p></div>
+<div class="paragraph"><p><a href="http://learn.iis.net/page.aspx/486/http-load-balancing-using-application-request-routing/">http://learn.iis.net/page.aspx/486/http-load-balancing-using-application-request-routing/</a></p></div>
+<div class="paragraph"><p><a href="http://blogs.msdn.com/nickhodge/default.aspx?p=2">http://blogs.msdn.com/nickhodge/default.aspx?p=2</a></p></div>
+</div>
+</div>
+</div>
+<div id="footnotes"><hr /></div>
+<div id="footer">
+<div id="footer-text">
+Last updated 2015-10-22 21:52:41 EDT
+</div>
+</div>
+</body>
+</html>

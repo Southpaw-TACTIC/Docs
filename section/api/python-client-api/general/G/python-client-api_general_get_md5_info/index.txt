@@ -1,0 +1,27 @@
+get_md5_info
+------------
+
+*get_md5_info(md5_list, texture_codes, new_paths, parent_code, texture_cls, file_group_dict, project_code)*
+
+Get md5 info for a given list of texture paths, mainly returning if this md5 is a match or not
+*param:*
+
+*md5_list* - md5_list
+
+*new_paths* - list of file_paths
+
+*parent_code* - parent code
+
+*texture_cls* - Texture or ShotTexture
+
+*file_group_dict* - file group dictionary storing all the file groups
+
+*project_code* - project_code
+
+*mode* - texture matching mode (md5, file_name)
+
+
+
+*return:*
+
+*dictionary* - a dictionary of path and a subdictionary of is_match, repo_file_code, repo_path, repo_file_range

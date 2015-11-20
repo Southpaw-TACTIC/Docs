@@ -1,8 +1,0 @@
-set_protocol
-------------
-
-*get_protocol()*
-
-*params*
-
-*string* - local or xmlrpc

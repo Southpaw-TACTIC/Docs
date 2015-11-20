@@ -1,0 +1,1103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
+<meta name="generator" content="AsciiDoc 8.6.8" />
+<title></title>
+<style type="text/css">
+/* Shared CSS for AsciiDoc xhtml11 and html5 backends */
+
+/* Default font. */
+body {
+  font-family: Georgia,serif;
+}
+
+/* Title font. */
+h1, h2, h3, h4, h5, h6,
+div.title, caption.title,
+thead, p.table.header,
+#toctitle,
+#author, #revnumber, #revdate, #revremark,
+#footer {
+  font-family: Arial,Helvetica,sans-serif;
+}
+
+body {
+  margin: 1em 5% 1em 5%;
+}
+
+a {
+  color: blue;
+  text-decoration: underline;
+}
+a:visited {
+  color: fuchsia;
+}
+
+em {
+  font-style: italic;
+  color: navy;
+}
+
+strong {
+  font-weight: bold;
+  color: #083194;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #527bbd;
+  margin-top: 1.2em;
+  margin-bottom: 0.5em;
+  line-height: 1.3;
+}
+
+h1, h2, h3 {
+  border-bottom: 2px solid silver;
+}
+h2 {
+  padding-top: 0.5em;
+}
+h3 {
+  float: left;
+}
+h3 + * {
+  clear: left;
+}
+h5 {
+  font-size: 1.0em;
+}
+
+div.sectionbody {
+  margin-left: 0;
+}
+
+hr {
+  border: 1px solid silver;
+}
+
+p {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+ul, ol, li > p {
+  margin-top: 0;
+}
+ul > li     { color: #aaa; }
+ul > li > * { color: black; }
+
+.monospaced, code, pre {
+  font-family: "Courier New", Courier, monospace;
+  font-size: inherit;
+  color: navy;
+  padding: 0;
+  margin: 0;
+}
+
+
+#author {
+  color: #527bbd;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+#email {
+}
+#revnumber, #revdate, #revremark {
+}
+
+#footer {
+  font-size: small;
+  border-top: 2px solid silver;
+  padding-top: 0.5em;
+  margin-top: 4.0em;
+}
+#footer-text {
+  float: left;
+  padding-bottom: 0.5em;
+}
+#footer-badges {
+  float: right;
+  padding-bottom: 0.5em;
+}
+
+#preamble {
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+div.imageblock, div.exampleblock, div.verseblock,
+div.quoteblock, div.literalblock, div.listingblock, div.sidebarblock,
+div.admonitionblock {
+  margin-top: 1.0em;
+  margin-bottom: 1.5em;
+}
+div.admonitionblock {
+  margin-top: 2.0em;
+  margin-bottom: 2.0em;
+  margin-right: 10%;
+  color: #606060;
+}
+
+div.content { /* Block element content. */
+  padding: 0;
+}
+
+/* Block element titles. */
+div.title, caption.title {
+  color: #527bbd;
+  font-weight: bold;
+  text-align: left;
+  margin-top: 1.0em;
+  margin-bottom: 0.5em;
+}
+div.title + * {
+  margin-top: 0;
+}
+
+td div.title:first-child {
+  margin-top: 0.0em;
+}
+div.content div.title:first-child {
+  margin-top: 0.0em;
+}
+div.content + div.title {
+  margin-top: 0.0em;
+}
+
+div.sidebarblock > div.content {
+  background: #ffffee;
+  border: 1px solid #dddddd;
+  border-left: 4px solid #f0f0f0;
+  padding: 0.5em;
+}
+
+div.listingblock > div.content {
+  border: 1px solid #dddddd;
+  border-left: 5px solid #f0f0f0;
+  background: #f8f8f8;
+  padding: 0.5em;
+}
+
+div.quoteblock, div.verseblock {
+  padding-left: 1.0em;
+  margin-left: 1.0em;
+  margin-right: 10%;
+  border-left: 5px solid #f0f0f0;
+  color: #888;
+}
+
+div.quoteblock > div.attribution {
+  padding-top: 0.5em;
+  text-align: right;
+}
+
+div.verseblock > pre.content {
+  font-family: inherit;
+  font-size: inherit;
+}
+div.verseblock > div.attribution {
+  padding-top: 0.75em;
+  text-align: left;
+}
+/* DEPRECATED: Pre version 8.2.7 verse style literal block. */
+div.verseblock + div.attribution {
+  text-align: left;
+}
+
+div.admonitionblock .icon {
+  vertical-align: top;
+  font-size: 1.1em;
+  font-weight: bold;
+  text-decoration: underline;
+  color: #527bbd;
+  padding-right: 0.5em;
+}
+div.admonitionblock td.content {
+  padding-left: 0.5em;
+  border-left: 3px solid #dddddd;
+}
+
+div.exampleblock > div.content {
+  border-left: 3px solid #dddddd;
+  padding-left: 0.5em;
+}
+
+div.imageblock div.content { padding-left: 0; }
+span.image img { border-style: none; }
+a.image:visited { color: white; }
+
+dl {
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
+}
+dt {
+  margin-top: 0.5em;
+  margin-bottom: 0;
+  font-style: normal;
+  color: navy;
+}
+dd > *:first-child {
+  margin-top: 0.1em;
+}
+
+ul, ol {
+    list-style-position: outside;
+}
+ol.arabic {
+  list-style-type: decimal;
+}
+ol.loweralpha {
+  list-style-type: lower-alpha;
+}
+ol.upperalpha {
+  list-style-type: upper-alpha;
+}
+ol.lowerroman {
+  list-style-type: lower-roman;
+}
+ol.upperroman {
+  list-style-type: upper-roman;
+}
+
+div.compact ul, div.compact ol,
+div.compact p, div.compact p,
+div.compact div, div.compact div {
+  margin-top: 0.1em;
+  margin-bottom: 0.1em;
+}
+
+tfoot {
+  font-weight: bold;
+}
+td > div.verse {
+  white-space: pre;
+}
+
+div.hdlist {
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
+}
+div.hdlist tr {
+  padding-bottom: 15px;
+}
+dt.hdlist1.strong, td.hdlist1.strong {
+  font-weight: bold;
+}
+td.hdlist1 {
+  vertical-align: top;
+  font-style: normal;
+  padding-right: 0.8em;
+  color: navy;
+}
+td.hdlist2 {
+  vertical-align: top;
+}
+div.hdlist.compact tr {
+  margin: 0;
+  padding-bottom: 0;
+}
+
+.comment {
+  background: yellow;
+}
+
+.footnote, .footnoteref {
+  font-size: 0.8em;
+}
+
+span.footnote, span.footnoteref {
+  vertical-align: super;
+}
+
+#footnotes {
+  margin: 20px 0 20px 0;
+  padding: 7px 0 0 0;
+}
+
+#footnotes div.footnote {
+  margin: 0 0 5px 0;
+}
+
+#footnotes hr {
+  border: none;
+  border-top: 1px solid silver;
+  height: 1px;
+  text-align: left;
+  margin-left: 0;
+  width: 20%;
+  min-width: 100px;
+}
+
+div.colist td {
+  padding-right: 0.5em;
+  padding-bottom: 0.3em;
+  vertical-align: top;
+}
+div.colist td img {
+  margin-top: 0.3em;
+}
+
+@media print {
+  #footer-badges { display: none; }
+}
+
+#toc {
+  margin-bottom: 2.5em;
+}
+
+#toctitle {
+  color: #527bbd;
+  font-size: 1.1em;
+  font-weight: bold;
+  margin-top: 1.0em;
+  margin-bottom: 0.1em;
+}
+
+div.toclevel0, div.toclevel1, div.toclevel2, div.toclevel3, div.toclevel4 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+div.toclevel2 {
+  margin-left: 2em;
+  font-size: 0.9em;
+}
+div.toclevel3 {
+  margin-left: 4em;
+  font-size: 0.9em;
+}
+div.toclevel4 {
+  margin-left: 6em;
+  font-size: 0.9em;
+}
+
+span.aqua { color: aqua; }
+span.black { color: black; }
+span.blue { color: blue; }
+span.fuchsia { color: fuchsia; }
+span.gray { color: gray; }
+span.green { color: green; }
+span.lime { color: lime; }
+span.maroon { color: maroon; }
+span.navy { color: navy; }
+span.olive { color: olive; }
+span.purple { color: purple; }
+span.red { color: red; }
+span.silver { color: silver; }
+span.teal { color: teal; }
+span.white { color: white; }
+span.yellow { color: yellow; }
+
+span.aqua-background { background: aqua; }
+span.black-background { background: black; }
+span.blue-background { background: blue; }
+span.fuchsia-background { background: fuchsia; }
+span.gray-background { background: gray; }
+span.green-background { background: green; }
+span.lime-background { background: lime; }
+span.maroon-background { background: maroon; }
+span.navy-background { background: navy; }
+span.olive-background { background: olive; }
+span.purple-background { background: purple; }
+span.red-background { background: red; }
+span.silver-background { background: silver; }
+span.teal-background { background: teal; }
+span.white-background { background: white; }
+span.yellow-background { background: yellow; }
+
+span.big { font-size: 2em; }
+span.small { font-size: 0.6em; }
+
+span.underline { text-decoration: underline; }
+span.overline { text-decoration: overline; }
+span.line-through { text-decoration: line-through; }
+
+div.unbreakable { page-break-inside: avoid; }
+
+
+/*
+ * xhtml11 specific
+ *
+ * */
+
+div.tableblock {
+  margin-top: 1.0em;
+  margin-bottom: 1.5em;
+}
+div.tableblock > table {
+  border: 3px solid #527bbd;
+}
+thead, p.table.header {
+  font-weight: bold;
+  color: #527bbd;
+}
+p.table {
+  margin-top: 0;
+}
+/* Because the table frame attribute is overriden by CSS in most browsers. */
+div.tableblock > table[frame="void"] {
+  border-style: none;
+}
+div.tableblock > table[frame="hsides"] {
+  border-left-style: none;
+  border-right-style: none;
+}
+div.tableblock > table[frame="vsides"] {
+  border-top-style: none;
+  border-bottom-style: none;
+}
+
+
+/*
+ * html5 specific
+ *
+ * */
+
+table.tableblock {
+  margin-top: 1.0em;
+  margin-bottom: 1.5em;
+}
+thead, p.tableblock.header {
+  font-weight: bold;
+  color: #527bbd;
+}
+p.tableblock {
+  margin-top: 0;
+}
+table.tableblock {
+  border-width: 3px;
+  border-spacing: 0px;
+  border-style: solid;
+  border-color: #527bbd;
+  border-collapse: collapse;
+}
+th.tableblock, td.tableblock {
+  border-width: 1px;
+  padding: 4px;
+  border-style: solid;
+  border-color: #527bbd;
+}
+
+table.tableblock.frame-topbot {
+  border-left-style: hidden;
+  border-right-style: hidden;
+}
+table.tableblock.frame-sides {
+  border-top-style: hidden;
+  border-bottom-style: hidden;
+}
+table.tableblock.frame-none {
+  border-style: hidden;
+}
+
+th.tableblock.halign-left, td.tableblock.halign-left {
+  text-align: left;
+}
+th.tableblock.halign-center, td.tableblock.halign-center {
+  text-align: center;
+}
+th.tableblock.halign-right, td.tableblock.halign-right {
+  text-align: right;
+}
+
+th.tableblock.valign-top, td.tableblock.valign-top {
+  vertical-align: top;
+}
+th.tableblock.valign-middle, td.tableblock.valign-middle {
+  vertical-align: middle;
+}
+th.tableblock.valign-bottom, td.tableblock.valign-bottom {
+  vertical-align: bottom;
+}
+
+
+/*
+ * manpage specific
+ *
+ * */
+
+body.manpage h1 {
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  border-top: 2px solid silver;
+  border-bottom: 2px solid silver;
+}
+body.manpage h2 {
+  border-style: none;
+}
+body.manpage div.sectionbody {
+  margin-left: 3em;
+}
+
+@media print {
+  body.manpage div#toc { display: none; }
+}
+
+
+</style>
+<script type="text/javascript">
+/*<![CDATA[*/
+var asciidoc = {  // Namespace.
+
+/////////////////////////////////////////////////////////////////////
+// Table Of Contents generator
+/////////////////////////////////////////////////////////////////////
+
+/* Author: Mihai Bazon, September 2002
+ * http://students.infoiasi.ro/~mishoo
+ *
+ * Table Of Content generator
+ * Version: 0.4
+ *
+ * Feel free to use this script under the terms of the GNU General Public
+ * License, as long as you do not remove or alter this notice.
+ */
+
+ /* modified by Troy D. Hanson, September 2006. License: GPL */
+ /* modified by Stuart Rackham, 2006, 2009. License: GPL */
+
+// toclevels = 1..4.
+toc: function (toclevels) {
+
+  function getText(el) {
+    var text = "";
+    for (var i = el.firstChild; i != null; i = i.nextSibling) {
+      if (i.nodeType == 3 /* Node.TEXT_NODE */) // IE doesn't speak constants.
+        text += i.data;
+      else if (i.firstChild != null)
+        text += getText(i);
+    }
+    return text;
+  }
+
+  function TocEntry(el, text, toclevel) {
+    this.element = el;
+    this.text = text;
+    this.toclevel = toclevel;
+  }
+
+  function tocEntries(el, toclevels) {
+    var result = new Array;
+    var re = new RegExp('[hH]([1-'+(toclevels+1)+'])');
+    // Function that scans the DOM tree for header elements (the DOM2
+    // nodeIterator API would be a better technique but not supported by all
+    // browsers).
+    var iterate = function (el) {
+      for (var i = el.firstChild; i != null; i = i.nextSibling) {
+        if (i.nodeType == 1 /* Node.ELEMENT_NODE */) {
+          var mo = re.exec(i.tagName);
+          if (mo && (i.getAttribute("class") || i.getAttribute("className")) != "float") {
+            result[result.length] = new TocEntry(i, getText(i), mo[1]-1);
+          }
+          iterate(i);
+        }
+      }
+    }
+    iterate(el);
+    return result;
+  }
+
+  var toc = document.getElementById("toc");
+  if (!toc) {
+    return;
+  }
+
+  // Delete existing TOC entries in case we're reloading the TOC.
+  var tocEntriesToRemove = [];
+  var i;
+  for (i = 0; i < toc.childNodes.length; i++) {
+    var entry = toc.childNodes[i];
+    if (entry.nodeName.toLowerCase() == 'div'
+     && entry.getAttribute("class")
+     && entry.getAttribute("class").match(/^toclevel/))
+      tocEntriesToRemove.push(entry);
+  }
+  for (i = 0; i < tocEntriesToRemove.length; i++) {
+    toc.removeChild(tocEntriesToRemove[i]);
+  }
+
+  // Rebuild TOC entries.
+  var entries = tocEntries(document.getElementById("content"), toclevels);
+  for (var i = 0; i < entries.length; ++i) {
+    var entry = entries[i];
+    if (entry.element.id == "")
+      entry.element.id = "_toc_" + i;
+    var a = document.createElement("a");
+    a.href = "#" + entry.element.id;
+    a.appendChild(document.createTextNode(entry.text));
+    var div = document.createElement("div");
+    div.appendChild(a);
+    div.className = "toclevel" + entry.toclevel;
+    toc.appendChild(div);
+  }
+  if (entries.length == 0)
+    toc.parentNode.removeChild(toc);
+},
+
+
+/////////////////////////////////////////////////////////////////////
+// Footnotes generator
+/////////////////////////////////////////////////////////////////////
+
+/* Based on footnote generation code from:
+ * http://www.brandspankingnew.net/archive/2005/07/format_footnote.html
+ */
+
+footnotes: function () {
+  // Delete existing footnote entries in case we're reloading the footnodes.
+  var i;
+  var noteholder = document.getElementById("footnotes");
+  if (!noteholder) {
+    return;
+  }
+  var entriesToRemove = [];
+  for (i = 0; i < noteholder.childNodes.length; i++) {
+    var entry = noteholder.childNodes[i];
+    if (entry.nodeName.toLowerCase() == 'div' && entry.getAttribute("class") == "footnote")
+      entriesToRemove.push(entry);
+  }
+  for (i = 0; i < entriesToRemove.length; i++) {
+    noteholder.removeChild(entriesToRemove[i]);
+  }
+
+  // Rebuild footnote entries.
+  var cont = document.getElementById("content");
+  var spans = cont.getElementsByTagName("span");
+  var refs = {};
+  var n = 0;
+  for (i=0; i<spans.length; i++) {
+    if (spans[i].className == "footnote") {
+      n++;
+      var note = spans[i].getAttribute("data-note");
+      if (!note) {
+        // Use [\s\S] in place of . so multi-line matches work.
+        // Because JavaScript has no s (dotall) regex flag.
+        note = spans[i].innerHTML.match(/\s*\[([\s\S]*)]\s*/)[1];
+        spans[i].innerHTML =
+          "[<a id='_footnoteref_" + n + "' href='#_footnote_" + n +
+          "' title='View footnote' class='footnote'>" + n + "</a>]";
+        spans[i].setAttribute("data-note", note);
+      }
+      noteholder.innerHTML +=
+        "<div class='footnote' id='_footnote_" + n + "'>" +
+        "<a href='#_footnoteref_" + n + "' title='Return to text'>" +
+        n + "</a>. " + note + "</div>";
+      var id =spans[i].getAttribute("id");
+      if (id != null) refs["#"+id] = n;
+    }
+  }
+  if (n == 0)
+    noteholder.parentNode.removeChild(noteholder);
+  else {
+    // Process footnoterefs.
+    for (i=0; i<spans.length; i++) {
+      if (spans[i].className == "footnoteref") {
+        var href = spans[i].getElementsByTagName("a")[0].getAttribute("href");
+        href = href.match(/#.*/)[0];  // Because IE return full URL.
+        n = refs[href];
+        spans[i].innerHTML =
+          "[<a href='#_footnote_" + n +
+          "' title='View footnote' class='footnote'>" + n + "</a>]";
+      }
+    }
+  }
+},
+
+install: function(toclevels) {
+  var timerId;
+
+  function reinstall() {
+    asciidoc.footnotes();
+    if (toclevels) {
+      asciidoc.toc(toclevels);
+    }
+  }
+
+  function reinstallAndRemoveTimer() {
+    clearInterval(timerId);
+    reinstall();
+  }
+
+  timerId = setInterval(reinstall, 500);
+  if (document.addEventListener)
+    document.addEventListener("DOMContentLoaded", reinstallAndRemoveTimer, false);
+  else
+    window.onload = reinstallAndRemoveTimer;
+}
+
+}
+asciidoc.install();
+/*]]>*/
+</script>
+</head>
+<body class="article">
+<div id="header">
+</div>
+<div id="content">
+<div class="sect1">
+<h2 id="_tactic_expression_language_introduction">TACTIC Expression Language Introduction</h2>
+<div class="sectionbody">
+<div class="paragraph"><p><strong>TACTIC Expression Language Introduction</strong></p></div>
+<div class="paragraph"><p><strong>Introduction</strong></p></div>
+<div class="paragraph"><p>This document describes the construct of the <strong>TEL</strong> TACTIC Expression
+Language. This language is a shorthand form to quickly retrieve
+information about related Search Objects. The expression either starts
+with a list of Search Objects and the operations of the expression
+language operate on these lists (this is quite similar to LISP in
+concept) or it can be used as an absolute search.</p></div>
+<div class="paragraph"><p>The expression language also borrows from spreadsheet syntax which is
+familiar to many people. The reason behind using an expression language
+is that it is much simpler and compact that using code or direct SQL.
+The TACTIC expression language is designed to be able to easily retrieve
+data in a single command that would otherwise take many lines of code.</p></div>
+<div class="paragraph"><p><strong>Simple Example</strong></p></div>
+<div class="paragraph"><p>The expression often starts with a list of Search Objects and then
+operates on these Search Objects.</p></div>
+<div class="paragraph"><p>If you have a list of "prod/sequence" Search Objects, then the
+following:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>@GET(prod/shot.code)</code></pre>
+</div></div>
+<div class="paragraph"><p>will return a list of codes of these prod/shot Search Objects related to
+the starting "prod/sequence". The notation for the method GET is of the
+form &lt;search_type&gt;.&lt;column&gt;. As will be shown below, multiple
+search_types can be strung together to navigate across related
+search_types. The @GET function operate on a list and returned a list.</p></div>
+<div class="paragraph"><p>If no starting sObject is given, this expression will return a list of
+codes for every shot in the project. In the python or javascript API,
+you can control whether there is a starting sobject with the kwarg
+search_keys</p></div>
+<div class="paragraph"><p>With the above example, here is how to get the shot codes for the given
+sequence with the code "seq001":</p></div>
+<div class="paragraph"><p><strong>Python API</strong></p></div>
+<div class="paragraph"><p>server = TacticServerStub.get()</p></div>
+<div class="paragraph"><p>expr = "@GET(prod/shot.code)"</p></div>
+<div class="paragraph"><p>result = server.eval(expr,
+search_keys=[<em>prod/sequence?project=vfx&amp;code=seq001</em>])</p></div>
+<div class="paragraph"><p>By default, the result returned is a list unless you specify the kwarg
+single=True in server.eval()</p></div>
+<div class="paragraph"><p>result = server.eval(expr,
+search_keys=[<em>prod/sequence?project=vfx&amp;code=seq001</em>], single=True)</p></div>
+<div class="paragraph"><p>In Javascript, via the Script Edtor, you can achieve the same result
+with these scripts:</p></div>
+<div class="paragraph"><p><strong>Javascript API</strong></p></div>
+<div class="paragraph"><p>var server = TacticServerStub.get();</p></div>
+<div class="paragraph"><p>var expr = "@GET(prod/shot.code)"</p></div>
+<div class="paragraph"><p>var result = server.eval(expr, {search_keys:
+[<em>prod/sequence?project=vfx&amp;code=seq001</em>], single: true});</p></div>
+<div class="paragraph"><p>In certain places, like in a Custom Layout Element, Expression Element
+in a Table, or notification set-up, there is an assumed starting
+sObject, which is the one you are viewing or the notification event
+refers to during an update or insert action.</p></div>
+<div class="paragraph"><p><strong>Searching</strong></p></div>
+<div class="paragraph"><p>The expression language can be used as a shorthand for search for Search
+Objects. This is often convenient because the expression language is a
+pure string and can be stored a number of formats, including XML.</p></div>
+<div class="paragraph"><p>The @SOBJECT method will retrieve entire Search Objects.</p></div>
+<div class="paragraph"><p>Search for all assets</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>@SOBJECT(prod/asset)</code></pre>
+</div></div>
+<div class="paragraph"><p>Search only for characters by applying a filter</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>@SOBJECT(prod/asset['asset_library','chr']</code></pre>
+</div></div>
+<div class="paragraph"><p>You can also apply multiple filters. And operation is implied</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>@SOBJECT(prod/asset['asset_library','chr']['timestamp','&gt;','2009-01-01'])</code></pre>
+</div></div>
+<div class="paragraph"><p>You can also apply multiple filters. To use OR operation with more than
+2 filters. For example, with code containing the word prop1, OR
+asset_library is chr, OR timestamp after 2009-01-01. Note: EQ stands for
+case-sensitive match.</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>@SOBJECT(prod/asset['begin']['asset_library','chr']['timestamp','&gt;','2009-01-01']['code','EQ','prop1']['or'])</code></pre>
+</div></div>
+<div class="paragraph"><p>To use OR operation with 2 filters followed by an AND operation. For
+example, with asset_library is chr OR timestamp after 2009-01-01 AND
+code containing the word prop1. If there are only 2 filters, there is no
+need to sandwich it with begin.</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>@SOBJECT(prod/asset['begin']['asset_library','chr']['timestamp','&gt;','2009-01-01']['or']['code','EQ','prop1'])</code></pre>
+</div></div>
+<div class="paragraph"><p>To</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>@SOBJECT(prod/asset['begin']['asset_library','chr']['timestamp','&gt;','2009-01-01']['or']['code','EQ','prop1'])</code></pre>
+</div></div>
+<div class="paragraph"><p>Note that full filter operations from the Client API are supported.</p></div>
+<div class="paragraph"><p><strong>Navigating Search Types</strong></p></div>
+<div class="paragraph"><p>One of the true powers of the expression language is the simplicity in
+which it can navigate between various related Search Types using a
+navigational syntax. The expression language makes use of the project
+schema to navigate dependencies between the search_types. For example a
+sequence is related to a shot.</p></div>
+<div class="paragraph"><p>The navigational syntax is used as arguments for many aggregate methods.
+When detected, the expression language will perform a search through the
+hierarchy to retrieve the desired search results.</p></div>
+<div class="paragraph"><p>A simple example of the navigation syntax in the expression language is
+as follows:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>@GET(prod/sequence.code)</code></pre>
+</div></div>
+<div class="paragraph"><p>This expression will get all of the codes of the sequences of related to
+each Search Object.</p></div>
+<div class="paragraph"><p>The expression can also navigate multiple levels of search types to dig
+deeply into the hierarchy. For example, this will get all of the
+descriptions of all of the episodes that belong to the sequences of the
+original shots.</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>@GET(prod/sequence.prod/episode.description)</code></pre>
+</div></div>
+<div class="paragraph"><p>Another useful illustration is to get all of the tasks of all of the
+shots:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>@SOBJECT(prod/shot.sthpw/task)</code></pre>
+</div></div>
+<div class="paragraph"><p>Get the last 50 tasks ordered by process of all of the shots:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>@SOBJECT(prod/shot.sthpw/task['@ORDER_BY','process']['@LIMIT','50'])</code></pre>
+</div></div>
+<div class="paragraph"><p><strong>Aggregate functions</strong></p></div>
+<div class="paragraph"><p>The expression language defines a number of aggregate functions which
+will operate on the list.</p></div>
+<div class="paragraph"><p>This will give the addition of all the duration attributes of the
+provided shots.</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>@SUM(prod/shot.duration)</code></pre>
+</div></div>
+<div class="paragraph"><p>This will give the average duration attribute of all of the shots.</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>@AVG(prod/shot.duration)</code></pre>
+</div></div>
+<div class="paragraph"><p>This will give a count of all of the Search Objects</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>@COUNT(prod/shot)</code></pre>
+</div></div>
+<div class="paragraph"><p>All of these aggregates return a single value which can be used to
+operate on other lists.</p></div>
+<div class="paragraph"><p><strong>Operations</strong></p></div>
+<div class="paragraph"><p>The expression language operates on lists. The operator will operate on
+each element of the list independently and return a list For example
+when doing a subtraction operation on items:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>@GET(prod/shot.end_frame) - @GET(prod/shot.start_frame)</code></pre>
+</div></div>
+<div class="paragraph"><p>The first @GET will return a list of start frames and the second @GET
+will return a list end frames. When two lists are operated on the
+results are calculated based on items at the same position in each list.
+So if we had two lists:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>[300, 155, 100] - [100, 100, 100] = [200, 55, 0]</code></pre>
+</div></div>
+<div class="paragraph"><p>Similarly, lists will be multiplied as follows</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>[5, 4, 3] * [5, 4, 3] = [25, 16, 9]</code></pre>
+</div></div>
+<div class="paragraph"><p>The expression language supports most operation support by the python
+language itself.</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>&gt;&gt;&gt; Search.eval("5 * 25")
+125.0
+
+&gt;&gt;&gt; Search.eval("5 + 25")
+30.0
+
+&gt;&gt;&gt; Search.eval("(25 - 5) * 5")
+100.0
+
+&gt;&gt;&gt; Search.eval("5 / 25") 0.20000000000000001
+
+&gt;&gt;&gt; Search.eval("@COUNT(sthpw/task) * 5")
+2310.0
+
+&gt;&gt;&gt; Search.eval("@COUNT(sthpw/task) &gt; 0")
+True
+
+&gt;&gt;&gt; Search.eval("@COUNT(sthpw/task) == 462")
+True
+
+&gt;&gt;&gt; Search.eval("@COUNT(sthpw/task) != 462")
+False</code></pre>
+</div></div>
+<div class="paragraph"><p>The expression language also supports the regular expression syntax</p></div>
+<div class="paragraph"><p>The following tests whether the name_first column starts with "John"</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>@GET(.name_first) ~ '^John'</code></pre>
+</div></div>
+<div class="paragraph"><p><strong>More complex operations</strong></p></div>
+<div class="paragraph"><p>You can do more complex operations by combining the above. The following
+will return a cost list of all of the shots (assigned user wage * number
+of hours worked).</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>@GET(prod/shot.sthpw/task.sthpw/login.wage) * @GET(prod/shot.num_hours)</code></pre>
+</div></div>
+<div class="paragraph"><p>You could add them all together using @SUM this to get the total</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>@SUM(
+  @GET(prod/shot.sthpw/task.sthpw/login.wage) * @GET(prod/shot.num_hours)
+)</code></pre>
+</div></div>
+<div class="paragraph"><p>There are times the sObjects returned are not unique. The @UNIQUE
+operator can be used to return a unique list of result. The following
+returns the unique list of login sObjects related to the task list
+provided. The @COUNT operator computes the total number of login
+sObjects.</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code> # my.tasks is a list of tasks
+ expression = "@COUNT(@UNIQUE(@SOBJECT(sthpw/login)))"
+ result = my.parser.eval(expression, my.tasks)</code></pre>
+</div></div>
+<div class="paragraph"><p><strong>Manipulating Strings</strong></p></div>
+<div class="paragraph"><p>Most of the operations in the expression language operate on lists and
+either return lists or return single values. However, it is often
+required that expressions be used in string concatenation. A simplified
+notation is to use curly brackets {} to represent an operation that
+converts the result of an expression into a string.</p></div>
+<div class="paragraph"><p>For a file to be named chr001_model.png, we could use:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>{@GET(prod/asset.code)}_{@GET(sthpw/snapshot.context)}.png</code></pre>
+</div></div>
+<div class="ulist"><ul>
+<li>
+<p>
+The file naming conventions do not current use the expression
+language. The presently use a simplified expression language. The plan
+is to merge the two at some point.
+</p>
+</li>
+</ul></div>
+<div class="paragraph"><p><strong>String Formatting</strong></p></div>
+<div class="paragraph"><p>For string values, the string operator them can use standard print
+formatting:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>v{@GET(sthpw/snapshot.version),%0.3d}</code></pre>
+</div></div>
+<div class="paragraph"><p>will return "v012", for example.</p></div>
+<div class="paragraph"><p>The expression language also supports formatting through regular
+expressions</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>{ @GET(prod/asset.description),|^(\w{5})| }</code></pre>
+</div></div>
+<div class="paragraph"><p>This will get the first 5 word characters for the description. Since the
+full expression language is supported, it is possible to extract a wide
+variety of parts. Anything matched with () will be returned as the
+value.</p></div>
+<div class="paragraph"><p>**If there are multiple groupings, the expression language will
+concatenate the values together.</p></div>
+<div class="paragraph"><p>The following will return the first 3 and last 3 characters of the
+description.</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>{ @GET(prod/asset.description),|^(\w{3}).*(\w{3})$| }</code></pre>
+</div></div>
+<div class="paragraph"><p>The following will return the last 5 characters of the description of
+the current SObject even if it is written in French or Chinese.</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>{ @GET(.description),|^(.{5})$| }</code></pre>
+</div></div>
+<div class="paragraph"><p><strong>Time related formatting</strong></p></div>
+<div class="paragraph"><p>The following formats a timestamp by extracting just the month and date
+(old way):</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>{ @GET(.timestamp), %b-%m}</code></pre>
+</div></div>
+<div class="paragraph"><p>The following formats a timestamp by extracting just the year</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>{ @GET(.timestamp), %Y}</code></pre>
+</div></div>
+<div class="paragraph"><p>The following removes the hours, minutes and seconds from the built-in
+$TODAY variable so only 2011-11-11 is displayed</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>{ $TODAY,|([^\s]+)| }</code></pre>
+</div></div>
+<div class="paragraph"><p>The following formats a timestamp by using the new @FORMAT function</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>@FORMAT( @GET(.timestamp), '31/12/1999')</code></pre>
+</div></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>@FORMAT( @GET(.timestamp), 'Dec 31, 1999')</code></pre>
+</div></div>
+<div class="paragraph"><p>The following formats it according to a project wide date-time setting
+or date-only setting. You can define what DATETIME and DATE is in the
+Project Settings page.</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>@FORMAT( @GET(.timestamp), 'DATETIME')
+@FORMAT( @GET(.timestamp), 'DATE')</code></pre>
+</div></div>
+<div class="paragraph"><p>Either of the following formats a frame count into timecode</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>@FORMAT( @GET(.frame_count), 'MM:SS.FF')</code></pre>
+</div></div>
+<div class="paragraph"><p>The following formats a frame count into hours, minutes and seconds in
+30fps, leaving out the frames.</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>@FORMAT( @GET(.frame_count), 'HH:MM:SS', '30')</code></pre>
+</div></div>
+<div class="paragraph"><p>The following formats a cost column in currency format</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>@FORMAT(@GET(.cost), '-$1,234.00')</code></pre>
+</div></div>
+<div class="paragraph"><p><em>31/12/99 13:37</em> can be used to show both date and time</p></div>
+<div class="paragraph"><p><strong>Shorthand (mostly for backwards compatibility)</strong></p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>@GET(sobject.end_frame) - @GET(sobject.start_frame)
+
+or
+
+@GET(.end_frame) - @GET(.start_frame)</code></pre>
+</div></div>
+<div class="paragraph"><p>Or replicate file naming conventions</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>{sobject.code}_{snapshot.context}_v{version}.{ext}</code></pre>
+</div></div>
+<div class="paragraph"><p>In the file naming convention language, the are a number of short hand
+keywords:</p></div>
+<div class="paragraph"><p>sObject Keywords: sobject, snapshot, file, parent , search_type</p></div>
+<div class="paragraph"><p>Attribute Keywords: context, version, ext, basefile</p></div>
+</div>
+</div>
+</div>
+<div id="footnotes"><hr /></div>
+<div id="footer">
+<div id="footer-text">
+Last updated 2015-10-22 21:52:40 EDT
+</div>
+</div>
+</body>
+</html>

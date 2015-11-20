@@ -1,0 +1,26 @@
+get_config_definition
+---------------------
+
+*get_config_definition(search_type, view, element_name, personal=False)*
+
+Get the widget configuration definition for an element
+
+*param:*
+
+*search_type* - search type that this config relates to
+
+*view* - view to look for the element
+
+*element_name* - name of the element
+
+
+
+*keyparam:*
+
+*personal* - True if it is a personal definition
+
+
+
+*return:*
+
+*string* - xml of the configuration

@@ -1,8 +1,0 @@
-get_server_version
-------------------
-
-*get_server_version()*
-
-*return:*
-
-*string* - server version

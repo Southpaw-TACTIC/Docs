@@ -69,10 +69,10 @@ TACTIC's behavior system makes use of standard JavaScript behaviors with
 the added functionality of some built-in classes.
 
 Here are two ways to add an alert behavior to a button class called
-'my_button'.
+'my_button'. The event attribute format is more concise.
 
 ---------------------------------------------
-<behavior class=”my_button” event='click_up'>
+<behavior class='my_button' event='click_up'>
 alert('Hello World'); 
 </behavior> 
 
@@ -85,6 +85,19 @@ alert('Hello World');
 "' 
 }</behavior>
 ---------------------------------------------
+
+To relay the same behavior to many elements having the same class attribute, 
+one can use the "relay_class" attribute. One would presumably apply this behavior to 
+a parent element that contains the elements targeted. 
+
+---------------------------------------------
+<behavior relay_class='my_button_item' event='click_up'>
+
+alert('Hello World'); 
+
+</behavior> 
+---------------------------------------------
+
 
 Here are the types of events that the TACTIC behavior system has
 built-in support for:
@@ -123,7 +136,7 @@ var cells = table.getElements('.my_cells');
 cells.setStyle('background', 'red'); 
 ----------------------------------------------
 
-TACTIC’s powerful framework comes with many API functions that make
+TACTIC's powerful framework comes with many API functions that make
 developing for TACTIC easier. Here are some common ones.
 
 Show loading popup:
@@ -386,8 +399,8 @@ image:media/custom_layout_editor_sidebar.png[image]
 You can add the view you have created directly to the sidebar. To do
 this, click on the gear in the top menu and select “Add to Side Bar”.
 This will add this view to the sidebar under the Project Views. By
-default, It will get named according to the view name and “/” will be
-treated as a space. For example, “app/chart” will be named “App Chart”.
+default, It will get named according to the view name and '/' will be
+treated as a space. For example, 'app/chart' will be named 'App Chart'.
 You can always rename these views in the sidebar by right clicking on
 them and selecting “Edit Side Bar”. Now select the view you want to edit
 and change the Title field.
@@ -395,24 +408,24 @@ and change the Title field.
 *Creating URLs*
 
 When you startup tactic and go to the main project URL
-(…/tactic/<project_name>), you are presented with the tactic homepage of
+(/tactic/<project_code>), you are presented with the tactic homepage of
 the project. That tactic homepage URL can be changed to show one of your
 created views. To do this, open up your view in the custom layout
-editor, then from the gear menu select “Set as Project Url”. The current
+editor, then from the gear menu select 'Set as Project Url'. The current
 view you have open will be shown when you go the main project URL. You
-can come back to admin side of tactic by adding “/admin” to the URL
-(…/tactic/<project_name>/admin).
+can come back to admin side of tactic by adding '/admin' to the URL
+(/tactic/<project_code>/admin).
 
 You can also turn your view into a custom URL. This means that your view
 will open when you go to a specific URL. To do this, open your view in
-the custom layout editor, then from the gear menu select “Add as Custom
-Url”. This will open up a dialog box where you can specify what URL
+the custom layout editor, then from the gear menu select 'Add as Custom
+Url'. This will open up a dialog box where you can specify what URL
 should open up the view. The URL specified there is showing the URL
-which is appended to (…/tactic). You can specify which widget to run in
+which is appended to (/tactic). You can specify which widget to run in
 the URL in the widget field. By default, it shows the widget code for
 the view that was open in the custom layout editor. You can check all
-your custom URLs by going to the gear menu and selecting “Show Custom
-URLs”. This will show all the existing custom URLs. This is where you
+your custom URLs by going to the gear menu and selecting 'Show Custom
+URLs'. This will show all the existing custom URLs. This is where you
 can delete existing custom URLs.
 
 *Creating Forms*
@@ -486,9 +499,7 @@ HTML: <div class='spt_form'>
 
 JavaScript: 
 
-<behavior class="spt_save_button> { 
-"type": "click", 
-"cbjs_action": ''' 
+<behavior class="spt_save_button" event="click"> { 
   //gets the parent of the behavior source element
   var top = bvr.src_el.getParent('.spt_form'); 
 
@@ -502,7 +513,7 @@ JavaScript:
   } 
 
   search_key = values.spt_search_key; 
-  server.update(search_key, data) ''' 
+  server.update(search_key, data) 
 }
 -----------------------------------------------------------------------------------
 

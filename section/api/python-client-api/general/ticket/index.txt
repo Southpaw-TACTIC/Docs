@@ -1,6 +1,0 @@
-set_login_ticket
-----------------
-
-*set_login_ticket(ticket)*
-
-Set the login ticket with the ticket key

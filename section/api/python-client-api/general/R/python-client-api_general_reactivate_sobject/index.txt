@@ -1,0 +1,18 @@
+reactivate_sobject
+------------------
+
+*reactivate_sobject(search_key)*
+
+Invoke the reactivate method.
+
+*param:*
+
+*search_key* - the unige key identifying the sobject.
+
+
+
+*return:*
+
+*dictionary* - sobject that represents values of the sobject in the
+
+form name:value pairs

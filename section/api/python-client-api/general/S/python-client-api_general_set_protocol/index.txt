@@ -1,0 +1,9 @@
+set_protocol
+------------
+
+*set_protocol()*
+
+
+*params*
+
+*string* - local or xmlrpc

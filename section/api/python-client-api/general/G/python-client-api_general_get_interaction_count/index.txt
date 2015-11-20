@@ -1,0 +1,4 @@
+get_interaction_count
+---------------------
+
+*get_interaction_count(key, category="default")*

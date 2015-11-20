@@ -1,0 +1,1109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
+<meta name="generator" content="AsciiDoc 8.6.8" />
+<title></title>
+<style type="text/css">
+/* Shared CSS for AsciiDoc xhtml11 and html5 backends */
+
+/* Default font. */
+body {
+  font-family: Georgia,serif;
+}
+
+/* Title font. */
+h1, h2, h3, h4, h5, h6,
+div.title, caption.title,
+thead, p.table.header,
+#toctitle,
+#author, #revnumber, #revdate, #revremark,
+#footer {
+  font-family: Arial,Helvetica,sans-serif;
+}
+
+body {
+  margin: 1em 5% 1em 5%;
+}
+
+a {
+  color: blue;
+  text-decoration: underline;
+}
+a:visited {
+  color: fuchsia;
+}
+
+em {
+  font-style: italic;
+  color: navy;
+}
+
+strong {
+  font-weight: bold;
+  color: #083194;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #527bbd;
+  margin-top: 1.2em;
+  margin-bottom: 0.5em;
+  line-height: 1.3;
+}
+
+h1, h2, h3 {
+  border-bottom: 2px solid silver;
+}
+h2 {
+  padding-top: 0.5em;
+}
+h3 {
+  float: left;
+}
+h3 + * {
+  clear: left;
+}
+h5 {
+  font-size: 1.0em;
+}
+
+div.sectionbody {
+  margin-left: 0;
+}
+
+hr {
+  border: 1px solid silver;
+}
+
+p {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+ul, ol, li > p {
+  margin-top: 0;
+}
+ul > li     { color: #aaa; }
+ul > li > * { color: black; }
+
+.monospaced, code, pre {
+  font-family: "Courier New", Courier, monospace;
+  font-size: inherit;
+  color: navy;
+  padding: 0;
+  margin: 0;
+}
+
+
+#author {
+  color: #527bbd;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+#email {
+}
+#revnumber, #revdate, #revremark {
+}
+
+#footer {
+  font-size: small;
+  border-top: 2px solid silver;
+  padding-top: 0.5em;
+  margin-top: 4.0em;
+}
+#footer-text {
+  float: left;
+  padding-bottom: 0.5em;
+}
+#footer-badges {
+  float: right;
+  padding-bottom: 0.5em;
+}
+
+#preamble {
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+div.imageblock, div.exampleblock, div.verseblock,
+div.quoteblock, div.literalblock, div.listingblock, div.sidebarblock,
+div.admonitionblock {
+  margin-top: 1.0em;
+  margin-bottom: 1.5em;
+}
+div.admonitionblock {
+  margin-top: 2.0em;
+  margin-bottom: 2.0em;
+  margin-right: 10%;
+  color: #606060;
+}
+
+div.content { /* Block element content. */
+  padding: 0;
+}
+
+/* Block element titles. */
+div.title, caption.title {
+  color: #527bbd;
+  font-weight: bold;
+  text-align: left;
+  margin-top: 1.0em;
+  margin-bottom: 0.5em;
+}
+div.title + * {
+  margin-top: 0;
+}
+
+td div.title:first-child {
+  margin-top: 0.0em;
+}
+div.content div.title:first-child {
+  margin-top: 0.0em;
+}
+div.content + div.title {
+  margin-top: 0.0em;
+}
+
+div.sidebarblock > div.content {
+  background: #ffffee;
+  border: 1px solid #dddddd;
+  border-left: 4px solid #f0f0f0;
+  padding: 0.5em;
+}
+
+div.listingblock > div.content {
+  border: 1px solid #dddddd;
+  border-left: 5px solid #f0f0f0;
+  background: #f8f8f8;
+  padding: 0.5em;
+}
+
+div.quoteblock, div.verseblock {
+  padding-left: 1.0em;
+  margin-left: 1.0em;
+  margin-right: 10%;
+  border-left: 5px solid #f0f0f0;
+  color: #888;
+}
+
+div.quoteblock > div.attribution {
+  padding-top: 0.5em;
+  text-align: right;
+}
+
+div.verseblock > pre.content {
+  font-family: inherit;
+  font-size: inherit;
+}
+div.verseblock > div.attribution {
+  padding-top: 0.75em;
+  text-align: left;
+}
+/* DEPRECATED: Pre version 8.2.7 verse style literal block. */
+div.verseblock + div.attribution {
+  text-align: left;
+}
+
+div.admonitionblock .icon {
+  vertical-align: top;
+  font-size: 1.1em;
+  font-weight: bold;
+  text-decoration: underline;
+  color: #527bbd;
+  padding-right: 0.5em;
+}
+div.admonitionblock td.content {
+  padding-left: 0.5em;
+  border-left: 3px solid #dddddd;
+}
+
+div.exampleblock > div.content {
+  border-left: 3px solid #dddddd;
+  padding-left: 0.5em;
+}
+
+div.imageblock div.content { padding-left: 0; }
+span.image img { border-style: none; }
+a.image:visited { color: white; }
+
+dl {
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
+}
+dt {
+  margin-top: 0.5em;
+  margin-bottom: 0;
+  font-style: normal;
+  color: navy;
+}
+dd > *:first-child {
+  margin-top: 0.1em;
+}
+
+ul, ol {
+    list-style-position: outside;
+}
+ol.arabic {
+  list-style-type: decimal;
+}
+ol.loweralpha {
+  list-style-type: lower-alpha;
+}
+ol.upperalpha {
+  list-style-type: upper-alpha;
+}
+ol.lowerroman {
+  list-style-type: lower-roman;
+}
+ol.upperroman {
+  list-style-type: upper-roman;
+}
+
+div.compact ul, div.compact ol,
+div.compact p, div.compact p,
+div.compact div, div.compact div {
+  margin-top: 0.1em;
+  margin-bottom: 0.1em;
+}
+
+tfoot {
+  font-weight: bold;
+}
+td > div.verse {
+  white-space: pre;
+}
+
+div.hdlist {
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
+}
+div.hdlist tr {
+  padding-bottom: 15px;
+}
+dt.hdlist1.strong, td.hdlist1.strong {
+  font-weight: bold;
+}
+td.hdlist1 {
+  vertical-align: top;
+  font-style: normal;
+  padding-right: 0.8em;
+  color: navy;
+}
+td.hdlist2 {
+  vertical-align: top;
+}
+div.hdlist.compact tr {
+  margin: 0;
+  padding-bottom: 0;
+}
+
+.comment {
+  background: yellow;
+}
+
+.footnote, .footnoteref {
+  font-size: 0.8em;
+}
+
+span.footnote, span.footnoteref {
+  vertical-align: super;
+}
+
+#footnotes {
+  margin: 20px 0 20px 0;
+  padding: 7px 0 0 0;
+}
+
+#footnotes div.footnote {
+  margin: 0 0 5px 0;
+}
+
+#footnotes hr {
+  border: none;
+  border-top: 1px solid silver;
+  height: 1px;
+  text-align: left;
+  margin-left: 0;
+  width: 20%;
+  min-width: 100px;
+}
+
+div.colist td {
+  padding-right: 0.5em;
+  padding-bottom: 0.3em;
+  vertical-align: top;
+}
+div.colist td img {
+  margin-top: 0.3em;
+}
+
+@media print {
+  #footer-badges { display: none; }
+}
+
+#toc {
+  margin-bottom: 2.5em;
+}
+
+#toctitle {
+  color: #527bbd;
+  font-size: 1.1em;
+  font-weight: bold;
+  margin-top: 1.0em;
+  margin-bottom: 0.1em;
+}
+
+div.toclevel0, div.toclevel1, div.toclevel2, div.toclevel3, div.toclevel4 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+div.toclevel2 {
+  margin-left: 2em;
+  font-size: 0.9em;
+}
+div.toclevel3 {
+  margin-left: 4em;
+  font-size: 0.9em;
+}
+div.toclevel4 {
+  margin-left: 6em;
+  font-size: 0.9em;
+}
+
+span.aqua { color: aqua; }
+span.black { color: black; }
+span.blue { color: blue; }
+span.fuchsia { color: fuchsia; }
+span.gray { color: gray; }
+span.green { color: green; }
+span.lime { color: lime; }
+span.maroon { color: maroon; }
+span.navy { color: navy; }
+span.olive { color: olive; }
+span.purple { color: purple; }
+span.red { color: red; }
+span.silver { color: silver; }
+span.teal { color: teal; }
+span.white { color: white; }
+span.yellow { color: yellow; }
+
+span.aqua-background { background: aqua; }
+span.black-background { background: black; }
+span.blue-background { background: blue; }
+span.fuchsia-background { background: fuchsia; }
+span.gray-background { background: gray; }
+span.green-background { background: green; }
+span.lime-background { background: lime; }
+span.maroon-background { background: maroon; }
+span.navy-background { background: navy; }
+span.olive-background { background: olive; }
+span.purple-background { background: purple; }
+span.red-background { background: red; }
+span.silver-background { background: silver; }
+span.teal-background { background: teal; }
+span.white-background { background: white; }
+span.yellow-background { background: yellow; }
+
+span.big { font-size: 2em; }
+span.small { font-size: 0.6em; }
+
+span.underline { text-decoration: underline; }
+span.overline { text-decoration: overline; }
+span.line-through { text-decoration: line-through; }
+
+div.unbreakable { page-break-inside: avoid; }
+
+
+/*
+ * xhtml11 specific
+ *
+ * */
+
+div.tableblock {
+  margin-top: 1.0em;
+  margin-bottom: 1.5em;
+}
+div.tableblock > table {
+  border: 3px solid #527bbd;
+}
+thead, p.table.header {
+  font-weight: bold;
+  color: #527bbd;
+}
+p.table {
+  margin-top: 0;
+}
+/* Because the table frame attribute is overriden by CSS in most browsers. */
+div.tableblock > table[frame="void"] {
+  border-style: none;
+}
+div.tableblock > table[frame="hsides"] {
+  border-left-style: none;
+  border-right-style: none;
+}
+div.tableblock > table[frame="vsides"] {
+  border-top-style: none;
+  border-bottom-style: none;
+}
+
+
+/*
+ * html5 specific
+ *
+ * */
+
+table.tableblock {
+  margin-top: 1.0em;
+  margin-bottom: 1.5em;
+}
+thead, p.tableblock.header {
+  font-weight: bold;
+  color: #527bbd;
+}
+p.tableblock {
+  margin-top: 0;
+}
+table.tableblock {
+  border-width: 3px;
+  border-spacing: 0px;
+  border-style: solid;
+  border-color: #527bbd;
+  border-collapse: collapse;
+}
+th.tableblock, td.tableblock {
+  border-width: 1px;
+  padding: 4px;
+  border-style: solid;
+  border-color: #527bbd;
+}
+
+table.tableblock.frame-topbot {
+  border-left-style: hidden;
+  border-right-style: hidden;
+}
+table.tableblock.frame-sides {
+  border-top-style: hidden;
+  border-bottom-style: hidden;
+}
+table.tableblock.frame-none {
+  border-style: hidden;
+}
+
+th.tableblock.halign-left, td.tableblock.halign-left {
+  text-align: left;
+}
+th.tableblock.halign-center, td.tableblock.halign-center {
+  text-align: center;
+}
+th.tableblock.halign-right, td.tableblock.halign-right {
+  text-align: right;
+}
+
+th.tableblock.valign-top, td.tableblock.valign-top {
+  vertical-align: top;
+}
+th.tableblock.valign-middle, td.tableblock.valign-middle {
+  vertical-align: middle;
+}
+th.tableblock.valign-bottom, td.tableblock.valign-bottom {
+  vertical-align: bottom;
+}
+
+
+/*
+ * manpage specific
+ *
+ * */
+
+body.manpage h1 {
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  border-top: 2px solid silver;
+  border-bottom: 2px solid silver;
+}
+body.manpage h2 {
+  border-style: none;
+}
+body.manpage div.sectionbody {
+  margin-left: 3em;
+}
+
+@media print {
+  body.manpage div#toc { display: none; }
+}
+
+
+</style>
+<script type="text/javascript">
+/*<![CDATA[*/
+var asciidoc = {  // Namespace.
+
+/////////////////////////////////////////////////////////////////////
+// Table Of Contents generator
+/////////////////////////////////////////////////////////////////////
+
+/* Author: Mihai Bazon, September 2002
+ * http://students.infoiasi.ro/~mishoo
+ *
+ * Table Of Content generator
+ * Version: 0.4
+ *
+ * Feel free to use this script under the terms of the GNU General Public
+ * License, as long as you do not remove or alter this notice.
+ */
+
+ /* modified by Troy D. Hanson, September 2006. License: GPL */
+ /* modified by Stuart Rackham, 2006, 2009. License: GPL */
+
+// toclevels = 1..4.
+toc: function (toclevels) {
+
+  function getText(el) {
+    var text = "";
+    for (var i = el.firstChild; i != null; i = i.nextSibling) {
+      if (i.nodeType == 3 /* Node.TEXT_NODE */) // IE doesn't speak constants.
+        text += i.data;
+      else if (i.firstChild != null)
+        text += getText(i);
+    }
+    return text;
+  }
+
+  function TocEntry(el, text, toclevel) {
+    this.element = el;
+    this.text = text;
+    this.toclevel = toclevel;
+  }
+
+  function tocEntries(el, toclevels) {
+    var result = new Array;
+    var re = new RegExp('[hH]([1-'+(toclevels+1)+'])');
+    // Function that scans the DOM tree for header elements (the DOM2
+    // nodeIterator API would be a better technique but not supported by all
+    // browsers).
+    var iterate = function (el) {
+      for (var i = el.firstChild; i != null; i = i.nextSibling) {
+        if (i.nodeType == 1 /* Node.ELEMENT_NODE */) {
+          var mo = re.exec(i.tagName);
+          if (mo && (i.getAttribute("class") || i.getAttribute("className")) != "float") {
+            result[result.length] = new TocEntry(i, getText(i), mo[1]-1);
+          }
+          iterate(i);
+        }
+      }
+    }
+    iterate(el);
+    return result;
+  }
+
+  var toc = document.getElementById("toc");
+  if (!toc) {
+    return;
+  }
+
+  // Delete existing TOC entries in case we're reloading the TOC.
+  var tocEntriesToRemove = [];
+  var i;
+  for (i = 0; i < toc.childNodes.length; i++) {
+    var entry = toc.childNodes[i];
+    if (entry.nodeName.toLowerCase() == 'div'
+     && entry.getAttribute("class")
+     && entry.getAttribute("class").match(/^toclevel/))
+      tocEntriesToRemove.push(entry);
+  }
+  for (i = 0; i < tocEntriesToRemove.length; i++) {
+    toc.removeChild(tocEntriesToRemove[i]);
+  }
+
+  // Rebuild TOC entries.
+  var entries = tocEntries(document.getElementById("content"), toclevels);
+  for (var i = 0; i < entries.length; ++i) {
+    var entry = entries[i];
+    if (entry.element.id == "")
+      entry.element.id = "_toc_" + i;
+    var a = document.createElement("a");
+    a.href = "#" + entry.element.id;
+    a.appendChild(document.createTextNode(entry.text));
+    var div = document.createElement("div");
+    div.appendChild(a);
+    div.className = "toclevel" + entry.toclevel;
+    toc.appendChild(div);
+  }
+  if (entries.length == 0)
+    toc.parentNode.removeChild(toc);
+},
+
+
+/////////////////////////////////////////////////////////////////////
+// Footnotes generator
+/////////////////////////////////////////////////////////////////////
+
+/* Based on footnote generation code from:
+ * http://www.brandspankingnew.net/archive/2005/07/format_footnote.html
+ */
+
+footnotes: function () {
+  // Delete existing footnote entries in case we're reloading the footnodes.
+  var i;
+  var noteholder = document.getElementById("footnotes");
+  if (!noteholder) {
+    return;
+  }
+  var entriesToRemove = [];
+  for (i = 0; i < noteholder.childNodes.length; i++) {
+    var entry = noteholder.childNodes[i];
+    if (entry.nodeName.toLowerCase() == 'div' && entry.getAttribute("class") == "footnote")
+      entriesToRemove.push(entry);
+  }
+  for (i = 0; i < entriesToRemove.length; i++) {
+    noteholder.removeChild(entriesToRemove[i]);
+  }
+
+  // Rebuild footnote entries.
+  var cont = document.getElementById("content");
+  var spans = cont.getElementsByTagName("span");
+  var refs = {};
+  var n = 0;
+  for (i=0; i<spans.length; i++) {
+    if (spans[i].className == "footnote") {
+      n++;
+      var note = spans[i].getAttribute("data-note");
+      if (!note) {
+        // Use [\s\S] in place of . so multi-line matches work.
+        // Because JavaScript has no s (dotall) regex flag.
+        note = spans[i].innerHTML.match(/\s*\[([\s\S]*)]\s*/)[1];
+        spans[i].innerHTML =
+          "[<a id='_footnoteref_" + n + "' href='#_footnote_" + n +
+          "' title='View footnote' class='footnote'>" + n + "</a>]";
+        spans[i].setAttribute("data-note", note);
+      }
+      noteholder.innerHTML +=
+        "<div class='footnote' id='_footnote_" + n + "'>" +
+        "<a href='#_footnoteref_" + n + "' title='Return to text'>" +
+        n + "</a>. " + note + "</div>";
+      var id =spans[i].getAttribute("id");
+      if (id != null) refs["#"+id] = n;
+    }
+  }
+  if (n == 0)
+    noteholder.parentNode.removeChild(noteholder);
+  else {
+    // Process footnoterefs.
+    for (i=0; i<spans.length; i++) {
+      if (spans[i].className == "footnoteref") {
+        var href = spans[i].getElementsByTagName("a")[0].getAttribute("href");
+        href = href.match(/#.*/)[0];  // Because IE return full URL.
+        n = refs[href];
+        spans[i].innerHTML =
+          "[<a href='#_footnote_" + n +
+          "' title='View footnote' class='footnote'>" + n + "</a>]";
+      }
+    }
+  }
+},
+
+install: function(toclevels) {
+  var timerId;
+
+  function reinstall() {
+    asciidoc.footnotes();
+    if (toclevels) {
+      asciidoc.toc(toclevels);
+    }
+  }
+
+  function reinstallAndRemoveTimer() {
+    clearInterval(timerId);
+    reinstall();
+  }
+
+  timerId = setInterval(reinstall, 500);
+  if (document.addEventListener)
+    document.addEventListener("DOMContentLoaded", reinstallAndRemoveTimer, false);
+  else
+    window.onload = reinstallAndRemoveTimer;
+}
+
+}
+asciidoc.install();
+/*]]>*/
+</script>
+</head>
+<body class="article">
+<div id="header">
+</div>
+<div id="content">
+<div class="sect1">
+<h2 id="_general_tactic_install">General TACTIC Install</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>This document guides you through the general installation of TACTIC in
+Fedora Linux with some brief background information. For installation on
+Windows or CentOS, please refer to the corresponding sections in this
+book. To completely install TACTIC, there are three main components that
+have to be set up in the following order:</p></div>
+<div class="olist arabic"><ol class="arabic">
+<li>
+<p>
+A Database
+</p>
+</li>
+<li>
+<p>
+The TACTIC Installer
+</p>
+</li>
+<li>
+<p>
+A Web Server
+</p>
+</li>
+</ol></div>
+<div class="paragraph"><p>TACTIC stores all metadata in a database called PostgreSQL. This is an
+industrial strength, hugely scalable database that has proven itself in
+thousands of industries around the world. We currently recommend 8.4 and
+upwards for ease of installation. Go to the
+<a href="www.postgresql.org">PostgreSQL website</a> for more information.</p></div>
+<div class="paragraph"><p>rpm -Uvh <a href="http://yum.pgrpms.org/reporpms/8.4/pgdg-fedora-8.4-2.noarch.rpm">http://yum.pgrpms.org/reporpms/8.4/pgdg-fedora-8.4-2.noarch.rpm</a></p></div>
+<div class="paragraph"><p>yum install postgresql postgresql-server postgresql-contrib
+postgresql-devel</p></div>
+<div class="paragraph"><p>It is located in /var/lib/pgsql/data This file determines all of the
+user permissions for PostgreSQL. To begin with, turn on all of the
+permissions contained in this file. This is a temporary measure that
+will greatly simplify the installation process. You may lock down these
+permissions at a later date. Please consult the PostgreSQL documentation
+on how to do this. TACTIC ships with a sample "pg_hba.conf" file
+(located in &lt;TACTIC_unzipped_
+package&gt;/src/install/postgresql/pg_hba.conf). This file has an open
+security setting for ease of installation. It&#8217;s best to back up your
+current pg_hba.conf file before copying over with the file provided by
+TACTIC.</p></div>
+<div class="paragraph"><p>Restart the PostgreSQL Service</p></div>
+<div class="paragraph"><p><strong>Verification</strong></p></div>
+<div class="paragraph"><p>Verify that psql works in the command prompt:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>&gt; psql -U postgres template1</code></pre>
+</div></div>
+<div class="paragraph"><p>It should give you a prompt:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>template1=#</code></pre>
+</div></div>
+<div class="paragraph"><p>If you see this prompt without the need to enter a password, you have
+successfully installed the PostgreSQL database. Type \q to exit.</p></div>
+<div class="paragraph"><p><strong>Install Python and supporting modules</strong></p></div>
+<div class="paragraph"><p>The TACTIC source code is written in Python. As such, the complete
+codebase is open.</p></div>
+<div class="paragraph"><p>To install Python, you can find an msi at
+<a href="www.python.org"><strong>http://www.python.org</strong></a>. TACTIC requires Python 2.6
+or higher.</p></div>
+<div class="paragraph"><p>TACTIC also requires a number of Python modules to function correctly.
+These modules are generally not installed by default with the standard
+Python distributions. For Windows, they are already packaged in a file
+python_modules.zip available for download in the release section of the
+downloads page at
+<a href="support.southpawtech.com/downloads"><strong>http://support.southpawtech.com/downloads</strong></a></p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+PIL 1.1.7
+</p>
+<div class="paragraph"><p>(Python Image Library)
+* ImageMagick 6.7.8</p></div>
+<div class="paragraph"><p>(A command line program which complements PIL) -</p></div>
+<div class="paragraph"><p><a href="http://www.imagemagick.org">http://www.imagemagick.org</a>
+* <strong>FFmpeg</strong> <strong>version 0.6</strong>(Solution to record, convert and stream audio
+and video and metadata parsing) -
+<a href="www.imagemagick.org">http://www.ffmpeg.org</a>
+* psycopg2 2.3.1</p></div>
+<div class="paragraph"><p>(Database connectivity)
+* PyCrypto version 2.0.1/2.1</p></div>
+<div class="paragraph"><p>(For de-encrypting the license file) -</p></div>
+<div class="paragraph"><p><a href="http://www.amk.ca/python/code/crypto">http://www.amk.ca/python/code/crypto</a>
+* simplejson 2.1.1 (not needed since Python 2.6)</p></div>
+<div class="paragraph"><p>simplejson.egg can be installed with the EasyInstaller. It is need for
+JSON string encoding and parsing
+* lxml 2.1 or 2.2</p></div>
+<div class="paragraph"><p>(XML and XPath processing)</p></div>
+</li>
+</ul></div>
+<div class="paragraph"><p>Unzip the file in a temporary location.</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code># cd /tmp
+# unzip tactic_#.#.#.#.zip</code></pre>
+</div></div>
+<div class="paragraph"><p>Go to
+/tmp/tactic_#../src/install/</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code># cd /tmp/tactic_#.#.#.#/src/install</code></pre>
+</div></div>
+<div class="paragraph"><p>Execute:
+install.py</p></div>
+<div class="quoteblock">
+<div class="content">
+<div class="paragraph"><p><strong>Note</strong></p></div>
+<div class="paragraph"><p>You must invoke the installation with root user privileges because it
+attempts to write to the &lt;python_install&gt;/site-packages directory.</p></div>
+</div>
+<div class="attribution">
+</div></div>
+<div class="listingblock">
+<div class="content">
+<pre><code># su
+# python install.py</code></pre>
+</div></div>
+<div class="paragraph"><p>The installer will ask a number of questions. First it ask for the
+&lt;TACTIC_BASE_DIR&gt;:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>Please enter the base path of the TACTIC installation:
+
+(/home/apache) -&gt;</code></pre>
+</div></div>
+<div class="paragraph"><p>Enter the user the Apache Web Server is run under.</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>Please enter the user Apache Web Server is run under:
+
+(apache) -&gt;</code></pre>
+</div></div>
+<div class="paragraph"><p>It would copy the source code to the base path and create a symbolic
+link to it. An Apache Web Server file will be generated at the end which
+you would need to copy to the Apache config area upon installation of
+the web server. If there are existing files in the destination directory
+the installer will ask for your confirmation to remove it. At the end,
+you will see this:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>*** Installation of TACTIC completed at [/home/apache] ***
+
+
+Next, please install the Apache Web Server and then copy the Apache config extension
+[/home/apache/tactic_data/config/tactic.conf] to the Apache web server config area. e.g.
+/etc/httpd/conf.d/</code></pre>
+</div></div>
+<div class="paragraph"><p><strong>Verification</strong></p></div>
+<div class="paragraph"><p>When the installation is completed, an asset directory will be created
+at <em>&lt;TACTIC_DATA_DIR&gt;/assets</em>.</p></div>
+<div class="paragraph"><p>The file tactic_paths.py will be created in the following directories:</p></div>
+<div class="paragraph"><p><strong>Linux</strong></p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>/usr/lib/python#.#/site-packages/tacticenv</code></pre>
+</div></div>
+<div class="paragraph"><p>Default contents:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>TACTIC_INSTALL_DIR='/home/apache/tactic'
+TACTIC_SITE_DIR=''
+TACTIC_DATA_DIR='/home/apache/tactic_data'</code></pre>
+</div></div>
+<div class="paragraph"><p><strong>Network machine access</strong></p></div>
+<div class="paragraph"><p>If you are on the server, you can access it by using the URL
+<a href="http://localhost/tactic">http://localhost/tactic</a>. For other people to access it on the network,
+you need to find out its IP address. In a linux server, you can use the
+command "ifconfig" to locate it. It&#8217;s the one listed as the inet addr.</p></div>
+<div class="paragraph"><p>Next, you need to run TACTIC behind Apache.</p></div>
+<div class="paragraph"><p>TACTIC should be run behind an Apache web server. You can download
+Apache software at <a href="http://www.apache.org/">http://www.apache.org/</a></p></div>
+<div class="paragraph"><p>The TACTIC application server is able to serve up static content such as
+images, PDF files, Quicktime files, and so on, but it is not the most
+efficient at this because it is written in Python. This is what Apache
+is designed for. By running TACTIC behind Apache, it relieves TACTIC
+from serving the static content so that it can focus on the dynamic
+content.</p></div>
+<div class="paragraph"><p>For production use, it is highly recommended that TACTIC is run behind
+the Apache server. This has many scalability advantages. When running
+behind Apache, Apache uses a reverse proxy and proxy balancer module to
+forward requests to communicate with TACTIC.</p></div>
+<div class="paragraph"><p><strong>Linux</strong></p></div>
+<div class="paragraph"><p>After the installation, some changes may need to be made in the
+"httpd.conf" file for Apache.</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>Fedora Core: /etc/httpd/conf/httpd.conf</code></pre>
+</div></div>
+<div class="paragraph"><p>Make sure the following lines are uncommented:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>LoadModule rewrite_module modules/mod_rewrite.so
+LoadModule proxy_module modules/mod_proxy.so
+LoadModule proxy_http_module modules/mod_proxy_http.so
+LoadModule proxy_balancer_module modules/mod_proxy_balancer.so
+LoadModule deflate_module modules/mod_deflate.so</code></pre>
+</div></div>
+<div class="paragraph"><p>These lines may already be uncommented, depending on your distribution
+and version of Apache. You need Apache version 2.0.31 or later.</p></div>
+<div class="paragraph"><p>The TACTIC installer generates an Apache extension conf file on
+completion. Copy that file to a directory that is recognized by Apache.</p></div>
+<div class="paragraph"><p>For Fedora Core: copy the TACTIC generate Apache conf extension file to
+the following directory:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>/etc/httpd/conf.d/</code></pre>
+</div></div>
+<div class="paragraph"><p>If there is no such configuration extension folder, you must add the
+following line to the "httpd.conf" file so that it will read the
+extension configuration file provided by the installer:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>Include conf/tactic_win32.conf</code></pre>
+</div></div>
+<div class="paragraph"><p><strong>Web Server configuration</strong></p></div>
+<div class="paragraph"><p>In our provided file:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>tactic.conf</code></pre>
+</div></div>
+<div class="paragraph"><p>Make sure the following lines exist:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code># Using the ProxyPass directives
+ProxyPreserveHost on
+
+&lt;Proxy balancer://tactic&gt;
+BalancerMember http://localhost:8081/tactic
+BalancerMember http://localhost:8082/tactic
+BalancerMember http://localhost:8083/tactic
+&lt;/Proxy&gt;
+ProxyPass /tactic balancer://tactic
+ProxyPass /tactic_data balancer://tactic</code></pre>
+</div></div>
+<div class="quoteblock">
+<div class="content">
+<div class="paragraph"><p><strong>Note</strong></p></div>
+<div class="paragraph"><p>Warning: For load balancing, only use either:</p></div>
+<div class="paragraph"><p>\1) the Proxy Balancer method (recommended)</p></div>
+<div class="paragraph"><p><strong>or</strong></p></div>
+<div class="paragraph"><p>\2) the RewriteRule method (not recommended).</p></div>
+<div class="paragraph"><p>Do <strong>not</strong> use both methods at the same time.</p></div>
+</div>
+<div class="attribution">
+</div></div>
+<div class="quoteblock">
+<div class="content">
+<div class="paragraph"><p><strong>Note</strong></p></div>
+<div class="paragraph"><p>For configuring load-balancing set-up in a real production, please refer
+to the Load Balancing section in the Sys-admin docs.</p></div>
+</div>
+<div class="attribution">
+</div></div>
+<div class="quoteblock">
+<div class="content">
+<div class="paragraph"><p><strong>Note</strong></p></div>
+<div class="paragraph"><p>When trying to set up Apache on a Windows Server, to specify a share
+folder for Apache to use, you may need to include the name of the share
+folder in the path.</p></div>
+<div class="paragraph"><p>For example, use the following if you have named the share folder
+"my_share":</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>Alias /assets "//10.0.0.17/my_share/assets"</code></pre>
+</div></div>
+</div>
+<div class="attribution">
+</div></div>
+<div class="paragraph"><p>Finally, after verifying the configuration is correct, restart the
+Apache service:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>service httpd restart</code></pre>
+</div></div>
+<div class="paragraph"><p>Go to the "&lt;TACTIC_INSTALL_DIR&gt;/src/bin" folder</p></div>
+<div class="paragraph"><p>`cd /home/apache/tactic/src/bin `</p></div>
+<div class="paragraph"><p>Then su as the user apache is run as:</p></div>
+<div class="paragraph"><p>su apache</p></div>
+<div class="paragraph"><p><code>python startup_dev.py</code></p></div>
+<div class="paragraph"><p>This "startup_dev.py" script is the development script which will dump
+output to the screen. The other startup script "startup.py" is the
+production start-up script and will dump output to a log file. The
+development start-up script is also much slower as it monitors the file
+system to see if any files have changed.</p></div>
+<div class="paragraph"><p>The output would look like the following:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>Registering site ... admin
+Registering site ... default
+Registering site ... test
+Registering site ... my_project
+
+Starting TACTIC ...
+
+05/Jul/2007:11:16:29 CONFIG INFO Server parameters:
+05/Jul/2007:11:16:29 CONFIG INFO server.environment: development
+05/Jul/2007:11:16:29 CONFIG INFO server.log_to_screen: True
+05/Jul/2007:11:16:29 CONFIG INFO server.log_file: D:/tactic_temp/log/tactic_log
+05/Jul/2007:11:16:29 CONFIG INFO server.log_tracebacks: True
+05/Jul/2007:11:16:29 CONFIG INFO server.log_request_headers: True
+05/Jul/2007:11:16:29 CONFIG INFO server.protocol_version: HTTP/1.0
+05/Jul/2007:11:16:29 CONFIG INFO server.socket_host:
+05/Jul/2007:11:16:29 CONFIG INFO server.socket_port: 8081
+05/Jul/2007:11:16:29 CONFIG INFO server.socket_file:
+05/Jul/2007:11:16:29 CONFIG INFO server.reverse_dns: False
+05/Jul/2007:11:16:29 CONFIG INFO server.socket_queue_size: 10
+05/Jul/2007:11:16:29 CONFIG INFO server.thread_pool: 5
+05/Jul/2007:11:16:30 HTTP INFO Serving HTTP on http://localhost:8081/</code></pre>
+</div></div>
+<div class="paragraph"><p><code>http://&lt;TACTIC_server_address&gt;/tactic/admin/</code></p></div>
+<div class="paragraph"><p>You should see the TACTIC login appear.</p></div>
+<div class="paragraph"><p><span class="image">
+<img src="media/sys-admin-install-tactic-general-loginScreen.png" alt="image" />
+</span></p></div>
+<div class="paragraph"><p>There is a default user created on installation. This is the "admin"
+user and this user has the ability to see and change all aspects of the
+system. Log in as the admin user:</p></div>
+<div class="paragraph"><div class="title">Note: You may be asked to change your password automatically at startup</div><p>without entering these default credentials.</p></div>
+<div class="tableblock">
+<table rules="all"
+width="100%"
+frame="border"
+cellspacing="0" cellpadding="4">
+<col width="50%" />
+<col width="50%" />
+<tbody>
+<tr>
+<td align="left" valign="top"><p class="table"><strong>user:</strong></p></td>
+<td align="left" valign="top"><p class="table"><code>admin</code></p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table"><strong>password:</strong></p></td>
+<td align="left" valign="top"><p class="table"><code>tactic</code></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="paragraph"><p>Note: If you have not set up the TACTIC service, refer to the page
+"Configure the TACTIC Service".</p></div>
+<div class="paragraph"><p>First, stop TACTIC running in dev mode if applicable by pressing Ctrl<br />
+C in that shell</p></div>
+<div class="paragraph"><p>In Linux:</p></div>
+<div class="paragraph"><p><code>service tactic start</code></p></div>
+<div class="paragraph"><p>At this point you will need to install a TACTIC license file and then
+begin to set up a project.</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+For more information on installing the license file, please refer to
+the Install License File chapter.*
+</p>
+</li>
+<li>
+<p>
+For more information on getting started with projects, please refer to
+Setup documentation.*
+</p>
+</li>
+</ul></div>
+</div>
+</div>
+</div>
+<div id="footnotes"><hr /></div>
+<div id="footer">
+<div id="footer-text">
+Last updated 2015-10-22 21:52:41 EDT
+</div>
+</div>
+</body>
+</html>
