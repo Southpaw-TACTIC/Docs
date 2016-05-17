@@ -83,7 +83,7 @@ or .NET languages for IronPython)
 
 *Load balancing*
 
-Load balancing—the distribution of requests across TACTIC processes—is
+Load balancing the distribution of requests across TACTIC processes is
 possible across cores and across multiple machines, and enables TACTIC
 to scale to large enterprise environments.
 

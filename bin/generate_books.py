@@ -14,6 +14,7 @@ books = [
 media_books = [
     'tactic-developer',
     'tactic-end-user',
+    
     'tactic-setup',
     'tactic-quickstart',
     'tactic-sys-admin'
@@ -26,7 +27,6 @@ plugin_books = [
     'iridas-framecycler'
 ]
 
-plugin_books = []
 
 def copy_media(dir):
     for root, dirs, files in os.walk(dir):

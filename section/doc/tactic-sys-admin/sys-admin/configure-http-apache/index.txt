@@ -38,7 +38,7 @@ are interested in.
 For isolation of configuration options for editing purposes, the TACTIC
 configuration file is a single file which should be referred to by the
 Apache configuration file. In this case, the default "tactic.conf" file
-will be used. The file is included at the end of this document.
+will be used. The file is included at the end of this document. Note this default "tactic.conf" has already be altered during the running of tactic installation install.py so that the path matches the installation directories. 
 
 Find out if the httpd.conf file has an "Include" statement that refers
 to a directory the TACTIC Apache configuration file can be put in.
@@ -132,6 +132,25 @@ RewriteRule   ^/projects/(.+)$ http://${lb:dynamic}/tactic/$1  [P,L]
 RewriteRule   ^/tactic http://${lb:dynamic}/tactic/            [P,L]
 RewriteRule   ^/projects http://${lb:dynamic}/tactic/          [P,L]
 --------------------------------------------------------------------
+
+------------
+load balance
+------------
+
+*New Method*
+
+The use of balancer module is recommended for its reliablity and ease of use.
+
+<Proxy balancer://tactic>
+BalancerMember http://localhost:8081/tactic
+BalancerMember http://localhost:8082/tactic
+BalancerMember http://localhost:8083/tactic
+</Proxy>
+ProxyPass /tactic balancer://tactic
+ProxyPass /tactic_data balancer://tactic
+
+
+*Old Method*
 
 The file, /home/apache/sites/load_balance.txt contains
 

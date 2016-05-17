@@ -30,7 +30,7 @@ Modify the apache home directory and login shell to look like the
 following:
 +
 ---------------------------------------------
-apache:x:48:48:Apache:/home/apache:/bin/bash 
+\apache:x:48:48:Apache:/home/apache:/bin/bash 
 ---------------------------------------------
 3.  Set password for apache to: south123paw
 +

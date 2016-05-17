@@ -740,26 +740,31 @@ asciidoc.install();
 The data in that TACTIC produces and manages must be backed up in
 accordance with the backup policy of the departments that manage the
 TACTIC service.</p></div>
-<div class="paragraph"><p><strong>Backup policy definition</strong> TACTIC managers should create a backup policy
+<div class="sect3">
+<h4 id="_backup_policy_definition">Backup policy definition</h4>
+<div class="paragraph"><p>TACTIC managers should create a backup policy
 for TACTIC data. A backup policy is extremely important, as data loss
 within the TACTIC service is catastrophic.</p></div>
-<div class="paragraph"><p>*What needs be backed up*TACTIC manages data in three parallel scopes;</p></div>
+</div>
+<div class="sect3">
+<h4 id="_what_needs_be_backed_up">What needs be backed up</h4>
+<div class="paragraph"><p>TACTIC manages data in three parallel scopes:</p></div>
 <div class="ulist"><ul>
 <li>
 <p>
-*versioned assets*Versioned assets are all the files that are checked
+<code>versioned assets</code> Versioned assets are all the files that are checked
 in and out of the tactic service.
 </p>
 </li>
 <li>
 <p>
-<strong>asset metadata</strong> Asset metadata are all the data produced by user
-interaction with the tactic service. •
+<code>asset metadata</code> Asset metadata are all the data produced by user
+interaction with the tactic service.
 </p>
 </li>
 <li>
 <p>
-<strong>project metadata</strong> Project metadata are all data produced by the
+<code>project metadata</code> Project metadata are all data produced by the
 creation of a project within tactic the tactic service.
 </p>
 </li>
@@ -767,11 +772,17 @@ creation of a project within tactic the tactic service.
 <div class="paragraph"><p>Tactic data is all of equal importance. The data is all interrelated,
 and thus all data must be treated with equal importance in the backup
 regimen.</p></div>
-<div class="paragraph"><p><strong>frequency of backups</strong> The frequency of backup of tactic data depends on
+</div>
+<div class="sect3">
+<h4 id="_frequency_of_backups">Frequency of backups</h4>
+<div class="paragraph"><p>The frequency of backup of tactic data depends on
 the policies of the TACTIC managers. An examination of the frequency of
 use of the tactic service, combined with the down time potentially
 required to back up tactic data should be considered.</p></div>
-<div class="paragraph"><p><strong>Backup methods</strong> the only consideration that tactic managers should take
+</div>
+<div class="sect3">
+<h4 id="_backup_methods">Backup methods</h4>
+<div class="paragraph"><p>the only consideration that tactic managers should take
 into account when creating a backup policy for tactic data is that
 tactic data produced is synchronized. This is accomplished via a
 transaction system within tactic. This transaction system relies on
@@ -792,9 +803,23 @@ and asset backups.</p></div>
 regular schedule. In the event of a hardware failure, you will be able
 to restore your TACTIC server fully from the latest backup if you have
 taken the following three backup steps:</p></div>
-<div class="paragraph"><p>\1) Back up the <em>assets</em> directory</p></div>
-<div class="paragraph"><p>\2) Dump the TACTIC database</p></div>
-<div class="paragraph"><p>\3) Back up the TACTIC program directory</p></div>
+<div class="olist arabic"><ol class="arabic">
+<li>
+<p>
+Back up the <em>assets</em> directory
+</p>
+</li>
+<li>
+<p>
+Dump the TACTIC database
+</p>
+</li>
+<li>
+<p>
+Back up the TACTIC program directory
+</p>
+</li>
+</ol></div>
 <div class="quoteblock">
 <div class="content">
 <div class="paragraph"><p><strong>Note</strong></p></div>
@@ -817,14 +842,18 @@ directory structure.</p></div>
 </div>
 <div class="attribution">
 </div></div>
-<div class="paragraph"><p><strong>For backup:</strong></p></div>
+</div>
+<div class="sect3">
+<h4 id="_for_backup">For backup:</h4>
 <div class="paragraph"><p><strong>Windows</strong></p></div>
 <div class="paragraph"><p>The <em>assets</em> directory on a Windows install is located by default in:</p></div>
 <div class="paragraph"><p><code>C:\assets</code></p></div>
 <div class="paragraph"><p><strong>Linux</strong></p></div>
 <div class="paragraph"><p>The <em>assets</em> directory on a Linux install is located by default in:</p></div>
 <div class="paragraph"><p><code>/home/apache/assets</code></p></div>
-<div class="paragraph"><p><strong>For restore:</strong></p></div>
+</div>
+<div class="sect3">
+<h4 id="_for_restore">For restore:</h4>
 <div class="paragraph"><p>To restore the TACTIC <em>assets</em> directory, you have to restore your
 backup to the current <em>assets</em> location.</p></div>
 <div class="paragraph"><p>To dump the TACTIC data base you need to log in to the PostgreSQL
@@ -840,19 +869,24 @@ your postgres commands with the <code>-P</code> tag.</p></div>
 </div>
 <div class="attribution">
 </div></div>
-<div class="paragraph"><p><strong>For backup:</strong></p></div>
+</div>
+<div class="sect3">
+<h4 id="_for_backup_2">For backup:</h4>
 <div class="paragraph"><p><strong>Windows</strong></p></div>
 <div class="paragraph"><p><code>pg_dumpall -U postgres -c &gt; c:\assets\tacticDatabase.sql</code></p></div>
 <div class="paragraph"><p><strong>Linux</strong></p></div>
-<div class="paragraph"><p><code>pg_dumpall -U postgres -c &gt;
-            /home/apache/assets/tacticDatabase.sql</code></p></div>
-<div class="paragraph"><p><strong>For restore:</strong></p></div>
+<div class="paragraph"><p><code>pg_dumpall -U postgres -c &gt; /home/apache/assets/tacticDatabase.sql</code></p></div>
+</div>
+<div class="sect3">
+<h4 id="_for_restore_2">For restore:</h4>
 <div class="paragraph"><p>To restore the TACTIC database run the command:</p></div>
 <div class="paragraph"><p><code>psql -U postgres &lt; tacticDatabase.sql</code></p></div>
 <div class="paragraph"><p>This last step, although not completely necessary, is recommended
 because it takes a snapshot of your TACTIC source code and project
 settings at the time of backup.</p></div>
-<div class="paragraph"><p><strong>For backup:</strong></p></div>
+</div>
+<div class="sect3">
+<h4 id="_for_backup_3">For backup:</h4>
 <div class="paragraph"><p><strong>Windows</strong></p></div>
 <div class="paragraph"><p>The folders to back up are:</p></div>
 <div class="paragraph"><p><code>C:\Program Files\southpaw\tactic</code></p></div>
@@ -861,16 +895,19 @@ settings at the time of backup.</p></div>
 <div class="paragraph"><p>The folders to back up are:</p></div>
 <div class="paragraph"><p><code>/home/apache/tactic</code></p></div>
 <div class="paragraph"><p><code>/home/apache/projects</code></p></div>
-<div class="paragraph"><p><strong>For restore:</strong></p></div>
+</div>
+<div class="sect3">
+<h4 id="_for_restore_3">For restore:</h4>
 <div class="paragraph"><p>To restore the TACTIC program files, you have to restore the <code>tactic</code>
 and <code>projects</code> directories to their original locations.</p></div>
+</div>
 </div>
 </div>
 </div>
 <div id="footnotes"><hr /></div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2015-10-22 21:52:41 EDT
+Last updated 2016-05-16 16:45:03 EDT
 </div>
 </div>
 </body>

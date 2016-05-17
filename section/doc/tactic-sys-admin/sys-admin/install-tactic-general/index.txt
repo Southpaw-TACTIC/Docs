@@ -15,14 +15,14 @@ TACTIC stores all metadata in a database called PostgreSQL. This is an
 industrial strength, hugely scalable database that has proven itself in
 thousands of industries around the world. We currently recommend 8.4 and
 upwards for ease of installation. Go to the
-link:www.postgresql.org[PostgreSQL website] for more information.
+PostgreSQL website[www.postgresql.org] for more information.
 
-rpm -Uvh http://yum.pgrpms.org/reporpms/8.4/pgdg-fedora-8.4-2.noarch.rpm
+1. rpm -Uvh http://yum.pgrpms.org/reporpms/8.4/pgdg-fedora-8.4-2.noarch.rpm
 
-yum install postgresql postgresql-server postgresql-contrib
+2. yum install postgresql postgresql-server postgresql-contrib
 postgresql-devel
 
-It is located in /var/lib/pgsql/data This file determines all of the
+3. It is located in /var/lib/pgsql/data This file determines all of the
 user permissions for PostgreSQL. To begin with, turn on all of the
 permissions contained in this file. This is a temporary measure that
 will greatly simplify the installation process. You may lock down these
@@ -34,7 +34,7 @@ security setting for ease of installation. It's best to back up your
 current pg_hba.conf file before copying over with the file provided by
 TACTIC.
 
-Restart the PostgreSQL Service
+4. Restart the PostgreSQL Service
 
 *Verification*
 
@@ -59,42 +59,24 @@ The TACTIC source code is written in Python. As such, the complete
 codebase is open.
 
 To install Python, you can find an msi at
-link:www.python.org[*http://www.python.org*]. TACTIC requires Python 2.6
+http://www.python.org[http://www.python.org]. TACTIC requires Python 2.6
 or higher.
 
 TACTIC also requires a number of Python modules to function correctly.
 These modules are generally not installed by default with the standard
 Python distributions. For Windows, they are already packaged in a file
 python_modules.zip available for download in the release section of the
-downloads page at
-link:support.southpawtech.com/downloads[*http://support.southpawtech.com/downloads*]
+downloads page at http://support.southpawtech.com/downloads[http://support.southpawtech.com/downloads]
 
-* PIL 1.1.7
-+
-(Python Image Library)
-* ImageMagick 6.7.8
-+
-(A command line program which complements PIL) -
-+
-http://www.imagemagick.org
-* *FFmpeg* *version 0.6*(Solution to record, convert and stream audio
-and video and metadata parsing) -
-link:www.imagemagick.org[http://www.ffmpeg.org]
-* psycopg2 2.3.1
-+
-(Database connectivity)
-* PyCrypto version 2.0.1/2.1
-+
-(For de-encrypting the license file) -
-+
-http://www.amk.ca/python/code/crypto
-* simplejson 2.1.1 (not needed since Python 2.6)
-+
-simplejson.egg can be installed with the EasyInstaller. It is need for
+* `PIL 1.1.7` (Python Image Library)
+* `ImageMagick 6.7.8` (A command line program which complements PIL) - http://www.imagemagick.org[http://www.imagemagick.org]
+* `FFmpeg version 0.6` (Solution to record, convert and stream audio
+and video and metadata parsing) - http://www.ffmpeg.org[http://www.ffmpeg.org]
+* `psycopg2 2.3.1` (Database connectivity)
+* `PyCrypto version 2.0.1/2.1` (For de-encrypting the license file) - http://www.amk.ca/python/code/crypto[http://www.amk.ca/python/code/crypto]
+* `simplejson 2.1.1` (not needed since Python 2.6) simplejson.egg can be installed with the EasyInstaller. It is needed for
 JSON string encoding and parsing
-* lxml 2.1 or 2.2
-+
-(XML and XPath processing)
+* `lxml 2.1 or 2.2` (XML and XPath processing)
 
 Unzip the file in a temporary location.
 --------------------------
@@ -219,6 +201,14 @@ LoadModule proxy_balancer_module modules/mod_proxy_balancer.so
 LoadModule deflate_module modules/mod_deflate.so
 --------------------------------------------------------------
 
+Additional lines For Apache 2.4:
+--------------------------------------------------------------
+LoadModule slotmem_shm_module modules/mod_slotmem_shm.so
+LoadModule filter_module modules/mod_filter.so
+LoadModule lbmethod_byrequests_module modules/mod_lbmethod_byrequests.so
+--------------------------------------------------------------
+
+
 These lines may already be uncommented, depending on your distribution
 and version of Apache. You need Apache version 2.0.31 or later.
 
@@ -263,28 +253,40 @@ ProxyPass /tactic balancer://tactic
 ProxyPass /tactic_data balancer://tactic
 -------------------------------------------
 
-_____________________________________________
+For Apache 2.4:
+
+-------------------------------------------
+Comment out:
+#Order Allow,Deny
+#Allow from All
+
+Uncomment:
+Require all granted
+-------------------------------------------
+
+________________________________________________________________________________________________________________________________________
 *Note*
 
 Warning: For load balancing, only use either:
 
-\1) the Proxy Balancer method (recommended)
+1. the Proxy Balancer method (recommended)
 
-*or*
+   or
+   
 
-\2) the RewriteRule method (not recommended).
+2. the RewriteRule method (not recommended).
 
 Do *not* use both methods at the same time.
-_____________________________________________
+________________________________________________________________________________________________________________________________________
 
-_____________________________________________________________________________________________________________________________
+________________________________________________________________________________________________________________________________________
 *Note*
 
 For configuring load-balancing set-up in a real production, please refer
 to the Load Balancing section in the Sys-admin docs.
-_____________________________________________________________________________________________________________________________
+________________________________________________________________________________________________________________________________________
 
-________________________________________________________________________________________________________________________________________________________________
+________________________________________________________________________________________________________________________________________
 *Note*
 
 When trying to set up Apache on a Windows Server, to specify a share
@@ -296,8 +298,9 @@ For example, use the following if you have named the share folder
 
 -------------------------------------------
 Alias /assets "//10.0.0.17/my_share/assets"
+
 -------------------------------------------
-________________________________________________________________________________________________________________________________________________________________
+________________________________________________________________________________________________________________________________________
 
 Finally, after verifying the configuration is correct, restart the
 Apache service:
@@ -308,13 +311,17 @@ service httpd restart
 
 Go to the "<TACTIC_INSTALL_DIR>/src/bin" folder
 
-`cd /home/apache/tactic/src/bin `
+Then su as the user tactic and run startup_dev.py:
 
-Then su as the user apache is run as:
+----------------------------------
+cd /home/apache/tactic/src/bin
 
-su apache
+su tactic
 
-`python startup_dev.py`
+python startup_dev.py
+----------------------------------
+
+
 
 This "startup_dev.py" script is the development script which will dump
 output to the screen. The other startup script "startup.py" is the
@@ -357,8 +364,11 @@ image:media/sys-admin-install-tactic-general-loginScreen.png[image]
 There is a default user created on installation. This is the "admin"
 user and this user has the ability to see and change all aspects of the
 system. Log in as the admin user:
+________________________________________________________________________________________________________________________________________
+*Note* 
 
-.Note: You may be asked to change your password automatically at startup
+You may be asked to change your password automatically at startup
+
 without entering these default credentials.
 [width="100%",cols="50%,50%",]
 |====================================================
@@ -366,23 +376,28 @@ without entering these default credentials.
 |*password:* |`tactic`
 |====================================================
 
-Note: If you have not set up the TACTIC service, refer to the page
-"Configure the TACTIC Service".
+________________________________________________________________________________________________________________________________________
 
-First, stop TACTIC running in dev mode if applicable by pressing Ctrl +
-C in that shell
+________________________________________________________________________________________________________________________________________
+*Note* 
+
+If you have not set up the TACTIC service, refer to the page
+"Configure the TACTIC Service".
+________________________________________________________________________________________________________________________________________
+
+First, stop TACTIC running in dev mode if applicable by pressing Ctrl ^ C in that shell
 
 In Linux:
 
-`service tactic start`
+----------------------------
+service tactic start
+----------------------------
 
 At this point you will need to install a TACTIC license file and then
 begin to set up a project.
 
-* For more information on installing the license file, please refer to
-the Install License File chapter.*
+For more information on installing the license file, please refer to the Install License File chapter.
 
-* For more information on getting started with projects, please refer to
-Setup documentation.*
+For more information on getting started with projects, please refer to Setup documentation.
 
 

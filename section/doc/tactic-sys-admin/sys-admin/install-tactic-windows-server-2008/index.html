@@ -818,37 +818,56 @@ successfully installed the PostgreSQL database. Type \q to exit.</p></div>
 <div class="paragraph"><p>The TACTIC source code is written in Python. As such, the complete
 codebase is open.</p></div>
 <div class="paragraph"><p>To install Python, you can find an msi at
-<a href="http://www.python.org"><strong>http://www.python.org</strong></a>. TACTIC requires Python
-2.6 or higher.</p></div>
+<a href="http://www.python.org">http://www.python.org</a>. TACTIC requires Python 2.6
+or higher.</p></div>
 <div class="paragraph"><p>TACTIC also requires a number of Python modules to function correctly.
 These modules are generally not installed by default with the standard
 Python distributions. For Windows, they are already packaged in a file
 python_modules.zip available for download in the release section of the
-downloads page at <strong>http://community.southpawtech.com/downloads</strong></p></div>
+downloads page at <a href="http://support.southpawtech.com/downloads">http://support.southpawtech.com/downloads</a></p></div>
 <div class="ulist"><ul>
 <li>
 <p>
-PIL 1.1.7
+<code>PIL 1.1.7</code> (Python Image Library)
 </p>
-<div class="paragraph"><p>(Python Image Library)
-* ImageMagick 6.7.8</p></div>
-<div class="paragraph"><p>(A command line program which complements PIL) -</p></div>
-<div class="paragraph"><p><a href="http://www.imagemagick.org">http://www.imagemagick.org</a>
-* <strong>FFmpeg</strong> <strong>version 0.6</strong>(Solution to record, convert and stream audio
-and video and metadata parsing) -
-<a href="www.imagemagick.org">http://www.ffmpeg.org</a>
-* psycopg2 2.3.1</p></div>
-<div class="paragraph"><p>(Database connectivity)
-* PyCrypto version 2.0.1/2.1</p></div>
-<div class="paragraph"><p>(For de-encrypting the license file) -</p></div>
-<div class="paragraph"><p><a href="http://www.amk.ca/python/code/crypto">http://www.amk.ca/python/code/crypto</a>
-* simplejson 2.1.1 (not needed since Python 2.6)</p></div>
-<div class="paragraph"><p>simplejson.egg can be installed with the EasyInstaller. It is need for
+</li>
+<li>
+<p>
+<code>ImageMagick 6.7.8</code> (A command line program which complements PIL) - <a href="http://www.imagemagick.org">http://www.imagemagick.org</a>
+</p>
+</li>
+<li>
+<p>
+<code>FFmpeg version 0.6</code> (Solution to record, convert and stream audio
+and video and metadata parsing) - <a href="http://www.ffmpeg.org">http://www.ffmpeg.org</a>
+</p>
+</li>
+<li>
+<p>
+<code>psycopg2 2.3.1</code> (Database connectivity)
+</p>
+</li>
+<li>
+<p>
+<code>PyCrypto version 2.0.1/2.1</code> (For de-encrypting the license file) - <a href="http://www.amk.ca/python/code/crypto">http://www.amk.ca/python/code/crypto</a>
+</p>
+</li>
+<li>
+<p>
+<code>simplejson 2.1.1</code> (not needed since Python 2.6) simplejson.egg can be installed with the EasyInstaller. It is needed for
 JSON string encoding and parsing
-* lxml 2.1 or 2.2</p></div>
-<div class="paragraph"><p>(XML and XPath processing)
-* pywin32-(build 2##)</p></div>
-<div class="paragraph"><p>(Python Windows OS module)</p></div>
+</p>
+</li>
+<li>
+<p>
+<code>lxml 2.1 or 2.2</code> (XML and XPath processing)
+</p>
+</li>
+<li>
+<p>
+<code>pywin32-(build 2##)</code> (Python Windows OS module)
+<br />
+</p>
 </li>
 </ul></div>
 <div class="paragraph"><p><strong>Windows</strong></p></div>
@@ -952,7 +971,6 @@ content.</p></div>
 the Apache server. This has many scalability advantages. When running
 behind Apache, Apache uses a reverse proxy and proxy balancer module to
 forward requests to communicate with TACTIC.</p></div>
-<div class="paragraph"><p><strong>Windows</strong></p></div>
 <div class="paragraph"><p>After the installation, some changes may need to be made in the
 "httpd.conf" file for Apache.</p></div>
 <div class="listingblock">
@@ -968,12 +986,19 @@ LoadModule proxy_http_module modules/mod_proxy_http.so
 LoadModule proxy_balancer_module modules/mod_proxy_balancer.so
 LoadModule deflate_module modules/mod_deflate.so</code></pre>
 </div></div>
+<div class="paragraph"><p>Additional lines For Apache 2.4:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>LoadModule slotmem_shm_module modules/mod_slotmem_shm.so
+LoadModule filter_module modules/mod_filter.so
+LoadModule lbmethod_byrequests_module modules/mod_lbmethod_byrequests.so</code></pre>
+</div></div>
 <div class="paragraph"><p>These lines may already be uncommented, depending on your distribution
 and version of Apache. You need version 2.0.31 or later.</p></div>
 <div class="paragraph"><p>The TACTIC installer generates an Apache extension conf file on
 completion. You need to copy that file to a directory that is recognized
 by Apache.</p></div>
-<div class="paragraph"><p>For Windowse: this directory is:</p></div>
+<div class="paragraph"><p>For Windows, this directory is:</p></div>
 <div class="paragraph"><p>` C:/Program Files/Apache Software Foundation/Apache2.2/conf`</p></div>
 <div class="paragraph"><p>You must add the following line to the "httpd.conf" file so that it will
 read the extension conf file provided by the installer:</p></div>
@@ -1001,13 +1026,36 @@ BalancerMember http://localhost:8083/tactic
 ProxyPass /tactic balancer://tactic
 ProxyPass /tactic_data balancer://tactic</code></pre>
 </div></div>
+<div class="paragraph"><p>For Apache 2.4:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>Comment out:
+#Order Allow,Deny
+#Allow from All
+
+Uncomment:
+Require all granted</code></pre>
+</div></div>
 <div class="quoteblock">
 <div class="content">
 <div class="paragraph"><p><strong>Note</strong></p></div>
 <div class="paragraph"><p>Warning: For load balancing, only use either:</p></div>
-<div class="paragraph"><p>\1) the Proxy Balancer method (recommended)</p></div>
-<div class="paragraph"><p><strong>or</strong></p></div>
-<div class="paragraph"><p>\2) the RewriteRule method (not recommended).</p></div>
+<div class="olist arabic"><ol class="arabic">
+<li>
+<p>
+the Proxy Balancer method (recommended)
+</p>
+<div class="literalblock">
+<div class="content">
+<pre><code>or</code></pre>
+</div></div>
+</li>
+<li>
+<p>
+the RewriteRule method (not recommended).
+</p>
+</li>
+</ol></div>
 <div class="paragraph"><p>Do <strong>not</strong> use both methods at the same time.</p></div>
 </div>
 <div class="attribution">
@@ -1208,7 +1256,7 @@ location as well as the asset_base_dir location.
 <div id="footnotes"><hr /></div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2015-10-22 21:52:41 EDT
+Last updated 2016-05-16 21:52:01 EDT
 </div>
 </div>
 </body>
