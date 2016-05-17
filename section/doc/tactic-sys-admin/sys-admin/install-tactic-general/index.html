@@ -762,11 +762,22 @@ A Web Server
 industrial strength, hugely scalable database that has proven itself in
 thousands of industries around the world. We currently recommend 8.4 and
 upwards for ease of installation. Go to the
-<a href="www.postgresql.org">PostgreSQL website</a> for more information.</p></div>
-<div class="paragraph"><p>rpm -Uvh <a href="http://yum.pgrpms.org/reporpms/8.4/pgdg-fedora-8.4-2.noarch.rpm">http://yum.pgrpms.org/reporpms/8.4/pgdg-fedora-8.4-2.noarch.rpm</a></p></div>
-<div class="paragraph"><p>yum install postgresql postgresql-server postgresql-contrib
-postgresql-devel</p></div>
-<div class="paragraph"><p>It is located in /var/lib/pgsql/data This file determines all of the
+PostgreSQL website[www.postgresql.org] for more information.</p></div>
+<div class="olist arabic"><ol class="arabic">
+<li>
+<p>
+rpm -Uvh <a href="http://yum.pgrpms.org/reporpms/8.4/pgdg-fedora-8.4-2.noarch.rpm">http://yum.pgrpms.org/reporpms/8.4/pgdg-fedora-8.4-2.noarch.rpm</a>
+</p>
+</li>
+<li>
+<p>
+yum install postgresql postgresql-server postgresql-contrib
+postgresql-devel
+</p>
+</li>
+<li>
+<p>
+It is located in /var/lib/pgsql/data This file determines all of the
 user permissions for PostgreSQL. To begin with, turn on all of the
 permissions contained in this file. This is a temporary measure that
 will greatly simplify the installation process. You may lock down these
@@ -776,8 +787,15 @@ on how to do this. TACTIC ships with a sample "pg_hba.conf" file
 package&gt;/src/install/postgresql/pg_hba.conf). This file has an open
 security setting for ease of installation. It&#8217;s best to back up your
 current pg_hba.conf file before copying over with the file provided by
-TACTIC.</p></div>
-<div class="paragraph"><p>Restart the PostgreSQL Service</p></div>
+TACTIC.
+</p>
+</li>
+<li>
+<p>
+Restart the PostgreSQL Service
+</p>
+</li>
+</ol></div>
 <div class="paragraph"><p><strong>Verification</strong></p></div>
 <div class="paragraph"><p>Verify that psql works in the command prompt:</p></div>
 <div class="listingblock">
@@ -795,36 +813,50 @@ successfully installed the PostgreSQL database. Type \q to exit.</p></div>
 <div class="paragraph"><p>The TACTIC source code is written in Python. As such, the complete
 codebase is open.</p></div>
 <div class="paragraph"><p>To install Python, you can find an msi at
-<a href="www.python.org"><strong>http://www.python.org</strong></a>. TACTIC requires Python 2.6
+<a href="http://www.python.org">http://www.python.org</a>. TACTIC requires Python 2.6
 or higher.</p></div>
 <div class="paragraph"><p>TACTIC also requires a number of Python modules to function correctly.
 These modules are generally not installed by default with the standard
 Python distributions. For Windows, they are already packaged in a file
 python_modules.zip available for download in the release section of the
-downloads page at
-<a href="support.southpawtech.com/downloads"><strong>http://support.southpawtech.com/downloads</strong></a></p></div>
+downloads page at <a href="http://support.southpawtech.com/downloads">http://support.southpawtech.com/downloads</a></p></div>
 <div class="ulist"><ul>
 <li>
 <p>
-PIL 1.1.7
+<code>PIL 1.1.7</code> (Python Image Library)
 </p>
-<div class="paragraph"><p>(Python Image Library)
-* ImageMagick 6.7.8</p></div>
-<div class="paragraph"><p>(A command line program which complements PIL) -</p></div>
-<div class="paragraph"><p><a href="http://www.imagemagick.org">http://www.imagemagick.org</a>
-* <strong>FFmpeg</strong> <strong>version 0.6</strong>(Solution to record, convert and stream audio
-and video and metadata parsing) -
-<a href="www.imagemagick.org">http://www.ffmpeg.org</a>
-* psycopg2 2.3.1</p></div>
-<div class="paragraph"><p>(Database connectivity)
-* PyCrypto version 2.0.1/2.1</p></div>
-<div class="paragraph"><p>(For de-encrypting the license file) -</p></div>
-<div class="paragraph"><p><a href="http://www.amk.ca/python/code/crypto">http://www.amk.ca/python/code/crypto</a>
-* simplejson 2.1.1 (not needed since Python 2.6)</p></div>
-<div class="paragraph"><p>simplejson.egg can be installed with the EasyInstaller. It is need for
+</li>
+<li>
+<p>
+<code>ImageMagick 6.7.8</code> (A command line program which complements PIL) - <a href="http://www.imagemagick.org">http://www.imagemagick.org</a>
+</p>
+</li>
+<li>
+<p>
+<code>FFmpeg version 0.6</code> (Solution to record, convert and stream audio
+and video and metadata parsing) - <a href="http://www.ffmpeg.org">http://www.ffmpeg.org</a>
+</p>
+</li>
+<li>
+<p>
+<code>psycopg2 2.3.1</code> (Database connectivity)
+</p>
+</li>
+<li>
+<p>
+<code>PyCrypto version 2.0.1/2.1</code> (For de-encrypting the license file) - <a href="http://www.amk.ca/python/code/crypto">http://www.amk.ca/python/code/crypto</a>
+</p>
+</li>
+<li>
+<p>
+<code>simplejson 2.1.1</code> (not needed since Python 2.6) simplejson.egg can be installed with the EasyInstaller. It is needed for
 JSON string encoding and parsing
-* lxml 2.1 or 2.2</p></div>
-<div class="paragraph"><p>(XML and XPath processing)</p></div>
+</p>
+</li>
+<li>
+<p>
+<code>lxml 2.1 or 2.2</code> (XML and XPath processing)
+</p>
 </li>
 </ul></div>
 <div class="paragraph"><p>Unzip the file in a temporary location.</p></div>
@@ -934,6 +966,13 @@ LoadModule proxy_http_module modules/mod_proxy_http.so
 LoadModule proxy_balancer_module modules/mod_proxy_balancer.so
 LoadModule deflate_module modules/mod_deflate.so</code></pre>
 </div></div>
+<div class="paragraph"><p>Additional lines For Apache 2.4:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>LoadModule slotmem_shm_module modules/mod_slotmem_shm.so
+LoadModule filter_module modules/mod_filter.so
+LoadModule lbmethod_byrequests_module modules/mod_lbmethod_byrequests.so</code></pre>
+</div></div>
 <div class="paragraph"><p>These lines may already be uncommented, depending on your distribution
 and version of Apache. You need Apache version 2.0.31 or later.</p></div>
 <div class="paragraph"><p>The TACTIC installer generates an Apache extension conf file on
@@ -971,13 +1010,36 @@ BalancerMember http://localhost:8083/tactic
 ProxyPass /tactic balancer://tactic
 ProxyPass /tactic_data balancer://tactic</code></pre>
 </div></div>
+<div class="paragraph"><p>For Apache 2.4:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>Comment out:
+#Order Allow,Deny
+#Allow from All
+
+Uncomment:
+Require all granted</code></pre>
+</div></div>
 <div class="quoteblock">
 <div class="content">
 <div class="paragraph"><p><strong>Note</strong></p></div>
 <div class="paragraph"><p>Warning: For load balancing, only use either:</p></div>
-<div class="paragraph"><p>\1) the Proxy Balancer method (recommended)</p></div>
-<div class="paragraph"><p><strong>or</strong></p></div>
-<div class="paragraph"><p>\2) the RewriteRule method (not recommended).</p></div>
+<div class="olist arabic"><ol class="arabic">
+<li>
+<p>
+the Proxy Balancer method (recommended)
+</p>
+<div class="literalblock">
+<div class="content">
+<pre><code>or</code></pre>
+</div></div>
+</li>
+<li>
+<p>
+the RewriteRule method (not recommended).
+</p>
+</li>
+</ol></div>
 <div class="paragraph"><p>Do <strong>not</strong> use both methods at the same time.</p></div>
 </div>
 <div class="attribution">
@@ -1012,10 +1074,15 @@ Apache service:</p></div>
 <pre><code>service httpd restart</code></pre>
 </div></div>
 <div class="paragraph"><p>Go to the "&lt;TACTIC_INSTALL_DIR&gt;/src/bin" folder</p></div>
-<div class="paragraph"><p>`cd /home/apache/tactic/src/bin `</p></div>
-<div class="paragraph"><p>Then su as the user apache is run as:</p></div>
-<div class="paragraph"><p>su apache</p></div>
-<div class="paragraph"><p><code>python startup_dev.py</code></p></div>
+<div class="paragraph"><p>Then su as the user tactic and run startup_dev.py:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>cd /home/apache/tactic/src/bin
+
+su tactic
+
+python startup_dev.py</code></pre>
+</div></div>
 <div class="paragraph"><p>This "startup_dev.py" script is the development script which will dump
 output to the screen. The other startup script "startup.py" is the
 production start-up script and will dump output to a log file. The
@@ -1054,7 +1121,11 @@ Starting TACTIC ...
 <div class="paragraph"><p>There is a default user created on installation. This is the "admin"
 user and this user has the ability to see and change all aspects of the
 system. Log in as the admin user:</p></div>
-<div class="paragraph"><div class="title">Note: You may be asked to change your password automatically at startup</div><p>without entering these default credentials.</p></div>
+<div class="quoteblock">
+<div class="content">
+<div class="paragraph"><p><strong>Note</strong></p></div>
+<div class="paragraph"><p>You may be asked to change your password automatically at startup</p></div>
+<div class="paragraph"><p>without entering these default credentials.</p></div>
 <div class="tableblock">
 <table rules="all"
 width="100%"
@@ -1074,35 +1145,34 @@ cellspacing="0" cellpadding="4">
 </tbody>
 </table>
 </div>
-<div class="paragraph"><p>Note: If you have not set up the TACTIC service, refer to the page
+</div>
+<div class="attribution">
+</div></div>
+<div class="quoteblock">
+<div class="content">
+<div class="paragraph"><p><strong>Note</strong></p></div>
+<div class="paragraph"><p>If you have not set up the TACTIC service, refer to the page
 "Configure the TACTIC Service".</p></div>
-<div class="paragraph"><p>First, stop TACTIC running in dev mode if applicable by pressing Ctrl<br />
-C in that shell</p></div>
+</div>
+<div class="attribution">
+</div></div>
+<div class="paragraph"><p>First, stop TACTIC running in dev mode if applicable by pressing Ctrl ^ C in that shell</p></div>
 <div class="paragraph"><p>In Linux:</p></div>
-<div class="paragraph"><p><code>service tactic start</code></p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>service tactic start</code></pre>
+</div></div>
 <div class="paragraph"><p>At this point you will need to install a TACTIC license file and then
 begin to set up a project.</p></div>
-<div class="ulist"><ul>
-<li>
-<p>
-For more information on installing the license file, please refer to
-the Install License File chapter.*
-</p>
-</li>
-<li>
-<p>
-For more information on getting started with projects, please refer to
-Setup documentation.*
-</p>
-</li>
-</ul></div>
+<div class="paragraph"><p>For more information on installing the license file, please refer to the Install License File chapter.</p></div>
+<div class="paragraph"><p>For more information on getting started with projects, please refer to Setup documentation.</p></div>
 </div>
 </div>
 </div>
 <div id="footnotes"><hr /></div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2015-10-22 21:52:41 EDT
+Last updated 2016-05-16 17:29:17 EDT
 </div>
 </div>
 </body>

@@ -768,7 +768,7 @@ are interested in.</p></div>
 <div class="paragraph"><p>For isolation of configuration options for editing purposes, the TACTIC
 configuration file is a single file which should be referred to by the
 Apache configuration file. In this case, the default "tactic.conf" file
-will be used. The file is included at the end of this document.</p></div>
+will be used. The file is included at the end of this document. Note this default "tactic.conf" has already be altered during the running of tactic installation install.py so that the path matches the installation directories.</p></div>
 <div class="paragraph"><p>Find out if the httpd.conf file has an "Include" statement that refers
 to a directory the TACTIC Apache configuration file can be put in.</p></div>
 <div class="listingblock">
@@ -851,6 +851,20 @@ RewriteRule   ^/projects/(.+)$ http://${lb:dynamic}/tactic/$1  [P,L]
 RewriteRule   ^/tactic http://${lb:dynamic}/tactic/            [P,L]
 RewriteRule   ^/projects http://${lb:dynamic}/tactic/          [P,L]</code></pre>
 </div></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>load balance</code></pre>
+</div></div>
+<div class="paragraph"><p><strong>New Method</strong></p></div>
+<div class="paragraph"><p>The use of balancer module is recommended for its reliablity and ease of use.</p></div>
+<div class="paragraph"><p>&lt;Proxy balancer://tactic&gt;
+BalancerMember <a href="http://localhost:8081/tactic">http://localhost:8081/tactic</a>
+BalancerMember <a href="http://localhost:8082/tactic">http://localhost:8082/tactic</a>
+BalancerMember <a href="http://localhost:8083/tactic">http://localhost:8083/tactic</a>
+&lt;/Proxy&gt;
+ProxyPass /tactic balancer://tactic
+ProxyPass /tactic_data balancer://tactic</p></div>
+<div class="paragraph"><p><strong>Old Method</strong></p></div>
 <div class="paragraph"><p>The file, /home/apache/sites/load_balance.txt contains</p></div>
 <div class="listingblock">
 <div class="content">
@@ -872,7 +886,7 @@ Apache itself.</p></div>
 <div id="footnotes"><hr /></div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2015-10-22 21:52:41 EDT
+Last updated 2016-05-16 17:53:28 EDT
 </div>
 </div>
 </body>

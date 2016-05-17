@@ -89,45 +89,28 @@ The TACTIC source code is written in Python. As such, the complete
 codebase is open.
 
 To install Python, you can find an msi at
-http://www.python.org[*http://www.python.org*]. TACTIC requires Python
-2.6 or higher.
+http://www.python.org[http://www.python.org]. TACTIC requires Python 2.6
+or higher.
 
 TACTIC also requires a number of Python modules to function correctly.
 These modules are generally not installed by default with the standard
 Python distributions. For Windows, they are already packaged in a file
 python_modules.zip available for download in the release section of the
-downloads page at *http://community.southpawtech.com/downloads*
+downloads page at http://support.southpawtech.com/downloads[http://support.southpawtech.com/downloads]
 
-* PIL 1.1.7
-+
-(Python Image Library)
-* ImageMagick 6.7.8
-+
-(A command line program which complements PIL) -
-+
-http://www.imagemagick.org
-* *FFmpeg* *version 0.6*(Solution to record, convert and stream audio
-and video and metadata parsing) -
-link:www.imagemagick.org[http://www.ffmpeg.org]
-* psycopg2 2.3.1
-+
-(Database connectivity)
-* PyCrypto version 2.0.1/2.1
-+
-(For de-encrypting the license file) -
-+
-http://www.amk.ca/python/code/crypto
-* simplejson 2.1.1 (not needed since Python 2.6)
-+
-simplejson.egg can be installed with the EasyInstaller. It is need for
+* `PIL 1.1.7` (Python Image Library)
+* `ImageMagick 6.7.8` (A command line program which complements PIL) - http://www.imagemagick.org[http://www.imagemagick.org]
+* `FFmpeg version 0.6` (Solution to record, convert and stream audio
+and video and metadata parsing) - http://www.ffmpeg.org[http://www.ffmpeg.org]
+* `psycopg2 2.3.1` (Database connectivity)
+* `PyCrypto version 2.0.1/2.1` (For de-encrypting the license file) - http://www.amk.ca/python/code/crypto[http://www.amk.ca/python/code/crypto]
+* `simplejson 2.1.1` (not needed since Python 2.6) simplejson.egg can be installed with the EasyInstaller. It is needed for
 JSON string encoding and parsing
-* lxml 2.1 or 2.2
-+
-(XML and XPath processing)
-* pywin32-(build 2##)
-+
-(Python Windows OS module)
-
+* `lxml 2.1 or 2.2` (XML and XPath processing)
+* `pywin32-(build 2##)` (Python Windows OS module)
+ +
+ 
+ 
 *Windows*
 
 Unfortunately, Python is not preinstalled on Windows machines; however,
@@ -248,7 +231,6 @@ the Apache server. This has many scalability advantages. When running
 behind Apache, Apache uses a reverse proxy and proxy balancer module to
 forward requests to communicate with TACTIC.
 
-*Windows*
 
 After the installation, some changes may need to be made in the
 "httpd.conf" file for Apache.
@@ -267,6 +249,13 @@ LoadModule proxy_balancer_module modules/mod_proxy_balancer.so
 LoadModule deflate_module modules/mod_deflate.so
 --------------------------------------------------------------
 
+Additional lines For Apache 2.4:
+--------------------------------------------------------------
+LoadModule slotmem_shm_module modules/mod_slotmem_shm.so
+LoadModule filter_module modules/mod_filter.so
+LoadModule lbmethod_byrequests_module modules/mod_lbmethod_byrequests.so
+--------------------------------------------------------------
+
 These lines may already be uncommented, depending on your distribution
 and version of Apache. You need version 2.0.31 or later.
 
@@ -274,7 +263,7 @@ The TACTIC installer generates an Apache extension conf file on
 completion. You need to copy that file to a directory that is recognized
 by Apache.
 
-For Windowse: this directory is:
+For Windows, this directory is:
 
 ` C:/Program Files/Apache Software Foundation/Apache2.2/conf`
 
@@ -308,19 +297,31 @@ ProxyPass /tactic balancer://tactic
 ProxyPass /tactic_data balancer://tactic
 -------------------------------------------
 
-_____________________________________________
+For Apache 2.4:
+
+-------------------------------------------
+Comment out:
+#Order Allow,Deny
+#Allow from All
+
+Uncomment:
+Require all granted
+-------------------------------------------
+
+________________________________________________________________________________________________________________________________________
 *Note*
 
 Warning: For load balancing, only use either:
 
-\1) the Proxy Balancer method (recommended)
+1. the Proxy Balancer method (recommended)
 
-*or*
+   or
 
-\2) the RewriteRule method (not recommended).
+
+2. the RewriteRule method (not recommended).
 
 Do *not* use both methods at the same time.
-_____________________________________________
+________________________________________________________________________________________________________________________________________
 
 _____________________________________________________________________________________________________________________________
 *Note*

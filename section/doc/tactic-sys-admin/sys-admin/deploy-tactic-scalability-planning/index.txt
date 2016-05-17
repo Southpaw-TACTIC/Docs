@@ -3,10 +3,10 @@ Scalable TACTIC Deployment Planning
 
 The stages of a TACTIC deployment are:
 
-* \1. Determining usage requirements
-* \2. Determining hardware requirements
-* \3. Determining TACTIC Service and Co-Service Locations
-* \4. Post Deployment TACTIC upscaling
+* 1. Determining usage requirements
+* 2. Determining hardware requirements
+* 3. Determining TACTIC Service and Co-Service Locations
+* 4. Post Deployment TACTIC upscaling
 
 *Planning NOTES*
 
@@ -17,7 +17,7 @@ deployment is required?" This is a hard question to answer unless it is
 known beforehand exactly how TACTIC will be used. Since every TACTIC
 deployment is customized by the licensee, there is really no way to
 calculate accurately the type of load that will eventually be placed on
-the TACTIC server. Fortunately, due to TACTIC’s scalable architecture, a
+the TACTIC server. Fortunately, due to TACTIC's scalable architecture, a
 TACTIC deployment can be scaled up easily when there are unforeseen
 increases in usage.
 

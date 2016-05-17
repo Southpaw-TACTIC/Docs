@@ -757,6 +757,8 @@ Log in as the root user.
 <p>
 Open the passwd file.
 </p>
+</li>
+</ol></div>
 <div class="listingblock">
 <div class="content">
 <pre><code>vi /etc/passwd</code></pre>
@@ -767,20 +769,24 @@ following:</p></div>
 <div class="content">
 <pre><code>apache:x:48:48:Apache:/home/apache:/bin/bash</code></pre>
 </div></div>
-</li>
+<div class="olist arabic"><ol class="arabic" start="3">
 <li>
 <p>
 Set password for apache to: south123paw
 </p>
+</li>
+</ol></div>
 <div class="listingblock">
 <div class="content">
 <pre><code>passwd apache</code></pre>
 </div></div>
-</li>
+<div class="olist arabic"><ol class="arabic" start="4">
 <li>
 <p>
 Open to the sudoers file.
 </p>
+</li>
+</ol></div>
 <div class="listingblock">
 <div class="content">
 <pre><code>visudo</code></pre>
@@ -791,40 +797,48 @@ location in the file:</p></div>
 <div class="content">
 <pre><code>apache ALL=(ALL) ALL</code></pre>
 </div></div>
-</li>
+<div class="olist arabic"><ol class="arabic" start="5">
 <li>
 <p>
 Create the home directory for apache.
 </p>
+</li>
+</ol></div>
 <div class="listingblock">
 <div class="content">
 <pre><code>mkdir /home/apache
 chown apache:apache /home/apache
-chmod a+rx /home/apache</code></pre>
+chmod a rx /home/apache</code></pre>
 </div></div>
-</li>
+<div class="olist arabic"><ol class="arabic" start="6">
 <li>
 <p>
 Disable SElinux.
 </p>
+</li>
+</ol></div>
 <div class="listingblock">
 <div class="content">
 <pre><code>vi /etc/selinux/config</code></pre>
 </div></div>
-</li>
+<div class="olist arabic"><ol class="arabic" start="7">
 <li>
 <p>
 Install modules.
 </p>
+</li>
+</ol></div>
 <div class="listingblock">
 <div class="content">
 <pre><code>yum install -y gcc zlib-devel samba libxslt-devel libxml2-devel postgresql-server postgresql-devel</code></pre>
 </div></div>
-</li>
+<div class="olist arabic"><ol class="arabic" start="8">
 <li>
 <p>
 Install Python 2.7.
 </p>
+</li>
+</ol></div>
 <div class="listingblock">
 <div class="content">
 <pre><code>cd; wget http://www.python.org/ftp/python/2.7.1/Python-2.7.1.tgz
@@ -833,18 +847,20 @@ cd Python-2.7.1
 ./configure -with-zlib=/usr/include
 make install</code></pre>
 </div></div>
-</li>
+<div class="olist arabic"><ol class="arabic" start="9">
 <li>
 <p>
 Installing Python 2.7 will install python2.7 command "ahead" of the
 original python so that "python" from the command line is now 2.7. This
 will break yum. To fix this, remove the python executable for 2.7.
 </p>
+</li>
+</ol></div>
 <div class="listingblock">
 <div class="content">
 <pre><code>rm /usr/local/bin/python</code></pre>
 </div></div>
-</li>
+<div class="olist arabic"><ol class="arabic" start="10">
 <li>
 <p>
 Restart the shell so that the environment is clean.
@@ -854,6 +870,8 @@ Restart the shell so that the environment is clean.
 <p>
 Install lxml.
 </p>
+</li>
+</ol></div>
 <div class="listingblock">
 <div class="content">
 <pre><code>cd; wget http://codespeak.net/lxml/lxml-2.2.8.tgz
@@ -861,11 +879,13 @@ tar zxvf lxml-2.2.8.tgz
 cd lxml-2.2.8
 python2.7 setup.py install</code></pre>
 </div></div>
-</li>
+<div class="olist arabic"><ol class="arabic" start="12">
 <li>
 <p>
 Install PIL.
 </p>
+</li>
+</ol></div>
 <div class="listingblock">
 <div class="content">
 <pre><code>cd; wget http://effbot.org/downloads/Imaging-1.1.7.tar.gz
@@ -873,11 +893,13 @@ tar zxvf Imaging-1.1.7.tar.gz
 cd Imaging-1.1.7
 python2.7 setup.py install</code></pre>
 </div></div>
-</li>
+<div class="olist arabic"><ol class="arabic" start="13">
 <li>
 <p>
 Install psycopg2.
 </p>
+</li>
+</ol></div>
 <div class="listingblock">
 <div class="content">
 <pre><code>cd; wget http://pypi.python.org/packages/source/p/psycopg2/psycopg2-2.3.2.tar.gz
@@ -885,11 +907,13 @@ tar zxvf psycopg2-2.3.2.tar.gz
 cd psycopg2-2.3.2
 python2.7 setup.py install</code></pre>
 </div></div>
-</li>
+<div class="olist arabic"><ol class="arabic" start="14">
 <li>
 <p>
 Install PyCrypto.
 </p>
+</li>
+</ol></div>
 <div class="listingblock">
 <div class="content">
 <pre><code>cd; wget http://pypi.python.org/packages/source/p/pycrypto/pycrypto-2.3.tar.gz
@@ -897,21 +921,25 @@ tar zxvf pycrypto-2.3.tar.gz
 cd pycrypto-2.3
 python2.7 setup.py install</code></pre>
 </div></div>
-</li>
+<div class="olist arabic"><ol class="arabic" start="15">
 <li>
 <p>
 Disable firewall.
 </p>
+</li>
+</ol></div>
 <div class="listingblock">
 <div class="content">
 <pre><code>/etc/init.d/iptables save
 /etc/init.d/iptables stop</code></pre>
 </div></div>
-</li>
+<div class="olist arabic"><ol class="arabic" start="16">
 <li>
 <p>
 Create and open the index.html for redirection.
 </p>
+</li>
+</ol></div>
 <div class="listingblock">
 <div class="content">
 <pre><code>vi /var/www/html/index.html</code></pre>
@@ -921,7 +949,7 @@ Create and open the index.html for redirection.
 <div class="content">
 <pre><code>&lt;META http-equiv="refresh" content="0;URL=/tactic"&gt;</code></pre>
 </div></div>
-</li>
+<div class="olist arabic"><ol class="arabic" start="17">
 <li>
 <p>
 Re-login as the apache user.
@@ -931,6 +959,8 @@ Re-login as the apache user.
 <p>
 Download the TACTIC source code and setup the service.
 </p>
+</li>
+</ol></div>
 <div class="paragraph"><p>Open the following link in a web browser</p></div>
 <div class="listingblock">
 <div class="content">
@@ -945,11 +975,13 @@ sudo cp /tmp/tactic_#.#.#.#/src/install/service/tactic /etc/init.d
 sudo chmod 775 /etc/init.d/tactic
 sudo /sbin/chkconfig tactic on</code></pre>
 </div></div>
-</li>
+<div class="olist arabic"><ol class="arabic" start="19">
 <li>
 <p>
 Setup Postgres.
 </p>
+</li>
+</ol></div>
 <div class="listingblock">
 <div class="content">
 <pre><code>sudo /etc/init.d/postgresql start
@@ -958,22 +990,26 @@ sudo chown postgres:postgres /var/lib/pgsql/data/pg_hba.conf
 sudo /sbin/chkconfig postgresql on
 sudo /etc/init.d/postgresql restart</code></pre>
 </div></div>
-</li>
+<div class="olist arabic"><ol class="arabic" start="20">
 <li>
 <p>
 Setup Apache.
 </p>
+</li>
+</ol></div>
 <div class="listingblock">
 <div class="content">
 <pre><code>sudo cp /home/apache/tactic_data/config/tactic.conf /etc/httpd/conf.d/
 sudo /sbin/chkconfig httpd on
 sudo /etc/init.d/httpd start</code></pre>
 </div></div>
-</li>
+<div class="olist arabic"><ol class="arabic" start="21">
 <li>
 <p>
 Install TACTIC.
 </p>
+</li>
+</ol></div>
 <div class="listingblock">
 <div class="content">
 <pre><code>cd /tmp/tactic_#.#.#.#/src/install
@@ -981,25 +1017,29 @@ sudo python2.7 install.py
 sudo /sbin/chkconfig tactic on
 sudo chown -R apache:apache /home/apache/tactic /home/apache/assets /home/apache/tactic_data /home/apache/tacticTemp</code></pre>
 </div></div>
-</li>
+<div class="olist arabic"><ol class="arabic" start="22">
 <li>
 <p>
 Upgrade the database.
 </p>
+</li>
+</ol></div>
 <div class="listingblock">
 <div class="content">
 <pre><code>python2.7 /home/apache/tactic/src/bin/upgrade_db.py</code></pre>
 </div></div>
-</li>
+<div class="olist arabic"><ol class="arabic" start="23">
 <li>
 <p>
 Startup TACTIC in dev mode.
 </p>
+</li>
+</ol></div>
 <div class="listingblock">
 <div class="content">
 <pre><code>python2.7 /home/apache/tactic/src/bin/startup_dev.py</code></pre>
 </div></div>
-</li>
+<div class="olist arabic"><ol class="arabic" start="24">
 <li>
 <p>
 Try accessing TACTIC through a web browser on a client machine.
@@ -1009,15 +1049,19 @@ Try accessing TACTIC through a web browser on a client machine.
 <p>
 Once startup_dev works, Ctrl^C out of the process.
 </p>
+</li>
+</ol></div>
 <div class="listingblock">
 <div class="content">
 <pre><code>Ctrl^C</code></pre>
 </div></div>
-</li>
+<div class="olist arabic"><ol class="arabic" start="26">
 <li>
 <p>
 Open the TACTIC service file for edit.
 </p>
+</li>
+</ol></div>
 <div class="listingblock">
 <div class="content">
 <pre><code>sudo vi /etc/init.d/tactic</code></pre>
@@ -1027,11 +1071,13 @@ Open the TACTIC service file for edit.
 <div class="content">
 <pre><code>PYTHON=/usr/local/bin/python2.7</code></pre>
 </div></div>
-</li>
+<div class="olist arabic"><ol class="arabic" start="27">
 <li>
 <p>
 Open the TACTIC configuration file for edit.
 </p>
+</li>
+</ol></div>
 <div class="listingblock">
 <div class="content">
 <pre><code>vi /home/apache/tactic_data/config/tactic_linux-conf.xml</code></pre>
@@ -1041,17 +1087,17 @@ Open the TACTIC configuration file for edit.
 <div class="content">
 <pre><code>&lt;python&gt;/usr/local/bin/python2.7&lt;/python&gt;</code></pre>
 </div></div>
-</li>
+<div class="olist arabic"><ol class="arabic" start="28">
 <li>
 <p>
 Start TACTIC as a service.
 </p>
+</li>
+</ol></div>
 <div class="listingblock">
 <div class="content">
 <pre><code>sudo /etc/init.d/tactic start</code></pre>
 </div></div>
-</li>
-</ol></div>
 <div class="paragraph"><p>End of installation instructions.</p></div>
 </div>
 </div>
@@ -1059,7 +1105,7 @@ Start TACTIC as a service.
 <div id="footnotes"><hr /></div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2015-10-22 21:52:41 EDT
+Last updated 2016-05-16 17:54:32 EDT
 </div>
 </div>
 </body>

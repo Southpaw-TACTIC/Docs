@@ -1,6 +1,8 @@
 TACTIC System-Admin Documentation
 =================================
+:leveloffset: 1
 
+This document covers various topics like Planning, Installation, Maintenance, and Client set-up.
 
 :leveloffset: 0
 
@@ -187,3 +189,4 @@ include::../section/doc/tactic-sys-admin/sys-admin/setup-client-computer/index.t
 //include::../section/doc/tactic-sys-admin/sys-admin/config-tactic/index.txt[]
 
 //include::../section/doc/tactic-sys-admin/sys-admin/mysql/index.txt[]
+

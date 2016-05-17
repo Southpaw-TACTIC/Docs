@@ -39,4 +39,4 @@ computer's operating system. HTML5 features, where applicable, is adopted instea
 A good example is uploading of files.
 
 To download the latest version of the Java plugin, go to
-http://www.java.com[*http://www.java.com*]
+http://www.java.com[www.java.com]
