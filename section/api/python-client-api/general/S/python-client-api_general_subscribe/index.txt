@@ -8,18 +8,18 @@ Allow a user to subscribe to this message key.  All messages
 belonging to the corresponding key will be available to users
 subscribed to it.
 
-*params*
+*param:*
 
 *key* - unique key for this message
 
 
 
-*keyparam*
+*keyparam:*
 
 *category* - value to categorize this message
 
 
 
-*return*
+*return:*
 
-subscription sobject
+*dict* - subscription sobject

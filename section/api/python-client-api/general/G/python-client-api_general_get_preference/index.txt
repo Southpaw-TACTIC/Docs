@@ -1,0 +1,16 @@
+get_preference
+--------------
+
+*get_preference(key)*
+
+Get the user's preference for this project
+
+*param:*
+
+*key* - unique key to identify preference
+
+
+
+*return:*
+
+*string* - current value of preference

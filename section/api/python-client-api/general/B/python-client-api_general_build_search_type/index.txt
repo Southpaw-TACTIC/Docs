@@ -21,11 +21,11 @@ included, the project from get_ticket() is added.
 
 *return:*
 
-search type string
+*string* - search type
 
 
 
-*example*
+*example:*
 
 [source,python]
 ------------------------------------------------------------

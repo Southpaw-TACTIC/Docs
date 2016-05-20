@@ -202,11 +202,15 @@ include::../section/api/python-client-api/general/B/python-client-api_general_bu
 
 include::../section/api/python-client-api/general/B/python-client-api_general_build_search_type/index.txt[]
 
+include::../section/api/python-client-api/general/C/python-client-api_general_check_access/index.txt[]
+
 include::../section/api/python-client-api/general/C/python-client-api_general_checkout/index.txt[]
 
 include::../section/api/python-client-api/general/C/python-client-api_general_clear_upload_dir/index.txt[]
 
 include::../section/api/python-client-api/general/C/python-client-api_general_connect_sobjects/index.txt[]
+
+include::../section/api/python-client-api/general/C/python-client-api_general_create_note/index.txt[]
 
 include::../section/api/python-client-api/general/C/python-client-api_general_create_search_type/index.txt[]
 
@@ -239,6 +243,8 @@ include::../section/api/python-client-api/general/G/python-client-api_general_ge
 include::../section/api/python-client-api/general/G/python-client-api_general_get_all_dependencies/index.txt[]
 
 include::../section/api/python-client-api/general/G/python-client-api_general_get_all_paths_from_snapshot/index.txt[]
+
+include::../section/api/python-client-api/general/G/python-client-api_general_get_base_dirs/index.txt[]
 
 include::../section/api/python-client-api/general/G/python-client-api_general_get_by_code/index.txt[]
 
@@ -280,6 +286,8 @@ include::../section/api/python-client-api/general/G/python-client-api_general_ge
 
 include::../section/api/python-client-api/general/G/python-client-api_general_get_md5_info/index.txt[]
 
+include::../section/api/python-client-api/general/G/python-client-api_general_get_message/index.txt[]
+
 include::../section/api/python-client-api/general/G/python-client-api_general_get_output_tasks/index.txt[]
 
 include::../section/api/python-client-api/general/G/python-client-api_general_get_parent/index.txt[]
@@ -301,6 +309,8 @@ include::../section/api/python-client-api/general/G/python-client-api_general_ge
 include::../section/api/python-client-api/general/G/python-client-api_general_get_plugin_dir/index.txt[]
 
 include::../section/api/python-client-api/general/G/python-client-api_general_get_preallocated_path/index.txt[]
+
+include::../section/api/python-client-api/general/G/python-client-api_general_get_preference/index.txt[]
 
 include::../section/api/python-client-api/general/G/python-client-api_general_get_related_types/index.txt[]
 
@@ -349,6 +359,8 @@ include::../section/api/python-client-api/general/R/python-client-api_general_re
 include::../section/api/python-client-api/general/S/python-client-api_general_set_config_definition/index.txt[]
 
 include::../section/api/python-client-api/general/S/python-client-api_general_set_current_snapshot/index.txt[]
+
+include::../section/api/python-client-api/general/S/python-client-api_general_set_preference/index.txt[]
 
 include::../section/api/python-client-api/general/S/python-client-api_general_set_widget_settings/index.txt[]
 
