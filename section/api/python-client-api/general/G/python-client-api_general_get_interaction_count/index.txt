@@ -1,4 +1,16 @@
 get_interaction_count
 ---------------------
 
-*get_interaction_count(key, category="default")*
+*get_interaction_count(key)*
+
+Get the interaction count given a key
+
+*params*
+
+*key* - key string for interaction count
+
+
+
+*return:*
+
+*integer* - interaction count

@@ -1,11 +1,11 @@
 finish
 ------
 
-*finish()*
+*finish(description='')*
 
 End the current transaction and cleans it up
 
-*params:*
+*keyparam:*
 
 description: this will be recorded in the transaction log as the
 

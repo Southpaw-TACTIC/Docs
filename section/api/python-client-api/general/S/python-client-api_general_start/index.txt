@@ -1,7 +1,7 @@
 start
 -----
 
-*start(title, description='')*
+*start(title, description='', transaction_ticket='')*
 
 Start a transaction.  All commands using the client API are bound
 in a transaction.  The combination of start(), finish() and abort()

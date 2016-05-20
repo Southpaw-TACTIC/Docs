@@ -6,13 +6,13 @@ unsubscribe
 
 Allow a user to unsubscribe from this message key.
 
-*params*
+*param:*
 
 *key* - unique key for this message
 
 
 
-*return*
+*return:*
 
 *dictionary* - the values of the subscription sobject in the
 

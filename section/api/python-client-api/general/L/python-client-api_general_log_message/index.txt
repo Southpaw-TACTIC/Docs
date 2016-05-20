@@ -7,7 +7,7 @@ log_message
 Log a message which will be seen by all who are subscribed to
 the message "key".  Messages are often JSON strings of data.
 
-*params*
+*params:*
 
 *key* - unique key for this message
 
@@ -15,7 +15,7 @@ the message "key".  Messages are often JSON strings of data.
 
 
 
-*keyparam*
+*keyparam:*
 
 *status* - arbitrary status for this message
 
@@ -23,6 +23,6 @@ the message "key".  Messages are often JSON strings of data.
 
 
 
-*return*
+*return:*
 
 *string* - "OK"
