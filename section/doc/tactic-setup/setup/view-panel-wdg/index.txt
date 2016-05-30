@@ -31,35 +31,70 @@ Layout Widget.
 
 [width="100%",cols="31%,69%",]
 |=======================================================================
-|*show_gear* |Flag to show the gear menu.
+|*search_type* |Define The sType that this View panel displays with.
 
-|*show_search* |Flag to show the search box.
-
-|*show_search_limit* |Flag to show the search limit.
-
-|*show_insert* |Flag to show the insert button.
+|*view* |The TACTIC name for the view. e.g. admin.test_asset_tracking
 
 |*insert_view* |Specify the path to a custom insert view.
 
 |*edit_view* |Specify the path to a custom edit view.
 
-|*show_commit_all* |Flag to show the commit all button.
+|*ingest_custom_view* |Specify a custom layout view that Ingest Files menu option opens in a new tab.
 
-|*show_refresh* |Display the refresh button on the shelf.
+|*ingest_data_view* |Specify a view similar to edit view that defines any data to be saved with each ingested sobject.
 
-|*show_row_select* |Flag to show row_selection.
+|*expression* |Use an expression for the search. The expression must
+return items. e.g. @SEARCH(sthpw/note) or @SOBJECT(sthpw/note)
+
+|*filter* |JSON data structure representing the settings for SearchWdg
+
+|*parent_key* |Provide a parent item to filter in the search.
+
+|*search_key* |Provide the starting search key.
+
+|*search_view* |(INTERNAL) View for custom searches.
+
+|*layout* |Different layout available - default, tile, fast_table, raw_table, old_table, static_table, collection, browser, card, tool, aggregate, custom_item, custom 
+
+|*show_gear* |Determine whether to show the gear menu - true, false.
+
+|*show_search* |Determine whether to show the search box - true, false.
+
+|*show_search_limit* |Determine whether to show the search limit - true, false.
+
+|*show_insert* |Determine whether to show the insert button - true, false.
+
+|*show_refresh* |Display the refresh button on the shelf - true, false.
+
+|*show_keyword_search* |Determine whether to show the Keyword search input - true, false.
+
+|*show_select* |Determine whether to show row_selection - true, false.
+
+|*show_shelf* |Determine whether to show the action shelf - true, false.
+
+|*show_layout_switcher* |Determine whether to show the layout switcher - true, false.
+
+|*show_column_manager* |Determine whether to show the column manager - true, false.
+
+|*show_collection_tool* |Determine whether to show the collection button - true, false.
+
+|*show_context_menu* |Determine whether to show the context menu - true, false.
+
+|*show_expand* |Determine whether to show the expand button - true, false.
+
+|*show_help* |Determine whether to show the help button - true, false.
+
+|*show_border* |Determine whether to show the table border - true, false.
 
 |*popup* |Pop the view up in a pop-up window.
 
-|*layout* |*default*, *tile*, *static*, *raw*, *fast_table*, *old_table*
-
-|*search_type* |The type that this widget works with
-
-|*view* |The TACTIC name for the view. e.g. admin.test_asset_tracking
-
 |*do_initial_search* |Run the search on loading of the view.
 
-|*simple_search_view* |Specify the simple search view.
+|*init_load_num* |Set the number of rows to laod initially. If set to -1, it will not load in chunks
+
+|*no_results_msg* |The message displayed when the search returns no item
+
+|*no_results_mode* |The display modes for no results
 
 |*custom_filter_view* |View for custom filters. Defaults to
 "custom_filter".
@@ -67,28 +102,40 @@ Layout Widget.
 |*process* |The process which is applicable in the UI when load view is
 used.
 
-|*mode* |*simple*, *insert*
+|*checkin_context* |Override the checkin context for Check-in New File - publish (default).
 
-|*parent_key* |Provides a parent item to filter in the search.
+|*checkin_type* |Override the checkin type for Check-in New File - auto, strict.
 
-|*search_key* |Provides the starting search key.
+|*mode* |Mode to pass into the layout engine - widget, raw.
 
-|*element_names* |Provides a list of column names (ie.
-"preview,name,description") for the view.
+|*element_names* |Provide a list of column names (ie. "preview,name,description") for the view.
 
-|*schema_default_view* |(INTERNAL) flag to show whether this is
-generated straight from the schema.
+|*group_elements* |Provide a list of grouping column names. e.g. sort_order,category
 
-|*order_by* |The column name to order ascending by.
+|*schema_default_view* |(INTERNAL) flag to show whether this is generated straight from the schema.
 
-|*search_view* |(INTERNAL) View for custom searches.
+|*order_by* |The column name to order ascending by. multiple columns are to be comma separated.
+
+|*search_limit* |The number of items to show on each page.  e.g. 20  A value < 0 means no limit
+affecting the search.
+
+|*search_limit_mode* |Determine if it displays top, bottom or both search limit - bottom, top, both
+
+|*simple_search_mode* |Display mode of simple search bar - inline, hidden.
+
+|*simple_search_view* |View for defining a simple search.
+
+|*simple_search_config* |Xml config as opposed to a view for defining a simple search.
+
+|*simple_search_columns* |Number of columns in the simple search bar - 2, 3 or 4.
+
+|*simple_search_visible_rows* |Number of visible rows in the simple search bar.
 
 |*width* |Set the default width of the table
 
-|*expression* |Use an expression for the search. The expression must
-return items.
 
-|*filter* |JSON data structure representing the settings for SearchWdg
+|*gallery_align* |Gallery vertical alignment. It is used when a Preview icon is clicked to open in gallery mode - top, bottom.
+
 |=======================================================================
 
 *Advanced*
