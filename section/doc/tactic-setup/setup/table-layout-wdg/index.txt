@@ -99,6 +99,8 @@ find the appropriate widget config to display the table.
 
 |*edit_view* |Specify the path to a custom edit view.
 
+|*ingest_custom_view* |Specify a custom layout view that Ingest Files menu option opens in a new tab.
+
 |*ingest_data_view* |Specify a view similar to edit view that defines any data to be saved with each ingested sobject.
 
 |*expression* |Specify an expression to drive the search. The expression
