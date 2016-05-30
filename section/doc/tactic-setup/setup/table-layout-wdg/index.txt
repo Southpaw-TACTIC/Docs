@@ -78,51 +78,87 @@ element is as follows:
 will have predefined views for may of the items to ensure proper
 functioning of TACTIC even if there are no entries in the widget_config
 database)
-4.  the "default_definition" for a given type as defined in the
+4.  the "default_definition" for a given sType as defined in the
 predefined views.
 
-The third and fourth locations only apply to predefined types that are
+The third and fourth locations only apply to predefined sTypes that are
 shipped with TACTIC. All custom types will only use the first two.
 
 *Options*
 
 [width="100%",cols="31%,69%",]
 |=======================================================================
-|*search_type* |Defines the type that this table will be displaying. It
+|*search_type* |Define the sType that this table will be displaying. It
 is used both for finding the appropriate widget config and for handling
 search (if necessary). Defaults to "table".
 
 |*view* |Defines the view that this table will displaying. It used to
 find the appropriate widget config to display the table.
 
+|*insert_view* |Specify the path to a custom insert view.
+
+|*edit_view* |Specify the path to a custom edit view.
+
+|*ingest_data_view* |Specify a view similar to edit view that defines any data to be saved with each ingested sobject.
+
+|*expression* |Specify an expression to drive the search. The expression
+must return items. e.g. @SEARCH(sthpw/note) or @SOBJECT(sthpw/note)
+
+|*config_xml* |Explicitly define the widget config. the kwarg view is preferred over this.
+
 |*do_search* |By default, the TableLayoutWdg will handle the search
 itself. However, certain widgets may wish to turn this functionality off
-because they are supplying the search (internally used by ViewPanelWdg)
+because they are supplying the search (internally used by ViewPanelWdg) - true, false.
 
 |*order_by* |Add an explicit order by in the search
 
-|*expression* |Use an expression to drive the search. The expression
-must return items.
-
 |*parent_key* |Set a specific parent for the search
+
+|*checkin_context* |Override the checkin context for Check-in New File - publish (default).
+
+|*checkin_type* |Override the checkin type for Check-in New File - auto, strict.
 
 |*width* |Define an initial overall width for the table
 
-|*show_row_select* |Flag to determine whether or not to show
-row_selection
+|*show_gear* |Determine whether to show the gear menu - true, false.
 
-|*show_gear* |Flag to determine whether or not to show the gear menu.
+|*show_search* |Determine whether to show the search box - true, false.
 
-|*show_insert* |Flag to determine whether or not to show the insert
-button.
+|*show_search_limit* |Determine whether to show the search limit - true, false.
 
-|*insert_mode* |aux|inline|pop-up|none - set the insert mode of the
-table
+|*show_insert* |Determine whether to show the insert button - true, false.
 
-|*search_limit* |An overriding search limit. A value < 0 means no limit
-affecting the search
+|*show_refresh* |Display the refresh button on the shelf - true, false.
 
-|*config_xml* |Explicitly define the widget config
+|*show_keyword_search* |Determine whether to show the Keyword search input - true, false.
+
+|*show_select* |Determine whether to show row_selection - true, false.
+
+|*show_shelf* |Determine whether to show the action shelf - true, false.
+
+|*show_layout_switcher* |Determine whether to show the layout switcher - true, false.
+
+|*show_column_manager* |Determine whether to show the column manager - true, false.
+
+|*show_collection_tool* |Determine whether to show the collection button - true, false.
+
+|*show_context_menu* |Determine whether to show the context menu - true, false.
+
+|*show_expand* |Determine whether to show the expand button - true, false.
+
+|*show_help* |Determine whether to show the help button - true, false.
+
+|*show_border* |Determine whether to show the table border - true, false.
+
+|*show_header* |Determine whether to show the table header - true, false.
+
+|*show_insert* |Determine whether to show the insert button - true, false.
+
+|*search_limit* |The number of items to show on each page. e.g. 20  A value < 0 means no limit affecting the search.
+
+|*search_limit_mode* |Determine if it displays top, bottom or both search limit - bottom, top, both
+
+|*mode* |Determine whether to draw with widgets or just use the raw data - widget, raw.
 
 |*element_names* |Explicitly set the element names to be drawn
 |=======================================================================
