@@ -223,7 +223,7 @@ _HTML Tab in Custom Layout Editor for New View_
 <element name="name">
     <display class="tactic.ui.input.LookAheadTextInputWdg">
         <search_type>my_project/my_sType4</search_type> <column>name</column>
-        <search_key>$\{name_key}</search_key>
+        <search_key>${name_key}</search_key>
         <filter_search_type>metadata/Title</filter_search_type>
         <value_column>id</value_column>
         <current_value_column>id</current_value_column>
