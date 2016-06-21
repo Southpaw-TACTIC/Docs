@@ -97,6 +97,9 @@ Reports
 
 include::../section/doc/tactic-setup/setup/project-startup-reports/index.txt[]
 
+include::../section/doc/tactic-setup/setup/sobject-chart-wdg/index.txt[]
+
+
 
 :leveloffset: 0
 

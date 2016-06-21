@@ -782,7 +782,8 @@ search_type = "sthpw/login"
 search_keys = ['sthpw/login?code=brad']</code></pre>
 </div></div>
 <div class="paragraph"><p>A single y-axis can be specified with option "y_axis", or multiple elements can be specified
-with "elements" as a "|" separated list.</p></div>
+with option "elements" as a "|" separated list. Individual y-axis elements can be a TACTIC
+expression enclosed in "{" and "}" or a predefined column for the search_type.</p></div>
 <div class="paragraph"><p>For example,</p></div>
 <div class="listingblock">
 <div class="content">
@@ -790,7 +791,7 @@ with "elements" as a "|" separated list.</p></div>
 elements = "num_assignment|num_pending|num_completed"</code></pre>
 </div></div>
 <div class="paragraph"><p>The y-axis elements will be displayed side by side for each sObject, and x-axis
-label is specified through the option <em>x_axis</em>.</p></div>
+label is specified through the option "x_axis".</p></div>
 <div class="paragraph"><p><strong>Options</strong></p></div>
 <div class="tableblock">
 <table rules="all"
@@ -854,7 +855,7 @@ Defaults to <em>code</em>.</p></td>
 <div id="footnotes"><hr /></div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-06-20 15:41:29 EDT
+Last updated 2016-06-21 09:16:56 EDT
 </div>
 </div>
 </body>

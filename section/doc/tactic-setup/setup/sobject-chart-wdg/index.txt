@@ -35,7 +35,8 @@ search_keys = ['sthpw/login?code=brad']
 --------------------------------------------------------
 
 A single y-axis can be specified with option "y_axis", or multiple elements can be specified
-with "elements" as a "|" separated list.
+with option "elements" as a "|" separated list. Individual y-axis elements can be a TACTIC 
+expression enclosed in "{" and "}" or a predefined column for the search_type.  
 
 For example,
 --------------------------------------------------------
@@ -44,7 +45,7 @@ elements = "num_assignment|num_pending|num_completed"
 --------------------------------------------------------
 
 The y-axis elements will be displayed side by side for each sObject, and x-axis 
-label is specified through the option 'x_axis'.
+label is specified through the option "x_axis".
 
 
 *Options*
