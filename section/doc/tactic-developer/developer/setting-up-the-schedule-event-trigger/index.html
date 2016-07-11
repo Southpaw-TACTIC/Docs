@@ -736,9 +736,20 @@ asciidoc.install();
 <div class="sect1">
 <h2 id="_setting_up_the_schedule_event_trigger">Setting Up The Schedule Event Trigger</h2>
 <div class="sectionbody">
-<div class="paragraph"><p>The schedule event trigger is a server trigger that fires based on a defined time event, rather than changes made to sTypes within TACTIC. It can be set to run daily or on particular time intervals.</p></div>
-<div class="paragraph"><p>1) Create a &lt;scheduler&gt; tag in the tactic-conf.xml file in tactic_data/config and set the tag to "true":</p></div>
-<div class="paragraph"><p>&lt;scheduler&gt;true&lt;/scheduler&gt;</p></div>
+<div class="paragraph"><p>The schedule event trigger is a server trigger that fires based on a defined time event, rather than changes made to sTypes within TACTIC. It can be set up to run daily or on particular time intervals.</p></div>
+<div class="olist arabic"><ol class="arabic">
+<li>
+<p>
+Create a &lt;scheduler&gt; tag in the &lt;services&gt; section tactic-conf.xml file in tactic_data/config and set the tag to "true":
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>&lt;services&gt;
+...
+...
+&lt;scheduler&gt;true&lt;/scheduler&gt;
+&lt;/services&gt;</code></pre>
+</div></div>
 <div class="admonitionblock">
 <table><tr>
 <td class="icon">
@@ -747,8 +758,16 @@ asciidoc.install();
 <td class="content">Ensure that the &lt;process_count&gt; is set to 3: &lt;process_count&gt;3&lt;/process_count&gt;</td>
 </tr></table>
 </div>
-<div class="paragraph"><p>2) Restart the TACTIC service (as the root user): service tactic restart</p></div>
-<div class="paragraph"><p>3) Go to the Server Trigger table in the TACTIC Administrative layer and enter the following information:</p></div>
+</li>
+<li>
+<p>
+Restart the TACTIC service (as the root user): service tactic restart
+</p>
+</li>
+<li>
+<p>
+Go to the Server Trigger table in the TACTIC Administrative layer and enter the following information:
+</p>
 <div class="tableblock">
 <table rules="all"
 width="100%"
@@ -789,12 +808,24 @@ cellspacing="0" cellpadding="4">
 <td class="icon">
 <div class="title">Note</div>
 </td>
-<td class="content">In the table that drops down from the “Data” column in the “Server Triggers” view, there is a table column in that drop down that is also called “Data”. In this column, type one of the preceding setups set the trigger to run daily or at a set interval. Adjust the settings accordingly for the desired time.</td>
+<td class="content">In the table that drops down from the Data column in the "Server Triggers" view, there is a table column in that drop down that is also called "Data". In this column, type one of the preceding setups set the trigger to run daily or at a set interval. Adjust the settings accordingly for the desired time.</td>
 </tr></table>
 </div>
-<div class="paragraph"><p>4) Save the drop down table from the “Data” column in the “Server Triggers” view by clicking the floppy disk button in the drop down.</p></div>
-<div class="paragraph"><p>5) Save the schedule trigger by clicking the floppy disk button at the top of the “Server Triggers” view.</p></div>
-<div class="paragraph"><p>5) Restart the TACTIC service again (as the root user) by typing “service tactic restart”</p></div>
+</li>
+<li>
+<p>
+Save the drop down table from the "Data" column in the "Server Triggers" view by clicking the floppy disk button in the drop down.
+</p>
+</li>
+<li>
+<p>
+Save the schedule trigger by clicking the floppy disk button at the top of the "Server Triggers" view.
+</p>
+</li>
+<li>
+<p>
+Restart the TACTIC service again (as the root/sudo user) by typing "service tactic restart"
+</p>
 <div class="admonitionblock">
 <table><tr>
 <td class="icon">
@@ -803,13 +834,30 @@ cellspacing="0" cellpadding="4">
 <td class="content">Every time you update this trigger, you will need to restart the TACTIC service for it to take effect</td>
 </tr></table>
 </div>
+</li>
+</ol></div>
+<div class="paragraph"><p>Here is a sample script.  Batch() is required if the script needs to access information in TACTIC:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>import datetime
+from client.tactic_client_lib import TacticServerStub
+from pyasm.security import Batch
+
+print " &gt;&gt; Run schedule:", str(datetime.datetime.now())
+Batch()
+server = TacticServerStub.get()
+
+res = server.eval("@GET(sthpw/login.first_name)")
+
+print "First names in the system:", res</code></pre>
+</div></div>
 </div>
 </div>
 </div>
 <div id="footnotes"><hr /></div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-05-13 07:56:20 EDT
+Last updated 2016-07-07 05:27:59 EDT
 </div>
 </div>
 </body>

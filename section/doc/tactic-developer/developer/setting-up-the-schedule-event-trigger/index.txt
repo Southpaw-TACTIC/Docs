@@ -1,18 +1,24 @@
 Setting Up The Schedule Event Trigger
 -------------------------------------
 
-The schedule event trigger is a server trigger that fires based on a defined time event, rather than changes made to sTypes within TACTIC. It can be set to run daily or on particular time intervals.
+The schedule event trigger is a server trigger that fires based on a defined time event, rather than changes made to sTypes within TACTIC. It can be set up to run daily or on particular time intervals.
 
-1) Create a <scheduler> tag in the tactic-conf.xml file in tactic_data/config and set the tag to "true":
-	
+. Create a <scheduler> tag in the <services> section tactic-conf.xml file in tactic_data/config and set the tag to "true":
++
+-------------------------------
+<services>
+...
+...
 <scheduler>true</scheduler>
-
+</services>
+-------------------------------
++
 NOTE: Ensure that the <process_count> is set to 3: <process_count>3</process_count>
 
-2) Restart the TACTIC service (as the root user): service tactic restart
+. Restart the TACTIC service (as the root user): service tactic restart
 
-3) Go to the Server Trigger table in the TACTIC Administrative layer and enter the following information:
-
+. Go to the Server Trigger table in the TACTIC Administrative layer and enter the following information:
++
 [cols="30%, 30%, 40%"]
 |========================================
 |Event| Script Path | Data (Drop Down) 
@@ -36,17 +42,32 @@ To Run Trigger on Set Interval (Interval and Delay Attributes in Seconds):
 }
 
 |========================================
++
+NOTE: In the table that drops down from the Data column in the "Server Triggers" view, there is a table column in that drop down that is also called "Data". In this column, type one of the preceding setups set the trigger to run daily or at a set interval. Adjust the settings accordingly for the desired time. 
 
+. Save the drop down table from the "Data" column in the "Server Triggers" view by clicking the floppy disk button in the drop down.
 
+. Save the schedule trigger by clicking the floppy disk button at the top of the "Server Triggers" view.
 
-
-NOTE: In the table that drops down from the “Data” column in the “Server Triggers” view, there is a table column in that drop down that is also called “Data”. In this column, type one of the preceding setups set the trigger to run daily or at a set interval. Adjust the settings accordingly for the desired time. 
-
-4) Save the drop down table from the “Data” column in the “Server Triggers” view by clicking the floppy disk button in the drop down.
-
-5) Save the schedule trigger by clicking the floppy disk button at the top of the “Server Triggers” view.
-
-5) Restart the TACTIC service again (as the root user) by typing “service tactic restart”
-
+. Restart the TACTIC service again (as the root/sudo user) by typing "service tactic restart"
++
 NOTE: Every time you update this trigger, you will need to restart the TACTIC service for it to take effect
+
+
+Here is a sample script.  Batch() is required if the script needs to access information in TACTIC:
+
+------------------------------------------
+import datetime
+from client.tactic_client_lib import TacticServerStub
+from pyasm.security import Batch
+
+print " >> Run schedule:", str(datetime.datetime.now())
+Batch()
+server = TacticServerStub.get()
+
+res = server.eval("@GET(sthpw/login.first_name)")
+
+print "First names in the system:", res
+
+------------------------------------------
 
