@@ -733,26 +733,129 @@ asciidoc.install();
 <div id="header">
 </div>
 <div id="content">
-<div class="sect1">
-<h2 id="_get_expanded_paths_from_snapshot">get_expanded_paths_from_snapshot</h2>
-<div class="sectionbody">
-<div class="paragraph"><p><strong>get_expanded_paths_from_snapshot(snapshot_code, file_type=<em>main</em>)</strong></p></div>
-<div class="paragraph"><p>Return the expanded path of a snapshot (used for
-ranges of files)</p></div>
-<div class="paragraph"><p><strong>param:</strong></p></div>
-<div class="paragraph"><p><strong>snapshot_code</strong> - the unique code of the snapshot</p></div>
-<div class="paragraph"><p><strong>keyparam:</strong></p></div>
-<div class="paragraph"><p><strong>file_type</strong> - each file in a snapshot is identified by a file type.</p></div>
-<div class="paragraph"><p>This parameter specifies which type.  Defaults to <em>main</em></p></div>
-<div class="paragraph"><p><strong>return:</strong></p></div>
-<div class="paragraph"><p><strong>string</strong> - path</p></div>
+<div class="paragraph"><p>SObjectChartWdg</p></div>
+<div class="paragraph"><p><strong>Description</strong></p></div>
+<div class="paragraph"><p>The SObjectChartWdg is a tool to chart data related to sObjects.</p></div>
+<div class="paragraph"><p><strong>Info</strong></p></div>
+<div class="tableblock">
+<table rules="all"
+width="100%"
+frame="border"
+cellspacing="0" cellpadding="4">
+<col width="29%" />
+<col width="71%" />
+<tbody>
+<tr>
+<td align="left" valign="top"><p class="table"><strong>Name</strong></p></td>
+<td align="left" valign="top"><p class="table">SObjectChartWdg</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table"><strong>Class</strong></p></td>
+<td align="left" valign="top"><p class="table">tactic.ui.chart.SObjectChartWdg</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table"><strong>TACTIC Version Support</strong></p></td>
+<td align="left" valign="top"><p class="table">4.4.0+</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table"><strong>Required database columns</strong></p></td>
+<td align="left" valign="top"><p class="table">none</p></td>
+</tr>
+</tbody>
+</table>
 </div>
+<div class="paragraph"><p><span class="image">
+<img src="media/sobject_chart_wdg.png" alt="image" />
+</span></p></div>
+<div class="paragraph"><p><strong>Implementation</strong></p></div>
+<div class="paragraph"><p>The SObjectChartWdg is driven by input sObjects and y-axis elements, where
+the y-axis elements are expressions or columns that each input sObject will
+evaluated against.</p></div>
+<div class="paragraph"><p>The input sObjects can be specified with the options "expression", "search_type", or
+"search_keys". Expression will override search_type, and search_type will override
+search_keys.</p></div>
+<div class="paragraph"><p>For example,</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>expression = "@SOBJECT(sthpw/login['login', 'NEQ', 'admin'])"
+search_type = "sthpw/login"
+search_keys = ['sthpw/login?code=brad']</code></pre>
+</div></div>
+<div class="paragraph"><p>A single y-axis can be specified with option "y_axis", or multiple elements can be specified
+with option "elements" as a "|" separated list. Individual y-axis elements can be a TACTIC
+expression enclosed in "{" and "}" or a predefined column for the search_type.</p></div>
+<div class="paragraph"><p>For example,</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>y_axis = "{@COUNT(sthpw/task['status', 'Assignment'])}"
+elements = "num_assignment|num_pending|num_completed"</code></pre>
+</div></div>
+<div class="paragraph"><p>The y-axis elements will be displayed side by side for each sObject, and x-axis
+label is specified through the option "x_axis".</p></div>
+<div class="paragraph"><p><strong>Options</strong></p></div>
+<div class="tableblock">
+<table rules="all"
+width="100%"
+frame="border"
+cellspacing="0" cellpadding="4">
+<col width="31%" />
+<col width="69%" />
+<tbody>
+<tr>
+<td align="left" valign="top"><p class="table"><strong>chart_type</strong></p></td>
+<td align="left" valign="top"><p class="table">Defines the type of chart that will be displayed for all y-axis elements.
+Can be <em>line</em>, <em>bar</em>, or <em>area</em>.  Defaults to <em>bar</em>.</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table"><strong>chart_types</strong></p></td>
+<td align="left" valign="top"><p class="table">Defines the type of chart that will be displayed corresponding to
+each y-axis element.</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table"><strong>title</strong></p></td>
+<td align="left" valign="top"><p class="table">Title to display in chart. Note: The legend will cover the title.</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table"><strong>width</strong></p></td>
+<td align="left" valign="top"><p class="table">The pixel width of the chart. Defaults to 800.</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table"><strong>height</strong></p></td>
+<td align="left" valign="top"><p class="table">The pixel height of the chart. Defaults to 500.</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table"><strong>x_axis</strong></p></td>
+<td align="left" valign="top"><p class="table">The x-axis element label. This should be a column of the inputs sObjects.
+Defaults to <em>code</em>.</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table"><strong>y_axis</strong></p></td>
+<td align="left" valign="top"><p class="table">The y-axis element. This should be a column or expression of the input sObjects.</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table"><strong>elements</strong></p></td>
+<td align="left" valign="top"><p class="table">y-axis elements separated by a "|".</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table"><strong>expression</strong></p></td>
+<td align="left" valign="top"><p class="table">TACTIC expression which specifies sObjects for charting.</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table"><strong>search_type</strong></p></td>
+<td align="left" valign="top"><p class="table">Search type which specifies sObjects for charting.</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table"><strong>search_keys</strong></p></td>
+<td align="left" valign="top"><p class="table">Search keys of sObjects for charting.</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 <div id="footnotes"><hr /></div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-05-19 22:08:46 EDT
+Last updated 2016-06-20 08:26:00 EDT
 </div>
 </div>
 </body>
