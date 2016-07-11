@@ -838,12 +838,12 @@ database)
 </li>
 <li>
 <p>
-the "default_definition" for a given type as defined in the
+the "default_definition" for a given sType as defined in the
 predefined views.
 </p>
 </li>
 </ol></div>
-<div class="paragraph"><p>The third and fourth locations only apply to predefined types that are
+<div class="paragraph"><p>The third and fourth locations only apply to predefined sTypes that are
 shipped with TACTIC. All custom types will only use the first two.</p></div>
 <div class="paragraph"><p><strong>Options</strong></p></div>
 <div class="tableblock">
@@ -856,7 +856,7 @@ cellspacing="0" cellpadding="4">
 <tbody>
 <tr>
 <td align="left" valign="top"><p class="table"><strong>search_type</strong></p></td>
-<td align="left" valign="top"><p class="table">Defines the type that this table will be displaying. It
+<td align="left" valign="top"><p class="table">Define the sType that this table will be displaying. It
 is used both for finding the appropriate widget config and for handling
 search (if necessary). Defaults to "table".</p></td>
 </tr>
@@ -866,63 +866,139 @@ search (if necessary). Defaults to "table".</p></td>
 find the appropriate widget config to display the table.</p></td>
 </tr>
 <tr>
+<td align="left" valign="top"><p class="table"><strong>insert_view</strong></p></td>
+<td align="left" valign="top"><p class="table">Specify the path to a custom insert view.</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table"><strong>edit_view</strong></p></td>
+<td align="left" valign="top"><p class="table">Specify the path to a custom edit view.</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table"><strong>ingest_custom_view</strong></p></td>
+<td align="left" valign="top"><p class="table">Specify a custom layout view that Ingest Files menu option opens in a new tab.</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table"><strong>ingest_data_view</strong></p></td>
+<td align="left" valign="top"><p class="table">Specify a view similar to edit view that defines any data to be saved with each ingested sobject.</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table"><strong>expression</strong></p></td>
+<td align="left" valign="top"><p class="table">Specify an expression to drive the search. The expression
+must return items. e.g. @SEARCH(sthpw/note) or @SOBJECT(sthpw/note)</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table"><strong>config_xml</strong></p></td>
+<td align="left" valign="top"><p class="table">Explicitly define the widget config. the kwarg view is preferred over this.</p></td>
+</tr>
+<tr>
 <td align="left" valign="top"><p class="table"><strong>do_search</strong></p></td>
 <td align="left" valign="top"><p class="table">By default, the TableLayoutWdg will handle the search
 itself. However, certain widgets may wish to turn this functionality off
-because they are supplying the search (internally used by ViewPanelWdg)</p></td>
+because they are supplying the search (internally used by ViewPanelWdg) - true, false.</p></td>
 </tr>
 <tr>
 <td align="left" valign="top"><p class="table"><strong>order_by</strong></p></td>
 <td align="left" valign="top"><p class="table">Add an explicit order by in the search</p></td>
 </tr>
 <tr>
-<td align="left" valign="top"><p class="table"><strong>expression</strong></p></td>
-<td align="left" valign="top"><p class="table">Use an expression to drive the search. The expression
-must return items.</p></td>
-</tr>
-<tr>
 <td align="left" valign="top"><p class="table"><strong>parent_key</strong></p></td>
 <td align="left" valign="top"><p class="table">Set a specific parent for the search</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table"><strong>checkin_context</strong></p></td>
+<td align="left" valign="top"><p class="table">Override the checkin context for Check-in New File - publish (default).</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table"><strong>checkin_type</strong></p></td>
+<td align="left" valign="top"><p class="table">Override the checkin type for Check-in New File - auto, strict.</p></td>
 </tr>
 <tr>
 <td align="left" valign="top"><p class="table"><strong>width</strong></p></td>
 <td align="left" valign="top"><p class="table">Define an initial overall width for the table</p></td>
 </tr>
 <tr>
-<td align="left" valign="top"><p class="table"><strong>show_row_select</strong></p></td>
-<td align="left" valign="top"><p class="table">Flag to determine whether or not to show
-row_selection</p></td>
+<td align="left" valign="top"><p class="table"><strong>show_gear</strong></p></td>
+<td align="left" valign="top"><p class="table">Determine whether to show the gear menu - true, false.</p></td>
 </tr>
 <tr>
-<td align="left" valign="top"><p class="table"><strong>show_gear</strong></p></td>
-<td align="left" valign="top"><p class="table">Flag to determine whether or not to show the gear menu.</p></td>
+<td align="left" valign="top"><p class="table"><strong>show_search</strong></p></td>
+<td align="left" valign="top"><p class="table">Determine whether to show the search box - true, false.</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table"><strong>show_search_limit</strong></p></td>
+<td align="left" valign="top"><p class="table">Determine whether to show the search limit - true, false.</p></td>
 </tr>
 <tr>
 <td align="left" valign="top"><p class="table"><strong>show_insert</strong></p></td>
-<td align="left" valign="top"><p class="table">Flag to determine whether or not to show the insert
-button.</p></td>
+<td align="left" valign="top"><p class="table">Determine whether to show the insert button - true, false.</p></td>
 </tr>
 <tr>
-<td align="left" valign="top"><p class="table"><strong>insert_mode</strong></p></td>
-<td align="left" valign="top"><p class="table">aux</p></td>
+<td align="left" valign="top"><p class="table"><strong>show_refresh</strong></p></td>
+<td align="left" valign="top"><p class="table">Display the refresh button on the shelf - true, false.</p></td>
 </tr>
 <tr>
-<td align="left" valign="top"><p class="table">inline</p></td>
-<td align="left" valign="top"><p class="table">pop-up</p></td>
+<td align="left" valign="top"><p class="table"><strong>show_keyword_search</strong></p></td>
+<td align="left" valign="top"><p class="table">Determine whether to show the Keyword search input - true, false.</p></td>
 </tr>
 <tr>
-<td align="left" valign="top"><p class="table">none - set the insert mode of the
-table</p></td>
+<td align="left" valign="top"><p class="table"><strong>show_select</strong></p></td>
+<td align="left" valign="top"><p class="table">Determine whether to show row_selection - true, false.</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table"><strong>show_shelf</strong></p></td>
+<td align="left" valign="top"><p class="table">Determine whether to show the action shelf - true, false.</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table"><strong>show_layout_switcher</strong></p></td>
+<td align="left" valign="top"><p class="table">Determine whether to show the layout switcher - true, false.</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table"><strong>show_column_manager</strong></p></td>
+<td align="left" valign="top"><p class="table">Determine whether to show the column manager - true, false.</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table"><strong>show_collection_tool</strong></p></td>
+<td align="left" valign="top"><p class="table">Determine whether to show the collection button - true, false.</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table"><strong>show_context_menu</strong></p></td>
+<td align="left" valign="top"><p class="table">Determine whether to show the context menu - true, false.</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table"><strong>show_expand</strong></p></td>
+<td align="left" valign="top"><p class="table">Determine whether to show the expand button - true, false.</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table"><strong>show_help</strong></p></td>
+<td align="left" valign="top"><p class="table">Determine whether to show the help button - true, false.</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table"><strong>show_border</strong></p></td>
+<td align="left" valign="top"><p class="table">Determine whether to show the table border - true, false.</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table"><strong>show_header</strong></p></td>
+<td align="left" valign="top"><p class="table">Determine whether to show the table header - true, false.</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table"><strong>show_insert</strong></p></td>
+<td align="left" valign="top"><p class="table">Determine whether to show the insert button - true, false.</p></td>
+</tr>
+<tr>
 <td align="left" valign="top"><p class="table"><strong>search_limit</strong></p></td>
+<td align="left" valign="top"><p class="table">The number of items to show on each page. e.g. 20  A value &lt; 0 means no limit affecting the search.</p></td>
 </tr>
 <tr>
-<td align="left" valign="top"><p class="table">An overriding search limit. A value &lt; 0 means no limit
-affecting the search</p></td>
-<td align="left" valign="top"><p class="table"><strong>config_xml</strong></p></td>
+<td align="left" valign="top"><p class="table"><strong>search_limit_mode</strong></p></td>
+<td align="left" valign="top"><p class="table">Determine if it displays top, bottom or both search limit - bottom, top, both</p></td>
 </tr>
 <tr>
-<td align="left" valign="top"><p class="table">Explicitly define the widget config</p></td>
+<td align="left" valign="top"><p class="table"><strong>mode</strong></p></td>
+<td align="left" valign="top"><p class="table">Determine whether to draw with widgets or just use the raw data - widget, raw.</p></td>
+</tr>
+<tr>
 <td align="left" valign="top"><p class="table"><strong>element_names</strong></p></td>
+<td align="left" valign="top"><p class="table">Explicitly set the element names to be drawn</p></td>
 </tr>
 </tbody>
 </table>

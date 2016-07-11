@@ -787,20 +787,12 @@ cellspacing="0" cellpadding="4">
 <col width="69%" />
 <tbody>
 <tr>
-<td align="left" valign="top"><p class="table"><strong>show_gear</strong></p></td>
-<td align="left" valign="top"><p class="table">Flag to show the gear menu.</p></td>
+<td align="left" valign="top"><p class="table"><strong>search_type</strong></p></td>
+<td align="left" valign="top"><p class="table">Define The sType that this View panel displays with.</p></td>
 </tr>
 <tr>
-<td align="left" valign="top"><p class="table"><strong>show_search</strong></p></td>
-<td align="left" valign="top"><p class="table">Flag to show the search box.</p></td>
-</tr>
-<tr>
-<td align="left" valign="top"><p class="table"><strong>show_search_limit</strong></p></td>
-<td align="left" valign="top"><p class="table">Flag to show the search limit.</p></td>
-</tr>
-<tr>
-<td align="left" valign="top"><p class="table"><strong>show_insert</strong></p></td>
-<td align="left" valign="top"><p class="table">Flag to show the insert button.</p></td>
+<td align="left" valign="top"><p class="table"><strong>view</strong></p></td>
+<td align="left" valign="top"><p class="table">The TACTIC name for the view. e.g. admin.test_asset_tracking</p></td>
 </tr>
 <tr>
 <td align="left" valign="top"><p class="table"><strong>insert_view</strong></p></td>
@@ -811,40 +803,117 @@ cellspacing="0" cellpadding="4">
 <td align="left" valign="top"><p class="table">Specify the path to a custom edit view.</p></td>
 </tr>
 <tr>
-<td align="left" valign="top"><p class="table"><strong>show_commit_all</strong></p></td>
-<td align="left" valign="top"><p class="table">Flag to show the commit all button.</p></td>
+<td align="left" valign="top"><p class="table"><strong>ingest_custom_view</strong></p></td>
+<td align="left" valign="top"><p class="table">Specify a custom layout view that Ingest Files menu option opens in a new tab.</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table"><strong>ingest_data_view</strong></p></td>
+<td align="left" valign="top"><p class="table">Specify a view similar to edit view that defines any data to be saved with each ingested sobject.</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table"><strong>expression</strong></p></td>
+<td align="left" valign="top"><p class="table">Use an expression for the search. The expression must
+return items. e.g. @SEARCH(sthpw/note) or @SOBJECT(sthpw/note)</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table"><strong>filter</strong></p></td>
+<td align="left" valign="top"><p class="table">JSON data structure representing the settings for SearchWdg</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table"><strong>parent_key</strong></p></td>
+<td align="left" valign="top"><p class="table">Provide a parent item to filter in the search.</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table"><strong>search_key</strong></p></td>
+<td align="left" valign="top"><p class="table">Provide the starting search key.</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table"><strong>search_view</strong></p></td>
+<td align="left" valign="top"><p class="table">(INTERNAL) View for custom searches.</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table"><strong>layout</strong></p></td>
+<td align="left" valign="top"><p class="table">Different layout available - default, tile, fast_table, raw_table, old_table, static_table, collection, browser, card, tool, aggregate, custom_item, custom</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table"><strong>show_gear</strong></p></td>
+<td align="left" valign="top"><p class="table">Determine whether to show the gear menu - true, false.</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table"><strong>show_search</strong></p></td>
+<td align="left" valign="top"><p class="table">Determine whether to show the search box - true, false.</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table"><strong>show_search_limit</strong></p></td>
+<td align="left" valign="top"><p class="table">Determine whether to show the search limit - true, false.</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table"><strong>show_insert</strong></p></td>
+<td align="left" valign="top"><p class="table">Determine whether to show the insert button - true, false.</p></td>
 </tr>
 <tr>
 <td align="left" valign="top"><p class="table"><strong>show_refresh</strong></p></td>
-<td align="left" valign="top"><p class="table">Display the refresh button on the shelf.</p></td>
+<td align="left" valign="top"><p class="table">Display the refresh button on the shelf - true, false.</p></td>
 </tr>
 <tr>
-<td align="left" valign="top"><p class="table"><strong>show_row_select</strong></p></td>
-<td align="left" valign="top"><p class="table">Flag to show row_selection.</p></td>
+<td align="left" valign="top"><p class="table"><strong>show_keyword_search</strong></p></td>
+<td align="left" valign="top"><p class="table">Determine whether to show the Keyword search input - true, false.</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table"><strong>show_select</strong></p></td>
+<td align="left" valign="top"><p class="table">Determine whether to show row_selection - true, false.</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table"><strong>show_shelf</strong></p></td>
+<td align="left" valign="top"><p class="table">Determine whether to show the action shelf - true, false.</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table"><strong>show_layout_switcher</strong></p></td>
+<td align="left" valign="top"><p class="table">Determine whether to show the layout switcher - true, false.</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table"><strong>show_column_manager</strong></p></td>
+<td align="left" valign="top"><p class="table">Determine whether to show the column manager - true, false.</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table"><strong>show_collection_tool</strong></p></td>
+<td align="left" valign="top"><p class="table">Determine whether to show the collection button - true, false.</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table"><strong>show_context_menu</strong></p></td>
+<td align="left" valign="top"><p class="table">Determine whether to show the context menu - true, false.</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table"><strong>show_expand</strong></p></td>
+<td align="left" valign="top"><p class="table">Determine whether to show the expand button - true, false.</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table"><strong>show_help</strong></p></td>
+<td align="left" valign="top"><p class="table">Determine whether to show the help button - true, false.</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table"><strong>show_border</strong></p></td>
+<td align="left" valign="top"><p class="table">Determine whether to show the table border - true, false.</p></td>
 </tr>
 <tr>
 <td align="left" valign="top"><p class="table"><strong>popup</strong></p></td>
 <td align="left" valign="top"><p class="table">Pop the view up in a pop-up window.</p></td>
 </tr>
 <tr>
-<td align="left" valign="top"><p class="table"><strong>layout</strong></p></td>
-<td align="left" valign="top"><p class="table"><strong>default</strong>, <strong>tile</strong>, <strong>static</strong>, <strong>raw</strong>, <strong>fast_table</strong>, <strong>old_table</strong></p></td>
-</tr>
-<tr>
-<td align="left" valign="top"><p class="table"><strong>search_type</strong></p></td>
-<td align="left" valign="top"><p class="table">The type that this widget works with</p></td>
-</tr>
-<tr>
-<td align="left" valign="top"><p class="table"><strong>view</strong></p></td>
-<td align="left" valign="top"><p class="table">The TACTIC name for the view. e.g. admin.test_asset_tracking</p></td>
-</tr>
-<tr>
 <td align="left" valign="top"><p class="table"><strong>do_initial_search</strong></p></td>
 <td align="left" valign="top"><p class="table">Run the search on loading of the view.</p></td>
 </tr>
 <tr>
-<td align="left" valign="top"><p class="table"><strong>simple_search_view</strong></p></td>
-<td align="left" valign="top"><p class="table">Specify the simple search view.</p></td>
+<td align="left" valign="top"><p class="table"><strong>init_load_num</strong></p></td>
+<td align="left" valign="top"><p class="table">Set the number of rows to laod initially. If set to -1, it will not load in chunks</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table"><strong>no_results_msg</strong></p></td>
+<td align="left" valign="top"><p class="table">The message displayed when the search returns no item</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table"><strong>no_results_mode</strong></p></td>
+<td align="left" valign="top"><p class="table">The display modes for no results</p></td>
 </tr>
 <tr>
 <td align="left" valign="top"><p class="table"><strong>custom_filter_view</strong></p></td>
@@ -857,47 +926,69 @@ cellspacing="0" cellpadding="4">
 used.</p></td>
 </tr>
 <tr>
+<td align="left" valign="top"><p class="table"><strong>checkin_context</strong></p></td>
+<td align="left" valign="top"><p class="table">Override the checkin context for Check-in New File - publish (default).</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table"><strong>checkin_type</strong></p></td>
+<td align="left" valign="top"><p class="table">Override the checkin type for Check-in New File - auto, strict.</p></td>
+</tr>
+<tr>
 <td align="left" valign="top"><p class="table"><strong>mode</strong></p></td>
-<td align="left" valign="top"><p class="table"><strong>simple</strong>, <strong>insert</strong></p></td>
-</tr>
-<tr>
-<td align="left" valign="top"><p class="table"><strong>parent_key</strong></p></td>
-<td align="left" valign="top"><p class="table">Provides a parent item to filter in the search.</p></td>
-</tr>
-<tr>
-<td align="left" valign="top"><p class="table"><strong>search_key</strong></p></td>
-<td align="left" valign="top"><p class="table">Provides the starting search key.</p></td>
+<td align="left" valign="top"><p class="table">Mode to pass into the layout engine - widget, raw.</p></td>
 </tr>
 <tr>
 <td align="left" valign="top"><p class="table"><strong>element_names</strong></p></td>
-<td align="left" valign="top"><p class="table">Provides a list of column names (ie.
-"preview,name,description") for the view.</p></td>
+<td align="left" valign="top"><p class="table">Provide a list of column names (ie. "preview,name,description") for the view.</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table"><strong>group_elements</strong></p></td>
+<td align="left" valign="top"><p class="table">Provide a list of grouping column names. e.g. sort_order,category</p></td>
 </tr>
 <tr>
 <td align="left" valign="top"><p class="table"><strong>schema_default_view</strong></p></td>
-<td align="left" valign="top"><p class="table">(INTERNAL) flag to show whether this is
-generated straight from the schema.</p></td>
+<td align="left" valign="top"><p class="table">(INTERNAL) flag to show whether this is generated straight from the schema.</p></td>
 </tr>
 <tr>
 <td align="left" valign="top"><p class="table"><strong>order_by</strong></p></td>
-<td align="left" valign="top"><p class="table">The column name to order ascending by.</p></td>
+<td align="left" valign="top"><p class="table">The column name to order ascending by. multiple columns are to be comma separated.</p></td>
 </tr>
 <tr>
-<td align="left" valign="top"><p class="table"><strong>search_view</strong></p></td>
-<td align="left" valign="top"><p class="table">(INTERNAL) View for custom searches.</p></td>
+<td align="left" valign="top"><p class="table"><strong>search_limit</strong></p></td>
+<td align="left" valign="top"><p class="table">The number of items to show on each page.  e.g. 20  A value &lt; 0 means no limit
+affecting the search.</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table"><strong>search_limit_mode</strong></p></td>
+<td align="left" valign="top"><p class="table">Determine if it displays top, bottom or both search limit - bottom, top, both</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table"><strong>simple_search_mode</strong></p></td>
+<td align="left" valign="top"><p class="table">Display mode of simple search bar - inline, hidden.</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table"><strong>simple_search_view</strong></p></td>
+<td align="left" valign="top"><p class="table">View for defining a simple search.</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table"><strong>simple_search_config</strong></p></td>
+<td align="left" valign="top"><p class="table">Xml config as opposed to a view for defining a simple search.</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table"><strong>simple_search_columns</strong></p></td>
+<td align="left" valign="top"><p class="table">Number of columns in the simple search bar - 2, 3 or 4.</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table"><strong>simple_search_visible_rows</strong></p></td>
+<td align="left" valign="top"><p class="table">Number of visible rows in the simple search bar.</p></td>
 </tr>
 <tr>
 <td align="left" valign="top"><p class="table"><strong>width</strong></p></td>
 <td align="left" valign="top"><p class="table">Set the default width of the table</p></td>
 </tr>
 <tr>
-<td align="left" valign="top"><p class="table"><strong>expression</strong></p></td>
-<td align="left" valign="top"><p class="table">Use an expression for the search. The expression must
-return items.</p></td>
-</tr>
-<tr>
-<td align="left" valign="top"><p class="table"><strong>filter</strong></p></td>
-<td align="left" valign="top"><p class="table">JSON data structure representing the settings for SearchWdg</p></td>
+<td align="left" valign="top"><p class="table"><strong>gallery_align</strong></p></td>
+<td align="left" valign="top"><p class="table">Gallery vertical alignment. It is used when a Preview icon is clicked to open in gallery mode - top, bottom.</p></td>
 </tr>
 </tbody>
 </table>
