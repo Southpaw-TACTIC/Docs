@@ -1,0 +1,181 @@
+# TACTIC, a Scalable Solution
+
+A data management system to grow along with your expanding data needs
+TACTIC software meets the complex content demands of today’s large-scale
+production environment:
+
+-   Based on existing web technologies, it is easy to maintain and scale
+
+-   Easy to load-balance and scale across cores and across multiple
+    machines
+
+## What Makes TACTIC Scalable? 
+
+The TACTIC platform uses web technologies in its underlying
+architecture. As proven by many popular web sites today, web
+technologies are able to scale to a large number of users—to levels far
+beyond the size of any large installation today requiring TACTIC.
+
+The TACTIC user interface and its API (Application Programmer Interface)
+are both built on web technologies. A web server controls as the user
+front end, and accesses a back-end database. Web servers can handle
+high volumes, so scalability is not an issue — especially for the
+relatively manageable volume seen in even the largest of digital
+productions.
+
+**Web server technology**
+
+TACTIC uses a web server to deliver static content to users, who are
+able to access TACTIC over the web. Web servers are capable of
+delivering enormous numbers of requests, and will remain stable during
+heavy loads. Web servers by definition are the most efficient vehicles
+for web delivery, and TACTIC technology is optimized to take advantage
+of this technology for fast execution and scalability.
+
+**Leading database technology**
+
+TACTIC supports a variety of databases, including PostgreSQL,
+MySQL, and SQLServer.
+
+Today’s databases coupled with today’s hardware are sufficiently
+powerful to handle any of today’s production needs. The largest of
+digital productions cannot come close to exceeding the data limits of a
+typical database.
+
+**Optimized requests**
+
+With digital productions, the amount of data required is seldom the
+issue. Rather, bottlenecks are typically caused by complex requests
+slowing down database response time. Digital productions tend to use
+deeply nested and enormously complex relationships between various
+pieces of data. It is this complexity that tends to slow down
+applications that try to parse this data in a meaningful human way,
+creating complex requests that slow down database response.
+
+TACTIC is designed from the ground up to master the complexities of
+digital productions. For every request, it builds a unique
+object-relational mapper specifically designed for the needs of high
+volume, large scale digital production asset management solutions.
+
+TACTIC is flexible enough to handle the complex relationships between
+any part of the production pipeline, and has proven itself in
+large-scale projects using extremely complex data.
+
+**Easy code maintenance**
+
+The Python programming language is used for TACTIC application
+development. Python has many strengths that contribute to ease of
+maintenance (courtesy of www.python.org):
+
+-   clear, readable syntax
+
+-   strong introspection capabilities
+
+-   intuitive object orientation
+
+-   natural expression of procedural code
+
+-   full modularity supporting hierarchical packages
+
+-   exception-based error handling
+
+-   very high-level dynamic data types
+
+-   extensive standard libraries and third party modules for virtually
+    every task
+
+-   extensions and modules easily written in C, C++ (or Java for Jython,
+    or .NET languages for IronPython)
+
+-   embeddable within applications as a scripting interface
+
+**Load balancing**
+
+Load balancing the distribution of requests across TACTIC processes is
+possible across cores and across multiple machines, and enables TACTIC
+to scale to large enterprise environments.
+
+<!-- TODO: include link -->
+
+(For details and examples, see **TACTIC Scalable Configuration
+Examples**.)
+
+**Segregating services**
+
+The various TACTIC services can be segregated to run independently of
+each other. This allows important services, such as user interface
+requests, to access their own resources and not be slowed down by other
+more resource-intensive services such as render farms.
+
+(For details and examples, see **Scalable TACTIC Deployments**.)
+
+**Types of Scalability**
+
+There are several types of scalability that are considerations with the
+use of Python as the TACTIC programming language:
+
+-   Code scalability: TACTIC contains thousands of classes and many
+    hundreds of thousands of lines of code which are facilitated by use of
+    the Python language. There has been no reason to believe that the code
+    base cannot continue to scale to meet software needs for the foreseeable future.
+
+-   Memory scalability: Python is known for large memory requirements when
+    compared to other languages, but the required memory for TACTIC code is
+    much smaller than that found on typical servers, and has seldom been an issue.
+
+-   Performance scalability: Python’s GIL (Global Interpreter Lock) limits
+    Python’s scalability across multiple threads. This limitation has been
+    long discussed in newsgroups, with the general consensus that
+    scalability is achieved much more easily by load-balancing across
+    processes rather than across threads. TACTIC enables easy load balancing
+    across processes to achieve full linear scalability.
+
+-   Maintenance scalability: Clean and clear syntax makes it easy to
+    refactor and maintain code over the long term. Experience has shown that
+    our code base is very accessible to new developers, providing confidence
+    that code base knowledge can be maintained over the years.
+
+Overall, very few limitations with the Python language itself have been
+encountered and have easily circumvented its lack of scalability across
+multiple threads by optimizing proper load balancing across processes.
+
+## Additional Scalability Considerations
+
+**Availability**
+
+TACTIC has been designed to be highly stable even under extremely heavy
+stress. It has been tested and tuned on several projects in environments
+of high stress and high load and has been proven to run under duress
+without going down.
+
+As with any piece of software, there is always a point a failure—there
+are a number of legitimate reasons for a TACTIC server becoming
+unresponsive or even going down:
+
+-   network cutoff
+
+-   power failure
+
+-   physical memory failure
+
+-   overloaded requests for the available resources
+
+For projects that require high availability even in the event of
+catastrophic failure, there are a number of hardware solutions to
+provide failover should the primary resource fail. These hardware
+solutions will instantly redirect requests to a redundant resource,
+thereby providing continuous service to the users.
+
+**Memory requirements**
+
+Each available process will use a certain amount of memory, so a balance
+must be struck between the number of processes and the size of the
+complete in-memory TACTIC footprint on the server. In other words,
+adding more processes may or may not increase the availability of TACTIC
+if memory is an issue. If processes start running into swap space,
+performance will be severely affected.
+
+<!-- TODO: Include link --> 
+As memory usage becomes an issue, the choice will be to load balance
+over multiple machines (see **Scalable TACTIC Deployments**).
+

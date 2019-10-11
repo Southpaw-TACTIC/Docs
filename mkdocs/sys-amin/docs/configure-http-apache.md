@@ -1,0 +1,152 @@
+# Apache HTTP Co-Service Configuration
+
+Installation of Apache can be done through any number of means,
+depending on the software package on hand, and the target OS used.
+Please consult the Apache documentation for installation information.
+
+All steps require use of a command shell. The example posted below is
+working as root user, but some OS’s are not enabled for root user
+access. The root user may have do be enabled on the target machine,
+otherwise commands must be prepended with "sudo", or whatever method
+required for editing service files, starting and stopping services, etc.
+
+The httpd.conf file (sometimes alternatively, the apache2.conf file) is
+the configuration file for Apache. Locate this file on the target
+machine. For purposes of this illustration, the httpd.conf file name
+will be used.
+
+    leowiz:~ root# locate httpd.conf
+    /private/etc/apache2/httpd.conf
+    /private/etc/apache2/original/httpd.conf
+    leowiz:~ root#
+
+Alternatively "find" will do the same thing;
+
+    leowiz:~ root# find / -name httpd.conf
+    /private/etc/apache2/httpd.conf
+    /private/etc/apache2/original/httpd.conf
+    leowiz:~ root#
+
+In this case, the "/private/etc/apache2/httpd.conf" file is the one we
+are interested in.
+
+For isolation of configuration options for editing purposes, the TACTIC
+configuration file is a single file which should be referred to by the
+Apache configuration file. In this case, the default "tactic.conf" file
+will be used. The file is included at the end of this document. Note this default "tactic.conf" has already be altered during the running of tactic installation install.py so that the path matches the installation directories.
+
+Find out if the httpd.conf file has an "Include" statement that refers
+to a directory the TACTIC Apache configuration file can be put in.
+
+    leowiz:~ root# grep Include /private/etc/apache2/httpd.conf
+    Include /private/etc/apache2/extra/httpd-mpm.conf
+    #Include /private/etc/apache2/extra/httpd-default.conf
+    #Include /private/etc/apache2/extra/httpd-ssl.conf
+    Include /private/etc/apache2/other/*.conf
+    leowiz:~ root#
+
+In this case, the line at the bottom is the one that is required;
+
+    Include /private/etc/apache2/other/*.conf
+
+If there is no such include, then a line can be added to the httpd.conf
+file.
+
+In the above example, there is a reference to a directory wild-card
+configuration inclusion. Essentially then, any files with the suffix
+".conf" will be activated. This is where the TACTIC configuration file
+will be stored. Either the default configuration file can be used with
+some editing, due to the variations in location of the TACTIC service
+application.
+
+For purposes of efficiency, Apache will proxy files that are static. In
+the tactic.conf file, there are 2 major directives that are of concern
+regarding directory access. There is the directives that enable the
+TACTIC GUI widgets to work,
+
+    <Directory "/home/apache/tactic" >
+        Options FollowSymLinks
+        AllowOverride None
+        Order Allow,Deny
+        Allow from All
+    </Directory>
+
+The second set is:
+
+    <Directory "/home/apache/assets" >
+        Options FollowSymLinks
+        AllowOverride None
+        Order Allow,Deny
+        Allow from All
+    </Directory>
+
+In the default example, the TACTIC application is stored at
+"/home/apache/tactic" while the assets are stored at
+"/home/apache/assets" The directives here allow Apache access to proxy
+these file locations for TACTIC.
+
+Since Apache is serving only static files, it can be configured to serve
+the dynamic content served by TACTIC using a proxy.
+
+To enable the Apache proxy service, the tactic.conf file must contain
+directives that enable the proxy and rewrite modules to serve the TACTIC
+service.
+
+    ProxyPreserveHost on
+    RewriteEngine on
+
+    # for cherrypy
+    RewriteRule   ^/tactic/(.+)$ http://localhost:8081/tactic/$1 [P,L]
+    RewriteRule   ^/tactic http://localhost:8081/tactic/ [P,L]
+    RewriteRule   ^/projects/(.+)$ http://localhost:8081/tactic/$1 [P,L]
+    RewriteRule   ^/projects http://localhost:8081/tactic/ [P,L]
+
+In this example, the TACTIC service is located on the same machine, on
+port 8081. All URL requests that have a "/tactic" or "/projects" in the
+URL will be redirected to the TACTIC service, which by default is on
+port 8081.
+
+To effectively use load-balancing on this machine, replace it with the
+following configuration instead:
+
+    # This is for using a random load_balancing scheme
+    RewriteMap    lb    rnd:/home/apache/sites/load_balance.txt
+    RewriteRule   ^/tactic/(.+)$ http://${lb:dynamic}/tactic/$1    [P,L]
+    RewriteRule   ^/projects/(.+)$ http://${lb:dynamic}/tactic/$1  [P,L]
+    RewriteRule   ^/tactic http://${lb:dynamic}/tactic/            [P,L]
+    RewriteRule   ^/projects http://${lb:dynamic}/tactic/          [P,L]
+
+    load balance
+
+**New Method**
+
+The use of balancer module is recommended for its reliablity and ease of use.
+
+&lt;Proxy balancer://tactic&gt;
+BalancerMember <http://localhost:8081/tactic>
+BalancerMember <http://localhost:8082/tactic>
+BalancerMember <http://localhost:8083/tactic>
+&lt;/Proxy&gt;
+ProxyPass /tactic balancer://tactic
+ProxyPass /tactic\_data balancer://tactic
+
+**Old Method**
+
+The file, /home/apache/sites/load\_balance.txt contains
+
+    lb  localhost:8081|localhost:8082|localhost:8083
+
+The Apache configuration files have now been modified to proxy and
+rewrite TACTIC requests.
+
+Apache needs to be restarted for the configuration changes to take
+effect. Most Apache installations have a "apachectl" command. To restart
+apache, use;
+
+\` apachectl restart\`
+
+Once Apache has been restarted, it should be serving TACTIC requests.
+
+At this point Apache should be configured to proxy TACTIC service
+requests to the TACTIC service, while leaving all other requests to
+Apache itself.
