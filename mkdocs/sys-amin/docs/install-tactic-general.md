@@ -71,13 +71,14 @@ You must install the version of each module that matches your Python version.
 - pillow
 - lxml
 - pycryptodomex
-
+- requests
 
 *Python 3 Linux modules*
 
 - pillow
 - lxml
 - pycryptodomex
+- requests
 - jaraco.functools
 - pytz
 
@@ -87,6 +88,7 @@ You must install the version of each module that matches your Python version.
 - pillow
 - lxml
 - pycryptodomex
+- requests
 - pywin32
 
 *Python 3 Windows modules*
@@ -94,6 +96,7 @@ You must install the version of each module that matches your Python version.
 - pillow
 - lxml
 - pycryptodomex
+- requests
 - jaraco.windows
 - pytz
 - pywin32
