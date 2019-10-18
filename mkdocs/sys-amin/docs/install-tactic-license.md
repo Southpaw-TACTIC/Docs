@@ -1,6 +1,6 @@
 # Install a TACTIC License
 
-**Install License**
+## Install License
 
 When TACTIC is accessed through the web browser, if a license file
 cannot be found, TACTIC will prompted for a license file.
@@ -17,7 +17,7 @@ renewal completed"
 Once this has been completed, TACTIC will no longer prompt for a valid
 license file.
 
-**Renew License**
+## Renew License
 
 To view information on the total users for the license and how many are
 active and to update the existing license file, in the sidebar, load
@@ -26,7 +26,7 @@ and update a new license file.
 
 ![image](media/renewLicense.png)
 
-**Manual License Install**
+## Manual License Install
 
 When the user interface tool is used to upload the license, TACTIC
 renames the file to tactic-license.xml and places it on the server under

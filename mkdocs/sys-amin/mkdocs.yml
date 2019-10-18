@@ -6,7 +6,6 @@ nav:
     - Install TACTIC Application:
         - 'System Requirements': './system-requirements.md'
         - 'General TACTIC Installation': './install-tactic-general.md'
-        - 'Install Python': './install-python.md'
         - 'Install TACTIC on RHEL': './install-tactic-rhel.md'
         - 'Install TACTIC Windows Server 2016': './install-tactic-windows-server-2016'
         - 'Install TACTIC License': './install-tactic-license.md'

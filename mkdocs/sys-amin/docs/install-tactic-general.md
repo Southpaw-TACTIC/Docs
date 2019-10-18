@@ -1,18 +1,19 @@
 # General TACTIC Install
 
-This document guides you through the general installation of TACTIC on any server environment with some brief background information. For installation Windows or RHEL environment, please refer to the corresponding sections in this
-book. 
+This document guides you through the general installation of TACTIC on any server environment with some brief background information. For installation on Windows or RHEL environment, please refer to the corresponding sections in this book. 
 
-To completely install TACTIC, there are three main components that
+To completely install TACTIC, there are five main components that
 have to be set up in the following order:
 
 1. Database
 
 2. Python 
 
-3. TACTIC Installer
+3. Image Utilities
 
-4. A Web Server
+4. TACTIC Installer
+
+5. A Web Server
 
 
 ## Install Database
@@ -56,8 +57,62 @@ successfully installed the PostgreSQL database. Type \\q to exit.
 
 ## Install Python
 
-See Install Python for information related to Python.
+Python is a core element of the TACTIC application, along with supporting Python modules
 
+First, you must install Python 2 or 3. Installers are available from the <a href="https://www.python.org"/>Python website</a>.
+Python 2 has reached EOL as of January 2020, and it is recommended to start new installations with Python 3.
+Python 2.7 and 3.7+ are recommended versions for TACTIC. 
+
+Second, you must install supporting modules. These modules depend on your version of Python, and your server environment.
+You must install the version of each module that matches your Python version.
+
+*Python 2 Linux modules*
+
+- pillow
+- lxml
+- pycryptodomex
+
+
+*Python 3 Linux modules*
+
+- pillow
+- lxml
+- pycryptodomex
+- jaraco.functools
+- pytz
+
+
+*Python 2 Windows modules*
+
+- pillow
+- lxml
+- pycryptodomex
+- pywin32
+
+*Python 3 Windows modules*
+
+- pillow
+- lxml
+- pycryptodomex
+- jaraco.windows
+- pytz
+- pywin32
+
+
+You will also need a Python DB connectivity module. For PostgreSQL, use psycopg2 and for MySQL use MySQLdb.
+
+On Windows systems, TACTIC Python and supporting module availability is
+through the websites of the supporting module projects. 
+
+On UNIX/Linux systems, the system package manager typically has options
+for installing all the required Python packages onto the UNIX host
+machine. 
+
+
+
+## Install Image Utilities
+
+<a href="https://imagemagick.org/">Imagemagick</a> and <a href="https://www.ffmpeg.org/">ffmpeg</a> are by TACTIC for various asset functions such as icon generation and metadata extraction. Installers are available for both Linux and Windows systems.
 
 
 ## Install TACTIC
@@ -134,7 +189,7 @@ Default contents:
     TACTIC_DATA_DIR='/home/apache/tactic_data'
 
 
-## Network machine access
+## Network Machine Access
 
 If you are on the server, you can access it by using the URL
 <http://localhost/tactic>. For other people to access it on the network,
@@ -143,8 +198,6 @@ command "ifconfig" to locate it. It’s the one listed as the inet addr.
 
 
 ## Install Webserver
-
-Next, you need to run TACTIC behind Apache.
 
 TACTIC should be run behind an Apache web server. You can download
 Apache software at <http://www.apache.org/>
@@ -220,11 +273,13 @@ Make sure the following lines exist:
 
 For Apache 2.4:
 
-    Comment out:
+Comment out:
+
     #Order Allow,Deny
     #Allow from All
 
-    Uncomment:
+Uncomment:
+    
     Require all granted
 
 > **Note**
@@ -259,6 +314,8 @@ Finally, after verifying the configuration is correct, restart the
 Apache service:
 
     service httpd restart
+
+## Verify the Installation
 
 Go to the "&lt;TACTIC\_INSTALL\_DIR&gt;/src/bin" folder
 
