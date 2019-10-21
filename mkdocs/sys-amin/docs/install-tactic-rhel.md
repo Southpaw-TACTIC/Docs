@@ -9,11 +9,11 @@ These instructions are for a TACTIC server that will use PostgreSQL and Apache o
 ## Install PostgreSQL
 
 ```
-sudo dnf install postgresql-server
-sudo /usr/bin/postgresql-setup --initdb
-sudo systemctl enable postgresql
-sudo systemctl start postgresql
-yum install postgresql-contrib postgresql-devel
+dnf install postgresql-server
+/usr/bin/postgresql-setup --initdb
+systemctl enable postgresql
+systemctl start postgresql
+dnf install postgresql-contrib postgresql-devel
 ```
 
 
@@ -31,52 +31,53 @@ Type "help", "copyright", "credits" or "license" for more information.
 >>>
 ```
 
-Python 3.7 reccomended for TACTIC 4.7. If Python is not installed, install Python using yum,
+Python 3.7 reccomended for TACTIC 4.7. If Python is not installed, install Python using dnf,
 
 
 ```
-yum install python3
+dnf install python3
 ```
 
 Install Python 3 supporting modules,
 
 ```
-yum install python3-pillow
-yum install python3-pycryptodomex
-yum install python3-lxml
-yum install python3-requests
+dnf install python3-pillow
+dnf install python3-pycryptodomex
+dnf install python3-lxml
+dnf install python3-requests
+dnf install python3-pytz
 ```
 
 For Python 2,
 
 ```
-yum install python-pillow
-yum install python-pycryptodomex
-yum install python2-lxml
-yum install python-requests
+dnf install python-pillow
+dnf install python-pycryptodomex
+dnf install python2-lxml
+dnf install python-requests
 ```
 
 Install Python DB connectivity module,
 
 - PostgreSQL:
 ```
-yum install python3-psycopg2
+dnf install python3-psycopg2
 ```
 
 
 ## Install Image Utilities ImageMagick and FFMPEG
 
 ```
-yum install php-pear php-devel gcc
-yum install ImageMagick ImageMagick-devel ImageMagick-perl
-sudo dnf -y install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
-sudo dnf -y install ffmpeg
+dnf install php-pear php-devel gcc
+dnf install ImageMagick ImageMagick-devel ImageMagick-perl
+dnf -y install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
+dnf -y install ffmpeg
 ```
 
 ## Install Apache
 
 ```
-yum install httpd
+dnf install httpd
 firewall-cmd --add-service=http --permanent
 firewall-cmd --reload
 /usr/sbin/setsebool -P httpd_can_network_connect 1
@@ -89,13 +90,32 @@ Download the TACTIC RPM from community site <a href="http://community.southpawte
 
 ```
 rpm -Uhv <TACTIC-RPM-file>
-
 ```
 
 ## Configure PostgreSQL
 
+> Note: TACTIC requires database access, and for ease of installation, we reccomend using the PostgreSQL configuration file provided in the source code. After installation, you can further configure and secure your database. 
+
+Replace the file, 
+
+    /var/lib/pgsql/data/pg_hba.conf 
+    
+with, 
+
+    /opt/tactic/tactic/src/install/postgresql/pg_hba.conf
+
+Restart postgresql,
+
+```
+systemctl restart postgresql
+```
 
 
 ## Run TACTIC Bootstrap
+
+```
+python3 /opt/tactic/tactic/src/pyasm/search/upgrade/postgresql/bootstrap_load.py
+```
+
 
 

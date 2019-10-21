@@ -79,7 +79,6 @@ You must install the version of each module that matches your Python version.
 - lxml
 - pycryptodomex
 - requests
-- jaraco.functools
 - pytz
 
 
