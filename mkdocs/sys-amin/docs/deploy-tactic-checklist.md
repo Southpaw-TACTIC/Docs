@@ -19,7 +19,7 @@ The Server Configuration section of this documentation provides advanced configu
 
 ## Location of Configuration File
 
-Most advanced server in TACTIC is done in the TACTIC configuration file.
+Most advanced server configuration is done in the TACTIC configuration file.
 The configuration file is typically found on Linux systems at,
 
     /opt/tactic/tactic_data/config/tactic-conf.xml

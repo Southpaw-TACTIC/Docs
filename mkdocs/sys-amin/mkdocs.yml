@@ -14,24 +14,21 @@ nav:
         - 'Assets Storage': './configure-tactic-assets.md'
         - 'Database': './database-configuration.md'
         - 'PostgreSQL': './database-configuration-postgresql.md'
-        - 'HTTP Apache': './configure-http-apache.md'
         - 'HTTP IIS 7': './configure-http-iis-7.md'
         - 'SSL': './configure-ssl.md'
         - 'Active Directory': './active-directory.md'
-        - 'LDAP': './ldap.md'
+        #- 'LDAP': './ldap.md'
         - 'Email / Mailserver': './setup-email.md'
         - 'Database Resources': './resource.md'
+        #- 'Configure Remote Repo': './configure-remote-repo.md'
         - 'Configuration Directives': './configure-tactic.md'
     - Upgrade TACTIC:
         - 'Multiple TACTIC Versions': './multiple-tactic-services.md'
         - 'Upgrade to Python 3': './upgrade-python.md'
         - 'Upgrade Tactic': './upgrade-tactic.md'
         - 'Pycryptodome Update': './upgrade_crypto.md'
-    - Fileserver:
-        - 'Relocate Assets Directory': './relocate-assets-directory.md'
-        - 'Configure Remote Repo': './configure-remote-repo.md'
     - Scalability:
-        - 'Deploy Tactic Scalability Configuration Examples': './deploy-tactic-scalability-configuration-examples.md'
+        - 'Configuration Examples': './deploy-tactic-scalability-configuration-examples.md'
         - 'Load Balancing Tactic': './load-balancing-tactic.md'
     - Troubleshooting:
         - 'Troubleshooting Tactic': './troubleshooting-tactic.md'

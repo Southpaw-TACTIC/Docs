@@ -252,7 +252,10 @@ TACTIC.
 </tr>
 <tr class="odd">
 <td><p>PASSWORD</p></td>
-<td><p>The password for the database connection.</p></td>
+<td><p>The password for the database connection.</p>
+
+<!-- TODO: Include comment on encrypted passwords -->
+</td>
 </tr>
 <tr class="even">
 <td><p>SOBJECT_DATABASE</p></td>
