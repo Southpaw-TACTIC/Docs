@@ -8,6 +8,7 @@ nav:
         - 'General TACTIC Installation': './install-tactic-general.md'
         - 'Install TACTIC on RHEL': './install-tactic-rhel.md'
         - 'Install TACTIC Windows Server 2016': './install-tactic-windows-server-2016'
+        #- 'Install TACTIC with MySQL': './install-tactic-mysql'
         - 'Install TACTIC License': './install-tactic-license.md'
     - Server Configuration:
         - 'Configuration Checklist': './deploy-tactic-checklist.md'
@@ -23,23 +24,22 @@ nav:
         #- 'Configure Remote Repo': './configure-remote-repo.md'
         - 'Configuration Directives': './configure-tactic.md'
     - Upgrade TACTIC:
-        - 'Multiple TACTIC Versions': './multiple-tactic-services.md'
-        - 'Upgrade to Python 3': './upgrade-python.md'
         - 'Upgrade Tactic': './upgrade-tactic.md'
-        - 'Pycryptodome Update': './upgrade_crypto.md'
+        - 'Upgrade to Python 3': './upgrade-python.md'
+        - 'PyCryptodome Update': './upgrade-crypto.md'
+        - 'Multiple TACTIC Versions': './multiple-tactic-services.md'
     - Scalability:
         - 'Configuration Examples': './deploy-tactic-scalability-configuration-examples.md'
         - 'Load Balancing Tactic': './load-balancing-tactic.md'
     - Troubleshooting:
         - 'Troubleshooting Tactic': './troubleshooting-tactic.md'
-        - 'Monitor Server Performance': './monitor-server-performance.md'
     - Maintenance:
         - 'Backup And Restore Server': './backup-and-restore-server.md'
-        - 'Automate Database Backup': './automate-database-backup.md'
-        - 'Maintenance Logs': './maintenance-logs.md'
-    - TACTIC Server VM:
-        - 'Setup And Install': './tsi-setup-and-install.md'
-        - 'Troubleshooting': './tsi-troubleshooting.md'
-        - 'Moving Data': './tsi-moving-data.md'
+        - 'Automated Backup': './automate-database-backup.md'
+        - 'Configure Logrotate': './maintenance-logs.md'
+    #- TACTIC Server VM:
+    #    - 'Setup And Install': './tsi-setup-and-install.md'
+    #    - 'Troubleshooting': './tsi-troubleshooting.md'
+    #    - 'Moving Data': './tsi-moving-data.md'
 
 theme: material

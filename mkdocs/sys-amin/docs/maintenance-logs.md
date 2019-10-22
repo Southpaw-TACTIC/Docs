@@ -1,10 +1,8 @@
-# TACTIC logs
+# Configure Logrotate
 
 In a default installation tactic stores its logs in a single file. For
 proper maintenance, this file must be rotated by the host operating
-system. This action must be set in the host operating system. As tactic
-has no facility to control the log files it makes as of yet, it may be
-necessary to configure an external tool to rotate logs.
+system. This action must be set in the host operating system. 
 
 The host operating system must have a facility to rotate text logs on a
 regular chronological basis.
@@ -13,7 +11,7 @@ Logrotate is used as a tool to rotate text files on a chronological
 basis. The tool allows automatic rotation, compression, removal and
 mailing of log files.
 
-**Directives**
+## Directives
 
 This is a partial list of logrotate directives.
 
@@ -35,7 +33,7 @@ This is a partial list of logrotate directives.
 
 -   **sharedscripts postrotate /etc/init.d/lighttpd reload endscript**:
 
-**Default configuration**
+## Default configuration
 
 Logrotate’s main configuration file `/etc/logrotate.conf`
 
@@ -61,7 +59,7 @@ per-log basis.
     rotate 1
     }
 
-**Example Service Configuration**
+## Example Service Configuration
 
 This is an example logrotate configuration for HTTP. The configuration
 file is \`/etc/logrotate.d/httpd \`
@@ -78,8 +76,7 @@ file is \`/etc/logrotate.d/httpd \`
     }
 
 On the example linux system, service or server specific configurations
-are stored in `/etc/logrotate.d` directory. For example here is sample
-apache logrotate configuration file:
+are stored in `/etc/logrotate.d` directory. 
 
 In this example, HTTP logs are not deleted until they are at least a
 year old, and are rotated on a weekly basis. There are other
@@ -93,13 +90,13 @@ lines by themselves) are executed after the log file is rotated. These
 directives may only appear inside a log file definition. In our case we
 are reloading lighttpd.
 
-**Example TACTIC configuration**
+## Example TACTIC configuration
 
 The configuration goal is get logrotate to get the tactic log files
 rotated for our needs and requirements.
 
-This is an example logrotate configuration for HTTP. The configuration
-file is \`/etc/logrotate.d/tactic \`
+This is an example logrotate configuration for TACTIC.
+The configuration file is \`/etc/logrotate.d/tactic \`
 
 Remember to restart the logrotate services after any additions to
 logrotate configuration.

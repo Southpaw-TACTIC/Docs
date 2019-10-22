@@ -17,6 +17,8 @@ The active directory modules make use of win32 libraries for python.
 These must be installed in order for the connection to active directory
 to function properly
 
+## TACTIC Configuration
+
 There are a number of directives in the TACTIC config file that can be
 used to configure the active directory settings. These allow you to
 adjust TACTIC behavior to suit the needs of the facility.
@@ -24,79 +26,88 @@ adjust TACTIC behavior to suit the needs of the facility.
 In order to turn on active directory authentication, you must change the
 authenticate class to the following:
 
-authenticate\_class: tactic.active\_directory.ADAuthenticate
+```
+<security>
+    ...
+    <authenticate_class>tactic.active_directory.ADAuthenticate</authenticate_class>
+    ...
+</security>
+```
 
 The following directives can be set under the active directory category:
 
-**domains:** This is a "|" delimited list of the domains that exist in the
+**domains** - This is a "|" delimited list of the domains that exist in the
 network. If specified, a selection box for domains will be added to the
 login page.
 
-\*allow:\*can be "all", which allows everyone to log in if authentication
+**allow** - Can be "all", which allows everyone to log in if authentication
 is approved or it can point to the name of a specific Active Directory
 attribute that must be set to True. If a person is denied access, the
 will receive the error: "Permission denied due to insufficient Active
 Directory clearance".
 
-\*default\_groups:\*defines the default groups that a user will belong to
+**default_groups:** - Defines the default groups that a user will belong to
 if none is specified. Multiple groups are delimited by "|".
 
-\*default\_license\_type:\*determines the default license type for a user if
+**default_license_type:** - Determines the default license type for a user if
 none is specified in the Active Directory attribute "tacticLicenceType".
 
-Below is an example of a typical entry in the TACTIC config file:
 
-&lt;active\_directory&gt;
+## Example Configurations 
+Below is an example of a typical entry in the TACTIC config file,
 
-&lt;domains&gt;xxx|yyy|zzz&lt;/domains&gt;
+```
+<active_directory>
+    <domains>xxx|yyy|zzz</domains>
+    <allow>tacticEnabled</allow>
+    <default_groups>client</default_groups>
+    <default_license_type>user</default_license_type>
+</active_directory>
 
-&lt;allow&gt;tacticEnabled&lt;/allow&gt;
+```
 
-&lt;default\_groups&gt;client&lt;/default\_groups&gt;
+Allow anyone to login,
 
-&lt;default\_license\_type&gt;user&lt;/default\_license\_type&gt;
-
-&lt;/active\_directory&gt;
-
-Allow anyone to login:
-
-&lt;active\_directory&gt;
-
-&lt;allow&gt;all&lt;allow&gt;
-
-&lt;/active\_directory&gt;
+```
+<active_directory>
+    <allow>all</allow>
+</active_directory>
+```
 
 Allow anyone to login and will be put in the "client" group if user has
-no groups specified.
+no groups specified,
 
-&lt;active\_directory&gt;
 
-&lt;allow&gt;all&lt;/allow&gt;
+<!-- FIXME: Default groups should probably be specified... -->
+```
+<active_directory>
+    <allow>all</allow>
+</active_directory>
+```
 
-&lt;/active\_directory&gt;
+Only allow those with the attribute tacticEnabled in Active Directory set
+to "true",
 
-Only allow thos with the attibute tacticEnabled in Active Directory set
-to "true"
-
-&lt;active\_directory&gt;
-
-&lt;allow&gt;tacticEnabled&lt;/allow&gt;
-
-&lt;/active\_directory&gt;
+```
+<active_directory>
+    <allow>tacticEnabled</allow>
+</active_directory>
+```
 
 Enable users to select a domain (xxx, yyy or zzz) in the login screen
 
-&lt;active\_directory&gt;
+```
+<active_directory>
+    <allow>all</allow>
+    <domains>xxx|yyy|zzz</domains>
+</active_directory>
+```
 
-&lt;allow&gt;all&lt;/allow&gt;
-
-&lt;domains&gt;xxx|yyy|zzz&lt;/domains&gt;
-
-&lt;/active\_directory&gt;
+## Synchronization
 
 Active Directory attributes use camel case notation (aaaBbbCcc), while
 TACTIC users lowercase with underscore separators for columns(
-aaa\_bbb\_ccc). In order to maintain consistency within the TACTIC
+aaa_bbb\_ccc). In order to maintain consistency within the TACTIC
 application, a mapping of columns from active directory to TACTIC is
 provided. The following mappings are made by default:
 
@@ -140,8 +151,8 @@ The only supported license for this attribute are "user" and "default".
 Other license types have not yet been implemented yet.
 
 On log in, TACTIC will look at all of the groups that a user belongs to
-in Active Directory and match those group names to the "ad\_login\_group"
-column in the "sthpw/login\_group" search type. This grouping list will
+in Active Directory and match those group names to the "ad_login\_group"
+column in the "sthpw/login_group" search type. This grouping list will
 synchronized at this time, removing the users from groups not specified
 in Active Directory and add those that are specified. This means that
 Active Directory is in full control of the groups that a user is part of
@@ -153,7 +164,7 @@ following distinguished name:
 
 memberOf: CN=supervisor,OU=Users,OU=EIS,DC=domain,DC=us,DC=xxxx,DC=com
 
-TACTIC will need only "supervisor" to be entered in the "ad\_login\_group"
+TACTIC will need only "supervisor" to be entered in the "ad_login\_group"
 column.
 
 If on logging in, the number of users exceeds the number of users in the

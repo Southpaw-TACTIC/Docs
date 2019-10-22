@@ -46,11 +46,11 @@ database.
 
         su apache
         cd tactic-3.0.0.src/bin
-        python upgrade.py
+        python3 upgrade_db.py
 
 4.  Execute tactic
 
-        python startup_dev.py
+        python3 startup_dev.py
 
 This will execute TACTIC from the command line in dev mode. All output
 will go to this console.

@@ -1,51 +1,62 @@
-# TACTIC Backup and Restore
+# Backup and Restore Server
 
 Like any other data producing service, TACTIC requires a backup regimen.
 The data in that TACTIC produces and manages must be backed up in
 accordance with the backup policy of the departments that manage the
 TACTIC service.
 
-## Backup policy definition
+This documents outlines details of a proper backup policy and manual steps to carry out
+a backup. To set up an automated backup, see Maintenance > Automated Backup.
 
-TACTIC managers should create a backup policy
-for TACTIC data. A backup policy is extremely important, as data loss
-within the TACTIC service is catastrophic.
+## Backup Policy
 
-## What needs be backed up
+TACTIC managers should create a backup policy for TACTIC data.
+A backup policy is extremely important, as data loss within the TACTIC service is catastrophic.
 
-TACTIC manages data in three parallel scopes:
+The following components should be backed up as apart of the backup policy:
 
--   `versioned assets` Versioned assets are all the files that are checked
+1. Assets - Versioned assets are all the files that are checked
     in and out of the tactic service.
 
--   `asset metadata` Asset metadata are all the data produced by user
+2. Database - Asset metadata are all the data produced by user
     interaction with the tactic service.
 
--   `project metadata` Project metadata are all data produced by the
-    creation of a project within tactic the tactic service.
+3. TACTIC Application
 
-Tactic data is all of equal importance. The data is all interrelated,
-and thus all data must be treated with equal importance in the backup
-regimen.
 
-## Frequency of backups
+### Frequency of backups
 
 The frequency of backup of tactic data depends on
 the policies of the TACTIC managers. An examination of the frequency of
 use of the tactic service, combined with the down time potentially
 required to back up tactic data should be considered.
 
-## Backup methods
+### Backup methods
 
-the only consideration that tactic managers should take
+The only consideration that tactic managers should take
 into account when creating a backup policy for tactic data is that
 tactic data produced is synchronized. This is accomplished via a
 transaction system within tactic. This transaction system relies on
 co-services to store transacted data. During the backup process, tactic
 and its co-services should be stopped to prevent any loss of
+
+It is highly recommended that you back up your TACTIC server using a
+regular schedule. In the event of a hardware failure, you will be able
+to restore your TACTIC server fully from the latest backup.
 synchronization to these co-services.
 
-\*Versioned assets\*Versioned assets are all the files that are checked in
+> **Note**
+>
+> You may want to stop the tactic service while you do your backup
+> process. To do so, run the following commands:
+>
+> `service tactic stop`
+>
+> `service tactic start`
+
+## Assets
+
+Versioned assets are all the files that are checked in
 and out of the tactic service. Typically the tactic service works in
 conjunction with a co-service such as a network file storage service to
 accomplish its tasks of asset management. Thus the task of backing up
@@ -56,25 +67,7 @@ accomplish the task of backing up tactic assets. Redundant raid storage,
 snapshots, and offsite backups can all be utilized to accomplish version
 and asset backups.
 
-It is highly recommended that you back up your TACTIC server using a
-regular schedule. In the event of a hardware failure, you will be able
-to restore your TACTIC server fully from the latest backup if you have
-taken the following three backup steps:
-
-1.  Back up the 'assets' directory
-
-2.  Dump the TACTIC database
-
-3.  Back up the TACTIC program directory
-
-> **Note**
->
-> You may want to stop the tactic service while you do your backup
-> process. To do so, run the following commands:
->
-> `service tactic stop`
->
-> `service tactic start`
+### Backup
 
 The 'assets' directory is the repository where TACTIC stores all of the
 asset files. By backing up this directory, you can restore all of your
@@ -86,7 +79,6 @@ directory structure.
 > You may need to contact your TACTIC server administrator if your
 > 'assets' directory has been redirected to another location.
 
-## For backup:
 
 **Windows**
 
@@ -100,10 +92,12 @@ The 'assets' directory on a Linux install is located by default in:
 
 `/home/apache/assets`
 
-## For restore:
+### Restore
 
 To restore the TACTIC 'assets' directory, you have to restore your
 backup to the current 'assets' location.
+
+## Database
 
 To dump the TACTIC data base you need to log in to the PostgreSQL
 database and perform a database dump.
@@ -116,7 +110,7 @@ database and perform a database dump.
 > password. If you have added a password, you may need to enter it into
 > your postgres commands with the `-P` tag.
 
-## For backup:
+### Backup - PostgreSQL
 
 **Windows**
 
@@ -126,17 +120,20 @@ database and perform a database dump.
 
 `pg_dumpall -U postgres -c > /home/apache/assets/tacticDatabase.sql`
 
-## For restore:
+### Restore - PostgreSQL
 
 To restore the TACTIC database run the command:
 
 `psql -U postgres < tacticDatabase.sql`
 
+
+## TACTIC Backup
+
 This last step, although not completely necessary, is recommended
 because it takes a snapshot of your TACTIC source code and project
 settings at the time of backup.
 
-## For backup:
+### Backup
 
 **Windows**
 
@@ -154,8 +151,7 @@ The folders to back up are:
 
 `/home/apache/projects`
 
-For restore:
-<sup>^^^^</sup>^^
+### Restore
 
 To restore the TACTIC program files, you have to restore the `tactic`
 and `projects` directories to their original locations.

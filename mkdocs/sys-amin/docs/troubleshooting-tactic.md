@@ -1,5 +1,6 @@
 # TACTIC Service Troubleshooting
 
+## FAQ
 1.  **I get a proxy error in my browser that looks like the following:**
 
         Proxy Error
@@ -15,7 +16,7 @@
     a problem with the TACTIC service. Stop the conflicting service. Then
     restart TACTIC in the TSI by logging in as root and running the command:
 
-    \`service tactic start \`
+        service tactic start
 
 2.  **What if the TACTIC host memory is full?**
 
@@ -24,18 +25,18 @@
     very large table with a huge number of entries (&gt;5000). Restarting the
     service will clear this memory.
 
-3.  What if the TACTIC host CPU is at 100%?
+3.  **What if the TACTIC host CPU is at 100%?**
 
     Use the Windows Task Manager to kill the process that is taking 100% of
     the CPU. The TACTIC service will automatically recreate the process.
     Normally, this will clear the problem.
 
-4.  What if the user sees a Proxy Error?
+4.  **What if the user sees a Proxy Error?**
 
     This means that the IIS service cannot contact the TACTIC application server. Look in the Windows services and restart the TACTIC service. If
     the problem persists, contact Southpaw.
 
-To diagnose issues with TACTIC, several tools can be used.
+## Diagnostics
 
 This command line tool reveals active ports on the local machine.
 

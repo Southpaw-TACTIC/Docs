@@ -1,68 +1,28 @@
 # Setup Email
 
-This document describes how to setup the mail server settings in TACTIC
-in order for notifications to be sent out as emails.
+## Configuration
+In order to send out notifications as email in TACTIC, the mailserver must be configured
+in TACTIC. Below is an example of a mailserver configuration in the TACTIC configuration file. See Configuration Directives > Services for a full list of directives.
 
-To setup the SMTP mail server, open the TACTIC config file.
 
-The TACTIC config file is located here:
+Example,
 
-On Linux:
+```
+<services>
+    ...
+    <mailserver>smtp.googlemail.com</mailserver>
+    <mail_tls_enabled>true</mail_tls_enabled>
+    <mail_name>TACTIC</mail_name>
+    <mail_user>tactic@southpawtech.com</mail_user>
+    <mail_password>password</mail_password>
+    <mail_port>587</mail_port>
+    <mail_default_admin_email>admin@southpawtech.com</mail_default_admin_email>
+    <notify_user>exceptions@southpawtech.com</notify_user>
+    ...
+</services>
+```
 
-    <TACTIC_INSTALL_DIR>/projects/config/tactic_linux-conf.xml
-
-On Windows:
-
-    <TACTIC_INSTALL_DIR>/projects/config/tactic_win32-conf.xml
-
-Go to the **&lt;services&gt;** section of the config file.
-
-Add the following settings with the prefix **&lt;mail…​&gt;**.
-
-Below is an example of a completed mail config section in **bold**:
-
-        <python>python</python>
-        <python_path></python_path>
-        <render_submit_class></render_submit_class>
-        <render_dispatcher></render_dispatcher>
-        <system_class></system_class>
-        <pool_max_connections>3</pool_max_connections>
-        <process_count>3</process_count>
-
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><code>mailserver</code></th>
-<th>The URL of the SMTP mail server</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><p><code>mail_password</code></p></td>
-<td><p>The password for accessing the SMTP mail server that requires authentication</p></td>
-</tr>
-<tr class="even">
-<td><p><code>mail_user</code></p></td>
-<td><p>The user name for accessing the SMTP mail server that requires authentication</p></td>
-</tr>
-<tr class="odd">
-<td><p><code>mail_port</code></p></td>
-<td><p>The port for the SMTP mail server (if different that 25)</p></td>
-</tr>
-<tr class="even">
-<td><p><code>mail_sender_disabled</code></p></td>
-<td><p>disable using the sender name in sending of email in case the email server does not allow sender’s email not owned by the sender</p></td>
-</tr>
-<tr class="odd">
-<td><p><code>mail_tls_enabled</code></p></td>
-<td><p>enable TLS (Transport Layer Security) for the connection to email server</p></td>
-</tr>
-</tbody>
-</table>
+## Test Notifications
 
 Go to the Notifications view under:
 

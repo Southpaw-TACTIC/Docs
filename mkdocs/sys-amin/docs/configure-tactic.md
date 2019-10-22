@@ -50,34 +50,37 @@ files.
 This section defines information regarding the services external to
 TACTIC.
 
-    <services>
-        <mailserver>smtp8.sympatico.ca</mailserver>
-        <mail_user>some_username</mail_user>
-        <mail_password>some_password</mail_password>
-        <mail_port>a port number other than 25</mail_port>
-        <mail_sender_disabled>true</mail_sender_disabled>
-        <mail_tls_enabled>true</mail_tls_enabled>
-        <python>python</python>
-        <python_path>/home/apache/custom</python_path>
-        <render_submit_class>sites.racoon.modules.command.CustomRenderSubmit</render_submit_class>
-        <process_count>3</process_count>
-        <thread_count>50</thread_count>
-        <process_time_alive>30</process_time_alive>
-        <system_class></system_class>
-    </services>
+```
+<services>
+    <mailserver>smtp.googlemail.com</mailserver>
+    <mail_password>password</mail_password>
+    <mail_user>tactic@southpawtech.com</mail_user>
+    <mail_port>587</mail_port>
+    <mail_sender_disabled>true</mail_sender_disabled>
+    <mail_tls_enabled>true</mail_tls_enabled>
+    <mail_name>TACTIC</mail_name>
+    <mail_default_admin_email>admin@southpawtech.com</mail_default_admin_email>
+    <notify_user>exceptions@southpawtech.com</notify_user>
+    <python>python3</python>
+    <python_path>/home/apache/custom</python_path>
+    <render_submit_class>sites.racoon.modules.command.CustomRenderSubmit</render_submit_class>
+    <process_count>3</process_count>
+    <thread_count>50</thread_count>
+    <process_time_alive>30</process_time_alive>
+    <system_class></system_class>
+</services>
+```
 
 <table>
 <colgroup>
 <col width="50%" />
 <col width="50%" />
 </colgroup>
-<thead>
-<tr class="header">
-<th>MAILSERVER</th>
-<th>The URL of the SMTP mail server</th>
-</tr>
-</thead>
 <tbody>
+<tr class="even">
+<td><p>MAIL_SERVER</p></td>
+<td><p>The URL of the SMTP mail server</td></p>
+</tr>
 <tr class="odd">
 <td><p>MAIL_PASSWORD</p></td>
 <td><p>The password for accessing the SMTP mail server that requires authentication</p></td>
@@ -92,15 +95,28 @@ TACTIC.
 </tr>
 <tr class="even">
 <td><p>MAIL_SENDER_DISABLED</p></td>
-<td><p>disable using the sender name in sending of email in case the email server does not allow sender’s email not owned by the sender</p></td>
+<td><p>Set as "true" to disable using the sender name in sending of email in case the email server does not allow sender’s email not owned by the sender</p></td>
 </tr>
 <tr class="odd">
 <td><p>MAIL_TLS_ENABLED</p></td>
-<td><p>enable TLS (Transport Layer Security) for the connection to email server</p></td>
+<td><p>
+Set as "true" to enable TLS (Transport Layer Security) for the connection to email server
+</p></td>
+</tr>
+<tr class="even">
+<td><p>mail_default_admin_email</p></td>
+<td><p>
+Default email for admin user is no email is set. This is used for password recovery functionality and notifications.
+</tr>
+<tr class="odd">
+<td><p>notify_user</p></td>
+<td><p>
+Email to send system exceptions and errors to.
+</p></td>
 </tr>
 <tr class="even">
 <td><p>PYTHON</p></td>
-<td><p>The root path of the Python installation. &quot;python&quot; is usually sufficient.</p></td>
+<td><p>The root path of the Python installation. If your installation is using Python3, "python3" should be set as value.</p></td>
 </tr>
 <tr class="odd">
 <td><p>PYTHON_PATH</p></td>

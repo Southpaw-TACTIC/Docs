@@ -14,7 +14,6 @@ Install microsoft c++ resitributable
 Install MySQL 8
 
 Install MySQL 8: Choose Only Server option, Legacy authentication
-root password: Teague2018**
 error when trying to use service account... chose windows default.
 Add ProgramFiles\MySQL\bin. to System PATH variable 
 
