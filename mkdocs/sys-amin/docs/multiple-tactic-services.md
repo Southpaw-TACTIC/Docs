@@ -1,4 +1,4 @@
-# Multiple TACTIC Services
+# Running Multiple Versions of TACTIC
 
 Multiple versions of TACTIC can be easily run side by side on the same
 machine. This is extremely useful for testing purposes. Running a newer

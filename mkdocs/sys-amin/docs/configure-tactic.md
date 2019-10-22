@@ -3,83 +3,22 @@
 The TACTIC config file stores settings such as directory locations and
 email server information.
 
-The name of the TACTIC config file and the location can be found here:
 
-<table>
-<colgroup>
-<col width="30%" />
-<col width="30%" />
-<col width="39%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Filename</th>
-<th>Operating System</th>
-<th>Location</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><p>tactic-conf.xml</p></td>
-<td><p>Windows or Linux</p></td>
-<td><p>/config</p></td>
-</tr>
-</tbody>
-</table>
-
-note: Prior to TACTIC 3.8, the TACTIC config file is named differently
-for each operating system. See the table below:
-
-<table>
-<colgroup>
-<col width="30%" />
-<col width="30%" />
-<col width="39%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Filename</th>
-<th>Operating System</th>
-<th>Location</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><p>tactic_win32-conf.xml</p></td>
-<td><p>Windows</p></td>
-<td><p>/project/config</p></td>
-</tr>
-<tr class="even">
-<td><p>tactic_linux-conf.xml</p></td>
-<td><p>Linux</p></td>
-<td><p>/project/config</p></td>
-</tr>
-</tbody>
-</table>
-
-For Windows, it is C:\\ProgramData\\Southpaw\\Tactic\\data by default for Enterprise Edition.
-
-Otherwise, it is usually /home/tactic/tactic\_data by default on a Linux machine.
-Southpaw supplies the TACTIC config file as a template on installation.
-Once installed, this file can be modified to reflect any of the options
-described in the sections below. Most of the parameters can be modified in
-the UI through Global &gt; System Config as well. If an option tag does not exist in a
-particular section in your config file, TACTIC will assume a default or
-it can simply be added in.
-
-Install
+## Install
 
 This section defines the hostname for the server (if different from
 "localhost") as well as the temp directory to be used for TACTIC. The
 tmp\_dir is where temporary files are stored as well as the TACTIC log
 files.
 
+```
     <install>
         <hostname>localhost</hostname>
         <tmp_dir>/home/tactic/tactic_temp</tmp_dir>
         <default_project>default_project_code</default_project>
         <include_js>/context/some_external_lib.js</include_js>
     </install>
+```
 
 <table>
 <colgroup>
@@ -106,7 +45,7 @@ files.
 </tbody>
 </table>
 
-Services
+## Services
 
 This section defines information regarding the services external to
 TACTIC.
@@ -190,7 +129,7 @@ TACTIC.
 </tbody>
 </table>
 
-Security
+## Security
 
 This section defines information regarding the services external to
 TACTIC.
@@ -277,7 +216,7 @@ TACTIC.
 </tbody>
 </table>
 
-Database
+## Database
 
     <database>
         <vendor>PostgreSQL</vendor>
@@ -326,7 +265,7 @@ Database
 </tbody>
 </table>
 
-Perforce
+## Perforce
 
     <perforce>
         <web_dir>perforce</web_dir>
@@ -355,7 +294,7 @@ Perforce
 </tbody>
 </table>
 
-Look
+## Look
 
 This setting provides a method of setting the TACTIC skin in the server
 for all users. In this example, the 'BON\_NOCHE' palette specified:
@@ -397,7 +336,7 @@ service restart.
 </tbody>
 </table>
 
-Checkin
+## Checkin
 
 TACTIC uses the following directory and path settings for internal and
 client interaction. They are included in the tag (for checkins).
@@ -474,7 +413,7 @@ client interaction. They are included in the tag (for checkins).
 </tbody>
 </table>
 
-THE HANDOFF DIRECTORIES
+### The Handoff Directories
 
 Handoff directories can be seen by both the server and the client
 machines. They are used for 3D checkins and client API interactions, and
@@ -490,7 +429,7 @@ then it would be important to include the following entries:
     <linux_client_handoff_dir></linux_client_handoff_dir>
     <linux_server_handoff_dir>/home/apache/handoff</linux_server_handoff_dir>
 
-DIRECTORY CONFIGURATION EXAMPLES
+### Directory Configuration Examples
 
 Example 1
 

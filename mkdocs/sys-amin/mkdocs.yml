@@ -10,20 +10,20 @@ nav:
         - 'Install TACTIC Windows Server 2016': './install-tactic-windows-server-2016'
         - 'Install TACTIC License': './install-tactic-license.md'
     - Server Configuration:
-        - 'Multiple TACTIC Services': './multiple-tactic-services.md'
-        - 'Configure Http Apache': './configure-http-apache.md'
-        - 'Configure Http Iis 7': './configure-http-iis-7.md'
-        - 'Database Configuration': './database-configuration.md'
-        - 'Configure TACTIC': './configure-tactic.md'
-        - 'Configure TACTIC Service': './configure-tactic-service.md'
-        - 'Configure Ssl': './configure-ssl.md'
+        - 'Configuration Checklist': './deploy-tactic-checklist.md'
+        - 'Assets Storage': './configure-tactic-assets.md'
+        - 'Database': './database-configuration.md'
+        - 'PostgreSQL': './database-configuration-postgresql.md'
+        - 'HTTP Apache': './configure-http-apache.md'
+        - 'HTTP IIS 7': './configure-http-iis-7.md'
+        - 'SSL': './configure-ssl.md'
         - 'Active Directory': './active-directory.md'
-        - 'Deploy TACTIC Configuration': './deploy-tactic-configuration.md'
-        - 'Setup Email': './setup-email.md'
-        - 'Configure Http': './configure-http.md'
-        - 'Resource': './resource.md'
-        - 'Remote Access Tactic': './remote-access-tactic.md'
+        - 'LDAP': './ldap.md'
+        - 'Email / Mailserver': './setup-email.md'
+        - 'Database Resources': './resource.md'
+        - 'Configuration Directives': './configure-tactic.md'
     - Upgrade TACTIC:
+        - 'Multiple TACTIC Versions': './multiple-tactic-services.md'
         - 'Upgrade to Python 3': './upgrade-python.md'
         - 'Upgrade Tactic': './upgrade-tactic.md'
         - 'Pycryptodome Update': './upgrade_crypto.md'
@@ -36,7 +36,6 @@ nav:
     - Troubleshooting:
         - 'Troubleshooting Tactic': './troubleshooting-tactic.md'
         - 'Monitor Server Performance': './monitor-server-performance.md'
-        
     - Maintenance:
         - 'Backup And Restore Server': './backup-and-restore-server.md'
         - 'Automate Database Backup': './automate-database-backup.md'
@@ -45,9 +44,5 @@ nav:
         - 'Setup And Install': './tsi-setup-and-install.md'
         - 'Troubleshooting': './tsi-troubleshooting.md'
         - 'Moving Data': './tsi-moving-data.md'
-    - Client Setup:
-        - 'Setup Client Computer': './setup-client-computer.md'
 
 theme: material
-#theme: readthedocs 
-#theme: cinder
