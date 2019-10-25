@@ -18,22 +18,36 @@ have to be set up in the following order:
 
 ## Install Database
 
-TACTIC stores all metadata in a database, and supports a variety of database types.
+TACTIC stores all metadata in a database, and supports a variety of database types, including:
+
+- PostgreSQL
+- MySQL
+- SQLServer
+- SQLite
+
 The recommended database is PostgreSQL - an industrial strength, hugely scalable database that has proven itself in thousands of industries around the world. 
-We currently recommend 9.6 and upwards for ease of installation. 
+This document uses PostgreSQL, although other database types will be available in the Install TACTIC Application section. If you do not see your
+desired database type listed there, inquire on the community forum.
+
+We currently recommend PostgreSQL 9.6 and upwards for ease of installation. 
 Go to the <a href="http://www.postgresql.org" target="_blank">PostgreSQL website</a> for more information.
 
-1.  yum install postgresql postgresql-server postgresql-contrib
-    postgresql-devel
+1. Install PostgreSQL 
 
-2.  Edit the file */var/lib/pgsql/data/pg_hba.conf*. This file determines all of the
-    user permissions for PostgreSQL. To begin with, turn on all of the
-    permissions contained in this file. This is a temporary measure that
-    will greatly simplify the installation process. You may lock down these
-    permissions at a later date. Please consult the PostgreSQL documentation
-    on how to do this. TACTIC ships with a sample "pg_hba.conf" file
-    (located in $TACTIC_unzipped_package/src/install/postgresql/pg_hba.conf). This file has an open
-    security setting for ease of installation. It’s best to back up your
+2. Edit the file,
+        
+        /var/lib/pgsql/data/pg_hba.conf
+    
+    This file determines all of the user permissions for PostgreSQL. 
+    To begin with, turn on all of the permissions contained in this file. 
+    This is a temporary measure that will greatly simplify the installation process.
+    You may lock down these permissions at a later date. 
+    Please consult the PostgreSQL documentation on how to do this.
+    TACTIC ships with a sample "pg_hba.conf" file, located in,
+    
+        $TACTIC_unzipped_package/src/install/postgresql/pg_hba.conf 
+        
+    This file has an open security setting for ease of installation. It’s best to back up your
     current pg\_hba.conf file before copying over with the file provided by TACTIC.
 
 3.  Restart the PostgreSQL Service
@@ -55,7 +69,7 @@ template1=#
 If you see this prompt without the need to enter a password, you have
 successfully installed the PostgreSQL database. Type \\q to exit.
 
-## Install Python
+## Install Python and supporting modules
 
 Python is a core element of the TACTIC application, along with supporting Python modules
 
@@ -101,102 +115,15 @@ You must install the version of each module that matches your Python version.
 - pywin32
 
 
-You will also need a Python DB connectivity module. For PostgreSQL, use psycopg2 and for MySQL use MySQLdb.
+You will also need a Python DB connectivity module. For PostgreSQL, use psycopg2 and for MySQL use mysqlclient.
 
-On Windows systems, TACTIC Python and supporting module availability is
-through the websites of the supporting module projects. 
-
-On UNIX/Linux systems, the system package manager typically has options
-for installing all the required Python packages onto the UNIX host
-machine. 
+On UNIX/Linux systems, the system package manager typically has options for installing all the required Python packages onto the UNIX host machine. 
 
 
 
 ## Install Image Utilities
 
 <a href="https://imagemagick.org/">Imagemagick</a> and <a href="https://www.ffmpeg.org/">ffmpeg</a> are by TACTIC for various asset functions such as icon generation and metadata extraction. Installers are available for both Linux and Windows systems.
-
-
-## Install TACTIC
-
-Unzip the file in a temporary location.
-
-```
-# cd /tmp
-# unzip tactic_#.#.#.#.zip
-```
-
-Go to
-/tmp/tactic\_\#.*.*/src/install/
-
-```
-cd /tmp/tactic_#.#.#.#/src/install
-```
-
-Execute: 
-install.py
-
-> **Note**
->
-> You must invoke the installation with root user privileges because it
-> attempts to write to the &lt;python\_install&gt;/site-packages directory.
-
-```
-su
-python install.py
-```
-
-The installer will ask a number of questions. First it ask for the
-&lt;TACTIC\_BASE\_DIR&gt;:
-
-    Please enter the base path of the TACTIC installation:
-
-    (/home/apache) ->
-
-Enter the user the Apache Web Server is run under.
-
-    Please enter the user Apache Web Server is run under:
-
-    (apache) ->
-
-It would copy the source code to the base path and create a symbolic
-link to it. An Apache Web Server file will be generated at the end which
-you would need to copy to the Apache config area upon installation of
-the web server. If there are existing files in the destination directory
-the installer will ask for your confirmation to remove it. At the end,
-you will see this:
-
-    *** Installation of TACTIC completed at [/home/apache] ***
-
-
-    Next, please install the Apache Web Server and then copy the Apache config extension
-    [/home/apache/tactic_data/config/tactic.conf] to the Apache web server config area. e.g.
-    /etc/httpd/conf.d/
-
-**Verification**
-
-When the installation is completed, an asset directory will be created
-at '&lt;TACTIC\_DATA\_DIR&gt;/assets'.
-
-The file tactic\_paths.py will be created in the following directories:
-
-**Linux**
-
-    /usr/lib/python#.#/site-packages/tacticenv
-
-Default contents:
-
-    TACTIC_INSTALL_DIR='/home/apache/tactic'
-    TACTIC_SITE_DIR=''
-    TACTIC_DATA_DIR='/home/apache/tactic_data'
-
-
-## Network Machine Access
-
-If you are on the server, you can access it by using the URL
-<http://localhost/tactic>. For other people to access it on the network,
-you need to find out its IP address. In a linux server, you can use the
-command "ifconfig" to locate it. It’s the one listed as the inet addr.
 
 
 ## Install Webserver
@@ -316,6 +243,88 @@ Finally, after verifying the configuration is correct, restart the
 Apache service:
 
     service httpd restart
+
+## Install TACTIC
+
+Unzip the file in a temporary location.
+
+```
+# cd /tmp
+# unzip tactic_#.#.#.#.zip
+```
+
+Go to
+/tmp/tactic\_\#.*.*/src/install/
+
+```
+cd /tmp/tactic_#.#.#.#/src/install
+```
+
+Execute: 
+install.py
+
+> **Note**
+>
+> You must invoke the installation with root user privileges because it
+> attempts to write to the &lt;python\_install&gt;/site-packages directory.
+
+```
+su
+python install.py
+```
+
+The installer will ask a number of questions. First it ask for the
+&lt;TACTIC\_BASE\_DIR&gt;:
+
+    Please enter the base path of the TACTIC installation:
+
+    (/home/apache) ->
+
+Enter the user the Apache Web Server is run under.
+
+    Please enter the user Apache Web Server is run under:
+
+    (apache) ->
+
+It would copy the source code to the base path and create a symbolic
+link to it. An Apache Web Server file will be generated at the end which
+you would need to copy to the Apache config area upon installation of
+the web server. If there are existing files in the destination directory
+the installer will ask for your confirmation to remove it. At the end,
+you will see this:
+
+    *** Installation of TACTIC completed at [/home/apache] ***
+
+
+    Next, please install the Apache Web Server and then copy the Apache config extension
+    [/home/apache/tactic_data/config/tactic.conf] to the Apache web server config area. e.g.
+    /etc/httpd/conf.d/
+
+**Verification**
+
+When the installation is completed, an asset directory will be created
+at '&lt;TACTIC\_DATA\_DIR&gt;/assets'.
+
+The file tactic\_paths.py will be created in the following directories:
+
+**Linux**
+
+    /usr/lib/python#.#/site-packages/tacticenv
+
+Default contents:
+
+    TACTIC_INSTALL_DIR='/home/apache/tactic'
+    TACTIC_SITE_DIR=''
+    TACTIC_DATA_DIR='/home/apache/tactic_data'
+
+
+## Network Machine Access
+
+If you are on the server, you can access it by using the URL
+<http://localhost/tactic>. For other people to access it on the network,
+you need to find out its IP address. In a linux server, you can use the
+command "ifconfig" to locate it. It’s the one listed as the inet addr.
+
 
 ## Verify the Installation
 
