@@ -1,31 +1,26 @@
 # TACTIC VM Setup and Install
 
-The TACTIC VM lets you run a virtual machine on Windows or Linux, and
-provides an easy way to evaluate the TACTIC platform without changing
-your operating system. The VM requires VMware Player for Windows or
-Linux,
+The TACTIC VM lets you test a TACTIC server environment on your own computer. You can use VMware Player or Virtual Box to run the VM.
 
-***Q.*** Will my computer be adversely affected if I run VM ?
+Download the VM from the community site <a href="http://community.southpawtech.com/tactic/community/link/downloads">downloads page</a>.
 
-***A.*** Your computer will not be affected by the VM. Aside from
-requiring a large amount of memory (the TSI unzips into a folder needing
-at least 5-10 GB), the TACTIC virtual machine does not interact with
-your host machine. At the end of the evaluation period, you can either
-continue using the TSI for production, migrate your data to a new full
-server install or simply delete the TSI directory. (Note that if you
-delete the TSI directory, all evaluation data you entered into the
-TACTIC evaluation is destroyed.)
+Get started by reading the Quick Start documentation from the community site.
 
-**Request and download the TACTIC Server Image (TSI)**
+## Login Info
 
-The TSI is available on request from Southpaw Technology. When you
-contact the Southpaw sales or support representatives and set up an
-evaluation account, they will send you a URL and login/password
-information so you can begin the trial.
+There are two sets of login info to remember:
 
-For more information, visit:
+1.  VM Linux user
 
-[**http://www.southpawtech.com**](http://www.southpawtech.com)
+    user: root password: south123paw
+
+2.  Samba share
+
+    user: tactic password: south123paw
+
+
+
+## VMWare Player Setup
 
 **Download VMware Player or server**
 
@@ -63,29 +58,6 @@ interesting options that allow for more flexible operation of a VM.
 > The instructions for running a VM can be found in the VMware server
 > documentation. Running the VM from VMware player is covered in this
 > document.
-
-**Web Browser**
-
-We recommend you use Mozilla Firefox as your web browser to access the
-TSI. You can download Firefox at:
-
-**<http://www.mozilla.com/en-US/firefox/> \[<http://www.mozilla.com/en-US/firefox/>\]**
-
-**Login Info**
-
-There are three sets of login info to remember:
-
-1.  VM Linux user
-
-    user: root password: south123paw
-
-2.  TACTIC UI in browser
-
-    user: admin password: tactic
-
-3.  Windows Samba share
-
-    user: apache password: south123paw
 
 **Networking**
 
@@ -216,43 +188,7 @@ To make your evaluation easier, the TSI uses passwords that are easy to
 guess and a Samba share. This could cause security issues, so your IT
 department must be aware of your use of the TSI.
 
-**Tactic Samba Network Details**
-
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Workgroup</strong></p></td>
-<td><p>Southpawtech</p></td>
-</tr>
-<tr class="even">
-<td><p><strong>Machine</strong></p></td>
-<td><p>TSI 2.0.0</p></td>
-</tr>
-<tr class="odd">
-<td><p><strong>Share</strong></p></td>
-<td><p>Tactic</p></td>
-</tr>
-<tr class="even">
-<td><p><strong>Share User</strong></p></td>
-<td><p>Apache</p></td>
-</tr>
-<tr class="odd">
-<td><p><strong>Share Password</strong></p></td>
-<td><p>south123paw</p></td>
-</tr>
-</tbody>
-</table>
-
 If at any point during the usage of the VM there is a need to reset the
 VM back to its original state, simply delete or archive the directory
 with the TSI data, and re-expand the zip file that was downloaded from
 the community site.
-
-Your TACTIC VM server is set up.
-
-Contact your TACTIC Representative for support details at
-<support@southpawtech.com>

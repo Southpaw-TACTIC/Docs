@@ -4,25 +4,24 @@
 
     It is possible that an IP address was not assigned because your host
     machine is not connected to a network. Or, you have a special network
-    configuration that may require one of the following settings: \* Network with DHCP: bridged \* Network without DHCP: NAT \* No network: host-only
+    configuration that may require one of the following settings: 
+    
+    - Network with DHCP: bridged
+    - Network without DHCP: NAT
+    - No network: host-only
 
-    +
-    *\*\_Changing Windows Special Network Configurations*\*\_
+    **Changing Windows Special Network Configurations**
 
-    +
     In the top right corner of your VMware player, click on the down arrow
     beside the Ethernet button and choose **host-only** , **NAT**, or **bridged**.
     Make sure the **Connected** menu item is checked.
 
-    +
-    ***Changing Linux Special Network Configurations***
+    **Changing Linux Special Network Configurations**
 
-    +
     In the top right corner of your VMware player, right-click on the
     Ethernet button and choose **host-only**, **NAT**, or **bridged**. Make sure
     the **Connected** menu item is checked.
 
-    +
     If the problem persists, refer to the VMware Player documentation by
     pressing F1.
 
@@ -30,7 +29,7 @@
 
     In the VMware player, run the following command in the shell:
 
-    `ifconfig`
+        ifconfig
 
     The IP is the internet address; for example, "192.168.14.101."
 
@@ -42,9 +41,9 @@
     where X is the arbitrary number of the interface. To restart "ethX", run
     the following commands:
 
-    `ifdown ethX`
+       ifdown ethX
 
-    `ifup ethX`
+       ifup ethX
 
 3.  **I get a proxy error in my browser that looks like the following:**
 
@@ -60,6 +59,6 @@
     a problem with the TACTIC service. Stop the conflicting service. Then
     restart TACTIC in the VM by logging in as root and running the command:
 
-    \`service tactic start \`
+        service tactic start
 
 
