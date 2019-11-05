@@ -355,6 +355,23 @@ service restart.
 </tbody>
 </table>
 
+
+## Portal
+
+<table>
+<colgroup>
+<col width="6%" />
+<col width="93%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><p>auto_upgrade</p></td>
+<td><p>Set as "true" to allow the site to auto-upgrade databases and plugins to the newest version when loading the project. Set as "false" to disable the auto-upgrade.</p></td>
+</tr>
+</tbody>
+</table>
+
+
 ## Checkin
 
 TACTIC uses the following directory and path settings for internal and
