@@ -366,7 +366,7 @@ service restart.
 <tbody>
 <tr class="odd">
 <td><p>auto_upgrade</p></td>
-<td><p>Set as "true" to allow the site to auto-upgrade databases and plugins to the newest version when loading the project. Set as "false" to disable the auto-upgrade.</p></td>
+<td><p>This config is default to be false. Set as "true" to allow the site to auto-upgrade databases and plugins to the newest version when loading the project. Set as "false" or remove the config to disable the auto-upgrade.</p></td>
 </tr>
 </tbody>
 </table>
