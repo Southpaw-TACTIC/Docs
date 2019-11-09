@@ -8,14 +8,14 @@ The admin user has full access to TACTIC, and is used to do system configuration
 Hence, remember the password you set.
 
 
-<img src="/media/quick-start-fresh-login.PNG" style="max-width: 300px"/>
+![image](media/quick-start-fresh-login.PNG)
 
 
 ## 2. Create a Project
 Next, create a project. A TACTIC Project contains all project related metadata in a database.
 
 
-<img src="/media/quick-start-create-project.PNG" style="max-width: 300px"/>
+![image](media/quick-start-create-project.PNG)
 
 You must provide a name and code for your project. Select "Create" to get started with the default 
 TACTIC theme.
@@ -54,11 +54,12 @@ Select Configuration to open the configuration panel, and select the plus button
 
 Provide a title for your SType, and a Searchable Type code will be automatically created. Optionally, you can provide a description and preview image as well.
 
-<img src="/media/quick-start-create-stype-3.PNG" style="max-width: 300px"/>
+![image](media/quick-start-create-stype-3.PNG)
+
 
 Jump to the 3rd step - "Workflow", and enable pipelines for your SType.
 
-<img src="/media/quick-start-create-stype-4.PNG" style="max-width: 300px"/>
+![image](media/quick-start-create-stype-4.PNG)
 
 Finally, select register, and your SType will be created. You can now create a workflow for your SType.
 
