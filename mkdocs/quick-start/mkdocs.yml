@@ -1,6 +1,5 @@
 site_name: TACTIC Quick Start Documentation
 nav:
-    - 'Introduction': './quick-start-intro.md'
     - 'Get TACTIC': './quick-start-get-tactic.md'
     - 'Setup TACTIC': './quick-start-setup.md'
     - 'Build and Run a Workflow': './quick-start-workflow.md'

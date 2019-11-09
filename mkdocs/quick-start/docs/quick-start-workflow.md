@@ -39,7 +39,7 @@ You can change node types from the process info panel select.
 
 ## 2. Example workflow
 
-In this guide, we will work with the following examples Sales Customer Lead workflow. 
+In this guide, we will work with the following example Sales Customer Lead workflow. 
 
 ![image](media/quick-start-build-workflow-6.PNG)
 
@@ -193,7 +193,7 @@ This will create 3 tasks for each customer as seen below,
 
 ![image](media/quick-start-run-workflow-2.PNG)
 
-To trigger the start of the working, we set the first process to pending.
+To trigger the start of the workflow, we set the first process to pending.
 
 ![image](media/quick-start-run-workflow-3.gif)
 
