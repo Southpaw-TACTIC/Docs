@@ -37,9 +37,9 @@ nav:
         - 'Backup And Restore Server': './backup-and-restore-server.md'
         - 'Automated Backup': './automate-database-backup.md'
         - 'Configure Logrotate': './maintenance-logs.md'
-    #- TACTIC Server VM:
-    #    - 'Setup And Install': './tsi-setup-and-install.md'
-    #    - 'Troubleshooting': './tsi-troubleshooting.md'
-    #    - 'Moving Data': './tsi-moving-data.md'
+    - TACTIC Server VM:
+        - 'Setup And Install': './tsi-setup-and-install.md'
+        - 'Troubleshooting': './tsi-troubleshooting.md'
+        #- 'Moving Data': './tsi-moving-data.md'
 
 theme: material
