@@ -37,19 +37,21 @@ You can change node types from the process info panel select.
 
 
 
-## 3. Example workflow
+## 2. Example workflow
 
-In this guide, we will work with the following examples Sales Customer Lead workflow. This workflow includes,
+In this guide, we will work with the following examples Sales Customer Lead workflow. 
 
 ![image](media/quick-start-build-workflow-6.PNG)
 
+This workflow includes,
+
 - manual tasks for data input, referral and follow-up
-- automated decisions based on customer locale, customer product interest
+- automated decisions based on customer locale and customer product interest
 - automated email notifications
 
 
 
-## 4. Configure condition nodes
+## 3. Configure condition nodes
 
 Condition nodes allow automated decision trees within your workflow. Using Python or Javascript, you can choose which output streams your workflow should take. The input object contains data from the execution flow.
 
@@ -88,7 +90,7 @@ if "Product 3" in products:
 return outputs
 ```
 
-## 5. Configure action nodes
+## 4. Configure action nodes
 
 Action nodes allow for execution of custom scripts within your workflow. Using Python or Javascript, you can interact with the TACTIC API or external services. 
 
@@ -97,8 +99,13 @@ In the following example, we use a customer's email to send information related 
 **Product 1 Automated Response Python code:**
 
 ```Python
+customer = input.get("sobject")
+customer_name = customer.get("name")
+
 # Send customer email
 message = """
+Dear %s,
+
 Thank you for your interest in Product 1.
 You will be contacted by a sales representative in the next 48 hours.
 
@@ -110,11 +117,10 @@ Best,
 
 Sales
 Best-In-Sales Inc.
-"""
+""" % customer_name
 
 subject = "You will be contacted shortly."
 
-customer = input.get("sobject")
 recipient_email= customer.get("email")
 
 sender_email = "sales@bestinsales.com"
@@ -142,9 +148,12 @@ end_date = today + timedelta(days=2)
 server.update(search_key, {'bid_end_date': end_date})
 ```
 
+> Note: To test the email configuration, you will need to configure the mail servce, and use a working sender email.
+See the [Sys-Admin docs](http://community.southpawtech.com/docs/sys-admin/setup-email/) for details.
+
 Now that the pipeline is configured, we can import a customer list, and execute the workflow under each customer.
 
-## 6. Import data
+## 5. Import data
 
 In order to execute a workflow, you must first create SObjects. There are a number of ways you can create SObjects:
 
@@ -152,7 +161,7 @@ In order to execute a workflow, you must first create SObjects. There are a numb
 - EditWdg
 - CSV Import Tool
 
-In this example, we will use the CSV Import Tool as it will allow us to create easily columns for customer metadata email, phone and products.
+In this example, we will use the CSV Import Tool as it will allow us to easily create columns for customer metadata email, phone and products.
 
 Navigate to the Customer SType table from the project dashboard.
 
@@ -160,13 +169,44 @@ Navigate to the Customer SType table from the project dashboard.
 
 Open the CSV Import Tool from the gear menu > File > Import CSV
 
-![image](media/quick-start-import-data-1.PNG) 
+![image](media/quick-start-import-data-1.png) 
 
-Upload a csv file available here. An example customer list can be found here.
+Upload a csv file available here. An example customer list can be found [here](data/customer_data.csv).
+Select which columns you want to import. For this example, import at least name, email, phone number and products. 
 
 ![image](media/quick-start-import-data-2.gif)
 
 
+## 6. Run workflow
 
+To run our workflow we need to assign the workflow to customers, and create initial tasks for these SObjects. We will then trigger the first process in the workflow.
 
-## 7. Run workflow
+You can use the TACTIC API or the TACTIC interface to achieve this. In this example, we will show how to use the TACTIC interface to run the workflow.
+
+First, assign the workflow to each customer in the customer table using the multi-select tool.
+
+![image](media/quick-start-run-workflow-1.gif)
+
+Second, create tasks for these customers using the Create Tasks tool under the gear menu > Tasks > Add Tasks to Selected.
+
+This will create 3 tasks for each customer as seen below,
+
+![image](media/quick-start-run-workflow-2.PNG)
+
+To trigger the start of the working, we set the first process to pending.
+
+![image](media/quick-start-run-workflow-3.gif)
+
+In this example, the first process is a manual task. When this task is complete, an assigned user can set this task to Complete to the next step in the workflow. 
+
+If the first process in your workflow is automatic, you can trigger the start of the action node using the API method call_pipeline_event.
+
+Once the Data Input task is set Complete, the workflow will run. It will mark chosen decision tree output streams as pending, and other streams as not required.
+
+![image](media/quick-start-run-workflow-4.PNG)
+
+## Conclusion
+
+In this example, we created a workflow containing manual processes (tasks), automated decisions (condition nodes) and automated actions (action nodes).
+We were able to import a dataset and execute our workflow on this dataset.
+
