@@ -18,9 +18,20 @@ files.
         <tmp_dir>/home/tactic/tactic_temp</tmp_dir>
         <default_project>default_project_code</default_project>
         <include_js>/context/some_external_lib.js</include_js>
-        <include_css></include_css>
+        <include_css>plugins/styles.cs</include_css>
         <install_dir>/home/tactic/TACTIC</install_dir>
         <site_dir>/home/tactic/tactic_sites</site_dir>
+        <plugin_dir>/home/tactic/TACTIC/spt/plugins</plugin_dir>
+        <shutil_fix>enabled</shutil_fix>
+        <default_project>workflow</default_project>
+        <base_url>portal.southpawtech.com</base_url>
+        <top_class_name>tactic.ui.app.PageNavContainerWdg</top_class_name>
+        <header_class_name>tactic.ui.app.PageNavContainerWdg</header_class_name>
+        <first_day_of_week>6</first_day_of_week>
+        <layout>fixed</layout>
+        <doc_dir></doc_dir>
+        <cache_mode></cache_mode>
+        <log_type><log_type>
     </install>
 ```
 
@@ -59,7 +70,7 @@ files.
 <td><p>The installation directory for TACTIC</p></td>
 </tr>
 <tr class="even">
-<td><p>SITE_DIR***</p></td>
+<td><p>SITE_DIR</p></td>
 <td><p>The directory storing user informations</p></td>
 </tr>
 <tr class="odd">
@@ -67,46 +78,41 @@ files.
 <td><p>The directory storing plugins created</p></td>
 </tr>
 <tr class="even">
-<td><p>DOC_DIR***</p></td>
+<td><p>DOC_DIR</p></td>
 <td><p>The directory of tactic documents</p></td>
 </tr>
 <tr class="odd">
-<td><p>LAYOUT****</p></td>
+<td><p>CACHE_MODE</p></td>
 <td><p></p></td>
 </tr>
 <tr class="even">
-<td><p>FIRST_DAY_OF_WEEK***</p></td>
+<td><p>FIRST_DAY_OF_WEEK</p></td>
 <td><p>A number indicates the first day of the week, for example, 6 indicates Saturday.</p></td>
 </tr>
 <tr class="odd">
-<td><p>LOG_TYPE***</p></td>
-<td><p></p></td>
+<td><p>LOG_TYPE</p></td>
+<td><p>Default value is None, can also be "file_with_date" and "stream". "file_with_date" separates log files by date, the default value writes all log in the same file. Useful on Windows system without Logrotate.</p></td>
 </tr>
 <tr class="even">
-<td><p>SHUTIL_FIX***</p></td>
+<td><p>SHUTIL_FIX</p></td>
 <td><p>once "enabled", disabling copystat method for windows shared folder mounted on Linux</p></td>
 </tr>
 <tr class="odd">
 <td><p>DEFAULT_PROJECT</p></td>
 <td><p>The default project of your user</p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><p>BASE_URL</p></td>
 <td><p>the base url of you website</p></td>
 </tr>
-<tr class="even">
-<td><p>TOP_CLASS_NAME***</p></td>
-<td><p>the class name of default wdg of top container</p></td>
-</tr>
 <tr class="odd">
-<td><p>HEADER_CLASS_NAME***</p></td>
-<td><p>The class name of header</p></td>
+<td><p>TOP_CLASS_NAME</p></td>
+<td><p>the class name of default wdg of top container, will be returned by WebEnvironment.get_top_class_name()</p></td>
 </tr>
 <tr class="even">
-<td><p>CACHE_MODE***</p></td>
-<td><p>caching system for non-Windows system</p></td>
+<td><p>HEADER_CLASS_NAME</p></td>
+<td><p>this value will be returned by WebEnvironment.get_header_class_name()</p></td>
 </tr>
-
 </tbody>
 </table>
 
@@ -133,6 +139,16 @@ TACTIC.
     <thread_count>50</thread_count>
     <process_time_alive>30</process_time_alive>
     <system_class></system_class>
+    <mail_base_url></mail_base_url>
+    <notify_user_name>username<notify_user_name>
+    <use_periodic_restart>true</use_periodic_restart>
+    <queue_process_timeout>86400</queue_process_timeout>
+    <start_port>5510</start_port>
+    <ports>5510|5511|5512</ports>
+    <queue_process_count>5</queue_process_count>
+    <scheduler>true</scheduler>
+    <scheduler_sites>admin|user|name</scheduler_sites>
+    <rsync><rsync>
 </services>
 ```
 
@@ -169,12 +185,12 @@ Set as "true" to enable TLS (Transport Layer Security) for the connection to ema
 </p></td>
 </tr>
 <tr class="even">
-<td><p>mail_default_admin_email</p></td>
+<td><p>MAIL_DEFAULT_ADMIN_EMAIL</p></td>
 <td><p>
 Default email for admin user is no email is set. This is used for password recovery functionality and notifications.
 </tr>
 <tr class="odd">
-<td><p>notify_user</p></td>
+<td><p>NOTIFY_USER</p></td>
 <td><p>
 Email to send system exceptions and errors to.
 </p></td>
@@ -208,27 +224,27 @@ Email to send system exceptions and errors to.
 <td><p>Allows for an override some of the low level system functionality. For example 'mkdirs' and 'exists'</p></td>
 </tr>
 <tr class="odd">
-<td><p>mail_base_url***</p></td>
-<td><p>the base url for mail server</p></td>
+<td><p>MAIL_BASE_URL</p></td>
+<td><p>If base_url is not defined, expression language will use mail_base_url for expression variable.</p></td>
 </tr>
 <tr class="even">
-<td><p>notify_user_name</p></td>
+<td><p>NOTIFY_USER_NAME</p></td>
 <td><p>The name of the person who receives the system exceptions and errors.</p></td>
 </tr>
 <tr class="odd">
-<td><p>use_periodic_restart</p></td>
-<td><p>Determines whether killing TACTIC process periodically or not</p></td>
+<td><p>USE_PERIODIC_RESTART</p></td>
+<td><p>set as 'true' to enable killing TACTIC process periodically</p></td>
 </tr>
 <tr class="even">
-<td><p>queue_process_timeout</p></td>
-<td><p>The interval for use_periodic_restart</p></td>
+<td><p>QUEUE_PROCESS_TIMEOUT</p></td>
+<td><p>The interval for use_periodic_restart, has to be integer, unit: seconds</p></td>
 </tr>
 <tr class="odd">
-<td><p>start_port****</p></td>
-<td><p>start port for your TACTIC website</p></td>
+<td><p>START_PORT</p></td>
+<td><p>The first port that your TACTIC website can use. The proceeding PROCESS_COUNT number of ports will be used by TACTIC.</p></td>
 </tr>
 <tr class="even">
-<td><p>ports</p></td>
+<td><p>PORTS</p></td>
 <td><p>the ports can be used by TACTIC, separated by "|"</p></td>
 </tr>
 <!--
@@ -246,24 +262,24 @@ Email to send system exceptions and errors to.
 </tr>
 -->
 <tr class="even">
-<td><p>enable</p></td>
-<td><p>The services that will used by your TACTIC website, separated by "|".</p></td>
+<td><p>ENABLE</p></td>
+<td><p>The services that will used by your TACTIC website, can be tactic, job_queue, watch_folder, scheduler, etc., separated by "|".</p></td>
 </tr>
 <tr class="odd">
-<td><p>queue_process_count</p></td>
-<td><p>The number of processes in the job queue</p></td>
+<td><p>QUEUE_PROCESS_COUNT</p></td>
+<td><p>The number of processes in the job queue, has to be integer</p></td>
 </tr>
 <tr class="even">
-<td><p>scheduler</p></td>
-<td><p>Determines whether or not the scheduler services will be used</p></td>
+<td><p>SCHEDULER</p></td>
+<td><p>set as "true" to enable the scheduler services</p></td>
 </tr>
 <tr class="even">
-<td><p>scheduler_sites</p></td>
+<td><p>SCHEDULER_SITES</p></td>
 <td><p>The sites the scheduler service will run on.</p></td>
 </tr>
 <tr class="odd">
-<td><p>rsync****</p></td>
-<td><p></p></td>
+<td><p>rsync</p></td>
+<td><p>rsync executable</p></td>
 </tr>
 </tbody>
 </table>
@@ -284,10 +300,25 @@ TACTIC.
         <account_lockout_duration>30</account_lockout_duration>
         <auto_create_user>false</auto_create_user>
         <api_require_password>true</api_require_password>
-        <api_password></api_password>
+        <api_password>api password</api_password>
         <allow_guest>false</allow_guest>
         <guest_mode>restricted</guest_mode>
         <guest_url_allow>/guest_view</guest_url_allow>
+        <api_method_restricted>true</api_method_restricted>
+        <api_mode>query</api_mode>
+        <api_cmd_restricted>true</api_cmd_restricted>
+        <authenticate_encryption>drupal</authenticate_encryption>
+        <ldap_server>server address</ldap_server>
+        <bind_dn></bind_dn>
+        <bind_password>bindDN password</bind_password>
+        <base_dn></base_dn>
+        <password>admin password</password>
+        <site_class>pyasm.security.Site</site_class>
+        <authenticate_ticket_class></authenticate_ticket_class>
+        <inactive_ticket_expiry>2 days</inactive_ticket_expiry>
+        <protocol>http</protocol>
+        <hosts></hosts>
+
     </security>
 
 <table>
@@ -333,7 +364,7 @@ TACTIC.
 <td><p>Auto create user in TACTIC during authentication phase if it does not exist. (Deprecated: use &quot;authenticate_mode&quot; in new way of authentication)</p></td>
 </tr>
 <tr class="even">
-<td><p>API_REQUIRE_PASSOWRD</p></td>
+<td><p>API_REQUIRE_PASSWORD</p></td>
 <td><p>Client API script requires password to login or not</p></td>
 </tr>
 <tr class="odd">
@@ -353,12 +384,12 @@ TACTIC.
 <td><p>In full mode, one can have multiple relative URLs predefined for guest, separated by |.</p></td>
 </tr>
 <tr class="odd">
-<td><p>api_method_restricted</p></td>
-<td><p>Determines whether api methods can be accessed by all users or not</p></td>
+<td><p>API_METHOD_RESTRICTED</p></td>
+<td><p>set as "true" to restrict all API methods access. Certain users can access specific API methods by setting the access rules.</p></td>
 </tr>
 <tr class="even">
-<td><p>api_mode</p></td>
-<td><p>can be "open", "closed", and "query". Api can be accessed by all users if "open"; is restricted to admin user if "closed"; Api access are specified by user if "query".</p></td>
+<td><p>API_MODE</p></td>
+<td><p>can be "open", "closed", and "query". API's can be accessed by all users if "open"; API's can only be accessed by admin user if "closed"; API's access is specified by access rule if "query".</p></td>
 </tr>
 <!--
 <tr class="odd">
@@ -367,64 +398,68 @@ TACTIC.
 </tr>
 -->
 <tr class="even">
-<td><p>api_cmd_restricted</p></td>
-<td><p>Determines whether commands can be executed through api's by all users or not</p></td>
+<td><p>API_CMD_RESTRICTED</p></td>
+<td><p>set as "true" to disable command execution through API's, admin is the only user that can execute commands through API's.</p></td>
 </tr>
 <tr class="odd">
-<td><p>authenticate_encryption***</p></td>
-<td><p>the encryption for user information. Can be "drupal"</p></td>
+<td><p>AUTHENTICATE_ENCRYPTION</p></td>
+<td><p>set as "drupal" to enable Drupal encryption method for user information. It will use md5 encryption by default.</p></td>
 </tr>
 <tr class="even">
-<td><p>ldap_server</p></td>
+<td><p>LDAP_SERVER</p></td>
 <td><p>LDAP server</p></td>
 </tr>
 <tr class="odd">
-<td><p>bind_dn</p></td>
+<td><p>BIND_DN</p></td>
 <td><p>BindDN for LDAP</p></td>
 </tr>
 <tr class="even">
-<td><p>bind_password</p></td>
-<td><p>the corresponding password for bindDN in LDAP</p></td>
+<td><p>BIND_PASSWORD</p></td>
+<td><p>The corresponding password for bindDN in LDAP</p></td>
 </tr>
 <tr class="odd">
-<td><p>force_lowercase_login</p></td>
-<td><p>Determines whether login names have to be lowercase or not.</p></td>
+<td><p>FORCE_LOWERCASE_LOGIN</p></td>
+<td><p>set as "true" to restrict login names to be lowercase.</p></td>
 </tr>
 <tr class="even">
-<td><p>version</p></td>
+<td><p>VERSION</p></td>
 <td><p>The security version of TACTIC</p></td>
 </tr>
 <tr class="odd">
-<td><p>password</p></td>
+<td><p>PASSWORD</p></td>
 <td><p>The default password for admin</p></td>
 </tr>
 <tr class="even">
-<td><p>site_class</p></td>
+<td><p>SITE_CLASS</p></td>
 <td><p>the class name for site objects</p></td>
 </tr>
 <tr class="odd">
-<td><p>authenticate_ticket_class</p></td>
-<td><p>The class for tickets objects</p></td>
+<td><p>AUTHENTICATE_TICKET_CLASS</p></td>
+<td><p>The class of an external tickets source, which is used to get the key when ticket doesn't exists</p></td>
 </tr>
 <tr class="even">
-<td><p>inactive_ticket_expiry</p></td>
-<td><p>The interval for auto-logout when inactive</p></td>
+<td><p>INACTIVE_TICKET_EXPIRY</p></td>
+<td><p>Life expectency of a ticket when user is inactive. Need to specify the time metric using, and time metrics can be "day", "week", "year". Time metric is defaulted to be "day". Sample input: "1 day"</p></td>
 </tr>
 <tr class="odd">
-<td><p>protocol</p></td>
-<td><p>the url protocol</p></td>
+<td><p>PROTOCOL</p></td>
+<td><p>the base url protocol</p></td>
 </tr>
 <tr class="even">
-<td><p>session_key***</p></td>
+<td><p>SESSION_KEY</p></td>
 <td><p>key for login tickets</p></td>
 </tr>
 <tr class="odd">
-<td><p>authenticate_domains***</p></td>
-<td><p>The domain for your website</p></td>
+<td><p>AUTHENTICATE_DOMAINS</p></td>
+<td><p>(DEPRACTED) Used for active directory/ldap authentication. Use active_directory, domains instead.</p></td>
 </tr>
 <tr class="even">
-<td><p>hosts</p></td>
+<td><p>HOSTS</p></td>
 <td><p>the hosts for your website, separated by "|".</p></td>
+</tr>
+<tr class="odd">
+<td><p>BASE_DN</p></td>
+<td><p>BaseDN for LDAP</p></td>
 </tr>
 </tbody>
 </table>
@@ -439,6 +474,13 @@ TACTIC.
         <password>none</password>
         <sobject_database>sthpw</sobject_database>
         <pool_max_connections>0</pool_max_connections>
+        <sqlite_db_dir>/home/tactic_data/sql_lite</sqlite_db_dir>
+        <join>false</join>
+        <ORACLE_HOME>/home/tactic_data/oracle</ORACLE_HOME>
+        <NLS_LANG></NLS_LANG>
+        <sslmode></sslmode>
+        <encoding>utf8</encoding>
+        <charset>utf8</charset>
     </database>
 
 <table>
@@ -479,12 +521,12 @@ TACTIC.
 <td><p>The pool of connections available for connecting to the database. 0 is recommended for PostgreSQL implementation</p></td>
 </tr>
 <tr class="even">
-<td><p>sqlite_db_dir</p></td>
+<td><p>SQLITE_DB_DIR</p></td>
 <td><p>the directory of sqlite database</p></td>
 </tr>
 <tr class="odd">
-<td><p>join</p></td>
-<td><p>Determines whether a multi-database join can be made</p></td>
+<td><p>JOIN</p></td>
+<td><p>set as "false" to disable multi-database join</p></td>
 </tr>
 <tr class="even">
 <td><p>ORACLE_HOME</p></td>
@@ -495,15 +537,15 @@ TACTIC.
 <td><p>The NLS_LANG for Oracle</p></td>
 </tr>
 <tr class="even">
-<td><p>sslmode</p></td>
+<td><p>SSLMODE</p></td>
 <td><p>The sslmode for postgreSQL</p></td>
 </tr>
 <tr class="odd">
-<td><p>encoding</p></td>
+<td><p>ENCODING</p></td>
 <td><p>The encoding of the MySQL database</p></td>
 </tr>
 <tr class="even">
-<td><p>charset</p></td>
+<td><p>CHARSET</p></td>
 <td><p>The charset of the MySQL database</p></td>
 </tr>
 </tbody>
@@ -515,6 +557,7 @@ TACTIC.
         <web_dir>perforce</web_dir>
         <p4>p4</p4>
         <port>1666</port>
+        <depot>book</depot>
     </perforce>
 
 <table>
@@ -535,38 +578,10 @@ TACTIC.
 <td><p>PORT</p></td>
 <td><p>The port to be used for connection to perforce.</p></td>
 </tr>
-<!--
 <tr class="even">
-<td><p>client_env_var***</p></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td><p>port_env_var***</p></td>
-<td><p></p></td>
-</tr>
-<tr class="even">
-<td><p>user_env_var***</p></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td><p>password_env_var***</p></td>
-<td><p></p></td>
-</tr>
--->
-<tr class="even">
-<td><p>depot***</p></td>
+<td><p>depot</p></td>
 <td>The depot of perforce</td>
 </tr>
-<!--
-<tr class="odd">
-<td><p>sync***</p></td>
-<td><p>The port to be used for connection to perforce.</p></td>
-</tr>
-<tr class="odd">
-<td><p>repo***</p></td>
-<td></td>
-</tr>
--->
 </tbody>
 </table>
 
@@ -577,6 +592,7 @@ for all users. In this example, the 'BON\_NOCHE' palette specified:
 
     <look>
         <palette>BON_NOCHE</palette>
+        <kiosk_mode>true</kiosk_mode>
     </look>
 
 Other available palettes are 'AQUA', 'DARK', 'BRIGHT', 'DEFAULT', 'SILVER',
@@ -611,13 +627,17 @@ service restart.
 </tr>
 <tr class='even'>
 <td><p>kiosk_mode</p></td>
-<td><p>Determines whether TACTIC is running on kiosk mode of windows or not</p></td>
+<td><p>set as "true" to disable spt.alert function, default is false</p></td>
 </tr>
 </tbody>
 </table>
 
 
 ## Portal
+    <portal>
+        <auto_upgrade>true</auto_upgrade>
+        <enabled>true</enabled>
+    </portal>
 
 <table>
 <colgroup>
@@ -626,11 +646,157 @@ service restart.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td><p>auto_upgrade</p></td>
+<td><p>AUTO_UPGRADE</p></td>
 <td><p>This config is default to be false. Set as "true" to allow the site to auto-upgrade databases and plugins to the newest version when loading the project. Set as "false" or remove the config to disable the auto-upgrade.</p></td>
 <tr class="even">
+<td><p>ENABLED</p></td>
+<td><p>set as "true" to indicate this is a portal website</p></td>
+</tr>
+</tbody>
+</table>
+
+
+## Schedule
+    <schedule>
+        <mode>from_end_date</mode>
+    </schedule>
+<table>
+<colgroup>
+<col width="6%" />
+<col width="93%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><p>MODE</p></td>
+<td><p>can be 'even', 'even_day', and 'from_end_date'. "even" mode creates tasks with the same duration that measured by hours; "even_day" mode creates tasks with the same duration that measured by days; "from_end_date" creates tasks with durations according to its "bid_start_date" and "bid_end_date"</p></td>
+</tr>
+</tbody>
+</table>
+
+
+## Async
+    <async>
+        <process_count>3</process_count>
+    </async>
+<table>
+<colgroup>
+<col width="6%" />
+<col width="93%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><p>process_count</p></td>
+<td><p>The number of processes for the aSync queue service, has to be integer.</p></td>
+</tr>
+</tbody>
+</table>
+
+
+## Load
+    <load>
+        <loader_use_namespace></loader_use_namespace>
+    </load>
+<table>
+<colgroup>
+<col width="6%" />
+<col width="93%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><p>LOADER_USE_NAMESPACE</p></td>
+<td><p>User by MayaFileLoaderCmd</p></td>
+</tr>
+</tbody>
+</table>
+
+
+## Master
+    <master>
+        <enabled>true</enabled>
+        <project_code>workflow</project_code>
+        <url></url>
+        <forwarding_type>xmlrpc_only</forwarding_type>
+        <site>user</site>
+    </master>
+<table>
+<colgroup>
+<col width="6%" />
+<col width="93%" />
+</colgroup>
+<tbody>
+<tr class="odd">
 <td><p>enabled</p></td>
-<td><p>Determines whether this is a portal website or not</p></td>
+<td><p>Enables functionality required for multi-site database replication.</p></td>
+</tr>
+<tr class="even">
+<td><p>project_code</p></td>
+<td><p>project_code used in master server authentication</p></td>
+</tr>
+<tr class="odd">
+<td><p>url</p></td>
+<td><p>master server URL</p></td>
+</tr>
+<tr class="even">
+<td><p>forwarding_type</p></td>
+<td><p>default none, option "xmlrpc_only" disables javascript API get_master function.</p></td>
+</tr>
+<tr class="odd">
+<td><p>site</p></td>
+<td><p>Site used in master server authentication</p></td>
+</tr>
+</tbody>
+</table>
+
+
+
+## Active Directory
+    <active_directory>
+        <domains>d1|d2|d3</domains>
+        <hosts>h1|h2|h3</hosts>
+        <require_domain>true</require_domain>
+        <domain_component>dc</domain_component>
+        <allow_script>AD/validate</allow_script>
+        <default_groups>group1|group2</default_groups>
+        <handle_groups>false</handle_groups>
+        <default_license_type>license</default_license_type>
+    </active_directory>
+<table>
+<colgroup>
+<col width="6%" />
+<col width="93%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><p>domains</p></td>
+<td><p>Domains for active directory/ldap authentication, separated by "|", need to match the number of hosts</p></td>
+</tr>
+<tr class="even">
+<td><p>hosts</p></td>
+<td><p>Hosts for active directory/ldap authentication, separated by "|", need to match the number of domains </p></td>
+</tr>
+<tr class="odd">
+<td><p>require_domain</p></td>
+<td><p>set as "true" to make domain required.</p></td>
+</tr>
+<tr class="even">
+<td><p>domain_component</p></td>
+<td><p>the domain component for LDAP, represents the top of an LDAP tree that uses DNS to define its namespace</p></td>
+</tr>
+<tr class="odd">
+<td><p>allow_script</p></td>
+<td><p>The path to the python script that sets the flag</p></td>
+</tr>
+<tr class="odd">
+<td><p>default_groups</p></td>
+<td><p>groups for users that are groupless, separated by "|"</p></td>
+</tr>
+<tr class="even">
+<td><p>handle_groups</p></td>
+<td><p>set as "false" to check if any user is groupless, and set users to default_groups if they are groupless</p></td>
+</tr>
+<tr class="odd">
+<td><p>default_license_type</p></td>
+<td><p>the default license type for active_directory. When user has no defined groups in Active Directory, they will be set as the default license type</p></td>
 </tr>
 </tbody>
 </table>
@@ -711,51 +877,51 @@ client interaction. They are included in the tag (for checkins).
 <td><p>padding of 3 or more can be set for checked-in files</p></td>
 </tr>
 <tr class="odd">
-<td><p>default_naming_version</p></td>
+<td><p>DEFAULT_NAMING_VERSION</p></td>
 <td><p>The default version for checkin</p></td>
 </tr>
 <tr class="even">
-<td><p>win32_local_repo_dir***</p></td>
+<td><p>WIN32_LOCAL_REPO_DIR</p></td>
 <td><p>The repo base directory in Windows client machines</p></td>
 </tr>
 <tr class="odd">
-<td><p>linux_local_repo_dir***</p></td>
+<td><p>LINUX_LOCAL_REPO_DIR</p></td>
 <td><p>The repo base directory in Linux client machines</p></td>
 </tr>
 <tr class="even">
-<td><p>base_dir_alias***</p></td>
+<td><p>BASE_DIR_ALIAS</p></td>
 <td><p>the alias of asset_base_dir</p></td>
 </tr>
 <tr class="odd">
-<td><p>app_asset_base_dir***</p></td>
+<td><p>APP_ASSET_BASE_DIR</p></td>
 <td><p>asset_base_dir for maya</p></td>
 </tr>
 <tr class="even">
-<td><p>ldap_path</p></td>
+<td><p>LDAP_PATH</p></td>
 <td><p>LDAP(Active Directory) Path</p></td>
 </tr>
 <tr class="odd">
-<td><p>ldap_server</p></td>
+<td><p>LDAP_SERVER</p></td>
 <td><p>LDAP server</p></td>
 </tr>
 <tr class="even">
-<td><p>copy_base_url***</p></td>
+<td><p>COPY_BASE_URL</p></td>
 <td><p>the base url for SobjectUploadWdg in copy mode</p></td>
 </tr>
 <tr class="odd">
-<td><p>use_applet***</p></td>
+<td><p>USE_APPLET</p></td>
 <td><p>determines whether the applet should be used for local file operations, can only be "true" or "false"</p></td>
 </tr>
 <tr class="even">
-<td><p>win32_dropbox_dir***</p></td>
+<td><p>win32_dropbox_dir</p></td>
 <td><p>a directory used when the base_dir is not defined when getting the transactions</p></td>
 </tr>
 <tr class="odd">
-<td><p>repo_type***</p></td>
+<td><p>REPO_TYPE</p></td>
 <td><p></p></td>
 </tr>
 <tr class="even">
-<td><p>client_dir_map</p></td>
+<td><p>CLIENT_DIR_MAP</p></td>
 <td><p>maps server directories to client directories</p></td>
 </tr>
 </tbody>
