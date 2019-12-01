@@ -1,0 +1,1111 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.3">
+    
+    
+      
+        <title>Deployment Preparation - TACTIC System Administration</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.30686662.css">
+      
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.74668098.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+    
+    
+      
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#scalable-tactic-deployment-planning" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href=".." title="TACTIC System Administration" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              TACTIC System Administration
+            </span>
+            <span class="md-header-nav__topic">
+              
+                Deployment Preparation
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href=".." title="TACTIC System Administration" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    TACTIC System Administration
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1" checked>
+    
+    <label class="md-nav__link" for="nav-1">
+      Planning
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        Planning
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../deploy-tactic-scalability-solution/" title="TACTIC as a Scalable Solution" class="md-nav__link">
+      TACTIC as a Scalable Solution
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Deployment Preparation
+      </label>
+    
+    <a href="./" title="Deployment Preparation" class="md-nav__link md-nav__link--active">
+      Deployment Preparation
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#planning-notes" class="md-nav__link">
+    Planning Notes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#determining-tactic-hardware-requirements" class="md-nav__link">
+    Determining TACTIC Hardware Requirements
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#determining-tactic-service-locations" class="md-nav__link">
+    Determining TACTIC Service Locations
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#post-deployment-tactic-upscaling" class="md-nav__link">
+    Post Deployment TACTIC Upscaling
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Install TACTIC Application
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Install TACTIC Application
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../system-requirements/" title="System Requirements" class="md-nav__link">
+      System Requirements
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../install-tactic-general/" title="General TACTIC Installation" class="md-nav__link">
+      General TACTIC Installation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../install-tactic-rhel/" title="Install TACTIC on RHEL" class="md-nav__link">
+      Install TACTIC on RHEL
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../install-tactic-windows-server/" title="Install TACTIC Windows Server" class="md-nav__link">
+      Install TACTIC Windows Server
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../install-tactic-license/" title="Install TACTIC License" class="md-nav__link">
+      Install TACTIC License
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Server Configuration
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Server Configuration
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../deploy-tactic-checklist/" title="Configuration Checklist" class="md-nav__link">
+      Configuration Checklist
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../configure-tactic-assets/" title="Assets Storage" class="md-nav__link">
+      Assets Storage
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../database-configuration/" title="Database" class="md-nav__link">
+      Database
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../database-configuration-postgresql/" title="PostgreSQL" class="md-nav__link">
+      PostgreSQL
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../configure-http-iis-7/" title="HTTP IIS 7" class="md-nav__link">
+      HTTP IIS 7
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../configure-ssl/" title="SSL" class="md-nav__link">
+      SSL
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../active-directory/" title="Active Directory" class="md-nav__link">
+      Active Directory
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../setup-email/" title="Email / Mailserver" class="md-nav__link">
+      Email / Mailserver
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../resource/" title="Database Resources" class="md-nav__link">
+      Database Resources
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../configure-tactic/" title="Configuration Directives" class="md-nav__link">
+      Configuration Directives
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Upgrade TACTIC
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Upgrade TACTIC
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../upgrade-tactic/" title="Upgrade Tactic" class="md-nav__link">
+      Upgrade Tactic
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../upgrade-python/" title="Upgrade to Python 3" class="md-nav__link">
+      Upgrade to Python 3
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../upgrade-crypto/" title="PyCryptodome Update" class="md-nav__link">
+      PyCryptodome Update
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../multiple-tactic-services/" title="Multiple TACTIC Versions" class="md-nav__link">
+      Multiple TACTIC Versions
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Scalability
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Scalability
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../deploy-tactic-scalability-configuration-examples/" title="Configuration Examples" class="md-nav__link">
+      Configuration Examples
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../load-balancing-tactic/" title="Load Balancing Tactic" class="md-nav__link">
+      Load Balancing Tactic
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      Troubleshooting
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        Troubleshooting
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../troubleshooting-tactic/" title="Troubleshooting Tactic" class="md-nav__link">
+      Troubleshooting Tactic
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      Maintenance
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        Maintenance
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../backup-and-restore-server/" title="Backup And Restore Server" class="md-nav__link">
+      Backup And Restore Server
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../automate-database-backup/" title="Automated Backup" class="md-nav__link">
+      Automated Backup
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../maintenance-logs/" title="Configure Logrotate" class="md-nav__link">
+      Configure Logrotate
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+    
+    <label class="md-nav__link" for="nav-8">
+      TACTIC Server VM
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        TACTIC Server VM
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tsi-setup-and-install/" title="Setup And Install" class="md-nav__link">
+      Setup And Install
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tsi-troubleshooting/" title="Troubleshooting" class="md-nav__link">
+      Troubleshooting
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#planning-notes" class="md-nav__link">
+    Planning Notes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#determining-tactic-hardware-requirements" class="md-nav__link">
+    Determining TACTIC Hardware Requirements
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#determining-tactic-service-locations" class="md-nav__link">
+    Determining TACTIC Service Locations
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#post-deployment-tactic-upscaling" class="md-nav__link">
+    Post Deployment TACTIC Upscaling
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="scalable-tactic-deployment-planning">Scalable TACTIC Deployment Planning</h1>
+<p>The stages of a TACTIC deployment are:</p>
+<ol>
+<li>Determining usage requirements</li>
+<li>Determining hardware requirements</li>
+<li>Determining TACTIC Service and Co-Service Locations</li>
+<li>Post Deployment TACTIC upscaling</li>
+</ol>
+<h2 id="planning-notes">Planning Notes</h2>
+<p><strong>Determining TACTIC Usage Requirements</strong></p>
+<p>One of the first questions asked in a TACTIC deployment is "what kind of
+deployment is required?" This is a hard question to answer unless it is
+known beforehand exactly how TACTIC will be used. Since every TACTIC
+deployment is customized by the licensee, there is really no way to
+calculate accurately the type of load that will eventually be placed on
+the TACTIC server. Fortunately, due to TACTIC’s scalable architecture, a
+TACTIC deployment can be scaled up easily when there are unforeseen
+increases in usage.</p>
+<p><strong>Service Requirements</strong></p>
+<p>In a TACTIC deployment, running the TACTIC service is the primary
+function of the TACTIC host machine. The co-services can be deployed to
+the location most appropriate for the environment. However, to ensure
+scalability and high availability, the co-services should not be
+deployed on the TACTIC host for any but the smallest of deployments.</p>
+<p>TACTIC uses four major services and co-services in its operation:</p>
+<ul>
+<li>
+<p>TACTIC service: provides the API and GUI widget system.</p>
+</li>
+<li>
+<p>Database co-service: provides indexing and storage for asset meta data.</p>
+</li>
+<li>
+<p>HTTP co-service: provides delivery (and return) of raw asset data.</p>
+</li>
+<li>
+<p>Assets storage co-service: provides storage and back-up capabilities
+    of raw asset data.</p>
+</li>
+</ul>
+<p><strong>Limitations</strong></p>
+<p>With TACTIC, you can simply add hardware and load-balance it to handle
+more and more requests. You can expand scalability in this way until the
+database server itself becomes the bottleneck. Fortunately, with the
+introduction of multi-CPU and multi-core machines, database limits are
+extremely high.</p>
+<p><em>User Interfaces:</em> For applications with end-user interfaces (especially
+those using widgets, where complex interface elements need to be
+constructed), the load required to process TACTIC requests will remain
+much greater than the load required to process SQL calls, no matter how
+much hardware is added to handle such requests.</p>
+<p><em>Client APIs:</em> Client APIs provide a much thinner layer to the database
+and so are optimized to handle lower level requests very rapidly.
+However, because API calls are typically used for automated processes,
+they can generate a large number of requests quickly, creating a heavy
+load on the TACTIC server.</p>
+<p><em>Load balancing:</em> this is especially important for render farms, which
+can be massive in scale with thousands to tens of thousands of cores. It
+ensures that the high volume of requests is evenly distributed to all of
+the available TACTIC processes. The exact number of processes required
+to handle the high volume is highly dependent on the number of requests
+made and to the complexity of the requests. However, because load
+balancing will provide near-linear scalability, the number of processes
+can be increased to a level that is sufficient for the number of
+requests being demanded of the client API.</p>
+<p><em>Report generation:</em> TACTIC’s reporting system is powerful and
+comprehensive, and the load on host CPUs can increase significantly when
+complex reports are being run. Administrators should focus on report
+generation when investigating load utilization.</p>
+<p><em>Checkins:</em> There are two kinds of complexity when considering
+scalability for checkins:</p>
+<ul>
+<li>
+<p>Large Checkins: TACTIC offers a wide variety of checkin configurations
+    that will accommodate large bandwidth, large files, and complex
+    dependency between files.</p>
+</li>
+<li>
+<p>Many Checkins: There are few concerns with a large number of checkins.
+    The number of checkins that occur even in the largest of productions is
+    small compared to the limits of a database.</p>
+</li>
+</ul>
+<h2 id="determining-tactic-hardware-requirements">Determining TACTIC Hardware Requirements</h2>
+<p><strong>Hardware Overview</strong></p>
+<p>TACTIC works well with most types of hardware, but industry-standard
+server level components are highly recommended. The exact configuration
+will depend on the specific needs of your facility.</p>
+<p>For most deployments, TACTIC can be installed on the typical commodity
+hardware used by most small and large enterprises. TACTIC is a
+purpose-built relational database at its core, and your hardware choices
+can reflect that fact.</p>
+<p>TACTIC service requirements: Assuming TACTIC is the only service on the
+host, the minimal requirements for a production-level deployment of a
+TACTIC host are:</p>
+<ul>
+<li>
+<p>CPU: dual core</p>
+</li>
+<li>
+<p>Memory: 4G</p>
+</li>
+<li>
+<p>Disk space needed for TACTIC to run on: 10G</p>
+<p>(assets should be stored elsewhere, on an enterprise quality server)</p>
+</li>
+</ul>
+<p>These requirements represent the recommended absolute minimal hardware
+required to run a basic TACTIC service in a production environment. For
+development and testing, TACTIC will run on most hardware including
+laptops.</p>
+<p><em>Asset storage:</em> It is highly recommended that assets be stored on an
+enterprise-quality, high-availability server, and not on the TACTIC
+host.</p>
+<p><em>RAID Options:</em> You can use various RAID configurations to maximize
+reliability and performance. For example, you could locate the Operating
+System on one physical drive, and the database files on another. Or you
+could locate the database on a RAID array.</p>
+<p><em>Asset meta data:</em> The amount of asset meta data stored on disk by
+TACTIC is insignificant to today’s hardware specifications and need not
+be a consideration when choosing a server: reliability and performance
+should be higher concerns.</p>
+<h2 id="determining-tactic-service-locations">Determining TACTIC Service Locations</h2>
+<p><strong>Segregating Services</strong></p>
+<p>TACTIC offers a number of different services for different purposes. For
+example, the TACTIC server can serve out complex widgets, serve out
+large numbers of client API requests and perform large, complex
+check-ins.</p>
+<p>Each type of service has distinct needs, so it is often beneficial to
+segregate the services to be independent of each other. This allows each
+service to operate within a pool of assigned resources without affecting
+(or being affected by) the other services.</p>
+<p>For example, if a render farm used a client API script that heavily
+loaded the TACTIC server and its requests were shared with user
+interface requests, users would experience inconsistent (and
+occasionally unacceptably slow) response times. This experience would
+cause frustration amongst users, so it would be necessary to segregate
+their user interface service from the render farm’s client API service.</p>
+<p>Each type of service has very different demands and needs, so
+segregating services also allows you to tune the hardware and software
+to the specifications required for the service they are handling.
+Ultimately, you can maximize the use of your available resources.</p>
+<p><strong>How Load Balancing Works</strong></p>
+<p>Load balancing distributes requests to various TACTIC processes using an
+algorithm that determines which request is delegated to which process.
+The default algorithm is a very simple randomizer.</p>
+<p>For most applications, the default algorithm works perfectly fine. It is
+left to chance whether a particular request will be assigned to a
+heavily loaded process or one that is sitting idle, so there may be
+inconsistent performance depending on load and availability of TACTIC
+processes not already loaded.</p>
+<p>IIS delegation algorithms (on MSWeb Server) are also supported. For
+Apache, an example algorithm is provided you can customize to your
+needs.</p>
+<p>Each process, by default, is assigned two simultaneous requests at most.
+This limit has proven in production to be the most effective because it
+prevents the Python process itself from being overloaded waiting for
+required I/O operations. If there are excess requests waiting to be
+processed, they are kept in a queue and assigned sequentially to
+processes as they become available.</p>
+<p>Python’s GIL (global interpreter lock) prevents any Python process from
+using more than one CPU or core, so the number of threads available for
+any given process is limited. True scalability is achieved by
+load-balancing requests over multiple processes. This method scales
+seamlessly and linearly over multiple cores, multiple CPUs and
+ultimately over multiple physical servers with only simple configuration
+changes.</p>
+<h2 id="post-deployment-tactic-upscaling">Post Deployment TACTIC Upscaling</h2>
+<p><strong>Scenarios</strong></p>
+<p>TACTIC is easily upscaled in most post deployment scenarios. Upscaling
+does not require any significant downtime of TACTIC services.</p>
+<p>Some scenario examples follow, with bullet points outlining why these
+possible solutions would be followed:</p>
+<ul>
+<li>
+<p>Increasing number of TACTIC processes on a single machine**</p>
+</li>
+<li>
+<p>Splitting TACTIC into multiple servers from one server**</p>
+<ul>
+<li>
+<p>Easy way to upscale/troubleshoot</p>
+</li>
+<li>
+<p>Heavy reporting</p>
+</li>
+<li>
+<p>Many users/API calls from automated processes</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Splitting the HTTP co-service into multiple servers from one server**</p>
+<ul>
+<li>
+<p>Many Checkins</p>
+</li>
+<li>
+<p>Large Checkins</p>
+</li>
+</ul>
+</li>
+</ul>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../deploy-tactic-scalability-solution/" title="TACTIC as a Scalable Solution" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                TACTIC as a Scalable Solution
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../system-requirements/" title="System Requirements" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                System Requirements
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.ac79c3b0.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+      
+    
+  </body>
+</html>

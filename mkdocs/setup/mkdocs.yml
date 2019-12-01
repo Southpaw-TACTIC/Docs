@@ -1,0 +1,116 @@
+site_name: TACTIC Setup Docs
+nav:
+    - Introduction: './introduction.md'
+    - Create Projects:
+        - 'What Are Projects': './what-are-projects.md'
+        - 'Project Quickstart': './project-quickstart.md'
+        - 'Create New Project': './create-new-project.md'
+        - 'Project Templates': './project-templates.md'
+        - 'Layout': './layout.md'
+    - Project Startup:
+        - 'Project Startup Configuration': './project-startup-configuration.md'
+        - 'Configuration Add New Stype': './configuration-add-new-stype.md'
+        - 'Configuration View Items': './configuration-view-items.md'
+        - 'Configuration Add Items': './configuration-add-items.md'
+        - 'Configuration Import Items': './configuration-import-items.md'
+        - 'Configuration Workflow': './configuration-workflow.md'
+        - 'Configuration Notifications': './configuration-notifications.md'
+        - 'Configuration Triggers': './configuration-triggers.md'
+        - 'Configuration Edit Stype': './configuration-edit-stype.md'
+    - Users and Groups:
+        - 'Project Startup Manage Users': './project-startup-manage-users.md'
+        - 'Insert New User': './insert-new-user.md'
+        - 'Group Assignment': './group-assignment.md'
+    - User and Group Security:
+        - 'Manage Security': './manage-security.md'
+        - 'Managing Access Rules': './managing-access-rules.md'
+    - Dashboards:
+        - 'Project Startup Dashboards': './project-startup-dashboards.md'
+    - Reports:
+        - 'Project Startup Reports': './project-startup-reports.md'
+        - 'Sobject Chart Wdg': './sobject-chart-wdg.md'
+    - Plugins:
+        - 'Download Plugins': './download-plugins.md'
+        - 'Install And Activate': './install-and-activate.md'
+        - 'Remove And Delete': './remove-and-delete.md'
+    - Advanced Project Setup:
+        - 'Tactic Anatomy Lesson': './tactic-anatomy-lesson.md'
+        - 'Built In Stypes': './built-in-stypes.md'
+        - 'Project Schema': './project-schema.md'
+        - 'Stype Register': './stype-register.md'
+        - 'Stype Connect': './stype-connect.md'
+    - Advanced Workflow:
+        - 'Project Workflow': './project-workflow.md'
+        - 'Pipeline Process Options': './pipeline-process-options.md'
+    - Sidebar:
+        - 'Tactic Sidebar': './tactic-sidebar.md'
+        - 'Managing Sidebar': './managing-sidebar.md'
+        - 'Element Definition': './element-definition.md'
+    - Views Configuration:
+        - 'View Manager': './view-manager.md'
+    - Naming Conventions:
+        - 'Project Automation File Naming': './project-automation-file-naming.md'
+    - Project Workflow Introduction:
+        - 'Project Workflow Introduction': './project-workflow-introduction.md'
+    - Settings:
+        - 'Modify Project Settings': './modify-project-settings.md'
+    - Advanced Configuration:
+        - 'Advanced Schema Configuration': './advanced-schema-configuration.md'
+        - 'Advanced Access Rule Configuration': './advanced-access-rule-configuration.md'
+        - 'Remove Projects': './remove-projects.md'
+    - Advanced Automation:
+        - 'Tactic Event System': './tactic-event-system.md'
+        - 'Project Automation Triggers': './project-automation-triggers.md'
+        - 'Project Automation Notifications': './project-automation-notifications.md'
+        - 'Advanced Notification Setup': './advanced-notification-setup.md'
+        - 'Advanced Event Usage': './advanced-event-usage.md'
+        - 'Advanced Trigger Setup': './advanced-trigger-setup.md'
+        - 'Versionless Checkin': './versionless-checkin.md'
+    - Expression Language:
+        - 'Expression Language Introduction': './expression-language-introduction.md'
+        - 'Expression Method Reference': './expression-method-reference.md'
+        - 'Expression Variable Reference': './expression-variable-reference.md'
+    - Debugging TACTIC:
+        - 'Exception Log': './exception-log.md'
+    - Widgets:
+        - 'Tactic Widgets': './tactic-widgets.md'
+        - 'Simple Table Element Wdg': './simple-table-element-wdg.md'
+        - 'Format Element Wdg': './format-element-wdg.md'
+        - 'Expression Element Wdg': './expression-element-wdg.md'
+        - 'Select Wdg': './select-wdg.md'
+        - 'Text Wdg': './text-wdg.md'
+        - 'Text Area Wdg': './text-area-wdg.md'
+        - 'Calendar Wdg': './calendar-wdg.md'
+        - 'Task Completion Wdg': './task-completion-wdg.md'
+        - 'Explorer Table Element Wdg': './explorer-table-element-wdg.md'
+        - 'General Checkin Wdg': './general-checkin-wdg.md'
+        - 'Sobject Checkin History Wdg': './sobject-checkin-history-wdg.md'
+        - 'Note Sheet Wdg': './note-sheet-wdg.md'
+        - 'Task Edit Wdg': './task-edit-wdg.md'
+        - 'Task Schedule Wdg': './task-schedule-wdg.md'
+        - 'Task Status History Wdg': './task-status-history-wdg.md'
+        - 'Work Hours Element Wdg': './work-hours-element-wdg.md'
+        - 'Gantt Wdg': './gantt-wdg.md'
+        - 'Work Element Wdg': './work-element-wdg.md'
+        - 'Simple Upload Wdg': './simple-upload-wdg.md'
+        - 'Thumb Wdg': './thumb-wdg.md'
+        - 'View Panel Wdg': './view-panel-wdg.md'
+        - 'Custom Layout Wdg': './custom-layout-wdg.md'
+        - 'Table Layout Wdg': './table-layout-wdg.md'
+        - 'Select Filter Element Widget': './select-filter-element-widget.md'
+        - 'Checkbox Filter Element Wdg': './checkbox-filter-element-wdg.md'
+        - 'Task Element Wdg': './task-element-wdg.md'
+        - 'Link Element Wdg': './link-element-wdg.md'
+    - Misc:
+        - 'Setup': './setup.md'
+        - 'Stype Connect': './stype-connect.md'
+        - 'Search': './search.md'
+        - 'Discussion Wdg': './discussion-wdg.md'
+        - 'Hidden Row Toggle Wdg': './hidden-row-toggle-wdg.md'
+        - 'Custom Url Configuration': './custom-url-configuration.md'
+        - 'Sobject Detail Wdg': './sobject-detail-wdg.md'
+        - 'Built In Plugins': './built-in-plugins.md'
+        - 'Drop Element Wdg': './drop-element-wdg.md'
+        - 'Expression Value Element Wdg': './expression-value-element-wdg.md'
+        - 'Submit Support Ticket': './submit-support-ticket.md'
+theme: material

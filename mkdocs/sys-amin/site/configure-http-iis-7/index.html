@@ -1,0 +1,1139 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.3">
+    
+    
+      
+        <title>HTTP IIS 7 - TACTIC System Administration</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.30686662.css">
+      
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.74668098.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+    
+    
+      
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#iis-7-http-co-service-configuration" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href=".." title="TACTIC System Administration" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              TACTIC System Administration
+            </span>
+            <span class="md-header-nav__topic">
+              
+                HTTP IIS 7
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href=".." title="TACTIC System Administration" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    TACTIC System Administration
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1">
+    
+    <label class="md-nav__link" for="nav-1">
+      Planning
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        Planning
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../deploy-tactic-scalability-solution/" title="TACTIC as a Scalable Solution" class="md-nav__link">
+      TACTIC as a Scalable Solution
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../deploy-tactic-scalability-planning/" title="Deployment Preparation" class="md-nav__link">
+      Deployment Preparation
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Install TACTIC Application
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Install TACTIC Application
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../system-requirements/" title="System Requirements" class="md-nav__link">
+      System Requirements
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../install-tactic-general/" title="General TACTIC Installation" class="md-nav__link">
+      General TACTIC Installation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../install-tactic-rhel/" title="Install TACTIC on RHEL" class="md-nav__link">
+      Install TACTIC on RHEL
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../install-tactic-windows-server/" title="Install TACTIC Windows Server" class="md-nav__link">
+      Install TACTIC Windows Server
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../install-tactic-license/" title="Install TACTIC License" class="md-nav__link">
+      Install TACTIC License
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      Server Configuration
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Server Configuration
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../deploy-tactic-checklist/" title="Configuration Checklist" class="md-nav__link">
+      Configuration Checklist
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../configure-tactic-assets/" title="Assets Storage" class="md-nav__link">
+      Assets Storage
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../database-configuration/" title="Database" class="md-nav__link">
+      Database
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../database-configuration-postgresql/" title="PostgreSQL" class="md-nav__link">
+      PostgreSQL
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+    <a href="./" title="HTTP IIS 7" class="md-nav__link md-nav__link--active">
+      HTTP IIS 7
+    </a>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../configure-ssl/" title="SSL" class="md-nav__link">
+      SSL
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../active-directory/" title="Active Directory" class="md-nav__link">
+      Active Directory
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../setup-email/" title="Email / Mailserver" class="md-nav__link">
+      Email / Mailserver
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../resource/" title="Database Resources" class="md-nav__link">
+      Database Resources
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../configure-tactic/" title="Configuration Directives" class="md-nav__link">
+      Configuration Directives
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Upgrade TACTIC
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Upgrade TACTIC
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../upgrade-tactic/" title="Upgrade Tactic" class="md-nav__link">
+      Upgrade Tactic
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../upgrade-python/" title="Upgrade to Python 3" class="md-nav__link">
+      Upgrade to Python 3
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../upgrade-crypto/" title="PyCryptodome Update" class="md-nav__link">
+      PyCryptodome Update
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../multiple-tactic-services/" title="Multiple TACTIC Versions" class="md-nav__link">
+      Multiple TACTIC Versions
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Scalability
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Scalability
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../deploy-tactic-scalability-configuration-examples/" title="Configuration Examples" class="md-nav__link">
+      Configuration Examples
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../load-balancing-tactic/" title="Load Balancing Tactic" class="md-nav__link">
+      Load Balancing Tactic
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      Troubleshooting
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        Troubleshooting
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../troubleshooting-tactic/" title="Troubleshooting Tactic" class="md-nav__link">
+      Troubleshooting Tactic
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      Maintenance
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        Maintenance
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../backup-and-restore-server/" title="Backup And Restore Server" class="md-nav__link">
+      Backup And Restore Server
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../automate-database-backup/" title="Automated Backup" class="md-nav__link">
+      Automated Backup
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../maintenance-logs/" title="Configure Logrotate" class="md-nav__link">
+      Configure Logrotate
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+    
+    <label class="md-nav__link" for="nav-8">
+      TACTIC Server VM
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        TACTIC Server VM
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tsi-setup-and-install/" title="Setup And Install" class="md-nav__link">
+      Setup And Install
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tsi-troubleshooting/" title="Troubleshooting" class="md-nav__link">
+      Troubleshooting
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="iis-7-http-co-service-configuration">IIS 7+ HTTP Co-Service Configuration</h1>
+<p>Windows HTTP co-service installations are IIS based.</p>
+<p>On IIS installations prior to version 7, appropriate 3rd party proxying
+software (the ISAPI_Rewrite module) is required to be installed with IIS
+to enable the proper functioning of TACTIC.</p>
+<p>TACTIC can be configured to work with the native IIS 7.5 services
+available on applicable Windows OS’s, such as Windows 7 and Windows
+Server 2008. Prior versions of IIS have required 3rd party software (the
+ISAPI_Rewrite module) to be installed alongside the IIS service to
+facilitate proxy and URL rewriting. With IIS 7.5, and the introduction
+of the ARR and URL rewrite module, the requirement of a 3rd party
+software is no longer needed.</p>
+<p><img alt="image" src="../media/1.png" /></p>
+<p>On Windows 7, and Windows Server 2008, IIS is installed through means
+and directions published on Microsoft support websites. Please consult
+installation guides published by Microsoft for the installation
+procedure of IIS.</p>
+<p>Typically, IIS 7.5 does not come with the ARR module, and depending on
+the IIS installation, URL rewrite. These modules are requirements for a
+installation alongside TACTIC. Please refer to Microsoft published
+documentation regarding installation of these modules.</p>
+<p>Permissions must be set for IIS to be able to serve assets that TACTIC
+manages.</p>
+<p>TACTIC requires that the IIS user have access to TACTIC assets and all
+of the virtual directories that contain TACTIC widgets.</p>
+<p>Whether the assets directory is stored on the host machine or on a
+network mount, there should be a assigned user that runs TACTIC.</p>
+<p>For non-domain Windows machines, a local user created on the TACTIC
+host, such as the IUSR_&lt;computer_name&gt; automatically created by an IIS
+installation will suffice, provided that the network mounted directories
+are writable by the system user.</p>
+<p>For ADS domains, a user can be created on the domain, and assigned via
+the Services control panel. Assigning a domain user to the TACTIC
+service will allow domain level security rules to apply.</p>
+<p><strong>To assign a user to a service:</strong></p>
+<ol>
+<li>
+<p>Open the Services control panel</p>
+</li>
+<li>
+<p>Right click on the "TACTIC application server"</p>
+</li>
+<li>
+<p>Click on the "Log On" tab</p>
+</li>
+<li>
+<p>Change the "log on as" option to reflect the user created, whether
+    local or domain based.</p>
+<p><img alt="image" src="../media/Selection_002.png" /></p>
+</li>
+</ol>
+<p>For a locally hosted asset directory , the anonymous user (typically
+IUSR_&lt;computer name&gt;) account needs to be granted access to the
+directories, and all subdirectories under them.</p>
+<p>Find the directories above in Windows Explorer, and right click on the
+directory to bring up “Sharing and Security�? for that directory.</p>
+<p><img alt="image" src="../media/3.png" /></p>
+<p>IIS must be configured to serve static content, such as TACTIC assets,
+and TACTIC UI skins.</p>
+<p><img alt="image" src="../media/2.png" /></p>
+<table>
+<caption>Virtual directories required by TACTIC</caption>
+<colgroup>
+<col width="31%" />
+<col width="20%" />
+<col width="48%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Directory Description</th>
+<th>Directory Alias</th>
+<th>Location</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><p>Assets storage</p></td>
+<td><p>assets</p></td>
+<td><p>User provided during installation</p></td>
+</tr>
+<tr class="even">
+<td><p>TACTIC UI widgets</p></td>
+<td><p>context</p></td>
+<td><p>Inside TACTIC installation directory</p></td>
+</tr>
+<tr class="odd">
+<td><p>Documentation</p></td>
+<td><p>doc</p></td>
+<td><p>Inside TACTIC installation directory</p></td>
+</tr>
+<tr class="even">
+<td><p>Project storage</p></td>
+<td><p>projects</p></td>
+<td><p>User provided during installation</p></td>
+</tr>
+</tbody>
+</table>
+
+<p>There are four “virtual directories�? that must be created to access the
+static content provided by TACTIC.</p>
+<p><strong>To create the directories;</strong></p>
+<ol>
+<li>
+<p>Right click on “Default web site�? and “Add Virtual Directory�?</p>
+</li>
+<li>
+<p>Create the virtual directory, using the paths that were created by
+    the installation of TACTIC. The default paths may not apply.</p>
+<p><img alt="image" src="../media/Selection_003.png" /> 3.</p>
+</li>
+</ol>
+<blockquote>
+<p><strong>Important</strong></p>
+<p>If the directory is located on a network mount, it may have to be
+connected to as the user running the TACTIC service. To connect as a
+different user than the IIS user, click on the "Connect As"</p>
+</blockquote>
+<p>+
+<img alt="image" src="../media/Selection_005.png" /></p>
+<p>+
+Then click on the "Set…​" button, and fill in the details of the user
+that will run the TACTIC service.</p>
+<p>+
+<img alt="image" src="../media/Selection_004.png" /></p>
+<p>There should now be 4 virtual entries on the IIS service.</p>
+<p><img alt="image" src="../media/4.png" /></p>
+<p>Application Request Routing (ARR) is the module snap-in that will proxy
+and load balance requests. ARR is required by IIS to split incoming
+TACTIC service requests between the dynamic content that drives the API
+and the TACTIC web UI, and static content. In order to achieve this, IIS
+must be configured to send certain requests to the TACTIC application
+server, while static data requests (usually assets) are sent to IIS.</p>
+<p>This guide currently supports two methods of attaching the TACTIC
+service to an IIS co-service.</p>
+<p><strong>Proxy/Load balancing</strong></p>
+<p>The Load balancing configuration of IIS splits TACTIC service requests
+into multiple streams, with each stream utilizing its own TACTIC service
+process.</p>
+<p><strong>Proxy Only</strong></p>
+<p>The proxy-only configuration routes all TACTIC service requests to a
+single TACTIC service. This method should only be used in light usage
+TACTIC installations such as development servers.</p>
+<p>A TACTIC installation by default runs 3 seperate TACTIC service
+listeners, arranged on default ports 8081, 8082 and 8083. To split
+TACTIC service requests into multiple streams, IIS must be configured to
+consider TACTIC part of a “server farm�?. Since all of the TACTIC
+services are running on one single host, IIS currently must be tricked
+into routing requests to the 3 different TACTIC streams on the
+localhost.</p>
+<p>By default, windows looks in the hosts file, then to DNS for named
+hosts. To divide localhost into three “different�? machines, the
+<code>“%SYSTEMROOT%/System32/drivers/etc/host�?</code> file must be edited to be
+able to address localhost as more than one machine.</p>
+<blockquote>
+<p><strong>Important</strong></p>
+<p>If TACTIC is set to run a number of processes other than the default of
+three, then these instructions must reflect that number. Add or subtract
+from the list of localhost entries and web farm entries accordingly.</p>
+</blockquote>
+<p><strong>To create a web farm</strong>;</p>
+<ol>
+<li>
+<p>As an “Administrator�? user, edit the “127.0.0.1�? line in this file</p>
+<p><img alt="image" src="../media/5.png" /></p>
+<p>The addition of localhost-2 and localhost-3 that reference 127.0.0.1
+allow this host machine to access localhost as more than one machine.</p>
+</li>
+<li>
+<p>Now the Server Farm reference must be created.</p>
+<p>Start the IIS snap in, and select the Web server that will be used as a
+TACTIC co-service in the left side navigation bar. Right click on the
+“Server Farms�? folder and create a new server farm.</p>
+<p><img alt="image" src="../media/6.png" /></p>
+<p>3 seperate servers must be added to the server farm to correspond to the
+3 default TACTIC service processes. Add each server according to the
+below table.</p>
+<p><table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Server Address</th>
+<th>httpPort</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><p>localhost-1</p></td>
+<td><p>8081</p></td>
+</tr>
+<tr class="even">
+<td><p>localhost-2</p></td>
+<td><p>8082</p></td>
+</tr>
+<tr class="odd">
+<td><p>localhost-3</p></td>
+<td><p>8083</p></td>
+</tr>
+</tbody>
+</table></p>
+<p>Click on “Add�? when done each entry in the above list. For additional
+servers, the “server address�? must correspond to the additional
+localhost entries in the “hosts�? file. The ports must correspond to
+8082, 8083, etc. Add the required number of servers according to TACTIC
+deployment requirements.</p>
+<p><img alt="image" src="../media/7.png" /></p>
+</li>
+<li>
+<p>Click “Finish�? when done.</p>
+</li>
+<li>
+<p>Create the rewrite rule when prompted.</p>
+</li>
+</ol>
+<p><img alt="image" src="../media/8.png" /></p>
+<p>URL rewrite must now be configured to only send TACTIC API requests to
+the server farm.</p>
+<ol>
+<li>
+<p>Click on the server farm icon on the left-hand side of IIS manager
+    and click the “Routing Rules�? icon.</p>
+<p><img alt="Selection_009.png" src="../media/Selection_009.png" /></p>
+</li>
+<li>
+<p>In the right pane of the Routing rules section, click the "URL
+    rewrite" link</p>
+<p><img alt="image" src="../media/Selection_010.png" /></p>
+</li>
+<li>
+<p>Select the automatically created URL rewrite rule created when the
+    web farm was created, and click on the "Edit" link in the right pane.</p>
+<p><img alt="image" src="../media/Selection_011.png" /></p>
+<p>In the “Edit Inbound rule�? pane, edit the pattern to read
+“tactic*,projects*�? This will instruct IIS to route all TACTIC UI
+requests to the TACTIC service.</p>
+<p><img alt="image" src="../media/Selection_012.png" /></p>
+</li>
+<li>
+<p>Apply the change.</p>
+</li>
+</ol>
+<p>ARR comes with several load balancing algorithms. Click on the newly
+created server farm, and click on the “Load Balancing�? icon. Select
+“Weighted round robin�? as the algorithm, and “Even distribution�? as
+the load distribution.</p>
+<p><img alt="image" src="../media/11.png" /></p>
+<p>IIS can be configured to run a single rewrite rule to forward requests
+to a single TACTIC service.</p>
+<p>Start the IIS snap in, and select the Web server that will be used as a
+TACTIC co-service in the left side navigation bar. Choose “Application
+request routing�? And click on server proxy settings on the right-hand
+side.</p>
+<p><img alt="image" src="../media/12.png" /></p>
+<p>In the ARR options under the proxy settings check the “use URL rewrite
+to inspect incoming requests�?, And in the “reverse proxy�? text area
+type “localhost:8081�?. This instructs IIS to proxy everything to this
+address and port.</p>
+<p><img alt="image" src="../media/13.png" /></p>
+<p>From here URL Rewrite can then be instructed to filter proxy requests.
+Click on the “URL rewrite�? link on the right-hand side to modify
+rewrite rules. Typically, if the proxy has been created in ARR, then a
+rule will be created in URL rewrite.</p>
+<p><img alt="image" src="../media/14.png" /></p>
+<p>IIS must then be instructed to only proxy TACTIC UI and API requests. To
+do this, an automatically created rule must be altered to allow TACTIC
+asset requests to be handled by IIS.</p>
+<p><img alt="image" src="../media/15.png" /></p>
+<p>To modify the existing rule for TACTIC, the pattern under "Match URL"
+should be "tactic*". The action “Rewrite URL�? should be
+"http://localhost:8081/\{R:0}"</p>
+<p>TACTIC currently has a requirement to insert custom MIME types into the
+list of allowed types for the IIS service.</p>
+<table>
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>MIME type</th>
+<th>Function</th>
+<th>Extension</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><p>text/plain</p></td>
+<td><p>Python Script mask</p></td>
+<td><p>.xx</p></td>
+</tr>
+</tbody>
+</table>
+
+<p>To add a MIME type in IIS 7</p>
+<ol>
+<li>
+<p>Click on the web server entry in the left-hand pane.</p>
+</li>
+<li>
+<p>Click on the MIME types<img alt="image" src="../media/Selection_013.png" /> icon in
+    the centre pane.</p>
+</li>
+<li>
+<p>Click on the "Add…​" link on the right-hand pane.</p>
+</li>
+<li>
+<p>Add all entries required by the table above.</p>
+<p><img alt="image" src="../media/Selection_014.png" /></p>
+</li>
+</ol>
+<p>At this point IIS should be configured to proxy TACTIC service requests
+to the TACTIC service, while leaving all other requests to IIS.</p>
+<p><a href="http://learn.iis.net/page.aspx/485/define-and-configure-an-application-request-routing-server-farm/">http://learn.iis.net/page.aspx/485/define-and-configure-an-application-request-routing-server-farm/</a></p>
+<p><a href="http://learn.iis.net/page.aspx/486/http-load-balancing-using-application-request-routing/">http://learn.iis.net/page.aspx/486/http-load-balancing-using-application-request-routing/</a></p>
+<p><a href="http://blogs.msdn.com/nickhodge/default.aspx?p=2">http://blogs.msdn.com/nickhodge/default.aspx?p=2</a></p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../database-configuration-postgresql/" title="PostgreSQL" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                PostgreSQL
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../configure-ssl/" title="SSL" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                SSL
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.ac79c3b0.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+      
+    
+  </body>
+</html>

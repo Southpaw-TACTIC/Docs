@@ -1,0 +1,1487 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.3">
+    
+    
+      
+        <title>Configuration Directives - TACTIC System Administration</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.30686662.css">
+      
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.74668098.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+    
+    
+      
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#tactic-configuration-file" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href=".." title="TACTIC System Administration" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              TACTIC System Administration
+            </span>
+            <span class="md-header-nav__topic">
+              
+                Configuration Directives
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href=".." title="TACTIC System Administration" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    TACTIC System Administration
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1">
+    
+    <label class="md-nav__link" for="nav-1">
+      Planning
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        Planning
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../deploy-tactic-scalability-solution/" title="TACTIC as a Scalable Solution" class="md-nav__link">
+      TACTIC as a Scalable Solution
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../deploy-tactic-scalability-planning/" title="Deployment Preparation" class="md-nav__link">
+      Deployment Preparation
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Install TACTIC Application
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Install TACTIC Application
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../system-requirements/" title="System Requirements" class="md-nav__link">
+      System Requirements
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../install-tactic-general/" title="General TACTIC Installation" class="md-nav__link">
+      General TACTIC Installation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../install-tactic-rhel/" title="Install TACTIC on RHEL" class="md-nav__link">
+      Install TACTIC on RHEL
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../install-tactic-windows-server/" title="Install TACTIC Windows Server" class="md-nav__link">
+      Install TACTIC Windows Server
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../install-tactic-license/" title="Install TACTIC License" class="md-nav__link">
+      Install TACTIC License
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      Server Configuration
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Server Configuration
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../deploy-tactic-checklist/" title="Configuration Checklist" class="md-nav__link">
+      Configuration Checklist
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../configure-tactic-assets/" title="Assets Storage" class="md-nav__link">
+      Assets Storage
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../database-configuration/" title="Database" class="md-nav__link">
+      Database
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../database-configuration-postgresql/" title="PostgreSQL" class="md-nav__link">
+      PostgreSQL
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../configure-http-iis-7/" title="HTTP IIS 7" class="md-nav__link">
+      HTTP IIS 7
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../configure-ssl/" title="SSL" class="md-nav__link">
+      SSL
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../active-directory/" title="Active Directory" class="md-nav__link">
+      Active Directory
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../setup-email/" title="Email / Mailserver" class="md-nav__link">
+      Email / Mailserver
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../resource/" title="Database Resources" class="md-nav__link">
+      Database Resources
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Configuration Directives
+      </label>
+    
+    <a href="./" title="Configuration Directives" class="md-nav__link md-nav__link--active">
+      Configuration Directives
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#install" class="md-nav__link">
+    Install
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#services" class="md-nav__link">
+    Services
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#security" class="md-nav__link">
+    Security
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#database" class="md-nav__link">
+    Database
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#perforce" class="md-nav__link">
+    Perforce
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#look" class="md-nav__link">
+    Look
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#checkin" class="md-nav__link">
+    Checkin
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-handoff-directories" class="md-nav__link">
+    The Handoff Directories
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#directory-configuration-examples" class="md-nav__link">
+    Directory Configuration Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Upgrade TACTIC
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Upgrade TACTIC
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../upgrade-tactic/" title="Upgrade Tactic" class="md-nav__link">
+      Upgrade Tactic
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../upgrade-python/" title="Upgrade to Python 3" class="md-nav__link">
+      Upgrade to Python 3
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../upgrade-crypto/" title="PyCryptodome Update" class="md-nav__link">
+      PyCryptodome Update
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../multiple-tactic-services/" title="Multiple TACTIC Versions" class="md-nav__link">
+      Multiple TACTIC Versions
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Scalability
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Scalability
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../deploy-tactic-scalability-configuration-examples/" title="Configuration Examples" class="md-nav__link">
+      Configuration Examples
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../load-balancing-tactic/" title="Load Balancing Tactic" class="md-nav__link">
+      Load Balancing Tactic
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      Troubleshooting
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        Troubleshooting
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../troubleshooting-tactic/" title="Troubleshooting Tactic" class="md-nav__link">
+      Troubleshooting Tactic
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      Maintenance
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        Maintenance
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../backup-and-restore-server/" title="Backup And Restore Server" class="md-nav__link">
+      Backup And Restore Server
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../automate-database-backup/" title="Automated Backup" class="md-nav__link">
+      Automated Backup
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../maintenance-logs/" title="Configure Logrotate" class="md-nav__link">
+      Configure Logrotate
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+    
+    <label class="md-nav__link" for="nav-8">
+      TACTIC Server VM
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        TACTIC Server VM
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tsi-setup-and-install/" title="Setup And Install" class="md-nav__link">
+      Setup And Install
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tsi-troubleshooting/" title="Troubleshooting" class="md-nav__link">
+      Troubleshooting
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#install" class="md-nav__link">
+    Install
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#services" class="md-nav__link">
+    Services
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#security" class="md-nav__link">
+    Security
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#database" class="md-nav__link">
+    Database
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#perforce" class="md-nav__link">
+    Perforce
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#look" class="md-nav__link">
+    Look
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#checkin" class="md-nav__link">
+    Checkin
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-handoff-directories" class="md-nav__link">
+    The Handoff Directories
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#directory-configuration-examples" class="md-nav__link">
+    Directory Configuration Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="tactic-configuration-file">TACTIC Configuration File</h1>
+<p>The TACTIC config file stores settings such as directory locations and
+email server information.</p>
+<h2 id="install">Install</h2>
+<p>This section defines the hostname for the server (if different from
+"localhost") as well as the temp directory to be used for TACTIC. The
+tmp_dir is where temporary files are stored as well as the TACTIC log
+files.</p>
+<pre><code>    &lt;install&gt;
+        &lt;hostname&gt;localhost&lt;/hostname&gt;
+        &lt;tmp_dir&gt;/home/tactic/tactic_temp&lt;/tmp_dir&gt;
+        &lt;default_project&gt;default_project_code&lt;/default_project&gt;
+        &lt;include_js&gt;/context/some_external_lib.js&lt;/include_js&gt;
+    &lt;/install&gt;
+</code></pre>
+
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><p>HOSTNAME</p></td>
+<td><p>This section defines the hostname for the server (if different from &quot;localhost&quot;). The hostname is what TACTIC listens to.</p></td>
+</tr>
+<tr class="even">
+<td><p>TMP_DIR</p></td>
+<td><p>The temp directory to be used by TACTIC.</p></td>
+</tr>
+<tr class="odd">
+<td><p>DEFAULT_PROJECT</p></td>
+<td><p>Default project when the user browse the TACTIC base url.</p></td>
+</tr>
+<tr class="even">
+<td><p>INCLUDE_JS</p></td>
+<td><p>You can include one or more external js files you want to make use of separated by ,.</p></td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="services">Services</h2>
+<p>This section defines information regarding the services external to
+TACTIC.</p>
+<pre><code>&lt;services&gt;
+    &lt;mailserver&gt;smtp.googlemail.com&lt;/mailserver&gt;
+    &lt;mail_password&gt;password&lt;/mail_password&gt;
+    &lt;mail_user&gt;tactic@southpawtech.com&lt;/mail_user&gt;
+    &lt;mail_port&gt;587&lt;/mail_port&gt;
+    &lt;mail_sender_disabled&gt;true&lt;/mail_sender_disabled&gt;
+    &lt;mail_tls_enabled&gt;true&lt;/mail_tls_enabled&gt;
+    &lt;mail_name&gt;TACTIC&lt;/mail_name&gt;
+    &lt;mail_default_admin_email&gt;admin@southpawtech.com&lt;/mail_default_admin_email&gt;
+    &lt;notify_user&gt;exceptions@southpawtech.com&lt;/notify_user&gt;
+    &lt;python&gt;python3&lt;/python&gt;
+    &lt;python_path&gt;/home/apache/custom&lt;/python_path&gt;
+    &lt;render_submit_class&gt;sites.racoon.modules.command.CustomRenderSubmit&lt;/render_submit_class&gt;
+    &lt;process_count&gt;3&lt;/process_count&gt;
+    &lt;thread_count&gt;50&lt;/thread_count&gt;
+    &lt;process_time_alive&gt;30&lt;/process_time_alive&gt;
+    &lt;system_class&gt;&lt;/system_class&gt;
+&lt;/services&gt;
+</code></pre>
+
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody>
+<tr class="even">
+<td><p>MAIL_SERVER</p></td>
+<td><p>The URL of the SMTP mail server</td></p>
+</tr>
+<tr class="odd">
+<td><p>MAIL_PASSWORD</p></td>
+<td><p>The password for accessing the SMTP mail server that requires authentication</p></td>
+</tr>
+<tr class="even">
+<td><p>MAIL_USER</p></td>
+<td><p>The user name for accessing the SMTP mail server that requires authentication</p></td>
+</tr>
+<tr class="odd">
+<td><p>MAIL_PORT</p></td>
+<td><p>The port for the SMTP mail server (if different that 25)</p></td>
+</tr>
+<tr class="even">
+<td><p>MAIL_SENDER_DISABLED</p></td>
+<td><p>Set as "true" to disable using the sender name in sending of email in case the email server does not allow sender’s email not owned by the sender</p></td>
+</tr>
+<tr class="odd">
+<td><p>MAIL_TLS_ENABLED</p></td>
+<td><p>
+Set as "true" to enable TLS (Transport Layer Security) for the connection to email server
+</p></td>
+</tr>
+<tr class="even">
+<td><p>mail_default_admin_email</p></td>
+<td><p>
+Default email for admin user is no email is set. This is used for password recovery functionality and notifications.
+</tr>
+<tr class="odd">
+<td><p>notify_user</p></td>
+<td><p>
+Email to send system exceptions and errors to.
+</p></td>
+</tr>
+<tr class="even">
+<td><p>PYTHON</p></td>
+<td><p>The root path of the Python installation. If your installation is using Python3, "python3" should be set as value.</p></td>
+</tr>
+<tr class="odd">
+<td><p>PYTHON_PATH</p></td>
+<td><p>The server-side location for client files. This location can also be mounted from a shared volume if you wish to maintain stricter server access for clients. For multiple paths, separate with | .e.g. /home/apache/custom|/home/apache/custom_two</p></td>
+</tr>
+<tr class="even">
+<td><p>RENDER_SUBMIT_CLASS</p></td>
+<td><p>The class used for render submissions.</p></td>
+</tr>
+<tr class="odd">
+<td><p>PROCESS_COUNT</p></td>
+<td><p>The number of processes the TACTIC service would spawn. It needs to match the number of ports used in the load balancing scheme in the Apache configuration.</p></td>
+</tr>
+<tr class="even">
+<td><p>THREAD_COUNT</p></td>
+<td><p>The number of worker threads generated for each instance of the TACTIC process. If not set, it defaults to 10 which is too low to handle rapid requests.. TACTIC’s default is 50 on new installation. A good balance of process_count and thread_count can improve response time of the server.</p></td>
+</tr>
+<tr class="odd">
+<td><p>PROCESS_TIME_ALIVE</p></td>
+<td><p>The number of minutes a TACTIC process gets respawned. It helps with the memory consumption inherent with a long-running Python process.</p></td>
+</tr>
+<tr class="even">
+<td><p>SYSTEM_CLASS</p></td>
+<td><p>Allows for an override some of the low level system functionality. For example 'mkdirs' and 'exists'</p></td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="security">Security</h2>
+<p>This section defines information regarding the services external to
+TACTIC.</p>
+<pre><code>&lt;security&gt;
+    &lt;version&gt;2&lt;/version&gt;
+    &lt;ticket_expiry&gt;10 hour&lt;/ticket_expiry&gt;
+    &lt;authenticate_mode&gt;default&lt;/authenticate_mode&gt;
+    &lt;authenticate_class&gt;&lt;/authenticate_class&gt;
+    &lt;authenticate_version&gt;2&lt;/authenticate_version&gt;
+    &lt;case_insensitive_login&gt;&gt;false&lt;/case_insensitive_login&gt;
+    &lt;max_login_attempt&gt;3&lt;/max_login_attempt&gt;
+    &lt;account_lockout_duration&gt;30&lt;/account_lockout_duration&gt;
+    &lt;auto_create_user&gt;false&lt;/auto_create_user&gt;
+    &lt;api_require_password&gt;true&lt;/api_require_password&gt;
+    &lt;api_password&gt;&lt;/api_password&gt;
+    &lt;allow_guest&gt;false&lt;/allow_guest&gt;
+    &lt;guest_mode&gt;restricted&lt;/guest_mode&gt;
+    &lt;guest_url_allow&gt;/guest_view&lt;/guest_url_allow&gt;
+&lt;/security&gt;
+</code></pre>
+<table>
+<colgroup>
+<col width="10%" />
+<col width="89%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>TICKET_EXPIRY</th>
+<th>The number of hours a login ticket expires after</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><p>AUTHENTICATE_MODE</p></td>
+<td><p>default: This basically just looks at the tactic database for information.</p>
+<p>autocreate: This autocreates the first time and then leaves the information alone.</p>
+<p>cache: This caches the information to the tactic database on every login</p></td>
+</tr>
+<tr class="even">
+<td><p>AUTHENTICATE_CLASS</p></td>
+<td><p>A full class path to override the default class &quot;pyasm.security.TacticAuthenticate&quot;. Note: Your custom class needs to override the method verify() which takes two arguments: login and password.</p></td>
+</tr>
+<tr class="odd">
+<td><p>AUTHENTICATE_VERSION</p></td>
+<td><p>1 is the old way of authentication. 2 is the new way.</p></td>
+</tr>
+<tr class="even">
+<td><p>CASE_INSENSITIVE_LOGIN</p></td>
+<td><p>If set to 'true', it allows case insensitive login name. When autocreate mode is used, all login entries created will have a lowercase login name. It can be used in combination with Active Directory setup.</p></td>
+</tr>
+<tr class="odd">
+<td><p>MAX_LOGIN_ATTEMPT</p></td>
+<td><p>Number of times login attempt can fail before account is locked out.</p></td>
+</tr>
+<tr class="even">
+<td><p>ACCOUNT_LOCKOUT_DURATION</p></td>
+<td><p>Number of minutes a user account is locked out for failed login attempt if specified.</p></td>
+</tr>
+<tr class="odd">
+<td><p>AUTO_CREATE_USER</p></td>
+<td><p>Auto create user in TACTIC during authentication phase if it does not exist. (Deprecated: use &quot;authenticate_mode&quot; in new way of authentication)</p></td>
+</tr>
+<tr class="even">
+<td><p>API_REQUIRE_PASSOWRD</p></td>
+<td><p>Client API script requires password to login or not</p></td>
+</tr>
+<tr class="odd">
+<td><p>API_PASSWORD</p></td>
+<td><p>A generic Client API password can be set here</p></td>
+</tr>
+<tr class="even">
+<td><p>ALLOW_GUEST</p></td>
+<td><p>true or false can be set to allow guest to access without login</p></td>
+</tr>
+<tr class="odd">
+<td><p>GUEST_MODE</p></td>
+<td><p>full or restricted can be set. In restricted mode, a /guest relative URL is expected to be defined in Custom URL to restrict the guest to only see a particular view</p></td>
+</tr>
+<tr class="even">
+<td><p>GUEST_URL_ALLOW</p></td>
+<td><p>In full mode, one can have multiple relative URLs predefined for guest, separated by |.</p></td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="database">Database</h2>
+<pre><code>&lt;database&gt;
+    &lt;vendor&gt;PostgreSQL&lt;/vendor&gt;
+    &lt;server&gt;localhost&lt;/server&gt;
+    &lt;port&gt;&lt;/port&gt;
+    &lt;user&gt;postgres&lt;/user&gt;
+    &lt;password&gt;none&lt;/password&gt;
+    &lt;sobject_database&gt;sthpw&lt;/sobject_database&gt;
+    &lt;pool_max_connections&gt;0&lt;/pool_max_connections&gt;
+&lt;/database&gt;
+</code></pre>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><p>VENDOR</p></td>
+<td><p>The database vendor (software) the database will be installed on.</p></td>
+</tr>
+<tr class="even">
+<td><p>SERVER</p></td>
+<td><p>The hostname of the server. This is localhost if TACTIC and the database are on the same server</p></td>
+</tr>
+<tr class="odd">
+<td><p>PORT</p></td>
+<td><p>The database connection port</p></td>
+</tr>
+<tr class="even">
+<td><p>USER</p></td>
+<td><p>The user name for the database connection</p></td>
+</tr>
+<tr class="odd">
+<td><p>PASSWORD</p></td>
+<td><p>The password for the database connection.</p>
+
+<!-- TODO: Include comment on encrypted passwords -->
+</td>
+</tr>
+<tr class="even">
+<td><p>SOBJECT_DATABASE</p></td>
+<td><p>The database where SObject definitions will be stores</p></td>
+</tr>
+<tr class="odd">
+<td><p>POOL_MAX_CONNECTIONS</p></td>
+<td><p>The pool of connections available for connecting to the database. 0 is recommended for PostgreSQL implementation</p></td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="perforce">Perforce</h2>
+<pre><code>&lt;perforce&gt;
+    &lt;web_dir&gt;perforce&lt;/web_dir&gt;
+    &lt;p4&gt;p4&lt;/p4&gt;
+    &lt;port&gt;1666&lt;/port&gt;
+&lt;/perforce&gt;
+</code></pre>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><p>WEB_DIR</p></td>
+<td><p>The webdir for the perforce connection.</p></td>
+</tr>
+<tr class="even">
+<td><p>P4</p></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><p>PORT</p></td>
+<td><p>The port to be used for connection to perforce.</p></td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="look">Look</h2>
+<p>This setting provides a method of setting the TACTIC skin in the server
+for all users. In this example, the 'BON_NOCHE' palette specified:</p>
+<pre><code>&lt;look&gt;
+    &lt;palette&gt;BON_NOCHE&lt;/palette&gt;
+&lt;/look&gt;
+</code></pre>
+<p>Other available palettes are 'AQUA', 'DARK', 'BRIGHT', 'DEFAULT', 'SILVER',
+'AVIATOR', and 'ORIGAMI'. Alternatively, the whole palette can be
+customized as follows:</p>
+<pre><code>&lt;look&gt;
+     &lt;palette&gt;{
+             'color':        '#000000',         # main font color
+             'color2':       '#FFFFFF',         # secondary font color
+             'color3':       '#FFFFFF',         # tertiary font color
+             'background':   '#FDEEA7',         # main background color
+             'background2':  '#1A9481',         # secondary background color
+             'background3':  '#003D5c',         # tertiary background color
+             'border':       '#666666'          # main border color
+    }&lt;/palette&gt;
+&lt;/palette&gt;
+&lt;/look&gt;
+</code></pre>
+<p>The side bar color may not change right away until the next TACTIC
+service restart.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><p>PALETTE</p></td>
+<td><p>The default palette setting for all TACTIC users.</p></td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="checkin">Checkin</h2>
+<p>TACTIC uses the following directory and path settings for internal and
+client interaction. They are included in the tag (for checkins).</p>
+<table>
+<colgroup>
+<col width="6%" />
+<col width="93%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><p>VERSIONLESS_MODE</p></td>
+<td><p>COPY or SYMLINK: Turn on versionless mode for checkins for all projects. To set the versionless mode per project, go to PROJECT ADMIN → PROJECT SETTINGS and add a the key VERSIONLESS_MODE and the value: COPY or SYMLINK.</p></td>
+</tr>
+<tr class="even">
+<td><p>ASSET_BASE_DIR</p></td>
+<td><p>The directory where the assets are stored in the TACTIC server.</p></td>
+</tr>
+<tr class="odd">
+<td><p>WEB_BASE_DIR</p></td>
+<td><p>The root URL that maps the 'asset_base_dir' directory</p></td>
+</tr>
+<tr class="even">
+<td><p>WIN32_LOCAL_BASE_DIR</p></td>
+<td><p>The base directory in Windows client machines</p></td>
+</tr>
+<tr class="odd">
+<td><p>LINUX_LOCAL_BASE_DIR</p></td>
+<td><p>The base directory in Linux client machines</p></td>
+</tr>
+<tr class="even">
+<td><p>WIN32_SANDBOX_DIR</p></td>
+<td><p>The default sandbox directory in the Windows client machines (it can be overridden by Remote Repo)</p></td>
+</tr>
+<tr class="odd">
+<td><p>LINUX_SANDBOX_DIR</p></td>
+<td><p>The default sandbox directory in the Linux client machines (it can be overridden by Remote Repo)</p></td>
+</tr>
+<tr class="even">
+<td><p>WIN32_CLIENT_REPO_DIR</p></td>
+<td><p>Maps the asset_base_dir directory as seen by the Windows client. For example, if asset_base_dir is on a Linux server with a path like &quot;/home/apache/assets&quot; but from the Windows client, it is mapped as &quot;Z:/assets&quot;, then &quot;Z:/assets&quot; should be the value for this setting.</p>
+<p>By default, this path is empty because the system assumes the client and server are on the same Windows machine.</p></td>
+</tr>
+<tr class="odd">
+<td><p>LINUX_CLIENT_REPO_DIR</p></td>
+<td><p>Same as 'win32_client_repo_dir' except it is from the perspective of a Linux client machine</p></td>
+</tr>
+<tr class="even">
+<td><p>WIN32_CLIENT_HANDOFF_DIR</p></td>
+<td><p>Windows client-side handoff directory for Client API transactions. (Find out more about the handoff directory below.)</p></td>
+</tr>
+<tr class="odd">
+<td><p>WIN32_SERVER_HANDOFF_DIR</p></td>
+<td><p>Windows server-side handoff directory for Client API transactions</p></td>
+</tr>
+<tr class="even">
+<td><p>LINUX_CLIENT_HANDOFF_DIR</p></td>
+<td><p>Linux client-side handoff directory for Client API transactions</p></td>
+</tr>
+<tr class="odd">
+<td><p>LINUX_SERVER_HANDOFF_DIR</p></td>
+<td><p>Linux server-side handoff directory for Client API transactions</p></td>
+</tr>
+<tr class="even">
+<td><p>SUDO_NO_PASSWORD</p></td>
+<td><p>It controls whether sudo can be run to change the user id and group id of the files checked in. It is particularly important if you want to ensure files checked in to the TACTIC repository are owned by TACTIC and not overwritable by just any users. If set to true, &quot;no password&quot; should be enabled for the user TACTIC is run as in the OS. e.g. For Fedora, assuming you have sudo installed:</p>
+<p>In the file /etc/sudoers, the following line should be uncommented: %wheel ALL=(ALL) NOPASSWD: ALL</p>
+<p>In the file /etc/group, apache should be added to the group wheel wheel:x:10:root,apache</p></td>
+</tr>
+<tr class="odd">
+<td><p>VERSION_PADDING</p></td>
+<td><p>padding of 3 or more can be set for checked-in files</p></td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="the-handoff-directories">The Handoff Directories</h3>
+<p>Handoff directories can be seen by both the server and the client
+machines. They are used for 3D checkins and client API interactions, and
+are important for specifying how the client and server sides see the
+same location.</p>
+<p>For example, if you have the location //192.168.0.105/handoff available
+on your network and it is mounted as /home/apache/handoff on a server,
+then it would be important to include the following entries:</p>
+<pre><code>&lt;win32_client_handoff_dir&gt;//192.168.0.105/handoff&lt;/win32_client_handoff_dir&gt;
+&lt;win32_server_handoff_dir&gt;&lt;/win32_server_handoff_dir&gt;
+&lt;linux_client_handoff_dir&gt;&lt;/linux_client_handoff_dir&gt;
+&lt;linux_server_handoff_dir&gt;/home/apache/handoff&lt;/linux_server_handoff_dir&gt;
+</code></pre>
+<h3 id="directory-configuration-examples">Directory Configuration Examples</h3>
+<p>Example 1</p>
+<p>The assets directory is located on the TACTIC server and allows for
+read-only access from client machines in the local subnet.</p>
+<ul>
+<li>
+<p>The assets directory is located on the TACTIC server and allows for
+    read-only access from client machines in the local subnet.</p>
+</li>
+<li>
+<p>The handoff directory is located on the TACTIC server and allows for
+    read/write access from client machines in the local subnet</p>
+</li>
+<li>
+<p>The Windows and Linux 'client_repo_dir' looks directly to the server for
+    the available "assets" share</p>
+</li>
+<li>
+<p>The Windows and Linux 'client_handoff_dir' looks directly to the server
+    for the available "handoff" share</p>
+<pre><code>&lt;checkin&gt;
+    &lt;asset_base_dir&gt;/home/apache/assets&lt;/asset_base_dir&gt;
+    &lt;web_base_dir&gt;/assets&lt;/web_base_dir&gt;
+    &lt;win32_local_base_dir&gt;C:/sthpw&lt;/win32_local_base_dir&gt;
+    &lt;linux_local_base_dir&gt;/tmp/sthpw&lt;/linux_local_base_dir&gt;
+    &lt;win32_sandbox_dir&gt;C:/sthpw/sandbox&lt;/win32_sandbox_dir&gt;
+    &lt;linux_sandbox_dir&gt;/tmp/sthpw/sandbox&lt;/linux_sandbox_dir&gt;
+    &lt;win32_client_repo_dir&gt;//192.168.0.105/apache/assets&lt;/win32_client_repo_dir&gt;
+    &lt;linux_client_repo_dir&gt;/usr/assets&lt;/linux_client_repo_dir&gt;
+    &lt;win32_client_handoff_dir&gt;//192.168.0.105/apache/handoff&lt;win32_client_handoff_dir&gt;
+    &lt;win32_server_handoff_dir&gt;&lt;/win32_server_handoff_dir&gt;
+    &lt;linux_client_handoff_dir&gt;/home/apache/handoff&lt;/linux_client_handoff_dir&gt;
+    &lt;linux_server_handoff_dir&gt;/home/apache/handoff&lt;/linux_server_handoff_dir&gt;
+    &lt;version_padding&gt;3&lt;/version_padding&gt;
+&lt;/checkin&gt;
+</code></pre>
+</li>
+</ul>
+<p>Example 2</p>
+<ul>
+<li>
+<p>The assets directory is located on another server and mounted locally
+    on the TACTIC server to /mnt1/assets.</p>
+</li>
+<li>
+<p>The Windows and Linux 'client_repo_dir' is mapped/mounted to the TACTIC
+    'asset_base_dir'</p>
+</li>
+<li>
+<p>The Windows and Linux 'client_handoff_dir' is mapped/mounted to the
+    TACTIC 'server_handoff_dir'</p>
+<pre><code>&lt;checkin&gt;
+    &lt;asset_base_dir&gt;/mnt1/assets&lt;/asset_base_dir&gt;
+    &lt;web_base_dir&gt;/assets&lt;/web_base_dir&gt;
+    &lt;win32_local_base_dir&gt;C:/sthpw&lt;/win32_local_base_dir&gt;
+    &lt;linux_local_base_dir&gt;/tmp/sthpw&lt;/linux_local_base_dir&gt;
+    &lt;win32_sandbox_dir&gt;C:/sthpw/sandbox&lt;/win32_sandbox_dir&gt;
+    &lt;linux_sandbox_dir&gt;/tmp/sthpw/sandbox&lt;/linux_sandbox_dir&gt;
+    &lt;win32_client_repo_dir&gt;z:/assets&lt;/win32_client_repo_dir&gt;
+    &lt;linux_client_repo_dir&gt;/assets&lt;/linux_client_repo_dir&gt;
+    &lt;win32_client_handoff_dir&gt;z:/tactic_handoff&lt;win32_client_handoff_dir&gt;
+    &lt;win32_server_handoff_dir&gt;&lt;/win32_server_handoff_dir&gt;
+    &lt;linux_client_handoff_dir&gt;/tactic_handoff&lt;/linux_client_handoff_dir&gt;
+    &lt;linux_server_handoff_dir&gt;/home/apache/tactic_handoff&lt;/linux_server_handoff_dir&gt;
+    &lt;version_padding&gt;3&lt;/version_padding&gt;
+&lt;/checkin&gt;
+</code></pre>
+</li>
+</ul>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../resource/" title="Database Resources" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Database Resources
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../upgrade-tactic/" title="Upgrade Tactic" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Upgrade Tactic
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.ac79c3b0.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+      
+    
+  </body>
+</html>
