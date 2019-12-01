@@ -14,9 +14,13 @@ files.
 ```
     <install>
         <hostname>localhost</hostname>
+        <server>LA</server>
         <tmp_dir>/home/tactic/tactic_temp</tmp_dir>
         <default_project>default_project_code</default_project>
         <include_js>/context/some_external_lib.js</include_js>
+        <include_css></include_css>
+        <install_dir>/home/tactic/TACTIC</install_dir>
+        <site_dir>/home/tactic/tactic_sites</site_dir>
     </install>
 ```
 
@@ -40,8 +44,69 @@ files.
 </tr>
 <tr class="even">
 <td><p>INCLUDE_JS</p></td>
-<td><p>You can include one or more external js files you want to make use of separated by ,.</p></td>
+<td><p>You can include one or more external js files you want to make use of. Separated by ,.</p></td>
 </tr>
+<tr class="odd">
+<td><p>SERVER</p></td>
+<td><p>A prefix for code generation to distinguish data from different servers</p></td>
+</tr>
+<tr class="even">
+<td><p>INCLUDE_CSS</p></td>
+<td><p>You can include one or more external css files you want to make use of. Separated by ,.</p></td>
+</tr>
+<tr class="odd">
+<td><p>INSTALL_DIR</p></td>
+<td><p>The installation directory for TACTIC</p></td>
+</tr>
+<tr class="even">
+<td><p>SITE_DIR***</p></td>
+<td><p>The directory storing user informations</p></td>
+</tr>
+<tr class="odd">
+<td><p>PLUGIN_DIR</p></td>
+<td><p>The directory storing plugins created</p></td>
+</tr>
+<tr class="even">
+<td><p>DOC_DIR***</p></td>
+<td><p>The directory of tactic documents</p></td>
+</tr>
+<tr class="odd">
+<td><p>LAYOUT****</p></td>
+<td><p></p></td>
+</tr>
+<tr class="even">
+<td><p>FIRST_DAY_OF_WEEK***</p></td>
+<td><p>A number indicates the first day of the week, for example, 6 indicates Saturday.</p></td>
+</tr>
+<tr class="odd">
+<td><p>LOG_TYPE***</p></td>
+<td><p></p></td>
+</tr>
+<tr class="even">
+<td><p>SHUTIL_FIX***</p></td>
+<td><p>once "enabled", disabling copystat method for windows shared folder mounted on Linux</p></td>
+</tr>
+<tr class="odd">
+<td><p>DEFAULT_PROJECT</p></td>
+<td><p>The default project of your user</p></td>
+</tr>
+<tr class="odd">
+<td><p>BASE_URL</p></td>
+<td><p>the base url of you website</p></td>
+</tr>
+<tr class="even">
+<td><p>TOP_CLASS_NAME***</p></td>
+<td><p>the class name of default wdg of top container</p></td>
+</tr>
+<tr class="odd">
+<td><p>HEADER_CLASS_NAME***</p></td>
+<td><p>The class name of header</p></td>
+</tr>
+<tr class="even">
+<td><p>CACHE_MODE***</p></td>
+<td><p>caching system for non-Windows system</p></td>
+</tr>
+
 </tbody>
 </table>
 
@@ -142,6 +207,64 @@ Email to send system exceptions and errors to.
 <td><p>SYSTEM_CLASS</p></td>
 <td><p>Allows for an override some of the low level system functionality. For example 'mkdirs' and 'exists'</p></td>
 </tr>
+<tr class="odd">
+<td><p>mail_base_url***</p></td>
+<td><p>the base url for mail server</p></td>
+</tr>
+<tr class="even">
+<td><p>notify_user_name</p></td>
+<td><p>The name of the person who receives the system exceptions and errors.</p></td>
+</tr>
+<tr class="odd">
+<td><p>use_periodic_restart</p></td>
+<td><p>Determines whether killing TACTIC process periodically or not</p></td>
+</tr>
+<tr class="even">
+<td><p>queue_process_timeout</p></td>
+<td><p>The interval for use_periodic_restart</p></td>
+</tr>
+<tr class="odd">
+<td><p>start_port****</p></td>
+<td><p>start port for your TACTIC website</p></td>
+</tr>
+<tr class="even">
+<td><p>ports</p></td>
+<td><p>the ports can be used by TACTIC, separated by "|"</p></td>
+</tr>
+<!--
+<tr class="odd">
+<td><p>tactic</p></td>
+<td><p>Allows for an override some of the low level system functionality. For example 'mkdirs' and 'exists'</p></td>
+</tr>
+<tr class="even">
+<td><p>job_queue***</p></td>
+<td><p>The number of minutes a TACTIC process gets respawned. It helps with the memory consumption inherent with a long-running Python process.</p></td>
+</tr>
+<tr class="odd">
+<td><p>watch_folder****</p></td>
+<td><p>Allows for an override some of the low level system functionality. For example 'mkdirs' and 'exists'</p></td>
+</tr>
+-->
+<tr class="even">
+<td><p>enable</p></td>
+<td><p>The services that will used by your TACTIC website, separated by "|".</p></td>
+</tr>
+<tr class="odd">
+<td><p>queue_process_count</p></td>
+<td><p>The number of processes in the job queue</p></td>
+</tr>
+<tr class="even">
+<td><p>scheduler</p></td>
+<td><p>Determines whether or not the scheduler services will be used</p></td>
+</tr>
+<tr class="even">
+<td><p>scheduler_sites</p></td>
+<td><p>The sites the scheduler service will run on.</p></td>
+</tr>
+<tr class="odd">
+<td><p>rsync****</p></td>
+<td><p></p></td>
+</tr>
 </tbody>
 </table>
 
@@ -229,6 +352,80 @@ TACTIC.
 <td><p>GUEST_URL_ALLOW</p></td>
 <td><p>In full mode, one can have multiple relative URLs predefined for guest, separated by |.</p></td>
 </tr>
+<tr class="odd">
+<td><p>api_method_restricted</p></td>
+<td><p>Determines whether api methods can be accessed by all users or not</p></td>
+</tr>
+<tr class="even">
+<td><p>api_mode</p></td>
+<td><p>can be "open", "closed", and "query". Api can be accessed by all users if "open"; is restricted to admin user if "closed"; Api access are specified by user if "query".</p></td>
+</tr>
+<!--
+<tr class="odd">
+<td><p>enable_fast_query***</p></td>
+<td><p>full or restricted can be set. In restricted mode, a /guest relative URL is expected to be defined in Custom URL to restrict the guest to only see a particular view</p></td>
+</tr>
+-->
+<tr class="even">
+<td><p>api_cmd_restricted</p></td>
+<td><p>Determines whether commands can be executed through api's by all users or not</p></td>
+</tr>
+<tr class="odd">
+<td><p>authenticate_encryption***</p></td>
+<td><p>the encryption for user information. Can be "drupal"</p></td>
+</tr>
+<tr class="even">
+<td><p>ldap_server</p></td>
+<td><p>LDAP server</p></td>
+</tr>
+<tr class="odd">
+<td><p>bind_dn</p></td>
+<td><p>BindDN for LDAP</p></td>
+</tr>
+<tr class="even">
+<td><p>bind_password</p></td>
+<td><p>the corresponding password for bindDN in LDAP</p></td>
+</tr>
+<tr class="odd">
+<td><p>force_lowercase_login</p></td>
+<td><p>Determines whether login names have to be lowercase or not.</p></td>
+</tr>
+<tr class="even">
+<td><p>version</p></td>
+<td><p>The security version of TACTIC</p></td>
+</tr>
+<tr class="odd">
+<td><p>password</p></td>
+<td><p>The default password for admin</p></td>
+</tr>
+<tr class="even">
+<td><p>site_class</p></td>
+<td><p>the class name for site objects</p></td>
+</tr>
+<tr class="odd">
+<td><p>authenticate_ticket_class</p></td>
+<td><p>The class for tickets objects</p></td>
+</tr>
+<tr class="even">
+<td><p>inactive_ticket_expiry</p></td>
+<td><p>The interval for auto-logout when inactive</p></td>
+</tr>
+<tr class="odd">
+<td><p>protocol</p></td>
+<td><p>the url protocol</p></td>
+</tr>
+<tr class="even">
+<td><p>session_key***</p></td>
+<td><p>key for login tickets</p></td>
+</tr>
+<tr class="odd">
+<td><p>authenticate_domains***</p></td>
+<td><p>The domain for your website</p></td>
+</tr>
+<tr class="even">
+<td><p>hosts</p></td>
+<td><p>the hosts for your website, separated by "|".</p></td>
+</tr>
 </tbody>
 </table>
 
@@ -281,6 +478,34 @@ TACTIC.
 <td><p>POOL_MAX_CONNECTIONS</p></td>
 <td><p>The pool of connections available for connecting to the database. 0 is recommended for PostgreSQL implementation</p></td>
 </tr>
+<tr class="even">
+<td><p>sqlite_db_dir</p></td>
+<td><p>the directory of sqlite database</p></td>
+</tr>
+<tr class="odd">
+<td><p>join</p></td>
+<td><p>Determines whether a multi-database join can be made</p></td>
+</tr>
+<tr class="even">
+<td><p>ORACLE_HOME</p></td>
+<td><p>The oracle home directory path</p></td>
+</tr>
+<tr class="odd">
+<td><p>NLS_LANG</p></td>
+<td><p>The NLS_LANG for Oracle</p></td>
+</tr>
+<tr class="even">
+<td><p>sslmode</p></td>
+<td><p>The sslmode for postgreSQL</p></td>
+</tr>
+<tr class="odd">
+<td><p>encoding</p></td>
+<td><p>The encoding of the MySQL database</p></td>
+</tr>
+<tr class="even">
+<td><p>charset</p></td>
+<td><p>The charset of the MySQL database</p></td>
+</tr>
 </tbody>
 </table>
 
@@ -310,6 +535,38 @@ TACTIC.
 <td><p>PORT</p></td>
 <td><p>The port to be used for connection to perforce.</p></td>
 </tr>
+<!--
+<tr class="even">
+<td><p>client_env_var***</p></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><p>port_env_var***</p></td>
+<td><p></p></td>
+</tr>
+<tr class="even">
+<td><p>user_env_var***</p></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><p>password_env_var***</p></td>
+<td><p></p></td>
+</tr>
+-->
+<tr class="even">
+<td><p>depot***</p></td>
+<td>The depot of perforce</td>
+</tr>
+<!--
+<tr class="odd">
+<td><p>sync***</p></td>
+<td><p>The port to be used for connection to perforce.</p></td>
+</tr>
+<tr class="odd">
+<td><p>repo***</p></td>
+<td></td>
+</tr>
+-->
 </tbody>
 </table>
 
@@ -352,6 +609,10 @@ service restart.
 <td><p>PALETTE</p></td>
 <td><p>The default palette setting for all TACTIC users.</p></td>
 </tr>
+<tr class='even'>
+<td><p>kiosk_mode</p></td>
+<td><p>Determines whether TACTIC is running on kiosk mode of windows or not</p></td>
+</tr>
 </tbody>
 </table>
 
@@ -367,6 +628,9 @@ service restart.
 <tr class="odd">
 <td><p>auto_upgrade</p></td>
 <td><p>This config is default to be false. Set as "true" to allow the site to auto-upgrade databases and plugins to the newest version when loading the project. Set as "false" or remove the config to disable the auto-upgrade.</p></td>
+<tr class="even">
+<td><p>enabled</p></td>
+<td><p>Determines whether this is a portal website or not</p></td>
 </tr>
 </tbody>
 </table>
@@ -442,9 +706,57 @@ client interaction. They are included in the tag (for checkins).
 <p>In the file /etc/sudoers, the following line should be uncommented: %wheel ALL=(ALL) NOPASSWD: ALL</p>
 <p>In the file /etc/group, apache should be added to the group wheel wheel:x:10:root,apache</p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><p>VERSION_PADDING</p></td>
 <td><p>padding of 3 or more can be set for checked-in files</p></td>
+</tr>
+<tr class="odd">
+<td><p>default_naming_version</p></td>
+<td><p>The default version for checkin</p></td>
+</tr>
+<tr class="even">
+<td><p>win32_local_repo_dir***</p></td>
+<td><p>The repo base directory in Windows client machines</p></td>
+</tr>
+<tr class="odd">
+<td><p>linux_local_repo_dir***</p></td>
+<td><p>The repo base directory in Linux client machines</p></td>
+</tr>
+<tr class="even">
+<td><p>base_dir_alias***</p></td>
+<td><p>the alias of asset_base_dir</p></td>
+</tr>
+<tr class="odd">
+<td><p>app_asset_base_dir***</p></td>
+<td><p>asset_base_dir for maya</p></td>
+</tr>
+<tr class="even">
+<td><p>ldap_path</p></td>
+<td><p>LDAP(Active Directory) Path</p></td>
+</tr>
+<tr class="odd">
+<td><p>ldap_server</p></td>
+<td><p>LDAP server</p></td>
+</tr>
+<tr class="even">
+<td><p>copy_base_url***</p></td>
+<td><p>the base url for SobjectUploadWdg in copy mode</p></td>
+</tr>
+<tr class="odd">
+<td><p>use_applet***</p></td>
+<td><p>determines whether the applet should be used for local file operations, can only be "true" or "false"</p></td>
+</tr>
+<tr class="even">
+<td><p>win32_dropbox_dir***</p></td>
+<td><p>a directory used when the base_dir is not defined when getting the transactions</p></td>
+</tr>
+<tr class="odd">
+<td><p>repo_type***</p></td>
+<td><p></p></td>
+</tr>
+<tr class="even">
+<td><p>client_dir_map</p></td>
+<td><p>maps server directories to client directories</p></td>
 </tr>
 </tbody>
 </table>
