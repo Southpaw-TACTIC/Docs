@@ -70,8 +70,8 @@ files.
 <td><p>The installation directory for TACTIC</p></td>
 </tr>
 <tr class="even">
-<td><p>SITE_DIR</p></td>
-<td><p>The directory storing user informations</p></td>
+<td><p>HEADER_CLASS_NAME</p></td>
+<td><p>this value will be returned by WebEnvironment.get_header_class_name()</p></td>
 </tr>
 <tr class="odd">
 <td><p>PLUGIN_DIR</p></td>
@@ -108,10 +108,6 @@ files.
 <tr class="odd">
 <td><p>TOP_CLASS_NAME</p></td>
 <td><p>the class name of default wdg of top container, will be returned by WebEnvironment.get_top_class_name()</p></td>
-</tr>
-<tr class="even">
-<td><p>HEADER_CLASS_NAME</p></td>
-<td><p>this value will be returned by WebEnvironment.get_header_class_name()</p></td>
 </tr>
 </tbody>
 </table>
