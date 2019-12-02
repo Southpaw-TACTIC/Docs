@@ -241,26 +241,12 @@ Email to send system exceptions and errors to.
 </tr>
 <tr class="odd">
 <td><p>START_PORT</p></td>
-<td><p>The first port that your TACTIC website can use. The proceeding PROCESS_COUNT number of ports will be used by TACTIC.</p></td>
+<td><p>The first port that your TACTIC website can use. The proceeding PROCESS_COUNT number of ports will be used by TACTIC, defaulted to be 8081</p></td>
 </tr>
 <tr class="even">
 <td><p>PORTS</p></td>
-<td><p>the ports can be used by TACTIC, separated by "|"</p></td>
+<td><p>the ports can be used by TACTIC, separated by "|". This config is exclusive with START_PORT and PROCESS_COUNT. When these two tags are not filled out, the PORTS config will be used to set the ports can be used by TACTIC.</p></td>
 </tr>
-<!--
-<tr class="odd">
-<td><p>tactic</p></td>
-<td><p>Allows for an override some of the low level system functionality. For example 'mkdirs' and 'exists'</p></td>
-</tr>
-<tr class="even">
-<td><p>job_queue***</p></td>
-<td><p>The number of minutes a TACTIC process gets respawned. It helps with the memory consumption inherent with a long-running Python process.</p></td>
-</tr>
-<tr class="odd">
-<td><p>watch_folder****</p></td>
-<td><p>Allows for an override some of the low level system functionality. For example 'mkdirs' and 'exists'</p></td>
-</tr>
--->
 <tr class="even">
 <td><p>ENABLE</p></td>
 <td><p>The services that will used by your TACTIC website, can be tactic, job_queue, watch_folder, scheduler, etc., separated by "|".</p></td>
@@ -391,12 +377,6 @@ TACTIC.
 <td><p>API_MODE</p></td>
 <td><p>can be "open", "closed", and "query". API's can be accessed by all users if "open"; API's can only be accessed by admin user if "closed"; API's access is specified by access rule if "query".</p></td>
 </tr>
-<!--
-<tr class="odd">
-<td><p>enable_fast_query***</p></td>
-<td><p>full or restricted can be set. In restricted mode, a /guest relative URL is expected to be defined in Custom URL to restrict the guest to only see a particular view</p></td>
-</tr>
--->
 <tr class="even">
 <td><p>API_CMD_RESTRICTED</p></td>
 <td><p>set as "true" to disable command execution through API's, admin is the only user that can execute commands through API's.</p></td>
@@ -443,7 +423,7 @@ TACTIC.
 </tr>
 <tr class="odd">
 <td><p>PROTOCOL</p></td>
-<td><p>the base url protocol</p></td>
+<td><p>the base url protocol, defaulted to be "http"</p></td>
 </tr>
 <tr class="even">
 <td><p>SESSION_KEY</p></td>
@@ -451,7 +431,7 @@ TACTIC.
 </tr>
 <tr class="odd">
 <td><p>AUTHENTICATE_DOMAINS</p></td>
-<td><p>(DEPRACTED) Used for active directory/ldap authentication. Use active_directory, domains instead.</p></td>
+<td><p>(DEPRECATED) Used for active directory/ldap authentication. Use active_directory, domains instead.</p></td>
 </tr>
 <tr class="even">
 <td><p>HOSTS</p></td>
