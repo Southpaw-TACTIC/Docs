@@ -94,14 +94,14 @@ Install Python DB connectivity module.
 
 
 
-## Installing ImageMagick
+## Install ImageMagick
 
     yum install ImageMagick
     yum install ImageMagick-devel
     yum install ImageMagick-perl
 
 
-## Installing ffmpeg
+## Install ffmpeg
 
     rpm --import http://li.nux.ro/download/nux/RPM-GPG-KEY-nux.ro
     rpm -Uvh http://li.nux.ro/download/nux/dextop/el7/x86_64/nux-dextop-release-0-5.el7.nux.noarch.rpm
@@ -109,7 +109,7 @@ Install Python DB connectivity module.
 
 
 
-## Installing Apache
+## Install Apache
 
     yum install httpd
     firewall-cmd --add-service=http --permanent
