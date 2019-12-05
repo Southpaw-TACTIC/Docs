@@ -1,0 +1,9 @@
+site_name: TACTIC Quick Start Documentation
+nav:
+    - 'Introduction': './index.md'
+    - 'Get TACTIC': './quick-start-get-tactic.md'
+    - 'Setup TACTIC': './quick-start-setup.md'
+    - 'Build and Run a Workflow': './quick-start-workflow.md'
+theme: material
+markdown_extensions:
+  - codehilite

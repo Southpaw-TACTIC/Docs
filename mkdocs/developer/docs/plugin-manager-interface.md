@@ -1,0 +1,54 @@
+# Plugin Manager interface
+
+![image](media/0_plugins_overview.png)
+
+**Plugin Manager**
+
+The plugin Manager View is where you will be managing all your plugins.
+From this view, you can create a plugin, fully install a plugin, and
+modify existing plugins. You can find all your installed plugins in the
+plugin list at the left hand side of the view. This shows all the
+plugins you have installed along with all the built-in plugins which
+have come with your TACTIC installation. After selecting a plugin, you
+have access to:
+
+Plugin Info:
+
+-   Name
+
+-   Code: This is an important entity
+
+-   Version: Imporant when you are planning to use or create multiple
+    versions of a plugin
+
+-   Description
+
+Documentation:
+
+-   shows all the documentation which has been provided for the plugin
+    from the developer
+
+Manifest file:
+
+-   ability to export the manifest.xml
+
+-   ability to publish the plugin (more information on this in the
+    documentation on creating a plugin)
+
+-   contains technical information about the plugin
+
+-   can find more information about this in the documentation about
+    creating a plugin
+
+Files: The files tab shows the raw folder structure and files of the
+plugin. From here, a number of file operations can be performed.
+
+-   Adding files (Uploading)
+
+-   Removing files
+
+-   Creating folders
+
+-   Renaming files
+
+
