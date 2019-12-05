@@ -24,25 +24,6 @@ Here are instructions to install PostgreSQL 11 using official PostgreSQL package
     systemctl enable postgresql-11
 
 
-## Configure PostgreSQL
-
-> Note: TACTIC requires database access, and for ease of installation, we recommend using the PostgreSQL configuration file provided in the source code. After installation, you can further configure and secure your database.
-
-Replace the file,
-
-    /var/lib/pgsql11/data/pg_hba.conf
-
-with,
-
-    /opt/tactic/tactic/src/install/postgresql/pg_hba.conf
-
-Restart PostgreSQL,
-
-
-    systemctl restart postgresql
-
-
-
 
 ## EPEL
 
@@ -71,10 +52,7 @@ Install Python 3 using yum:
 
 In CentOS 7, the above command will install Python 3.6 by default. We will need to install Python 3 supporting modules. In CentOS 7, the modules are python36-xxx instread of python3-xxx.
 
-    yum install python36-pycryptodomex
-    yum install python36-lxml
-    yum install python36-requests
-    yum install python36-pytz
+    yum install python36-pycryptodomex python36-lxml python36-requests python36-pytz
 
 Alternatively you can also install these modules using `pip`.
 
@@ -96,9 +74,7 @@ Install Python DB connectivity module.
 
 ## Install ImageMagick
 
-    yum install ImageMagick
-    yum install ImageMagick-devel
-    yum install ImageMagick-perl
+    yum install ImageMagick ImageMagick-devel ImageMagick-perl
 
 
 ## Install ffmpeg
@@ -130,6 +106,26 @@ Download the TACTIC RPM from community site <a href="http://community.southpawte
 
 
     rpm -Uhv <TACTIC-RPM-file>
+
+
+
+
+## Configure PostgreSQL
+
+> Note: TACTIC requires database access, and for ease of installation, we recommend using the PostgreSQL configuration file provided in the source code. After installation, you can further configure and secure your database.
+
+Replace the file,
+
+    /var/lib/pgsql11/data/pg_hba.conf
+
+with,
+
+    /opt/tactic/tactic/src/install/postgresql/pg_hba.conf
+
+Restart PostgreSQL,
+
+
+    systemctl restart postgresql
 
 
 
