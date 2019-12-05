@@ -125,13 +125,14 @@ with,
 Restart PostgreSQL,
 
 
-    systemctl restart postgresql
+    systemctl restart postgresql-11
 
 
 
 ## Run TACTIC Bootstrap
 
 
+    sudo su - tactic
     python3 /opt/tactic/tactic/src/pyasm/search/upgrade/postgresql/bootstrap_load.py
 
 
