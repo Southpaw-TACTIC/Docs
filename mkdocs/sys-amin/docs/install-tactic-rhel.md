@@ -1,8 +1,8 @@
-# Install TACTIC on RHEL
+# Install TACTIC on Fedora 30
 
-Updated October 2019
+> Updated December 2019
 
-These instructions are for a TACTIC server that will use PostgreSQL and Apache on a RHEL server (FedoraOS, CentOS, Red Hat). Refer to the General TACTIC Installation for using other OS. For other database types, refer to guides in Install TACTIC Application. 
+These instructions are for a TACTIC server that will use PostgreSQL and Apache on a Fedora 30 server. Refer to the General TACTIC Installation for using other OS. For other database types, refer to guides in Install TACTIC Application. 
 
 
 ## Install PostgreSQL
