@@ -8,6 +8,7 @@ nav:
         - 'General TACTIC Installation': './install-tactic-general.md'
         - 'Install TACTIC on Fedora 30': './install-tactic-rhel.md'
         - 'Install TACTIC on Centos 7': './install-tactic-centos7.md' 
+        - 'Install TACTIC on Centos 8': './install-tactic-centos8.md'
         - 'Install TACTIC Windows Server': './install-tactic-windows-server.md'
         #- 'Install TACTIC with MySQL': './install-tactic-mysql'
         - 'Install TACTIC License': './install-tactic-license.md'
